@@ -402,8 +402,12 @@ def figuras(escenarios, filas_exp, salida, args):
             lambda v, _p: f"{v:,.{dec}f}".replace(",", "\x00").replace(".", ",")
                                           .replace("\x00", "."))
 
+    # IaaS va en azul oscuro (#004488, azul de la paleta de alto contraste de
+    # Tol). El azul original (#0072B2) se confundía con el celeste de OpenAI
+    # (#88CCEE) por ser de luminosidad parecida; este, mucho más oscuro, se
+    # separa de él sin salirse de la gama azul.
     PROV_COLOR = {"Anthropic": "#CC6677", "Google": "#DDCC77",
-                  "OpenAI": "#88CCEE", "IaaS": "#0072B2", "local": "#117733"}
+                  "OpenAI": "#88CCEE", "IaaS": "#004488", "local": "#117733"}
     MAQ_COLOR = {"Estación RTX 5090": "#117733", "Servidor 1× PRO 6000": "#44AA99"}
 
     # ── Fig 1 · Coste del estudio por proveedor y gama ───────────────────────
@@ -491,9 +495,15 @@ def figuras(escenarios, filas_exp, salida, args):
                 continue
             color = (MAQ_COLOR[e["etiqueta"]] if e["tipo"] == "local"
                      else PROV_COLOR[e["proveedor"]])
-            ls = "-" if e["tipo"] == "local" else ("--" if e["tipo"] == "api" else ":")
+            # Trazo continuo para las dos opciones de coste fijo (equipo propio
+            # y GPU alquilada); discontinuo solo para las APIs por token.
+            ls = "--" if e["tipo"] == "api" else "-"
+            # En esta figura solo se dibuja el proveedor de bajo coste, así que
+            # el matiz sobra en la leyenda; los CSV conservan el nombre completo
+            # porque ahí sí conviven las dos tarifas de IaaS.
+            etq = e["etiqueta"].replace(" (bajo coste)", "")
             ax.plot(meses, e["capex"] + e["mensual"] * meses, ls, lw=1.25,
-                    color=color, label=e["etiqueta"] if vol == VOLUMENES[0] else None)
+                    color=color, label=etq if vol == VOLUMENES[0] else None)
             if e["tipo"] != "local":
                 d = e["mensual"] - e_ref["mensual"]
                 if d > 0 and 0 < e_ref["capex"] / d <= HORIZONTE_MESES:
