@@ -1,0 +1,217 @@
+{
+  "name": "PA-195 — Recomendaciones de Actuación Institucional ante Eventos Adversos: Atención a Primeras y Segundas Víctimas",
+  "description": "Ground truth generado a partir del documento PA-195. Cubre fundamentos conceptuales, notificación interna, comunicación con paciente y familia, soporte al profesional (segunda víctima) y seguimiento.",
+  "relevant_doc_patterns": ["PA-195", "eventos-adversos", "segundas-victimas", "victimas"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Cuándo se considera que un lío con un paciente es realmente \"grave\"?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Se considera grave cuando el suceso es inesperado, está relacionado con la atención sanitaria y provoca riesgo vital, fallecimiento, una hospitalización nueva o prolongada, discapacidad significativa (ya sea temporal o permanente), malformaciones o requiere cirugía urgente para evitar estos daños."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Qué diferencia hay entre un susto \"leve\" y uno \"grave\" según el protocolo?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "La diferencia radica en las consecuencias y la intervención: el evento adverso leve tiene consecuencias menores y no suele requerir una intervención médica o quirúrgica de gran magnitud."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "He oído eso de \"segunda víctima\"... ¿me puede pasar a mí aunque no sea mi paciente?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "La segunda víctima es cualquier trabajador de la salud que, tras participar directa o indirectamente en un evento adverso o error médico, corre el riesgo de sufrir secuelas físicas, emocionales, profesionales o legales."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "Si me veo implicado en un evento de estos, ¿quién me asesora legalmente o protege mi salud?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "El Servicio de Prevención de Riesgos Laborales (SPRL) es el encargado de asesorar y asistir a los trabajadores, proporcionando los medios humanos y materiales para garantizar su seguridad y salud tras el incidente."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Dónde están exactamente los de Prevención por si tengo que ir a hablar con ellos?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Se encuentran ubicados físicamente en la planta 8ª del Hospital Clínico Universitario Lozano Blesa."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿A quién tengo que llamar si pasa algo gordo un sábado por la noche o en festivo?",
+      "expected_section": "NOTIFICACIÓN Y COMUNICACIÓN INTERNA",
+      "expected_quote": "Fuera del horario ordinario (tardes, noches, fines de semana y festivos), la comunicación debe realizarse de forma inmediata al Supervisor General y al Jefe de la Guardia."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "Si el evento ocurre un martes a las 11 de la mañana, ¿a quién aviso?",
+      "expected_section": "NOTIFICACIÓN Y COMUNICACIÓN INTERNA",
+      "expected_quote": "En horario ordinario, la notificación debe dirigirse sin demora al responsable directo del servicio o de la unidad."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Tengo que \"mojarme\" y decir de quién ha sido la culpa en el papel de notificación?",
+      "expected_section": "NOTIFICACIÓN Y COMUNICACIÓN INTERNA",
+      "expected_quote": "La notificación debe basarse exclusivamente en hechos objetivos. El protocolo exige evitar juicios personales, suposiciones o comentarios interpretativos no contrastados para prevenir rumores."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Qué datos son imprescindibles poner para que la Dirección sepa a qué se enfrenta?",
+      "expected_section": "NOTIFICACIÓN Y COMUNICACIÓN INTERNA",
+      "expected_quote": "Se deben incluir las consecuencias para el paciente, el número de personas afectadas (tanto pacientes como personal) y la probabilidad de que el evento vuelva a repetirse."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Qué tipo de incidentes se consideran tan críticos como para informar verbalmente al instante?",
+      "expected_section": "NOTIFICACIÓN Y COMUNICACIÓN INTERNA",
+      "expected_quote": "Eventos con fallecimiento, contagios accidentales, intoxicaciones, incendios o agresiones."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Quién se encarga de dar la cara ante la Dirección del centro?",
+      "expected_section": "NOTIFICACIÓN Y COMUNICACIÓN INTERNA",
+      "expected_quote": "Es responsabilidad del jefe o responsable de la unidad/servicio comunicar verbalmente y de forma inmediata la situación a la Dirección."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Por qué hay tanta prisa en que lo sepa la Dirección?",
+      "expected_section": "NOTIFICACIÓN Y COMUNICACIÓN INTERNA",
+      "expected_quote": "Porque la Dirección debe asumir la coordinación de la respuesta institucional y liderar los procesos de evaluación, aprendizaje y mejora ante el posible impacto social."
+    },
+    {
+      "id": "q13",
+      "block": 3,
+      "query": "¿Tengo que pedir perdón yo si he estado en el turno del incidente?",
+      "expected_section": "COMUNICACIÓN CON EL PACIENTE Y ALLEGADOS",
+      "expected_quote": "El mensaje debe incluir una disculpa clara y honesta cuando proceda, pero la comunicación inicial debe liderarla preferiblemente el médico responsable o alguien con formación específica en gestión de crisis."
+    },
+    {
+      "id": "q14",
+      "block": 3,
+      "query": "Si el paciente ya ha sido trasladado, por ejemplo, de mi planta a la UCI, ¿quién informa?",
+      "expected_section": "COMUNICACIÓN CON EL PACIENTE Y ALLEGADOS",
+      "expected_quote": "Debe informar el médico responsable habitual, pero es muy útil que esté presente el responsable de la atención actual (donde está el paciente ahora) para reforzar el compromiso de la institución."
+    },
+    {
+      "id": "q15",
+      "block": 3,
+      "query": "¿Hay alguna norma de oro sobre quién debe seguir hablando con la familia los días siguientes?",
+      "expected_section": "COMUNICACIÓN CON EL PACIENTE Y ALLEGADOS",
+      "expected_quote": "Sí, existe una regla fundamental: \"quien empieza a informar de un caso, informa del total del caso\", para evitar la fragmentación de mensajes o contradicciones."
+    },
+    {
+      "id": "q16",
+      "block": 3,
+      "query": "¿Qué hago si la familia se pone agresiva o empieza a llorar desconsoladamente?",
+      "expected_section": "COMUNICACIÓN CON EL PACIENTE Y ALLEGADOS",
+      "expected_quote": "Debes reconocer y aceptar esas reacciones (enfado, rechazo, temor). Es vital escuchar activamente, esperar en silencio sus reacciones para darles tiempo a asumir la noticia y responder con empatía."
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "¿Dónde podemos hablar con ellos para que no nos oiga nadie en el pasillo?",
+      "expected_section": "COMUNICACIÓN CON EL PACIENTE Y ALLEGADOS",
+      "expected_quote": "Siempre en un lugar tranquilo y privado, como una habitación individual o una consulta cerrada. Están prohibidos los pasillos, salas de espera o despachos administrativos de alto nivel."
+    },
+    {
+      "id": "q18",
+      "block": 3,
+      "query": "¿Y si me preguntan \"por qué ha pasado\" y todavía no tenemos ni idea?",
+      "expected_section": "COMUNICACIÓN CON EL PACIENTE Y ALLEGADOS",
+      "expected_quote": "Sé honesto. Es válido decir: \"En este momento no lo sabemos y estamos trabajando en ello\" o \"Aún no disponemos de ese dato\". Nunca especules sobre causas no confirmadas."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "¿Cómo debo comportarme y qué lenguaje usar para que no parezca que me pongo a la defensiva?",
+      "expected_section": "COMUNICACIÓN CON EL PACIENTE Y ALLEGADOS",
+      "expected_quote": "Utiliza un lenguaje claro, despacio y sin tecnicismos excesivos. Mantén una actitud corporal respetuosa. Céntrate en los hechos (\"qué ocurrió\") y no en valoraciones prematuras (\"por qué ocurrió\"). Evita el impulso de responsabilizar a otros compañeros."
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "¿Debemos esperar a tener el análisis completo del error para hablar con ellos?",
+      "expected_section": "COMUNICACIÓN CON EL PACIENTE Y ALLEGADOS",
+      "expected_quote": "No. Hay que ponerse a disposición de la familia lo antes posible. Se informará de lo que se sepa hasta ese momento y se les dirá que se seguirá investigando para darles más datos."
+    },
+    {
+      "id": "q21",
+      "block": 4,
+      "query": "¿Me van a echar la culpa de todo por un error que ha sido del sistema?",
+      "expected_section": "SOPORTE A LA SEGUNDA VÍCTIMA",
+      "expected_quote": "La institución promueve un tratamiento justo. Se busca el aprendizaje y no la exclusión, centrándose en el \"qué sucedió\" más que en el \"quién lo hizo\"."
+    },
+    {
+      "id": "q22",
+      "block": 4,
+      "query": "Se me ha caído el alma a los pies y no puedo seguir... ¿tengo que terminar el turno?",
+      "expected_section": "SOPORTE A LA SEGUNDA VÍCTIMA",
+      "expected_quote": "No obligatoriamente. El protocolo indica que se debe ofrecer a los profesionales involucrados la posibilidad de no atender más pacientes ese mismo día."
+    },
+    {
+      "id": "q23",
+      "block": 4,
+      "query": "¿De quién me puedo fiar para hablar de esto sin que me juzguen?",
+      "expected_section": "SOPORTE A LA SEGUNDA VÍCTIMA",
+      "expected_quote": "El soporte por pares (la ayuda de tus colegas y compañeros) es una de las intervenciones más efectivas. También cuentas con el apoyo del SPRL y del Grupo de Apoyo al Profesional."
+    },
+    {
+      "id": "q24",
+      "block": 4,
+      "query": "Si estoy psicológicamente destrozado, ¿pueden cambiarme de planta o darme la baja?",
+      "expected_section": "SOPORTE A LA SEGUNDA VÍCTIMA",
+      "expected_quote": "El SPRL valorará si necesitas un cambio de puesto urgente (provisional o definitivo) o, si no puedes realizar tus tareas, instará una baja laboral por contingencia profesional."
+    },
+    {
+      "id": "q25",
+      "block": 4,
+      "query": "¿Es normal que no pare de darle vueltas a lo que pasó una y otra vez?",
+      "expected_section": "SOPORTE A LA SEGUNDA VÍCTIMA",
+      "expected_quote": "Sí, es la Fase 1 de recuperación (Pensamientos Intrusivos). Después vendrán otras como las dudas sobre tu capacidad (Fase 2) o el temor a la investigación (Fase 3)."
+    },
+    {
+      "id": "q26",
+      "block": 4,
+      "query": "¿Cómo termina este proceso? ¿Me quedaré marcado para siempre?",
+      "expected_section": "SOPORTE A LA SEGUNDA VÍCTIMA",
+      "expected_quote": "La fase final de Resolución tiene tres caminos: \"Abandonar\" la unidad, \"Sobrevivir\" con tristeza persistente o \"Desarrollarse\", que es el objetivo: aprender de la vivencia y mejorar."
+    },
+    {
+      "id": "q27",
+      "block": 4,
+      "query": "¿Quién forma ese Grupo de Apoyo que dicen que me va a ayudar?",
+      "expected_section": "SOPORTE A LA SEGUNDA VÍCTIMA",
+      "expected_quote": "Incluye a un miembro de Dirección, un mando intermedio, un compañero, el responsable de Calidad, un miembro del SPRL y un psicólogo con experiencia en mediación."
+    },
+    {
+      "id": "q28",
+      "block": 5,
+      "query": "¿Dónde busco el código para notificar el incidente en la web del SiNASP?",
+      "expected_section": "SEGUIMIENTO Y RECURSOS",
+      "expected_quote": "Debes entrar en www.sinasp.es y utilizar el código de notificación HCUZ90."
+    },
+    {
+      "id": "q29",
+      "block": 5,
+      "query": "¿Puedo participar yo en la investigación para explicar qué falló realmente?",
+      "expected_section": "SEGUIMIENTO Y RECURSOS",
+      "expected_quote": "El profesional debe participar en el análisis de factores contribuyentes, ya sea como miembro del equipo de análisis de causas o mediante una entrevista."
+    },
+    {
+      "id": "q30",
+      "block": 5,
+      "query": "¿Qué hago si un periodista me asalta por el pasillo o me llama para preguntar por el caso?",
+      "expected_section": "SEGUIMIENTO Y RECURSOS",
+      "expected_quote": "No debes hacer declaraciones ni especulaciones. El protocolo es estricto: todas las peticiones externas de información deben ser dirigidas al responsable de comunicación del centro."
+    }
+  ]
+}

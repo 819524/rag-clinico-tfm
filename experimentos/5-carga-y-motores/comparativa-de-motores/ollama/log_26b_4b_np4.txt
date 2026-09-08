@@ -1,0 +1,230 @@
+=================================================================
+  Sweep de carga — 2026-06-25 18:16:21
+  Niveles    : [1, 3, 5, 10, 15, 20, 25]
+  Modelo     : gemma4:26b
+  Re-ranking : embed
+  Colección  : docs_rag_qwen3
+=================================================================
+
+─────────────────────────────────────────────────────────────────
+  ▶  1 usuario simultáneo
+─────────────────────────────────────────────────────────────────
+  Lanzando 1 peticiones simultáneas…
+
+  Tiempo muro total  : 6,907 ms
+  Suma secuencial eq.: 6,907 ms
+  Solapamiento real  : 0 ms  (serializado por Ollama)
+  [ 1] OK  TTFT=  2,118 ms  total=   6,907 ms  tokens≈ 750  tps≈108.6
+       fases: router=1.05s  retriever=0.05s  gen=5.45s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+
+─────────────────────────────────────────────────────────────────
+  ▶  3 usuarios simultáneos
+─────────────────────────────────────────────────────────────────
+  Lanzando 3 peticiones simultáneas…
+
+  Tiempo muro total  : 11,686 ms
+  Suma secuencial eq.: 31,948 ms
+  Solapamiento real  : 20,262 ms  (paralelo)
+  [ 1] OK  TTFT=  3,182 ms  total=  11,686 ms  tokens≈ 750  tps≈ 64.2
+       fases: router=2.15s  retriever=0.06s  gen=9.12s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 2] OK  TTFT=  4,448 ms  total=  10,824 ms  tokens≈ 621  tps≈ 57.4
+       fases: router=2.13s  retriever=0.25s  gen=8.13s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 3] OK  TTFT=  3,616 ms  total=   9,438 ms  tokens≈ 482  tps≈ 51.1
+       fases: router=2.15s  retriever=0.43s  gen=6.64s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+
+─────────────────────────────────────────────────────────────────
+  ▶  5 usuarios simultáneos
+─────────────────────────────────────────────────────────────────
+  Lanzando 5 peticiones simultáneas…
+
+  Tiempo muro total  : 16,899 ms
+  Suma secuencial eq.: 62,251 ms
+  Solapamiento real  : 45,352 ms  (paralelo)
+  [ 1] OK  TTFT=  3,799 ms  total=  15,368 ms  tokens≈ 744  tps≈ 48.4
+       fases: router=2.49s  retriever=0.05s  gen=12.45s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 2] OK  TTFT=  8,738 ms  total=  16,899 ms  tokens≈ 752  tps≈ 44.5
+       fases: router=3.58s  retriever=0.23s  gen=12.8s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 3] OK  TTFT=  4,343 ms  total=   9,471 ms  tokens≈ 337  tps≈ 35.6
+       fases: router=2.51s  retriever=0.39s  gen=6.39s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [ 4] OK  TTFT=  4,933 ms  total=   8,678 ms  tokens≈ 271  tps≈ 31.2
+       fases: router=2.49s  retriever=0.23s  gen=5.68s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [ 5] OK  TTFT=  4,630 ms  total=  11,835 ms  tokens≈ 468  tps≈ 39.5
+       fases: router=2.37s  retriever=0.31s  gen=8.75s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+
+─────────────────────────────────────────────────────────────────
+  ▶  10 usuarios simultáneos
+─────────────────────────────────────────────────────────────────
+  Lanzando 10 peticiones simultáneas…
+
+  Tiempo muro total  : 27,280 ms
+  Suma secuencial eq.: 196,434 ms
+  Solapamiento real  : 169,154 ms  (paralelo)
+  [ 1] OK  TTFT= 14,484 ms  total=  25,161 ms  tokens≈ 744  tps≈ 29.6
+       fases: router=3.79s  retriever=0.07s  gen=20.97s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 2] OK  TTFT=  6,829 ms  total=  17,349 ms  tokens≈ 734  tps≈ 42.3
+       fases: router=2.52s  retriever=0.3s  gen=14.23s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 3] OK  TTFT= 23,898 ms  total=  27,279 ms  tokens≈ 470  tps≈ 17.2
+       fases: router=5.57s  retriever=0.18s  gen=21.32s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [ 4] OK  TTFT=  9,362 ms  total=  13,491 ms  tokens≈ 298  tps≈ 22.1
+       fases: router=3.66s  retriever=0.05s  gen=9.51s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [ 5] OK  TTFT= 17,395 ms  total=  23,632 ms  tokens≈ 491  tps≈ 20.8
+       fases: router=5.57s  retriever=0.06s  gen=17.61s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [ 6] OK  TTFT= 13,571 ms  total=  24,548 ms  tokens≈ 747  tps≈ 30.4
+       fases: router=3.79s  retriever=0.07s  gen=20.33s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 7] OK  TTFT=  6,101 ms  total=  16,850 ms  tokens≈ 726  tps≈ 43.1
+       fases: router=2.6s  retriever=0.21s  gen=13.72s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 8] OK  TTFT= 16,870 ms  total=  24,011 ms  tokens≈ 529  tps≈ 22.0
+       fases: router=3.77s  retriever=0.25s  gen=19.79s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [ 9] OK  TTFT=  4,666 ms  total=   9,574 ms  tokens≈ 270  tps≈ 28.2
+       fases: router=2.6s  retriever=0.05s  gen=6.64s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [10] OK  TTFT=  4,667 ms  total=  14,539 ms  tokens≈ 629  tps≈ 43.3
+       fases: router=2.38s  retriever=0.42s  gen=11.36s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+
+─────────────────────────────────────────────────────────────────
+  ▶  15 usuarios simultáneos
+─────────────────────────────────────────────────────────────────
+  Lanzando 15 peticiones simultáneas…
+
+  Tiempo muro total  : 39,479 ms
+  Suma secuencial eq.: 384,589 ms
+  Solapamiento real  : 345,110 ms  (paralelo)
+  [ 1] OK  TTFT= 32,033 ms  total=  39,479 ms  tokens≈ 743  tps≈ 18.8
+       fases: router=6.39s  retriever=0.06s  gen=32.67s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 2] OK  TTFT= 21,577 ms  total=  31,771 ms  tokens≈ 769  tps≈ 24.2
+       fases: router=4.79s  retriever=0.21s  gen=26.45s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 3] OK  TTFT=  6,748 ms  total=  13,096 ms  tokens≈ 498  tps≈ 38.0
+       fases: router=2.6s  retriever=0.45s  gen=9.83s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [ 4] OK  TTFT=  6,293 ms  total=  10,391 ms  tokens≈ 290  tps≈ 27.9
+       fases: router=2.59s  retriever=0.06s  gen=7.44s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [ 5] OK  TTFT= 13,839 ms  total=  22,282 ms  tokens≈ 537  tps≈ 24.1
+       fases: router=3.78s  retriever=0.07s  gen=18.06s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [ 6] OK  TTFT= 19,012 ms  total=  29,355 ms  tokens≈ 747  tps≈ 25.4
+       fases: router=4.96s  retriever=0.08s  gen=23.96s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 7] OK  TTFT= 22,322 ms  total=  32,688 ms  tokens≈ 761  tps≈ 23.3
+       fases: router=4.91s  retriever=0.27s  gen=27.22s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 8] OK  TTFT= 17,354 ms  total=  25,799 ms  tokens≈ 592  tps≈ 22.9
+       fases: router=3.9s  retriever=0.22s  gen=21.46s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [ 9] OK  TTFT= 16,558 ms  total=  21,377 ms  tokens≈ 303  tps≈ 14.2
+       fases: router=3.9s  retriever=0.05s  gen=17.14s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [10] OK  TTFT= 29,357 ms  total=  37,323 ms  tokens≈ 539  tps≈ 14.4
+       fases: router=6.0s  retriever=0.17s  gen=30.75s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [11] OK  TTFT=  5,269 ms  total=  16,554 ms  tokens≈ 746  tps≈ 45.1
+       fases: router=2.54s  retriever=0.07s  gen=13.58s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [12] OK  TTFT=  6,741 ms  total=  17,232 ms  tokens≈ 719  tps≈ 41.7
+       fases: router=2.61s  retriever=0.46s  gen=13.86s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [13] OK  TTFT= 25,640 ms  total=  31,621 ms  tokens≈ 457  tps≈ 14.5
+       fases: router=5.0s  retriever=0.24s  gen=26.14s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [14] OK  TTFT= 32,027 ms  total=  36,668 ms  tokens≈ 303  tps≈  8.3
+       fases: router=6.4s  retriever=0.07s  gen=29.91s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [15] OK  TTFT= 10,514 ms  total=  18,953 ms  tokens≈ 528  tps≈ 27.9
+       fases: router=3.73s  retriever=0.08s  gen=14.75s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+
+─────────────────────────────────────────────────────────────────
+  ▶  20 usuarios simultáneos
+─────────────────────────────────────────────────────────────────
+  Lanzando 20 peticiones simultáneas…
+
+  Tiempo muro total  : 49,525 ms
+  Suma secuencial eq.: 632,109 ms
+  Solapamiento real  : 582,584 ms  (paralelo)
+  [ 1] OK  TTFT=  8,288 ms  total=  18,470 ms  tokens≈ 744  tps≈ 40.3
+       fases: router=3.12s  retriever=0.05s  gen=14.95s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 2] OK  TTFT= 42,187 ms  total=  49,525 ms  tokens≈ 684  tps≈ 13.8
+       fases: router=8.34s  retriever=0.24s  gen=40.64s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 3] OK  TTFT= 18,531 ms  total=  26,380 ms  tokens≈ 536  tps≈ 20.3
+       fases: router=4.54s  retriever=0.26s  gen=21.37s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [ 4] OK  TTFT= 19,988 ms  total=  24,062 ms  tokens≈ 283  tps≈ 11.8
+       fases: router=5.58s  retriever=0.05s  gen=18.18s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [ 5] OK  TTFT= 14,623 ms  total=  20,010 ms  tokens≈ 385  tps≈ 19.2
+       fases: router=4.31s  retriever=0.06s  gen=15.26s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [ 6] OK  TTFT= 27,471 ms  total=  38,150 ms  tokens≈ 743  tps≈ 19.5
+       fases: router=6.74s  retriever=0.05s  gen=31.03s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 7] OK  TTFT=  8,948 ms  total=  16,911 ms  tokens≈ 623  tps≈ 36.8
+       fases: router=3.11s  retriever=0.24s  gen=13.23s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 8] OK  TTFT= 42,557 ms  total=  48,600 ms  tokens≈ 535  tps≈ 11.0
+       fases: router=8.56s  retriever=0.23s  gen=39.59s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [ 9] OK  TTFT= 37,360 ms  total=  42,479 ms  tokens≈ 291  tps≈  6.9
+       fases: router=6.95s  retriever=0.06s  gen=35.18s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [10] OK  TTFT=  8,328 ms  total=  14,948 ms  tokens≈ 469  tps≈ 31.4
+       fases: router=2.99s  retriever=0.05s  gen=11.49s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [11] OK  TTFT= 31,298 ms  total=  42,138 ms  tokens≈ 742  tps≈ 17.6
+       fases: router=6.83s  retriever=0.06s  gen=34.91s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [12] OK  TTFT= 16,680 ms  total=  27,415 ms  tokens≈ 698  tps≈ 25.5
+       fases: router=4.32s  retriever=0.2s  gen=22.58s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [13] OK  TTFT= 23,072 ms  total=  30,044 ms  tokens≈ 451  tps≈ 15.0
+       fases: router=5.49s  retriever=0.16s  gen=24.2s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [14] OK  TTFT= 38,687 ms  total=  43,123 ms  tokens≈ 269  tps≈  6.2
+       fases: router=7.81s  retriever=0.04s  gen=34.95s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [15] OK  TTFT= 30,314 ms  total=  39,076 ms  tokens≈ 572  tps≈ 14.6
+       fases: router=6.67s  retriever=0.06s  gen=31.95s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [16] OK  TTFT= 12,783 ms  total=  23,030 ms  tokens≈ 743  tps≈ 32.3
+       fases: router=4.22s  retriever=0.05s  gen=18.4s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [17] OK  TTFT= 26,597 ms  total=  37,177 ms  tokens≈ 755  tps≈ 20.3
+       fases: router=5.81s  retriever=0.25s  gen=30.82s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [18] OK  TTFT= 24,404 ms  total=  31,180 ms  tokens≈ 444  tps≈ 14.2
+       fases: router=5.57s  retriever=0.2s  gen=25.2s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [19] OK  TTFT=  8,569 ms  total=  12,767 ms  tokens≈ 303  tps≈ 23.7
+       fases: router=3.31s  retriever=0.07s  gen=9.07s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [20] OK  TTFT= 38,776 ms  total=  46,624 ms  tokens≈ 501  tps≈ 10.7
+       fases: router=7.77s  retriever=0.05s  gen=38.37s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+
+─────────────────────────────────────────────────────────────────
+  ▶  25 usuarios simultáneos
+─────────────────────────────────────────────────────────────────
+  Lanzando 25 peticiones simultáneas…
+
+  Tiempo muro total  : 62,691 ms
+  Suma secuencial eq.: 1,016,856 ms
+  Solapamiento real  : 954,165 ms  (paralelo)
+  [ 1] OK  TTFT= 27,239 ms  total=  37,556 ms  tokens≈ 746  tps≈ 19.9
+       fases: router=5.61s  retriever=0.05s  gen=31.5s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 2] OK  TTFT= 21,025 ms  total=  31,427 ms  tokens≈ 752  tps≈ 23.9
+       fases: router=4.49s  retriever=0.22s  gen=26.37s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 3] OK  TTFT= 21,430 ms  total=  26,768 ms  tokens≈ 440  tps≈ 16.4
+       fases: router=4.68s  retriever=0.27s  gen=21.6s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [ 4] OK  TTFT= 27,238 ms  total=  31,007 ms  tokens≈ 281  tps≈  9.1
+       fases: router=5.56s  retriever=0.04s  gen=25.1s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [ 5] OK  TTFT= 41,648 ms  total=  48,463 ms  tokens≈ 453  tps≈  9.3
+       fases: router=7.81s  retriever=0.06s  gen=40.19s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [ 6] OK  TTFT= 20,412 ms  total=  30,853 ms  tokens≈ 749  tps≈ 24.3
+       fases: router=4.58s  retriever=0.04s  gen=25.83s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [ 7] OK  TTFT= 56,570 ms  total=  62,689 ms  tokens≈ 763  tps≈ 12.2
+       fases: router=10.32s  retriever=0.28s  gen=51.77s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [ 8] OK  TTFT= 48,391 ms  total=  57,313 ms  tokens≈ 527  tps≈  9.2
+       fases: router=8.01s  retriever=0.19s  gen=48.89s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [ 9] OK  TTFT= 51,362 ms  total=  56,400 ms  tokens≈ 303  tps≈  5.4
+       fases: router=8.88s  retriever=0.05s  gen=47.19s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [10] OK  TTFT= 45,570 ms  total=  53,220 ms  tokens≈ 490  tps≈  9.2
+       fases: router=7.78s  retriever=0.07s  gen=44.97s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [11] OK  TTFT= 30,539 ms  total=  40,807 ms  tokens≈ 747  tps≈ 18.3
+       fases: router=5.64s  retriever=0.05s  gen=34.74s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [12] OK  TTFT= 11,490 ms  total=  19,905 ms  tokens≈ 631  tps≈ 31.7
+       fases: router=3.15s  retriever=0.38s  gen=16.06s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [13] OK  TTFT= 36,521 ms  total=  44,866 ms  tokens≈ 587  tps≈ 13.1
+       fases: router=6.74s  retriever=0.19s  gen=37.71s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [14] OK  TTFT= 49,577 ms  total=  54,083 ms  tokens≈ 253  tps≈  4.7
+       fases: router=8.66s  retriever=0.17s  gen=44.99s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [15] OK  TTFT= 31,446 ms  total=  36,623 ms  tokens≈ 382  tps≈ 10.4
+       fases: router=6.57s  retriever=0.05s  gen=29.58s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [16] OK  TTFT= 37,255 ms  total=  49,154 ms  tokens≈ 747  tps≈ 15.2
+       fases: router=6.88s  retriever=0.13s  gen=41.79s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [17] OK  TTFT=  9,454 ms  total=  20,367 ms  tokens≈ 715  tps≈ 35.1
+       fases: router=3.14s  retriever=0.24s  gen=16.64s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [18] OK  TTFT= 35,000 ms  total=  40,616 ms  tokens≈ 439  tps≈ 10.8
+       fases: router=6.71s  retriever=0.18s  gen=33.5s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [19] OK  TTFT= 30,789 ms  total=  34,955 ms  tokens≈ 303  tps≈  8.7
+       fases: router=5.78s  retriever=0.06s  gen=28.81s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [20] OK  TTFT= 41,642 ms  total=  51,457 ms  tokens≈ 609  tps≈ 11.8
+       fases: router=7.58s  retriever=0.06s  gen=43.4s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+  [21] OK  TTFT=  9,739 ms  total=  21,411 ms  tokens≈ 748  tps≈ 34.9
+       fases: router=3.46s  retriever=0.05s  gen=17.5s  «¿Cuál es el procedimiento para insertar una sonda urinaria?»
+  [22] OK  TTFT=  9,450 ms  total=  21,253 ms  tokens≈ 760  tps≈ 35.8
+       fases: router=3.14s  retriever=0.25s  gen=17.53s  «¿Qué antisépticos se usan para la desinfección de heridas?»
+  [23] OK  TTFT= 54,110 ms  total=  60,560 ms  tokens≈ 576  tps≈  9.5
+       fases: router=9.48s  retriever=0.23s  gen=50.63s  «¿Cómo se trata una infección de tracto urinario nosocomial?»
+  [24] OK  TTFT= 53,630 ms  total=  58,126 ms  tokens≈ 274  tps≈  4.7
+       fases: router=8.87s  retriever=0.15s  gen=48.8s  «¿Cuáles son los criterios para retirar una vía periférica?»
+  [25] OK  TTFT= 19,968 ms  total=  26,977 ms  tokens≈ 494  tps≈ 18.3
+       fases: router=4.39s  retriever=0.18s  gen=22.01s  «¿Qué hacer si el paciente presenta hematuria tras el sondaje»
+
+  Informe sweep: eval/prueba_carga_usuarios/olla_voz05_opcionA/sweep_olla_26b_4b_np4.html

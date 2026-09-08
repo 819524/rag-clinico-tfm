@@ -1,0 +1,607 @@
+<title>Comparativa de despliegue · RTX 5090 vs RTX PRO 6000</title>
+<style>
+  :root{
+    --bg:#fbfbfc; --surface:#ffffff; --surface-2:#f6f7f9;
+    --ink:#17191e; --muted:#5c6675; --faint:#8b93a1;
+    --border:#e6e8ee; --grid:#eef0f4; --accent:#2560c4;
+    --vllm:#3987e5; --llama:#199e70; --ollama:#c98500;
+    --good:#1f9d57; --warn:#c98500; --bad:#d1495b;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --maxw:1080px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#141519; --surface:#1c1e23; --surface-2:#212429;
+      --ink:#e9ebef; --muted:#9aa2af; --faint:#6b7280;
+      --border:#2b2e35; --grid:#24272e; --accent:#6ea3f0;
+      --vllm:#4b93e8; --llama:#189167; --ollama:#bd8320;
+      --good:#35b06b; --warn:#d69a2a; --bad:#e0687a;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#fbfbfc; --surface:#ffffff; --surface-2:#f6f7f9;
+    --ink:#17191e; --muted:#5c6675; --faint:#8b93a1;
+    --border:#e6e8ee; --grid:#eef0f4; --accent:#2560c4;
+    --vllm:#3987e5; --llama:#199e70; --ollama:#c98500;
+    --good:#1f9d57; --warn:#c98500; --bad:#d1495b;
+  }
+  :root[data-theme="dark"]{
+    --bg:#141519; --surface:#1c1e23; --surface-2:#212429;
+    --ink:#e9ebef; --muted:#9aa2af; --faint:#6b7280;
+    --border:#2b2e35; --grid:#24272e; --accent:#6ea3f0;
+    --vllm:#4b93e8; --llama:#189167; --ollama:#bd8320;
+    --good:#35b06b; --warn:#d69a2a; --bad:#e0687a;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    line-height:1.6;-webkit-font-smoothing:antialiased;font-size:16px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+  h1,h2,h3{line-height:1.2;text-wrap:balance;margin:0}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--faint);font-weight:600}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  /* header */
+  header{border-bottom:1px solid var(--border);background:var(--surface)}
+  .hd{padding:52px 0 40px}
+  .hd h1{font-size:clamp(1.9rem,4.4vw,2.9rem);font-weight:750;letter-spacing:-.02em}
+  .hd .sub{color:var(--muted);font-size:1.08rem;max-width:60ch;margin-top:14px}
+  .hd .meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 20px;
+    font-family:var(--mono);font-size:.78rem;color:var(--faint)}
+
+  section{padding:44px 0;border-bottom:1px solid var(--border)}
+  section h2{font-size:1.5rem;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
+  section h2 .n{color:var(--accent);font-family:var(--mono);font-size:1rem;margin-right:12px;font-weight:600}
+  .lead{color:var(--muted);max-width:68ch;margin-bottom:26px}
+  h3{font-size:1.06rem;font-weight:650;margin:30px 0 12px}
+  p{max-width:70ch}
+
+  /* config cards */
+  .configs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px}
+  .card.hero5090{border-color:color-mix(in srgb,var(--vllm) 45%,var(--border))}
+  .card .tag{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;
+    text-transform:uppercase;padding:3px 9px;border-radius:20px;font-weight:600}
+  .tag.a{background:color-mix(in srgb,var(--vllm) 16%,transparent);color:var(--vllm)}
+  .tag.b{background:var(--surface-2);color:var(--muted)}
+  .card h3{margin:12px 0 2px;font-size:1.15rem}
+  .card .role{color:var(--faint);font-size:.85rem}
+  .spec{margin-top:16px;border-top:1px solid var(--border);padding-top:14px;
+    display:grid;grid-template-columns:auto 1fr;gap:7px 16px;font-size:.9rem}
+  .spec dt{color:var(--muted)}.spec dd{margin:0;text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  /* stat tiles */
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:4px 0 8px}
+  .tile{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px}
+  .tile .k{font-family:var(--mono);font-size:2rem;font-weight:600;letter-spacing:-.02em;line-height:1}
+  .tile .l{color:var(--muted);font-size:.82rem;margin-top:8px}
+  .tile .s{color:var(--faint);font-size:.74rem;margin-top:3px}
+
+  /* figure + chart */
+  figure{margin:0}
+  .fig{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 18px 14px}
+  .fig .ttl{font-weight:650;font-size:.98rem}
+  .fig .cap{color:var(--muted);font-size:.84rem;margin-top:2px;max-width:74ch}
+  figcaption{color:var(--muted);font-size:.82rem;margin-top:12px}
+  .smgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .chart-wrap{position:relative;margin-top:12px}
+  svg.chart{width:100%;height:auto;display:block;overflow:visible}
+  .legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;font-size:.8rem;color:var(--muted)}
+  .legend .it{display:inline-flex;align-items:center;gap:7px}
+  .swatch{width:22px;height:0;border-top-width:3px;border-top-style:solid;display:inline-block;border-radius:2px}
+  .swatch.dash{border-top-style:dashed}
+  .tip{position:absolute;pointer-events:none;opacity:0;transform:translate(-50%,-8px);
+    background:var(--surface);border:1px solid var(--border);border-radius:8px;
+    padding:8px 10px;font-size:.76rem;box-shadow:0 6px 22px rgba(0,0,0,.14);z-index:5;min-width:120px;transition:opacity .08s}
+  .tip .th{font-family:var(--mono);font-weight:600;margin-bottom:5px;color:var(--ink)}
+  .tip .row{display:flex;align-items:center;gap:7px;justify-content:space-between}
+  .tip .row .lbl{display:flex;align-items:center;gap:6px;color:var(--muted)}
+  .tip .dot{width:9px;height:9px;border-radius:2px;flex:none}
+  .tip .v{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+
+  /* tables */
+  .tblwrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px;margin-top:14px}
+  table{border-collapse:collapse;width:100%;font-size:.86rem}
+  th,td{padding:9px 13px;text-align:right;white-space:nowrap}
+  th:first-child,td:first-child{text-align:left}
+  thead th{background:var(--surface-2);color:var(--muted);font-weight:600;
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.03em;text-transform:uppercase;position:sticky;top:0}
+  tbody td{border-top:1px solid var(--border);font-family:var(--mono);font-variant-numeric:tabular-nums}
+  tbody tr:hover{background:var(--surface-2)}
+  td.eng{font-family:var(--sans);font-weight:600}
+  .dotc{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:7px;vertical-align:middle}
+
+  /* deployment matrix */
+  .rec{display:grid;grid-template-columns:auto 1fr;gap:0;border:1px solid var(--border);
+    border-radius:12px;overflow:hidden;margin-top:8px}
+  .rec .band{display:contents}
+  .rec .u{background:var(--surface-2);padding:18px;border-top:1px solid var(--border);
+    font-family:var(--mono);font-weight:600;font-size:.95rem}
+  .rec .body{padding:18px;border-top:1px solid var(--border);border-left:1px solid var(--border)}
+  .rec .band:first-child .u,.rec .band:first-child .body{border-top:none}
+  .rec .pick{display:inline-flex;align-items:center;gap:8px;font-weight:650;margin-bottom:5px}
+  .pill{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;
+    padding:2px 8px;border-radius:20px;font-weight:700}
+  .pill.g{background:color-mix(in srgb,var(--good) 18%,transparent);color:var(--good)}
+  .pill.w{background:color-mix(in srgb,var(--warn) 20%,transparent);color:var(--warn)}
+  .rec .why{color:var(--muted);font-size:.88rem;max-width:66ch}
+  .rec .why b{color:var(--ink);font-weight:600}
+
+  .callout{background:var(--surface-2);border:1px solid var(--border);border-left:3px solid var(--accent);
+    border-radius:8px;padding:16px 18px;margin-top:20px}
+  .callout .h{font-weight:650;margin-bottom:4px}
+  .callout p{color:var(--muted);font-size:.92rem;margin:0}
+  ul.clean{padding-left:0;list-style:none;max-width:70ch}
+  ul.clean li{padding-left:22px;position:relative;margin:9px 0;color:var(--muted)}
+  ul.clean li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;
+    border-radius:2px;background:var(--accent)}
+  ul.clean li b{color:var(--ink);font-weight:600}
+  .src{font-size:.8rem;color:var(--faint);font-family:var(--mono);line-height:1.9}
+  footer{padding:34px 0 60px;color:var(--faint);font-size:.82rem}
+  @media(max-width:760px){
+    .tiles{grid-template-columns:1fr 1fr}.configs{grid-template-columns:1fr}
+    .smgrid{grid-template-columns:1fr}.rec{grid-template-columns:1fr}
+    .rec .body{border-left:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header>
+  <div class="wrap hd">
+    <div class="eyebrow">Informe técnico · Sistema RAG clínico</div>
+    <h1>¿Hardware modesto para el hospital?</h1>
+    <p class="sub">Comparativa de despliegue de un asistente RAG médico sobre dos configuraciones de
+      cómputo: una GPU de consumo (RTX&nbsp;5090, 32&nbsp;GB) frente a un servidor profesional
+      (2× RTX&nbsp;PRO&nbsp;6000, 96&nbsp;GB). Con qué motor y para cuántos usuarios concurrentes
+      conviene cada una.</p>
+    <div class="meta">
+      <span>gemma&nbsp;26B / 12B</span><span>3 motores de inferencia</span>
+      <span>barrido 1–200 usuarios</span><span>mediana de 10 repeticiones</span>
+      <span>pipeline RAG completo</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ============ CONFIGS ============ -->
+<section>
+  <div class="eyebrow">Las dos configuraciones</div>
+  <h2>Qué comparamos</h2>
+  <p class="lead">Mismo software, mismo pipeline, mismas preguntas. Solo cambia la GPU que sirve el
+    generador. El coste indicado es orientativo (GPU, PVP aproximado).</p>
+  <div class="configs">
+    <div class="card hero5090">
+      <span class="tag a">Hardware modesto</span>
+      <h3>RTX 5090</h3>
+      <div class="role">GPU de consumo · una sola tarjeta</div>
+      <dl class="spec">
+        <dt>VRAM</dt><dd>32 GB</dd>
+        <dt>Arquitectura</dt><dd>Blackwell (sm_120)</dd>
+        <dt>GPUs en servicio</dt><dd>1</dd>
+        <dt>Coste GPU aprox.</dt><dd>≈ 2.000 €</dd>
+      </dl>
+    </div>
+    <div class="card">
+      <span class="tag b">Referencia profesional</span>
+      <h3>2× RTX PRO 6000</h3>
+      <div class="role">Servidor · generador + embeddings en GPUs separadas</div>
+      <dl class="spec">
+        <dt>VRAM</dt><dd>2 × 96 GB</dd>
+        <dt>Arquitectura</dt><dd>Blackwell</dd>
+        <dt>GPUs en servicio</dt><dd>2</dd>
+        <dt>Coste GPU aprox.</dt><dd>≈ 17.000 €</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="callout">
+    <div class="h">La pregunta del informe</div>
+    <p>El servidor profesional cuesta del orden de <b>8× más</b> en GPU. ¿Justifica ese salto el
+      servicio que da el hospital, o una tarjeta de consumo basta para la carga real? La respuesta
+      depende de <b>dos decisiones</b>: el motor de inferencia y el número de usuarios concurrentes.</p>
+  </div>
+</section>
+
+<!-- ============ RESUMEN ============ -->
+<section>
+  <div class="eyebrow">Resumen ejecutivo</div>
+  <h2>Los tres hallazgos</h2>
+  <div class="tiles">
+    <div class="tile">
+      <div class="k" style="color:var(--vllm)">421</div>
+      <div class="l">tok/s de la 5090 con vLLM (26B, 25 usuarios)</div>
+      <div class="s">supera a la PRO 6000 con llama.cpp (241) u Ollama (146)</div>
+    </div>
+    <div class="tile">
+      <div class="k">~8×</div>
+      <div class="l">más caro el servidor profesional en GPU</div>
+      <div class="s">para ~1,6× más rendimiento en vLLM a 25u</div>
+    </div>
+    <div class="tile">
+      <div class="k" style="color:var(--good)">200</div>
+      <div class="l">usuarios concurrentes servidos por la 5090</div>
+      <div class="s">0 fallos; la latencia sube, no se cae</div>
+    </div>
+    <div class="tile">
+      <div class="k">3,4×</div>
+      <div class="l">ventaja de vLLM sobre Ollama por petición (26B, 25u)</div>
+      <div class="s">el motor pesa más que la máquina</div>
+    </div>
+  </div>
+  <ul class="clean">
+    <li><b>El motor importa más que el hardware.</b> vLLM sobre la 5090 de 2.000 € rinde más que
+      llama.cpp u Ollama sobre el servidor de 17.000 €. Elegir bien el motor es la decisión de mayor
+      impacto y coste cero.</li>
+    <li><b>La 5090 cubre con holgura una carga de departamento.</b> Hasta ~25 usuarios concurrentes
+      da buena experiencia (TTFT ~7 s, ~24 tok/s por usuario) con vLLM. El hardware caro solo se
+      justifica cuando se necesitan 50+ usuarios concurrentes con baja latencia.</li>
+    <li><b>Diferencia de escala, no de viabilidad.</b> El servidor profesional escala hasta
+      ~2.300 tok/s (KV enorme); la 5090 se estabiliza en ~435 tok/s pero sigue atendiendo a todos.
+      La elección es de capacidad, no de "funciona / no funciona".</li>
+  </ul>
+</section>
+
+<!-- ============ METODOLOGIA ============ -->
+<section>
+  <div class="eyebrow">Metodología</div>
+  <h2>Cómo se ha medido</h2>
+  <p class="lead">Cada motor sirve el <b>mismo pipeline RAG completo</b> —Router (clasificación de
+    intención con el LLM), Retriever (embedding + rerank vectorial en CrateDB) y Generador— sobre las
+    mismas secuencias de preguntas médicas sembradas. Se mide la aplicación entera, pero el cuello de
+    botella es el generador (~97 % del tiempo es LLM), por lo que la comparación entre motores es limpia.</p>
+  <div class="tiles" style="grid-template-columns:repeat(3,1fr)">
+    <div class="tile"><div class="k" style="font-size:1.3rem">Router · Retriever · Generador</div>
+      <div class="l">pipeline completo por petición</div></div>
+    <div class="tile"><div class="k" style="font-size:1.3rem">1 → 25 usuarios</div>
+      <div class="l">barrido de matriz · +200 en saturación</div></div>
+    <div class="tile"><div class="k" style="font-size:1.3rem">mediana de 10</div>
+      <div class="l">repeticiones por celda, robusta a outliers</div></div>
+  </div>
+  <p style="margin-top:20px;color:var(--muted);font-size:.9rem">Modelos <span class="num">gemma&nbsp;26B</span>
+    (mezcla de expertos, 4B activos) y <span class="num">gemma&nbsp;12B</span> (denso), cuantización 4-bit.
+    Motores: <b style="color:var(--vllm)">vLLM</b> (batching automático), <b style="color:var(--llama)">llama.cpp</b>
+    y <b style="color:var(--ollama)">Ollama</b> (barrido de slots NP&nbsp;1/4/8). Retriever en "Opción A"
+    (reutiliza vectores almacenados → pipeline <i>generator-bound</i>). Ambas máquinas: Blackwell, misma app.</p>
+</section>
+
+<!-- ============ THROUGHPUT ============ -->
+<section>
+  <div class="eyebrow">Rendimiento agregado</div>
+  <h2><span class="n">01</span>Throughput del sistema (26B)</h2>
+  <p class="lead">Tokens por segundo que produce el sistema en total, según usuarios concurrentes.
+    Mejor configuración de cada motor (vLLM automático; llama.cpp y Ollama a NP&nbsp;8). Misma escala en
+    ambos paneles para que la diferencia entre máquinas sea directa.</p>
+  <div class="smgrid">
+    <figure class="fig">
+      <div class="ttl">RTX 5090 <span style="color:var(--faint);font-weight:400">· 32 GB</span></div>
+      <div class="cap">La tarjeta de consumo.</div>
+      <div class="chart-wrap"><svg class="chart" id="c_thr_5090"></svg><div class="tip" id="t_thr_5090"></div></div>
+    </figure>
+    <figure class="fig">
+      <div class="ttl">2× RTX PRO 6000 <span style="color:var(--faint);font-weight:400">· 96 GB</span></div>
+      <div class="cap">El servidor profesional.</div>
+      <div class="chart-wrap"><svg class="chart" id="c_thr_voz"></svg><div class="tip" id="t_thr_voz"></div></div>
+    </figure>
+  </div>
+  <div class="legend">
+    <span class="it"><span class="swatch" style="border-color:var(--vllm)"></span>vLLM</span>
+    <span class="it"><span class="swatch" style="border-color:var(--llama)"></span>llama.cpp (NP8)</span>
+    <span class="it"><span class="swatch" style="border-color:var(--ollama)"></span>Ollama (NP8)</span>
+  </div>
+  <figcaption>vLLM domina en ambas: agrupa las peticiones en lotes reales. En la 5090 alcanza
+    <span class="num">421 tok/s</span> a 25u — más que cualquiera de los otros dos motores en el servidor
+    grande (<span class="num">241</span> / <span class="num">146</span>). llama.cpp y Ollama, sin batching
+    eficiente, se estancan pronto en ambas máquinas.</figcaption>
+</section>
+
+<!-- ============ TTFT ============ -->
+<section>
+  <div class="eyebrow">Latencia percibida</div>
+  <h2><span class="n">02</span>Tiempo hasta el primer token</h2>
+  <p class="lead">Lo que espera el usuario antes de ver la respuesta empezar. Es la métrica de
+    experiencia más importante en un chat. Aquí, en la 5090, por motor (26B).</p>
+  <figure class="fig">
+    <div class="ttl">TTFT en la RTX 5090 por motor — 26B</div>
+    <div class="cap">Menos es mejor. Franja verde: &lt; 5 s (fluido). Franja ámbar: 5–12 s (aceptable).</div>
+    <div class="chart-wrap"><svg class="chart" id="c_ttft"></svg><div class="tip" id="t_ttft"></div></div>
+    <div class="legend">
+      <span class="it"><span class="swatch" style="border-color:var(--vllm)"></span>vLLM</span>
+      <span class="it"><span class="swatch" style="border-color:var(--llama)"></span>llama.cpp (NP8)</span>
+      <span class="it"><span class="swatch" style="border-color:var(--ollama)"></span>Ollama (NP8)</span>
+    </div>
+  </figure>
+  <figcaption>Con vLLM el TTFT se mantiene bajo (7,3 s a 25u) porque las peticiones se solapan en el
+    lote. Con llama.cpp y Ollama la cola es en serie: el TTFT se dispara a 30–44 s a 25u. Para un chat
+    interactivo, <b>en la 5090 solo vLLM ofrece latencia usable</b> bajo carga.</figcaption>
+</section>
+
+<!-- ============ SATURACION ============ -->
+<section>
+  <div class="eyebrow">El límite del hardware</div>
+  <h2><span class="n">03</span>Saturación: hasta 200 usuarios</h2>
+  <p class="lead">Empujando vLLM con el 26B más allá del barrido normal. Aquí se ve la diferencia
+    real entre las dos máquinas — y por qué es de <i>capacidad</i>, no de viabilidad.</p>
+  <figure class="fig">
+    <div class="ttl">Throughput sostenido bajo saturación — vLLM 26B</div>
+    <div class="cap">Ambas máquinas mantienen 0 fallos en todo el rango.</div>
+    <div class="chart-wrap"><svg class="chart" id="c_sat"></svg><div class="tip" id="t_sat"></div></div>
+    <div class="legend">
+      <span class="it"><span class="swatch" style="border-color:var(--vllm)"></span>RTX 5090 (sólida)</span>
+      <span class="it"><span class="swatch dash" style="border-color:var(--vllm)"></span>2× RTX PRO 6000 (discontinua)</span>
+    </div>
+  </figure>
+  <figcaption>El servidor profesional <b>sigue escalando</b> hasta ~2.300 tok/s gracias a su enorme
+    <i>pool</i> de KV-cache, que le deja agrupar cientos de peticiones. La 5090 <b>se estabiliza en
+    ~435 tok/s</b> (su KV satura hacia los 50 usuarios) pero no colapsa: atiende a los 200 con 0 fallos,
+    a costa de más latencia. También por eso el <i>prefix caching</i> apenas ayuda en la 5090
+    (×1,2 vs ×2,5 en el servidor): su KV satura igual.</figcaption>
+</section>
+
+<!-- ============ EXPERIENCIA INDIVIDUAL ============ -->
+<section>
+  <div class="eyebrow">Experiencia individual</div>
+  <h2><span class="n">04</span>Velocidad por usuario</h2>
+  <p class="lead">Tokens por segundo que recibe <i>cada</i> usuario. Baja con la concurrencia (la GPU se
+    reparte). Referencia: por encima de ~15 tok/s la respuesta va más rápido que la lectura.</p>
+  <figure class="fig">
+    <div class="ttl">tok/s por petición en la RTX 5090 — 26B</div>
+    <div class="cap">Franja verde: &gt; 15 tok/s (cómodo para leer en streaming).</div>
+    <div class="chart-wrap"><svg class="chart" id="c_perreq"></svg><div class="tip" id="t_perreq"></div></div>
+    <div class="legend">
+      <span class="it"><span class="swatch" style="border-color:var(--vllm)"></span>vLLM</span>
+      <span class="it"><span class="swatch" style="border-color:var(--llama)"></span>llama.cpp (NP8)</span>
+      <span class="it"><span class="swatch" style="border-color:var(--ollama)"></span>Ollama (NP8)</span>
+    </div>
+  </figure>
+  <figcaption>Con vLLM, cada usuario recibe ~24 tok/s incluso con 25 concurrentes — fluido. Con los
+    otros motores se cae por debajo del umbral de lectura antes de los 10 usuarios.</figcaption>
+</section>
+
+<!-- ============ DECISION ============ -->
+<section>
+  <div class="eyebrow">Guía de despliegue</div>
+  <h2>Qué elegir según los usuarios concurrentes</h2>
+  <p class="lead">Combinando throughput, TTFT y fluidez por usuario, esta es la recomendación para un
+    despliegue real. "Usuarios concurrentes" = peticiones activas a la vez, no usuarios registrados
+    (un hospital con cientos de trabajadores rara vez supera unas pocas decenas de consultas simultáneas).</p>
+  <div class="rec">
+    <div class="band">
+      <div class="u">≤ 10<br><span style="color:var(--faint);font-weight:400;font-size:.8rem">piloto / consulta</span></div>
+      <div class="body">
+        <div class="pick"><span class="pill g">RTX 5090</span><span style="color:var(--vllm)">vLLM · 26B</span></div>
+        <div class="why">Sobra. TTFT ~3 s, ~42 tok/s por usuario. Máxima calidad (26B) sobre la GPU
+          barata. <b>No hay razón para el hardware caro.</b></div>
+      </div>
+    </div>
+    <div class="band">
+      <div class="u">10 – 25<br><span style="color:var(--faint);font-weight:400;font-size:.8rem">departamento</span></div>
+      <div class="body">
+        <div class="pick"><span class="pill g">RTX 5090</span><span style="color:var(--vllm)">vLLM · 26B</span></div>
+        <div class="why">Punto dulce de la tarjeta de consumo. TTFT ~7 s, ~24 tok/s por usuario, 0 fallos.
+          <b>Cubre la carga típica de un servicio hospitalario a 1/8 del coste.</b></div>
+      </div>
+    </div>
+    <div class="band">
+      <div class="u">25 – 50<br><span style="color:var(--faint);font-weight:400;font-size:.8rem">hospital moderado</span></div>
+      <div class="body">
+        <div class="pick"><span class="pill w">Punto de decisión</span></div>
+        <div class="why">La 5090 mantiene throughput y 0 fallos, pero el TTFT sube a ~19 s: bien para uso
+          <b>asíncrono</b>, justo para chat interactivo. Opciones: quedarse en la 5090 con <b>gemma&nbsp;12B</b>
+          (más rápido, algo menos de calidad) o dar el salto al servidor profesional si la latencia es crítica.</div>
+      </div>
+    </div>
+    <div class="band">
+      <div class="u">50 – 100<br><span style="color:var(--faint);font-weight:400;font-size:.8rem">hospital grande</span></div>
+      <div class="body">
+        <div class="pick"><span class="pill g">2× RTX PRO 6000</span><span style="color:var(--vllm)">vLLM · 26B</span></div>
+        <div class="why">Aquí el hardware caro empieza a pagarse: mantiene TTFT ~5 s y ~2.000 tok/s con
+          baja latencia. La 5090 sigue sirviendo, pero con TTFT ~36 s (solo aceptable en asíncrono).</div>
+      </div>
+    </div>
+    <div class="band">
+      <div class="u">&gt; 100<br><span style="color:var(--faint);font-weight:400;font-size:.8rem">multi-servicio</span></div>
+      <div class="body">
+        <div class="pick"><span class="pill g">2× RTX PRO 6000</span><span style="color:var(--vllm)">vLLM · 26B</span></div>
+        <div class="why">Territorio del servidor: escala a ~2.300 tok/s con TTFT ~5 s. La 5090 queda
+          saturada (TTFT ~71 s a 200u). <b>Aquí sí se justifica plenamente la inversión.</b></div>
+      </div>
+    </div>
+  </div>
+  <div class="callout">
+    <div class="h">Regla práctica</div>
+    <p>Elige <b>siempre vLLM</b>. Empieza en una <b>RTX 5090</b>: cubre de sobra hasta un departamento
+      (~25 usuarios concurrentes) con calidad 26B. Reserva el <b>servidor profesional</b> para cuando
+      necesites <b>50+ usuarios concurrentes con latencia interactiva</b> — no antes.</p>
+  </div>
+</section>
+
+<!-- ============ FIABILIDAD ============ -->
+<section>
+  <div class="eyebrow">Fiabilidad</div>
+  <h2>Robustez de la matriz</h2>
+  <p class="lead">Sobre miles de peticiones en todo el barrido, ambas máquinas son esencialmente
+    infalibles. Los pocos fallos son transitorios de red ("server disconnected"), no colapsos.</p>
+  <div class="tblwrap">
+    <table>
+      <thead><tr><th>Motor</th><th>5090 · fallos/sweeps</th><th>PRO 6000 · fallos/sweeps</th><th>Fiabilidad</th></tr></thead>
+      <tbody>
+        <tr><td class="eng"><span class="dotc" style="background:var(--vllm)"></span>vLLM</td><td>2 / 240</td><td>5 / 240</td><td>&gt; 99,9 %</td></tr>
+        <tr><td class="eng"><span class="dotc" style="background:var(--llama)"></span>llama.cpp</td><td>0 / 702</td><td>0 / 720</td><td>100 %</td></tr>
+        <tr><td class="eng"><span class="dotc" style="background:var(--ollama)"></span>Ollama</td><td>0 / 720</td><td>0 / 720</td><td>100 %</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ TABLAS ============ -->
+<section>
+  <div class="eyebrow">Anexo de datos</div>
+  <h2>Números completos (26B)</h2>
+  <h3>Throughput agregado — tok/s</h3>
+  <div class="tblwrap"><table id="tbl_thr"></table></div>
+  <h3>Tiempo hasta el primer token — segundos</h3>
+  <div class="tblwrap"><table id="tbl_ttft"></table></div>
+  <p style="margin-top:14px;font-size:.84rem;color:var(--faint)">Mediana de 10 repeticiones · promedio de las
+    variantes de embedding (0.6B/4B, diferencia &lt;5 %, confirma <i>generator-bound</i>) · llama.cpp/Ollama a NP8.</p>
+</section>
+
+<!-- ============ FUENTES ============ -->
+<section style="border-bottom:none">
+  <div class="eyebrow">Trazabilidad</div>
+  <h2>Fuentes de los datos</h2>
+  <p class="lead">Todo procede de los barridos ejecutados, sin cifras inventadas.</p>
+  <div class="src">
+    · Matriz principal 5090 &nbsp;→&nbsp; eval/prueba_carga_usuarios/confianza_5090/{vllm,llamacpp,ollama}/<br>
+    · Matriz principal PRO 6000 &nbsp;→&nbsp; eval/prueba_carga_usuarios/confianza/{vllm,llamacpp,ollama}/<br>
+    · Saturación 5090 &nbsp;→&nbsp; confianza_5090/saturacion/sweep_saturacion.json<br>
+    · Saturación PRO 6000 &nbsp;→&nbsp; 2_vllm_experimentos/saturacion_100-200u/ · prefixcache_AB/<br>
+    · Cada celda: 10 runs × 6 niveles (1–25u); saturación 10–200u · métrica: mediana de repeticiones
+  </div>
+</section>
+
+</div>
+
+<footer><div class="wrap">Informe técnico comparativo · Sistema RAG clínico · gemma 26B/12B sobre
+  vLLM / llama.cpp / Ollama · datos de barridos reproducibles.</div></footer>
+
+<script>
+const DATA = {"levels": [1, 5, 10, 15, 20, 25], "voz05": {"26b": {"vllm": {"thr": [90.3, 267.7, 400.4, 549.5, 634.9, 685.8], "tps": [90.3, 69.6, 53.6, 50.8, 43.2, 39.0], "ttft": [1.0472000000000001, 1.4914, 2.1065, 2.1191, 2.8196, 3.5101]}, "llamacpp_np1": {"thr": [56.1, 124.7, 130.2, 134.8, 138.1, 139.4], "tps": [56.1, 38.8, 23.1, 17.0, 13.6, 10.8], "ttft": [1.3165, 5.6008000000000004, 11.8294, 18.080599999999997, 24.3691, 30.2488]}, "llamacpp_np4": {"thr": [59.2, 177.2, 195.5, 206.1, 216.9, 227.2], "tps": [59.2, 40.1, 28.8, 23.4, 18.8, 16.5], "ttft": [1.6215, 2.744, 6.2228, 9.3535, 12.7151, 16.7457]}, "llamacpp_np8": {"thr": [50.3, 146.0, 202.1, 213.1, 247.1, 241.3], "tps": [50.3, 33.7, 25.5, 20.0, 18.9, 16.0], "ttft": [1.9502000000000002, 3.0844, 4.152699999999999, 7.39, 9.942200000000001, 13.539200000000001]}, "ollama_np1": {"thr": [58.3, 102.0, 102.6, 107.1, 105.3, 105.2], "tps": [58.3, 32.2, 19.1, 13.5, 10.4, 8.4], "ttft": [2.4861999999999997, 8.1681, 15.5969, 24.1113, 32.7123, 41.0934]}, "ollama_np4": {"thr": [50.8, 124.7, 134.8, 145.4, 145.0, 146.5], "tps": [50.8, 28.1, 19.8, 15.2, 12.3, 10.1], "ttft": [2.41, 4.8923000000000005, 9.3252, 15.0502, 20.9309, 26.6062]}, "ollama_np8": {"thr": [48.4, 108.2, 142.8, 148.8, 148.7, 145.4], "tps": [48.4, 24.0, 17.7, 12.6, 10.4, 8.5], "ttft": [2.4442, 5.2982, 7.7598, 13.328, 19.5016, 24.244]}}, "12b": {"vllm": {"thr": [54.7, 195.1, 291.6, 409.0, 475.7, 529.0], "tps": [54.7, 47.2, 38.1, 37.2, 31.6, 28.0], "ttft": [1.6032, 2.2156, 2.9845, 3.0993000000000004, 3.7596999999999996, 4.336600000000001]}, "llamacpp_np1": {"thr": [55.0, 75.9, 78.5, 80.2, 82.6, 81.0], "tps": [55.0, 24.6, 14.1, 10.2, 8.0, 6.4], "ttft": [2.1292, 10.8483, 22.597900000000003, 33.9869, 43.8416, 58.5351]}, "llamacpp_np4": {"thr": [49.8, 122.6, 139.1, 143.6, 156.2, 142.6], "tps": [49.8, 29.7, 20.8, 16.2, 14.4, 10.7], "ttft": [2.3195, 3.9758, 9.495, 15.2011, 19.9912, 27.5877]}, "llamacpp_np8": {"thr": [46.6, 92.3, 134.1, 145.0, 156.5, 147.2], "tps": [46.6, 20.3, 16.1, 13.5, 11.5, 9.3], "ttft": [2.69, 4.7277, 6.852399999999999, 11.4453, 17.0761, 24.386200000000002]}, "ollama_np1": {"thr": [45.4, 65.6, 66.9, 70.0, 69.8, 68.4], "tps": [45.4, 20.9, 12.0, 9.0, 6.8, 5.5], "ttft": [3.26, 13.668299999999999, 25.6032, 41.427699999999994, 56.195800000000006, 69.9255]}, "ollama_np4": {"thr": [45.9, 100.0, 104.0, 110.0, 108.3, 108.5], "tps": [45.9, 22.1, 14.6, 11.2, 8.9, 7.4], "ttft": [3.075, 6.5306999999999995, 14.506, 22.9054, 32.505, 40.848800000000004]}, "ollama_np8": {"thr": [47.1, 78.8, 105.8, 103.0, 108.9, 108.9], "tps": [47.1, 17.8, 12.1, 8.6, 7.5, 6.4], "ttft": [3.1005, 7.238300000000001, 11.7754, 22.079900000000002, 30.165599999999998, 37.3928]}}}, "rtx5090": {"26b": {"vllm": {"thr": [99.9, 245.8, 327.7, 389.9, 404.4, 420.9], "tps": [99.9, 58.7, 42.2, 32.2, 27.3, 23.9], "ttft": [1.2715, 2.2426, 3.2448, 4.142, 5.709, 7.3332]}, "llamacpp_np1": {"thr": [40.2, 94.0, 93.5, 98.5, 98.6, 99.0], "tps": [40.2, 28.3, 15.7, 11.7, 9.1, 7.3], "ttft": [2.6038, 8.4145, 16.4748, 26.0723, 35.315, 44.8626]}, "llamacpp_np4": {"thr": [35.5, 115.7, 121.2, 129.1, 133.3, 130.6], "tps": [35.5, 24.9, 15.6, 12.3, 10.3, 8.3], "ttft": [2.2882, 5.9939, 12.8017, 18.8986, 26.126, 32.4116]}, "llamacpp_np8": {"thr": [38.9, 90.9, 113.5, 121.5, 129.1, 129.9], "tps": [38.9, 19.8, 13.5, 9.9, 8.3, 7.0], "ttft": [2.4932, 7.8377, 11.4122, 18.6675, 25.3113, 31.9422]}, "ollama_np1": {"thr": [43.5, 73.2, 74.1, 76.4, 77.2, 75.8], "tps": [43.5, 22.8, 12.8, 8.9, 7.0, 5.5], "ttft": [3.7902, 11.325700000000001, 22.7548, 34.4869, 45.4221, 56.7094]}, "ollama_np4": {"thr": [41.0, 85.9, 86.9, 90.8, 95.1, 93.5], "tps": [41.0, 19.5, 11.9, 8.7, 7.3, 5.9], "ttft": [3.9615, 8.305200000000001, 16.873099999999997, 25.9922, 36.366699999999994, 44.436099999999996]}, "ollama_np8": {"thr": [44.7, 70.7, 83.3, 84.3, 88.5, 77.5], "tps": [44.7, 15.7, 10.1, 6.9, 6.0, 5.0], "ttft": [3.7521999999999998, 8.6134, 14.3295, 25.1449, 34.910199999999996, 44.0283]}}, "12b": {"vllm": {"thr": [54.6, 159.8, 207.6, 243.1, 264.0, 266.8], "tps": [54.6, 37.6, 25.0, 18.7, 15.6, 13.1], "ttft": [1.932, 3.2731999999999997, 5.5564, 7.9766, 10.3587, 12.649700000000001]}, "llamacpp_np1": {"thr": [29.5, 49.9, 54.9, 57.0, 58.2, 57.8], "tps": [29.5, 14.3, 8.5, 6.4, 5.0, 4.0], "ttft": [4.815, 15.7273, 31.813, 49.472, 65.985, 83.07839999999999]}, "llamacpp_np4": {"thr": [35.8, 74.1, 82.9, 89.8, 90.7, 93.3], "tps": [35.8, 16.7, 10.9, 8.6, 7.0, 5.9], "ttft": [3.829, 10.339, 21.0319, 31.1623, 41.4617, 51.3179]}, "llamacpp_np8": {"thr": [23.3, 52.5, 88.3, 90.6, 93.2, 95.2], "tps": [23.3, 11.2, 9.7, 7.2, 6.0, 5.0], "ttft": [8.916799999999999, 16.9707, 18.6423, 29.6997, 39.8369, 48.9079]}, "ollama_np1": {"thr": [34.5, 53.0, 54.1, 55.3, 56.4, 55.4], "tps": [34.5, 16.2, 9.3, 6.6, 5.2, 4.1], "ttft": [4.987, 17.053900000000002, 34.831199999999995, 53.7135, 71.48389999999999, 89.87660000000001]}, "ollama_np4": {"thr": [35.1, 67.5, 69.6, 75.7, 76.1, 76.0], "tps": [35.1, 14.9, 9.0, 7.2, 5.8, 4.8], "ttft": [4.865, 10.6654, 23.5477, 36.8307, 49.442800000000005, 61.835699999999996]}, "ollama_np8": {"thr": [35.1, 58.6, 68.8, 65.1, 71.4, 69.2], "tps": [35.1, 12.6, 7.6, 5.3, 4.6, 3.8], "ttft": [4.87, 11.276200000000001, 20.257, 38.0518, 51.182, 64.7299]}}}, "saturation": {"voz05": {"users": [1, 10, 25, 50, 75, 100, 200], "thr": [129.2, 530.9, 970.1, 1445.8, 1874.2, 2063.6, 2339.0], "ttft": [0.85, 2.28, 2.27, 2.88, 3.7, 5.11, null], "tps": [129.2, 64.0, 49.2, 39.6, 33.9, 29.4, null]}, "rtx5090": {"users": [10, 25, 50, 75, 100, 150, 200], "thr": [318, 420, 435, 456, 421, 434, 433], "ttft": [5.2, 11.7, 19.3, 27.9, 35.9, 54.1, 71.1], "tps": [null, null, null, null, null, null, null]}}, "prefix_ab": {"voz05": 2.5, "rtx5090": 1.2}};
+const col = n => getComputedStyle(document.documentElement).getPropertyValue('--'+n).trim();
+// series color is read live via CSS var by name; we pass the var name.
+function fmt(v,d=0){return v==null?'—':v.toLocaleString('es-ES',{minimumFractionDigits:d,maximumFractionDigits:d});}
+
+function chart(svgId,tipId,cfg){
+  const svg=document.getElementById(svgId), tip=document.getElementById(tipId);
+  const W=560,H=cfg.h||300, P={l:48,r:66,t:16,b:40};
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  const xs=cfg.xs, xmin=Math.min(...xs), xmax=Math.max(...xs);
+  const ymax=cfg.ymax, ymin=0;
+  const X=v=>P.l+(v-xmin)/(xmax-xmin)*(W-P.l-P.r);
+  const Y=v=>H-P.b-(v-ymin)/(ymax-ymin)*(H-P.t-P.b);
+  const NS='http://www.w3.org/2000/svg';
+  const mk=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+  while(svg.firstChild)svg.removeChild(svg.firstChild);
+
+  // bands
+  (cfg.bands||[]).forEach(b=>{
+    svg.appendChild(mk('rect',{x:P.l,y:Y(b.to),width:W-P.l-P.r,height:Y(b.from)-Y(b.to),
+      fill:col(b.color),opacity:b.op||0.07}));
+  });
+  // y grid + labels
+  const yticks=cfg.yticks||niceTicks(ymax,5);
+  yticks.forEach(t=>{
+    svg.appendChild(mk('line',{x1:P.l,y1:Y(t),x2:W-P.r,y2:Y(t),stroke:col('grid'),'stroke-width':1}));
+    const lb=mk('text',{x:P.l-9,y:Y(t)+3.5,'text-anchor':'end','font-size':11,fill:col('faint'),
+      'font-family':'ui-monospace,monospace'});lb.textContent=fmt(t);svg.appendChild(lb);
+  });
+  // x labels
+  xs.forEach(x=>{
+    const lb=mk('text',{x:X(x),y:H-P.b+18,'text-anchor':'middle','font-size':11,fill:col('faint'),
+      'font-family':'ui-monospace,monospace'});lb.textContent=x;svg.appendChild(lb);
+  });
+  // axis title x
+  const xt=mk('text',{x:(P.l+W-P.r)/2,y:H-4,'text-anchor':'middle','font-size':10.5,fill:col('muted')});
+  xt.textContent=cfg.xlabel||'usuarios concurrentes';svg.appendChild(xt);
+
+  // series
+  cfg.series.forEach(s=>{
+    let d='',started=false;
+    s.ys.forEach((y,i)=>{if(y==null)return;d+=(started?'L':'M')+X(xs[i])+' '+Y(y)+' ';started=true;});
+    svg.appendChild(mk('path',{d,fill:'none',stroke:col(s.c),'stroke-width':2.4,
+      'stroke-dasharray':s.dash?'6 5':'0','stroke-linejoin':'round','stroke-linecap':'round'}));
+    s.ys.forEach((y,i)=>{if(y==null)return;
+      svg.appendChild(mk('circle',{cx:X(xs[i]),cy:Y(y),r:3,fill:col('surface'),stroke:col(s.c),'stroke-width':2}));});
+    // end label at last non-null
+    let li=-1;s.ys.forEach((y,i)=>{if(y!=null)li=i;});
+    if(li>=0 && !s.noLabel){
+      const el=mk('text',{x:X(xs[li])+8,y:Y(s.ys[li])+3.5,'font-size':11,'font-weight':600,fill:col(s.c),
+        'font-family':'ui-monospace,monospace'});el.textContent=s.tag||'';svg.appendChild(el);}
+  });
+  // y axis title
+  if(cfg.ylabel){const yl=mk('text',{x:12,y:P.t+2,'font-size':10.5,fill:col('muted')});
+    yl.textContent=cfg.ylabel;svg.appendChild(yl);}
+
+  // hover
+  const focus=mk('line',{x1:0,y1:P.t,x2:0,y2:H-P.b,stroke:col('muted'),'stroke-width':1,opacity:0});
+  svg.appendChild(focus);
+  const hit=mk('rect',{x:P.l,y:P.t,width:W-P.l-P.r,height:H-P.t-P.b,fill:'transparent'});
+  svg.appendChild(hit);
+  const wrap=svg.parentElement;
+  function move(ev){
+    const r=svg.getBoundingClientRect();
+    const px=(ev.clientX-r.left)/r.width*W;
+    let bi=0,bd=1e9;xs.forEach((x,i)=>{const dd=Math.abs(X(x)-px);if(dd<bd){bd=dd;bi=i;}});
+    focus.setAttribute('x1',X(xs[bi]));focus.setAttribute('x2',X(xs[bi]));focus.setAttribute('opacity',.5);
+    let rows='';cfg.series.forEach(s=>{if(s.ys[bi]==null)return;
+      rows+=`<div class="row"><span class="lbl"><span class="dot" style="background:${col(s.c)}"></span>${s.name}</span><span class="v">${fmt(s.ys[bi],cfg.dec||0)}${cfg.unit||''}</span></div>`;});
+    tip.innerHTML=`<div class="th">${xs[bi]} ${cfg.xunit||'usuarios'}</div>${rows}`;
+    const cx=X(xs[bi])/W*r.width;
+    tip.style.left=cx+'px';tip.style.top=(P.t-4)+'px';tip.style.opacity=1;
+  }
+  hit.addEventListener('mousemove',move);
+  hit.addEventListener('mouseleave',()=>{tip.style.opacity=0;focus.setAttribute('opacity',0);});
+}
+function niceTicks(max,n){const step=niceNum(max/n);const out=[];for(let v=0;v<=max+1e-9;v+=step)out.push(Math.round(v*100)/100);return out;}
+function niceNum(x){const e=Math.pow(10,Math.floor(Math.log10(x)));const f=x/e;let nf;if(f<1.5)nf=1;else if(f<3)nf=2;else if(f<7)nf=5;else nf=10;return nf*e;}
+
+const L=DATA.levels;
+const eng=(m,mo,f)=>DATA[m]['26b'][mo][f];
+
+function renderAll(){
+// 01 throughput 5090 & voz
+chart('c_thr_5090','t_thr_5090',{xs:L,ymax:700,unit:' tok/s',ylabel:'tok/s',
+  series:[{name:'vLLM',c:'vllm',tag:'vLLM',ys:eng('rtx5090','vllm','thr')},
+          {name:'llama.cpp',c:'llama',tag:'llama',ys:eng('rtx5090','llamacpp_np8','thr')},
+          {name:'Ollama',c:'ollama',tag:'Ollama',ys:eng('rtx5090','ollama_np8','thr')}]});
+chart('c_thr_voz','t_thr_voz',{xs:L,ymax:700,unit:' tok/s',ylabel:'tok/s',
+  series:[{name:'vLLM',c:'vllm',tag:'vLLM',ys:eng('voz05','vllm','thr')},
+          {name:'llama.cpp',c:'llama',tag:'llama',ys:eng('voz05','llamacpp_np8','thr')},
+          {name:'Ollama',c:'ollama',tag:'Ollama',ys:eng('voz05','ollama_np8','thr')}]});
+
+// 02 TTFT 5090
+chart('c_ttft','t_ttft',{xs:L,ymax:48,unit:' s',dec:1,ylabel:'segundos',h:320,
+  bands:[{from:0,to:5,color:'good',op:.09},{from:5,to:12,color:'warn',op:.08}],
+  series:[{name:'vLLM',c:'vllm',tag:'vLLM',ys:eng('rtx5090','vllm','ttft')},
+          {name:'llama.cpp',c:'llama',tag:'llama',ys:eng('rtx5090','llamacpp_np8','ttft')},
+          {name:'Ollama',c:'ollama',tag:'Ollama',ys:eng('rtx5090','ollama_np8','ttft')}]});
+
+// 03 saturation (different xs per machine → align on union, nulls fill)
+const su=[1,10,25,50,75,100,150,200];
+const align=(users,vals)=>su.map(u=>{const i=users.indexOf(u);return i<0?null:vals[i];});
+chart('c_sat','t_sat',{xs:su,ymax:2500,unit:' tok/s',ylabel:'tok/s',h:330,
+  series:[{name:'RTX 5090',c:'vllm',tag:'5090',ys:align(DATA.saturation.rtx5090.users,DATA.saturation.rtx5090.thr)},
+          {name:'PRO 6000',c:'vllm',dash:true,tag:'PRO',ys:align(DATA.saturation.voz05.users,DATA.saturation.voz05.thr)}]});
+
+// 04 per-req 5090
+chart('c_perreq','t_perreq',{xs:L,ymax:110,unit:' tok/s',ylabel:'tok/s',
+  bands:[{from:15,to:110,color:'good',op:.06}],
+  series:[{name:'vLLM',c:'vllm',tag:'vLLM',ys:eng('rtx5090','vllm','tps')},
+          {name:'llama.cpp',c:'llama',tag:'llama',ys:eng('rtx5090','llamacpp_np8','tps')},
+          {name:'Ollama',c:'ollama',tag:'Ollama',ys:eng('rtx5090','ollama_np8','tps')}]});
+
+// tables
+function buildTable(id,field,dec){
+  const t=document.getElementById(id);
+  let h='<thead><tr><th>Config</th>'+L.map(u=>`<th>${u}u</th>`).join('')+'</tr></thead><tbody>';
+  const rows=[['vLLM','vllm','vllm'],['llama.cpp NP8','llamacpp_np8','llama'],['Ollama NP8','ollama_np8','ollama']];
+  ['rtx5090','voz05'].forEach(m=>{
+    const mn=m==='rtx5090'?'5090':'PRO 6000';
+    h+=`<tr><td colspan="${L.length+1}" style="background:var(--surface-2);color:var(--muted);font-family:var(--sans);font-weight:600">${mn}</td></tr>`;
+    rows.forEach(([nm,key,c])=>{
+      h+=`<tr><td class="eng"><span class="dotc" style="background:var(--${c})"></span>${nm}</td>`+
+        DATA[m]['26b'][key][field].map(v=>`<td>${v==null?'—':v.toLocaleString('es-ES',{minimumFractionDigits:dec,maximumFractionDigits:dec})}</td>`).join('')+'</tr>';
+    });
+  });
+  t.innerHTML=h+'</tbody>';
+}
+buildTable('tbl_thr','thr',0);
+buildTable('tbl_ttft','ttft',1);
+}
+
+renderAll();
+// redibujar al cambiar de tema (los fills se hornean como atributos SVG)
+new MutationObserver(renderAll).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+if(window.matchMedia) matchMedia('(prefers-color-scheme:dark)').addEventListener('change',renderAll);
+</script>

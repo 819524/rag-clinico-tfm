@@ -1,0 +1,3411 @@
+{
+  "ground_truth": "RPC87_ground_truth.json",
+  "executed_at": "2026-06-13T22:48:50",
+  "mode": "retriever+generator",
+  "model": "gemma4:26b",
+  "collection": "docs_rag_qwen3_06b",
+  "rerank_strategy": "rrf_only",
+  "cross_encoder_device": null,
+  "top_k": 10,
+  "n_questions": 20,
+  "doc_anchor_enabled": true,
+  "doc_anchor_stats": {
+    "anchor_emitted": 14,
+    "anchor_received": 10,
+    "anchor_applied": 5,
+    "gate_reasons": {
+      "ok": 14,
+      "insufficient_chunks": 6
+    }
+  },
+  "retriever_metrics": {
+    "HitRate@1": 0.75,
+    "MRR@1": 0.75,
+    "Precision@1": 0.75,
+    "Recall@1": 0.75,
+    "NDCG@1": 0.75,
+    "HitRate@3": 0.9,
+    "MRR@3": 0.8167,
+    "Precision@3": 0.4667,
+    "Recall@3": 1.4,
+    "NDCG@3": 0.5373,
+    "HitRate@5": 0.95,
+    "MRR@5": 0.8267,
+    "Precision@5": 0.49,
+    "Recall@5": 2.45,
+    "NDCG@5": 0.5651,
+    "HitRate@10": 1.0,
+    "MRR@10": 0.835,
+    "Precision@10": 0.53,
+    "Recall@10": 5.3,
+    "NDCG@10": 0.7945
+  },
+  "memory_stats": {
+    "peak_proc_rss_mb": 65.44140625,
+    "peak_ollama_rss_mb": null
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "query": "¿Por qué hay que usar siempre un sistema de drenaje cerrado en lugar de uno abierto?",
+      "block": 1,
+      "expected_section": "2. JUSTIFICACIÓN",
+      "expected_quote": "El sistema de drenaje abierto favorece la aparición de bacteriuria en el 50% de los pacientes durante las primeras 24 horas del sondaje y en casi el 100% antes de terminar el cuarto día.",
+      "labels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "razones para el uso de un sistema de drenaje cerrado en lugar de un sistema de drenaje abierto",
+        "keywords": [
+          "sistema de drenaje cerrado",
+          "sistema abierto",
+          "usar siempre"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            1,
+            4,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 4,
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 1
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.8,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "3.- DEFINICIONES",
+          "rerank_score": 0.0318,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "6. ANEXOS",
+          "h2": "6.3 ANEXO III: Instrucciones de uso",
+          "rerank_score": 0.0315,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0313,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0293,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "6. ANEXOS",
+          "h2": "6.2. ANEXO II: hoja de recogida de datos domiciliaria.",
+          "rerank_score": 0.0284,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.0275,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.025,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.025,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.025,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0243,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.194,
+        "Retriever": 1.354,
+        "Generador": 8.39
+      },
+      "memory_mb": {
+        "proc_before": 65.1,
+        "proc_after_retriever": 65.4,
+        "proc_delta_retriever": 0.4,
+        "proc_after_generator": 65.4,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "El uso de un **sistema de drenaje cerrado** es fundamental en el sondaje vesical para reducir el riesgo de complicaciones infecciosas. La diferencia principal radica en la prevención de la colonización bacteriana:\n\n## Justificación del uso de sistema cerrado\n\n*   **Prevención de bacteriuria y la infección urinaria:** El uso de un sistema de drenaje abierto favorece significativamente la aparición de bacterias en la orina. Se ha observado que en un **50% de los pacientes** con sistema abierto aparece bacteriuria durante las primeras 24 horas, y en **casi el 100% de los pacientes** antes de finalizar el cuarto día [2]. \n*   **Comparativa de incidencia:** En contraste, el uso de un sistema de drenaje cerrado mantiene una incidencia global de bacteriuria de solo un **3-10% por día** [2].\n*   **Mantenimiento del circuito:** Un sistema de drenaje cerrado se define como una bolsa colectora de orina que cuenta con una válvula en su zona inferior para el vaciado, lo cual permite **evitar la desconexión con la sonda**, creando así un circuito cerrado [1].\n\n## Recomendaciones clínicas\n\nDe acuerdo con los protocolos de cuidados de enfermería, se establece lo siguiente:\n\n- **Práctica recomendada:** Se debe utilizar sistemas de drenaje cerrado, realizando el cambio de la bolsa únicamente cuando sea necesario [4].\n- **Nivel de evidencia:** Esta recomendación cuenta con un **nivel de evidencia 1b** y un **grado de recomendación B** [4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1444,
+        "token_stats": {
+          "prompt_tokens": 4299,
+          "completion_tokens": 334,
+          "total_tokens": 4633,
+          "tokens_per_second": 141.7,
+          "context_used_pct": 28.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.39
+      }
+    },
+    {
+      "id": "q02",
+      "query": "¿Cada cuánto tiempo le tengo que vaciar la bolsa de la orina al paciente?",
+      "block": 1,
+      "expected_section": "1. RESUMEN",
+      "expected_quote": "Vaciar la bolsa antes de que esté completamente llena o al menos cada 6-8 horas",
+      "labels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "frecuencia de vaciado de la bolsa de orina en el protocolo de cuidados de enfermería en el sondaje vesical",
+        "keywords": [
+          "vaciar la bolsa de la orina",
+          "cada cuánto tiempo"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "title": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            3,
+            2,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 2,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 1
+          },
+          "dominant_doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "dominant_ratio": 0.667,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 7: RETENCIÓN AGUDA DE ORINA",
+          "rerank_score": 0.0299,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0298,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0295,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0291,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.028,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.0259,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 8: LAVADO VESICAL",
+          "rerank_score": 0.0253,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0247,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0236,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0164,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.257,
+        "Retriever": 1.336,
+        "Generador": 8.41
+      },
+      "memory_mb": {
+        "proc_before": 65.4,
+        "proc_after_retriever": 64.5,
+        "proc_delta_retriever": -0.9,
+        "proc_after_generator": 64.5,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La frecuencia con la que se debe vaciar la bolsa de orina depende del tipo de procedimiento o situación clínica del paciente:\n\n- **En pacientes con retención aguda de orina (RAO) que usan tapón:** Si el paciente utiliza la sonda con tapón durante el día, se debe evacuar la orina **cada 2/3 horas**, siempre que no exista un deseo miccional previo [3].\n- **En pacientes con sondaje permanente (sistema de drenaje cerrado):** El protocolo indica que la bolsa de diuresis debe colocarse por debajo del nivel de la vejiga y sin tocar el suelo [2]. No se especifica un intervalo de tiempo fijo para el vaciado en este tipo de sondaje, pero se debe asegurar que el sistema sea cerrado para reducir el riesgo de infección [3, 8].\n\n**Consideraciones adicionales para el manejo de la bolsa:**\n- **Posición:** La bolsa debe mantenerse siempre en posición declive respecto a la vejiga para evitar el reflujo [8].\n- **Prevención de infecciones:** Se debe evitar que el tubo de la sonda caiga por debajo de la bolsa de recogida [8].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1020,
+        "token_stats": {
+          "prompt_tokens": 6961,
+          "completion_tokens": 243,
+          "total_tokens": 7204,
+          "tokens_per_second": 156.0,
+          "context_used_pct": 44.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.41
+      }
+    },
+    {
+      "id": "q03",
+      "query": "Mi paciente se va a lavar solo, ¿le digo que se eche crema hidratante en la zona del meato?",
+      "block": 1,
+      "expected_section": "1. RESUMEN",
+      "expected_quote": "Informar al paciente que no se aplique ningún tipo de crema que no haya sido prescrita",
+      "labels": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "indicaciones sobre el uso de crema hidratante en la zona del meato urinario durante el aseo personal del paciente",
+        "keywords": [
+          "lavar solo",
+          "crema hidratante",
+          "meato"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "title": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            4,
+            4,
+            3,
+            4,
+            2,
+            2,
+            1,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 4,
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 1,
+            "2013_Prevencion-y-Tratamiento-de-las-LPP": 3
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 5: GUÍA DE PREVENCIÓN DE LESIONES POR PRESIÓN PARA PERSONAS CUIDADORAS",
+          "h2": "¿CÓMO PREVENIR LAS LPP?",
+          "rerank_score": 0.0308,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "7. TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+          "h2": "7.3.5 Estimulación de los bordes epiteliales (19,76)",
+          "rerank_score": 0.0308,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0301,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 4: OTROS PRODUCTOS PARA LAS CURAS DE LESIONES POR PRESIÓN",
+          "h2": "PRODUCTOS BARRERA",
+          "rerank_score": 0.0299,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0283,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 4: OTROS PRODUCTOS PARA LAS CURAS DE LESIONES POR PRESIÓN",
+          "h2": "ACIDO HIALURÓNICO",
+          "rerank_score": 0.0275,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0268,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0251,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0235,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0221,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.272,
+        "Retriever": 1.352,
+        "Generador": 8.03
+      },
+      "memory_mb": {
+        "proc_before": 64.5,
+        "proc_after_retriever": 64.8,
+        "proc_delta_retriever": 0.3,
+        "proc_after_generator": 64.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No debe indicarle que se aplique crema en esa zona. Según los protocolos de cuidados de enfermería en el sondaje vesical, se debe **informar al paciente que no se aplique ningún tipo de crema que no haya sido prescrita** [4].\n\nEn relación con la higiene y el cuidado de la zona, los protocolos establecen lo siguiente:\n\n- **Higiene genital**: Se debe extremar la higiene diaria de la zona genital y de la sonda utilizando **agua y jabón** [4]. En el procedimiento de lavado, se especifica que se debe limpiar el meato con una **solución antiséptica** [3].\n- **Uso de antisépticos**: No se deben realizar cuidados rutinarios del meato con antisépticos [4].\n- **Cuidado de la piel íntegra**: Si la piel está íntegra, se aconseja mantenerla limpia (lavar con jabón neutro y agua tibia) y secar de forma suave [2]. Aunque se menciona la hidratación con cremas hidronutritivas o aceites para la piel íntegra [2], esta recomendación se enmarca en la prevención de lesiones por presión [1] y no debe contravenir la instrucción de no aplicar productos no prescritos en la zona de la sonda [4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1085,
+        "token_stats": {
+          "prompt_tokens": 4837,
+          "completion_tokens": 278,
+          "total_tokens": 5115,
+          "tokens_per_second": 141.4,
+          "context_used_pct": 31.2,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.03
+      }
+    },
+    {
+      "id": "q04",
+      "query": "¿Qué calibres de sonda preparamos normalmente si es un niño?",
+      "block": 2,
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "En el caso de los pacientes pediátricos se utilizan sondas del calibre 6 al 10.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "calibres de sonda utilizados habitualmente en población pediátrica",
+        "keywords": [
+          "calibres",
+          "sonda",
+          "niño"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 1
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0323,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.031,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0304,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.029,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.028,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0278,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0277,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0273,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.027,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 5.841,
+        "Retriever": 1.307,
+        "Generador": 7.05
+      },
+      "memory_mb": {
+        "proc_before": 64.8,
+        "proc_after_retriever": 64.9,
+        "proc_delta_retriever": 0.1,
+        "proc_after_generator": 64.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para los pacientes pediátricos, se utilizan sondas de los siguientes calibres:\n\n- **Calibres para pacientes pediátricos:** Del **6 al 10** (CH o Ch) [1, 9].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 156,
+        "token_stats": {
+          "prompt_tokens": 6512,
+          "completion_tokens": 50,
+          "total_tokens": 6562,
+          "tokens_per_second": 158.8,
+          "context_used_pct": 40.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.05
+      }
+    },
+    {
+      "id": "q05",
+      "query": "El paciente tiene la orina muy turbia y con bastantes coágulos, ¿le pongo un calibre 16?",
+      "block": 2,
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "CH 18: orina muy turbia, con muchos residuos, o hematuria moderada y/o con coágulos",
+      "labels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "evaluación de la idoneidad de un calibre 16 de sonda vesical ante la presencia de orina turbia y coágulos en el marco del PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+        "keywords": [
+          "orina muy turbia",
+          "coágulos",
+          "calibre 16"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "title": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            4,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 4,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 4
+          },
+          "dominant_doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0325,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.032,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0287,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0282,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0278,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.5. ORINA",
+          "rerank_score": 0.0226,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "8. PRUEBA PILOTO DEL PROTOCOLO",
+          "rerank_score": 0.0154,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0152,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 7: RETENCIÓN AGUDA DE ORINA",
+          "rerank_score": 0.0149,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "rerank_score": 0.0147,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.126,
+        "Retriever": 1.387,
+        "Generador": 9.77
+      },
+      "memory_mb": {
+        "proc_before": 64.9,
+        "proc_after_retriever": 65.3,
+        "proc_delta_retriever": 0.4,
+        "proc_after_generator": 65.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No se recomienda el uso de un calibre 16 Ch en este caso. Según los protocolos disponibles, la elección del calibre debe ajustarse a las características de la orina para evitar la obstrucción de la sonda y la necesidad de realizar recambios [1].\n\nPara un paciente con orina turbia y presencia de coágulos, las recomendaciones son las siguientes:\n\n## Selección de calibre y tipo de sonda\n- **Calibre recomendado**: Dado que la orina presenta coágulos, se debe emplear un calibre mayor para evitar el riesgo de obstrucción. Se deben utilizar **callores iguales o superiores a 20 Ch** [1].\n- **Criterios según la turbidez y hematuria**:\n    - **CH 16**: Se utiliza para orina ligeramente turbia o hematuria ligera con o sin pequeños coágulos [2].\n    - **CH 18**: Se indica para orina **muy turbia**, con muchos residuos, o hematuria moderada y/o con coágulos [2].\n    - **CH 20-24**: Se emplea en casos de hematuria intensa que requieran lavado [2].\n- **Tipo de sonda y vías**: Al existir la necesidad de extraer productos patológicos (como coágulos), se recomienda el uso de **sondas de 3 vías**, ya que permiten instaurar sistemas de lavado (irrigación) si fuera necesario [1].\n\n## Opciones específicas según la patología\nSi la situación clínica se clasifica como hematuria, el protocolo establece:\n- **Sonda de 3 vías** con un **calibre > 20 Ch** [4].\n- Se pueden considerar tipos de punta específicos para facilitar el drenaje de coágulos, tales como:\n    - **Sonda Couvelaire**: Punta biselada o en pico de flauta, diseñada para facilitar el drenaje en presencia de coágulos [2].\n    - **Sonda Dufour**: Punta acodada con orificio distal, utilizada específicamente para lavados vesicales con coágulos [2, 6.3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1713,
+        "token_stats": {
+          "prompt_tokens": 7052,
+          "completion_tokens": 447,
+          "total_tokens": 7499,
+          "tokens_per_second": 156.6,
+          "context_used_pct": 45.8,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.77
+      }
+    },
+    {
+      "id": "q06",
+      "query": "Me han pedido el material para sondar a un paciente al que le acaban de operar de próstata (resección de adenoma), ¿qué tipo de sonda uso?",
+      "block": 2,
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "Punta acodada y olivada (en forma de palo de golf) y con orificios más anchos. Se emplean después de la resección del adenoma de próstata.",
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "tipo de sonda para paciente tras resección de adenoma prostático",
+        "keywords": [
+          "sonda",
+          "operar de próstata",
+          "resección de adenoma"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "title": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "title": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            3,
+            1,
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            3,
+            1,
+            3,
+            4,
+            1,
+            3,
+            3,
+            1,
+            3,
+            1,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 9,
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 14
+          },
+          "dominant_doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "dominant_ratio": 0.609,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0323,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0313,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0309,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0292,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.029,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.029,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.029,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0275,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.0274,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.027,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.178,
+        "Retriever": 1.3,
+        "Generador": 11.12
+      },
+      "memory_mb": {
+        "proc_before": 65.3,
+        "proc_after_retriever": 64.6,
+        "proc_delta_retriever": -0.7,
+        "proc_after_generator": 64.6,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para el paciente postoperado de resección de adenoma de próstata, la elección de la sonda dependerá de la presencia de complicaciones como hematuria o la necesidad de realizar lavados, así como de las características anatómicas tras la cirugía.\n\nA continuación, se detalla la información disponible en los protocolos:\n\n## Tipo de sonda según la indicación clínica\n\n*   **Si existe hematuria o necesidad de lavado:**\n    *   Si la hematuria es con o sin coágulos, se debe utilizar una sonda de **3 vías** para permitir la instauración de sistemas lavadores [1, 3].\n    *   Se recomiendan específicamente los tipos **Couvelaire** (punta biselada o en pico de flauta) [1], **Dufour** (punta acodada, en forma de pico y perforada en el codo) [1] o la sonda **Foley de tres vías** [1].\n    *   En caso de hematuria intensa con necesidad de lavado, se debe emplear un calibre mayor, igual o superior a **20 Ch** [1, 3].\n*   **Si no hay productos patológicos (orina clara):**\n    *   Se pueden utilizar calibres menores, iguales o inferiores a **16 Ch** [3].\n    *   Se recomienda el uso de sondas con sistemas autorretentivos (como la **Foley**) para evitar la pérdida de orina y la necesidad de resondaje [3].\n\n## Consideraciones anatómicas (Postoperatorio)\n\nTras una cirugía de próstata, pueden existir estenosis a nivel de la uretra prostática debido a la compresión o elevación del cuello vesical [3]. Para facilitar el paso por la curvatura de la uretra bulbar, se recomienda:\n- Emplear sondas de mayor rigidez (materiales como **silicona** o **simplastic**) [3, 4].\n- Utilizar sondas con puntas incurvadas, específicamente los tipos **Tiemann** o **Dufour** [3].\n- También se menciona la sonda **Mercier** (punta acodada y olivada) como una opción que se emplea específicamente después de la resección del adenoma de próstata [1].\n\n## Resumen de materiales y características\n\n| Característica | Recomendación según protocolo |\n| :--- | :--- |\n| **Material** | Silicona o simplastic (mayor rigidez y mayor duración) [3, 4]. |\n| **Calibre (si hay coágulos)** | $\\ge$ 20 Ch [1, 3]. |\n| **Calibre (si es orina clara)** | $\\le$ 16 Ch [3]. |\n| **Tipo de punta** | Tiemann, Dufour o Mercier (puntas incurvadas/acodadas) [1, 3]. |\n| **Número de vías** | 3 vías (si requiere lavado vesical) [1, 3]. |",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2291,
+        "token_stats": {
+          "prompt_tokens": 6641,
+          "completion_tokens": 653,
+          "total_tokens": 7294,
+          "tokens_per_second": 157.0,
+          "context_used_pct": 44.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 11.12
+      }
+    },
+    {
+      "id": "q07",
+      "query": "Si el paciente tiene prostatitis aguda, ¿le pongo la sonda vesical de todas formas?",
+      "block": 2,
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "5.- ¿En qué casos está contraindicado el sondaje vesical uretral? ... - Prostatitis aguda.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "indicaciones de colocación de sonda vesical en pacientes con prostatitis aguda",
+        "keywords": [
+          "prostatitis aguda",
+          "sonda vesical"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "title": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "title": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            4,
+            2,
+            1,
+            2,
+            2,
+            2,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 8
+          },
+          "dominant_doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.032,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.032,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.0303,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0299,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0293,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0292,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0292,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.029,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.0289,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0278,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 3.513,
+        "Retriever": 1.328,
+        "Generador": 8.58
+      },
+      "memory_mb": {
+        "proc_before": 64.6,
+        "proc_after_retriever": 65.1,
+        "proc_delta_retriever": 0.5,
+        "proc_after_generator": 65.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Los protocolos disponibles no mencionan específicamente la **prostatitis aguda** como una contraindicación para el sondaje vesical. Sin embargo, el documento ofrece pautas relevantes sobre el manejo de la vía urinaria en pacientes varones con patología prostática y las consideraciones técnicas para el sondaje:\n\n## Consideraciones para el sondaje en varones con patología prostática\n\nSi la prostatitis está asociada a una dificultad anatómica por la propia próstata (como una hipertrofia o una estrechez a nivel de la uretra prostática), el protocolo indica lo siguiente:\n\n- **Tipo de sonda y punta**: Debido a que las estenosis o estrecheces a nivel de la uretra prostática pueden deberse a la compresión de los lóbulos prostáticos o la elevación del cuello vesical, es necesario emplear sondas que faciliten el paso por la curvatura de la uretra bulbar [1]. Se recomienda el uso de sondas con **puntas incurvadas** (tipo **Tiemann** o **Dufour**) y de mayor rigidez (**silicona** o **simplastic**) [1, 6.3].\n- **Calibre**: En caso de sospecha de Hiperplasia Benigna de Próstata (HBP), se debe seleccionar una sonda con un calibre de **12-16 Ch** [4].\n- **Manejo farmacológico**: Si el paciente varón presenta sospecha de HBP y no está en tratamiento, se debe iniciar el tratamiento con **alfa-bloqueantes** (si no hay contraindicación médica) [2].\n\n## Consideraciones generales sobre el sondaje\n\n- **Objetivo del sondaje**: El procedimiento se realiza para la evacuación de orina retenida o para cuantificar la diuresis [1].\n- **Riesgos**: El tiempo de permanencia de la sonda debe ser el **menor tiempo posible**, ya que es un factor de riesgo para desarrollar infecciones potencialmente graves [2].\n- **Procedimiento de retirada**: \n    - Si el sondaje se realiza por una retención aguda de orina (RAO), se debe mantener la sonda entre **3-5 días** [2].\n    - Previo al intento de retirada, **24 horas antes**, se puede administrar una dosis de **corticoide intramuscular** para disminuir la inflamación ocasionada por el sondaje [2].\n    - Si tras el primer intento de retirada se produce un segundo episodio de RAO, se deberá mantener la sonda 10-15 días más [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2170,
+        "token_stats": {
+          "prompt_tokens": 3975,
+          "completion_tokens": 549,
+          "total_tokens": 4524,
+          "tokens_per_second": 144.7,
+          "context_used_pct": 27.6,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.58
+      }
+    },
+    {
+      "id": "q08",
+      "query": "Se me ha caído la bolsa al suelo y se ha roto el plástico, ¿qué hago, cambio la sonda entera o solo la bolsa?",
+      "block": 3,
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "Sólo está indicado el cambio de la bolsa de diuresis en estas situaciones: - Si se cambia la sonda. - Se rompen. - Se acumulan sedimentos en exceso. - Adquiere un olor desagradable.",
+      "labels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimiento ante la rotura del envase plástico de una bolsa de recolección de orina tras caída al suelo",
+        "keywords": [
+          "bolsa",
+          "se ha roto el plástico",
+          "cambio la sonda entera",
+          "solo la bolsa"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            5,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 24
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0295,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.0294,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0287,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0284,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "16. ANEXOS",
+          "h2": "ANEXO IV. Envío de Transporte de muestras.",
+          "rerank_score": 0.0281,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0259,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0259,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0164,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-17-Z3-E-C-Rev-C-Actuación-con-fallecidos-y-cuidados-post-mortem",
+          "h1": "PROCEDIMIENTO DE ACTUACION CON FALLECIDOS Y CUIDADOS POST-MORTEM",
+          "h2": "AISLAMIENTO DEL CADÁVER E INTRODUCCIÓN EN EL FÉRETRO",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.029,
+        "Retriever": 1.335,
+        "Generador": 10.81
+      },
+      "memory_mb": {
+        "proc_before": 65.1,
+        "proc_after_retriever": 64.4,
+        "proc_delta_retriever": -0.7,
+        "proc_after_generator": 64.4,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "De acuerdo con los protocolos de cuidados de enfermería disponibles, ante la rotura del plástico de la bolsa, debe procederse al **cambio de la bolsa de diuresis** (o urimeter) siguiendo una técnica aséptica, sin necesidad de cambiar la sonda completa.\n\nEl protocolo establece que se deben **utilizar sistemas de drenaje cerrado**, cambiando la bolsa únicamente cuando sea necesario [5].\n\nPara realizar el cambio de la bolsa de forma segura, debe seguir este procedimiento paso a paso:\n\n## Procedimiento para el cambio de bolsa de diuresis\n\n- **Preparación previa**:\n    - Confirmar la identificación del paciente y explicarle la técnica [4].\n    - Realizar el lavado de manos [4].\n    - Colocar al paciente en posición de Fowler [4].\n    - Retirar el esparadrapo que fija la sonda al muslo [4].\n    - **Pinzar la sonda** con una pinza Kocher en la zona más próxima al tubo de drenaje para evitar fugas de orina o entrada de aire [4].\n    - Colocar el tubo de drenaje en vertical (sin desconectar de la sonda) para que la orina drene hacia la bolsa [4].\n\n- **Material necesario**:\n    - Gasas estériles y povidona yodada [4].\n    - Guantes estériles [4].\n    - Bolsa de diuresis o urimeter nuevo [4].\n    - Pinza Kocher [4].\n    - Esparadrapo [4].\n\n- **Ejecución del cambio (Técnica aséptica)**:\n    - Abrir el paquete de gasas estériles e impregnarlas con povidona yodada [4].\n    - Ponerse los guantes estériles [4].\n    - **Limpiar la unión** de la sonda al tubo de drenaje con las gasas impregnadas [4].\n    - Con la mano dominante, coger la bolsa nueva a la altura del extremo del tubo de drenaje [4].\n    - Con la otra mano, sujetar el extremo de la sonda entre los dedos índice y medio [4].\n    - **Desconectar el tubo de drenaje de la sonda** (manteniendo el tubo en posición vertical) y, simultáneamente, retirar el capuchón de la bolsa nueva [4].\n    - **Conectar el tubo con la sonda** [4].\n    - **Despinzar la sonda** para restablecer el flujo de orina [4].\n\n- **Finalización**:\n    - Desechar la bolsa usada en los contenedores de residuos sanitarios indicados [4].\n    - Volver a fijar la sonda al muslo del paciente [4].\n    - Colgar el nuevo sistema de drenaje en la cama [4].\n    - Retirar guantes, realizar lavado de manos y registrar el procedimiento en la historia clínica [4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2298,
+        "token_stats": {
+          "prompt_tokens": 6085,
+          "completion_tokens": 627,
+          "total_tokens": 6712,
+          "tokens_per_second": 157.2,
+          "context_used_pct": 41.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.81
+      }
+    },
+    {
+      "id": "q09",
+      "query": "Tengo que sacar una muestra de orina para urocultivo, ¿la puedo coger abriendo el grifo de la bolsa de drenaje?",
+      "block": 3,
+      "expected_section": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+      "expected_quote": "No recoger orina de la bolsa de drenaje.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimiento para la obtención de muestra de orina para urocultivo mediante la apertura del grifo de la bolsa de drenaje en el marco del PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+        "keywords": [
+          "muestra de orina",
+          "urocultivo",
+          "grifo de la bolsa de drenaje"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            2,
+            2,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 12,
+            "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B": 6
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.667,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.0318,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8. UROCULTIVO",
+          "rerank_score": 0.0308,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.2. Orina vesical.",
+          "rerank_score": 0.0306,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.1. ORINA OBTENIDA POR MICCIÓN MEDIA.",
+          "rerank_score": 0.029,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0286,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0276,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "3.- DEFINICIONES",
+          "rerank_score": 0.027,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0267,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.2. MUESTRAS EXTRAPULMONARES.",
+          "h2": "13.2.8. Orina",
+          "rerank_score": 0.0254,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.414,
+        "Retriever": 1.321,
+        "Generador": 9.73
+      },
+      "memory_mb": {
+        "proc_before": 64.4,
+        "proc_after_retriever": 64.9,
+        "proc_delta_retriever": 0.5,
+        "proc_after_generator": 64.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No, **no debe recoger la orina de la bolsa de drenaje** [1].\n\nDe acuerdo con los protocolos establecidos, la recogida de la muestra para urocultivo en pacientes con sonda debe seguir estas directrices:\n\n## Consideraciones sobre la muestra\n- **Prohibición de uso de la bolsa:** No se debe recoger orina de la bolsa de drenaje [1]. Asimismo, nunca se deben aceptar orina procedente de bolsas colectoras debido al elevado riesgo de contaminación [2].\n- **Muestras no apropiadas:** No se consideran muestras adecuadas la orina recogida de la bolsa de sondaje ni la punta de la sonda vesical [2].\n\n## Procedimiento correcto para la obtención de la muestra\nPara obtener una muestra válida, la orina debe extraerse directamente del sistema de drenaje siguiendo estos pasos:\n\n1.  **Preparación del flujo:** Se debe cerrar el flujo de orina hacia la bolsa de drenaje durante **20-30 minutos**, pinzando el tubo por debajo de la zona donde se realizará la punción [1]. El objetivo es recoger orina recién emitida [2].\n2.  **Asepsia:** \n    - Realizar lavado de manos y uso de guantes estériles [1].\n    - Limpiar la zona de punción (el puerto de la sonda) con **povidona yodada** [1] (o solución acuosa de clorhexidina al 2%) [2] y dejar secar [1].\n3.  **Extracción:**\n    - Si la sonda dispone de una zona de muestreo, debe utilizarse para la toma [2].\n    - Pinchar con una **aguja y jeringa estéril** en la zona desinfectada y aspirar entre **5-10 ml** [1] (o 3-5 ml según la fuente [2]) de orina [1].\n4.  **Finalización:**\n    - Introducir la orina en el tubo de urocultivo debidamente identificado [1].\n    - **Despinzar la sonda** para restablecer el drenaje [1].\n5.  **Transporte y conservación:**\n    - Remitir la muestra al laboratorio antes de **2-3 horas** [1].\n    - Si no es posible el envío inmediato, debe conservarse en nevera a **4 ºC** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1848,
+        "token_stats": {
+          "prompt_tokens": 3611,
+          "completion_tokens": 513,
+          "total_tokens": 4124,
+          "tokens_per_second": 158.0,
+          "context_used_pct": 25.2,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.73
+      }
+    },
+    {
+      "id": "q10",
+      "query": "Para coger la muestra del urocultivo, ¿cuánto rato tengo que dejar pinzada la sonda antes de pinchar para sacar orina?",
+      "block": 3,
+      "expected_section": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+      "expected_quote": "Cerrar el flujo de orina hacia la bolsa de drenaje durante 20-30 minutos, pinzando el tubo por debajo de la zona de punción.",
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "tiempo de pinzamiento de la sonda vesical previo a la punción para la obtención de muestra de urocultivo",
+        "keywords": [
+          "muestra del urocultivo",
+          "pinzada la sonda",
+          "sacar orina"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            2,
+            1,
+            1,
+            2,
+            1,
+            2,
+            1,
+            1,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 7,
+            "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B": 5
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.583,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0325,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.0315,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.2. Orina vesical.",
+          "rerank_score": 0.0299,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0283,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0282,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0276,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0265,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8. UROCULTIVO",
+          "rerank_score": 0.0264,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.1. ORINA OBTENIDA POR MICCIÓN MEDIA.",
+          "rerank_score": 0.026,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.2. MUESTRAS EXTRAPULMONARES.",
+          "h2": "13.2.8. Orina",
+          "rerank_score": 0.0257,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.305,
+        "Retriever": 1.322,
+        "Generador": 9.01
+      },
+      "memory_mb": {
+        "proc_before": 64.9,
+        "proc_after_retriever": 64.4,
+        "proc_delta_retriever": -0.5,
+        "proc_after_generator": 64.4,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la recogida de una muestra de orina para urocultivo en pacientes con sonda, debe seguir estos pasos respecto al tiempo de pinzado:\n\n- **Tiempo de pinzado**: Debe cerrar el flujo de orina hacia la bolsa de drenaje durante **20-30 minutos**, pinzando el tubo por debajo de la zona donde se va a realizar la punción [1].\n- **Objetivo**: El propósito de este pinzado es recoger orina recién emitida [2].\n\n**Consideraciones adicionales para el procedimiento:**\n\n- **Localización del pinzado**: El tubo debe pinzarse por debajo del lugar de la toma [2].\n- **Zona de punción**: La orina debe extraerse por la zona preparada para ello, sin desconectar la sonda del sistema de drenaje y **nunca** recogiendo orina de la bolsa de drenaje [1].\n- **Asepsia**: Antes de pinchar, debe limpiar la zona de punción con povidona yodada (o solución acuosa de clorhexidina al 2%) y dejar secar [1, 2].\n- **Extracción**: Tras la desinfección, debe pinchar con una jeringa estéril y aspirar entre 5-10 ml (o 3-5 ml según el protocolo de toma de muestras) de orina [1, 2].\n- **Finalización**: Una vez obtenida la muestra, es imprescindible **despinzar la sonda** [1].\n- **Transporte**: La muestra debe remitirse al laboratorio antes de 2-3 horas [1]. Si no es posible, debe conservarse en nevera a 4 ºC (máximo 24 horas) [1, 2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1310,
+        "token_stats": {
+          "prompt_tokens": 6369,
+          "completion_tokens": 371,
+          "total_tokens": 6740,
+          "tokens_per_second": 156.8,
+          "context_used_pct": 41.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.01
+      }
+    },
+    {
+      "id": "q11",
+      "query": "El paciente está con un globo vesical enorme (RAO). ¿Le vacío toda la vejiga de golpe o poco a poco?",
+      "block": 4,
+      "expected_section": "ANEXO 7: RETENCIÓN AGUDA DE ORINA",
+      "expected_quote": "Vaciado progresivo y lento, pinzando cada 250-300 ml de orina para evitar hemorragia ex vacuo.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "técnica de vaciado vesical en paciente con retención aguda de orina y globo vesical de gran tamaño",
+        "keywords": [
+          "globo vesical",
+          "RAO",
+          "vacío",
+          "vejiga"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            5,
+            5,
+            5,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 4
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0318,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0309,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0308,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.0308,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 7: RETENCIÓN AGUDA DE ORINA",
+          "rerank_score": 0.0305,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0297,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0293,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0288,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.028,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 8: LAVADO VESICAL",
+          "rerank_score": 0.0273,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.308,
+        "Retriever": 1.351,
+        "Generador": 7.53
+      },
+      "memory_mb": {
+        "proc_before": 64.4,
+        "proc_after_retriever": 65.3,
+        "proc_delta_retriever": 0.9,
+        "proc_after_generator": 65.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Ante un cuadro de retención aguda de orina (RAO) con un globo vesical de gran tamaño, el protocolo establece que el vaciado **no debe realizarse de golpe**, sino de forma **progresiva**.\n\nEl procedimiento correcto para el vaciado es el siguiente:\n\n- **Vaciado progresivo y lento**: Se debe pinzar la sonda cada **250-300 ml** de orina drenada para evitar la aparición de una **hemorragia ex vacuo** [5].\n- **Intervalos de espera**: Tras pinzar la sonda, es necesario esperar entre **15 y 20 minutos** antes de volver a despinzarla [5].\n- **Repetición**: Este proceso de pinzado y espera debe repetirse hasta lograr el vaciado completo de la vejiga [5].\n- **Posición de la bolsa**: Durante todo el proceso de vaciado vesical completo, la bolsa de diuresis debe permanecer a la **altura de la vejiga** [5].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 804,
+        "token_stats": {
+          "prompt_tokens": 4141,
+          "completion_tokens": 216,
+          "total_tokens": 4357,
+          "tokens_per_second": 142.3,
+          "context_used_pct": 26.6,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.53
+      }
+    },
+    {
+      "id": "q12",
+      "query": "Tengo que montar un lavado continuo porque la orina sale muy roja (hematuria), ¿cuántas vías debe tener la sonda?",
+      "block": 4,
+      "expected_section": "ANEXO 8: LAVADO VESICAL",
+      "expected_quote": "El lavado vesical continuo es aquel en el que se introduce suero fisiológico en la vejiga constantemente mediante un suero lavador utilizando una sonda de tres vías.",
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "número de vías necesarias en una sonda para realizar un lavado continuo ante la presencia de hematuria",
+        "keywords": [
+          "lavado continuo",
+          "orina sale muy roja",
+          "hematuria",
+          "vías",
+          "sonda"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            2,
+            2,
+            5,
+            2,
+            5,
+            2,
+            5,
+            5,
+            1,
+            5,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 9,
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 4
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.692,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 8: LAVADO VESICAL",
+          "rerank_score": 0.0325,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0323,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.031,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0304,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0303,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0302,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0301,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0292,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0284,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.028,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.244,
+        "Retriever": 1.371,
+        "Generador": 9.47
+      },
+      "memory_mb": {
+        "proc_before": 65.3,
+        "proc_after_retriever": 64.5,
+        "proc_delta_retriever": -0.8,
+        "proc_after_generator": 64.6,
+        "proc_delta_generator": 0.1,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para realizar un **lavado vesical continuo** en casos de hematuria importante, debe utilizar una sonda que tenga **tres vías** [1].\n\nA continuación, se detalla la información relevante sobre este procedimiento y el tipo de sonda necesario según los protocolos disponibles:\n\n## Características de la sonda para lavado continuo\n*   **Número de vías:** La sonda debe ser de **3 vías** [1, 2].\n*   **Función de las vías:** En una sonda de 3 vías, las funciones se distribuyen de la siguiente manera:\n    *   Una vía para el **balón de autorretención** (globo) [2, 5].\n    *   Una vía para la **salida de la orina** (drenaje) [2, 5].\n    *   Una tercera vía destinada a la **instilación de líquido/suero** para establecer el sistema de lavado continuo [2, 5].\n*   **Tipos de sonda recomendados:** Si el sondaje está indicado para hematuria, se debe utilizar una sonda tipo **Foley de tres vías**, **Couvelaire** o **Dufour** [5].\n\n## Consideraciones clínicas adicionales\n*   **Indicación:** El lavado continuo se utiliza específicamente en casos de **hematuria importante** [1].\n*   **Calibre de la sonda:** Según las características de la orina, para una **hematuria intensa** con necesidad de lavado, se recomienda utilizar calibres entre **CH 20 y 24** [5].\n*   **Conexión del equipo:** Al montar el sistema, debe conectar el equipo de irrigación a la **luz lateral** de la sonda vesical, asegurándose de que la salida de la orina sea por la vía central [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1456,
+        "token_stats": {
+          "prompt_tokens": 7984,
+          "completion_tokens": 381,
+          "total_tokens": 8365,
+          "tokens_per_second": 155.9,
+          "context_used_pct": 51.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.47
+      }
+    },
+    {
+      "id": "q13",
+      "query": "Estoy intentando quitar la sonda al paciente y el globo no se deshincha ni metiendo la jeringa. ¿Qué hago?",
+      "block": 4,
+      "expected_section": "ANEXO 9: RETIRADA SONDA VESICAL",
+      "expected_quote": "Si el balón no se deshincha: - Introducir una guía metálica fina en el canal de inflado (procedimiento de riesgo). - Llenar a presión el globo hasta que se produzca su estallido. - Como último recurso cortar el brazo de inflado por debajo de la válvula, vigilando que drena el contenido del balón.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "procedimiento a seguir ante la imposibilidad de desinflar el balón de la sonda vesical mediante la jeringa",
+        "keywords": [
+          "quitar la sonda",
+          "el globo no se deshincha",
+          "metiendo la jeringa"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 4
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0302,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 8: LAVADO VESICAL",
+          "rerank_score": 0.0298,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0293,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.029,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0283,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0281,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0276,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0274,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.026,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.288,
+        "Retriever": 1.312,
+        "Generador": 7.56
+      },
+      "memory_mb": {
+        "proc_before": 64.6,
+        "proc_after_retriever": 65.2,
+        "proc_delta_retriever": 0.6,
+        "proc_after_generator": 65.2,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Si el balón de la sonda vesical no se desinfla tras intentar aspirar el contenido con la jeringa, el protocolo establece las siguientes actuaciones en orden de intervención:\n\n- **Introducir una guía metálica fina**: Se puede intentar introducir una guía metálica fina en el canal de inflado, aunque se debe tener en cuenta que este es un **procedimiento de riesgo** [1].\n- **Llenar el globo a presión**: Otra opción es llenar el globo a presión hasta que se produzca su estallido [1].\n- **Como último recurso**: Si las medidas anteriores no funcionan, se debe **cortar el brazo de inflado** por debajo de la válvula, asegurándose en todo momento de vigilar que el contenido del balón esté drenando [1].\n\nEs fundamental recordar que, durante la retirada de la sonda, se debe asegurar la extracción de todo el volumen del balón para **evitar traumatismos uretrales** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 869,
+        "token_stats": {
+          "prompt_tokens": 5287,
+          "completion_tokens": 202,
+          "total_tokens": 5489,
+          "tokens_per_second": 140.7,
+          "context_used_pct": 33.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.56
+      }
+    },
+    {
+      "id": "q14",
+      "query": "¿Hace falta que vaya pinzando y despinzando la sonda unas horas antes de quitársela para que la vejiga se acostumbre?",
+      "block": 4,
+      "expected_section": "ANEXO 9: RETIRADA SONDA VESICAL",
+      "expected_quote": "En varios estudios se ha comprobado que no existen evidencias concluyentes sobre el beneficio de pinzar la sonda antes de la retirada definitiva.",
+      "labels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "necesidad de pinzar y despinzar la sonda vesical horas antes de su retirada para la adaptación vesical",
+        "keywords": [
+          "pinzando y despinzando",
+          "sonda",
+          "quitar la sonda"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 1,
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 1,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 2
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0318,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0308,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0303,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0296,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0295,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0295,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0292,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.028,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.028,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0273,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.347,
+        "Retriever": 1.412,
+        "Generador": 7.3
+      },
+      "memory_mb": {
+        "proc_before": 65.2,
+        "proc_after_retriever": 64.7,
+        "proc_delta_retriever": -0.5,
+        "proc_after_generator": 64.7,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No encuentro esa información en los protocolos disponibles.\n\nLos documentos proporcionados detallan la técnica de inserción, los tipos de sonda según su calibre y uso, las indicaciones, contraindicaciones y las complicaciones del sondaje, pero **no mencionan ninguna instrucción o recomendación sobre pinzar y despinzar la sonda** previamente a su retirada para \"acostumbrar\" a la vejiga [1, 2, 3, 4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 401,
+        "token_stats": {
+          "prompt_tokens": 6197,
+          "completion_tokens": 93,
+          "total_tokens": 6290,
+          "tokens_per_second": 157.9,
+          "context_used_pct": 38.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.3
+      }
+    },
+    {
+      "id": "q15",
+      "query": "Tras lavar los genitales al paciente varón, ¿puedo dejarle el prepucio retraído hacia atrás?",
+      "block": 1,
+      "expected_section": "1. RESUMEN",
+      "expected_quote": "En el varón después de la higiene volver el prepucio a su posición normal para evitar parafimosis",
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimiento de cuidado tras lavado genital en paciente varón y la posibilidad de mantener el prepucio retraído",
+        "keywords": [
+          "lavar los genitales",
+          "paciente varón",
+          "prepucio retraído"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 1,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 1
+          },
+          "dominant_doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.5. MUESTRAS DEL TRACTO GENITAL MASCULINO",
+          "rerank_score": 0.0315,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9. TRACTO GENITAL",
+          "rerank_score": 0.0308,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0306,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.1. Introducción",
+          "rerank_score": 0.0286,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.3. MUESTRAS TRACTO GENITAL FEMENINO",
+          "rerank_score": 0.0278,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.2. Aspectos generales",
+          "rerank_score": 0.0256,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0233,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "4. CATÉTERES INTRAVASCULARES",
+          "h2": "B. Obtención de la muestra",
+          "rerank_score": 0.0227,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.4. DESPISTAJE DE S. agalactiae EN GESTANTES",
+          "rerank_score": 0.0217,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.214,
+        "Retriever": 1.369,
+        "Generador": 7.58
+      },
+      "memory_mb": {
+        "proc_before": 64.7,
+        "proc_after_retriever": 65.3,
+        "proc_delta_retriever": 0.6,
+        "proc_after_generator": 65.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No, **no debe dejar el prepucio retraído**.\n\nDe acuerdo con los protocolos clínicos disponibles, tras realizar la higiene o el procedimiento de sondaje, es necesario realizar lo siguiente:\n\n- **En el procedimiento de sondaje vesical**: Una vez introducida la sonda, se debe **recolocar el prepucio** específicamente para evitar la aparición de **parafimosis** [1].\n- **En los cuidados de enfermería**: Se recomienda explícitamente que, en el paciente varón, después de la higiene, se **vuelva el prepucio a su posición normal** para evitar la parafimosis [4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 559,
+        "token_stats": {
+          "prompt_tokens": 5938,
+          "completion_tokens": 136,
+          "total_tokens": 6074,
+          "tokens_per_second": 155.4,
+          "context_used_pct": 37.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.58
+      }
+    },
+    {
+      "id": "q16",
+      "query": "¿Hay que mover la sonda de alguna manera estando puesta o es mejor no tocarla para que no se pegue por dentro?",
+      "block": 1,
+      "expected_section": "1. RESUMEN",
+      "expected_quote": "Diariamente mover suavemente la sonda en sentido rotatorio para evitar adherencias",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "manipulación o movimiento de la sonda vesical tras su colocación para evitar adherencias",
+        "keywords": [
+          "mover la sonda",
+          "sonda",
+          "que no se pegue"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            2,
+            3,
+            5,
+            2,
+            3,
+            5,
+            1,
+            2,
+            3,
+            5,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 10,
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 3
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.769,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0325,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0304,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0301,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0299,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0299,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0295,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.0293,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0292,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0285,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0285,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 5.921,
+        "Retriever": 1.378,
+        "Generador": 8.22
+      },
+      "memory_mb": {
+        "proc_before": 65.3,
+        "proc_after_retriever": 64.6,
+        "proc_delta_retriever": -0.7,
+        "proc_after_generator": 64.6,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Respecto a su consulta sobre la manipulación de la sonda vesical, el protocolo establece lo siguiente:\n\n## Recomendación sobre la manipulación de la sonda\n\nNo es necesario evitar tocar la sonda por miedo a que se pegue; de hecho, se recomienda una acción específica para prevenir este problema:\n\n- **Movimiento preventivo**: Se debe **mover suavemente la sonda en sentido rotatorio diariamente** con el objetivo de **evitar adherencias** [1].\n\n## Consideraciones adicionales para la seguridad de la sonda\n\nAunque se debe realizar el movimiento rotatorio mencionado, existen otras pautas de manipulación que debe tener en cuenta para evitar lesiones o complicaciones:\n\n- **Evitar traumatismos**: Es fundamental **evitar tirones y acodaduras** de la sonda, ya que existe riesgo de lesión [1].\n- **Fijación correcta**: En el caso de sondaje permanente, la sonda debe **deslizarse hacia el exterior hasta notar resistencia** [2, 3, 5] y **fijarse externamente en la cara interna del muslo** con esparadrapo [2, 3, 5].\n- **Posición de la bolsa**: La bolsa colectora debe mantenerse siempre **por debajo del nivel de la vejiga** y **sin tocar el suelo** [1, 2, 3, 5]. En caso de que sea imprescindible elevarla, se debe **pinzar el tubo de drenaje** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1248,
+        "token_stats": {
+          "prompt_tokens": 3859,
+          "completion_tokens": 308,
+          "total_tokens": 4167,
+          "tokens_per_second": 154.2,
+          "context_used_pct": 25.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.22
+      }
+    },
+    {
+      "id": "q17",
+      "query": "El paciente es muy mayor y se hace pis encima por incontinencia, ¿le pongo una sonda para facilitar los cuidados?",
+      "block": 2,
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "5.- ¿En qué casos está contraindicado el sondaje vesical uretral? - Incontinencia urinaria: utilización prioritaria de reeducación vesical, colectores, pañales.",
+      "labels": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "uso de sonda urinaria para facilitar los cuidados en pacientes ancianos con incontinencia urinaria",
+        "keywords": [
+          "muy mayor",
+          "se hace pis encima",
+          "incontinencia",
+          "sonda"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            3,
+            3,
+            1,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            2,
+            3,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 11,
+            "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B": 1
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.917,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6.3.4 Seguimiento de Pautas y Cuidados de la Persona con Contención Mecánica/Inmovilización Terapéutica.",
+          "h2": "Eliminación intestinal y vesical.",
+          "rerank_score": 0.032,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0311,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0308,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0308,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0297,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0297,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0296,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.027,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "6. VALORACIÓN DE RIESGO DE LPP (10,11,12)",
+          "h2": "6.2 CUIDADOS ESPECÍFICOS DE LA PREVENCIÓN",
+          "rerank_score": 0.0249,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0152,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.241,
+        "Retriever": 1.413,
+        "Generador": 10.56
+      },
+      "memory_mb": {
+        "proc_before": 64.6,
+        "proc_after_retriever": 64.9,
+        "proc_delta_retriever": 0.2,
+        "proc_after_generator": 64.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "De acuerdo con los protocolos clínicos disponibles, la decisión de colocar una sonda vesical en un paciente con incontinencia debe basarse en una valoración clínica cuidadosa, ya que **la incontinencia urinaria es una contraindicación para el sondaje vesical uretral** [3].\n\nA continuación, se detallan las consideraciones que debe tener en cuenta:\n\n## Consideraciones sobre la incontinencia\n- **Contraindicación:** El protocolo establece que, en casos de incontinencia urinaria, se debe dar **prioridad a la utilización de reeducación vesical, colectores o pañables (pañales)** [3].\n- **Cuidados recomendados:** En pacientes con incontinencia, el objetivo de los cuidados de enfermería debe ser aplicar medidas para **evitar riesgos de infección urinaria** [1].\n- **Prevención de lesiones:** El sondaje vesical puede utilizarse con el fin de prevenir la aparición de lesiones en la piel (como escaras de decúbito o dermatitis) y facilitar su curación en pacientes incontinentes [3].\n\n## Indicaciones para el uso de sonda vesical\nEl sondaje vesical es una técnica invasiva que debe reservarse para fines específicos, tales como:\n- **Fines terapéuticos:** Alivio de la retención urinaria, tratamiento de la vejiga neurógena, tratamiento de la obstrucción infravesical o atonía vesical, y para el postoperatorio en pacientes con riesgo de retención [2, 3].\n- **Fines diagnósticos:** Control de la diuresis, obtención de muestras estériles o medición del residuo postmiccional [2, 3].\n\n## Riesgos asociados al sondaje\nEs fundamental considerar que el sondaje es una técnica invasiva con riesgos importantes:\n- **Infección urinaria:** Es la complicación más frecuente; se estima que el **80% de las infecciones urinarias están asociadas al sondaje vesical** [2]. Además, la incidencia de bacterias en la orina puede aumentar entre un 3% y un 10% cada día que la sonda permanece insertada [2].\n- **Otras complicaciones:** Perforación uretral o vesical, hematuria, escapes de orina por el meato, cálculos vesicales o la incrustación de la sonda [3].\n\n**En resumen:** No se recomienda el uso de la sonda únicamente para facilitar los cuidados por incontinencia, ya que la indicación prioritaria debe ser la reeducación o el uso de colectores, evitando así el alto riesgo de infección asociado al cateterismo [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2305,
+        "token_stats": {
+          "prompt_tokens": 6781,
+          "completion_tokens": 560,
+          "total_tokens": 7341,
+          "tokens_per_second": 156.4,
+          "context_used_pct": 44.8,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.56
+      }
+    },
+    {
+      "id": "q18",
+      "query": "El paciente se va de alta a una residencia y va a necesitar llevar la sonda permanente unos dos meses, ¿se la pongo de látex o de silicona?",
+      "block": 2,
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "Se fabrican en látex o silicona diferenciándose según la duración del sondaje (látex hasta 45 días y silicona hasta 90 días).",
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "elección entre sonda vesical de látex o de silicona para uso permanente durante dos meses en el contexto de PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+        "keywords": [
+          "sonda",
+          "látex",
+          "silicona",
+          "permanente"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            3,
+            1,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 2,
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 2
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0323,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0311,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0305,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0303,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0297,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0294,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.029,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.029,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0274,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.026,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.478,
+        "Retriever": 1.344,
+        "Generador": 8.19
+      },
+      "memory_mb": {
+        "proc_before": 64.9,
+        "proc_after_retriever": 64.5,
+        "proc_delta_retriever": -0.4,
+        "proc_after_generator": 64.5,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para el caso de su paciente, que requiere un sondaje permanente con una previsión de permanencia de aproximadamente dos meses, debe utilizar una **sonda de silicona**.\n\nLa elección del material se basa en los siguientes criterios clínicos establecidos en los protocolos:\n\n- **Duración del sondaje**: Las sondas de **látex** están indicadas para un uso de corta duración, con un tiempo de permanencia de hasta **45 días** [1] (o aproximadamente 15 días según otra referencia [3]).\n- **Sondas de larga duración**: Las sondas de **silicona** están indicadas para sondajes de larga duración, permitiendo una permanencia de hasta **90 días** [1] (o una duración de 2 meses [3]).\n\nDado que el paciente va a necesitar la sonda durante **dos meses**, el material de silicona es el adecuado para cubrir ese periodo de tiempo sin exceder los límites de seguridad de los materiales.",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 871,
+        "token_stats": {
+          "prompt_tokens": 7186,
+          "completion_tokens": 203,
+          "total_tokens": 7389,
+          "tokens_per_second": 157.2,
+          "context_used_pct": 45.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.19
+      }
+    },
+    {
+      "id": "q19",
+      "query": "Una vez que ya he metido la sonda e inflado el balón, ¿dónde se le sujeta o pega el tubo al paciente para evitar tirones?",
+      "block": 2,
+      "expected_section": "13. ALGORITMO DE ACTUACIÓN",
+      "expected_quote": "Fijar sonda en cara interna del muslo",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "técnicas de sujeción o fijación del tubo de sonda vesical al paciente para evitar tracciones tras la inserción e inflado del balón",
+        "keywords": [
+          "sujeta",
+          "pega",
+          "tubo",
+          "evitar tirones"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            5,
+            5,
+            1,
+            5,
+            1,
+            5,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 4,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 3
+          },
+          "dominant_doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "dominant_ratio": 0.571,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0308,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6.3.4 Seguimiento de Pautas y Cuidados de la Persona con Contención Mecánica/Inmovilización Terapéutica.",
+          "h2": "Eliminación intestinal y vesical.",
+          "rerank_score": 0.0285,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6. ANEXOS",
+          "h2": "6.1 MATERIALES",
+          "rerank_score": 0.0277,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.0257,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0164,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0161,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.0159,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0156,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "17. MICROBIOLOGIA MOLECULAR",
+          "h2": "B. Obtención de la muestra:",
+          "rerank_score": 0.0156,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0154,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.402,
+        "Retriever": 1.394,
+        "Generador": 8.83
+      },
+      "memory_mb": {
+        "proc_before": 64.5,
+        "proc_after_retriever": 65.1,
+        "proc_delta_retriever": 0.6,
+        "proc_after_generator": 65.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para evitar tirones y posibles lesiones, el protocolo establece las siguientes pautas para la fijación y el manejo de la sonda vesical:\n\n## Fijación de la sonda\nUna vez realizada la técnica de sondaje y tras haber inflado el balón para fijar la sonda internamente [5], se debe proceder a la fijación externa de la siguiente manera:\n\n- **Lugar de fijación:** La sonda debe fijarse externamente en la **cara interna del muslo** utilizando **esparadrapi** [5].\n- **Objetivo:** Esta medida es fundamental para **evitar tirones** y acodaduras de la sonda, lo cual supone un riesgo de lesión para el paciente [1].\n\n## Consideraciones adicionales para el manejo de la sonda\nPara garantizar la seguridad y el correcto funcionamiento del sistema de drenaje, debe tener en cuenta lo siguiente:\n\n- **Posición de la bolsa:** El sistema de drenaje debe colocarse en un soporte que se mantenga **por debajo del nivel de la vejiga** [5]. Asimismo, se debe asegurar que la bolsa colectora no sobrepase dicho nivel; en caso de que sea imprescindible elevarla, es necesario pinzar el tubo de drenaje [1].\n- **Evitar contacto con el suelo:** Se debe evitar que el sistema de drenaje entre en contacto con el suelo [5].\n- **Mantenimiento del sistema:** Se recomienda utilizar sistemas de drenaje cerrado y cambiar la bolsa únicamente cuando sea necesario [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1339,
+        "token_stats": {
+          "prompt_tokens": 4452,
+          "completion_tokens": 313,
+          "total_tokens": 4765,
+          "tokens_per_second": 141.0,
+          "context_used_pct": 29.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.83
+      }
+    },
+    {
+      "id": "q20",
+      "query": "¿Es buena idea lavarle todos los días el meato con Betadine para que no coja bacterias e infecciones?",
+      "block": 3,
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "El lavado diario del meato uretral y la aplicación periuretral de antisépticos son ineficaces en la reducción de la bacteriuria.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "frecuencia de limpieza del meato con povidona yodada para la prevención de colonización bacteriana e infecciones",
+        "keywords": [
+          "lavarle",
+          "meato",
+          "Betadine",
+          "bacterias",
+          "infecciones"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 1,
+            "2013_Prevencion-y-Tratamiento-de-las-LPP": 4,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 3
+          },
+          "dominant_doc_id": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0313,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0313,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "7. TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+          "h2": "7.3 CUIDADOS LOCALES DE LAS LPP",
+          "rerank_score": 0.0288,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.2. Orina vesical.",
+          "rerank_score": 0.0274,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "11. MUESTRAS OCULARES",
+          "h2": "11.2. RASPADOS CONJUNTIVALES Y CORNEALES",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0159,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 8: RECOMENDACIONES",
+          "h2": "RECOMENDACIONES EN CUANTO AL TRATAMIENTO DE LAS LPP",
+          "rerank_score": 0.0156,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.98,
+        "Retriever": 1.359,
+        "Generador": 10.95
+      },
+      "memory_mb": {
+        "proc_before": 65.1,
+        "proc_after_retriever": 64.6,
+        "proc_delta_retriever": -0.6,
+        "proc_after_generator": 64.7,
+        "proc_delta_generator": 0.1,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Respecto a su consulta sobre el uso diario de Betadine (povidona yodada) en el meato urinario con el fin de prevenir infecciones, la información disponible en los protocolos clínicos es la siguiente:\n\n## Consideraciones sobre el uso de antisépticos\n\nNo existe una recomendación en los protocolos que indique que el lavado diario del meato con Betadine sea una medida preventiva estándar o necesaria para evitar bacterias. Al respecto, se debe tener en cuenta lo siguiente:\n\n- **Uso en procedimientos específicos**: El uso de agentes antisépticos como el **Betadine** o la clorhexidina acuosa está indicado para mantener las correctas condiciones de **asepsia durante el procedimiento** de colocación de la sonda vesical, con el fin de prevenir infecciones yatrogénicas [2].\n- **Riesgos del uso de antisépticos**: \n    - El uso de antisépticos locales (como la povidona yodada) **no debe realizarse de manera sistemática** [3].\n    - Se ha observado que la mayoría de los antisépticos pueden aumentar el riesgo de **maceración** y producir **irritaciones** en la piel y las mucosas [3].\n    - El uso continuado de algunos antiséptimos locales puede incluso provocar **problemas sistémicos** debido a su absorción en el organismo [3].\n- **Uso en heridas**: En el contexto de la limpieza de heridas, los protocolos indican que **no se deben utilizar antisépticos locales** (povidona yodada, clorhexidina, etc.) de forma rutinaria, ya que son productos de reconocida **toxicidad y agresividad** para las células (granulocitos, monocitos, fibroblastos) y el tejido de granulación [3].\n\n## Recomendaciones para la prevención de infecciones urinarias\n\nPara la prevención de infecciones asociadas al sondaje vesical, los protocolos enfatizan otras medidas:\n\n- **Técnica aséptica**: La realización del sondaje con una **técnica completamente aséptica** es fundamental para reducir el contagio por microorganismos de la región perineal [1].\n- **Sistema de drenaje**: Es importante utilizar un **sistema de drenaje cerrado**, ya que el sistema abierto favorece significativamente la aparición de bacterias en la orina [1].\n- **Retirada de la sonda**: La prevención debe incluir la revisión permanente de las indicaciones del sondaje y proceder a su **retirada tan pronto como sea posible**, lo que podría evitar hasta un 40% de las infecciones asociadas [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2347,
+        "token_stats": {
+          "prompt_tokens": 9173,
+          "completion_tokens": 550,
+          "total_tokens": 9723,
+          "tokens_per_second": 139.2,
+          "context_used_pct": 59.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.95
+      }
+    }
+  ]
+}

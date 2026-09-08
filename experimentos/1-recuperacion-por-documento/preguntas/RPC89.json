@@ -1,0 +1,217 @@
+{
+  "name": "RPC-89_C — Protocolo de Parada Cardiaca Intrahospitalaria",
+  "description": "Ground truth generado a partir del documento RPC-89 (Revisión C) del Hospital Clínico Universitario Lozano Blesa. Cubre definiciones y glosario, organización y activación del código de parada, secuencia de maniobras de RCP (compresiones, ventilación, desfibrilación, fármacos), criterios para detener las maniobras, manejo de arritmias peri-paro (bradicardia y taquicardias), fármacos vasopresores y antiarrítmicos, material del carro de parada y actuación ante el paciente no reanimable.",
+  "relevant_doc_patterns": ["RPC-89", "parada-cardiaca", "reanimacion", "desfibrilacion", "intrahospitalaria"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Qué es la parada cardiorrespiratoria (PCR) y cuáles son sus causas más frecuentes?",
+      "expected_section": "JUSTIFICACIÓN",
+      "expected_quote": "La parada cardiorrespiratoria (PCR), se define como la interrupción brusca, inesperada y potencialmente reversible de la circulación y respiración espontáneas. Las causas más frecuentes son insuficiencia respiratoria progresiva, shock y arritmias de comienzo brusco."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Qué significa RCP 30:2 según el glosario?",
+      "expected_section": "GLOSARIO / DEFINICIONES",
+      "expected_quote": "RCP 30:2: reanimación cardiopulmonar alternando 30 compresiones torácicas con 2 ventilaciones."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Qué factores se asocian a la supervivencia tras una parada cardiaca?",
+      "expected_section": "JUSTIFICACIÓN",
+      "expected_quote": "Los factores asociados a la supervivencia son el ritmo inicial, el lugar de la parada y el grado de seguimiento en el momento de la parada."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿A qué pacientes va dirigido el protocolo y quiénes quedan excluidos?",
+      "expected_section": "POBLACIÓN DIANA / EXCEPCIONES",
+      "expected_quote": "Se van a beneficiar de este protocolo los pacientes ingresados en el hospital o asistentes a consultas externas, visitantes y trabajadores del hospital que sufran un episodio de parada cardiaca no esperada. Quedan excluidos los pacientes que fallecen como evolución natural de una enfermedad de base conocida y los que presenten parada en unidades especializadas que disponen de su propio protocolo (Urgencias, Pediatría, Quirófanos, Medicina Intensiva y Hemodinámica)."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿En qué guías se basa la revisión C del protocolo?",
+      "expected_section": "METODOLOGÍA",
+      "expected_quote": "Para la revisión C de este protocolo nos hemos basado en las Guías AHA de 2020 y las Guías del ERC de 2021. Además, se emitieron unas recomendaciones específicas sobre la reanimación en contexto de pandemia por Coronavirus (COVID 19) cuyo resumen y adaptación a nuestro centro se adjuntó a este protocolo en junio de 2021."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿A qué número de teléfono hay que avisar para activar el código de parada?",
+      "expected_section": "INICIO DE LA REANIMACIÓN - Activación del código",
+      "expected_quote": "Para ello se dispone de un sistema de teléfono móvil de cobertura interior con el número: 71 16 00 (Medicina Interna, MI) que siempre llevará el residente mayor de la guardia de Especialidades médicas."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Cómo verifico que un paciente está en situación de parada cardiorrespiratoria?",
+      "expected_section": "RECONOCER SITUACIÓN DE PARADA CARDIO-RESPIRATORIA",
+      "expected_quote": "Verificar que el paciente se encuentra inconsciente: esto significa que no responde a la llamada ni a otros estímulos, auditivos o dolorosos. Comprobar que el paciente no presenta respiración espontánea adecuada, se incluye la llamada 'respiración de gasping' o respiraciones: boqueadas irregulares y ruidosas. Ante esta situación, y sin perder tiempo, menos de 10 segundos, se localizará pulso periférico o central, su ausencia activará el sistema de alerta."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿A qué profundidad y a qué ritmo deben realizarse las compresiones torácicas?",
+      "expected_section": "INICIAR COMPRESIONES TORÁCICAS",
+      "expected_quote": "El objetivo es comprimir fuerte y rápido, consiguiendo una depresión torácica de unos 5-6 cm, a un ritmo de 100-120 compresiones/minuto, permitiendo que el tórax regrese a la posición original con tiempo similar al de compresión y minimizando las interrupciones entre las compresiones."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Dónde coloco las manos para realizar el masaje cardiaco?",
+      "expected_section": "INICIAR COMPRESIONES TORÁCICAS",
+      "expected_quote": "Debe colocarse el talón de una mano sobre el centro del tórax, 1/3 inferior del esternón, y el talón de la otra mano sobre la primera entrelazando los dedos."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Cuál es el objetivo de saturación de oxígeno y a qué flujo conecto el AMBÚ?",
+      "expected_section": "VENTILACIÓN",
+      "expected_quote": "La ventilación se inicia utilizando una bolsa-mascarilla (AMBÚ) sujeta fuertemente a la cara del paciente con el fin de evitar fugas de aire y conectada, tan pronto como sea posible, a una fuente de oxígeno a 10-15 lpm. El objetivo de spO2 periférico es de 94-98%."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "Una vez aislada la vía aérea, ¿cuántas ventilaciones por minuto se administran?",
+      "expected_section": "VENTILACIÓN",
+      "expected_quote": "A partir del aislamiento de la vía aérea, se administrarán 10 ventilaciones por minuto no sincronizadas con las compresiones. Deben realizarse ventilaciones de 1 segundo de duración cada una y aportando un volumen corriente suficiente para que el pecho se eleve."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Cómo coloco las palas o electrodos del desfibrilador en el tórax?",
+      "expected_section": "Desfibrilación",
+      "expected_quote": "El electrodo derecho (esternal) estará situado a la derecha del esternón, por debajo de la clavícula derecha. El electrodo apical se situará en la línea medio-axilar izquierda, aproximadamente a nivel del electrodo V6."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "¿Cuánta energía aplico en la primera descarga en un ritmo desfibrilable?",
+      "expected_section": "Desfibrilación",
+      "expected_quote": "Si el ritmo observado corresponde a FV o TV sin pulso, se aplicará una descarga (bifásica 150-200J, monofásica 360J) e inmediatamente después, sin confirmar si ha sido o no eficaz, se continuará con las maniobras de RCP (masaje y ventilación) durante dos minutos."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Qué fármacos y a qué dosis administro tras el tercer choque en un ritmo desfibrilable?",
+      "expected_section": "Ritmos chocables (TV sin pulso y FV)",
+      "expected_quote": "Tras el tercer choque, administrar durante el siguiente ciclo de 2 minutos de RCP: Adrenalina 1 mg iv en bolo y Amiodarona 300 mg iv en bolo (2 ampollas) o lidocaína 1-1,5 mg/kg."
+    },
+    {
+      "id": "q15",
+      "block": 2,
+      "query": "¿Qué hago con la adrenalina y la atropina en un ritmo no desfibrilable como la asistolia?",
+      "expected_section": "Asistolia o ritmo no desfibrilable (AESP)",
+      "expected_quote": "Administración de adrenalina 1 mgr IV lo antes posible a la vez que comienzan maniobras de reanimación (debe repetirse cada 3-5 minutos). Administración de atropina 3 mgr IV (dosis máxima), sólo en casos de bradicardia extrema y hasta comprobar eficacia."
+    },
+    {
+      "id": "q16",
+      "block": 2,
+      "query": "Si el paciente lleva un marcapasos o DAI, ¿dónde coloco los parches del desfibrilador?",
+      "expected_section": "Ritmos chocables - dispositivos implantables",
+      "expected_quote": "Si la posición es infraclavicular izquierda los electrodos pueden colocarse en posición convencional, si la posición es infraclavicular derecha u otra diferente, tener siempre la precaución de alejar las palas al menos 8 cm de la batería del generador, dejando al corazón en medio del arco de descarga."
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "¿Cuánto tiempo máximo debe durar una reanimación que no es eficaz?",
+      "expected_section": "Ritmos chocables (TV sin pulso y FV)",
+      "expected_quote": "40 minutos máximo debe durar la reanimación si no es eficaz, excepto en contexto de tromboembolismo pulmonar fibrinolisado, donde se han comprobado buenos resultados en RCPs de 60-90 minutos."
+    },
+    {
+      "id": "q18",
+      "block": 3,
+      "query": "¿Cuándo se deben detener las maniobras de reanimación?",
+      "expected_section": "DETENER LAS MANIOBRAS",
+      "expected_quote": "Signos de muerte: rigidez, livideces, midriasis bilateral (sin uso de atropina). Si se detectan antes de iniciar las maniobras sería una indicación de no reanimar, si se detectan antes de 20 minutos del inicio de las mismas se debe detener la reanimación."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "¿Cuáles son las causas reversibles de parada cardiaca que hay que descartar?",
+      "expected_section": "DETECTAR POSIBLES CAUSAS DE PARADA CARDIACA",
+      "expected_quote": "Intoxicación por antidepresivos tricíclicos, hipovolemia, hipoxia, hidrogeniones (acidosis metabólica grave), hipocaliemia/hipercaliemia, hipoglucemia, hipotermia, otros tóxicos, taponamiento, neumotórax a tensión, trombosis coronaria o TEP y traumatismo."
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "¿Cada cuánto se debe relevar a la persona que realiza las compresiones?",
+      "expected_section": "DETENER LAS MANIOBRAS",
+      "expected_quote": "Por agotamiento de los reanimadores. Es aconsejable sustituir a las personas que están realizando las compresiones cada 2 minutos."
+    },
+    {
+      "id": "q21",
+      "block": 3,
+      "query": "¿Qué signos clínicos de inestabilidad obligan a avisar al médico en un paciente con arritmia?",
+      "expected_section": "ANEXO 2 - Prevención de la muerte súbita por arritmias",
+      "expected_quote": "Se consideran signos clínicos de inestabilidad y por lo tanto de alerta que obligan a llamar: hipotensión arterial sistólica (<90 mmHg), saturación de oxígeno menor de 91%, alteración del nivel de conciencia, clínica/exploración de insuficiencia cardiaca, dolor torácico anginoso y frecuencias cardiacas extremas (bradicardia <40 lpm o taquicardia >150 lpm)."
+    },
+    {
+      "id": "q22",
+      "block": 3,
+      "query": "En una bradicardia con signos adversos, ¿qué dosis de atropina administro y cuál es la máxima?",
+      "expected_section": "ANEXO 2 - Manejo de arritmias peri-paro. Bradicardia",
+      "expected_quote": "Si cualquiera de los signos anteriores está presente se recomienda administrar ATROPINA 500 mcg EV, repetible cada 3-5 min hasta dosis máxima de 3 mg. Dosis inferiores a 500 mcg pueden producir un efecto paradójico."
+    },
+    {
+      "id": "q23",
+      "block": 3,
+      "query": "¿Cómo se trata una taquicardia con pulso en un paciente clínicamente inestable?",
+      "expected_section": "ANEXO 2 - Taquicardias con PULSO",
+      "expected_quote": "Sea cual sea el origen de la arritmia el tratamiento de elección en estos casos es eléctrico: Cardioversión sincronizada inmediata. Si la cardioversión no restaura el ritmo y el paciente continua inestable se administrará Amiodarona 300 mg EV en 10-20 minutos para repetir posteriormente la cardioversión."
+    },
+    {
+      "id": "q24",
+      "block": 3,
+      "query": "¿Cómo se tratan las taquicardias ventriculares polimórficas tipo torcida de punta?",
+      "expected_section": "ANEXO 2 - Taquicardia irregular de QRS ancho",
+      "expected_quote": "Las TV polimórficas tipo torcida de punta se tratan suspendiendo todos aquellos fármacos que prolonguen el QT, corrigiendo electrolitos (especialmente hipocaliemia), y administrando sulfato de magnesio 2gr EV en unos 10 mn."
+    },
+    {
+      "id": "q25",
+      "block": 4,
+      "query": "¿Cuáles son las pautas de administración de adrenalina durante el paro cardiaco?",
+      "expected_section": "ANEXO 3 - Adrenalina",
+      "expected_quote": "Administrar 1 mg iv (ó intraósea) lo antes posible a los pacientes adultos en PCR con un ritmo no desfibrilable. Administrar 1 mg iv (ó intraósea) después de la 3ª desfibrilación a los pacientes adultos en PCR con un ritmo desfibrilable. Repetir 1 mg iv (ó intraósea) cada 3-5 minutos mientras continúe el SVA."
+    },
+    {
+      "id": "q26",
+      "block": 4,
+      "query": "¿Cuándo se usa la lidocaína y a qué dosis en lugar de la amiodarona?",
+      "expected_section": "ANEXO 3 - Lidocaína",
+      "expected_quote": "En este momento el empleo de lidocaína se restringe a pacientes con FV refractaria al choque si no se dispone de amiodarona (dosis inicial 1-1,5 mg/Kg ó 100mg, tras 3ª descarga con posibilidad de bolo adicional de 0,5-0,75 mg/kg ó 50 mg tras la 5ª descarga) o se ha tomado la decisión local de usar lidocaína en vez de amiodarona."
+    },
+    {
+      "id": "q27",
+      "block": 4,
+      "query": "¿En qué casos está indicado el sulfato de magnesio durante el paro cardiaco?",
+      "expected_section": "ANEXO 3 - Magnesio",
+      "expected_quote": "No hay evidencia de que el uso rutinario de magnesio en el paro cardiaco aumente la supervivencia. Se considera indicado únicamente en casos en los que exista hipomagnesemia documentada o sospecha de esta (dosis: 2 gr de sulfato de magnesio iv) y en el tratamiento de las Torsades de Pointes."
+    },
+    {
+      "id": "q28",
+      "block": 4,
+      "query": "¿Con qué frecuencia y por quién se revisa el carro de parada?",
+      "expected_section": "ANEXO 4 - Material necesario para atender una parada cardiaca",
+      "expected_quote": "Se hará a cargo del personal de enfermería, todos y de forma rotatoria. La revisión se realizará semanalmente, y siempre tras cada utilización. El carro debe estar precintado para asegurar que se ha revisado y no reutilizado. El Control de la caducidad de los fármacos será responsabilidad del personal de enfermería de cada Unidad."
+    },
+    {
+      "id": "q29",
+      "block": 4,
+      "query": "¿En qué supuestos NO debe aplicarse la RCP a un paciente?",
+      "expected_section": "ANEXO 5 - Actuación ante paciente no reanimable",
+      "expected_quote": "La RCP debe aplicarse SIEMPRE que se diagnostique una parada cardiorrespiratoria EXCEPTO cuando vulnere el derecho de autonomía del paciente (voluntades anticipadas u orden de 'NO RCP'), cuando esté enfrentada a la justicia conmutativa (riesgos graves para el reanimador o perjuicio a otros con más posibilidades de supervivencia), o cuando no sea acorde con los principios de beneficencia y no maleficencia."
+    },
+    {
+      "id": "q30",
+      "block": 4,
+      "query": "¿Dónde debe constar la orden de 'NO RCP' y qué obligaciones éticas existen una vez catalogado el paciente?",
+      "expected_section": "ANEXO 5 - Procedimientos ante paciente NO RCP",
+      "expected_quote": "La orden de 'NO RCP' debe constar de forma escrita, visible y legible en la primera hoja de la historia clínica y ser notificada al resto del equipo asistencial. Una vez catalogado el paciente como 'NO RCP', existe la obligación ética de aportar las medidas necesarias de cuidados paliativos y no abandonar al paciente ni a la familia, garantizando medidas de bienestar, cuidados, analgesia, sedación y asistencia religiosa."
+    }
+  ]
+}

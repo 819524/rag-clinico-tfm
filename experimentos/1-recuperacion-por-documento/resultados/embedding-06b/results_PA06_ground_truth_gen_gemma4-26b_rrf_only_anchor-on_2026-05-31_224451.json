@@ -1,0 +1,2705 @@
+{
+  "ground_truth": "PA06_ground_truth.json",
+  "executed_at": "2026-05-31T22:44:51",
+  "mode": "retriever+generator",
+  "model": "gemma4:26b",
+  "collection": "docs_rag_qwen3_06b",
+  "rerank_strategy": "rrf_only",
+  "cross_encoder_device": null,
+  "top_k": 10,
+  "n_questions": 16,
+  "doc_anchor_enabled": true,
+  "doc_anchor_stats": {
+    "anchor_emitted": 9,
+    "anchor_received": 7,
+    "anchor_applied": 6,
+    "gate_reasons": {
+      "insufficient_chunks": 7,
+      "ok": 9
+    }
+  },
+  "retriever_metrics": {
+    "HitRate@1": 0.875,
+    "MRR@1": 0.875,
+    "Precision@1": 0.875,
+    "Recall@1": 0.875,
+    "NDCG@1": 0.875,
+    "HitRate@3": 0.9375,
+    "MRR@3": 0.9062,
+    "Precision@3": 0.7917,
+    "Recall@3": 2.375,
+    "NDCG@3": 0.8048,
+    "HitRate@5": 0.9375,
+    "MRR@5": 0.9062,
+    "Precision@5": 0.7875,
+    "Recall@5": 3.9375,
+    "NDCG@5": 0.801,
+    "HitRate@10": 1.0,
+    "MRR@10": 0.9152,
+    "Precision@10": 0.7313,
+    "Recall@10": 7.3125,
+    "NDCG@10": 0.905
+  },
+  "memory_stats": {
+    "peak_proc_rss_mb": 63.57421875,
+    "peak_ollama_rss_mb": null
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "query": "¿Qué es exactamente un sondaje vesical?",
+      "block": 1,
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Introducción de un catéter a través de la uretra hasta la vejiga para establecer una vía de drenaje, con fines diagnósticos y/o terapéuticos.",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "definición y concepto de sondaje vesical",
+        "keywords": [
+          "sondaje vesical"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            5,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 12,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 8,
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 1
+          },
+          "dominant_doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "dominant_ratio": 0.571,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0307,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0303,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "2.- ALCANCE",
+          "rerank_score": 0.0302,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0289,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.0285,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0284,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0276,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "15. INDICADORES DE EVALUACIÓN",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.0269,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "6. CONSIDERACIÓN DE PUNTOS DE VISTA Y PREFERENCIAS DEL PACIENTE",
+          "rerank_score": 0.0269,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "rerank_score": 0.0267,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.069,
+        "Retriever": 1.329,
+        "Generador": 11.29
+      },
+      "memory_mb": {
+        "proc_before": 62.8,
+        "proc_after_retriever": 63.1,
+        "proc_delta_retriever": 0.2,
+        "proc_after_generator": 63.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "El **sondaje vesical** (o cateterismo vesical) se define como una **técnica invasiva** que consiste en la introducción de un dispositivo de derivación urinaria, denominado **sonda vesical**, a través del meato uretral con el objetivo de permitir la evacuación de la orina contenida en la vejiga [4].\n\nA continuación, se detallan los aspectos clave relacionados con este procedimiento según los protocolos disponibles:\n\n## Características del dispositivo (Sonda vesical)\nLa sonda es un dispositivo tubular estéril, elaborado con materiales como **lámina, silicona o simplastic** [4]. Sus características principales incluyen:\n\n- **Función**: Permite el drenaje de la orina de forma **continua o intermitente** [4].\n- **Estructura**:\n    - **Pabellón**: Extremo externo que se enlaza con los sistemas colectores [4].\n    - **Cuerpo**: Parte tubular que conduce la orina hacia el exterior [4].\n    - **Punta/cabeza**: Extremo que se introduce inicialmente por el meato uretral [4].\n- **Tipos según número de vías**:\n    - **1 vía**: No presenta sistema autorretentivo [4].\n    - **2 vías (tipo Foley)**: Posee una vía evacuatoria de orina y una vía para el sistema autorretentivo (globo) [4].\n    - **3 vías**: Incluye las dos anteriores más una vía para la instilación de líquidos/suero (para sistemas de lavado continuo) [4].\n- **Material y durabilidad**: La rigidez varía según el material (**látex < silicona < simplastic**) [4]. El tiempo de permanencia antes del recambio depende del material:\n    - **Látex**: Aproximadamente 15 días [4].\n    - **Silicona y simplastic**: Aproximadamente 2 meses [4].\n\n## Consideraciones del procedimiento\nEl proceso de sondaje se divide en varias fases de actuación [2]:\n\n- **Pasos previos**: Identificación del personal y del paciente, informar sobre la técnica, asegurar la intimidad y preparar el material [2].\n- **Técnica no estéril**: Posicionamiento del paciente, lavado de manos y guantes no estériles, lavado de genitales y aplicación de antiséptico en el meato [2].\n- **Técnica estéril**: Preparación de campo y material estéril, comprobación del balón, lubricación de la sonda e introducción de la misma hasta la salida de orina [2].\n- **Post-procedimiento**:\n    - En **sondaje permanente**: Inflar el balón, conectar a sistema de drenaje cerrado, deslizar la sonda hasta notar resistencia y fijarla en la cara interna del muslo [2].\n    - En **sondaje intermitente**: Retirar la sonda al finalizar la emisión de orina [2].\n    - **Finalización**: Colocar la bolsa por debajo del nivel de la vejiga (sin tocar el suelo), retirar guantes, lavado de manos y registro en la historia clínica [2].\n\n## Objetivos y alcance\n- **Objetivos**: Estandarizar los criterios de actuación en los cuidados de la sonda y disminuir el riesgo de infección asociada al sondaje [5].\n- **Alcance**: Este procedimiento es de aplicación en todos los servicios del **Hospital Universitario Lozano Blesa** donde se realice el sondaje vesical [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2969,
+        "token_stats": {
+          "prompt_tokens": 2166,
+          "completion_tokens": 760,
+          "total_tokens": 2926,
+          "tokens_per_second": 159.5,
+          "context_used_pct": 17.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 11.29
+      }
+    },
+    {
+      "id": "q02",
+      "query": "¿Qué es un sistema de drenaje cerrado y para qué sirve?",
+      "block": 1,
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Bolsa colectora de orina con una válvula en su zona inferior para el vaciado de la misma, evitando la desconexión con la sonda, creando así un circuito cerrado.",
+      "labels": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "definición y utilidad de un sistema de drenaje cerrado",
+        "keywords": [
+          "sistema de drenaje cerrado",
+          "para qué sirve"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            4,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 1,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 2
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.667,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "3.- DEFINICIONES",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "6. ANEXOS",
+          "h2": "6.3 ANEXO III: Instrucciones de uso",
+          "rerank_score": 0.0313,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0299,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0299,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "6. ANEXOS",
+          "h2": "6.2. ANEXO II: hoja de recogida de datos domiciliaria.",
+          "rerank_score": 0.0291,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "6. ANEXOS",
+          "h2": "6.1. ANEXO I: Hoja de recogida de datos hospitalaria.",
+          "rerank_score": 0.0276,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0264,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0251,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0237,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "4. DESARROLLO",
+          "h2": "4.4 Procedimiento:",
+          "rerank_score": 0.0217,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.157,
+        "Retriever": 1.392,
+        "Generador": 8.32
+      },
+      "memory_mb": {
+        "proc_before": 63.1,
+        "proc_after_retriever": 62.7,
+        "proc_delta_retriever": -0.4,
+        "proc_after_generator": 62.7,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "## Sistema de drenaje cerrado\n\n### Definición\nUn sistema de drenaje cerrado es un dispositivo compuesto por una **bolsa colectora** (por ejemplo, de orina) que cuenta con una **válvula** en su zona inferior para permitir el vaciado, pero cuya estructura está diseñada para **evitar la desconexión con la sonda**, creando así un circuito cerrado [1].\n\n### Utilidad y recomendaciones\nEl uso de este sistema tiene como objetivo principal la prevención de complicaciones infecciosas:\n\n- **Prevención de bacteriuria e infecciones:** El uso de sistemas de drenaje cerrado es fundamental para reducir la incidencia de bacteriuria. Se ha observado que el sistema de drenaje abierto favorece la aparición de bacteriuria en el 50% de los pacientes durante las primeras 24 horas y en casi el 100% antes del cuarto día; en contraste, con un sistema cerrado, la incidencia global de bacteriuria es de solo un 3-10% por día [4].\n- **Mantenimiento del sistema:** Se recomienda utilizar sistemas de drenaje cerrado y realizar cambios de la bolsa únicamente cuando sea necesario [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1066,
+        "token_stats": {
+          "prompt_tokens": 4291,
+          "completion_tokens": 245,
+          "total_tokens": 4536,
+          "tokens_per_second": 141.5,
+          "context_used_pct": 27.7,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.32
+      }
+    },
+    {
+      "id": "q03",
+      "query": "¿En qué posición coloco al paciente hombre y a la paciente mujer antes del sondaje?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Hombre: decúbito supino. Mujer: posición ginecológica.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "posición del paciente masculino y de la paciente femenina para la realización de sondaje",
+        "keywords": [
+          "posición",
+          "paciente hombre",
+          "paciente mujer",
+          "sondaje"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 2
+          },
+          "dominant_doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0291,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0288,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0288,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0288,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "6. CONSIDERACIÓN DE PUNTOS DE VISTA Y PREFERENCIAS DEL PACIENTE",
+          "rerank_score": 0.0268,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.1. ORINA OBTENIDA POR MICCIÓN MEDIA.",
+          "rerank_score": 0.0256,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.0254,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 5: GUÍA DE PREVENCIÓN DE LESIONES POR PRESIÓN PARA PERSONAS CUIDADORAS",
+          "h2": "¿DÓNDE APARECEN?",
+          "rerank_score": 0.0249,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "4.- LOCALIZACIONES (5)",
+          "h2": "4.1 LOCALIZACIÓN DE LAS LPP EN DECÚBITO",
+          "rerank_score": 0.0246,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.265,
+        "Retriever": 1.348,
+        "Generador": 7.3
+      },
+      "memory_mb": {
+        "proc_before": 62.7,
+        "proc_after_retriever": 63.1,
+        "proc_delta_retriever": 0.4,
+        "proc_after_generator": 63.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la realización de la técnica de sondaje vesical, la posición del paciente debe ser la siguiente:\n\n- **Paciente hombre**: Se debe colocar en **decúbito supino** [1].\n- **Paciente mujer**: Se debe colocar en **posición ginecológica** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 241,
+        "token_stats": {
+          "prompt_tokens": 6975,
+          "completion_tokens": 67,
+          "total_tokens": 7042,
+          "tokens_per_second": 154.3,
+          "context_used_pct": 43.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.3
+      }
+    },
+    {
+      "id": "q04",
+      "query": "¿Cuál es el primer paso antes de tocar al paciente?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Informar al paciente del procedimiento que se le va a realizar y asegurar su intimidad.",
+      "labels": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "primer paso antes de realizar el contacto con el paciente",
+        "keywords": [
+          "primer paso",
+          "tocar al paciente"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            3,
+            4,
+            2,
+            3,
+            4,
+            2,
+            3,
+            4,
+            2,
+            3,
+            4,
+            2,
+            3,
+            4,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 10,
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 5,
+            "PA-195-RECOMENDACIONES-DE-ACTUACION-INSTITUCIONAL-ANTE-EVENTOS-ADVERSOS-ATENCION-A-PRIMERAS-Y-SEGUNDAS-VICTIMAS": 2
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.588,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-195-RECOMENDACIONES-DE-ACTUACION-INSTITUCIONAL-ANTE-EVENTOS-ADVERSOS-ATENCION-A-PRIMERAS-Y-SEGUNDAS-VICTIMAS",
+          "h1": "RECOMENDACIONES DE ACTUACIÓN INSTITUCIONAL ANTE EVENTOS ADVERSOS: ATENCIÓN A PRIMERAS Y SEGUNDAS VÍCTIMAS",
+          "h2": "4. ACTUACIÓN ANTE UN EVENTO ADVERSO GRAVE",
+          "rerank_score": 0.0296,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0278,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "1. INTRODUCCIÓN",
+          "rerank_score": 0.027,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0256,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.0242,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-195-RECOMENDACIONES-DE-ACTUACION-INSTITUCIONAL-ANTE-EVENTOS-ADVERSOS-ATENCION-A-PRIMERAS-Y-SEGUNDAS-VICTIMAS",
+          "h1": "RECOMENDACIONES DE ACTUACIÓN INSTITUCIONAL ANTE EVENTOS ADVERSOS: ATENCIÓN A PRIMERAS Y SEGUNDAS VÍCTIMAS",
+          "h2": "4. ACTUACIÓN ANTE UN EVENTO ADVERSO GRAVE",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0164,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-195-RECOMENDACIONES-DE-ACTUACION-INSTITUCIONAL-ANTE-EVENTOS-ADVERSOS-ATENCION-A-PRIMERAS-Y-SEGUNDAS-VICTIMAS",
+          "h1": "RECOMENDACIONES DE ACTUACIÓN INSTITUCIONAL ANTE EVENTOS ADVERSOS: ATENCIÓN A PRIMERAS Y SEGUNDAS VÍCTIMAS",
+          "h2": "4. ACTUACIÓN ANTE UN EVENTO ADVERSO GRAVE",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0161,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "PROCEDIMIENTO DE CONTENCIÓN MECÁNICA/INMOVILIZACIÓN TERAPÉUTICA",
+          "h2": "4.4.5 Medidas de protección personal",
+          "rerank_score": 0.0159,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.138,
+        "Retriever": 1.32,
+        "Generador": 8.07
+      },
+      "memory_mb": {
+        "proc_before": 63.1,
+        "proc_after_retriever": 62.8,
+        "proc_delta_retriever": -0.2,
+        "proc_after_generator": 62.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para responder a su pregunta, es necesario distinguir entre el contexto de un procedimiento técnico (sondaje vesical) y el contexto de actuación ante eventos adversos, según los protocolos disponibles:\n\n## Procedimiento de Sondaje Vesical\nEn el algoritmo de actuación para el **sondaje vesical**, los pasos previos a la ejecución de la técnica (que implican el contacto y manipulación del paciente) son los siguientes:\n\n- **Identificación del personal** [2, 3, 4].\n- **Confirmar la identificación del paciente** [2, 3, 4].\n- **Informar de la técnica que se va a realizar** [2, 3, 4].\n- **Asegurar la intimidad** [2, 3, 4].\n- **Preparar el material necesario** [2, 3, 4].\n\n## Actuación ante Eventos Adversos\nEn el contexto de la comunicación tras un evento adverso grave, el protocolo no especifica un \"primer paso\" físico antes de tocar al paciente, pero sí establece una prioridad en la comunicación:\n\n- **Iniciar la comunicación tan pronto como sea posible**, poniéndose a disposición de la familia y el paciente para prestar apoyo y acompañamiento [1].\n- **Averiguar las preocupaciones** de la familia y el paciente [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1123,
+        "token_stats": {
+          "prompt_tokens": 2441,
+          "completion_tokens": 288,
+          "total_tokens": 2729,
+          "tokens_per_second": 160.0,
+          "context_used_pct": 16.7,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.07
+      }
+    },
+    {
+      "id": "q05",
+      "query": "¿Cómo se lavan los genitales externos y en qué dirección?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Lavado con agua tibia y jabón de los genitales externos en dirección pubis-ano. En el hombre: retirar prepucio para lavar el glande. En la mujer: lavar el interior de labios mayores y menores.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "técnica de lavado de genitales externos y dirección del lavado en el protocolo de cuidados de enfermería en el sondaje vesical",
+        "keywords": [
+          "lavan los genitales externos",
+          "dirección"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 5
+          },
+          "dominant_doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0318,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.4. DESPISTAJE DE S. agalactiae EN GESTANTES",
+          "rerank_score": 0.0247,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.1. Introducción",
+          "rerank_score": 0.0234,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.3. MUESTRAS TRACTO GENITAL FEMENINO",
+          "rerank_score": 0.023,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.2. Aspectos generales",
+          "rerank_score": 0.0224,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0164,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "4.- LOCALIZACIONES (5)",
+          "h2": "4.1 LOCALIZACIÓN DE LAS LPP EN DECÚBITO",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0161,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.0159,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 5: GUÍA DE PREVENCIÓN DE LESIONES POR PRESIÓN PARA PERSONAS CUIDADORAS",
+          "h2": "¿DÓNDE APARECEN?",
+          "rerank_score": 0.0156,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.991,
+        "Retriever": 1.283,
+        "Generador": 7.82
+      },
+      "memory_mb": {
+        "proc_before": 62.8,
+        "proc_after_retriever": 63.2,
+        "proc_delta_retriever": 0.4,
+        "proc_after_generator": 63.2,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para el procedimiento de sondaje vesical, el lavado de los genitales externos debe realizarse siguiendo estas pautas:\n\n## Técnica de lavado genital\n\n- **Material y solución**: Se debe realizar un lavado utilizando **agua tibia y jabón** [1].\n- **Dirección**: El lavado debe efectuarse en dirección **pubis-ano** [1].\n- **Procedimiento según el sexo**:\n    - **Hombre**: Es necesario **retirar el prepucio** para poder lavar el glande [1].\n    - **Mujer**: Se debe lavar el **interior de los labios mayores y menores** [1].\n\nTras este lavado, el protocolo indica limpiar el meato con una solución antiséptica [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 612,
+        "token_stats": {
+          "prompt_tokens": 5360,
+          "completion_tokens": 158,
+          "total_tokens": 5518,
+          "tokens_per_second": 139.7,
+          "context_used_pct": 33.7,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.82
+      }
+    },
+    {
+      "id": "q06",
+      "query": "¿Cuándo me pongo guantes estériles y cuándo no estériles?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "En el paso 5 se realiza lavado de manos y colocación de guantes no estériles, para el lavado de genitales y limpieza del meato con antiséptico. Posteriormente, en el paso 8, se realiza un nuevo lavado de manos y se colocan guantes estériles para preparar el campo estéril e introducir la sonda.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "momento de colocación de guantes estériles y guantes no estériles durante el procedimiento",
+        "keywords": [
+          "guantes estériles",
+          "guantes no estériles",
+          "cuándo me pongo"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "title": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            4,
+            2,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado": 1,
+            "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B": 3
+          },
+          "dominant_doc_id": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "dominant_ratio": 0.75,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "4. DESARROLLO",
+          "h2": "4.3 Material necesario:",
+          "rerank_score": 0.0325,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "16. SEROLOGIA INFECCIOSA",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.0313,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "4. CATÉTERES INTRAVASCULARES",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.0305,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "17. MICROBIOLOGIA MOLECULAR",
+          "h2": "A. Material necesario:",
+          "rerank_score": 0.0297,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "4. CATÉTERES INTRAVASCULARES",
+          "h2": "B. Obtención de la muestra",
+          "rerank_score": 0.0294,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "5. LIQUIDO CEFALORRAQUIDEO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.0284,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0284,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.028,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "Resto material",
+          "rerank_score": 0.0278,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0278,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.327,
+        "Retriever": 1.411,
+        "Generador": 7.54
+      },
+      "memory_mb": {
+        "proc_before": 63.2,
+        "proc_after_retriever": 62.8,
+        "proc_delta_retriever": -0.4,
+        "proc_after_generator": 62.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Basado en los protocolos disponibles, el uso de **guantes estériles** está indicado en los siguientes procedimientos:\n\n## Uso de guantes estériles\n\nSe deben utilizar guantes estériles en las siguientes situaciones clínicas:\n\n- **Procedimiento de colocación y seguimiento de catéter pleural tunelizado**: Para este procedimiento se requiere el uso de guantes estériles (quirúrgicos de látex sin polvo o sintéticos si existe alergia al látex) [1].\n- **Obtención de muestras de catéteres intravasculares**: El protocolo establece lavar las manos y utilizar guantes estériles para la obtención de la muestra [4].\n- **Serología infecciosa**: Se requiere el uso de guantes estériles para la toma de muestras en este apartado [2].\n- **Microbiología molecular**: El material necesario para este procedimiento incluye guantes estériles [5].\n\nNo encuentro información en los protocolos disponibles sobre cuándo utilizar guantes **no estériles**.",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 935,
+        "token_stats": {
+          "prompt_tokens": 1796,
+          "completion_tokens": 217,
+          "total_tokens": 2013,
+          "tokens_per_second": 160.1,
+          "context_used_pct": 12.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.54
+      }
+    },
+    {
+      "id": "q07",
+      "query": "¿Cómo se comprueba que el balón de la sonda funciona bien antes de introducirla?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Inyectando 10 ml de aire en el balón para comprobar su buen funcionamiento y retirando el aire después.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "comprobación del funcionamiento del balón de la sonda antes de su introducción",
+        "keywords": [
+          "comprueba",
+          "balón de la sonda",
+          "introducirla"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "title": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "title": "TÉCNICA DEL SONDAJE VESICAL",
+          "reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            1,
+            4,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 3,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 2
+          },
+          "dominant_doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "dominant_ratio": 0.6,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0323,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.032,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0318,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.0308,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0297,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0283,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0272,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0272,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "4. Carro de Parada",
+          "rerank_score": 0.026,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.253,
+        "Retriever": 1.283,
+        "Generador": 7.23
+      },
+      "memory_mb": {
+        "proc_before": 62.8,
+        "proc_after_retriever": 63.2,
+        "proc_delta_retriever": 0.4,
+        "proc_after_generator": 63.2,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para comprobar que el balón de la sonda funciona correctamente antes de su introducción, se debe realizar el siguiente procedimiento durante la fase de **técnica estéril**:\n\n- **Inyectar 10 ml de aire** en el balón de la sonda [2].\n- **Retirar el aire** previamente inyectado [2].\n\nEste paso forma parte de la comprobación necesaria dentro del protocolo de técnica estéril para asegurar el correcto funcionamiento del dispositivo antes de proceder a la lubricación e inserción de la sonda [1, 4, 5].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 499,
+        "token_stats": {
+          "prompt_tokens": 3503,
+          "completion_tokens": 121,
+          "total_tokens": 3624,
+          "tokens_per_second": 157.6,
+          "context_used_pct": 22.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.23
+      }
+    },
+    {
+      "id": "q08",
+      "query": "¿Cómo se aplica el lubricante anestésico en el hombre y en la mujer?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "En el hombre: introducir el lubricante por el meato uretral. En la mujer: verter el lubricante en una gasa para impregnar la sonda.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "aplicación de lubricante anestésico en pacientes masculinos y femeninos durante la técnica del sondaje vesical",
+        "keywords": [
+          "lubricante anestésico",
+          "hombre",
+          "mujer",
+          "sondaje vesical"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "title": "TÉCNICA DEL SONDAJE VESICAL",
+          "reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 2
+          },
+          "dominant_doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0306,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0298,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0293,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0293,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0289,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "2.- ALCANCE",
+          "rerank_score": 0.0284,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.0275,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "6. CONSIDERACIÓN DE PUNTOS DE VISTA Y PREFERENCIAS DEL PACIENTE",
+          "rerank_score": 0.026,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "15. INDICADORES DE EVALUACIÓN",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.0242,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.316,
+        "Retriever": 1.434,
+        "Generador": 7.55
+      },
+      "memory_mb": {
+        "proc_before": 63.2,
+        "proc_after_retriever": 62.9,
+        "proc_delta_retriever": -0.3,
+        "proc_after_generator": 62.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la aplicación del lubricante anestésico durante el procedimiento de sondaje vesical, la técnica varía según el sexo del paciente:\n\n- **En el hombre**: Se debe introducir el lubricante directamente por el meato uretral [1].\n- **En la mujer**: Se debe verter el lubricante en una gasa para, posteriormente, impregnar la sonda con él [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 340,
+        "token_stats": {
+          "prompt_tokens": 6974,
+          "completion_tokens": 86,
+          "total_tokens": 7060,
+          "tokens_per_second": 154.0,
+          "context_used_pct": 43.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.55
+      }
+    },
+    {
+      "id": "q09",
+      "query": "¿Hasta dónde introduzco la sonda en el hombre y en la mujer?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Se introduce la sonda por el meato hasta que salga orina y, en el hombre, hasta el pabellón; en la mujer, 2-3 cm más.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "profundidad de introducción de la sonda en pacientes masculinos y femeninos",
+        "keywords": [
+          "introduzco la sonda",
+          "hombre",
+          "mujer"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            5,
+            1,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 2,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 2
+          },
+          "dominant_doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.032,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.031,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0298,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.029,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0285,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0259,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.0253,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0156,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "ANEXO I: VARIABLES A REGISTRAR EN LA ENCUESTA EPIDEMIOLÓGICA DE INFECCIONES DE LOCALIZACIÓN QUIRÚRGICA (ILQ)",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.961,
+        "Retriever": 1.342,
+        "Generador": 7.68
+      },
+      "memory_mb": {
+        "proc_before": 62.9,
+        "proc_after_retriever": 63.4,
+        "proc_delta_retriever": 0.5,
+        "proc_after_generator": 63.4,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la técnica de sondaje vesical, la profundidad de la introducción de la sonda varía según el sexo del paciente, siguiendo este criterio:\n\n- **En el hombre**: Se debe introducir la sonda por el meato hasta que salga orina y, posteriormente, avanzar **hasta el pabellón** [1, 5].\n- **En la mujer**: Se debe introducir la sonda por el meato hasta que salga orina y, posteriormente, avanzar **2-3 cm más** [1, 5].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 413,
+        "token_stats": {
+          "prompt_tokens": 6971,
+          "completion_tokens": 111,
+          "total_tokens": 7082,
+          "tokens_per_second": 154.6,
+          "context_used_pct": 43.2,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.68
+      }
+    },
+    {
+      "id": "q10",
+      "query": "Si el sondaje es permanente, ¿qué hago para que la sonda no se salga?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Si el sondaje es permanente, inflar el balón con 10 ml de agua estéril para fijar la sonda internamente.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "medidas para evitar el desplazamiento o la salida de la sonda en caso de sondaje permanente",
+        "keywords": [
+          "sondaje es permanente",
+          "que hago para que la sonda no se salga"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            4,
+            3,
+            1,
+            2,
+            3,
+            4,
+            1,
+            2,
+            3,
+            4,
+            3,
+            3,
+            1,
+            2,
+            3,
+            5,
+            1,
+            2,
+            3,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 11,
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 11
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.032,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.0303,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0297,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0292,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 7: RETENCIÓN AGUDA DE ORINA",
+          "rerank_score": 0.0284,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.0282,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.0281,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0268,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.268,
+        "Retriever": 1.359,
+        "Generador": 8.89
+      },
+      "memory_mb": {
+        "proc_before": 63.4,
+        "proc_after_retriever": 62.9,
+        "proc_delta_retriever": -0.4,
+        "proc_after_generator": 62.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para asegurar que la sonda vesical no se salga en caso de un sondaje permanente, debe realizar los siguientes pasos de fijación y manejo:\n\n## Procedimiento de fijación y estabilización\n\nPara evitar el desplazamiento o la salida de la sonda, el protocolo establece las siguientes acciones:\n\n- **Fijación interna**: Una vez introducida la sonda y tras comprobar la salida de orina, se debe **inflar el balón** [1, 2, 4]. Para la fijación interna, se debe utilizar **10 ml de agua estéril** [3].\n- **Fijación externa**: \n    - Se debe **deslizar la sonda hacia el exterior** hasta que se note una resistencia [1, 2, 3, 4].\n    - La sonda debe **fijarse en la cara interna del muslo** [1, 2, 3, 4] utilizando **esparadrapo** [3].\n- **Consideración adicional en hombres**: En pacientes varones, es necesario **recolocar el prepucio** para evitar la aparición de parafimosis [3].\n\n## Manejo del sistema de drenaje\n\nEl correcto posicionamiento del sistema de recolección también es fundamental para el manejo de la sonda:\n\n- **Conexión**: La sonda debe conectarse a un **sistema de drenaje cerrado**, preferentemente [1, 2, 3, 5].\n- **Posicionamiento de la bolsa**: La bolsa colectora debe colocarse siempre **por debajo del nivel de la vejiga** y debe evitarse que **toque el suelo** [1, 2, 3, 4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1291,
+        "token_stats": {
+          "prompt_tokens": 3625,
+          "completion_tokens": 359,
+          "total_tokens": 3984,
+          "tokens_per_second": 157.7,
+          "context_used_pct": 24.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.89
+      }
+    },
+    {
+      "id": "q11",
+      "query": "¿Qué tipo de sistema de drenaje se recomienda conectar a la sonda?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Conectar la sonda a un sistema de drenaje, preferentemente cerrado.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "tipo de sistema de drenaje recomendado para conectar a la sonda en el PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+        "keywords": [
+          "sistema de drenaje",
+          "conectar",
+          "sonda"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            4,
+            5,
+            4,
+            4,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 13,
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 1
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.929,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0308,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0306,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0305,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0303,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "3.- DEFINICIONES",
+          "rerank_score": 0.0299,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0297,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.0291,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.029,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0289,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0283,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.393,
+        "Retriever": 1.335,
+        "Generador": 9.18
+      },
+      "memory_mb": {
+        "proc_before": 62.9,
+        "proc_after_retriever": 63.3,
+        "proc_delta_retriever": 0.4,
+        "proc_after_generator": 63.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para el procedimiento de sondaje vesical, se recomienda lo siguiente respecto al sistema de drenaje:\n\n## Recomendación del sistema de drenaje\n\n*   **Tipo de sistema:** Se debe utilizar un **sistema de drenaje cerrado** [1, 2, 4].\n*   **Definición:** Este sistema consiste en una bolsa colectora de orina que cuenta con una válvula en su zona inferior para el vaciado, lo cual evita la desconexación con la sonda y crea así un circuito cerrado [5].\n*   **Justificación clínica:** El uso de un sistema cerrado es fundamental para la prevención de infecciones, ya que el sistema de drenaje abierto favorece la aparición de bacteriuria en el 50% de los pacientes durante las primeras 24 horas y en casi el 100% antes de finalizar el cuarto día [4]. En contraste, con el sistema cerrado, la incidencia global de bacteriuria es de solo un 3-10% por día [4].\n*   **Mantenimiento del sistema:** Se debe utilizar el sistema de drenaje cerrado cambiando la bolsa únicamente cuando sea necesario [3].\n\n## Consideraciones adicionales para la bolsa colectora\n\n*   **Posicionamiento:** La bolsa colectora debe colocarse siempre **por debajo del nivel de la vejiga** [1, 2]. En caso de que sea imprescindible elevarla, es necesario **pinzar el tubo de drenaje** [3].\n*   **Seguridad:** La bolsa no debe tocar el suelo [1, 2].\n*   **Vaciado:** Se debe vaciar la bolsa antes de que esté completamente llena o, como mínimo, cada **6-8 horas** [3].\n*   **Higiene:** Es necesario lavarse las manos antes de manipular tanto la sonda como la bolsa colectora [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1540,
+        "token_stats": {
+          "prompt_tokens": 3846,
+          "completion_tokens": 391,
+          "total_tokens": 4237,
+          "tokens_per_second": 151.9,
+          "context_used_pct": 25.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.18
+      }
+    },
+    {
+      "id": "q12",
+      "query": "Tras conectar el drenaje, ¿qué hago con la sonda antes de fijarla?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Deslizar la sonda hacia el exterior hasta notar resistencia.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "acciones a realizar con la sonda tras conectar el drenaje y antes de su fijación en el marco del PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+        "keywords": [
+          "conectar el drenaje",
+          "fijarla",
+          "sonda"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            4,
+            4,
+            1,
+            2,
+            3,
+            2,
+            5,
+            1,
+            2,
+            3,
+            5,
+            1,
+            2,
+            3,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 11,
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 4
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.733,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.032,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0318,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0312,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0304,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0304,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0301,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.0301,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0288,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "3.- DEFINICIONES",
+          "rerank_score": 0.0267,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0264,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.407,
+        "Retriever": 1.28,
+        "Generador": 9.85
+      },
+      "memory_mb": {
+        "proc_before": 63.3,
+        "proc_after_retriever": 62.9,
+        "proc_delta_retriever": -0.4,
+        "proc_after_generator": 62.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Tras conectar el drenaje (ya sea por la técnica inicial de sondaje o durante un cambio de bolsa/urimeter), los pasos a seguir antes de la fijación definitiva son los siguientes:\n\n## Procedimiento tras la conexión\n\nDependiendo del contexto de la maniobra (colocación inicial o cambio de sistema), debe realizar lo siguiente:\n\n**1. En el caso de un cambio de bolsa o conexión a Urimeter:**\nSi se está realizando la conexión de un nuevo sistema (como el Anexo 5), tras conectar el tubo con la sonda, debe:\n- **Despinzar la sonda**: Una vez establecida la nueva conexión, se debe retirar la pinza Kocher que se utilizó para el pinzamiento previo [4].\n- **Verificar el flujo**: El objetivo es restablecer el flujo de orina hacia el nuevo sistema de medición [4].\n\n**2. En el caso de la técnica de sondaje inicial (Sondaje permanente):**\nSi se está realizando el procedimiento de sondaje por primera vez, tras conectar la sonda al sistema de drenaje cerrado, debe:\n- **Deslizar la sonda**: Se debe deslizar la sonda hacia el exterior hasta que note resistencia [1, 2, 3].\n- **En hombres**: Si el paciente es varón, es necesario recolocar el prepucio para evitar la aparición de parafimosis [2, 5].\n\n**3. Consideraciones finales antes de la fijación:**\n- **Posición del sistema**: Antes de finalizar, asegúrese de que el sistema de drenaje esté colocado en un soporte por debajo del nivel de la vejiga y que no toque el suelo [1, 2, 3]. En caso de que sea imprescindible elevar la bolsa por encima del nivel de la vejiga, se debe pinzar el tubo de drenaje [5].\n- **Fijación**: Una vez completados estos pasos, proceda a fijar la sonda externamente en la cara interna del muslo con esparadrapo [1, 2, 3, 4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1699,
+        "token_stats": {
+          "prompt_tokens": 4770,
+          "completion_tokens": 439,
+          "total_tokens": 5209,
+          "tokens_per_second": 140.7,
+          "context_used_pct": 31.8,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.85
+      }
+    },
+    {
+      "id": "q13",
+      "query": "¿Por qué hay que recolocar el prepucio al hombre después del sondaje?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Para evitar parafimosis.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "razones para la recolocación del prepucio en pacientes masculinos tras el procedimiento de sondaje vesical según el PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+        "keywords": [
+          "recolocar el prepucio",
+          "hombre",
+          "sondaje"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 1,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 1
+          },
+          "dominant_doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0325,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0312,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0298,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.0282,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "6. CONSIDERACIÓN DE PUNTOS DE VISTA Y PREFERENCIAS DEL PACIENTE",
+          "rerank_score": 0.028,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "2.- ALCANCE",
+          "rerank_score": 0.0262,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0257,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "15. INDICADORES DE EVALUACIÓN",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.0247,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.0246,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.176,
+        "Retriever": 1.285,
+        "Generador": 6.78
+      },
+      "memory_mb": {
+        "proc_before": 62.9,
+        "proc_after_retriever": 63.4,
+        "proc_delta_retriever": 0.5,
+        "proc_after_generator": 63.4,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "En el caso de pacientes varones, es necesario recolocar el prepucio a su posición normal tras el procedimiento de sondaje vesical para **evitar la aparición de parafimosis** [1, 3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 181,
+        "token_stats": {
+          "prompt_tokens": 4002,
+          "completion_tokens": 50,
+          "total_tokens": 4052,
+          "tokens_per_second": 158.8,
+          "context_used_pct": 24.7,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 6.78
+      }
+    },
+    {
+      "id": "q14",
+      "query": "¿Dónde y cómo se fija la sonda externamente?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Fijar externamente la sonda en la cara interna del muslo con esparadrapo.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "técnica y localización para la fijación externa de la sonda",
+        "keywords": [
+          "fija",
+          "sonda",
+          "externamente"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            3,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 3,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 2
+          },
+          "dominant_doc_id": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "dominant_ratio": 0.6,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.031,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0306,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0301,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0295,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0293,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "5.- ESQUEMA/ALGORITMO DEL PROCEDIMIENTO DE SONDAJE VESICAL",
+          "rerank_score": 0.0292,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0291,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0288,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.0284,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.173,
+        "Retriever": 1.372,
+        "Generador": 8.22
+      },
+      "memory_mb": {
+        "proc_before": 63.4,
+        "proc_after_retriever": 63.1,
+        "proc_delta_retriever": -0.3,
+        "proc_after_generator": 63.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La fijación externa de la sonda se realiza de la siguiente manera:\n\n## Procedimiento de fijación\n- **Lugar de fijación**: La sonda debe fijarse en la **cara interna del muslo** [1].\n- **Método**: Se utiliza **esparadrapo** para realizar la sujeción [1].\n- **Consideraciones adicionales**:\n    - En el caso de pacientes varones, tras la inserción, es necesario **recolocar el prepucio** para evitar la aparición de parafimosis [1].\n    - Durante el proceso de cambio de la bolsa de diuresis o urimeter, se debe **retirar el esparadrapo** que fija la sonda al muslo [3].\n    - Al finalizar el procedimiento de cambio, se debe **volver a fijar la sonda** al muslo del paciente [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 678,
+        "token_stats": {
+          "prompt_tokens": 7442,
+          "completion_tokens": 188,
+          "total_tokens": 7630,
+          "tokens_per_second": 153.3,
+          "context_used_pct": 46.6,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.22
+      }
+    },
+    {
+      "id": "q15",
+      "query": "¿Dónde debo colocar la bolsa de drenaje y qué debo evitar?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Colocar el sistema de drenaje en un soporte por debajo del nivel de la vejiga, evitando el contacto con el suelo.",
+      "labels": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "posición de colocación de la bolsa de drenaje y precauciones para evitar complicaciones",
+        "keywords": [
+          "bolsa de drenaje",
+          "colocar",
+          "evitar"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            4,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 5,
+            "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013": 1,
+            "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado": 4
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.032,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "6. ANEXOS",
+          "h2": "6.3 ANEXO III: Instrucciones de uso",
+          "rerank_score": 0.0296,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0294,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "3.- DEFINICIONES",
+          "rerank_score": 0.029,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.0288,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "6. VALORACIÓN DE RIESGO DE LPP (10,11,12)",
+          "h2": "6.2 CUIDADOS ESPECÍFICOS DE LA PREVENCIÓN",
+          "rerank_score": 0.0286,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0278,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0269,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "2.3. Maniobras específicas de Reanimación.",
+          "rerank_score": 0.0268,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0265,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.264,
+        "Retriever": 1.262,
+        "Generador": 10.58
+      },
+      "memory_mb": {
+        "proc_before": 63.1,
+        "proc_after_retriever": 63.3,
+        "proc_delta_retriever": 0.2,
+        "proc_after_generator": 63.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para responder a su pregunta, es necesario distinguir entre los dos tipos de drenajes mencionados en los protocolos (sonda vesical y catéter pleural), ya que las instrucciones varían según el dispositivo:\n\n## Sonda Vesical\nEn relación con la bolsa colectora de orina, las recomendaciones son las siguientes:\n\n- **Posición de la bolsa**: La bolsa colectora **no debe sobrepasar el nivel de la vejiga** [1]. En caso de que sea imprescindible elevarla, se debe **pinzar el tubo de drenaje** [1].\n- **Qué evitar**:\n    - **Evitar tirones y acodaduras** de la sonda para prevenir el riesgo de lesión [1].\n    - **Evitar la desconexión** del sistema para mantener un **sistema de drenaje cerrado** [4].\n    - **Evitar lavados vesicales** (si fueran necesarios, se deben utilizar sondas de tres vías) [1].\n    - **Evitar el llenado excesivo**: Se debe vaciar la bolsa antes de que esté completamente llena o, al menos, cada 6-8 horas [1].\n\n## Sistema de Catéter PleurX® (Drenaje pleural)\nPara este sistema de drenaje, las instrucciones de uso indican:\n\n- **Posición y manejo**: Al iniciar el drenaje, se debe apretar la pinza del tubo de drenaje para que quede completamente cerrada antes de retirar la cubierta de la punta de conexión [3]. Al terminar el drenaje, se debe volver a apretar la pinza hasta cerrarla por completo [3].\n- **Qué evitar**:\n    - **Evitar el exceso de volumen**: No se debe drenar más de **1000 ml de líquido del pecho** o **2000 ml del abdomen** en cada sesión [3].\n    - **Evitar la contaminación**: Es fundamental asegurar que se mantengan limpios tanto el extremo del catéter como la punta de conexión [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1629,
+        "token_stats": {
+          "prompt_tokens": 9545,
+          "completion_tokens": 425,
+          "total_tokens": 9970,
+          "tokens_per_second": 135.5,
+          "context_used_pct": 60.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.58
+      }
+    },
+    {
+      "id": "q16",
+      "query": "¿Qué debo hacer al terminar el procedimiento antes de abandonar al paciente?",
+      "block": 2,
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Retirada de guantes y lavado de manos, y registro en historia clínica.",
+      "labels": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "acciones o cuidados tras finalizar el procedimiento de PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL antes de abandonar al paciente",
+        "keywords": [
+          "terminar el procedimiento",
+          "abandonar al paciente"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "title": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            5,
+            5,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 3
+          },
+          "dominant_doc_id": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0289,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.026,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "rerank_score": 0.0164,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-195-RECOMENDACIONES-DE-ACTUACION-INSTITUCIONAL-ANTE-EVENTOS-ADVERSOS-ATENCION-A-PRIMERAS-Y-SEGUNDAS-VICTIMAS",
+          "h1": "RECOMENDACIONES DE ACTUACIÓN INSTITUCIONAL ANTE EVENTOS ADVERSOS: ATENCIÓN A PRIMERAS Y SEGUNDAS VÍCTIMAS",
+          "h2": "4.2. Actuaciones a medio plazo",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0161,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "ANEXO 5. ACTUACIÓN ANTE PACIENTE NO REANIMABLE.",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0159,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "PROCEDIMIENTO PARA LA SOLICITUD, APLICACIÓN Y TRAZABILIDAD DE HEMODERIVADOS",
+          "h2": "4. DESCRIPCIÓN DEL PROCEDIMIENTO",
+          "rerank_score": 0.0159,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0156,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "6. ANEXOS",
+          "h2": "6.3 ANEXO III: Instrucciones de uso",
+          "rerank_score": 0.0156,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.28,
+        "Retriever": 1.365,
+        "Generador": 7.24
+      },
+      "memory_mb": {
+        "proc_before": 63.3,
+        "proc_after_retriever": 63.6,
+        "proc_delta_retriever": 0.2,
+        "proc_after_generator": 63.6,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Al finalizar el procedimiento de sondaje vesical, según el algoritmo de actuación establecido en el protocolo, debe realizar las siguientes acciones antes de abandonar al paciente:\n\n## Finalización del procedimiento\n\n- **Gestión del sistema de drenaje**: Colocar la bolsa colectora por debajo del nivel de la vejiga y asegurar que no toque el suelo [5].\n- **Higiene y seguridad**: Retirar los guantes y realizar el lavado de manos [5].\n- **Registro clínico**: Realizar el registro de la intervención en la historia clínica del paciente [5].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 540,
+        "token_stats": {
+          "prompt_tokens": 3359,
+          "completion_tokens": 122,
+          "total_tokens": 3481,
+          "tokens_per_second": 158.3,
+          "context_used_pct": 21.2,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.24
+      }
+    }
+  ]
+}

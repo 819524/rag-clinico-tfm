@@ -1,0 +1,217 @@
+{
+  "name": "PO-19_Z3(E)C — Procedimiento de Actuación en el Accidente Ocupacional con Material Biológico",
+  "description": "Ground truth generado a partir del documento PO-19_Z3(E)C (Revisión C) del Hospital Clínico Universitario Lozano Blesa (Sector Zaragoza III). Cubre definiciones, responsabilidades por rol, pauta general de actuación, actuación específica según el centro donde ocurre el accidente (Hospital, Atención Primaria/Moncayo, Nuestra Señora del Pilar, Cinco Villas, Inocencio Jiménez), actuación del Servicio de Urgencias, valoración del riesgo y profilaxis post-exposición frente a VHB, VHC y VIH, y pautas de tratamiento antirretroviral.",
+  "relevant_doc_patterns": ["PO-19", "accidente biológico", "accidente ocupacional", "material biológico", "profilaxis post-exposición", "PPE", "exposición accidental", "VHB VHC VIH ocupacional"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Qué se considera una exposición accidental con material biológico?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Exposición accidental con material biológico: contacto con sangre u otros fluidos biológicos (semen, secreciones vaginales, líquido cefalorraquídeo, pleural, sinovial, amniótico, peritoneal, pericárdico y leche materna), a través de inoculación percutánea o contacto con una herida abierta, piel no intacta o mucosas durante el desarrollo de actividades laborales."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Cómo se define un accidente de trabajo y en qué norma se basa?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Accidente de trabajo: toda lesión corporal que el trabajador sufra con ocasión o por consecuencia del trabajo que ejecute por cuenta ajena (artículo 115 de la Ley General de Seguridad Social)."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿En qué grupo clasifica el Real Decreto 664/1997 a los virus de la hepatitis B, C y VIH?",
+      "expected_section": "DESARROLLO",
+      "expected_quote": "El artículo 3 clasifica a los organismos implicados en la inoculación accidental, los virus de la hepatitis B, C y de la inmunodeficiencia humana, como agentes biológicos del grupo 3, es decir 'aquellos que puede causar una enfermedad grave en el hombre y presentan un serio peligro para los trabajadores, con riesgo de que se propaguen a la colectividad y existiendo generalmente una profilaxis o tratamiento eficaz'."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Qué obligación tiene el trabajador respecto a comunicar el accidente según el RD 664/1997?",
+      "expected_section": "DESARROLLO",
+      "expected_quote": "los trabajadores comunicarán inmediatamente cualquier accidente o incidente que implique la manipulación de un agente biológico a su superior jerárquico directo y a la persona o personas con responsabilidades en materia de prevención en la empresa."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Cuáles son las responsabilidades del trabajador accidentado?",
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "Seguir las medidas de precaución universales. Utilizar los equipos de protección individual adecuados según el riesgo. Actuar sobre la lesión. Comunicar el accidente al supervisor/mando intermedio/coordinador. Solicitar el consentimiento informado del paciente fuente para la extracción sanguínea. Acudir al servicio de Prevención de Riesgos Laborales o al servicio de Urgencias según el momento del accidente."
+    },
+    {
+      "id": "q06",
+      "block": 1,
+      "query": "¿Qué debe hacer el médico del trabajo cuando valora un accidente biológico?",
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "Valorar el accidente, informar al trabajador, y proponer vacunación de hepatitis B, administración de gammaglobulina y tratamiento antirretroviral y controles analíticos y serológicos que proceda realizar."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "Si me pincho con una aguja y la piel queda con lesión percutánea, ¿qué pasos inmediatos debo seguir sobre la herida?",
+      "expected_section": "PAUTA GENERAL DE ACTUACIÓN ANTE EXPOSICIONES ACCIDENTALES",
+      "expected_quote": "Retirar el objeto causante de la lesión y depositarlo en el contenedor de residuos biosanitarios para evitar la exposición de otros trabajadores. Dejar fluir la sangre durante 3 minutos bajo chorro de agua. Lavar la herida con agua y jabón, y secarla o limpiarla correctamente. Aplicar sobre la lesión producida Clorhexidina o Povidona Yodada al 5%. Cubrir la herida con un apósito impermeable."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Puedo usar lejía para desinfectar la herida tras un pinchazo?",
+      "expected_section": "PAUTA GENERAL DE ACTUACIÓN ANTE EXPOSICIONES ACCIDENTALES",
+      "expected_quote": "NO USAR NUNCA LEJÍA, ya que se trata de un agente cáustico que se utiliza exclusivamente como desinfectante en suelos y superficies, no en materia orgánica."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "Si el contacto fue con salpicadura en la conjuntiva del ojo, ¿qué hago?",
+      "expected_section": "PAUTA GENERAL DE ACTUACIÓN ANTE EXPOSICIONES ACCIDENTALES",
+      "expected_quote": "Piel no intacta, mucosa oral, nasal, o conjuntival: lavado con abundante agua o suero fisiológico. En el caso de conjuntiva ocular, se puede utilizar la solución lavaojos específica de 500 ml (utilizar el envase entero)."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "Si solo me ha caído material biológico sobre piel intacta, ¿necesito ir al médico?",
+      "expected_section": "PAUTA GENERAL DE ACTUACIÓN ANTE EXPOSICIONES ACCIDENTALES",
+      "expected_quote": "Piel intacta: solo requiere lavado con agua y jabón y no precisa ninguna otra actuación ni consulta médica."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Con qué servicio debo contactar siempre para declarar oficialmente el accidente y en qué horario?",
+      "expected_section": "PAUTA GENERAL DE ACTUACIÓN ANTE EXPOSICIONES ACCIDENTALES",
+      "expected_quote": "El trabajador deberá contactar SIEMPRE con el servicio de Prevención de Riesgos Laborales, en horario de mañana de lunes a viernes de 8 a 15 horas, con el objeto de declarar oficialmente el accidente, registrarlo, investigarlo y realizar seguimiento del mismo."
+    },
+    {
+      "id": "q12",
+      "block": 3,
+      "query": "Si tengo un accidente en el hospital en horario de mañana de lunes a viernes, ¿qué tubos de sangre se extraen al paciente fuente?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL HOSPITAL (8-15 horas)",
+      "expected_quote": "Extracción de sangre del paciente en la Unidad donde se haya producido el accidente, utilizando un tubo suero gel amarillo (de 8-10 ml) y un tubo suero gel amarillo (de 5 ml). Si la extracción es dificultosa podría ser suficiente el tubo grande."
+    },
+    {
+      "id": "q13",
+      "block": 3,
+      "query": "Si la serología de la fuente es negativa y yo conozco mi estado serológico previo, ¿necesito que me extraigan sangre?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL HOSPITAL (8-15 horas)",
+      "expected_quote": "Si el resultado de la serología de LA FUENTE ES NEGATIVA y el trabajador conoce su estado serológico previo, no es necesaria la extracción sanguínea al trabajador."
+    },
+    {
+      "id": "q14",
+      "block": 3,
+      "query": "Si la fuente es positiva a VIH, ¿en qué plazo debo iniciar la profilaxis post-exposición?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL HOSPITAL (8-15 horas)",
+      "expected_quote": "Se pautará la profilaxis post-exposición al VIH (Anexo VII) entregando el documento informativo al trabajador (Anexo VIII), iniciándose, preferiblemente, antes de 2 horas tras la exposición."
+    },
+    {
+      "id": "q15",
+      "block": 3,
+      "query": "Si me pincho con un objeto de fuente desconocida que no tiene sangre fresca, ¿está indicada la profilaxis frente a VIH?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL HOSPITAL (8-15 horas)",
+      "expected_quote": "Si la FUENTE ES DESCONOCIDA y el objeto corto-punzante no contiene sangre fresca y se sospecha que no es de uso reciente (30 minutos) se solicitará Serología, en el laboratorio de Microbiología, marcando el apartado Accidente laboral (Accidentado). No está indicada la profilaxis frente a VIH en estas condiciones, dada la labilidad del virus. Si estas premisas no se cumplieran, se actuará como si la fuente fuese positiva."
+    },
+    {
+      "id": "q16",
+      "block": 3,
+      "query": "En horario de tarde o noche en el hospital, si el VIH del paciente fuente es positivo, ¿adónde debo acudir?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL HOSPITAL (15-8 horas, sábados y festivos)",
+      "expected_quote": "Si el VIH del paciente fuente fuera POSITIVO, acude al Servicio de Urgencias donde tras valorar las circunstancias del accidente, se realizará solicitud de sangre y orina al trabajador accidentado (código PEP) (Anexo V)."
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "Si la fuente es positiva a hepatitis B y soy no respondedor, ¿qué se hace antes de administrarme la vacuna o la gammaglobulina?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL HOSPITAL (15-8 horas, sábados y festivos)",
+      "expected_quote": "Se le realizará extracción y solicitud de Serología, del laboratorio de Microbiología, marcando el apartado Accidente laboral (Accidentado) (Anexo V), PREVIAMENTE a la administración de vacuna o gammaglobulina frente a hepatitis B. La administración del tratamiento se realizará lo antes posible, preferiblemente antes de 24 horas tras la exposición."
+    },
+    {
+      "id": "q18",
+      "block": 4,
+      "query": "Si el accidente ocurre en Atención Primaria o en el Centro Moncayo, ¿dónde y cómo se realiza el test rápido de VIH a la fuente?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN ATENCIÓN PRIMARIA Y CENTRO SANITARIO MONCAYO",
+      "expected_quote": "Con la sangre tubo suero gel amarillo (de 5 ml) se realizará un test de determinación rápida de VIH al paciente fuente en el mismo centro."
+    },
+    {
+      "id": "q19",
+      "block": 4,
+      "query": "En el transporte de la muestra desde un centro de Atención Primaria, ¿qué bolsa se usa para diferenciarla en la valija?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN ATENCIÓN PRIMARIA Y CENTRO SANITARIO MONCAYO",
+      "expected_quote": "Una vez pasado este tiempo se conservará en la nevera del Laboratorio hasta ser transportado mediante la valija habitual de extracciones, introduciendo la muestra en la bolsa verde de transporte para diferenciarla y advirtiendo de lo ocurrido al Servicio de Prevención de Riesgos Laborales."
+    },
+    {
+      "id": "q20",
+      "block": 4,
+      "query": "En el Centro Inocencio Jiménez, ¿dónde realizo el test rápido de VIH a la fuente según sea por la mañana o por la tarde?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL CENTRO DE ESPECIALIDADES INOCENCIO JIMÉNEZ",
+      "expected_quote": "Con la sangre del tubo suero gel amarillo (de 5 ml) se realizará un test de determinación rápida de VIH al paciente fuente. Para ello, por la mañana acudir a la supervisora del centro que dispone del material para realizarlo. Por la tarde acudir a la Unidad de Diálisis."
+    },
+    {
+      "id": "q21",
+      "block": 4,
+      "query": "Si el accidente es en el Centro Cinco Villas, ¿dónde acude el trabajador con el tubo pequeño para la determinación rápida de VIH?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL CENTRO CINCO VILLAS",
+      "expected_quote": "El trabajador afectado acudirá con el tubo pequeño de 5 ml de sangre del paciente al Servicio de Urgencias del Hospital Cinco Villas, para la determinación cualitativa rápida de VIH."
+    },
+    {
+      "id": "q22",
+      "block": 4,
+      "query": "En el Centro Nuestra Señora del Pilar, si la fuente es desconocida y el objeto no tiene sangre fresca, ¿cuándo acude el trabajador a hacerse la serología?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL CENTRO DE REHABILITACIÓN PSICOSOCIAL NUESTRA SEÑORA DEL PILAR",
+      "expected_quote": "el trabajador acudirá al SPRL (planta 8 del HCU, en horario de 8-15 horas de L-V), para extracción de sangre para serología, el primer día laborable tras el accidente, ya que en principio no está indicada la profilaxis frente a VIH, dada la labilidad del virus. Si estas premisas no se cumplieran, se actuará como si la fuente fuese positiva."
+    },
+    {
+      "id": "q23",
+      "block": 5,
+      "query": "¿En qué situaciones debe acudir el trabajador al Servicio de Urgencias cuando no hay Prevención de Riesgos Laborales disponible?",
+      "expected_section": "ACTUACIÓN DEL SERVICIO DE URGENCIAS EN HORARIO DE TARDES NOCHES, SÁBADOS Y FESTIVOS",
+      "expected_quote": "El trabajador acudirá al Servicio de Urgencias si el VIH del paciente fuente fuera POSITIVO, FUENTE DESCONOCIDA o FUENTE POSITIVA frente a HEPATITIS B en TRABAJADOR NO RESPONDEDOR O NO INMUNIZADO ADECUADAMENTE."
+    },
+    {
+      "id": "q24",
+      "block": 5,
+      "query": "¿Quién gestiona la dispensación del tratamiento antirretroviral en Urgencias y dónde está el kit?",
+      "expected_section": "ACTUACIÓN DEL SERVICIO DE URGENCIAS EN HORARIO DE TARDES NOCHES, SÁBADOS Y FESTIVOS",
+      "expected_quote": "La dispensación del tratamiento antirretroviral será gestionada por el Supervisor General de Guardia según Instrucciones disponibles en la Dirección de Enfermería. El kit de antirretrovirales estará disponible en el área de pacientes externos, en una gaveta identificada con la etiqueta 'Profilaxis VIH'."
+    },
+    {
+      "id": "q25",
+      "block": 6,
+      "query": "¿Cuál es el riesgo de infección tras una exposición con sangre de un paciente portador de hepatitis B?",
+      "expected_section": "VALORACIÓN DEL RIESGO Y PROFILAXIS - Hepatitis B",
+      "expected_quote": "El riesgo de infección tras la exposición laboral con sangre procedente de un paciente portador del virus de la hepatitis B puede oscilar entre un 22 y 31% (si la fuente es AgHBs y AgHBe positivos) y un 1 y 6% (si la fuente es AgHBs positivo y AgHBe negativo)."
+    },
+    {
+      "id": "q26",
+      "block": 6,
+      "query": "¿Qué se considera un trabajador no respondedor frente a la hepatitis B?",
+      "expected_section": "VALORACIÓN DEL RIESGO Y PROFILAXIS - Hepatitis B",
+      "expected_quote": "Se considera trabajador no respondedor frente a VHB a todo trabajador correctamente vacunado con 6 dosis, con un control de antiHBs < 10 mUI/ml a los 2 meses de finalizar su pauta vacunal."
+    },
+    {
+      "id": "q27",
+      "block": 6,
+      "query": "Soy un trabajador con vacunación incompleta y la fuente es HBsAg positiva. ¿Qué profilaxis me corresponde frente a la hepatitis B?",
+      "expected_section": "VALORACIÓN DEL RIESGO Y PROFILAXIS - Hepatitis B (Tabla 1)",
+      "expected_quote": "Vacunación incompleta, Fuente HBsAg (+) o Fuente desconocida: IGHB (1 dosis) y completar pauta de vacunación del VHB."
+    },
+    {
+      "id": "q28",
+      "block": 6,
+      "query": "¿Cuál es el riesgo global de transmisión del VIH tras una exposición percutánea con sangre infectada?",
+      "expected_section": "VALORACIÓN DEL RIESGO Y PROFILAXIS - VIH",
+      "expected_quote": "El riesgo global de transmisión del VIH-1 tras una exposición percutánea con sangre infectada es del 0,3% (3 por cada 1000 accidentes, IC 95%:0,2 a 0,5%), oscilando entre el 0,24% y el 0,65% y tras un contacto con mucosas o piel no intacta es del 0,09%."
+    },
+    {
+      "id": "q29",
+      "block": 6,
+      "query": "¿A partir de qué momento ya no está indicada la administración del tratamiento antirretroviral y cuánto dura?",
+      "expected_section": "VALORACIÓN DEL RIESGO Y PROFILAXIS - VIH (Indicaciones fuente positiva)",
+      "expected_quote": "Se aconseja iniciar el tratamiento lo antes posible, mejor en las primeras 2 horas y hasta 24-36 horas, ya que según estudios experimentales la eficacia se reduce cuando se inicia a partir de 24-36 horas. No está indicada su administración a partir de las 72 horas de la inoculación. La duración del tratamiento será de 4 semanas."
+    },
+    {
+      "id": "q30",
+      "block": 6,
+      "query": "¿Qué pauta de tratamiento antirretroviral se utiliza si la trabajadora accidentada está embarazada?",
+      "expected_section": "ANEXO VII: PROFILAXIS POST-EXPOSICIÓN - Régimen trabajadora embarazada",
+      "expected_quote": "Si se trata de una trabajadora embarazada, se sustituye Tenofovir (TDF) + Emtricitabina (FTC) por Zidovudina (AZT) + Lamivudina (3TC), es decir, COMBIVIR: Zidovudina 300mg / Lamivudina 150mg, siendo la dosificación de 1 comprimido cada 12 horas. Se asocia Lopinavir (LPV) 200mg/12h + Ritonavir (RTV) 50mg/12 h, es decir, KALETRA: 2 cápsulas/12 horas."
+    }
+  ]
+}

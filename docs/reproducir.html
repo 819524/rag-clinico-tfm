@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reproducir · Asistente clínico RAG</title>
+<meta name="description" content="Experimentos y resultados de un sistema RAG sobre protocolos clínicos. Trabajo Fin de Máster, Universidad de Zaragoza.">
+<link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+<nav class="cinta"><div class="envoltorio">
+  <span class="marca">Asistente clínico RAG</span>
+  <a href="index.html" class="">Inicio</a><a href="reproducir.html" class="activo">Reproducir</a><a href="trazabilidad.html" class="">Trazabilidad</a><a href="datos.html" class="">Datos y licencia</a>
+  <a href="https://github.com/819524/rag-clinico-tfm">Repositorio</a>
+</div></nav>
+
+<header class="portada"><div class="envoltorio">
+  <div class="etiqueta">Verificación</div>
+  <h1>Reproducir los resultados</h1>
+  <p class="entradilla">No todo cuesta lo mismo de comprobar. Esta página separa lo que se
+  verifica clonando el repositorio de lo que exige la base de datos o los modelos, para que
+  nadie pierda el tiempo averiguándolo por su cuenta.</p>
+</div></header>
+
+<section><div class="envoltorio">
+  <h2>Nivel 1 · Leer una cifra</h2>
+  <p class="sub">Las métricas publicadas son ficheros JSON. Comprobar que una tabla de la
+  memoria coincide con su fuente es leer un fichero.</p>
+  <pre><code>git clone https://github.com/819524/rag-clinico-tfm.git
+cd rag-clinico-tfm
+
+python3 -c "
+import json
+m = json.load(open('experimentos/1-recuperacion-por-documento/resultados/embedding-4b/section_metrics_summary.json'))
+print({k: v for k, v in m['strategies']['cross_encoder'].items() if k.startswith('sec@0.7')})"</code></pre>
+</div></section>
+
+<section><div class="envoltorio">
+  <h2>Nivel 2 · Recalcular sin instalar nada</h2>
+  <p class="sub">El experimento 4 se reproduce entero: opera sobre las respuestas ya
+  registradas, sin base de datos ni modelos.</p>
+  <pre><code>python3 herramientas/eval_gen_quality.py</code></pre>
+  <p>Debe imprimir exactamente la tabla de
+  <a href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/4-calidad-de-respuesta">metricas.txt</a>. Los agregados sobre
+  las tablas de carga también se recalculan con la biblioteca estándar:</p>
+  <pre><code>python3 -c "
+import csv, statistics as st
+from collections import defaultdict
+p = defaultdict(list)
+for f in csv.DictReader(open('experimentos/5-carga-y-motores/barridos.csv')):
+    if f['motor'] and f['concurrencia'] == '10':
+        p[f['motor']].append(float(f['tiempo_muro_ms']))
+for m, v in sorted(p.items()):
+    print(f'{m:10} mediana {st.median(v)/1000:6.1f} s  (n={len(v)})')"</code></pre>
+</div></section>
+
+<section><div class="envoltorio">
+  <h2>Nivel 3 · El límite real</h2>
+  <div class="aviso cautela">
+    <p><strong>Las métricas de recuperación no pueden recalcularse con lo publicado.</strong>
+    <code>herramientas/eval_section_metrics.py</code> decide si un fragmento recuperado es
+    relevante comparando la cita de referencia contra el <em>texto completo de su sección</em>,
+    que consulta en la base de datos. Ese texto es el corpus del hospital y no se
+    redistribuye, así que la relevancia no puede reconstruirse desde los resultados.</p>
+    <p>Sin la base de datos sí puede verificarse: que las tablas de la memoria coinciden con
+    <code>section_metrics_summary.json</code>; que los documentos recuperados y su orden son
+    los que declaran los resultados; y que los conjuntos de preguntas contienen las citas
+    que dicen contener.</p>
+  </div>
+  <p>Lo mismo ocurre, por motivos distintos, con
+  <a href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/3-cortafuegos">el cortafuegos</a>: su script invoca el router,
+  el recuperador y el generador del sistema completo, de modo que se publica como
+  documentación exacta del método, no como herramienta ejecutable.</p>
+</div></section>
+
+<section><div class="envoltorio">
+  <h2>Un hueco que conviene declarar</h2>
+  <div class="aviso cautela"><p>La tabla del §4 del documento de trazabilidad —el efecto de
+  las correcciones de etiquetado sobre las métricas publicadas— se calculó con un script de
+  un solo uso que no forma parte del repositorio. Sus cifras están declaradas, pero
+  <strong>no son regenerables desde aquí</strong>. Se señala en vez de dejar que parezca
+  reproducible.</p></div>
+</div></section>
+
+<section><div class="envoltorio">
+  <h2>Diferencias esperables al reejecutar</h2>
+  <ul class="limpia">
+    <li>La generación no es determinista aunque la temperatura sea baja: el texto de las
+      respuestas variará entre ejecuciones.</li>
+    <li>Las métricas de recuperación sí son deterministas dado el mismo índice y el mismo
+      modelo de embedding.</li>
+    <li>Los tiempos dependen del hardware; los publicados corresponden a las máquinas
+      descritas en el experimento 5.</li>
+    <li>Las ejecuciones publicadas proceden de la campaña original y <strong>no se han
+      reejecutado</strong> al preparar este repositorio.</li>
+  </ul>
+</div></section>
+
+<footer><div class="envoltorio">
+  <p>Trabajo Fin de Máster · Universidad de Zaragoza · Corpus documental del Hospital
+  Clínico Universitario Lozano Blesa.<br>
+  Código bajo Apache-2.0; resultados y figuras bajo CC BY 4.0. Los documentos originales
+  del hospital no se redistribuyen — véase <a href="datos.html">Datos y licencia</a>.</p>
+  <p>Generada el 2026-09-08 desde los artefactos del repositorio.</p>
+</div></footer>
+</body>
+</html>

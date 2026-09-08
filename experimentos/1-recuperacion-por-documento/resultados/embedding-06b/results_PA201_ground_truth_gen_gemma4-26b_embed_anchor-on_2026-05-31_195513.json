@@ -1,0 +1,3116 @@
+{
+  "ground_truth": "PA201_ground_truth.json",
+  "executed_at": "2026-05-31T19:55:13",
+  "mode": "retriever+generator",
+  "model": "gemma4:26b",
+  "collection": "docs_rag_qwen3_06b",
+  "rerank_strategy": "embed",
+  "cross_encoder_device": null,
+  "top_k": 10,
+  "n_questions": 18,
+  "doc_anchor_enabled": true,
+  "doc_anchor_stats": {
+    "anchor_emitted": 14,
+    "anchor_received": 10,
+    "anchor_applied": 10,
+    "gate_reasons": {
+      "ok": 14,
+      "insufficient_chunks": 2,
+      "no_dominant_doc": 2
+    }
+  },
+  "retriever_metrics": {
+    "HitRate@1": 0.6667,
+    "MRR@1": 0.6667,
+    "Precision@1": 0.6667,
+    "Recall@1": 0.6667,
+    "NDCG@1": 0.6667,
+    "HitRate@3": 0.7778,
+    "MRR@3": 0.7222,
+    "Precision@3": 0.5926,
+    "Recall@3": 1.7778,
+    "NDCG@3": 0.6751,
+    "HitRate@5": 0.8333,
+    "MRR@5": 0.7333,
+    "Precision@5": 0.5444,
+    "Recall@5": 2.7222,
+    "NDCG@5": 0.6732,
+    "HitRate@10": 0.8889,
+    "MRR@10": 0.7413,
+    "Precision@10": 0.5222,
+    "Recall@10": 5.2222,
+    "NDCG@10": 0.764
+  },
+  "memory_stats": {
+    "peak_proc_rss_mb": 67.2734375,
+    "peak_ollama_rss_mb": null
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "query": "¿Para qué sirve realmente el protocolo de Recuperación Intensificada de cirugía de colon?",
+      "block": 1,
+      "expected_section": "OBJETIVO",
+      "expected_quote": "El objetivo es facilitar un documento basado en la evidencia científica y en el consenso de diferentes Sociedades Científicas para sistematizar el proceso asistencial quirúrgico fundamentado en los Principios de Recuperación Intensificada (PRI) para optimizar la atención perioperatoria en pacientes sometidos a cirugía oncológica de colon.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "objetivos y utilidad del protocolo de Recuperación Intensificada de cirugía de colon",
+        "keywords": [
+          "Recuperación Intensificada",
+          "cirugía de colon"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            4,
+            4,
+            4,
+            4,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 17
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "1. OBJETIVOS",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.9538,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.9489,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.9017,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8816,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.8018,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.77,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.6916,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.6735,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.6716,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.227,
+        "Retriever": 1.697,
+        "Generador": 10.08
+      },
+      "memory_mb": {
+        "proc_before": 67.3,
+        "proc_after_retriever": 67.3,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "El protocolo de **Recuperación Intensificada (PRI)** para pacientes de cirugía oncológica de colon tiene como función principal sistematizar el proceso asistencial quirúrgico mediante un enfoque basado en la evidencia científica y el consenso de diversas Sociedades Científicas [1]. Su diseño se fundamenta en los principios de **ERAS**, **Fast Track Surgery** y **Programas de Rehabilitación Multimodal** [1].\n\nA continuación, se detallan sus objetivos y utilidad:\n\n## Objetivos del protocolo\nEl propósito fundamental es optimizar la atención perioperatoria en pacientes sometidos a cirugía oncológica de colon [1]. De forma específica, el protocolo sirve para:\n\n- **Optimización fisiológica y metabólica**:\n    - Optimizar la **reserva fisiológica** y la capacidad funcional [1].\n    - Reducir el **estado inflamatorio crónico** y optimizar el estado nutricional y metabólico [1].\n- **Mejora de resultados clínicos**:\n    - Acelerar la **recuperación funcional** [1].\n    - Reducir la **morbilidad perioperatoria** y la tasa de complicaciones [1].\n    - Reducir la **estancia hospitalaria media** [1].\n    - Mejorar la **calidad de vida** del paciente [1].\n- **Estandarización y calidad**:\n    - Estandarizar el manejo en las fases **preoperatoria, intraoperatoria y postoperatoria** [1].\n    - Mejorar la **calidad asistencial percibida** por el paciente [1].\n\n## Alcance y aplicación\nEl protocolo está diseñado para englobar todas las acciones realizadas durante el **proceso perioperatorio** en pacientes que se someten a procedimientos de resección colorrectal (como hemicolectomía derecha, izquierda, colectomía total, sigmoidectomía, resección anterior baja o amputación abdomino-perineal) [3].\n\nSu utilidad se extiende a distintos niveles:\n- **Profesionales sanitarios**: Dirigido a cirujanos generales, anestesistas y enfermería [4], así como al equipo multidisciplinar (hematólogos, rehabilitadores, fisioterapeutas, geriatras, nutricionistas, oncólogos, etc.) [4].\n- **Gestión**: Útil para administradores, gestores clínicos y coordinadores de calidad en la búsqueda de la **eficiencia** [4].\n- **Paciente y Atención Primaria**: Busca la participación activa del paciente y requiere que el personal de Atención Primaria conozca estos programas de rehabilitación para el seguimiento asistencial [4].\n\n**Indicación principal**: Patología tumoral, específicamente **cáncer de colon** [5].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2397,
+        "token_stats": {
+          "prompt_tokens": 2008,
+          "completion_tokens": 582,
+          "total_tokens": 2590,
+          "tokens_per_second": 159.9,
+          "context_used_pct": 15.8,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.08
+      }
+    },
+    {
+      "id": "q02",
+      "query": "¿Qué intentamos mejorar en el paciente además de la propia cirugía?",
+      "block": 1,
+      "expected_section": "OBJETIVO",
+      "expected_quote": "Optimizar la reserva fisiológica y capacidad funcional. Reducir el estado inflamatorio crónico, optimizar el estado nutricional y metabólico. Acelerar la recuperación funcional, reducir la morbilidad perioperatoria, la tasa de complicaciones, la estancia hospitalaria media y mejorar la calidad de vida.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "objetivos de mejora en el paciente dentro del PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON más allá del procedimiento quirúrgico",
+        "keywords": [
+          "mejorar",
+          "paciente",
+          "cirugía"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            3,
+            1,
+            1,
+            3,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 10
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "1. OBJETIVOS",
+          "rerank_score": 0.9796,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.9775,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.885,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.871,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.8595,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8083,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8009,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.7634,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "7.5 ENCUESTA DE RECUPERACIÓN POSTOPERATORIA:",
+          "rerank_score": 0.744,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.6801,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.427,
+        "Retriever": 1.633,
+        "Generador": 8.35
+      },
+      "memory_mb": {
+        "proc_before": 67.3,
+        "proc_after_retriever": 67.3,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Dentro del marco del Programa de Recuperación Intensificada (PRI) para pacientes de cirugía oncológica de colon, los objetivos de la intervención van más allá de la cirugía propiamente dicha, buscando optimizar diversos aspectos fisiológicos, clínicos y asistenciales.\n\nLos aspectos que se pretenden mejorar son:\n\n## Optimización Fisiológica y Metabólica\n- **Reserva fisiológica y capacidad funcional**: Se busca optimizar la reserva fisiológica y la capacidad funcional del paciente [1].\n- **Estado inflamatorio y nutricional**: Se pretende reducir el estado inflamatorio crónico y optimizar el estado nutricional y metabólico [1].\n\n## Recuperación y Resultados Clínicos\n- **Recuperación funcional**: Se busca acelerar la recuperación funcional del paciente [1].\n- **Reducción de complicaciones**: El programa busca reducir la morbilidad perioperatoria y la tasa de complicaciones [1], así como reducir las complicaciones quirúrgicas [3].\n- **Estancia hospitalaria**: Se pretende reducir la estancia hospitalaria media [1].\n\n## Calidad de Vida y Atención Asistencial\n- **Calidad de vida**: Se busca mejorar la calidad de vida del paciente [1, 3].\n- **Calidad asistencial**: Se pretende mejorar la calidad asistencial percibida por el paciente [1].\n- **Estandarización del manejo**: Se busca estandarizar el manejo en las etapas preoperatoria, intraoperatoria y postoperatoria [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1381,
+        "token_stats": {
+          "prompt_tokens": 1984,
+          "completion_tokens": 312,
+          "total_tokens": 2296,
+          "tokens_per_second": 160.0,
+          "context_used_pct": 14.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.35
+      }
+    },
+    {
+      "id": "q03",
+      "query": "¿A qué profesionales afecta o involucra este protocolo?",
+      "block": 1,
+      "expected_section": "ÁMBITO DE APLICACIÓN",
+      "expected_quote": "Profesionales sanitarios involucrados directamente en la atención del paciente que va a ser sometido a un proceso quirúrgico por neoplasia de colon: cirujanos generales, anestesistas, enfermería, así como a aquellos involucrados en el tratamiento multidisciplinar seguido a lo largo del proceso: hematólogos, rehabilitadores, fisioterapeutas, geriatras, nutricionistas, oncólogos…",
+      "labels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "profesionales involucrados en el PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+        "keywords": [
+          "profesionales",
+          "afecta",
+          "involucra",
+          "protocolo"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 15,
+            "RPC-89-revC-Parada-Cardiaca": 4
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 0.789,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.9617,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.5952,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "7. PROFESIONALES A QUIENES VA DIRIGIDO",
+          "rerank_score": 0.5668,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.526,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "1. OBJETIVOS",
+          "rerank_score": 0.5083,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.4632,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.4499,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.4235,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.38,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.3733,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.445,
+        "Retriever": 1.594,
+        "Generador": 9.47
+      },
+      "memory_mb": {
+        "proc_before": 67.3,
+        "proc_after_retriever": 67.3,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Dependiendo del protocolo consultado, la afectación o involucración de profesionales varía de la siguiente manera:\n\n## Programa de Recuperación Intensificada (PRI) para pacientes de cirugía oncológica de colon\n\nEste protocolo involucra a una amplia gama de profesionales, tanto en la atención directa como en el tratamiento multidisciplinar y la gestión:\n\n- **Profesionales directamente involucrados en la atención quirúrgica**:\n    - **Cirujanos generales**: responsables de la estadificación oncológica, indicación y técnica quirúrgica, reducción del trauma, supervisión postoperatoria, detección de complicaciones, establecimiento de criterios de alta y seguimiento ambulatorio [1, 2].\n    - **Anestesistas**: encargados de la valoración preoperatoria, identificación de riesgos, establecimiento de estrategias de optimización (nutricional, cognitiva y funcional), manejo de comorbilidades, adecuación de medicación y definición del plan anestésico multimodal [1, 2].\n    - **Enfermería**: responsables del registro de datos, educación y seguimiento riguroso de los pacientes, garantía del cumplimiento del protocolo y coordinación de la información entre profesionales [1, 2].\n\n- **Profesionales del tratamiento multidisciplinar**:\n    - Hematólogos [1].\n    - Rehabilitadores [1].\n    - Fisioterapeutas [1].\n    - Geriatras [1].\n    - Nutricionistas [1].\n    - Oncólogos [1].\n    - Otros profesionales que participen en la coordinación multidisciplinar, como especialistas en rehabilitación, hematología, endocrinología y nutrición [2].\n\n- **Otros perfiles involucrados**:\n    - **Atención Primaria**: debe conocer estos programas de Rehabilitación Multimodal tanto al inicio como en el seguimiento asistencial [1].\n    - **Gestión y Administración**: puede resultar útil a administradores, gestores clínicos y coordinadores de calidad para la búsqueda de la eficiencia [1].\n\n## Protocolo de Parada Cardíaca Intrahospitalaria\n\nEste protocolo está dirigido específicamente a:\n\n- **Todos los médicos** del Hospital [3].\n- **Todo el personal de enfermería** del Hospital [3].\n- **Todos los auxiliares de enfermería** del Hospital [3].\n\n**Nota importante**: En este protocolo quedan **excluidos** los servicios de Urgencias, Anestesia, Medicina Intensiva (adultos y neonatos), la Sección de Hemodinámica y el Servicio de Pediatría [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2336,
+        "token_stats": {
+          "prompt_tokens": 1867,
+          "completion_tokens": 529,
+          "total_tokens": 2396,
+          "tokens_per_second": 159.6,
+          "context_used_pct": 14.6,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.47
+      }
+    },
+    {
+      "id": "q04",
+      "query": "¿Con cuánta antelación empezamos a preparar al paciente?",
+      "block": 2,
+      "expected_section": "PREHABILITACIÓN",
+      "expected_quote": "1º CONSULTA DE PREHABILITACIÓN: terapia prehabilitadora y valoración preanestésica (4 semanas previas a la intervención quirúrgica).",
+      "labels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "tiempo de antelación para la preparación del paciente",
+        "keywords": [
+          "antelación",
+          "preparar al paciente"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            4,
+            4,
+            4,
+            3,
+            4,
+            5,
+            5,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 6,
+            "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado": 2,
+            "RPC-89-revC-Parada-Cardiaca": 3
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 0.545,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "6. Anexos",
+          "h2": "6.9 ANEXO IX: LISTA VERIFICACIÓN",
+          "rerank_score": 0.7199,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.6115,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.5701,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.5105,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "Procedimiento de Valoración, Colocación y Seguimiento del Paciente con Catéter Pleural Tunelizado",
+          "h2": "6. ¿Cómo hay que acudir a la prueba?",
+          "rerank_score": 0.4887,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "7. TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+          "h2": "7.3 CUIDADOS LOCALES DE LAS LPP",
+          "rerank_score": 0.4354,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PC-08-Z3-E-C-PROCEDIMIENTO-DE-MANEJO-DEL-ACCIDENTE-ISQUÉMICO-TRANSITORIO",
+          "h1": "PROCEDIMIENTO DE MANEJO DEL ACCIDENTE ISQUÉMICO TRANSITORIO (AIT)",
+          "h2": "4.8. MANEJO AMBULATORIO DEL AIT",
+          "rerank_score": 0.4262,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "rerank_score": 0.4097,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "h2": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "rerank_score": 0.3637,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN CONTINGENCIA INFECCIONES RESPIRATORIAS ESTACIONALES 2024/2025",
+          "h2": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+          "rerank_score": 0.3498,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.892,
+        "Retriever": 1.656,
+        "Generador": 9.62
+      },
+      "memory_mb": {
+        "proc_before": 67.3,
+        "proc_after_retriever": 67.3,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La antelación para la preparación del paciente depende del procedimiento clínico al que se haga referencia, según los protocolos disponibles:\n\n## Cirugía Oncológica de Colon (Programa de Recuperación Intensificada - PRI)\n\nPara este tipo de pacientes, la preparación se divide en varias etapas temporales:\n\n- **4 semanas previas a la intervención**: Se realiza la **1ª consulta de prehabilitación**, que incluye una valoración por enfermería (encuesta de contraimplicaciones, ECG, pruebas de valoración física) y una consulta de anestesia (estudio preoperatorio, valoración de vía aérea, analítica, etc.) [2].\n- **48 horas previas**: Se debe iniciar una **dieta baja en residuos** [4].\n- **Día previo**: Se debe realizar el **ingreso** del paciente [4].\n- **Desde las 00:00 horas (8 horas previas a la cirugía)**: Se debe cumplir el **ayuno** [4].\n- **30-60 minutos previos a la incisión**: Es el momento para la administración de la **profilaxis antibiótica intravenosa** [3, 4].\n\n## Procedimiento de Catéter Pleural Tunelizado\n\n- **Antes de la prueba**: No es necesario acudir en ayunas, pero se recomiendan **alimentos ligeros** [5]. Se debe tomar la medicación habitual, con la excepción de antiagregantes o anticoagulantes, que deben suspenderse según la indicación específica de cada caso [5].\n\n## Parada Cardíaca Intrahospitalaria\n\nEn este escenario de emergencia, la actuación es inmediata y secuencial:\n- Tras la detección de que el paciente no responde y no respira con normalidad, se debe **avisar y buscar el equipo de parada** [1].\n- La preparación de elementos como el **acceso IV/IO**, la **vía aérea** y la **capnografía** se realiza de forma progresiva durante la secuencia de las descargas (tras el 1º choque) [1].\n- La **preparación de medicación** (Adrenalina y Amiodarona/Lidocaína) se realiza tras el 2º choque [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1836,
+        "token_stats": {
+          "prompt_tokens": 3115,
+          "completion_tokens": 477,
+          "total_tokens": 3592,
+          "tokens_per_second": 158.6,
+          "context_used_pct": 21.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.62
+      }
+    },
+    {
+      "id": "q05",
+      "query": "¿Qué es eso de la prueba de los 2 minutos de marcha y por qué la hacemos?",
+      "block": 2,
+      "expected_section": "PREHABILITACIÓN",
+      "expected_quote": "En la prueba de los dos minutos de marcha estática: Toma basal de constantes (TA, FC, SO2). Cálculo frecuencia máxima (220-edad). Toma de constantes tras la prueba (FC al primer y segundo minuto, tiempo en alcanzar la frecuencia basal, escala de Bohr).",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "definición y propósito de la prueba de marcha de 2 minutos en el PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+        "keywords": [
+          "prueba de los 2 minutos de marcha",
+          "por qué la hacemos"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            2,
+            1,
+            3,
+            1,
+            2,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 9
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.9708,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.7844,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "7.3. ANEXO III: Categorías del paciente según su capacidad funcional",
+          "rerank_score": 0.7815,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "7.4. ANEXO IV: Programa de entrenamiento y ejercicios diario",
+          "rerank_score": 0.738,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.594,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "1. OBJETIVOS",
+          "rerank_score": 0.5493,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PC-08-Z3-E-C-PROCEDIMIENTO-DE-MANEJO-DEL-ACCIDENTE-ISQUÉMICO-TRANSITORIO",
+          "h1": "PROCEDIMIENTO DE MANEJO DEL ACCIDENTE ISQUÉMICO TRANSITORIO (AIT)",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.521,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.5116,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.4881,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.4706,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.367,
+        "Retriever": 1.811,
+        "Generador": 10.2
+      },
+      "memory_mb": {
+        "proc_before": 67.3,
+        "proc_after_retriever": 67.3,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La prueba de los **2 minutos de marcha estática** es una de las pruebas de valoración que forman parte de la batería de pruebas realizadas durante la **consulta de enfermería** en la fase de prehabilitación (4 semanas previas a la intervención quirúrgica) [1].\n\nA continuación, se detalla su procedimiento y su utilidad clínica según los protocolos del programa:\n\n## Procedimiento de la prueba\nDurante la realización de esta prueba de marcha estática, se deben seguir los siguientes pasos y registros:\n- **Toma de constantes basales**: Antes de iniciar, se debe registrar la tensión arterial (TA), la frecuencia cardíaca (FC) y la saturación de oxígeno (SpO₂). También se debe calcular la frecuencia cardíaca máxima utilizando la fórmula (220 - edad) [1].\n- **Monitorización durante y tras la prueba**: Se deben registrar las constantes tras el ejercicio, específicamente la frecuencia cardíaca al primer y segundo minuto, el tiempo que tarda el paciente en alcanzar la frecuencia basal y la escala de Bohr [1].\n- **Registro de parámetros**: El protocolo incluye el registro de la frecuencia cardíaca (AGLT: FREC) y la saturación de oxígeno (AGLT: SO₂) en diferentes intervalos de tiempo (desde la fase basal hasta los 120 segundos) [2].\n\n## ¿Por qué se realiza? (Objetivos clínicos)\nLa realización de esta prueba tiene varias finalidades fundamentales dentro del Programa de Recuperación Intensificada (PRI):\n\n- **Valoración de la capacidad funcional**: El resultado de la prueba permite analizar la capacidad funcional del paciente y categorizarlo [1]. Esta categorización es esencial para determinar el tipo de tratamiento individualizado que recibirá en su domicilio [3].\n- **Diseño de la prehabilitación**: Los resultados se utilizan para analizar la capacidad funcional y, junto con otras pruebas, establecer un programa de entrenamiento físico individualizado que incluya pautas de ejercicios aeróbicos y anaeróbicos (resistencia, flexibilidad y respiratorios) según los resultados obtenidos [1].\n- **Identificación de la fragilidad**: Esta prueba forma parte de la batería **ENFOCA** utilizada para la valoración de la fragilidad, donde se registra la puntuación en \"cíclos\" [2].\n- **Determinación de la intensidad del ejercicio**: La frecuencia cardíaca alcanzada durante la prueba (si es superior o inferior al 80% de la máxima) es un criterio clave para decidir la intensidad del entrenamiento aeróbico domiciliario (por ejemplo, trabajar al 80%, 60% o 50% del intervalo aeróbico) [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2496,
+        "token_stats": {
+          "prompt_tokens": 4549,
+          "completion_tokens": 553,
+          "total_tokens": 5102,
+          "tokens_per_second": 141.1,
+          "context_used_pct": 31.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.2
+      }
+    },
+    {
+      "id": "q06",
+      "query": "¿Cómo categorizamos la capacidad funcional para el entrenamiento en casa?",
+      "block": 2,
+      "expected_section": "PREHABILITACIÓN",
+      "expected_quote": "Buena Capacidad Funcional (Valor 0): Si la FC está por debajo del 80% de la máxima, se inicia con 4-6 ciclos al 80% de intensidad. Si está por encima del 80% de la máxima, se reduce a 3-5 ciclos al 60% de intensidad.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "categorización de la capacidad funcional para el entrenamiento en casa dentro del PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+        "keywords": [
+          "categorizamos",
+          "capacidad funcional",
+          "entrenamiento en casa"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 24
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "7.3. ANEXO III: Categorías del paciente según su capacidad funcional",
+          "rerank_score": 0.9937,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "1. OBJETIVOS",
+          "rerank_score": 0.9161,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.839,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8189,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.7873,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "7.4. ANEXO IV: Programa de entrenamiento y ejercicios diario",
+          "rerank_score": 0.7835,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.767,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.5745,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.5159,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "4.- Variables relativas a la intervención quirúrgica:",
+          "rerank_score": 0.5015,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.101,
+        "Retriever": 1.75,
+        "Generador": 11.11
+      },
+      "memory_mb": {
+        "proc_before": 67.3,
+        "proc_after_retriever": 66.5,
+        "proc_delta_retriever": -0.7,
+        "proc_after_generator": 66.5,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La categorización de la capacidad funcional para el tratamiento individualizado domiciliario se establece según el valor de referencia de la prueba y la respuesta de la frecuencia cardíaca, dividiéndose en tres grandes grupos [1]:\n\n## **Buena capacidad funcional**\nEl valor de referencia de la prueba es **0** [1].\n\n*   **Con frecuencia cardíaca por debajo del 80% de la máxima:**\n    - **Tratamiento:** Comenzar con cuatro ciclos y subir progresivamente hasta seis [1].\n    - **Intensidad:** 80% del intervalo aeróbico [1].\n    - **Ejercicios:** Tabla de ejercicios subiendo repeticiones a tres o cuatro [1].\n    - **Observación:** Analizar resultados de calidad muscular y potenciar con ejercicios anaeróbicos según el resultado (esto se aplica a todos los grados de capacidad funcional) [1].\n*   **Con frecuencia cardíaca mayor del 80% de la máxima durante la prueba:**\n    - **Tratamiento:** Posibilidad de derivar a Zaragoza Deporte. Comenzar con tres ciclos y llegar a cinco ciclos [1].\n    - **Intensidad:** 60% del intervalo aeróbico [1].\n    - **Seguimiento:** Revaluar a la semana y, si hay buena tolerancia, aumentar un ciclo [1].\n    - **Ejercicios:** Tabla de ejercicios con dos o tres repeticiones (aumentar si hay buena tolerancia) [1].\n\n## **Capacidad funcional media**\nEl valor de referencia de la prueba es **1-2** [1].\n\n*   **Con frecuencia cardíaca por debajo del 80% de la máxima:**\n    - **Tratamiento:** Posibilidad de derivar a Zaragoza Deporte. Comenzar con tres ciclos y llegar a cinco ciclos [1].\n    - **Intensidad:** 80% del intervalo aeróbico [1].\n    - **Seguimiento:** Revaluar a la semana y, si hay buena tolerancia, aumentar un ciclo [1].\n    - **Ejercicios:** Tabla de ejercicios con dos o tres repeticiones [1].\n*   **Con frecuencia cardíaca por encima del 80% de la máxima durante la prueba o valor de referencia 3:**\n    - **Tratamiento:** Comenzar con dos ciclos y llegar a cuatro ciclos [1].\n    - **Intensidad:** 50% del intervalo aeróbico [1].\n    - **Seguimiento:** Revaluar a la semana y, si hay buena tolerancia, aumentar un ciclo [1].\n    - **Ejercicios:** Tabla de ejercicios con dos repeticiones [1].\n\n## **Mala capacidad funcional**\nEl valor de referencia de la prueba es **0 o 1** [1].\n\n*   **Tratamiento general:** Reevaluar tratamiento a la semana y realizar cita presencial (siempre que no haya dificultad para acudir al hospital) [1].\n*   **Protocolo de actividad:**\n    - Caminar al menos 30 minutos [1].\n    - Realizar tabla de ejercicios mañana y tarde [1].\n*   **En caso de imposibilidad de caminar:**\n    - **Tratamiento:** Adaptar la tabla de ejercicios a la situación y realizarla mañana y tarde [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2661,
+        "token_stats": {
+          "prompt_tokens": 2796,
+          "completion_tokens": 717,
+          "total_tokens": 3513,
+          "tokens_per_second": 159.0,
+          "context_used_pct": 21.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 11.11
+      }
+    },
+    {
+      "id": "q07",
+      "query": "¿Qué hacemos si el paciente fuma o tiene diabetes?",
+      "block": 2,
+      "expected_section": "PREHABILITACIÓN",
+      "expected_quote": "Evaluación de Diabetes Mellitus (glucemia, HbA1c). Si mal control remitir a Endocrinología... Derivación a deshabituación tabáquica si procede.",
+      "labels": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "intervenciones o acciones ante pacientes con tabaquismo o diabetes en el PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+        "keywords": [
+          "fuma",
+          "diabetes"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            4,
+            2,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 3,
+            "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025": 3
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.743,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.6354,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN CONTINGENCIA INFECCIONES RESPIRATORIAS ESTACIONALES 2024/2025",
+          "h2": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+          "rerank_score": 0.5773,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.5763,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 2. HOJA INFORMATIVA SOBRE PREVENCIÓN DE INFECCIONES RESPIRATORIAS VÍRICAS.",
+          "h2": "ANEXO 2. HOJA INFORMATIVA SOBRE PREVENCIÓN DE INFECCIONES RESPIRATORIAS VÍRICAS.",
+          "rerank_score": 0.576,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.5452,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "1. OBJETIVOS",
+          "rerank_score": 0.527,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.4882,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.4696,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.4582,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.662,
+        "Retriever": 1.801,
+        "Generador": 9.21
+      },
+      "memory_mb": {
+        "proc_before": 66.5,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.6,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Dependiendo del contexto clínico del paciente, el tabaquismo y la diabetes se abordan de las siguientes maneras:\n\n## Pacientes en Programa de Recuperación Intensificada (PRI)\nEn el marco de la consulta de prehabilitación para cirugía oncológica de colon, se deben seguir estas pautas:\n\n- **Tabaquismo**: Se debe realizar una **derivación a deshabituación tabáquica** si procede [1].\n- **Diabetes Mellitus**: \n    - Se debe realizar una **evaluación de la diabetes** mediante la medición de la glucemia y la HbA1c [1].\n    - En caso de presentar un **mal control**, se debe remitir al paciente a **Endocrinología** [1].\n\n## Prevención de infecciones respiratorias\nEn el contexto de la prevención de enfermedades como la gripe o el COVID-19, estas condiciones se consideran factores de riesgo:\n\n- **Vacunación**: Las personas menores de 60 años que presentan **diabetes mellitus** deben vacunarse contra la gripe y el COVID-19 en su Centro de Salud [4].\n- **Quimioprofilaxis por exposición a gripe**: La **diabetes mellitus** se identifica como un factor de riesgo de complicación [2]. Si un contacto de un paciente con gripe cumple con los criterios de exposición significativa y es una persona de riesgo (como es el caso de la diabetes) y no está vacunada esta temporada, el facultativo a cargo podrá valorar la administración de **quimioprofilaxis** (Oseltamivir) [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1369,
+        "token_stats": {
+          "prompt_tokens": 5157,
+          "completion_tokens": 337,
+          "total_tokens": 5494,
+          "tokens_per_second": 140.3,
+          "context_used_pct": 33.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.21
+      }
+    },
+    {
+      "id": "q08",
+      "query": "¿De verdad ya no se ponen enemas de limpieza a todos?",
+      "block": 3,
+      "expected_section": "CUIDADOS PREOPERATORIOS",
+      "expected_quote": "Preparación intestinal mecánica asociada a antibioterapia oral... en pacientes que van a ser sometidos a resección de colon izquierdo, sigma y recto o colectomía total. No enemas de limpieza.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "uso actual de enemas de limpieza en la práctica clínica",
+        "keywords": [
+          "enemas de limpieza"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 3
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 4: OTROS PRODUCTOS PARA LAS CURAS DE LESIONES POR PRESIÓN",
+          "h2": "LIMPIEZA Y DESCONTAMINACIÓN DE HERIDAS",
+          "rerank_score": 0.825,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 4: OTROS PRODUCTOS PARA LAS CURAS DE LESIONES POR PRESIÓN",
+          "h2": "PRODUCTOS LIMPIEZA DE HERIDAS (93-95)",
+          "rerank_score": 0.7846,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.6042,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "rerank_score": 0.5756,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "RECEPCIÓN DE MUESTRAS LABORATORIOS CLÍNICOS",
+          "h2": "13.1.3. Jugo gástrico",
+          "rerank_score": 0.5507,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.5376,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 7: RETENCIÓN AGUDA DE ORINA",
+          "rerank_score": 0.5214,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.4814,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.2. Orina vesical.",
+          "rerank_score": 0.4731,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.084,
+        "Retriever": 1.833,
+        "Generador": 7.38
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Respecto a su consulta sobre el uso de enemas de limpieza, la información disponible en los protocolos actuales indica lo siguiente:\n\nEn el marco del **Programa de Recuperación Intensificada (PRI)** para pacientes sometidos a **cirugía oncológica de colon**, se establece específicamente que **no se deben realizar enemas de limpieza** en el preoperatorio inmediato [2].\n\nPara estos pacientes, el protocolo de preparación intestinal mecánica se basa en:\n- **Dieta baja en residuos** durante las 48 horas previas a la cirugía [2].\n- **Antibioterapia oral** (eritromicina-neomicina) asociada a la preparación mecánica, específicamente en pacientes que van a ser sometidos a resección de colon izquierdo, sigma y recto, o colectomía total [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 740,
+        "token_stats": {
+          "prompt_tokens": 2414,
+          "completion_tokens": 171,
+          "total_tokens": 2585,
+          "tokens_per_second": 160.0,
+          "context_used_pct": 15.8,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.38
+      }
+    },
+    {
+      "id": "q09",
+      "query": "¿Cuáles son las reglas de ayuno y dieta previa?",
+      "block": 3,
+      "expected_section": "CUIDADOS PREOPERATORIOS",
+      "expected_quote": "Dieta baja en residuos 48 horas previo a la cirugía... Ayuno desde las 00:00 horas (8 horas previas a la cirugía).",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "reglas de ayuno y dieta previa en el marco del Programa de Recuperación Intensificada (PRI) para cirugía oncológica de colon",
+        "keywords": [
+          "ayuno",
+          "dieta previa",
+          "reglas"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            3,
+            1,
+            4,
+            4,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 7
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.9746,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8088,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.7669,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.5907,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PC-67-Z3-E-C-URGE-Procedimiento-de-Manejo-de-la-Gastroenteritis-Aguda-en-Urgencias",
+          "h1": "6. ANEXOS",
+          "h2": "6.2. ANEXO II: HOJA DE INFORMACIÓN A PACIENTES CON DIARREAS.",
+          "rerank_score": 0.5391,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.5224,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6.3.4 Seguimiento de Pautas y Cuidados de la Persona con Contención Mecánica/Inmovilización Terapéutica.",
+          "h2": "Hidratación y alimentación.",
+          "rerank_score": 0.5028,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "1. OBJETIVOS",
+          "rerank_score": 0.5013,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "Procedimiento de Valoración, Colocación y Seguimiento del Paciente con Catéter Pleural Tunelizado",
+          "h2": "6. ¿Cómo hay que acudir a la prueba?",
+          "rerank_score": 0.4956,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PC-67-Z3-E-C-URGE-Procedimiento-de-Manejo-de-la-Gastroenteritis-Aguda-en-Urgencias",
+          "h1": "6. ANEXOS",
+          "h2": "6.1. ANEXO I: ALGORITMO DE ACTUACIÓN.",
+          "rerank_score": 0.4788,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.36,
+        "Retriever": 1.753,
+        "Generador": 8.18
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 66.4,
+        "proc_delta_retriever": -0.8,
+        "proc_after_generator": 66.4,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para los pacientes sometidos al Programa de Recuperación Intensificada (PRI) de cirugía oncológica de colon, las reglas de ayuno y dieta se dividen en las fases preoperatoria y postoperatoria de la siguiente manera:\n\n## Preoperatorio inmediato\n- **Dieta previa**: Se debe mantener una **dieta baja en residuos** durante las 48 horas previas a la cirugía [1].\n- **Ayuno**: El ayuno debe iniciarse desde las **00:00 horas** (lo que supone 8 horas de ayuno previos a la intervención) [1]. Este punto debe ser verificado en la sala de recepción de pacientes [3].\n- **Consideraciones adicionales**: En caso de desnutrición, se debe continuar con el tratamiento nutricional previo [1].\n\n## Postoperatorio\n- **Reintroducción alimentaria**: Se debe realizar la reintroducción de alimentos **6 horas tras la cirugía**, iniciando con una **dieta líquida o semilíquida** según la tolerancia del paciente [4].\n- **Progresión de la dieta**:\n    - En las primeras 24 horas postoperatorias, si existe tolerancia oral, se procederá a la retirada de los líquidos endovenosos [4].\n    - En el periodo de las 48 horas postoperatorias, la progresión de la dieta oral se realizará según la tolerancia del paciente [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1197,
+        "token_stats": {
+          "prompt_tokens": 2070,
+          "completion_tokens": 303,
+          "total_tokens": 2373,
+          "tokens_per_second": 160.4,
+          "context_used_pct": 14.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.18
+      }
+    },
+    {
+      "id": "q10",
+      "query": "¿Qué profilaxis antibiótica y desinfección se debe asegurar?",
+      "block": 3,
+      "expected_section": "CUIDADOS PREOPERATORIOS",
+      "expected_quote": "Amoxicilina/ Clavulánico (2 gr/200 mg iv) + Gentamicina (320 mg iv en 30´). Si alergia a Penicilina: Metronidazol 1500 mg iv + Gentamicina (320 mg iv en 30´).",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "profilaxis antibiótica y desinfección en el PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+        "keywords": [
+          "profilaxis antibiótica",
+          "desinfección",
+          "asegurar"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            3,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 10
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.9254,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8663,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.7784,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "5.- Variables relativas a la profilaxis antibiótica:",
+          "rerank_score": 0.708,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.5954,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "1. OBJETIVOS",
+          "rerank_score": 0.5325,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.5172,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.4994,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.4625,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "PROCEDIMIENTO DE VIGILANCIA DE INFECCIONES DE LOCALIZACIÓN QUIRÚRGICA (ILQ)",
+          "h2": "ABREVIATURAS:",
+          "rerank_score": 0.4599,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.437,
+        "Retriever": 1.655,
+        "Generador": 8.96
+      },
+      "memory_mb": {
+        "proc_before": 66.4,
+        "proc_after_retriever": 67.3,
+        "proc_delta_retriever": 0.9,
+        "proc_after_generator": 67.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "De acuerdo con los protocolos disponibles para la cirugía oncológica de colon, la profilaxis antibiótica y la desinfección deben asegurar lo siguiente:\n\n## Profilaxis Antibiótica\n\nLa administración de la profilaxis antibiótica debe realizarse de forma intravenosa entre **30 y 60 minutos previos a la incisión**, siguiendo las directrices del PROA [2, 3].\n\n### Esquemas de administración\nDependiendo de la situación clínica del paciente, se establecen los siguientes regímenes [3]:\n- **Esquema estándar**: Amoxicilina/Clavulánico (2 gr/200 mg iv) + Gentamicina (320 mg iv en 30 minutos) [3].\n- **En caso de alergia a la Penicilina**: Metronidazol (1500 mg iv) + Gentamicina (320 mg iv en 30 minutos) [3].\n\n### Consideraciones sobre la duración y repetición\n- **Repetición**: Se debe repetir la profilaxis antibiótica si la duración de la cirugía supera dos veces la vida media del antibiótico administrado [1].\n- **Readministración específica**: En el caso de Amoxicilina/Clavulánico, se debe administrar la **misma dosis** a las 3 horas [1].\n- **Restricción**: No se recomienda la administración de Gentamicina a las 6 horas [1].\n\n### Preparación intestinal asociada\nEn pacientes sometidos a resección de colon izquierdo, sigma, recto o colectomía total, la preparación intestinal mecánica debe asociarse a una **antibioterapia oral** con eritromicina-neomicina [2].\n\n## Desinfección\n\nPara la preparación de la zona quirúrgica, se debe asegurar la:\n- **Desinfección de la piel** con **clorhexidina en solución alcohólica al 1%** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1534,
+        "token_stats": {
+          "prompt_tokens": 2187,
+          "completion_tokens": 418,
+          "total_tokens": 2605,
+          "tokens_per_second": 159.5,
+          "context_used_pct": 15.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.96
+      }
+    },
+    {
+      "id": "q11",
+      "query": "¿Hay que repetir el antibiótico si la cirugía se alarga?",
+      "block": 3,
+      "expected_section": "CUIDADOS INTRAOPERATORIOS",
+      "expected_quote": "Repetición profilaxis antibiótica si la duración de la cirugía supera dos veces la vida media... Amoxicilina/ Clavulánico MISMA DOSIS a las 3 horas. Gentamicina NO SE RECOMIENDA a las 6h.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "repetición de la profilaxis antibiótica en el PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON si la cirugía se prolonga",
+        "keywords": [
+          "repetir el antibiótico",
+          "cirugía se alarga"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 3
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.9964,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.9254,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8628,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8332,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.819,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.7737,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.7193,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "7.5 ENCUESTA DE RECUPERACIÓN POSTOPERATORIA:",
+          "rerank_score": 0.7178,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.6987,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "5.- Variables relativas a la profilaxis antibiótica:",
+          "rerank_score": 0.691,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.272,
+        "Retriever": 1.684,
+        "Generador": 7.16
+      },
+      "memory_mb": {
+        "proc_before": 67.3,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": -0.1,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "## Repetición de la profilaxis antibiótica\n\nSí, se debe realizar la **repetición de la profilaxis antibiótica** si la duración de la intervención quirúrgica supera **dos veces la vida media** del antibiótico que se haya administrado [2].\n\nEn relación con la administración de ciertos fármacos, el protocolo especifica lo siguiente:\n\n- **Amoxicilina/Clavulánico**: Se debe administrar la **misma dosis** a las 3 horas [2].\n- **Gentamicina**: **No se recomienda** su administración a las 6 horas [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 498,
+        "token_stats": {
+          "prompt_tokens": 2046,
+          "completion_tokens": 132,
+          "total_tokens": 2178,
+          "tokens_per_second": 159.8,
+          "context_used_pct": 13.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.16
+      }
+    },
+    {
+      "id": "q12",
+      "query": "¿Por qué evitamos la sonda nasogástrica y los drenajes?",
+      "block": 3,
+      "expected_section": "CUIDADOS INTRAOPERATORIOS",
+      "expected_quote": "No sonda nasogástrica de forma rutinaria... Evitar drenajes excepto disecciones laboriosas.",
+      "labels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "razones para evitar la sonda nasogástrica y los drenajes en el PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+        "keywords": [
+          "sonda nasogástrica",
+          "drenajes",
+          "evitamos"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "title": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 2
+          },
+          "dominant_doc_id": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8825,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "RECEPCIÓN DE MUESTRAS LABORATORIOS CLÍNICOS",
+          "h2": "13.1.3. Jugo gástrico",
+          "rerank_score": 0.6614,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "rerank_score": 0.5923,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.563,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.5384,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.5289,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "1. OBJETIVOS",
+          "rerank_score": 0.5282,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.5185,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.4754,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.4581,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.285,
+        "Retriever": 1.65,
+        "Generador": 7.76
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 66.7,
+        "proc_delta_retriever": -0.4,
+        "proc_after_generator": 66.7,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "En el contexto de los protocolos clínicos disponibles, la evitación de la sonda nasogástrica y de los drenajes se menciona específicamente dentro del marco del **Programa de Recuperación Intensificada (PRI)** para pacientes sometidos a cirugía oncológica de colon:\n\n## Sonda nasogástrica y drenajes en cirugía oncológica de colon\n\nDentro de las pautas de mantenimiento para este tipo de pacientes, se establecen las siguientes recomendaciones:\n\n- **Sonda nasogástrica**: No se debe utilizar de forma rutinaria [1].\n- **Drenajes**: Se deben evitar, salvo en situaciones específicas como disecciones laboriosas o cuando existan lechos cruentos [1].\n\nNo encuentro información adicional en los protocolos disponibles que justifique la razón fisiopatológica o clínica de esta evitación, más allá de la instrucción de no utilizarlos de forma rutinaria o salvo excepciones quirúrgicas.",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 878,
+        "token_stats": {
+          "prompt_tokens": 3632,
+          "completion_tokens": 192,
+          "total_tokens": 3824,
+          "tokens_per_second": 158.5,
+          "context_used_pct": 23.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.76
+      }
+    },
+    {
+      "id": "q13",
+      "query": "¿Cuándo podemos iniciar la alimentación y el movimiento?",
+      "block": 4,
+      "expected_section": "RECUPERACIÓN POSTOPERATORIA",
+      "expected_quote": "Reintroducción alimentaria (6 horas tras la cirugía), dieta líquida/semilíquida según tolerancia... Inicio de movilización activa (cama/sillón) a las 24 horas.",
+      "labels": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "momento de inicio de la alimentación y la movilización",
+        "keywords": [
+          "iniciar",
+          "alimentación",
+          "movimiento"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            3,
+            3,
+            3,
+            1,
+            1,
+            2,
+            2,
+            5,
+            5,
+            5,
+            5,
+            5,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 4,
+            "PC-67-Z3-E-C-URGE-Procedimiento-de-Manejo-de-la-Gastroenteritis-Aguda-en-Urgencias": 3,
+            "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B": 3,
+            "2013_Prevencion-y-Tratamiento-de-las-LPP": 5
+          },
+          "dominant_doc_id": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "dominant_ratio": 0.333,
+          "chunks_in_topk": null,
+          "gate_reason": "no_dominant_doc"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6.3.4 Seguimiento de Pautas y Cuidados de la Persona con Contención Mecánica/Inmovilización Terapéutica.",
+          "h2": "Hidratación y alimentación.",
+          "rerank_score": 1.0,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.824,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PC-67-Z3-E-C-URGE-Procedimiento-de-Manejo-de-la-Gastroenteritis-Aguda-en-Urgencias",
+          "h1": "6. ANEXOS",
+          "h2": "6.2. ANEXO II: HOJA DE INFORMACIÓN A PACIENTES CON DIARREAS.",
+          "rerank_score": 0.7,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "5.-VALORACIÓN DEL PACIENTE (9)",
+          "h2": "5.1 Estado del paciente al ingreso: Necesidades",
+          "rerank_score": 0.6354,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "2. INICIO DE LA REANIMACIÓN (Ver 13. Algoritmos de actuación).",
+          "rerank_score": 0.5143,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.4648,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "PROCEDIMIENTO DE CONTENCIÓN MECÁNICA/INMOVILIZACIÓN TERAPÉUTICA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.4492,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6.3.3 Documento de Información Al Juez",
+          "h2": "DOCUMENTO DE INFORMACIÓN AL JUEZ PARA LA PRÁCTICA DE LA INMOVILIZACIÓN TERAPÉUTICA",
+          "rerank_score": 0.4116,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "6. VALORACIÓN DE RIESGO DE LPP (10,11,12)",
+          "h2": "6.2 CUIDADOS ESPECÍFICOS DE LA PREVENCIÓN",
+          "rerank_score": 0.4009,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "Anexos",
+          "h2": "CORRECTA NUTRICIÓN E HIDRATACIÓN",
+          "rerank_score": 0.3707,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.894,
+        "Retriever": 1.848,
+        "Generador": 9.97
+      },
+      "memory_mb": {
+        "proc_before": 66.7,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.2,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La respuesta a cuándo se puede iniciar la alimentación y el movimiento depende del contexto clínico del paciente, según los protocolos disponibles:\n\n## Alimentación\n\n*   **Pacientes con cirugía oncológica de colon (Programa de Recuperación Intensificada - PRI):**\n    *   A las **48 horas postoperatorias**, se debe realizar la progresión de la dieta oral según la tolerancia del paciente [2].\n    *   Se requiere que el paciente presente tolerancia oral completa para alcanzar los objetivos del programa [2].\n*   **Pacientes con gastroenteritis aguda:**\n    *   La dieta debe ser **astringente o antidiarreica**, basándose en la introducción de alimentos de forma **paulatina y progresiva** según la tolerancia individual [3].\n    *   El objetivo es que el tracto digestivo esté inicialmente en reposo y se acostumbre poco a poco a la motilidad intestinal [3].\n    *   Los alimentos restringidos inicialmente deben reintroducirse de forma paulatina [3].\n*   **Pacientes con contención mecánica o inmovilización terapéutica:**\n    *   No se especifica un tiempo concreto de inicio, pero se debe asegurar una dieta adecuada, del agrado del paciente y, preferiblemente, de **fácil masticación** para evitar atragantamientos [1].\n    *   Se debe valorar la posibilidad de ayuda completa o parcial según el estado del paciente [1].\n\n## Movimiento y Movilización\n\n*   **Pacientes con cirugía oncológica de colon (PRI):**\n    *   A las **48 horas postoperatorias**, se debe realizar la **deambulación precoz** y la movilización activa [2].\n    *   Se busca alcanzar la deambulación completa [2].\n*   **Prevención de lesiones por presión (LPP):**\n    *   El plan de cuidados debe favorecer la movilidad y la actividad del paciente [5].\n    *   Se deben realizar **movilizaciones activas y pasivas** [5].\n    *   Se debe **levantar al paciente de la cama en cuanto sea posible** [5].\n    *   En caso de sedestación (estar sentado), se deben realizar movilizaciones cada hora y no permanecer sentado más de 2 horas [5].\n    *   Se debe evitar el arrastre durante las movilizaciones [5].\n*   **Pacientes con contención mecánica o inmovilización terapéutica:**\n    *   El protocolo no indica un momento de inicio, pero se debe valorar la ayuda parcial (dejando un rango de movimiento mayor en una mano) siempre que el estado del paciente lo permita [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2342,
+        "token_stats": {
+          "prompt_tokens": 3349,
+          "completion_tokens": 569,
+          "total_tokens": 3918,
+          "tokens_per_second": 158.2,
+          "context_used_pct": 23.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.97
+      }
+    },
+    {
+      "id": "q14",
+      "query": "¿Cuándo se retiran los sueros y las sondas?",
+      "block": 4,
+      "expected_section": "RECUPERACIÓN POSTOPERATORIA",
+      "expected_quote": "A las 24 horas: Si tolerancia oral, retirada de líquidos endovenosos... Retirada precoz de SV (excepto cirugía de recto en la que se mantendrá 48 h).",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "momento para el retiro de fluidoterapia intravenosa y sondas",
+        "keywords": [
+          "retiran",
+          "sueros",
+          "sondas"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "title": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            5,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO": 14,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 2,
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 1
+          },
+          "dominant_doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "dominant_ratio": 0.824,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 1.0,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "13. ALGORITMO DE ACTUACIÓN",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.6623,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.6455,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 8: LAVADO VESICAL",
+          "rerank_score": 0.6165,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.6058,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.5796,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-06_Z3-E-C-Rev-A-Procedimiento-de-Sondaje-Vesical-marzo-2013",
+          "h1": "PROCEDIMIENTO DE APOYO TÉCNICA DEL SONDAJE VESICAL",
+          "h2": "4.- TÉCNICA DEL SONDAJE VESICAL",
+          "rerank_score": 0.5717,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "Fluidoterapia",
+          "rerank_score": 0.5574,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.5554,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.5114,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.186,
+        "Retriever": 1.83,
+        "Generador": 11.64
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La información disponible en los protocolos permite detallar los criterios de retirada para sondas vesicales y sistemas de suero según el contexto clínico:\n\n## Retirada de sondas vesicales\n\nEl momento de la retirada depende de la indicación clínica y la causa de la colocación:\n\n- **Criterio general de alta:** Por norma, todo paciente que reciba el alta hospitalaria deberá ser dado de salida sin la sonda, a menos que exista una indicación terapéutica que requiera mantener el sondaje vesical [1].\n- **Retención Aguda de Orina (RAO):**\n    - Los pacientes con RAO deben mantener la sonda el menor tiempo posible para evitar riesgos de infección [1].\n    - El tiempo indicado es de **3 a 5 días** [1]. Durante este periodo, se puede usar a tapón durante el día (evacuando cada 2/3 horas si no hay deseo miccional) y conectada a bolsa por la noche; tras este periodo, se puede intentar la retirada sin necesidad de deseo miccional previo [1].\n    - En **ingresos prolongados**, se puede intentar la retirada cuando el paciente comience con la deambulación y no requiera encamamiento prolongado [1].\n    - Si tras el primer intento de retirada ocurre un **segundo episodio de RAO**, se debe mantener la sonda entre **10 y 15 días más**, repitiendo el proceso de retirada con las mismas indicaciones [1].\n- **Hematuria:** La retirada se produce al **alta domiciliaria** [1]. Previamente, se debe retirar el sistema lavador disminuyendo el ritmo de entrada del suero paulatinamente cuando la orina esté totalmente clara [1].\n- **Lesión de la vía urinaria:** Si la colocación de la sonda causó una lesión, se debe mantener la sonda un **mínimo de 3 a 4 semanas** antes de iniciar la retirada [1].\n- **Infecciones del tracto urinario:** La retirada puede iniciarse una vez el paciente lleve **72 horas sin fiebre** con el tratamiento antibiótico pautado, o cuando ya se haya iniciado el tratamiento dirigido [1].\n- **Sondaje intermitente:** La sonda se retira inmediatamente al finalizar la emisión de orina [3].\n\n**Consideraciones adicionales para la retirada:**\n- El momento de la extracción puede variar desde la primera hora de la mañana hasta la medianoche [5].\n- 24 horas antes de la retirada, se puede administrar una dosis de corticoide intramuscular para disminuir la inflamación [1].\n- En casos de perforaciones vesicales, se recomienda realizar una cistografía retrógrada previa al intento de retirada [1].\n\n## Retirada de sueros (Sistemas de lavado)\n\nEn el contexto de pacientes con **hematuria** que requieren un sistema lavador, la retirada del sistema se realiza de la siguiente manera:\n- Se debe disminuir el ritmo de entrada del suero **paulatinamente** cuando la orina se encuentre totalmente clara [1].\n- Si al disminuir el flujo la hematuria reaparece, es necesario aumentar de nuevo el flujo de entrada y mantenerlo más tiempo [1].\n\nNo se encuentra información específica en los protocolos sobre la retirada de catéteres intravenosos periféricos, únicamente se detalla su mantenimiento para asegurar la permeabilidad [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 3037,
+        "token_stats": {
+          "prompt_tokens": 3752,
+          "completion_tokens": 724,
+          "total_tokens": 4476,
+          "tokens_per_second": 148.6,
+          "context_used_pct": 27.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 11.64
+      }
+    },
+    {
+      "id": "q15",
+      "query": "¿Cuál es la estrategia para el manejo del dolor?",
+      "block": 4,
+      "expected_section": "RECUPERACIÓN POSTOPERATORIA",
+      "expected_quote": "Control del dolor con escala EVA, priorizar empleo de AINES y Paracetamol, evitar opioides.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "estrategia para el manejo del dolor en el procedimiento ante retención aguda de orina en paciente hospitalizado",
+        "keywords": [
+          "estrategia",
+          "manejo del dolor"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "title": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS",
+          "title": "TRATAMIENTO DE LA NEURALGIA DEL TRIGÉMINO EN URGENCIAS",
+          "reference": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            3,
+            2,
+            2,
+            2,
+            4,
+            2,
+            4,
+            2,
+            2,
+            4,
+            2,
+            5,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 3,
+            "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS": 11,
+            "PC-67-Z3-E-C-URGE-Procedimiento-de-Manejo-de-la-Gastroenteritis-Aguda-en-Urgencias": 2
+          },
+          "dominant_doc_id": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS",
+          "dominant_ratio": 0.688,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.8304,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS",
+          "h1": "TRATAMIENTO DE LA NEURALGIA DEL TRIGÉMINO EN URGENCIAS",
+          "h2": "5. ALGORITMO TERAPÉUTICO",
+          "rerank_score": 0.7273,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS",
+          "h1": "TRATAMIENTO DE LA NEURALGIA DEL TRIGÉMINO EN URGENCIAS",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.7263,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS",
+          "h1": "TRATAMIENTO DE LA NEURALGIA DEL TRIGÉMINO EN URGENCIAS",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.7034,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PC-67-Z3-E-C-URGE-Procedimiento-de-Manejo-de-la-Gastroenteritis-Aguda-en-Urgencias",
+          "h1": "PROCEDIMIENTO DE MANEJO DE LA GASTROENTERITIS AGUDA EN URGENCIAS",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.6189,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "rerank_score": 0.6174,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.5958,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.5841,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.528,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 7: RETENCIÓN AGUDA DE ORINA",
+          "rerank_score": 0.5131,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.742,
+        "Retriever": 1.677,
+        "Generador": 9.75
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La estrategia para el manejo del dolor varía según la patología y el contexto clínico, según los protocolos disponibles:\n\n## 1. Cirugía Oncológica de Colon (Programa de Recuperación Intensificada - PRI)\nEn el periodo de las **24 horas postoperatorias**, la estrategia se basa en:\n- **Control del dolor**: Utilizar la escala **EVA** para su valoración [1].\n- **Prioridad farmacológica**: Se debe priorizar el empleo de **AINES y Paracetamol** [1].\n- **Restricción**: Se debe **evitar el uso de opioides** [1].\n\n## 2. Neuralgia del Trigémino (en Urgencias)\nAnte una exacerbación aguda del dolor, el objetivo es mejorar la atención del paciente [3]. La estrategia sigue un algoritmo de decisión:\n- **Valoración inicial**: Realizar valoración clínica y realizar un **ajuste del tratamiento habitual** [2].\n- **Evaluación de respuesta**:\n    - Si hay **buen control**: Mantener el tratamiento y realizar seguimiento [2].\n    - Si **no hay buen control**: Se debe priorizar el uso de medicación por **vía intravenosa** para lograr un alivio rápido, desaconsejándose por completo el uso de opiáceos [2, 4].\n- **Opciones farmacológicas intravenosas** (todos ellos clase IV, grado de recomendación C):\n    - **Lacosamida**: 100-200 mg iv (se menciona que un estudio reciente recomienda la lacosamida iv frente a la fenitoína por su mejor perfil de efectos adversos) [2, 4].\n    - **Lidocaína**: 5 mg/kg iv [2].\n    - **Fenitoína**: 500-1000 mg iv [2].\n    - *Nota importante*: Todos estos fármacos requieren **monitorización continua desde el punto de vista cardiológico** [4].\n- **Otras intervenciones**: Inyección de **0,5-1 cc de anestésico local** en puntos gatillo si se identifican [2].\n\n## 3. Gastroenteritis Aguda\nEl tratamiento general busca controlar el dolor junto con las náuseas y los vómitos [5].\n- **Tratamiento farmacológico**: Administración de **Paracetamol (1 gramo)**, un comprimido cada 8 horas, en caso de presentar **dolor abdominal** o febrícula [5].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1965,
+        "token_stats": {
+          "prompt_tokens": 3234,
+          "completion_tokens": 536,
+          "total_tokens": 3770,
+          "tokens_per_second": 158.4,
+          "context_used_pct": 23.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.75
+      }
+    },
+    {
+      "id": "q16",
+      "query": "¿Cuáles son los Criterios de Alta Hospitalaria?",
+      "block": 4,
+      "expected_section": "CRITERIOS DE ALTA",
+      "expected_quote": "Ausencia de fiebre. Dolor controlado exclusivamente con analgesia oral. Deambulación completa y autónoma. Tolerancia oral completa.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "criterios de alta hospitalaria",
+        "keywords": [
+          "Criterios de Alta Hospitalaria"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS",
+          "title": "TRATAMIENTO DE LA NEURALGIA DEL TRIGÉMINO EN URGENCIAS",
+          "reference": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PC-08-Z3-E-C-PROCEDIMIENTO-DE-MANEJO-DEL-ACCIDENTE-ISQUÉMICO-TRANSITORIO": 5,
+            "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025": 2,
+            "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB": 5
+          },
+          "dominant_doc_id": "PC-08-Z3-E-C-PROCEDIMIENTO-DE-MANEJO-DEL-ACCIDENTE-ISQUÉMICO-TRANSITORIO",
+          "dominant_ratio": 0.417,
+          "chunks_in_topk": null,
+          "gate_reason": "no_dominant_doc"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PC-08-Z3-E-C-PROCEDIMIENTO-DE-MANEJO-DEL-ACCIDENTE-ISQUÉMICO-TRANSITORIO",
+          "h1": "PROCEDIMIENTO DE MANEJO DEL ACCIDENTE ISQUÉMICO TRANSITORIO (AIT)",
+          "h2": "4.5. VIGILANCIA CLÍNICA",
+          "rerank_score": 0.941,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "ANEXO I: VARIABLES A REGISTRAR EN LA ENCUESTA EPIDEMIOLÓGICA DE INFECCIONES DE LOCALIZACIÓN QUIRÚRGICA (ILQ)",
+          "rerank_score": 0.8269,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.7214,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "ANEXO I: VARIABLES A REGISTRAR EN LA ENCUESTA EPIDEMIOLÓGICA DE INFECCIONES DE LOCALIZACIÓN QUIRÚRGICA (ILQ)",
+          "rerank_score": 0.6118,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 4. DIAGNÓSTICO COMÚN DE INGRESO POR INFECCIÓN RESPIRATORIA Y CRITERIOS PARA INGRESO EN SERVICIOS ESPECÍFICOS",
+          "h2": "Criterios para ingreso en servicios específicos",
+          "rerank_score": 0.5968,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.5871,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.573,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 4. DIAGNÓSTICO COMÚN DE INGRESO POR INFECCIÓN RESPIRATORIA Y CRITERIOS PARA INGRESO EN SERVICIOS ESPECÍFICOS",
+          "h2": "Asignación del servicio de ingreso",
+          "rerank_score": 0.5583,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "7. ASISTENCIA EN UCI",
+          "h2": "7. ASISTENCIA EN UCI",
+          "rerank_score": 0.5144,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN DE CONTINGENCIA",
+          "h2": "El ingreso en la UCRI",
+          "rerank_score": 0.4971,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.193,
+        "Retriever": 1.809,
+        "Generador": 10.75
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No encuentro una definición única de \"Criterios de Alta Hospitalaria\" en los protocolos disponibles, ya que los documentos se refieren a situaciones clínicas específicas. Sin embargo, se detallan los criterios de alta o finalización de estancia para los siguientes escenarios:\n\n## Accidente Isquémico Transitorio (AIT)\nPara los pacientes con AIT que no cumplen los criterios de ingreso, el procedimiento es el siguiente:\n- **Periodo de observación:** Permanecerán en el Servicio de Urgencia (Sala de Observación) durante un periodo de **12-24 horas** [1].\n- **Condición de alta:** Serán dados de alta transcurrido este periodo siempre que **no se hayan producido incidencias clínicas** [1].\n- **Estudios al alta:** Al proceder al alta a domicilio, se pueden plantear estudios complementarios según el caso:\n    - **Holter ECG 24 horas:** En casos con sospecha clínica de perfil embólico para detectar FA oculta [1].\n    - **Valoración en Cardiología:** Para realizar estudios como ETT reglado, si hay sospecha de embolismo [1].\n    - **RM cerebral con secuencias DWI:** Se solicitará en la mayoría de los casos, especialmente si hay síntomas de larga duración (>30-60 min), déficits motores/lenguaje, o en pacientes <50 años [1].\n\n## Unidad de Cuidados de la Unidad de Cuidados Respiratorios Intensivos (UCRI)\nEn cuanto a las salidas de la UCRI, se establecen los siguientes procesos:\n- **Pacientes procedentes de UCI y Urgencias:** Se debe contactar y comunicar en horario de mañana con la Unidad de hospitalización convencional de destino [2].\n- **Pacientes procedentes de otros Servicios hospitalarios:** Una vez estabilizados en la UCRI, pasarán a la Unidad de hospitalización convencional desde donde fueron remitidos [2].\n\n## Registro de Vigilancia de Infecciones de Localización Quirúrgica (ILQ)\nEn el contexto de la vigilancia epidemiológica, se registran variables relacionadas con el alta:\n- **Fecha de alta:** Se debe cumplimentar la fecha de alta hospitalaria, la fecha de fallecimiento o la fecha del último seguimiento si se desconoce la fecha de alta [3].\n- **Tipos de alta (motivo):** Se utilizan los siguientes códigos para registrar el motivo:\n    - **CURAC:** Curación/mejoría [3].\n    - **TRASL:** Traslado a otro hospital [3].\n    - **VOLUNT:** Alta voluntaria [3].\n    - **EXITUS:** Fallecimiento [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2323,
+        "token_stats": {
+          "prompt_tokens": 4327,
+          "completion_tokens": 572,
+          "total_tokens": 4899,
+          "tokens_per_second": 141.9,
+          "context_used_pct": 29.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.75
+      }
+    },
+    {
+      "id": "q17",
+      "query": "¿De qué se encarga específicamente enfermería?",
+      "block": 5,
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "Enfermería: registro de datos, educación y seguimiento riguroso de los pacientes, garantizar cumplimiento y compresión estricta del protocolo. Coordinación de información entre diferentes profesionales.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "funciones y responsabilidades específicas del personal de enfermería",
+        "keywords": [
+          "enfermería",
+          "se encarga"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5,
+            2,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado": 3,
+            "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B": 11,
+            "PA-121-Z3-E-C-Procedimiento-de-Identificación-de-Pacientes": 3,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 1,
+            "RPC-89-revC-Parada-Cardiaca": 1
+          },
+          "dominant_doc_id": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "dominant_ratio": 0.579,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "5. RESPONSABILIDADES",
+          "h2": "DEL PERSONAL DE ENFERMERÍA:",
+          "rerank_score": 0.9817,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "7. PROFESIONALES A QUIENES VA DIRIGIDO",
+          "rerank_score": 0.8481,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "PROCEDIMIENTO DE CONTENCIÓN MECÁNICA/INMOVILIZACIÓN TERAPÉUTICA",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.7922,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "7. PROFESIONALES A QUIENES VA DIRIGIDO",
+          "rerank_score": 0.7864,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6.3.4 Seguimiento de Pautas y Cuidados de la Persona con Contención Mecánica/Inmovilización Terapéutica.",
+          "h2": "6.3.4 Seguimiento de Pautas y Cuidados de la Persona con Contención Mecánica/Inmovilización Terapéutica.",
+          "rerank_score": 0.7249,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "rerank_score": 0.7246,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "9. Metodología enfermera en las lesiones por presión. NANDA I, NOC, NIC (89-91)",
+          "h2": "PROCESO ENFERMERO",
+          "rerank_score": 0.6636,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN CONTINGENCIA INFECCIONES RESPIRATORIAS ESTACIONALES 2024/2025",
+          "h2": "5. ASISTENCIA EN HOSPITALIZACIÓN CONVENCIONAL.",
+          "rerank_score": 0.6468,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "5. RESPONSABILIDADES",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.6056,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-17-Z3-E-C-Rev-C-Actuación-con-fallecidos-y-cuidados-post-mortem",
+          "h1": "PROCEDIMIENTO DE ACTUACION CON FALLECIDOS Y CUIDADOS POST-MORTEM",
+          "h2": "5. RESPONSABILIDADES:",
+          "rerank_score": 0.5674,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.096,
+        "Retriever": 1.701,
+        "Generador": 10.62
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Las funciones y responsabilidades del personal de enfermería varían según el procedimiento clínico específico, pero de los protocolos disponibles se desprenden las siguientes tareas y ámbitos de actuación:\n\n## Responsabilidades en procedimientos específicos\n\n### 1. Paciente con catéter pleural tunelizado\nEn este procedimiento, el personal de enfermería es responsable de:\n- **Monitorizar al paciente**, realizando la medición de la frecuencia cardíaca y la saturación de oxígeno (SpO2) [1].\n- **Asegurar las condiciones de asepsia** [1].\n- **Informar al facultativo** ante cualquier desviación de la normalidad [1].\n\n### 2. Contención mecánica / Inmovilización terapéutica\nEn situaciones de contención, la enfermera/o tiene las siguientes funciones:\n- **Autorización de urgencia**: Está expresamente autorizada a iniciar el procedimiento en caso de extrema urgencia, debiendo comunicarlo al médico inmediatamente para obtener su conformidad por escrito (en un plazo máximo de 2 horas) [3].\n- **Gestión del entorno y material**:\n    - Asegurar el cumplimiento de las condiciones ambientales mínimas (elección de la zona, retirada de objetos peligrosos, acondicionamiento de la cama) [3].\n    - Verificar y colocar el material imprescindible para la contención elegida [3].\n    - Revisar exhaustivamente la ropa del paciente para retirar objetos personales o potencialmente peligrosos (como mecheros o bolígrafos) [3].\n- **Gestión de recursos y ejecución**:\n    - Asegurarse de que el recurso humano sea el mínimo necesario [3].\n    - Dirigir y participar en la contención, coordinando la actuación de los miembros del equipo (sanitarios y no sanitarios) [3].\n    - Colocar las contenciones de forma secuencial (empezando por el cinturón) según la indicación de quien coordina [3].\n    - Verificar la correcta acomodación del material de sujeción una vez finalizada la actuación [3].\n- **Cuidados y registro**:\n    - Administración de fármacos [3].\n    - Planificar y registrar los cuidados de enfermería [3].\n    - Registrar el procedimiento en el formulario de contención física en la Historia Clínica Electrónica (HCE) [3].\n\n### 3. Identificación de pacientes\n- El equipo de enfermería es responsable de la **colocación de la pulsera identificativa** [5].\n- El equipo de enfermería es responsable de la **retirada de la pulsera** al momento del alta [5].\n- En el caso de reciénados sanos, la identificación corresponde a la **enfermera/o Especialista en Obstetricia** [5].\n\n## Ámbito de aplicación\n- El personal de enfermería es un grupo profesional al que se dirigen protocolos de cuidados específicos, como el de **sondeo vesical** [2], y es parte del equipo requerido en protocolos de **parada cardíaca intrahospitalaria** [4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2733,
+        "token_stats": {
+          "prompt_tokens": 2833,
+          "completion_tokens": 649,
+          "total_tokens": 3482,
+          "tokens_per_second": 158.9,
+          "context_used_pct": 21.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.62
+      }
+    },
+    {
+      "id": "q18",
+      "query": "¿Cómo es el calendario de seguimiento tras salir del hospital?",
+      "block": 5,
+      "expected_section": "SEGUIMIENTO",
+      "expected_quote": "A 1 mes: Consulta presencial de Anestesia/Prehabilitación. Realización de test de ANI, encuesta de recuperación funcional (Anexo 5) y registro de evolución. A 1, 3 y 6 meses: Seguimiento por Cirugía General.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "calendario de seguimiento tras el alta hospitalaria",
+        "keywords": [
+          "calendario de seguimiento",
+          "salir del hospital"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "title": "PROCEDIMIENTO DE VIGILANCIA DE INFECCIONES DE LOCALIZACIÓN QUIRÚRGICA (ILQ)",
+          "reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            5,
+            5,
+            5,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB": 5,
+            "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON": 4
+          },
+          "dominant_doc_id": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "dominant_ratio": 0.556,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "3.- METODOLOGÍA DE VIGILANCIA",
+          "h2": "3.5 PERÍODO DE SEGUIMIENTO:",
+          "rerank_score": 0.9357,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "ANEXO I: VARIABLES A REGISTRAR EN LA ENCUESTA EPIDEMIOLÓGICA DE INFECCIONES DE LOCALIZACIÓN QUIRÚRGICA (ILQ)",
+          "rerank_score": 0.9142,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "ANEXO I: VARIABLES A REGISTRAR EN LA ENCUESTA EPIDEMIOLÓGICA DE INFECCIONES DE LOCALIZACIÓN QUIRÚRGICA (ILQ)",
+          "rerank_score": 0.8445,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "4. DESARROLLO",
+          "h2": "4.5 Descripción de circuito:",
+          "rerank_score": 0.6037,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.5931,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "Procedimiento de Valoración, Colocación y Seguimiento del Paciente con Catéter Pleural Tunelizado",
+          "h2": "6. ¿Cómo hay que acudir a la prueba?",
+          "rerank_score": 0.5667,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-201-PROGRAMA-DE-RECUPERACION-INTENSIFICADA-PRI-PARA-PACIENTES-DE-CIRUGIA-ONCOLOGICA-DE-COLON",
+          "h1": "PROGRAMA DE RECUPERACIÓN INTENSIFICADA (PRI) PARA PACIENTES DE CIRUGÍA ONCOLÓGICA DE COLON",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.4999,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "h2": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "rerank_score": 0.463,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "7. ASISTENCIA EN UCI",
+          "h2": "7. ASISTENCIA EN UCI",
+          "rerank_score": 0.4538,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "6. ANEXOS",
+          "h2": "6.1. ANEXO I: Hoja de recogida de datos hospitalaria.",
+          "rerank_score": 0.3997,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.848,
+        "Retriever": 1.767,
+        "Generador": 9.42
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "El calendario de seguimiento tras la salida del hospital varía según el tipo de procedimiento o programa clínico al que se aplique:\n\n## Seguimiento de Infecciones de Localización Quirúrgica (ILQ)\nPara la vigilancia epidemiológica de las infecciones asociadas a procedimientos quirúrgicos, el periodo de seguimiento se establece de la siguiente manera:\n\n- **Duración del seguimiento:** Dependiendo del tipo de procedimiento quirúrgico realizado, el periodo de seguimiento epidemiológico será de **30 o 90 días** a partir de la fecha de la intervención [1].\n- **Criterio de inclusión:** Solo se consideran dentro del marco de vigilancia aquellas infecciones cuyo comienzo se manifieste dentro del periodo establecido (30 o 90 días); las que comiencen fuera de este intervalo no se registran en el sistema [1].\n- **Estados de la ficha de seguimiento:** El proceso de vigilancia post-alta puede presentar los siguientes estados:\n    - **Ficha en periodo de seguimiento post-alta:** El paciente ya ha sido dado de alta y está pendiente de completar el seguimiento [2].\n    - **Ficha con seguimiento completado:** Se ha finalizado el seguimiento post-alta y se espera la revisión por el facultativo responsable [2].\n    - **Ficha cerrada:** La vigilancia ha concluido, la ficha está revisada y lista para su envío al Centro Nacional de Epidemiología (CNE) [2].\n\n## Seguimiento en Cirugía Oncológica de Colon (Programa PRI)\nEn el marco del Programa de Recuperación Intensificada (PRI) para pacientes de cirugía oncológica de colon, se establece un:\n\n- **Seguimiento telefónico:** Se realiza a las **dos semanas de la primera visita** [5].\n- **Objetivos de la valoración:**\n    - Valoración del estado general [5].\n    - Valoración de analíticas de control [5].\n    - Valoración del cumplimiento e intensidad de la pauta de ejercicio físico [5].\n\nNo encuentro información en los protocolos disponibles sobre calendarios de seguimiento para otros procedimientos distintos a los mencionados.",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1981,
+        "token_stats": {
+          "prompt_tokens": 3567,
+          "completion_tokens": 442,
+          "total_tokens": 4009,
+          "tokens_per_second": 157.7,
+          "context_used_pct": 24.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.42
+      }
+    }
+  ]
+}

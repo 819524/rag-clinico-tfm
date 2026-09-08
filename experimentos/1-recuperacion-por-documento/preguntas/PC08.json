@@ -1,0 +1,210 @@
+{
+  "name": "PC-08 — Procedimiento de Manejo del Accidente Isquémico Transitorio (AIT)",
+  "description": "Ground truth generado a partir del documento PC-08. Cubre reconceptualización del AIT, síntomas de alerta, protocolo diagnóstico, criterios de ingreso, escalas de riesgo y prevención secundaria.",
+  "relevant_doc_patterns": ["PC-08", "accidente-isquemico-transitorio", "AIT", "isquemico-transitorio"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "Oye, ¿todavía tenemos que esperar a que pasen las 24 horas para estar seguros de si es un AIT o un ictus?",
+      "expected_section": "RECONCEPTUALIZACIÓN DEL AIT",
+      "expected_quote": "se sustituyó el concepto clásico de AIT basado en el tiempo (episodio de disfunción cerebral focal con duración de los síntomas menor de 24 horas) por la definición actual que está basada en el daño tisular."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Entonces, aunque el paciente esté hablando y moviéndose perfecto ahora mismo, puede tener el cerebro dañado?",
+      "expected_section": "RECONCEPTUALIZACIÓN DEL AIT",
+      "expected_quote": "Hasta un 30-50% de los casos con resolución de síntomas en menos de 24 horas presentan lesión isquémica en RM"
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Por qué nos exigen tanta prisa en el ingreso si el paciente ya se encuentra bien?",
+      "expected_section": "RECONCEPTUALIZACIÓN DEL AIT",
+      "expected_quote": "un 25% de sujetos que han sufrido un AIT presentarán un infarto cerebral, siendo el riesgo mayor en las primeras 24-48 h"
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Realmente es tan grave como un ictus si no le ha quedado ninguna secuela?",
+      "expected_section": "RECONCEPTUALIZACIÓN DEL AIT",
+      "expected_quote": "este evento neurológico supone una verdadera oportunidad para la prevención de un futuro ictus isquémico, por lo que debe manejarse con la misma urgencia que si se tratase de un ictus."
+    },
+    {
+      "id": "q05",
+      "block": 2,
+      "query": "¿Qué importancia tiene que el paciente me cuente que le daban sacudidas en el brazo justo al levantarse?",
+      "expected_section": "IDENTIFICACIÓN DE SÍNTOMAS Y SIGNOS DE ALERTA",
+      "expected_quote": "Síntomas coincidiendo con los cambios posturales, en forma de sacudidas involuntarias... Fenómeno del fotoestrés... Mecanismo hemodinámico en el contexto de una lesión carotídea significativa."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "Si un paciente me dice que de repente dejó de ver por un ojo 'como si le bajaran una persiana', ¿eso cuenta como AIT?",
+      "expected_section": "IDENTIFICACIÓN DE SÍNTOMAS Y SIGNOS DE ALERTA",
+      "expected_quote": "Combinación de síntomas oculares (amaurosis fugax) y síntomas hemisféricos en hemicuerpo contralateral... Estenosis carotídea"
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Debería preocuparme más si los síntomas duran mucho o si son muy cortitos?",
+      "expected_section": "IDENTIFICACIÓN DE SÍNTOMAS Y SIGNOS DE ALERTA",
+      "expected_quote": "presencia de síntomas que duren más de 60 minutos, con déficit motor y afasia... se asocian a un mayor riesgo de infarto cerebral... Síntomas breves, recurrentes y estereotipados... Patología estenótica"
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Cómo podemos sospechar si el problema viene del corazón o de las arterias del propio cerebro?",
+      "expected_section": "IDENTIFICACIÓN DE SÍNTOMAS Y SIGNOS DE ALERTA",
+      "expected_quote": "Afectación en distintos territorios vasculares o alteraciones aisladas del lenguaje (afasia)... Cardioembolismo"
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "A veces el paciente llega con síntomas muy vagos, ¿a qué le doy prioridad en mi informe de enfermería?",
+      "expected_section": "IDENTIFICACIÓN DE SÍNTOMAS Y SIGNOS DE ALERTA",
+      "expected_quote": "síntomas que duren más de 60 minutos, con déficit motor y afasia, ya que estos factores se asocian a un mayor riesgo de infarto cerebral."
+    },
+    {
+      "id": "q10",
+      "block": 3,
+      "query": "Si la TC sale normal y el paciente está bien, ¿no es una pérdida de tiempo dejarlo en observación?",
+      "expected_section": "EL PROTOCOLO DE URGENCIA: PRUEBAS Y MONITORIZACIÓN",
+      "expected_quote": "La TC cerebral... permite evaluar isquemia subaguda, hemorragia... El hallazgo de infarto antiguo en pacientes con AIT, aumenta 11 veces el riesgo de recurrencia"
+    },
+    {
+      "id": "q11",
+      "block": 3,
+      "query": "¿Por qué pedimos una Resonancia (RM) si ya tenemos la TC?",
+      "expected_section": "EL PROTOCOLO DE URGENCIA: PRUEBAS Y MONITORIZACIÓN",
+      "expected_quote": "La RM con secuencias en difusión es la técnica de elección para identificar lesión isquémica aguda... mayor capacidad para confirmar el origen isquémico"
+    },
+    {
+      "id": "q12",
+      "block": 3,
+      "query": "¿Basta con el ECG que le hicimos en el triaje para descartar una arritmia?",
+      "expected_section": "EL PROTOCOLO DE URGENCIA: PRUEBAS Y MONITORIZACIÓN",
+      "expected_quote": "El ECG estándar tiene una escasa sensibilidad para la detección de arritmias paroxísticas, y por tanto, para la detección de FA tras un AIT."
+    },
+    {
+      "id": "q13",
+      "block": 3,
+      "query": "¿Cuánto tiempo mínimo tengo que tener al paciente conectado al monitor en la planta o en urgencias?",
+      "expected_section": "EL PROTOCOLO DE URGENCIA: PRUEBAS Y MONITORIZACIÓN",
+      "expected_quote": "Monitorización cardiaca, al menos durante las primeras 24 horas"
+    },
+    {
+      "id": "q14",
+      "block": 3,
+      "query": "¿Qué otras pruebas 'de las arterias' tenemos que vigilar que se hagan antes de las 48 horas?",
+      "expected_section": "EL PROTOCOLO DE URGENCIA: PRUEBAS Y MONITORIZACIÓN",
+      "expected_quote": "Estudio neurovascular DTSA y DTC... realizarse en 24-48 horas desde el inicio del episodio"
+    },
+    {
+      "id": "q15",
+      "block": 3,
+      "query": "¿Si el paciente ya tiene diagnosticada una Fibrilación Auricular (FA) de antes, le pedimos más pruebas?",
+      "expected_section": "EL PROTOCOLO DE URGENCIA: PRUEBAS Y MONITORIZACIÓN",
+      "expected_quote": "Si ya figura como antecedente alguno de estos factores... evaluar las causas de su ineficacia."
+    },
+    {
+      "id": "q16",
+      "block": 4,
+      "query": "¿Qué hacemos con el paciente que no cumple criterios de ingreso pero el neurólogo aún no ha terminado el estudio?",
+      "expected_section": "CRITERIOS DE INGRESO Y VIGILANCIA DE ENFERMERÍA",
+      "expected_quote": "Si no cumple criterios de ingreso, permanecerá en el Servicio de Urgencia (Sala de Observación) durante las siguientes 12-24 horas"
+    },
+    {
+      "id": "q17",
+      "block": 4,
+      "query": "¿Qué es lo más importante que tengo que vigilar mientras el paciente está en observación?",
+      "expected_section": "CRITERIOS DE INGRESO Y VIGILANCIA DE ENFERMERÍA",
+      "expected_quote": "Los pacientes con focalidad neurológica en Urgencias... deben ser controlados... Un porcentaje de AITs clínicos... son en realidad infartos cerebrales"
+    },
+    {
+      "id": "q18",
+      "block": 4,
+      "query": "¿Por qué a los menores de 50 años se les pide RM siempre, aunque el síntoma durara 5 minutos?",
+      "expected_section": "CRITERIOS DE INGRESO Y VIGILANCIA DE ENFERMERÍA",
+      "expected_quote": "en los <50 años independientemente del tipo o duración de los síntomas."
+    },
+    {
+      "id": "q19",
+      "block": 4,
+      "query": "¿Si la escala sale baja (un 2, por ejemplo) podemos mandar al paciente a casa sin miedo?",
+      "expected_section": "CRITERIOS DE INGRESO Y VIGILANCIA DE ENFERMERÍA",
+      "expected_quote": "estas escalas dadas sus limitaciones, deben ser parte de una evaluación más integral para decidir la derivación a urgencias y/o ingreso"
+    },
+    {
+      "id": "q20",
+      "block": 4,
+      "query": "Si el paciente tiene una estenosis carotídea del 60%, ¿se queda ingresado aunque se encuentre perfecto?",
+      "expected_section": "CRITERIOS DE INGRESO Y VIGILANCIA DE ENFERMERÍA",
+      "expected_quote": "puede considerarse el ingreso en: ... Estenosis carotídea ≥50% (placa vulnerable, sintomática)"
+    },
+    {
+      "id": "q21",
+      "block": 5,
+      "query": "¿Cómo calculo rápido la puntuación ABCD2 de mi paciente?",
+      "expected_section": "ESCALAS DE RIESGO (ABCD2 Y ABCD3-I)",
+      "expected_quote": "Edad >60 años (1), TA>140/90 mmHg (1), Trastorno del lenguaje (1) o Déficit motor (2), Duración 10-60 min (1) o >60 min (2), Diabetes (1)"
+    },
+    {
+      "id": "q22",
+      "block": 5,
+      "query": "¿A partir de qué puntuación empezamos a preocuparnos de verdad?",
+      "expected_section": "ESCALAS DE RIESGO (ABCD2 Y ABCD3-I)",
+      "expected_quote": "4-5: moderado riesgo... 6-7: elevado riesgo de recurrencia"
+    },
+    {
+      "id": "q23",
+      "block": 5,
+      "query": "¿Por qué la escala ABCD3-I se considera mejor que la de siempre?",
+      "expected_section": "ESCALAS DE RIESGO (ABCD2 Y ABCD3-I)",
+      "expected_quote": "La mayor validez predictiva de la escala ABCD 3-I... es lógica, dado que añade criterios paraclínicos... presencia de una estenosis vascular... y lesión isquémica en RM-DWI"
+    },
+    {
+      "id": "q24",
+      "block": 5,
+      "query": "¿Un paciente diabético de 65 años ya es de alto riesgo?",
+      "expected_section": "ESCALAS DE RIESGO (ABCD2 Y ABCD3-I)",
+      "expected_quote": "los síntomas motores... y de alteración del lenguaje, son los de más elevado riesgo de recurrencia, así como la duración prolongada"
+    },
+    {
+      "id": "q25",
+      "block": 6,
+      "query": "¿A todos los que se van a casa les ponemos lo mismo?",
+      "expected_section": "PREVENCIÓN SECUNDARIA Y TRATAMIENTO FARMACOLÓGICO",
+      "expected_quote": "En ABCD2 ≥4 se recomienda doble antiagregación a corto plazo (21-90 días) con aspirina y clopidogrel para pasar posteriormente a monoantiagregación."
+    },
+    {
+      "id": "q26",
+      "block": 6,
+      "query": "¿Y si el paciente tiene un riesgo bajito (ABCD2 ≤ 3)?",
+      "expected_section": "PREVENCIÓN SECUNDARIA Y TRATAMIENTO FARMACOLÓGICO",
+      "expected_quote": "Si ABCD2 ≤3 iniciar monoterapia con aspirina 100-300 mg/d o clopidogrel 75 mg/d."
+    },
+    {
+      "id": "q27",
+      "block": 6,
+      "query": "Si en el monitor pillamos una Fibrilación Auricular (FA), ¿seguimos con la aspirina?",
+      "expected_section": "PREVENCIÓN SECUNDARIA Y TRATAMIENTO FARMACOLÓGICO",
+      "expected_quote": "Si se detecta fibrilación auricular... será necesario iniciar anticoagulación oral... preferiblemente con anticoagulantes de acción directa."
+    },
+    {
+      "id": "q28",
+      "block": 6,
+      "query": "¿Por qué les ponemos estatinas si no han venido por el colesterol?",
+      "expected_section": "PREVENCIÓN SECUNDARIA Y TRATAMIENTO FARMACOLÓGICO",
+      "expected_quote": "es importante buscar la causa e iniciar el tratamiento antiagregante/anticoagulante y estatina de forma precoz."
+    },
+    {
+      "id": "q29",
+      "block": 6,
+      "query": "¿Cuándo tienen que volver a ver al paciente tras el alta de urgencias?",
+      "expected_section": "PREVENCIÓN SECUNDARIA Y TRATAMIENTO FARMACOLÓGICO",
+      "expected_quote": "deberá ser valorado en un plazo no superior a 4 semanas en la consulta de Neurología-Ictus dentro de una agenda específica como unidad de AIT"
+    }
+  ]
+}

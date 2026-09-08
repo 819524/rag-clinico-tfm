@@ -1,0 +1,3661 @@
+preguntas_mes,escenario,etiqueta,tipo,mes,coste_acumulado_eur
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,0,0.0
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,1,0.53
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,2,1.05
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,3,1.58
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,4,2.11
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,5,2.63
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,6,3.16
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,7,3.69
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,8,4.21
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,9,4.74
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,10,5.27
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,11,5.79
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,12,6.32
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,13,6.85
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,14,7.37
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,15,7.9
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,16,8.43
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,17,8.95
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,18,9.48
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,19,10.01
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,20,10.53
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,21,11.06
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,22,11.58
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,23,12.11
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,24,12.64
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,25,13.16
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,26,13.69
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,27,14.22
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,28,14.74
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,29,15.27
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,30,15.8
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,31,16.32
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,32,16.85
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,33,17.38
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,34,17.9
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,35,18.43
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,36,18.96
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,37,19.48
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,38,20.01
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,39,20.54
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,40,21.06
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,41,21.59
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,42,22.12
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,43,22.64
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,44,23.17
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,45,23.7
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,46,24.22
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,47,24.75
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,48,25.28
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,49,25.8
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,50,26.33
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,51,26.86
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,52,27.38
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,53,27.91
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,54,28.44
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,55,28.96
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,56,29.49
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,57,30.02
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,58,30.54
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,59,31.07
+1000,api::g25lite,Gemini 2.5 Flash-Lite,api,60,31.6
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,0,0.0
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,1,1.47
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,2,2.94
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,3,4.41
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,4,5.88
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,5,7.35
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,6,8.82
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,7,10.29
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,8,11.76
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,9,13.23
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,10,14.7
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,11,16.17
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,12,17.64
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,13,19.11
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,14,20.58
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,15,22.05
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,16,23.52
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,17,24.99
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,18,26.46
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,19,27.93
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,20,29.4
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,21,30.87
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,22,32.34
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,23,33.81
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,24,35.28
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,25,36.75
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,26,38.22
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,27,39.69
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,28,41.16
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,29,42.63
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,30,44.1
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,31,45.57
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,32,47.05
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,33,48.52
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,34,49.99
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,35,51.46
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,36,52.93
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,37,54.4
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,38,55.87
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,39,57.34
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,40,58.81
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,41,60.28
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,42,61.75
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,43,63.22
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,44,64.69
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,45,66.16
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,46,67.63
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,47,69.1
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,48,70.57
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,49,72.04
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,50,73.51
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,51,74.98
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,52,76.45
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,53,77.92
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,54,79.39
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,55,80.86
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,56,82.33
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,57,83.8
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,58,85.27
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,59,86.74
+1000,api::g31lite,Gemini 3.1 Flash-Lite,api,60,88.21
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,0,0.0
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,1,1.98
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,2,3.96
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,3,5.94
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,4,7.92
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,5,9.9
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,6,11.88
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,7,13.86
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,8,15.83
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,9,17.81
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,10,19.79
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,11,21.77
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,12,23.75
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,13,25.73
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,14,27.71
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,15,29.69
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,16,31.67
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,17,33.65
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,18,35.63
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,19,37.61
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,20,39.59
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,21,41.57
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,22,43.55
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,23,45.53
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,24,47.5
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,25,49.48
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,26,51.46
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,27,53.44
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,28,55.42
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,29,57.4
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,30,59.38
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,31,61.36
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,32,63.34
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,33,65.32
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,34,67.3
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,35,69.28
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,36,71.26
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,37,73.24
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,38,75.22
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,39,77.19
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,40,79.17
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,41,81.15
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,42,83.13
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,43,85.11
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,44,87.09
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,45,89.07
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,46,91.05
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,47,93.03
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,48,95.01
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,49,96.99
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,50,98.97
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,51,100.95
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,52,102.93
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,53,104.91
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,54,106.89
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,55,108.86
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,56,110.84
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,57,112.82
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,58,114.8
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,59,116.78
+1000,api::g35lite,Gemini 3.5 Flash-Lite,api,60,118.76
+1000,api::g36flash,Gemini 3.6 Flash,api,0,0.0
+1000,api::g36flash,Gemini 3.6 Flash,api,1,4.18
+1000,api::g36flash,Gemini 3.6 Flash,api,2,8.36
+1000,api::g36flash,Gemini 3.6 Flash,api,3,12.54
+1000,api::g36flash,Gemini 3.6 Flash,api,4,16.72
+1000,api::g36flash,Gemini 3.6 Flash,api,5,20.9
+1000,api::g36flash,Gemini 3.6 Flash,api,6,25.08
+1000,api::g36flash,Gemini 3.6 Flash,api,7,29.26
+1000,api::g36flash,Gemini 3.6 Flash,api,8,33.44
+1000,api::g36flash,Gemini 3.6 Flash,api,9,37.62
+1000,api::g36flash,Gemini 3.6 Flash,api,10,41.8
+1000,api::g36flash,Gemini 3.6 Flash,api,11,45.98
+1000,api::g36flash,Gemini 3.6 Flash,api,12,50.16
+1000,api::g36flash,Gemini 3.6 Flash,api,13,54.34
+1000,api::g36flash,Gemini 3.6 Flash,api,14,58.52
+1000,api::g36flash,Gemini 3.6 Flash,api,15,62.7
+1000,api::g36flash,Gemini 3.6 Flash,api,16,66.88
+1000,api::g36flash,Gemini 3.6 Flash,api,17,71.06
+1000,api::g36flash,Gemini 3.6 Flash,api,18,75.24
+1000,api::g36flash,Gemini 3.6 Flash,api,19,79.42
+1000,api::g36flash,Gemini 3.6 Flash,api,20,83.6
+1000,api::g36flash,Gemini 3.6 Flash,api,21,87.78
+1000,api::g36flash,Gemini 3.6 Flash,api,22,91.96
+1000,api::g36flash,Gemini 3.6 Flash,api,23,96.14
+1000,api::g36flash,Gemini 3.6 Flash,api,24,100.32
+1000,api::g36flash,Gemini 3.6 Flash,api,25,104.5
+1000,api::g36flash,Gemini 3.6 Flash,api,26,108.68
+1000,api::g36flash,Gemini 3.6 Flash,api,27,112.86
+1000,api::g36flash,Gemini 3.6 Flash,api,28,117.04
+1000,api::g36flash,Gemini 3.6 Flash,api,29,121.22
+1000,api::g36flash,Gemini 3.6 Flash,api,30,125.4
+1000,api::g36flash,Gemini 3.6 Flash,api,31,129.58
+1000,api::g36flash,Gemini 3.6 Flash,api,32,133.76
+1000,api::g36flash,Gemini 3.6 Flash,api,33,137.94
+1000,api::g36flash,Gemini 3.6 Flash,api,34,142.12
+1000,api::g36flash,Gemini 3.6 Flash,api,35,146.3
+1000,api::g36flash,Gemini 3.6 Flash,api,36,150.48
+1000,api::g36flash,Gemini 3.6 Flash,api,37,154.66
+1000,api::g36flash,Gemini 3.6 Flash,api,38,158.84
+1000,api::g36flash,Gemini 3.6 Flash,api,39,163.02
+1000,api::g36flash,Gemini 3.6 Flash,api,40,167.2
+1000,api::g36flash,Gemini 3.6 Flash,api,41,171.38
+1000,api::g36flash,Gemini 3.6 Flash,api,42,175.56
+1000,api::g36flash,Gemini 3.6 Flash,api,43,179.74
+1000,api::g36flash,Gemini 3.6 Flash,api,44,183.92
+1000,api::g36flash,Gemini 3.6 Flash,api,45,188.1
+1000,api::g36flash,Gemini 3.6 Flash,api,46,192.28
+1000,api::g36flash,Gemini 3.6 Flash,api,47,196.46
+1000,api::g36flash,Gemini 3.6 Flash,api,48,200.64
+1000,api::g36flash,Gemini 3.6 Flash,api,49,204.82
+1000,api::g36flash,Gemini 3.6 Flash,api,50,209.0
+1000,api::g36flash,Gemini 3.6 Flash,api,51,213.18
+1000,api::g36flash,Gemini 3.6 Flash,api,52,217.36
+1000,api::g36flash,Gemini 3.6 Flash,api,53,221.54
+1000,api::g36flash,Gemini 3.6 Flash,api,54,225.72
+1000,api::g36flash,Gemini 3.6 Flash,api,55,229.9
+1000,api::g36flash,Gemini 3.6 Flash,api,56,234.08
+1000,api::g36flash,Gemini 3.6 Flash,api,57,238.26
+1000,api::g36flash,Gemini 3.6 Flash,api,58,242.44
+1000,api::g36flash,Gemini 3.6 Flash,api,59,246.62
+1000,api::g36flash,Gemini 3.6 Flash,api,60,250.8
+1000,api::gpt54mini,GPT-5.4 mini,api,0,0.0
+1000,api::gpt54mini,GPT-5.4 mini,api,1,4.41
+1000,api::gpt54mini,GPT-5.4 mini,api,2,8.82
+1000,api::gpt54mini,GPT-5.4 mini,api,3,13.23
+1000,api::gpt54mini,GPT-5.4 mini,api,4,17.64
+1000,api::gpt54mini,GPT-5.4 mini,api,5,22.05
+1000,api::gpt54mini,GPT-5.4 mini,api,6,26.46
+1000,api::gpt54mini,GPT-5.4 mini,api,7,30.87
+1000,api::gpt54mini,GPT-5.4 mini,api,8,35.28
+1000,api::gpt54mini,GPT-5.4 mini,api,9,39.69
+1000,api::gpt54mini,GPT-5.4 mini,api,10,44.1
+1000,api::gpt54mini,GPT-5.4 mini,api,11,48.52
+1000,api::gpt54mini,GPT-5.4 mini,api,12,52.93
+1000,api::gpt54mini,GPT-5.4 mini,api,13,57.34
+1000,api::gpt54mini,GPT-5.4 mini,api,14,61.75
+1000,api::gpt54mini,GPT-5.4 mini,api,15,66.16
+1000,api::gpt54mini,GPT-5.4 mini,api,16,70.57
+1000,api::gpt54mini,GPT-5.4 mini,api,17,74.98
+1000,api::gpt54mini,GPT-5.4 mini,api,18,79.39
+1000,api::gpt54mini,GPT-5.4 mini,api,19,83.8
+1000,api::gpt54mini,GPT-5.4 mini,api,20,88.21
+1000,api::gpt54mini,GPT-5.4 mini,api,21,92.62
+1000,api::gpt54mini,GPT-5.4 mini,api,22,97.03
+1000,api::gpt54mini,GPT-5.4 mini,api,23,101.44
+1000,api::gpt54mini,GPT-5.4 mini,api,24,105.85
+1000,api::gpt54mini,GPT-5.4 mini,api,25,110.26
+1000,api::gpt54mini,GPT-5.4 mini,api,26,114.67
+1000,api::gpt54mini,GPT-5.4 mini,api,27,119.08
+1000,api::gpt54mini,GPT-5.4 mini,api,28,123.49
+1000,api::gpt54mini,GPT-5.4 mini,api,29,127.9
+1000,api::gpt54mini,GPT-5.4 mini,api,30,132.31
+1000,api::gpt54mini,GPT-5.4 mini,api,31,136.72
+1000,api::gpt54mini,GPT-5.4 mini,api,32,141.14
+1000,api::gpt54mini,GPT-5.4 mini,api,33,145.55
+1000,api::gpt54mini,GPT-5.4 mini,api,34,149.96
+1000,api::gpt54mini,GPT-5.4 mini,api,35,154.37
+1000,api::gpt54mini,GPT-5.4 mini,api,36,158.78
+1000,api::gpt54mini,GPT-5.4 mini,api,37,163.19
+1000,api::gpt54mini,GPT-5.4 mini,api,38,167.6
+1000,api::gpt54mini,GPT-5.4 mini,api,39,172.01
+1000,api::gpt54mini,GPT-5.4 mini,api,40,176.42
+1000,api::gpt54mini,GPT-5.4 mini,api,41,180.83
+1000,api::gpt54mini,GPT-5.4 mini,api,42,185.24
+1000,api::gpt54mini,GPT-5.4 mini,api,43,189.65
+1000,api::gpt54mini,GPT-5.4 mini,api,44,194.06
+1000,api::gpt54mini,GPT-5.4 mini,api,45,198.47
+1000,api::gpt54mini,GPT-5.4 mini,api,46,202.88
+1000,api::gpt54mini,GPT-5.4 mini,api,47,207.29
+1000,api::gpt54mini,GPT-5.4 mini,api,48,211.7
+1000,api::gpt54mini,GPT-5.4 mini,api,49,216.11
+1000,api::gpt54mini,GPT-5.4 mini,api,50,220.52
+1000,api::gpt54mini,GPT-5.4 mini,api,51,224.93
+1000,api::gpt54mini,GPT-5.4 mini,api,52,229.34
+1000,api::gpt54mini,GPT-5.4 mini,api,53,233.76
+1000,api::gpt54mini,GPT-5.4 mini,api,54,238.17
+1000,api::gpt54mini,GPT-5.4 mini,api,55,242.58
+1000,api::gpt54mini,GPT-5.4 mini,api,56,246.99
+1000,api::gpt54mini,GPT-5.4 mini,api,57,251.4
+1000,api::gpt54mini,GPT-5.4 mini,api,58,255.81
+1000,api::gpt54mini,GPT-5.4 mini,api,59,260.22
+1000,api::gpt54mini,GPT-5.4 mini,api,60,264.63
+1000,api::gpt56luna,GPT-5.6 luna,api,0,0.0
+1000,api::gpt56luna,GPT-5.6 luna,api,1,1.18
+1000,api::gpt56luna,GPT-5.6 luna,api,2,2.35
+1000,api::gpt56luna,GPT-5.6 luna,api,3,3.53
+1000,api::gpt56luna,GPT-5.6 luna,api,4,4.7
+1000,api::gpt56luna,GPT-5.6 luna,api,5,5.88
+1000,api::gpt56luna,GPT-5.6 luna,api,6,7.06
+1000,api::gpt56luna,GPT-5.6 luna,api,7,8.23
+1000,api::gpt56luna,GPT-5.6 luna,api,8,9.41
+1000,api::gpt56luna,GPT-5.6 luna,api,9,10.59
+1000,api::gpt56luna,GPT-5.6 luna,api,10,11.76
+1000,api::gpt56luna,GPT-5.6 luna,api,11,12.94
+1000,api::gpt56luna,GPT-5.6 luna,api,12,14.11
+1000,api::gpt56luna,GPT-5.6 luna,api,13,15.29
+1000,api::gpt56luna,GPT-5.6 luna,api,14,16.47
+1000,api::gpt56luna,GPT-5.6 luna,api,15,17.64
+1000,api::gpt56luna,GPT-5.6 luna,api,16,18.82
+1000,api::gpt56luna,GPT-5.6 luna,api,17,19.99
+1000,api::gpt56luna,GPT-5.6 luna,api,18,21.17
+1000,api::gpt56luna,GPT-5.6 luna,api,19,22.35
+1000,api::gpt56luna,GPT-5.6 luna,api,20,23.52
+1000,api::gpt56luna,GPT-5.6 luna,api,21,24.7
+1000,api::gpt56luna,GPT-5.6 luna,api,22,25.87
+1000,api::gpt56luna,GPT-5.6 luna,api,23,27.05
+1000,api::gpt56luna,GPT-5.6 luna,api,24,28.23
+1000,api::gpt56luna,GPT-5.6 luna,api,25,29.4
+1000,api::gpt56luna,GPT-5.6 luna,api,26,30.58
+1000,api::gpt56luna,GPT-5.6 luna,api,27,31.76
+1000,api::gpt56luna,GPT-5.6 luna,api,28,32.93
+1000,api::gpt56luna,GPT-5.6 luna,api,29,34.11
+1000,api::gpt56luna,GPT-5.6 luna,api,30,35.28
+1000,api::gpt56luna,GPT-5.6 luna,api,31,36.46
+1000,api::gpt56luna,GPT-5.6 luna,api,32,37.64
+1000,api::gpt56luna,GPT-5.6 luna,api,33,38.81
+1000,api::gpt56luna,GPT-5.6 luna,api,34,39.99
+1000,api::gpt56luna,GPT-5.6 luna,api,35,41.16
+1000,api::gpt56luna,GPT-5.6 luna,api,36,42.34
+1000,api::gpt56luna,GPT-5.6 luna,api,37,43.52
+1000,api::gpt56luna,GPT-5.6 luna,api,38,44.69
+1000,api::gpt56luna,GPT-5.6 luna,api,39,45.87
+1000,api::gpt56luna,GPT-5.6 luna,api,40,47.05
+1000,api::gpt56luna,GPT-5.6 luna,api,41,48.22
+1000,api::gpt56luna,GPT-5.6 luna,api,42,49.4
+1000,api::gpt56luna,GPT-5.6 luna,api,43,50.57
+1000,api::gpt56luna,GPT-5.6 luna,api,44,51.75
+1000,api::gpt56luna,GPT-5.6 luna,api,45,52.93
+1000,api::gpt56luna,GPT-5.6 luna,api,46,54.1
+1000,api::gpt56luna,GPT-5.6 luna,api,47,55.28
+1000,api::gpt56luna,GPT-5.6 luna,api,48,56.45
+1000,api::gpt56luna,GPT-5.6 luna,api,49,57.63
+1000,api::gpt56luna,GPT-5.6 luna,api,50,58.81
+1000,api::gpt56luna,GPT-5.6 luna,api,51,59.98
+1000,api::gpt56luna,GPT-5.6 luna,api,52,61.16
+1000,api::gpt56luna,GPT-5.6 luna,api,53,62.33
+1000,api::gpt56luna,GPT-5.6 luna,api,54,63.51
+1000,api::gpt56luna,GPT-5.6 luna,api,55,64.69
+1000,api::gpt56luna,GPT-5.6 luna,api,56,65.86
+1000,api::gpt56luna,GPT-5.6 luna,api,57,67.04
+1000,api::gpt56luna,GPT-5.6 luna,api,58,68.22
+1000,api::gpt56luna,GPT-5.6 luna,api,59,69.39
+1000,api::gpt56luna,GPT-5.6 luna,api,60,70.57
+1000,api::gpt5mini,GPT-5 mini,api,0,0.0
+1000,api::gpt5mini,GPT-5 mini,api,1,1.62
+1000,api::gpt5mini,GPT-5 mini,api,2,3.25
+1000,api::gpt5mini,GPT-5 mini,api,3,4.87
+1000,api::gpt5mini,GPT-5 mini,api,4,6.5
+1000,api::gpt5mini,GPT-5 mini,api,5,8.12
+1000,api::gpt5mini,GPT-5 mini,api,6,9.74
+1000,api::gpt5mini,GPT-5 mini,api,7,11.37
+1000,api::gpt5mini,GPT-5 mini,api,8,12.99
+1000,api::gpt5mini,GPT-5 mini,api,9,14.61
+1000,api::gpt5mini,GPT-5 mini,api,10,16.24
+1000,api::gpt5mini,GPT-5 mini,api,11,17.86
+1000,api::gpt5mini,GPT-5 mini,api,12,19.49
+1000,api::gpt5mini,GPT-5 mini,api,13,21.11
+1000,api::gpt5mini,GPT-5 mini,api,14,22.73
+1000,api::gpt5mini,GPT-5 mini,api,15,24.36
+1000,api::gpt5mini,GPT-5 mini,api,16,25.98
+1000,api::gpt5mini,GPT-5 mini,api,17,27.61
+1000,api::gpt5mini,GPT-5 mini,api,18,29.23
+1000,api::gpt5mini,GPT-5 mini,api,19,30.85
+1000,api::gpt5mini,GPT-5 mini,api,20,32.48
+1000,api::gpt5mini,GPT-5 mini,api,21,34.1
+1000,api::gpt5mini,GPT-5 mini,api,22,35.72
+1000,api::gpt5mini,GPT-5 mini,api,23,37.35
+1000,api::gpt5mini,GPT-5 mini,api,24,38.97
+1000,api::gpt5mini,GPT-5 mini,api,25,40.6
+1000,api::gpt5mini,GPT-5 mini,api,26,42.22
+1000,api::gpt5mini,GPT-5 mini,api,27,43.84
+1000,api::gpt5mini,GPT-5 mini,api,28,45.47
+1000,api::gpt5mini,GPT-5 mini,api,29,47.09
+1000,api::gpt5mini,GPT-5 mini,api,30,48.72
+1000,api::gpt5mini,GPT-5 mini,api,31,50.34
+1000,api::gpt5mini,GPT-5 mini,api,32,51.96
+1000,api::gpt5mini,GPT-5 mini,api,33,53.59
+1000,api::gpt5mini,GPT-5 mini,api,34,55.21
+1000,api::gpt5mini,GPT-5 mini,api,35,56.83
+1000,api::gpt5mini,GPT-5 mini,api,36,58.46
+1000,api::gpt5mini,GPT-5 mini,api,37,60.08
+1000,api::gpt5mini,GPT-5 mini,api,38,61.71
+1000,api::gpt5mini,GPT-5 mini,api,39,63.33
+1000,api::gpt5mini,GPT-5 mini,api,40,64.95
+1000,api::gpt5mini,GPT-5 mini,api,41,66.58
+1000,api::gpt5mini,GPT-5 mini,api,42,68.2
+1000,api::gpt5mini,GPT-5 mini,api,43,69.83
+1000,api::gpt5mini,GPT-5 mini,api,44,71.45
+1000,api::gpt5mini,GPT-5 mini,api,45,73.07
+1000,api::gpt5mini,GPT-5 mini,api,46,74.7
+1000,api::gpt5mini,GPT-5 mini,api,47,76.32
+1000,api::gpt5mini,GPT-5 mini,api,48,77.94
+1000,api::gpt5mini,GPT-5 mini,api,49,79.57
+1000,api::gpt5mini,GPT-5 mini,api,50,81.19
+1000,api::gpt5mini,GPT-5 mini,api,51,82.82
+1000,api::gpt5mini,GPT-5 mini,api,52,84.44
+1000,api::gpt5mini,GPT-5 mini,api,53,86.06
+1000,api::gpt5mini,GPT-5 mini,api,54,87.69
+1000,api::gpt5mini,GPT-5 mini,api,55,89.31
+1000,api::gpt5mini,GPT-5 mini,api,56,90.94
+1000,api::gpt5mini,GPT-5 mini,api,57,92.56
+1000,api::gpt5mini,GPT-5 mini,api,58,94.18
+1000,api::gpt5mini,GPT-5 mini,api,59,95.81
+1000,api::gpt5mini,GPT-5 mini,api,60,97.43
+1000,api::gpt5nano,GPT-5 nano,api,0,0.0
+1000,api::gpt5nano,GPT-5 nano,api,1,0.32
+1000,api::gpt5nano,GPT-5 nano,api,2,0.65
+1000,api::gpt5nano,GPT-5 nano,api,3,0.97
+1000,api::gpt5nano,GPT-5 nano,api,4,1.3
+1000,api::gpt5nano,GPT-5 nano,api,5,1.62
+1000,api::gpt5nano,GPT-5 nano,api,6,1.95
+1000,api::gpt5nano,GPT-5 nano,api,7,2.27
+1000,api::gpt5nano,GPT-5 nano,api,8,2.6
+1000,api::gpt5nano,GPT-5 nano,api,9,2.92
+1000,api::gpt5nano,GPT-5 nano,api,10,3.25
+1000,api::gpt5nano,GPT-5 nano,api,11,3.57
+1000,api::gpt5nano,GPT-5 nano,api,12,3.9
+1000,api::gpt5nano,GPT-5 nano,api,13,4.22
+1000,api::gpt5nano,GPT-5 nano,api,14,4.55
+1000,api::gpt5nano,GPT-5 nano,api,15,4.87
+1000,api::gpt5nano,GPT-5 nano,api,16,5.2
+1000,api::gpt5nano,GPT-5 nano,api,17,5.52
+1000,api::gpt5nano,GPT-5 nano,api,18,5.85
+1000,api::gpt5nano,GPT-5 nano,api,19,6.17
+1000,api::gpt5nano,GPT-5 nano,api,20,6.5
+1000,api::gpt5nano,GPT-5 nano,api,21,6.82
+1000,api::gpt5nano,GPT-5 nano,api,22,7.14
+1000,api::gpt5nano,GPT-5 nano,api,23,7.47
+1000,api::gpt5nano,GPT-5 nano,api,24,7.79
+1000,api::gpt5nano,GPT-5 nano,api,25,8.12
+1000,api::gpt5nano,GPT-5 nano,api,26,8.44
+1000,api::gpt5nano,GPT-5 nano,api,27,8.77
+1000,api::gpt5nano,GPT-5 nano,api,28,9.09
+1000,api::gpt5nano,GPT-5 nano,api,29,9.42
+1000,api::gpt5nano,GPT-5 nano,api,30,9.74
+1000,api::gpt5nano,GPT-5 nano,api,31,10.07
+1000,api::gpt5nano,GPT-5 nano,api,32,10.39
+1000,api::gpt5nano,GPT-5 nano,api,33,10.72
+1000,api::gpt5nano,GPT-5 nano,api,34,11.04
+1000,api::gpt5nano,GPT-5 nano,api,35,11.37
+1000,api::gpt5nano,GPT-5 nano,api,36,11.69
+1000,api::gpt5nano,GPT-5 nano,api,37,12.02
+1000,api::gpt5nano,GPT-5 nano,api,38,12.34
+1000,api::gpt5nano,GPT-5 nano,api,39,12.67
+1000,api::gpt5nano,GPT-5 nano,api,40,12.99
+1000,api::gpt5nano,GPT-5 nano,api,41,13.32
+1000,api::gpt5nano,GPT-5 nano,api,42,13.64
+1000,api::gpt5nano,GPT-5 nano,api,43,13.97
+1000,api::gpt5nano,GPT-5 nano,api,44,14.29
+1000,api::gpt5nano,GPT-5 nano,api,45,14.61
+1000,api::gpt5nano,GPT-5 nano,api,46,14.94
+1000,api::gpt5nano,GPT-5 nano,api,47,15.26
+1000,api::gpt5nano,GPT-5 nano,api,48,15.59
+1000,api::gpt5nano,GPT-5 nano,api,49,15.91
+1000,api::gpt5nano,GPT-5 nano,api,50,16.24
+1000,api::gpt5nano,GPT-5 nano,api,51,16.56
+1000,api::gpt5nano,GPT-5 nano,api,52,16.89
+1000,api::gpt5nano,GPT-5 nano,api,53,17.21
+1000,api::gpt5nano,GPT-5 nano,api,54,17.54
+1000,api::gpt5nano,GPT-5 nano,api,55,17.86
+1000,api::gpt5nano,GPT-5 nano,api,56,18.19
+1000,api::gpt5nano,GPT-5 nano,api,57,18.51
+1000,api::gpt5nano,GPT-5 nano,api,58,18.84
+1000,api::gpt5nano,GPT-5 nano,api,59,19.16
+1000,api::gpt5nano,GPT-5 nano,api,60,19.49
+1000,api::haiku45,Claude Haiku 4.5,api,0,0.0
+1000,api::haiku45,Claude Haiku 4.5,api,1,5.57
+1000,api::haiku45,Claude Haiku 4.5,api,2,11.15
+1000,api::haiku45,Claude Haiku 4.5,api,3,16.72
+1000,api::haiku45,Claude Haiku 4.5,api,4,22.29
+1000,api::haiku45,Claude Haiku 4.5,api,5,27.87
+1000,api::haiku45,Claude Haiku 4.5,api,6,33.44
+1000,api::haiku45,Claude Haiku 4.5,api,7,39.01
+1000,api::haiku45,Claude Haiku 4.5,api,8,44.59
+1000,api::haiku45,Claude Haiku 4.5,api,9,50.16
+1000,api::haiku45,Claude Haiku 4.5,api,10,55.73
+1000,api::haiku45,Claude Haiku 4.5,api,11,61.31
+1000,api::haiku45,Claude Haiku 4.5,api,12,66.88
+1000,api::haiku45,Claude Haiku 4.5,api,13,72.45
+1000,api::haiku45,Claude Haiku 4.5,api,14,78.03
+1000,api::haiku45,Claude Haiku 4.5,api,15,83.6
+1000,api::haiku45,Claude Haiku 4.5,api,16,89.17
+1000,api::haiku45,Claude Haiku 4.5,api,17,94.75
+1000,api::haiku45,Claude Haiku 4.5,api,18,100.32
+1000,api::haiku45,Claude Haiku 4.5,api,19,105.89
+1000,api::haiku45,Claude Haiku 4.5,api,20,111.47
+1000,api::haiku45,Claude Haiku 4.5,api,21,117.04
+1000,api::haiku45,Claude Haiku 4.5,api,22,122.61
+1000,api::haiku45,Claude Haiku 4.5,api,23,128.18
+1000,api::haiku45,Claude Haiku 4.5,api,24,133.76
+1000,api::haiku45,Claude Haiku 4.5,api,25,139.33
+1000,api::haiku45,Claude Haiku 4.5,api,26,144.9
+1000,api::haiku45,Claude Haiku 4.5,api,27,150.48
+1000,api::haiku45,Claude Haiku 4.5,api,28,156.05
+1000,api::haiku45,Claude Haiku 4.5,api,29,161.62
+1000,api::haiku45,Claude Haiku 4.5,api,30,167.2
+1000,api::haiku45,Claude Haiku 4.5,api,31,172.77
+1000,api::haiku45,Claude Haiku 4.5,api,32,178.34
+1000,api::haiku45,Claude Haiku 4.5,api,33,183.92
+1000,api::haiku45,Claude Haiku 4.5,api,34,189.49
+1000,api::haiku45,Claude Haiku 4.5,api,35,195.06
+1000,api::haiku45,Claude Haiku 4.5,api,36,200.64
+1000,api::haiku45,Claude Haiku 4.5,api,37,206.21
+1000,api::haiku45,Claude Haiku 4.5,api,38,211.78
+1000,api::haiku45,Claude Haiku 4.5,api,39,217.36
+1000,api::haiku45,Claude Haiku 4.5,api,40,222.93
+1000,api::haiku45,Claude Haiku 4.5,api,41,228.5
+1000,api::haiku45,Claude Haiku 4.5,api,42,234.08
+1000,api::haiku45,Claude Haiku 4.5,api,43,239.65
+1000,api::haiku45,Claude Haiku 4.5,api,44,245.22
+1000,api::haiku45,Claude Haiku 4.5,api,45,250.8
+1000,api::haiku45,Claude Haiku 4.5,api,46,256.37
+1000,api::haiku45,Claude Haiku 4.5,api,47,261.94
+1000,api::haiku45,Claude Haiku 4.5,api,48,267.52
+1000,api::haiku45,Claude Haiku 4.5,api,49,273.09
+1000,api::haiku45,Claude Haiku 4.5,api,50,278.66
+1000,api::haiku45,Claude Haiku 4.5,api,51,284.24
+1000,api::haiku45,Claude Haiku 4.5,api,52,289.81
+1000,api::haiku45,Claude Haiku 4.5,api,53,295.38
+1000,api::haiku45,Claude Haiku 4.5,api,54,300.96
+1000,api::haiku45,Claude Haiku 4.5,api,55,306.53
+1000,api::haiku45,Claude Haiku 4.5,api,56,312.1
+1000,api::haiku45,Claude Haiku 4.5,api,57,317.68
+1000,api::haiku45,Claude Haiku 4.5,api,58,323.25
+1000,api::haiku45,Claude Haiku 4.5,api,59,328.82
+1000,api::haiku45,Claude Haiku 4.5,api,60,334.4
+1000,api::opus5,Claude Opus 5,api,0,0.0
+1000,api::opus5,Claude Opus 5,api,1,27.87
+1000,api::opus5,Claude Opus 5,api,2,55.73
+1000,api::opus5,Claude Opus 5,api,3,83.6
+1000,api::opus5,Claude Opus 5,api,4,111.47
+1000,api::opus5,Claude Opus 5,api,5,139.33
+1000,api::opus5,Claude Opus 5,api,6,167.2
+1000,api::opus5,Claude Opus 5,api,7,195.06
+1000,api::opus5,Claude Opus 5,api,8,222.93
+1000,api::opus5,Claude Opus 5,api,9,250.8
+1000,api::opus5,Claude Opus 5,api,10,278.66
+1000,api::opus5,Claude Opus 5,api,11,306.53
+1000,api::opus5,Claude Opus 5,api,12,334.4
+1000,api::opus5,Claude Opus 5,api,13,362.26
+1000,api::opus5,Claude Opus 5,api,14,390.13
+1000,api::opus5,Claude Opus 5,api,15,417.99
+1000,api::opus5,Claude Opus 5,api,16,445.86
+1000,api::opus5,Claude Opus 5,api,17,473.73
+1000,api::opus5,Claude Opus 5,api,18,501.59
+1000,api::opus5,Claude Opus 5,api,19,529.46
+1000,api::opus5,Claude Opus 5,api,20,557.33
+1000,api::opus5,Claude Opus 5,api,21,585.19
+1000,api::opus5,Claude Opus 5,api,22,613.06
+1000,api::opus5,Claude Opus 5,api,23,640.92
+1000,api::opus5,Claude Opus 5,api,24,668.79
+1000,api::opus5,Claude Opus 5,api,25,696.66
+1000,api::opus5,Claude Opus 5,api,26,724.52
+1000,api::opus5,Claude Opus 5,api,27,752.39
+1000,api::opus5,Claude Opus 5,api,28,780.26
+1000,api::opus5,Claude Opus 5,api,29,808.12
+1000,api::opus5,Claude Opus 5,api,30,835.99
+1000,api::opus5,Claude Opus 5,api,31,863.85
+1000,api::opus5,Claude Opus 5,api,32,891.72
+1000,api::opus5,Claude Opus 5,api,33,919.59
+1000,api::opus5,Claude Opus 5,api,34,947.45
+1000,api::opus5,Claude Opus 5,api,35,975.32
+1000,api::opus5,Claude Opus 5,api,36,1003.19
+1000,api::opus5,Claude Opus 5,api,37,1031.05
+1000,api::opus5,Claude Opus 5,api,38,1058.92
+1000,api::opus5,Claude Opus 5,api,39,1086.78
+1000,api::opus5,Claude Opus 5,api,40,1114.65
+1000,api::opus5,Claude Opus 5,api,41,1142.52
+1000,api::opus5,Claude Opus 5,api,42,1170.38
+1000,api::opus5,Claude Opus 5,api,43,1198.25
+1000,api::opus5,Claude Opus 5,api,44,1226.12
+1000,api::opus5,Claude Opus 5,api,45,1253.98
+1000,api::opus5,Claude Opus 5,api,46,1281.85
+1000,api::opus5,Claude Opus 5,api,47,1309.71
+1000,api::opus5,Claude Opus 5,api,48,1337.58
+1000,api::opus5,Claude Opus 5,api,49,1365.45
+1000,api::opus5,Claude Opus 5,api,50,1393.31
+1000,api::opus5,Claude Opus 5,api,51,1421.18
+1000,api::opus5,Claude Opus 5,api,52,1449.05
+1000,api::opus5,Claude Opus 5,api,53,1476.91
+1000,api::opus5,Claude Opus 5,api,54,1504.78
+1000,api::opus5,Claude Opus 5,api,55,1532.64
+1000,api::opus5,Claude Opus 5,api,56,1560.51
+1000,api::opus5,Claude Opus 5,api,57,1588.38
+1000,api::opus5,Claude Opus 5,api,58,1616.24
+1000,api::opus5,Claude Opus 5,api,59,1644.11
+1000,api::opus5,Claude Opus 5,api,60,1671.98
+1000,api::sonnet5,Claude Sonnet 5,api,0,0.0
+1000,api::sonnet5,Claude Sonnet 5,api,1,11.15
+1000,api::sonnet5,Claude Sonnet 5,api,2,22.29
+1000,api::sonnet5,Claude Sonnet 5,api,3,33.44
+1000,api::sonnet5,Claude Sonnet 5,api,4,44.59
+1000,api::sonnet5,Claude Sonnet 5,api,5,55.73
+1000,api::sonnet5,Claude Sonnet 5,api,6,66.88
+1000,api::sonnet5,Claude Sonnet 5,api,7,78.03
+1000,api::sonnet5,Claude Sonnet 5,api,8,89.17
+1000,api::sonnet5,Claude Sonnet 5,api,9,100.32
+1000,api::sonnet5,Claude Sonnet 5,api,10,111.47
+1000,api::sonnet5,Claude Sonnet 5,api,11,122.61
+1000,api::sonnet5,Claude Sonnet 5,api,12,133.76
+1000,api::sonnet5,Claude Sonnet 5,api,13,144.9
+1000,api::sonnet5,Claude Sonnet 5,api,14,156.05
+1000,api::sonnet5,Claude Sonnet 5,api,15,167.2
+1000,api::sonnet5,Claude Sonnet 5,api,16,178.34
+1000,api::sonnet5,Claude Sonnet 5,api,17,189.49
+1000,api::sonnet5,Claude Sonnet 5,api,18,200.64
+1000,api::sonnet5,Claude Sonnet 5,api,19,211.78
+1000,api::sonnet5,Claude Sonnet 5,api,20,222.93
+1000,api::sonnet5,Claude Sonnet 5,api,21,234.08
+1000,api::sonnet5,Claude Sonnet 5,api,22,245.22
+1000,api::sonnet5,Claude Sonnet 5,api,23,256.37
+1000,api::sonnet5,Claude Sonnet 5,api,24,267.52
+1000,api::sonnet5,Claude Sonnet 5,api,25,278.66
+1000,api::sonnet5,Claude Sonnet 5,api,26,289.81
+1000,api::sonnet5,Claude Sonnet 5,api,27,300.96
+1000,api::sonnet5,Claude Sonnet 5,api,28,312.1
+1000,api::sonnet5,Claude Sonnet 5,api,29,323.25
+1000,api::sonnet5,Claude Sonnet 5,api,30,334.4
+1000,api::sonnet5,Claude Sonnet 5,api,31,345.54
+1000,api::sonnet5,Claude Sonnet 5,api,32,356.69
+1000,api::sonnet5,Claude Sonnet 5,api,33,367.83
+1000,api::sonnet5,Claude Sonnet 5,api,34,378.98
+1000,api::sonnet5,Claude Sonnet 5,api,35,390.13
+1000,api::sonnet5,Claude Sonnet 5,api,36,401.27
+1000,api::sonnet5,Claude Sonnet 5,api,37,412.42
+1000,api::sonnet5,Claude Sonnet 5,api,38,423.57
+1000,api::sonnet5,Claude Sonnet 5,api,39,434.71
+1000,api::sonnet5,Claude Sonnet 5,api,40,445.86
+1000,api::sonnet5,Claude Sonnet 5,api,41,457.01
+1000,api::sonnet5,Claude Sonnet 5,api,42,468.15
+1000,api::sonnet5,Claude Sonnet 5,api,43,479.3
+1000,api::sonnet5,Claude Sonnet 5,api,44,490.45
+1000,api::sonnet5,Claude Sonnet 5,api,45,501.59
+1000,api::sonnet5,Claude Sonnet 5,api,46,512.74
+1000,api::sonnet5,Claude Sonnet 5,api,47,523.89
+1000,api::sonnet5,Claude Sonnet 5,api,48,535.03
+1000,api::sonnet5,Claude Sonnet 5,api,49,546.18
+1000,api::sonnet5,Claude Sonnet 5,api,50,557.33
+1000,api::sonnet5,Claude Sonnet 5,api,51,568.47
+1000,api::sonnet5,Claude Sonnet 5,api,52,579.62
+1000,api::sonnet5,Claude Sonnet 5,api,53,590.76
+1000,api::sonnet5,Claude Sonnet 5,api,54,601.91
+1000,api::sonnet5,Claude Sonnet 5,api,55,613.06
+1000,api::sonnet5,Claude Sonnet 5,api,56,624.2
+1000,api::sonnet5,Claude Sonnet 5,api,57,635.35
+1000,api::sonnet5,Claude Sonnet 5,api,58,646.5
+1000,api::sonnet5,Claude Sonnet 5,api,59,657.64
+1000,api::sonnet5,Claude Sonnet 5,api,60,668.79
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,0,0.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,1,1044.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,2,2088.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,3,3132.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,4,4176.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,5,5220.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,6,6264.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,7,7308.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,8,8352.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,9,9396.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,10,10440.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,11,11484.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,12,12528.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,13,13572.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,14,14616.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,15,15660.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,16,16704.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,17,17748.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,18,18792.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,19,19836.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,20,20880.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,21,21924.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,22,22968.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,23,24012.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,24,25056.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,25,26100.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,26,27144.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,27,28188.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,28,29232.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,29,30276.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,30,31320.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,31,32364.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,32,33408.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,33,34452.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,34,35496.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,35,36540.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,36,37584.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,37,38628.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,38,39672.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,39,40716.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,40,41760.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,41,42804.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,42,43848.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,43,44892.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,44,45936.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,45,46980.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,46,48024.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,47,49068.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,48,50112.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,49,51156.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,50,52200.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,51,53244.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,52,54288.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,53,55332.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,54,56376.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,55,57420.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,56,58464.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,57,59508.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,58,60552.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,59,61596.0
+1000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,60,62640.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,0,0.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,1,396.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,2,792.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,3,1188.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,4,1584.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,5,1980.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,6,2376.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,7,2772.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,8,3168.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,9,3564.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,10,3960.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,11,4356.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,12,4752.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,13,5148.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,14,5544.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,15,5940.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,16,6336.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,17,6732.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,18,7128.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,19,7524.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,20,7920.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,21,8316.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,22,8712.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,23,9108.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,24,9504.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,25,9900.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,26,10296.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,27,10692.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,28,11088.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,29,11484.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,30,11880.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,31,12276.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,32,12672.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,33,13068.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,34,13464.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,35,13860.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,36,14256.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,37,14652.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,38,15048.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,39,15444.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,40,15840.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,41,16236.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,42,16632.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,43,17028.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,44,17424.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,45,17820.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,46,18216.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,47,18612.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,48,19008.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,49,19404.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,50,19800.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,51,20196.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,52,20592.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,53,20988.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,54,21384.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,55,21780.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,56,22176.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,57,22572.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,58,22968.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,59,23364.0
+1000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,60,23760.0
+1000,local::5090,Estación RTX 5090,local,0,7500.0
+1000,local::5090,Estación RTX 5090,local,1,7541.39
+1000,local::5090,Estación RTX 5090,local,2,7582.79
+1000,local::5090,Estación RTX 5090,local,3,7624.18
+1000,local::5090,Estación RTX 5090,local,4,7665.57
+1000,local::5090,Estación RTX 5090,local,5,7706.96
+1000,local::5090,Estación RTX 5090,local,6,7748.36
+1000,local::5090,Estación RTX 5090,local,7,7789.75
+1000,local::5090,Estación RTX 5090,local,8,7831.14
+1000,local::5090,Estación RTX 5090,local,9,7872.53
+1000,local::5090,Estación RTX 5090,local,10,7913.93
+1000,local::5090,Estación RTX 5090,local,11,7955.32
+1000,local::5090,Estación RTX 5090,local,12,7996.71
+1000,local::5090,Estación RTX 5090,local,13,8038.1
+1000,local::5090,Estación RTX 5090,local,14,8079.5
+1000,local::5090,Estación RTX 5090,local,15,8120.89
+1000,local::5090,Estación RTX 5090,local,16,8162.28
+1000,local::5090,Estación RTX 5090,local,17,8203.67
+1000,local::5090,Estación RTX 5090,local,18,8245.07
+1000,local::5090,Estación RTX 5090,local,19,8286.46
+1000,local::5090,Estación RTX 5090,local,20,8327.85
+1000,local::5090,Estación RTX 5090,local,21,8369.25
+1000,local::5090,Estación RTX 5090,local,22,8410.64
+1000,local::5090,Estación RTX 5090,local,23,8452.03
+1000,local::5090,Estación RTX 5090,local,24,8493.42
+1000,local::5090,Estación RTX 5090,local,25,8534.82
+1000,local::5090,Estación RTX 5090,local,26,8576.21
+1000,local::5090,Estación RTX 5090,local,27,8617.6
+1000,local::5090,Estación RTX 5090,local,28,8658.99
+1000,local::5090,Estación RTX 5090,local,29,8700.39
+1000,local::5090,Estación RTX 5090,local,30,8741.78
+1000,local::5090,Estación RTX 5090,local,31,8783.17
+1000,local::5090,Estación RTX 5090,local,32,8824.56
+1000,local::5090,Estación RTX 5090,local,33,8865.96
+1000,local::5090,Estación RTX 5090,local,34,8907.35
+1000,local::5090,Estación RTX 5090,local,35,8948.74
+1000,local::5090,Estación RTX 5090,local,36,8990.13
+1000,local::5090,Estación RTX 5090,local,37,9031.53
+1000,local::5090,Estación RTX 5090,local,38,9072.92
+1000,local::5090,Estación RTX 5090,local,39,9114.31
+1000,local::5090,Estación RTX 5090,local,40,9155.7
+1000,local::5090,Estación RTX 5090,local,41,9197.1
+1000,local::5090,Estación RTX 5090,local,42,9238.49
+1000,local::5090,Estación RTX 5090,local,43,9279.88
+1000,local::5090,Estación RTX 5090,local,44,9321.28
+1000,local::5090,Estación RTX 5090,local,45,9362.67
+1000,local::5090,Estación RTX 5090,local,46,9404.06
+1000,local::5090,Estación RTX 5090,local,47,9445.45
+1000,local::5090,Estación RTX 5090,local,48,9486.85
+1000,local::5090,Estación RTX 5090,local,49,9528.24
+1000,local::5090,Estación RTX 5090,local,50,9569.63
+1000,local::5090,Estación RTX 5090,local,51,9611.02
+1000,local::5090,Estación RTX 5090,local,52,9652.42
+1000,local::5090,Estación RTX 5090,local,53,9693.81
+1000,local::5090,Estación RTX 5090,local,54,9735.2
+1000,local::5090,Estación RTX 5090,local,55,9776.59
+1000,local::5090,Estación RTX 5090,local,56,9817.99
+1000,local::5090,Estación RTX 5090,local,57,9859.38
+1000,local::5090,Estación RTX 5090,local,58,9900.77
+1000,local::5090,Estación RTX 5090,local,59,9942.16
+1000,local::5090,Estación RTX 5090,local,60,9983.56
+1000,local::pro6000,Servidor 1× PRO 6000,local,0,12500.0
+1000,local::pro6000,Servidor 1× PRO 6000,local,1,12567.24
+1000,local::pro6000,Servidor 1× PRO 6000,local,2,12634.47
+1000,local::pro6000,Servidor 1× PRO 6000,local,3,12701.71
+1000,local::pro6000,Servidor 1× PRO 6000,local,4,12768.95
+1000,local::pro6000,Servidor 1× PRO 6000,local,5,12836.18
+1000,local::pro6000,Servidor 1× PRO 6000,local,6,12903.42
+1000,local::pro6000,Servidor 1× PRO 6000,local,7,12970.66
+1000,local::pro6000,Servidor 1× PRO 6000,local,8,13037.9
+1000,local::pro6000,Servidor 1× PRO 6000,local,9,13105.13
+1000,local::pro6000,Servidor 1× PRO 6000,local,10,13172.37
+1000,local::pro6000,Servidor 1× PRO 6000,local,11,13239.61
+1000,local::pro6000,Servidor 1× PRO 6000,local,12,13306.84
+1000,local::pro6000,Servidor 1× PRO 6000,local,13,13374.08
+1000,local::pro6000,Servidor 1× PRO 6000,local,14,13441.32
+1000,local::pro6000,Servidor 1× PRO 6000,local,15,13508.55
+1000,local::pro6000,Servidor 1× PRO 6000,local,16,13575.79
+1000,local::pro6000,Servidor 1× PRO 6000,local,17,13643.03
+1000,local::pro6000,Servidor 1× PRO 6000,local,18,13710.26
+1000,local::pro6000,Servidor 1× PRO 6000,local,19,13777.5
+1000,local::pro6000,Servidor 1× PRO 6000,local,20,13844.74
+1000,local::pro6000,Servidor 1× PRO 6000,local,21,13911.97
+1000,local::pro6000,Servidor 1× PRO 6000,local,22,13979.21
+1000,local::pro6000,Servidor 1× PRO 6000,local,23,14046.45
+1000,local::pro6000,Servidor 1× PRO 6000,local,24,14113.69
+1000,local::pro6000,Servidor 1× PRO 6000,local,25,14180.92
+1000,local::pro6000,Servidor 1× PRO 6000,local,26,14248.16
+1000,local::pro6000,Servidor 1× PRO 6000,local,27,14315.4
+1000,local::pro6000,Servidor 1× PRO 6000,local,28,14382.63
+1000,local::pro6000,Servidor 1× PRO 6000,local,29,14449.87
+1000,local::pro6000,Servidor 1× PRO 6000,local,30,14517.11
+1000,local::pro6000,Servidor 1× PRO 6000,local,31,14584.34
+1000,local::pro6000,Servidor 1× PRO 6000,local,32,14651.58
+1000,local::pro6000,Servidor 1× PRO 6000,local,33,14718.82
+1000,local::pro6000,Servidor 1× PRO 6000,local,34,14786.05
+1000,local::pro6000,Servidor 1× PRO 6000,local,35,14853.29
+1000,local::pro6000,Servidor 1× PRO 6000,local,36,14920.53
+1000,local::pro6000,Servidor 1× PRO 6000,local,37,14987.76
+1000,local::pro6000,Servidor 1× PRO 6000,local,38,15055.0
+1000,local::pro6000,Servidor 1× PRO 6000,local,39,15122.24
+1000,local::pro6000,Servidor 1× PRO 6000,local,40,15189.48
+1000,local::pro6000,Servidor 1× PRO 6000,local,41,15256.71
+1000,local::pro6000,Servidor 1× PRO 6000,local,42,15323.95
+1000,local::pro6000,Servidor 1× PRO 6000,local,43,15391.19
+1000,local::pro6000,Servidor 1× PRO 6000,local,44,15458.42
+1000,local::pro6000,Servidor 1× PRO 6000,local,45,15525.66
+1000,local::pro6000,Servidor 1× PRO 6000,local,46,15592.9
+1000,local::pro6000,Servidor 1× PRO 6000,local,47,15660.13
+1000,local::pro6000,Servidor 1× PRO 6000,local,48,15727.37
+1000,local::pro6000,Servidor 1× PRO 6000,local,49,15794.61
+1000,local::pro6000,Servidor 1× PRO 6000,local,50,15861.84
+1000,local::pro6000,Servidor 1× PRO 6000,local,51,15929.08
+1000,local::pro6000,Servidor 1× PRO 6000,local,52,15996.32
+1000,local::pro6000,Servidor 1× PRO 6000,local,53,16063.56
+1000,local::pro6000,Servidor 1× PRO 6000,local,54,16130.79
+1000,local::pro6000,Servidor 1× PRO 6000,local,55,16198.03
+1000,local::pro6000,Servidor 1× PRO 6000,local,56,16265.27
+1000,local::pro6000,Servidor 1× PRO 6000,local,57,16332.5
+1000,local::pro6000,Servidor 1× PRO 6000,local,58,16399.74
+1000,local::pro6000,Servidor 1× PRO 6000,local,59,16466.98
+1000,local::pro6000,Servidor 1× PRO 6000,local,60,16534.21
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,0,0.0
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,1,2.63
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,2,5.27
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,3,7.9
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,4,10.53
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,5,13.16
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,6,15.8
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,7,18.43
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,8,21.06
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,9,23.7
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,10,26.33
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,11,28.96
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,12,31.6
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,13,34.23
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,14,36.86
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,15,39.49
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,16,42.13
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,17,44.76
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,18,47.39
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,19,50.03
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,20,52.66
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,21,55.29
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,22,57.92
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,23,60.56
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,24,63.19
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,25,65.82
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,26,68.46
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,27,71.09
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,28,73.72
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,29,76.36
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,30,78.99
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,31,81.62
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,32,84.25
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,33,86.89
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,34,89.52
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,35,92.15
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,36,94.79
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,37,97.42
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,38,100.05
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,39,102.68
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,40,105.32
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,41,107.95
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,42,110.58
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,43,113.22
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,44,115.85
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,45,118.48
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,46,121.12
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,47,123.75
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,48,126.38
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,49,129.01
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,50,131.65
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,51,134.28
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,52,136.91
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,53,139.55
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,54,142.18
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,55,144.81
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,56,147.44
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,57,150.08
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,58,152.71
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,59,155.34
+5000,api::g25lite,Gemini 2.5 Flash-Lite,api,60,157.98
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,0,0.0
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,1,7.35
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,2,14.7
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,3,22.05
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,4,29.4
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,5,36.75
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,6,44.1
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,7,51.46
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,8,58.81
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,9,66.16
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,10,73.51
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,11,80.86
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,12,88.21
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,13,95.56
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,14,102.91
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,15,110.26
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,16,117.61
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,17,124.96
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,18,132.31
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,19,139.66
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,20,147.02
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,21,154.37
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,22,161.72
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,23,169.07
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,24,176.42
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,25,183.77
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,26,191.12
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,27,198.47
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,28,205.82
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,29,213.17
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,30,220.52
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,31,227.87
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,32,235.23
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,33,242.58
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,34,249.93
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,35,257.28
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,36,264.63
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,37,271.98
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,38,279.33
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,39,286.68
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,40,294.03
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,41,301.38
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,42,308.73
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,43,316.08
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,44,323.43
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,45,330.79
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,46,338.14
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,47,345.49
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,48,352.84
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,49,360.19
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,50,367.54
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,51,374.89
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,52,382.24
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,53,389.59
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,54,396.94
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,55,404.29
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,56,411.64
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,57,418.99
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,58,426.35
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,59,433.7
+5000,api::g31lite,Gemini 3.1 Flash-Lite,api,60,441.05
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,0,0.0
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,1,9.9
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,2,19.79
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,3,29.69
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,4,39.59
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,5,49.48
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,6,59.38
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,7,69.28
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,8,79.17
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,9,89.07
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,10,98.97
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,11,108.86
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,12,118.76
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,13,128.66
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,14,138.55
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,15,148.45
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,16,158.35
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,17,168.24
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,18,178.14
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,19,188.04
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,20,197.94
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,21,207.83
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,22,217.73
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,23,227.63
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,24,237.52
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,25,247.42
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,26,257.32
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,27,267.21
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,28,277.11
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,29,287.01
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,30,296.9
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,31,306.8
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,32,316.7
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,33,326.59
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,34,336.49
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,35,346.39
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,36,356.28
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,37,366.18
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,38,376.08
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,39,385.97
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,40,395.87
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,41,405.77
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,42,415.66
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,43,425.56
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,44,435.46
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,45,445.35
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,46,455.25
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,47,465.15
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,48,475.04
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,49,484.94
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,50,494.84
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,51,504.73
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,52,514.63
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,53,524.53
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,54,534.43
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,55,544.32
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,56,554.22
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,57,564.12
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,58,574.01
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,59,583.91
+5000,api::g35lite,Gemini 3.5 Flash-Lite,api,60,593.81
+5000,api::g36flash,Gemini 3.6 Flash,api,0,0.0
+5000,api::g36flash,Gemini 3.6 Flash,api,1,20.9
+5000,api::g36flash,Gemini 3.6 Flash,api,2,41.8
+5000,api::g36flash,Gemini 3.6 Flash,api,3,62.7
+5000,api::g36flash,Gemini 3.6 Flash,api,4,83.6
+5000,api::g36flash,Gemini 3.6 Flash,api,5,104.5
+5000,api::g36flash,Gemini 3.6 Flash,api,6,125.4
+5000,api::g36flash,Gemini 3.6 Flash,api,7,146.3
+5000,api::g36flash,Gemini 3.6 Flash,api,8,167.2
+5000,api::g36flash,Gemini 3.6 Flash,api,9,188.1
+5000,api::g36flash,Gemini 3.6 Flash,api,10,209.0
+5000,api::g36flash,Gemini 3.6 Flash,api,11,229.9
+5000,api::g36flash,Gemini 3.6 Flash,api,12,250.8
+5000,api::g36flash,Gemini 3.6 Flash,api,13,271.7
+5000,api::g36flash,Gemini 3.6 Flash,api,14,292.6
+5000,api::g36flash,Gemini 3.6 Flash,api,15,313.5
+5000,api::g36flash,Gemini 3.6 Flash,api,16,334.4
+5000,api::g36flash,Gemini 3.6 Flash,api,17,355.29
+5000,api::g36flash,Gemini 3.6 Flash,api,18,376.19
+5000,api::g36flash,Gemini 3.6 Flash,api,19,397.09
+5000,api::g36flash,Gemini 3.6 Flash,api,20,417.99
+5000,api::g36flash,Gemini 3.6 Flash,api,21,438.89
+5000,api::g36flash,Gemini 3.6 Flash,api,22,459.79
+5000,api::g36flash,Gemini 3.6 Flash,api,23,480.69
+5000,api::g36flash,Gemini 3.6 Flash,api,24,501.59
+5000,api::g36flash,Gemini 3.6 Flash,api,25,522.49
+5000,api::g36flash,Gemini 3.6 Flash,api,26,543.39
+5000,api::g36flash,Gemini 3.6 Flash,api,27,564.29
+5000,api::g36flash,Gemini 3.6 Flash,api,28,585.19
+5000,api::g36flash,Gemini 3.6 Flash,api,29,606.09
+5000,api::g36flash,Gemini 3.6 Flash,api,30,626.99
+5000,api::g36flash,Gemini 3.6 Flash,api,31,647.89
+5000,api::g36flash,Gemini 3.6 Flash,api,32,668.79
+5000,api::g36flash,Gemini 3.6 Flash,api,33,689.69
+5000,api::g36flash,Gemini 3.6 Flash,api,34,710.59
+5000,api::g36flash,Gemini 3.6 Flash,api,35,731.49
+5000,api::g36flash,Gemini 3.6 Flash,api,36,752.39
+5000,api::g36flash,Gemini 3.6 Flash,api,37,773.29
+5000,api::g36flash,Gemini 3.6 Flash,api,38,794.19
+5000,api::g36flash,Gemini 3.6 Flash,api,39,815.09
+5000,api::g36flash,Gemini 3.6 Flash,api,40,835.99
+5000,api::g36flash,Gemini 3.6 Flash,api,41,856.89
+5000,api::g36flash,Gemini 3.6 Flash,api,42,877.79
+5000,api::g36flash,Gemini 3.6 Flash,api,43,898.69
+5000,api::g36flash,Gemini 3.6 Flash,api,44,919.59
+5000,api::g36flash,Gemini 3.6 Flash,api,45,940.49
+5000,api::g36flash,Gemini 3.6 Flash,api,46,961.39
+5000,api::g36flash,Gemini 3.6 Flash,api,47,982.29
+5000,api::g36flash,Gemini 3.6 Flash,api,48,1003.19
+5000,api::g36flash,Gemini 3.6 Flash,api,49,1024.09
+5000,api::g36flash,Gemini 3.6 Flash,api,50,1044.98
+5000,api::g36flash,Gemini 3.6 Flash,api,51,1065.88
+5000,api::g36flash,Gemini 3.6 Flash,api,52,1086.78
+5000,api::g36flash,Gemini 3.6 Flash,api,53,1107.68
+5000,api::g36flash,Gemini 3.6 Flash,api,54,1128.58
+5000,api::g36flash,Gemini 3.6 Flash,api,55,1149.48
+5000,api::g36flash,Gemini 3.6 Flash,api,56,1170.38
+5000,api::g36flash,Gemini 3.6 Flash,api,57,1191.28
+5000,api::g36flash,Gemini 3.6 Flash,api,58,1212.18
+5000,api::g36flash,Gemini 3.6 Flash,api,59,1233.08
+5000,api::g36flash,Gemini 3.6 Flash,api,60,1253.98
+5000,api::gpt54mini,GPT-5.4 mini,api,0,0.0
+5000,api::gpt54mini,GPT-5.4 mini,api,1,22.05
+5000,api::gpt54mini,GPT-5.4 mini,api,2,44.1
+5000,api::gpt54mini,GPT-5.4 mini,api,3,66.16
+5000,api::gpt54mini,GPT-5.4 mini,api,4,88.21
+5000,api::gpt54mini,GPT-5.4 mini,api,5,110.26
+5000,api::gpt54mini,GPT-5.4 mini,api,6,132.31
+5000,api::gpt54mini,GPT-5.4 mini,api,7,154.37
+5000,api::gpt54mini,GPT-5.4 mini,api,8,176.42
+5000,api::gpt54mini,GPT-5.4 mini,api,9,198.47
+5000,api::gpt54mini,GPT-5.4 mini,api,10,220.52
+5000,api::gpt54mini,GPT-5.4 mini,api,11,242.58
+5000,api::gpt54mini,GPT-5.4 mini,api,12,264.63
+5000,api::gpt54mini,GPT-5.4 mini,api,13,286.68
+5000,api::gpt54mini,GPT-5.4 mini,api,14,308.73
+5000,api::gpt54mini,GPT-5.4 mini,api,15,330.79
+5000,api::gpt54mini,GPT-5.4 mini,api,16,352.84
+5000,api::gpt54mini,GPT-5.4 mini,api,17,374.89
+5000,api::gpt54mini,GPT-5.4 mini,api,18,396.94
+5000,api::gpt54mini,GPT-5.4 mini,api,19,418.99
+5000,api::gpt54mini,GPT-5.4 mini,api,20,441.05
+5000,api::gpt54mini,GPT-5.4 mini,api,21,463.1
+5000,api::gpt54mini,GPT-5.4 mini,api,22,485.15
+5000,api::gpt54mini,GPT-5.4 mini,api,23,507.2
+5000,api::gpt54mini,GPT-5.4 mini,api,24,529.26
+5000,api::gpt54mini,GPT-5.4 mini,api,25,551.31
+5000,api::gpt54mini,GPT-5.4 mini,api,26,573.36
+5000,api::gpt54mini,GPT-5.4 mini,api,27,595.41
+5000,api::gpt54mini,GPT-5.4 mini,api,28,617.47
+5000,api::gpt54mini,GPT-5.4 mini,api,29,639.52
+5000,api::gpt54mini,GPT-5.4 mini,api,30,661.57
+5000,api::gpt54mini,GPT-5.4 mini,api,31,683.62
+5000,api::gpt54mini,GPT-5.4 mini,api,32,705.68
+5000,api::gpt54mini,GPT-5.4 mini,api,33,727.73
+5000,api::gpt54mini,GPT-5.4 mini,api,34,749.78
+5000,api::gpt54mini,GPT-5.4 mini,api,35,771.83
+5000,api::gpt54mini,GPT-5.4 mini,api,36,793.89
+5000,api::gpt54mini,GPT-5.4 mini,api,37,815.94
+5000,api::gpt54mini,GPT-5.4 mini,api,38,837.99
+5000,api::gpt54mini,GPT-5.4 mini,api,39,860.04
+5000,api::gpt54mini,GPT-5.4 mini,api,40,882.09
+5000,api::gpt54mini,GPT-5.4 mini,api,41,904.15
+5000,api::gpt54mini,GPT-5.4 mini,api,42,926.2
+5000,api::gpt54mini,GPT-5.4 mini,api,43,948.25
+5000,api::gpt54mini,GPT-5.4 mini,api,44,970.3
+5000,api::gpt54mini,GPT-5.4 mini,api,45,992.36
+5000,api::gpt54mini,GPT-5.4 mini,api,46,1014.41
+5000,api::gpt54mini,GPT-5.4 mini,api,47,1036.46
+5000,api::gpt54mini,GPT-5.4 mini,api,48,1058.51
+5000,api::gpt54mini,GPT-5.4 mini,api,49,1080.57
+5000,api::gpt54mini,GPT-5.4 mini,api,50,1102.62
+5000,api::gpt54mini,GPT-5.4 mini,api,51,1124.67
+5000,api::gpt54mini,GPT-5.4 mini,api,52,1146.72
+5000,api::gpt54mini,GPT-5.4 mini,api,53,1168.78
+5000,api::gpt54mini,GPT-5.4 mini,api,54,1190.83
+5000,api::gpt54mini,GPT-5.4 mini,api,55,1212.88
+5000,api::gpt54mini,GPT-5.4 mini,api,56,1234.93
+5000,api::gpt54mini,GPT-5.4 mini,api,57,1256.98
+5000,api::gpt54mini,GPT-5.4 mini,api,58,1279.04
+5000,api::gpt54mini,GPT-5.4 mini,api,59,1301.09
+5000,api::gpt54mini,GPT-5.4 mini,api,60,1323.14
+5000,api::gpt56luna,GPT-5.6 luna,api,0,0.0
+5000,api::gpt56luna,GPT-5.6 luna,api,1,5.88
+5000,api::gpt56luna,GPT-5.6 luna,api,2,11.76
+5000,api::gpt56luna,GPT-5.6 luna,api,3,17.64
+5000,api::gpt56luna,GPT-5.6 luna,api,4,23.52
+5000,api::gpt56luna,GPT-5.6 luna,api,5,29.4
+5000,api::gpt56luna,GPT-5.6 luna,api,6,35.28
+5000,api::gpt56luna,GPT-5.6 luna,api,7,41.16
+5000,api::gpt56luna,GPT-5.6 luna,api,8,47.05
+5000,api::gpt56luna,GPT-5.6 luna,api,9,52.93
+5000,api::gpt56luna,GPT-5.6 luna,api,10,58.81
+5000,api::gpt56luna,GPT-5.6 luna,api,11,64.69
+5000,api::gpt56luna,GPT-5.6 luna,api,12,70.57
+5000,api::gpt56luna,GPT-5.6 luna,api,13,76.45
+5000,api::gpt56luna,GPT-5.6 luna,api,14,82.33
+5000,api::gpt56luna,GPT-5.6 luna,api,15,88.21
+5000,api::gpt56luna,GPT-5.6 luna,api,16,94.09
+5000,api::gpt56luna,GPT-5.6 luna,api,17,99.97
+5000,api::gpt56luna,GPT-5.6 luna,api,18,105.85
+5000,api::gpt56luna,GPT-5.6 luna,api,19,111.73
+5000,api::gpt56luna,GPT-5.6 luna,api,20,117.61
+5000,api::gpt56luna,GPT-5.6 luna,api,21,123.49
+5000,api::gpt56luna,GPT-5.6 luna,api,22,129.37
+5000,api::gpt56luna,GPT-5.6 luna,api,23,135.25
+5000,api::gpt56luna,GPT-5.6 luna,api,24,141.14
+5000,api::gpt56luna,GPT-5.6 luna,api,25,147.02
+5000,api::gpt56luna,GPT-5.6 luna,api,26,152.9
+5000,api::gpt56luna,GPT-5.6 luna,api,27,158.78
+5000,api::gpt56luna,GPT-5.6 luna,api,28,164.66
+5000,api::gpt56luna,GPT-5.6 luna,api,29,170.54
+5000,api::gpt56luna,GPT-5.6 luna,api,30,176.42
+5000,api::gpt56luna,GPT-5.6 luna,api,31,182.3
+5000,api::gpt56luna,GPT-5.6 luna,api,32,188.18
+5000,api::gpt56luna,GPT-5.6 luna,api,33,194.06
+5000,api::gpt56luna,GPT-5.6 luna,api,34,199.94
+5000,api::gpt56luna,GPT-5.6 luna,api,35,205.82
+5000,api::gpt56luna,GPT-5.6 luna,api,36,211.7
+5000,api::gpt56luna,GPT-5.6 luna,api,37,217.58
+5000,api::gpt56luna,GPT-5.6 luna,api,38,223.46
+5000,api::gpt56luna,GPT-5.6 luna,api,39,229.34
+5000,api::gpt56luna,GPT-5.6 luna,api,40,235.23
+5000,api::gpt56luna,GPT-5.6 luna,api,41,241.11
+5000,api::gpt56luna,GPT-5.6 luna,api,42,246.99
+5000,api::gpt56luna,GPT-5.6 luna,api,43,252.87
+5000,api::gpt56luna,GPT-5.6 luna,api,44,258.75
+5000,api::gpt56luna,GPT-5.6 luna,api,45,264.63
+5000,api::gpt56luna,GPT-5.6 luna,api,46,270.51
+5000,api::gpt56luna,GPT-5.6 luna,api,47,276.39
+5000,api::gpt56luna,GPT-5.6 luna,api,48,282.27
+5000,api::gpt56luna,GPT-5.6 luna,api,49,288.15
+5000,api::gpt56luna,GPT-5.6 luna,api,50,294.03
+5000,api::gpt56luna,GPT-5.6 luna,api,51,299.91
+5000,api::gpt56luna,GPT-5.6 luna,api,52,305.79
+5000,api::gpt56luna,GPT-5.6 luna,api,53,311.67
+5000,api::gpt56luna,GPT-5.6 luna,api,54,317.55
+5000,api::gpt56luna,GPT-5.6 luna,api,55,323.43
+5000,api::gpt56luna,GPT-5.6 luna,api,56,329.32
+5000,api::gpt56luna,GPT-5.6 luna,api,57,335.2
+5000,api::gpt56luna,GPT-5.6 luna,api,58,341.08
+5000,api::gpt56luna,GPT-5.6 luna,api,59,346.96
+5000,api::gpt56luna,GPT-5.6 luna,api,60,352.84
+5000,api::gpt5mini,GPT-5 mini,api,0,0.0
+5000,api::gpt5mini,GPT-5 mini,api,1,8.12
+5000,api::gpt5mini,GPT-5 mini,api,2,16.24
+5000,api::gpt5mini,GPT-5 mini,api,3,24.36
+5000,api::gpt5mini,GPT-5 mini,api,4,32.48
+5000,api::gpt5mini,GPT-5 mini,api,5,40.6
+5000,api::gpt5mini,GPT-5 mini,api,6,48.72
+5000,api::gpt5mini,GPT-5 mini,api,7,56.83
+5000,api::gpt5mini,GPT-5 mini,api,8,64.95
+5000,api::gpt5mini,GPT-5 mini,api,9,73.07
+5000,api::gpt5mini,GPT-5 mini,api,10,81.19
+5000,api::gpt5mini,GPT-5 mini,api,11,89.31
+5000,api::gpt5mini,GPT-5 mini,api,12,97.43
+5000,api::gpt5mini,GPT-5 mini,api,13,105.55
+5000,api::gpt5mini,GPT-5 mini,api,14,113.67
+5000,api::gpt5mini,GPT-5 mini,api,15,121.79
+5000,api::gpt5mini,GPT-5 mini,api,16,129.91
+5000,api::gpt5mini,GPT-5 mini,api,17,138.03
+5000,api::gpt5mini,GPT-5 mini,api,18,146.15
+5000,api::gpt5mini,GPT-5 mini,api,19,154.27
+5000,api::gpt5mini,GPT-5 mini,api,20,162.38
+5000,api::gpt5mini,GPT-5 mini,api,21,170.5
+5000,api::gpt5mini,GPT-5 mini,api,22,178.62
+5000,api::gpt5mini,GPT-5 mini,api,23,186.74
+5000,api::gpt5mini,GPT-5 mini,api,24,194.86
+5000,api::gpt5mini,GPT-5 mini,api,25,202.98
+5000,api::gpt5mini,GPT-5 mini,api,26,211.1
+5000,api::gpt5mini,GPT-5 mini,api,27,219.22
+5000,api::gpt5mini,GPT-5 mini,api,28,227.34
+5000,api::gpt5mini,GPT-5 mini,api,29,235.46
+5000,api::gpt5mini,GPT-5 mini,api,30,243.58
+5000,api::gpt5mini,GPT-5 mini,api,31,251.7
+5000,api::gpt5mini,GPT-5 mini,api,32,259.82
+5000,api::gpt5mini,GPT-5 mini,api,33,267.93
+5000,api::gpt5mini,GPT-5 mini,api,34,276.05
+5000,api::gpt5mini,GPT-5 mini,api,35,284.17
+5000,api::gpt5mini,GPT-5 mini,api,36,292.29
+5000,api::gpt5mini,GPT-5 mini,api,37,300.41
+5000,api::gpt5mini,GPT-5 mini,api,38,308.53
+5000,api::gpt5mini,GPT-5 mini,api,39,316.65
+5000,api::gpt5mini,GPT-5 mini,api,40,324.77
+5000,api::gpt5mini,GPT-5 mini,api,41,332.89
+5000,api::gpt5mini,GPT-5 mini,api,42,341.01
+5000,api::gpt5mini,GPT-5 mini,api,43,349.13
+5000,api::gpt5mini,GPT-5 mini,api,44,357.25
+5000,api::gpt5mini,GPT-5 mini,api,45,365.37
+5000,api::gpt5mini,GPT-5 mini,api,46,373.48
+5000,api::gpt5mini,GPT-5 mini,api,47,381.6
+5000,api::gpt5mini,GPT-5 mini,api,48,389.72
+5000,api::gpt5mini,GPT-5 mini,api,49,397.84
+5000,api::gpt5mini,GPT-5 mini,api,50,405.96
+5000,api::gpt5mini,GPT-5 mini,api,51,414.08
+5000,api::gpt5mini,GPT-5 mini,api,52,422.2
+5000,api::gpt5mini,GPT-5 mini,api,53,430.32
+5000,api::gpt5mini,GPT-5 mini,api,54,438.44
+5000,api::gpt5mini,GPT-5 mini,api,55,446.56
+5000,api::gpt5mini,GPT-5 mini,api,56,454.68
+5000,api::gpt5mini,GPT-5 mini,api,57,462.8
+5000,api::gpt5mini,GPT-5 mini,api,58,470.92
+5000,api::gpt5mini,GPT-5 mini,api,59,479.03
+5000,api::gpt5mini,GPT-5 mini,api,60,487.15
+5000,api::gpt5nano,GPT-5 nano,api,0,0.0
+5000,api::gpt5nano,GPT-5 nano,api,1,1.62
+5000,api::gpt5nano,GPT-5 nano,api,2,3.25
+5000,api::gpt5nano,GPT-5 nano,api,3,4.87
+5000,api::gpt5nano,GPT-5 nano,api,4,6.5
+5000,api::gpt5nano,GPT-5 nano,api,5,8.12
+5000,api::gpt5nano,GPT-5 nano,api,6,9.74
+5000,api::gpt5nano,GPT-5 nano,api,7,11.37
+5000,api::gpt5nano,GPT-5 nano,api,8,12.99
+5000,api::gpt5nano,GPT-5 nano,api,9,14.61
+5000,api::gpt5nano,GPT-5 nano,api,10,16.24
+5000,api::gpt5nano,GPT-5 nano,api,11,17.86
+5000,api::gpt5nano,GPT-5 nano,api,12,19.49
+5000,api::gpt5nano,GPT-5 nano,api,13,21.11
+5000,api::gpt5nano,GPT-5 nano,api,14,22.73
+5000,api::gpt5nano,GPT-5 nano,api,15,24.36
+5000,api::gpt5nano,GPT-5 nano,api,16,25.98
+5000,api::gpt5nano,GPT-5 nano,api,17,27.61
+5000,api::gpt5nano,GPT-5 nano,api,18,29.23
+5000,api::gpt5nano,GPT-5 nano,api,19,30.85
+5000,api::gpt5nano,GPT-5 nano,api,20,32.48
+5000,api::gpt5nano,GPT-5 nano,api,21,34.1
+5000,api::gpt5nano,GPT-5 nano,api,22,35.72
+5000,api::gpt5nano,GPT-5 nano,api,23,37.35
+5000,api::gpt5nano,GPT-5 nano,api,24,38.97
+5000,api::gpt5nano,GPT-5 nano,api,25,40.6
+5000,api::gpt5nano,GPT-5 nano,api,26,42.22
+5000,api::gpt5nano,GPT-5 nano,api,27,43.84
+5000,api::gpt5nano,GPT-5 nano,api,28,45.47
+5000,api::gpt5nano,GPT-5 nano,api,29,47.09
+5000,api::gpt5nano,GPT-5 nano,api,30,48.72
+5000,api::gpt5nano,GPT-5 nano,api,31,50.34
+5000,api::gpt5nano,GPT-5 nano,api,32,51.96
+5000,api::gpt5nano,GPT-5 nano,api,33,53.59
+5000,api::gpt5nano,GPT-5 nano,api,34,55.21
+5000,api::gpt5nano,GPT-5 nano,api,35,56.83
+5000,api::gpt5nano,GPT-5 nano,api,36,58.46
+5000,api::gpt5nano,GPT-5 nano,api,37,60.08
+5000,api::gpt5nano,GPT-5 nano,api,38,61.71
+5000,api::gpt5nano,GPT-5 nano,api,39,63.33
+5000,api::gpt5nano,GPT-5 nano,api,40,64.95
+5000,api::gpt5nano,GPT-5 nano,api,41,66.58
+5000,api::gpt5nano,GPT-5 nano,api,42,68.2
+5000,api::gpt5nano,GPT-5 nano,api,43,69.83
+5000,api::gpt5nano,GPT-5 nano,api,44,71.45
+5000,api::gpt5nano,GPT-5 nano,api,45,73.07
+5000,api::gpt5nano,GPT-5 nano,api,46,74.7
+5000,api::gpt5nano,GPT-5 nano,api,47,76.32
+5000,api::gpt5nano,GPT-5 nano,api,48,77.94
+5000,api::gpt5nano,GPT-5 nano,api,49,79.57
+5000,api::gpt5nano,GPT-5 nano,api,50,81.19
+5000,api::gpt5nano,GPT-5 nano,api,51,82.82
+5000,api::gpt5nano,GPT-5 nano,api,52,84.44
+5000,api::gpt5nano,GPT-5 nano,api,53,86.06
+5000,api::gpt5nano,GPT-5 nano,api,54,87.69
+5000,api::gpt5nano,GPT-5 nano,api,55,89.31
+5000,api::gpt5nano,GPT-5 nano,api,56,90.94
+5000,api::gpt5nano,GPT-5 nano,api,57,92.56
+5000,api::gpt5nano,GPT-5 nano,api,58,94.18
+5000,api::gpt5nano,GPT-5 nano,api,59,95.81
+5000,api::gpt5nano,GPT-5 nano,api,60,97.43
+5000,api::haiku45,Claude Haiku 4.5,api,0,0.0
+5000,api::haiku45,Claude Haiku 4.5,api,1,27.87
+5000,api::haiku45,Claude Haiku 4.5,api,2,55.73
+5000,api::haiku45,Claude Haiku 4.5,api,3,83.6
+5000,api::haiku45,Claude Haiku 4.5,api,4,111.47
+5000,api::haiku45,Claude Haiku 4.5,api,5,139.33
+5000,api::haiku45,Claude Haiku 4.5,api,6,167.2
+5000,api::haiku45,Claude Haiku 4.5,api,7,195.06
+5000,api::haiku45,Claude Haiku 4.5,api,8,222.93
+5000,api::haiku45,Claude Haiku 4.5,api,9,250.8
+5000,api::haiku45,Claude Haiku 4.5,api,10,278.66
+5000,api::haiku45,Claude Haiku 4.5,api,11,306.53
+5000,api::haiku45,Claude Haiku 4.5,api,12,334.4
+5000,api::haiku45,Claude Haiku 4.5,api,13,362.26
+5000,api::haiku45,Claude Haiku 4.5,api,14,390.13
+5000,api::haiku45,Claude Haiku 4.5,api,15,417.99
+5000,api::haiku45,Claude Haiku 4.5,api,16,445.86
+5000,api::haiku45,Claude Haiku 4.5,api,17,473.73
+5000,api::haiku45,Claude Haiku 4.5,api,18,501.59
+5000,api::haiku45,Claude Haiku 4.5,api,19,529.46
+5000,api::haiku45,Claude Haiku 4.5,api,20,557.33
+5000,api::haiku45,Claude Haiku 4.5,api,21,585.19
+5000,api::haiku45,Claude Haiku 4.5,api,22,613.06
+5000,api::haiku45,Claude Haiku 4.5,api,23,640.92
+5000,api::haiku45,Claude Haiku 4.5,api,24,668.79
+5000,api::haiku45,Claude Haiku 4.5,api,25,696.66
+5000,api::haiku45,Claude Haiku 4.5,api,26,724.52
+5000,api::haiku45,Claude Haiku 4.5,api,27,752.39
+5000,api::haiku45,Claude Haiku 4.5,api,28,780.26
+5000,api::haiku45,Claude Haiku 4.5,api,29,808.12
+5000,api::haiku45,Claude Haiku 4.5,api,30,835.99
+5000,api::haiku45,Claude Haiku 4.5,api,31,863.85
+5000,api::haiku45,Claude Haiku 4.5,api,32,891.72
+5000,api::haiku45,Claude Haiku 4.5,api,33,919.59
+5000,api::haiku45,Claude Haiku 4.5,api,34,947.45
+5000,api::haiku45,Claude Haiku 4.5,api,35,975.32
+5000,api::haiku45,Claude Haiku 4.5,api,36,1003.19
+5000,api::haiku45,Claude Haiku 4.5,api,37,1031.05
+5000,api::haiku45,Claude Haiku 4.5,api,38,1058.92
+5000,api::haiku45,Claude Haiku 4.5,api,39,1086.78
+5000,api::haiku45,Claude Haiku 4.5,api,40,1114.65
+5000,api::haiku45,Claude Haiku 4.5,api,41,1142.52
+5000,api::haiku45,Claude Haiku 4.5,api,42,1170.38
+5000,api::haiku45,Claude Haiku 4.5,api,43,1198.25
+5000,api::haiku45,Claude Haiku 4.5,api,44,1226.12
+5000,api::haiku45,Claude Haiku 4.5,api,45,1253.98
+5000,api::haiku45,Claude Haiku 4.5,api,46,1281.85
+5000,api::haiku45,Claude Haiku 4.5,api,47,1309.71
+5000,api::haiku45,Claude Haiku 4.5,api,48,1337.58
+5000,api::haiku45,Claude Haiku 4.5,api,49,1365.45
+5000,api::haiku45,Claude Haiku 4.5,api,50,1393.31
+5000,api::haiku45,Claude Haiku 4.5,api,51,1421.18
+5000,api::haiku45,Claude Haiku 4.5,api,52,1449.05
+5000,api::haiku45,Claude Haiku 4.5,api,53,1476.91
+5000,api::haiku45,Claude Haiku 4.5,api,54,1504.78
+5000,api::haiku45,Claude Haiku 4.5,api,55,1532.64
+5000,api::haiku45,Claude Haiku 4.5,api,56,1560.51
+5000,api::haiku45,Claude Haiku 4.5,api,57,1588.38
+5000,api::haiku45,Claude Haiku 4.5,api,58,1616.24
+5000,api::haiku45,Claude Haiku 4.5,api,59,1644.11
+5000,api::haiku45,Claude Haiku 4.5,api,60,1671.98
+5000,api::opus5,Claude Opus 5,api,0,0.0
+5000,api::opus5,Claude Opus 5,api,1,139.33
+5000,api::opus5,Claude Opus 5,api,2,278.66
+5000,api::opus5,Claude Opus 5,api,3,417.99
+5000,api::opus5,Claude Opus 5,api,4,557.33
+5000,api::opus5,Claude Opus 5,api,5,696.66
+5000,api::opus5,Claude Opus 5,api,6,835.99
+5000,api::opus5,Claude Opus 5,api,7,975.32
+5000,api::opus5,Claude Opus 5,api,8,1114.65
+5000,api::opus5,Claude Opus 5,api,9,1253.98
+5000,api::opus5,Claude Opus 5,api,10,1393.31
+5000,api::opus5,Claude Opus 5,api,11,1532.64
+5000,api::opus5,Claude Opus 5,api,12,1671.98
+5000,api::opus5,Claude Opus 5,api,13,1811.31
+5000,api::opus5,Claude Opus 5,api,14,1950.64
+5000,api::opus5,Claude Opus 5,api,15,2089.97
+5000,api::opus5,Claude Opus 5,api,16,2229.3
+5000,api::opus5,Claude Opus 5,api,17,2368.63
+5000,api::opus5,Claude Opus 5,api,18,2507.96
+5000,api::opus5,Claude Opus 5,api,19,2647.3
+5000,api::opus5,Claude Opus 5,api,20,2786.63
+5000,api::opus5,Claude Opus 5,api,21,2925.96
+5000,api::opus5,Claude Opus 5,api,22,3065.29
+5000,api::opus5,Claude Opus 5,api,23,3204.62
+5000,api::opus5,Claude Opus 5,api,24,3343.95
+5000,api::opus5,Claude Opus 5,api,25,3483.28
+5000,api::opus5,Claude Opus 5,api,26,3622.61
+5000,api::opus5,Claude Opus 5,api,27,3761.95
+5000,api::opus5,Claude Opus 5,api,28,3901.28
+5000,api::opus5,Claude Opus 5,api,29,4040.61
+5000,api::opus5,Claude Opus 5,api,30,4179.94
+5000,api::opus5,Claude Opus 5,api,31,4319.27
+5000,api::opus5,Claude Opus 5,api,32,4458.6
+5000,api::opus5,Claude Opus 5,api,33,4597.93
+5000,api::opus5,Claude Opus 5,api,34,4737.27
+5000,api::opus5,Claude Opus 5,api,35,4876.6
+5000,api::opus5,Claude Opus 5,api,36,5015.93
+5000,api::opus5,Claude Opus 5,api,37,5155.26
+5000,api::opus5,Claude Opus 5,api,38,5294.59
+5000,api::opus5,Claude Opus 5,api,39,5433.92
+5000,api::opus5,Claude Opus 5,api,40,5573.25
+5000,api::opus5,Claude Opus 5,api,41,5712.58
+5000,api::opus5,Claude Opus 5,api,42,5851.92
+5000,api::opus5,Claude Opus 5,api,43,5991.25
+5000,api::opus5,Claude Opus 5,api,44,6130.58
+5000,api::opus5,Claude Opus 5,api,45,6269.91
+5000,api::opus5,Claude Opus 5,api,46,6409.24
+5000,api::opus5,Claude Opus 5,api,47,6548.57
+5000,api::opus5,Claude Opus 5,api,48,6687.9
+5000,api::opus5,Claude Opus 5,api,49,6827.23
+5000,api::opus5,Claude Opus 5,api,50,6966.57
+5000,api::opus5,Claude Opus 5,api,51,7105.9
+5000,api::opus5,Claude Opus 5,api,52,7245.23
+5000,api::opus5,Claude Opus 5,api,53,7384.56
+5000,api::opus5,Claude Opus 5,api,54,7523.89
+5000,api::opus5,Claude Opus 5,api,55,7663.22
+5000,api::opus5,Claude Opus 5,api,56,7802.55
+5000,api::opus5,Claude Opus 5,api,57,7941.89
+5000,api::opus5,Claude Opus 5,api,58,8081.22
+5000,api::opus5,Claude Opus 5,api,59,8220.55
+5000,api::opus5,Claude Opus 5,api,60,8359.88
+5000,api::sonnet5,Claude Sonnet 5,api,0,0.0
+5000,api::sonnet5,Claude Sonnet 5,api,1,55.73
+5000,api::sonnet5,Claude Sonnet 5,api,2,111.47
+5000,api::sonnet5,Claude Sonnet 5,api,3,167.2
+5000,api::sonnet5,Claude Sonnet 5,api,4,222.93
+5000,api::sonnet5,Claude Sonnet 5,api,5,278.66
+5000,api::sonnet5,Claude Sonnet 5,api,6,334.4
+5000,api::sonnet5,Claude Sonnet 5,api,7,390.13
+5000,api::sonnet5,Claude Sonnet 5,api,8,445.86
+5000,api::sonnet5,Claude Sonnet 5,api,9,501.59
+5000,api::sonnet5,Claude Sonnet 5,api,10,557.33
+5000,api::sonnet5,Claude Sonnet 5,api,11,613.06
+5000,api::sonnet5,Claude Sonnet 5,api,12,668.79
+5000,api::sonnet5,Claude Sonnet 5,api,13,724.52
+5000,api::sonnet5,Claude Sonnet 5,api,14,780.26
+5000,api::sonnet5,Claude Sonnet 5,api,15,835.99
+5000,api::sonnet5,Claude Sonnet 5,api,16,891.72
+5000,api::sonnet5,Claude Sonnet 5,api,17,947.45
+5000,api::sonnet5,Claude Sonnet 5,api,18,1003.19
+5000,api::sonnet5,Claude Sonnet 5,api,19,1058.92
+5000,api::sonnet5,Claude Sonnet 5,api,20,1114.65
+5000,api::sonnet5,Claude Sonnet 5,api,21,1170.38
+5000,api::sonnet5,Claude Sonnet 5,api,22,1226.12
+5000,api::sonnet5,Claude Sonnet 5,api,23,1281.85
+5000,api::sonnet5,Claude Sonnet 5,api,24,1337.58
+5000,api::sonnet5,Claude Sonnet 5,api,25,1393.31
+5000,api::sonnet5,Claude Sonnet 5,api,26,1449.05
+5000,api::sonnet5,Claude Sonnet 5,api,27,1504.78
+5000,api::sonnet5,Claude Sonnet 5,api,28,1560.51
+5000,api::sonnet5,Claude Sonnet 5,api,29,1616.24
+5000,api::sonnet5,Claude Sonnet 5,api,30,1671.98
+5000,api::sonnet5,Claude Sonnet 5,api,31,1727.71
+5000,api::sonnet5,Claude Sonnet 5,api,32,1783.44
+5000,api::sonnet5,Claude Sonnet 5,api,33,1839.17
+5000,api::sonnet5,Claude Sonnet 5,api,34,1894.91
+5000,api::sonnet5,Claude Sonnet 5,api,35,1950.64
+5000,api::sonnet5,Claude Sonnet 5,api,36,2006.37
+5000,api::sonnet5,Claude Sonnet 5,api,37,2062.1
+5000,api::sonnet5,Claude Sonnet 5,api,38,2117.84
+5000,api::sonnet5,Claude Sonnet 5,api,39,2173.57
+5000,api::sonnet5,Claude Sonnet 5,api,40,2229.3
+5000,api::sonnet5,Claude Sonnet 5,api,41,2285.03
+5000,api::sonnet5,Claude Sonnet 5,api,42,2340.77
+5000,api::sonnet5,Claude Sonnet 5,api,43,2396.5
+5000,api::sonnet5,Claude Sonnet 5,api,44,2452.23
+5000,api::sonnet5,Claude Sonnet 5,api,45,2507.96
+5000,api::sonnet5,Claude Sonnet 5,api,46,2563.7
+5000,api::sonnet5,Claude Sonnet 5,api,47,2619.43
+5000,api::sonnet5,Claude Sonnet 5,api,48,2675.16
+5000,api::sonnet5,Claude Sonnet 5,api,49,2730.89
+5000,api::sonnet5,Claude Sonnet 5,api,50,2786.63
+5000,api::sonnet5,Claude Sonnet 5,api,51,2842.36
+5000,api::sonnet5,Claude Sonnet 5,api,52,2898.09
+5000,api::sonnet5,Claude Sonnet 5,api,53,2953.82
+5000,api::sonnet5,Claude Sonnet 5,api,54,3009.56
+5000,api::sonnet5,Claude Sonnet 5,api,55,3065.29
+5000,api::sonnet5,Claude Sonnet 5,api,56,3121.02
+5000,api::sonnet5,Claude Sonnet 5,api,57,3176.75
+5000,api::sonnet5,Claude Sonnet 5,api,58,3232.49
+5000,api::sonnet5,Claude Sonnet 5,api,59,3288.22
+5000,api::sonnet5,Claude Sonnet 5,api,60,3343.95
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,0,0.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,1,1044.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,2,2088.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,3,3132.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,4,4176.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,5,5220.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,6,6264.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,7,7308.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,8,8352.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,9,9396.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,10,10440.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,11,11484.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,12,12528.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,13,13572.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,14,14616.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,15,15660.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,16,16704.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,17,17748.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,18,18792.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,19,19836.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,20,20880.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,21,21924.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,22,22968.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,23,24012.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,24,25056.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,25,26100.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,26,27144.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,27,28188.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,28,29232.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,29,30276.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,30,31320.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,31,32364.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,32,33408.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,33,34452.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,34,35496.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,35,36540.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,36,37584.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,37,38628.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,38,39672.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,39,40716.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,40,41760.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,41,42804.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,42,43848.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,43,44892.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,44,45936.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,45,46980.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,46,48024.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,47,49068.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,48,50112.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,49,51156.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,50,52200.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,51,53244.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,52,54288.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,53,55332.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,54,56376.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,55,57420.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,56,58464.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,57,59508.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,58,60552.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,59,61596.0
+5000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,60,62640.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,0,0.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,1,396.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,2,792.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,3,1188.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,4,1584.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,5,1980.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,6,2376.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,7,2772.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,8,3168.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,9,3564.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,10,3960.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,11,4356.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,12,4752.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,13,5148.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,14,5544.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,15,5940.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,16,6336.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,17,6732.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,18,7128.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,19,7524.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,20,7920.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,21,8316.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,22,8712.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,23,9108.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,24,9504.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,25,9900.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,26,10296.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,27,10692.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,28,11088.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,29,11484.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,30,11880.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,31,12276.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,32,12672.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,33,13068.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,34,13464.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,35,13860.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,36,14256.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,37,14652.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,38,15048.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,39,15444.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,40,15840.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,41,16236.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,42,16632.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,43,17028.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,44,17424.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,45,17820.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,46,18216.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,47,18612.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,48,19008.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,49,19404.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,50,19800.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,51,20196.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,52,20592.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,53,20988.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,54,21384.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,55,21780.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,56,22176.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,57,22572.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,58,22968.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,59,23364.0
+5000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,60,23760.0
+5000,local::5090,Estación RTX 5090,local,0,7500.0
+5000,local::5090,Estación RTX 5090,local,1,7541.75
+5000,local::5090,Estación RTX 5090,local,2,7583.51
+5000,local::5090,Estación RTX 5090,local,3,7625.26
+5000,local::5090,Estación RTX 5090,local,4,7667.02
+5000,local::5090,Estación RTX 5090,local,5,7708.77
+5000,local::5090,Estación RTX 5090,local,6,7750.53
+5000,local::5090,Estación RTX 5090,local,7,7792.28
+5000,local::5090,Estación RTX 5090,local,8,7834.04
+5000,local::5090,Estación RTX 5090,local,9,7875.79
+5000,local::5090,Estación RTX 5090,local,10,7917.55
+5000,local::5090,Estación RTX 5090,local,11,7959.3
+5000,local::5090,Estación RTX 5090,local,12,8001.06
+5000,local::5090,Estación RTX 5090,local,13,8042.81
+5000,local::5090,Estación RTX 5090,local,14,8084.57
+5000,local::5090,Estación RTX 5090,local,15,8126.32
+5000,local::5090,Estación RTX 5090,local,16,8168.08
+5000,local::5090,Estación RTX 5090,local,17,8209.83
+5000,local::5090,Estación RTX 5090,local,18,8251.59
+5000,local::5090,Estación RTX 5090,local,19,8293.34
+5000,local::5090,Estación RTX 5090,local,20,8335.09
+5000,local::5090,Estación RTX 5090,local,21,8376.85
+5000,local::5090,Estación RTX 5090,local,22,8418.6
+5000,local::5090,Estación RTX 5090,local,23,8460.36
+5000,local::5090,Estación RTX 5090,local,24,8502.11
+5000,local::5090,Estación RTX 5090,local,25,8543.87
+5000,local::5090,Estación RTX 5090,local,26,8585.62
+5000,local::5090,Estación RTX 5090,local,27,8627.38
+5000,local::5090,Estación RTX 5090,local,28,8669.13
+5000,local::5090,Estación RTX 5090,local,29,8710.89
+5000,local::5090,Estación RTX 5090,local,30,8752.64
+5000,local::5090,Estación RTX 5090,local,31,8794.4
+5000,local::5090,Estación RTX 5090,local,32,8836.15
+5000,local::5090,Estación RTX 5090,local,33,8877.91
+5000,local::5090,Estación RTX 5090,local,34,8919.66
+5000,local::5090,Estación RTX 5090,local,35,8961.42
+5000,local::5090,Estación RTX 5090,local,36,9003.17
+5000,local::5090,Estación RTX 5090,local,37,9044.92
+5000,local::5090,Estación RTX 5090,local,38,9086.68
+5000,local::5090,Estación RTX 5090,local,39,9128.43
+5000,local::5090,Estación RTX 5090,local,40,9170.19
+5000,local::5090,Estación RTX 5090,local,41,9211.94
+5000,local::5090,Estación RTX 5090,local,42,9253.7
+5000,local::5090,Estación RTX 5090,local,43,9295.45
+5000,local::5090,Estación RTX 5090,local,44,9337.21
+5000,local::5090,Estación RTX 5090,local,45,9378.96
+5000,local::5090,Estación RTX 5090,local,46,9420.72
+5000,local::5090,Estación RTX 5090,local,47,9462.47
+5000,local::5090,Estación RTX 5090,local,48,9504.23
+5000,local::5090,Estación RTX 5090,local,49,9545.98
+5000,local::5090,Estación RTX 5090,local,50,9587.74
+5000,local::5090,Estación RTX 5090,local,51,9629.49
+5000,local::5090,Estación RTX 5090,local,52,9671.25
+5000,local::5090,Estación RTX 5090,local,53,9713.0
+5000,local::5090,Estación RTX 5090,local,54,9754.76
+5000,local::5090,Estación RTX 5090,local,55,9796.51
+5000,local::5090,Estación RTX 5090,local,56,9838.26
+5000,local::5090,Estación RTX 5090,local,57,9880.02
+5000,local::5090,Estación RTX 5090,local,58,9921.77
+5000,local::5090,Estación RTX 5090,local,59,9963.53
+5000,local::5090,Estación RTX 5090,local,60,10005.28
+5000,local::pro6000,Servidor 1× PRO 6000,local,0,12500.0
+5000,local::pro6000,Servidor 1× PRO 6000,local,1,12567.54
+5000,local::pro6000,Servidor 1× PRO 6000,local,2,12635.08
+5000,local::pro6000,Servidor 1× PRO 6000,local,3,12702.62
+5000,local::pro6000,Servidor 1× PRO 6000,local,4,12770.15
+5000,local::pro6000,Servidor 1× PRO 6000,local,5,12837.69
+5000,local::pro6000,Servidor 1× PRO 6000,local,6,12905.23
+5000,local::pro6000,Servidor 1× PRO 6000,local,7,12972.77
+5000,local::pro6000,Servidor 1× PRO 6000,local,8,13040.31
+5000,local::pro6000,Servidor 1× PRO 6000,local,9,13107.85
+5000,local::pro6000,Servidor 1× PRO 6000,local,10,13175.39
+5000,local::pro6000,Servidor 1× PRO 6000,local,11,13242.92
+5000,local::pro6000,Servidor 1× PRO 6000,local,12,13310.46
+5000,local::pro6000,Servidor 1× PRO 6000,local,13,13378.0
+5000,local::pro6000,Servidor 1× PRO 6000,local,14,13445.54
+5000,local::pro6000,Servidor 1× PRO 6000,local,15,13513.08
+5000,local::pro6000,Servidor 1× PRO 6000,local,16,13580.62
+5000,local::pro6000,Servidor 1× PRO 6000,local,17,13648.15
+5000,local::pro6000,Servidor 1× PRO 6000,local,18,13715.69
+5000,local::pro6000,Servidor 1× PRO 6000,local,19,13783.23
+5000,local::pro6000,Servidor 1× PRO 6000,local,20,13850.77
+5000,local::pro6000,Servidor 1× PRO 6000,local,21,13918.31
+5000,local::pro6000,Servidor 1× PRO 6000,local,22,13985.85
+5000,local::pro6000,Servidor 1× PRO 6000,local,23,14053.39
+5000,local::pro6000,Servidor 1× PRO 6000,local,24,14120.92
+5000,local::pro6000,Servidor 1× PRO 6000,local,25,14188.46
+5000,local::pro6000,Servidor 1× PRO 6000,local,26,14256.0
+5000,local::pro6000,Servidor 1× PRO 6000,local,27,14323.54
+5000,local::pro6000,Servidor 1× PRO 6000,local,28,14391.08
+5000,local::pro6000,Servidor 1× PRO 6000,local,29,14458.62
+5000,local::pro6000,Servidor 1× PRO 6000,local,30,14526.16
+5000,local::pro6000,Servidor 1× PRO 6000,local,31,14593.69
+5000,local::pro6000,Servidor 1× PRO 6000,local,32,14661.23
+5000,local::pro6000,Servidor 1× PRO 6000,local,33,14728.77
+5000,local::pro6000,Servidor 1× PRO 6000,local,34,14796.31
+5000,local::pro6000,Servidor 1× PRO 6000,local,35,14863.85
+5000,local::pro6000,Servidor 1× PRO 6000,local,36,14931.39
+5000,local::pro6000,Servidor 1× PRO 6000,local,37,14998.93
+5000,local::pro6000,Servidor 1× PRO 6000,local,38,15066.46
+5000,local::pro6000,Servidor 1× PRO 6000,local,39,15134.0
+5000,local::pro6000,Servidor 1× PRO 6000,local,40,15201.54
+5000,local::pro6000,Servidor 1× PRO 6000,local,41,15269.08
+5000,local::pro6000,Servidor 1× PRO 6000,local,42,15336.62
+5000,local::pro6000,Servidor 1× PRO 6000,local,43,15404.16
+5000,local::pro6000,Servidor 1× PRO 6000,local,44,15471.69
+5000,local::pro6000,Servidor 1× PRO 6000,local,45,15539.23
+5000,local::pro6000,Servidor 1× PRO 6000,local,46,15606.77
+5000,local::pro6000,Servidor 1× PRO 6000,local,47,15674.31
+5000,local::pro6000,Servidor 1× PRO 6000,local,48,15741.85
+5000,local::pro6000,Servidor 1× PRO 6000,local,49,15809.39
+5000,local::pro6000,Servidor 1× PRO 6000,local,50,15876.93
+5000,local::pro6000,Servidor 1× PRO 6000,local,51,15944.46
+5000,local::pro6000,Servidor 1× PRO 6000,local,52,16012.0
+5000,local::pro6000,Servidor 1× PRO 6000,local,53,16079.54
+5000,local::pro6000,Servidor 1× PRO 6000,local,54,16147.08
+5000,local::pro6000,Servidor 1× PRO 6000,local,55,16214.62
+5000,local::pro6000,Servidor 1× PRO 6000,local,56,16282.16
+5000,local::pro6000,Servidor 1× PRO 6000,local,57,16349.7
+5000,local::pro6000,Servidor 1× PRO 6000,local,58,16417.23
+5000,local::pro6000,Servidor 1× PRO 6000,local,59,16484.77
+5000,local::pro6000,Servidor 1× PRO 6000,local,60,16552.31
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,0,0.0
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,1,10.53
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,2,21.06
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,3,31.6
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,4,42.13
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,5,52.66
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,6,63.19
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,7,73.72
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,8,84.25
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,9,94.79
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,10,105.32
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,11,115.85
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,12,126.38
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,13,136.91
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,14,147.44
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,15,157.98
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,16,168.51
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,17,179.04
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,18,189.57
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,19,200.1
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,20,210.64
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,21,221.17
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,22,231.7
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,23,242.23
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,24,252.76
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,25,263.29
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,26,273.83
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,27,284.36
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,28,294.89
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,29,305.42
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,30,315.95
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,31,326.48
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,32,337.02
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,33,347.55
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,34,358.08
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,35,368.61
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,36,379.14
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,37,389.67
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,38,400.21
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,39,410.74
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,40,421.27
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,41,431.8
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,42,442.33
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,43,452.87
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,44,463.4
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,45,473.93
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,46,484.46
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,47,494.99
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,48,505.52
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,49,516.06
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,50,526.59
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,51,537.12
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,52,547.65
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,53,558.18
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,54,568.71
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,55,579.25
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,56,589.78
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,57,600.31
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,58,610.84
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,59,621.37
+20000,api::g25lite,Gemini 2.5 Flash-Lite,api,60,631.91
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,0,0.0
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,1,29.4
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,2,58.81
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,3,88.21
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,4,117.61
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,5,147.02
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,6,176.42
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,7,205.82
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,8,235.23
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,9,264.63
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,10,294.03
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,11,323.43
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,12,352.84
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,13,382.24
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,14,411.64
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,15,441.05
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,16,470.45
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,17,499.85
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,18,529.26
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,19,558.66
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,20,588.06
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,21,617.47
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,22,646.87
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,23,676.27
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,24,705.68
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,25,735.08
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,26,764.48
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,27,793.89
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,28,823.29
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,29,852.69
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,30,882.09
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,31,911.5
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,32,940.9
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,33,970.3
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,34,999.71
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,35,1029.11
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,36,1058.51
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,37,1087.92
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,38,1117.32
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,39,1146.72
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,40,1176.13
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,41,1205.53
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,42,1234.93
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,43,1264.34
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,44,1293.74
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,45,1323.14
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,46,1352.54
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,47,1381.95
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,48,1411.35
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,49,1440.75
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,50,1470.16
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,51,1499.56
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,52,1528.96
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,53,1558.37
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,54,1587.77
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,55,1617.17
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,56,1646.58
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,57,1675.98
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,58,1705.38
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,59,1734.79
+20000,api::g31lite,Gemini 3.1 Flash-Lite,api,60,1764.19
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,0,0.0
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,1,39.59
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,2,79.17
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,3,118.76
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,4,158.35
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,5,197.94
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,6,237.52
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,7,277.11
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,8,316.7
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,9,356.28
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,10,395.87
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,11,435.46
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,12,475.04
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,13,514.63
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,14,554.22
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,15,593.81
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,16,633.39
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,17,672.98
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,18,712.57
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,19,752.15
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,20,791.74
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,21,831.33
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,22,870.92
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,23,910.5
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,24,950.09
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,25,989.68
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,26,1029.26
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,27,1068.85
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,28,1108.44
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,29,1148.02
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,30,1187.61
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,31,1227.2
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,32,1266.79
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,33,1306.37
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,34,1345.96
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,35,1385.55
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,36,1425.13
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,37,1464.72
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,38,1504.31
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,39,1543.9
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,40,1583.48
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,41,1623.07
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,42,1662.66
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,43,1702.24
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,44,1741.83
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,45,1781.42
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,46,1821.0
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,47,1860.59
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,48,1900.18
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,49,1939.77
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,50,1979.35
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,51,2018.94
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,52,2058.53
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,53,2098.11
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,54,2137.7
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,55,2177.29
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,56,2216.88
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,57,2256.46
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,58,2296.05
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,59,2335.64
+20000,api::g35lite,Gemini 3.5 Flash-Lite,api,60,2375.22
+20000,api::g36flash,Gemini 3.6 Flash,api,0,0.0
+20000,api::g36flash,Gemini 3.6 Flash,api,1,83.6
+20000,api::g36flash,Gemini 3.6 Flash,api,2,167.2
+20000,api::g36flash,Gemini 3.6 Flash,api,3,250.8
+20000,api::g36flash,Gemini 3.6 Flash,api,4,334.4
+20000,api::g36flash,Gemini 3.6 Flash,api,5,417.99
+20000,api::g36flash,Gemini 3.6 Flash,api,6,501.59
+20000,api::g36flash,Gemini 3.6 Flash,api,7,585.19
+20000,api::g36flash,Gemini 3.6 Flash,api,8,668.79
+20000,api::g36flash,Gemini 3.6 Flash,api,9,752.39
+20000,api::g36flash,Gemini 3.6 Flash,api,10,835.99
+20000,api::g36flash,Gemini 3.6 Flash,api,11,919.59
+20000,api::g36flash,Gemini 3.6 Flash,api,12,1003.19
+20000,api::g36flash,Gemini 3.6 Flash,api,13,1086.78
+20000,api::g36flash,Gemini 3.6 Flash,api,14,1170.38
+20000,api::g36flash,Gemini 3.6 Flash,api,15,1253.98
+20000,api::g36flash,Gemini 3.6 Flash,api,16,1337.58
+20000,api::g36flash,Gemini 3.6 Flash,api,17,1421.18
+20000,api::g36flash,Gemini 3.6 Flash,api,18,1504.78
+20000,api::g36flash,Gemini 3.6 Flash,api,19,1588.38
+20000,api::g36flash,Gemini 3.6 Flash,api,20,1671.98
+20000,api::g36flash,Gemini 3.6 Flash,api,21,1755.57
+20000,api::g36flash,Gemini 3.6 Flash,api,22,1839.17
+20000,api::g36flash,Gemini 3.6 Flash,api,23,1922.77
+20000,api::g36flash,Gemini 3.6 Flash,api,24,2006.37
+20000,api::g36flash,Gemini 3.6 Flash,api,25,2089.97
+20000,api::g36flash,Gemini 3.6 Flash,api,26,2173.57
+20000,api::g36flash,Gemini 3.6 Flash,api,27,2257.17
+20000,api::g36flash,Gemini 3.6 Flash,api,28,2340.77
+20000,api::g36flash,Gemini 3.6 Flash,api,29,2424.37
+20000,api::g36flash,Gemini 3.6 Flash,api,30,2507.96
+20000,api::g36flash,Gemini 3.6 Flash,api,31,2591.56
+20000,api::g36flash,Gemini 3.6 Flash,api,32,2675.16
+20000,api::g36flash,Gemini 3.6 Flash,api,33,2758.76
+20000,api::g36flash,Gemini 3.6 Flash,api,34,2842.36
+20000,api::g36flash,Gemini 3.6 Flash,api,35,2925.96
+20000,api::g36flash,Gemini 3.6 Flash,api,36,3009.56
+20000,api::g36flash,Gemini 3.6 Flash,api,37,3093.16
+20000,api::g36flash,Gemini 3.6 Flash,api,38,3176.75
+20000,api::g36flash,Gemini 3.6 Flash,api,39,3260.35
+20000,api::g36flash,Gemini 3.6 Flash,api,40,3343.95
+20000,api::g36flash,Gemini 3.6 Flash,api,41,3427.55
+20000,api::g36flash,Gemini 3.6 Flash,api,42,3511.15
+20000,api::g36flash,Gemini 3.6 Flash,api,43,3594.75
+20000,api::g36flash,Gemini 3.6 Flash,api,44,3678.35
+20000,api::g36flash,Gemini 3.6 Flash,api,45,3761.95
+20000,api::g36flash,Gemini 3.6 Flash,api,46,3845.54
+20000,api::g36flash,Gemini 3.6 Flash,api,47,3929.14
+20000,api::g36flash,Gemini 3.6 Flash,api,48,4012.74
+20000,api::g36flash,Gemini 3.6 Flash,api,49,4096.34
+20000,api::g36flash,Gemini 3.6 Flash,api,50,4179.94
+20000,api::g36flash,Gemini 3.6 Flash,api,51,4263.54
+20000,api::g36flash,Gemini 3.6 Flash,api,52,4347.14
+20000,api::g36flash,Gemini 3.6 Flash,api,53,4430.74
+20000,api::g36flash,Gemini 3.6 Flash,api,54,4514.33
+20000,api::g36flash,Gemini 3.6 Flash,api,55,4597.93
+20000,api::g36flash,Gemini 3.6 Flash,api,56,4681.53
+20000,api::g36flash,Gemini 3.6 Flash,api,57,4765.13
+20000,api::g36flash,Gemini 3.6 Flash,api,58,4848.73
+20000,api::g36flash,Gemini 3.6 Flash,api,59,4932.33
+20000,api::g36flash,Gemini 3.6 Flash,api,60,5015.93
+20000,api::gpt54mini,GPT-5.4 mini,api,0,0.0
+20000,api::gpt54mini,GPT-5.4 mini,api,1,88.21
+20000,api::gpt54mini,GPT-5.4 mini,api,2,176.42
+20000,api::gpt54mini,GPT-5.4 mini,api,3,264.63
+20000,api::gpt54mini,GPT-5.4 mini,api,4,352.84
+20000,api::gpt54mini,GPT-5.4 mini,api,5,441.05
+20000,api::gpt54mini,GPT-5.4 mini,api,6,529.26
+20000,api::gpt54mini,GPT-5.4 mini,api,7,617.47
+20000,api::gpt54mini,GPT-5.4 mini,api,8,705.68
+20000,api::gpt54mini,GPT-5.4 mini,api,9,793.89
+20000,api::gpt54mini,GPT-5.4 mini,api,10,882.09
+20000,api::gpt54mini,GPT-5.4 mini,api,11,970.3
+20000,api::gpt54mini,GPT-5.4 mini,api,12,1058.51
+20000,api::gpt54mini,GPT-5.4 mini,api,13,1146.72
+20000,api::gpt54mini,GPT-5.4 mini,api,14,1234.93
+20000,api::gpt54mini,GPT-5.4 mini,api,15,1323.14
+20000,api::gpt54mini,GPT-5.4 mini,api,16,1411.35
+20000,api::gpt54mini,GPT-5.4 mini,api,17,1499.56
+20000,api::gpt54mini,GPT-5.4 mini,api,18,1587.77
+20000,api::gpt54mini,GPT-5.4 mini,api,19,1675.98
+20000,api::gpt54mini,GPT-5.4 mini,api,20,1764.19
+20000,api::gpt54mini,GPT-5.4 mini,api,21,1852.4
+20000,api::gpt54mini,GPT-5.4 mini,api,22,1940.61
+20000,api::gpt54mini,GPT-5.4 mini,api,23,2028.82
+20000,api::gpt54mini,GPT-5.4 mini,api,24,2117.03
+20000,api::gpt54mini,GPT-5.4 mini,api,25,2205.24
+20000,api::gpt54mini,GPT-5.4 mini,api,26,2293.45
+20000,api::gpt54mini,GPT-5.4 mini,api,27,2381.66
+20000,api::gpt54mini,GPT-5.4 mini,api,28,2469.86
+20000,api::gpt54mini,GPT-5.4 mini,api,29,2558.07
+20000,api::gpt54mini,GPT-5.4 mini,api,30,2646.28
+20000,api::gpt54mini,GPT-5.4 mini,api,31,2734.49
+20000,api::gpt54mini,GPT-5.4 mini,api,32,2822.7
+20000,api::gpt54mini,GPT-5.4 mini,api,33,2910.91
+20000,api::gpt54mini,GPT-5.4 mini,api,34,2999.12
+20000,api::gpt54mini,GPT-5.4 mini,api,35,3087.33
+20000,api::gpt54mini,GPT-5.4 mini,api,36,3175.54
+20000,api::gpt54mini,GPT-5.4 mini,api,37,3263.75
+20000,api::gpt54mini,GPT-5.4 mini,api,38,3351.96
+20000,api::gpt54mini,GPT-5.4 mini,api,39,3440.17
+20000,api::gpt54mini,GPT-5.4 mini,api,40,3528.38
+20000,api::gpt54mini,GPT-5.4 mini,api,41,3616.59
+20000,api::gpt54mini,GPT-5.4 mini,api,42,3704.8
+20000,api::gpt54mini,GPT-5.4 mini,api,43,3793.01
+20000,api::gpt54mini,GPT-5.4 mini,api,44,3881.22
+20000,api::gpt54mini,GPT-5.4 mini,api,45,3969.43
+20000,api::gpt54mini,GPT-5.4 mini,api,46,4057.63
+20000,api::gpt54mini,GPT-5.4 mini,api,47,4145.84
+20000,api::gpt54mini,GPT-5.4 mini,api,48,4234.05
+20000,api::gpt54mini,GPT-5.4 mini,api,49,4322.26
+20000,api::gpt54mini,GPT-5.4 mini,api,50,4410.47
+20000,api::gpt54mini,GPT-5.4 mini,api,51,4498.68
+20000,api::gpt54mini,GPT-5.4 mini,api,52,4586.89
+20000,api::gpt54mini,GPT-5.4 mini,api,53,4675.1
+20000,api::gpt54mini,GPT-5.4 mini,api,54,4763.31
+20000,api::gpt54mini,GPT-5.4 mini,api,55,4851.52
+20000,api::gpt54mini,GPT-5.4 mini,api,56,4939.73
+20000,api::gpt54mini,GPT-5.4 mini,api,57,5027.94
+20000,api::gpt54mini,GPT-5.4 mini,api,58,5116.15
+20000,api::gpt54mini,GPT-5.4 mini,api,59,5204.36
+20000,api::gpt54mini,GPT-5.4 mini,api,60,5292.57
+20000,api::gpt56luna,GPT-5.6 luna,api,0,0.0
+20000,api::gpt56luna,GPT-5.6 luna,api,1,23.52
+20000,api::gpt56luna,GPT-5.6 luna,api,2,47.05
+20000,api::gpt56luna,GPT-5.6 luna,api,3,70.57
+20000,api::gpt56luna,GPT-5.6 luna,api,4,94.09
+20000,api::gpt56luna,GPT-5.6 luna,api,5,117.61
+20000,api::gpt56luna,GPT-5.6 luna,api,6,141.14
+20000,api::gpt56luna,GPT-5.6 luna,api,7,164.66
+20000,api::gpt56luna,GPT-5.6 luna,api,8,188.18
+20000,api::gpt56luna,GPT-5.6 luna,api,9,211.7
+20000,api::gpt56luna,GPT-5.6 luna,api,10,235.23
+20000,api::gpt56luna,GPT-5.6 luna,api,11,258.75
+20000,api::gpt56luna,GPT-5.6 luna,api,12,282.27
+20000,api::gpt56luna,GPT-5.6 luna,api,13,305.79
+20000,api::gpt56luna,GPT-5.6 luna,api,14,329.32
+20000,api::gpt56luna,GPT-5.6 luna,api,15,352.84
+20000,api::gpt56luna,GPT-5.6 luna,api,16,376.36
+20000,api::gpt56luna,GPT-5.6 luna,api,17,399.88
+20000,api::gpt56luna,GPT-5.6 luna,api,18,423.41
+20000,api::gpt56luna,GPT-5.6 luna,api,19,446.93
+20000,api::gpt56luna,GPT-5.6 luna,api,20,470.45
+20000,api::gpt56luna,GPT-5.6 luna,api,21,493.97
+20000,api::gpt56luna,GPT-5.6 luna,api,22,517.5
+20000,api::gpt56luna,GPT-5.6 luna,api,23,541.02
+20000,api::gpt56luna,GPT-5.6 luna,api,24,564.54
+20000,api::gpt56luna,GPT-5.6 luna,api,25,588.06
+20000,api::gpt56luna,GPT-5.6 luna,api,26,611.59
+20000,api::gpt56luna,GPT-5.6 luna,api,27,635.11
+20000,api::gpt56luna,GPT-5.6 luna,api,28,658.63
+20000,api::gpt56luna,GPT-5.6 luna,api,29,682.15
+20000,api::gpt56luna,GPT-5.6 luna,api,30,705.68
+20000,api::gpt56luna,GPT-5.6 luna,api,31,729.2
+20000,api::gpt56luna,GPT-5.6 luna,api,32,752.72
+20000,api::gpt56luna,GPT-5.6 luna,api,33,776.24
+20000,api::gpt56luna,GPT-5.6 luna,api,34,799.77
+20000,api::gpt56luna,GPT-5.6 luna,api,35,823.29
+20000,api::gpt56luna,GPT-5.6 luna,api,36,846.81
+20000,api::gpt56luna,GPT-5.6 luna,api,37,870.33
+20000,api::gpt56luna,GPT-5.6 luna,api,38,893.86
+20000,api::gpt56luna,GPT-5.6 luna,api,39,917.38
+20000,api::gpt56luna,GPT-5.6 luna,api,40,940.9
+20000,api::gpt56luna,GPT-5.6 luna,api,41,964.42
+20000,api::gpt56luna,GPT-5.6 luna,api,42,987.95
+20000,api::gpt56luna,GPT-5.6 luna,api,43,1011.47
+20000,api::gpt56luna,GPT-5.6 luna,api,44,1034.99
+20000,api::gpt56luna,GPT-5.6 luna,api,45,1058.51
+20000,api::gpt56luna,GPT-5.6 luna,api,46,1082.04
+20000,api::gpt56luna,GPT-5.6 luna,api,47,1105.56
+20000,api::gpt56luna,GPT-5.6 luna,api,48,1129.08
+20000,api::gpt56luna,GPT-5.6 luna,api,49,1152.6
+20000,api::gpt56luna,GPT-5.6 luna,api,50,1176.13
+20000,api::gpt56luna,GPT-5.6 luna,api,51,1199.65
+20000,api::gpt56luna,GPT-5.6 luna,api,52,1223.17
+20000,api::gpt56luna,GPT-5.6 luna,api,53,1246.69
+20000,api::gpt56luna,GPT-5.6 luna,api,54,1270.22
+20000,api::gpt56luna,GPT-5.6 luna,api,55,1293.74
+20000,api::gpt56luna,GPT-5.6 luna,api,56,1317.26
+20000,api::gpt56luna,GPT-5.6 luna,api,57,1340.78
+20000,api::gpt56luna,GPT-5.6 luna,api,58,1364.31
+20000,api::gpt56luna,GPT-5.6 luna,api,59,1387.83
+20000,api::gpt56luna,GPT-5.6 luna,api,60,1411.35
+20000,api::gpt5mini,GPT-5 mini,api,0,0.0
+20000,api::gpt5mini,GPT-5 mini,api,1,32.48
+20000,api::gpt5mini,GPT-5 mini,api,2,64.95
+20000,api::gpt5mini,GPT-5 mini,api,3,97.43
+20000,api::gpt5mini,GPT-5 mini,api,4,129.91
+20000,api::gpt5mini,GPT-5 mini,api,5,162.38
+20000,api::gpt5mini,GPT-5 mini,api,6,194.86
+20000,api::gpt5mini,GPT-5 mini,api,7,227.34
+20000,api::gpt5mini,GPT-5 mini,api,8,259.82
+20000,api::gpt5mini,GPT-5 mini,api,9,292.29
+20000,api::gpt5mini,GPT-5 mini,api,10,324.77
+20000,api::gpt5mini,GPT-5 mini,api,11,357.25
+20000,api::gpt5mini,GPT-5 mini,api,12,389.72
+20000,api::gpt5mini,GPT-5 mini,api,13,422.2
+20000,api::gpt5mini,GPT-5 mini,api,14,454.68
+20000,api::gpt5mini,GPT-5 mini,api,15,487.15
+20000,api::gpt5mini,GPT-5 mini,api,16,519.63
+20000,api::gpt5mini,GPT-5 mini,api,17,552.11
+20000,api::gpt5mini,GPT-5 mini,api,18,584.58
+20000,api::gpt5mini,GPT-5 mini,api,19,617.06
+20000,api::gpt5mini,GPT-5 mini,api,20,649.54
+20000,api::gpt5mini,GPT-5 mini,api,21,682.02
+20000,api::gpt5mini,GPT-5 mini,api,22,714.49
+20000,api::gpt5mini,GPT-5 mini,api,23,746.97
+20000,api::gpt5mini,GPT-5 mini,api,24,779.45
+20000,api::gpt5mini,GPT-5 mini,api,25,811.92
+20000,api::gpt5mini,GPT-5 mini,api,26,844.4
+20000,api::gpt5mini,GPT-5 mini,api,27,876.88
+20000,api::gpt5mini,GPT-5 mini,api,28,909.35
+20000,api::gpt5mini,GPT-5 mini,api,29,941.83
+20000,api::gpt5mini,GPT-5 mini,api,30,974.31
+20000,api::gpt5mini,GPT-5 mini,api,31,1006.78
+20000,api::gpt5mini,GPT-5 mini,api,32,1039.26
+20000,api::gpt5mini,GPT-5 mini,api,33,1071.74
+20000,api::gpt5mini,GPT-5 mini,api,34,1104.22
+20000,api::gpt5mini,GPT-5 mini,api,35,1136.69
+20000,api::gpt5mini,GPT-5 mini,api,36,1169.17
+20000,api::gpt5mini,GPT-5 mini,api,37,1201.65
+20000,api::gpt5mini,GPT-5 mini,api,38,1234.12
+20000,api::gpt5mini,GPT-5 mini,api,39,1266.6
+20000,api::gpt5mini,GPT-5 mini,api,40,1299.08
+20000,api::gpt5mini,GPT-5 mini,api,41,1331.55
+20000,api::gpt5mini,GPT-5 mini,api,42,1364.03
+20000,api::gpt5mini,GPT-5 mini,api,43,1396.51
+20000,api::gpt5mini,GPT-5 mini,api,44,1428.98
+20000,api::gpt5mini,GPT-5 mini,api,45,1461.46
+20000,api::gpt5mini,GPT-5 mini,api,46,1493.94
+20000,api::gpt5mini,GPT-5 mini,api,47,1526.42
+20000,api::gpt5mini,GPT-5 mini,api,48,1558.89
+20000,api::gpt5mini,GPT-5 mini,api,49,1591.37
+20000,api::gpt5mini,GPT-5 mini,api,50,1623.85
+20000,api::gpt5mini,GPT-5 mini,api,51,1656.32
+20000,api::gpt5mini,GPT-5 mini,api,52,1688.8
+20000,api::gpt5mini,GPT-5 mini,api,53,1721.28
+20000,api::gpt5mini,GPT-5 mini,api,54,1753.75
+20000,api::gpt5mini,GPT-5 mini,api,55,1786.23
+20000,api::gpt5mini,GPT-5 mini,api,56,1818.71
+20000,api::gpt5mini,GPT-5 mini,api,57,1851.18
+20000,api::gpt5mini,GPT-5 mini,api,58,1883.66
+20000,api::gpt5mini,GPT-5 mini,api,59,1916.14
+20000,api::gpt5mini,GPT-5 mini,api,60,1948.62
+20000,api::gpt5nano,GPT-5 nano,api,0,0.0
+20000,api::gpt5nano,GPT-5 nano,api,1,6.5
+20000,api::gpt5nano,GPT-5 nano,api,2,12.99
+20000,api::gpt5nano,GPT-5 nano,api,3,19.49
+20000,api::gpt5nano,GPT-5 nano,api,4,25.98
+20000,api::gpt5nano,GPT-5 nano,api,5,32.48
+20000,api::gpt5nano,GPT-5 nano,api,6,38.97
+20000,api::gpt5nano,GPT-5 nano,api,7,45.47
+20000,api::gpt5nano,GPT-5 nano,api,8,51.96
+20000,api::gpt5nano,GPT-5 nano,api,9,58.46
+20000,api::gpt5nano,GPT-5 nano,api,10,64.95
+20000,api::gpt5nano,GPT-5 nano,api,11,71.45
+20000,api::gpt5nano,GPT-5 nano,api,12,77.94
+20000,api::gpt5nano,GPT-5 nano,api,13,84.44
+20000,api::gpt5nano,GPT-5 nano,api,14,90.94
+20000,api::gpt5nano,GPT-5 nano,api,15,97.43
+20000,api::gpt5nano,GPT-5 nano,api,16,103.93
+20000,api::gpt5nano,GPT-5 nano,api,17,110.42
+20000,api::gpt5nano,GPT-5 nano,api,18,116.92
+20000,api::gpt5nano,GPT-5 nano,api,19,123.41
+20000,api::gpt5nano,GPT-5 nano,api,20,129.91
+20000,api::gpt5nano,GPT-5 nano,api,21,136.4
+20000,api::gpt5nano,GPT-5 nano,api,22,142.9
+20000,api::gpt5nano,GPT-5 nano,api,23,149.39
+20000,api::gpt5nano,GPT-5 nano,api,24,155.89
+20000,api::gpt5nano,GPT-5 nano,api,25,162.38
+20000,api::gpt5nano,GPT-5 nano,api,26,168.88
+20000,api::gpt5nano,GPT-5 nano,api,27,175.38
+20000,api::gpt5nano,GPT-5 nano,api,28,181.87
+20000,api::gpt5nano,GPT-5 nano,api,29,188.37
+20000,api::gpt5nano,GPT-5 nano,api,30,194.86
+20000,api::gpt5nano,GPT-5 nano,api,31,201.36
+20000,api::gpt5nano,GPT-5 nano,api,32,207.85
+20000,api::gpt5nano,GPT-5 nano,api,33,214.35
+20000,api::gpt5nano,GPT-5 nano,api,34,220.84
+20000,api::gpt5nano,GPT-5 nano,api,35,227.34
+20000,api::gpt5nano,GPT-5 nano,api,36,233.83
+20000,api::gpt5nano,GPT-5 nano,api,37,240.33
+20000,api::gpt5nano,GPT-5 nano,api,38,246.82
+20000,api::gpt5nano,GPT-5 nano,api,39,253.32
+20000,api::gpt5nano,GPT-5 nano,api,40,259.82
+20000,api::gpt5nano,GPT-5 nano,api,41,266.31
+20000,api::gpt5nano,GPT-5 nano,api,42,272.81
+20000,api::gpt5nano,GPT-5 nano,api,43,279.3
+20000,api::gpt5nano,GPT-5 nano,api,44,285.8
+20000,api::gpt5nano,GPT-5 nano,api,45,292.29
+20000,api::gpt5nano,GPT-5 nano,api,46,298.79
+20000,api::gpt5nano,GPT-5 nano,api,47,305.28
+20000,api::gpt5nano,GPT-5 nano,api,48,311.78
+20000,api::gpt5nano,GPT-5 nano,api,49,318.27
+20000,api::gpt5nano,GPT-5 nano,api,50,324.77
+20000,api::gpt5nano,GPT-5 nano,api,51,331.26
+20000,api::gpt5nano,GPT-5 nano,api,52,337.76
+20000,api::gpt5nano,GPT-5 nano,api,53,344.26
+20000,api::gpt5nano,GPT-5 nano,api,54,350.75
+20000,api::gpt5nano,GPT-5 nano,api,55,357.25
+20000,api::gpt5nano,GPT-5 nano,api,56,363.74
+20000,api::gpt5nano,GPT-5 nano,api,57,370.24
+20000,api::gpt5nano,GPT-5 nano,api,58,376.73
+20000,api::gpt5nano,GPT-5 nano,api,59,383.23
+20000,api::gpt5nano,GPT-5 nano,api,60,389.72
+20000,api::haiku45,Claude Haiku 4.5,api,0,0.0
+20000,api::haiku45,Claude Haiku 4.5,api,1,111.47
+20000,api::haiku45,Claude Haiku 4.5,api,2,222.93
+20000,api::haiku45,Claude Haiku 4.5,api,3,334.4
+20000,api::haiku45,Claude Haiku 4.5,api,4,445.86
+20000,api::haiku45,Claude Haiku 4.5,api,5,557.33
+20000,api::haiku45,Claude Haiku 4.5,api,6,668.79
+20000,api::haiku45,Claude Haiku 4.5,api,7,780.26
+20000,api::haiku45,Claude Haiku 4.5,api,8,891.72
+20000,api::haiku45,Claude Haiku 4.5,api,9,1003.19
+20000,api::haiku45,Claude Haiku 4.5,api,10,1114.65
+20000,api::haiku45,Claude Haiku 4.5,api,11,1226.12
+20000,api::haiku45,Claude Haiku 4.5,api,12,1337.58
+20000,api::haiku45,Claude Haiku 4.5,api,13,1449.05
+20000,api::haiku45,Claude Haiku 4.5,api,14,1560.51
+20000,api::haiku45,Claude Haiku 4.5,api,15,1671.98
+20000,api::haiku45,Claude Haiku 4.5,api,16,1783.44
+20000,api::haiku45,Claude Haiku 4.5,api,17,1894.91
+20000,api::haiku45,Claude Haiku 4.5,api,18,2006.37
+20000,api::haiku45,Claude Haiku 4.5,api,19,2117.84
+20000,api::haiku45,Claude Haiku 4.5,api,20,2229.3
+20000,api::haiku45,Claude Haiku 4.5,api,21,2340.77
+20000,api::haiku45,Claude Haiku 4.5,api,22,2452.23
+20000,api::haiku45,Claude Haiku 4.5,api,23,2563.7
+20000,api::haiku45,Claude Haiku 4.5,api,24,2675.16
+20000,api::haiku45,Claude Haiku 4.5,api,25,2786.63
+20000,api::haiku45,Claude Haiku 4.5,api,26,2898.09
+20000,api::haiku45,Claude Haiku 4.5,api,27,3009.56
+20000,api::haiku45,Claude Haiku 4.5,api,28,3121.02
+20000,api::haiku45,Claude Haiku 4.5,api,29,3232.49
+20000,api::haiku45,Claude Haiku 4.5,api,30,3343.95
+20000,api::haiku45,Claude Haiku 4.5,api,31,3455.42
+20000,api::haiku45,Claude Haiku 4.5,api,32,3566.88
+20000,api::haiku45,Claude Haiku 4.5,api,33,3678.35
+20000,api::haiku45,Claude Haiku 4.5,api,34,3789.81
+20000,api::haiku45,Claude Haiku 4.5,api,35,3901.28
+20000,api::haiku45,Claude Haiku 4.5,api,36,4012.74
+20000,api::haiku45,Claude Haiku 4.5,api,37,4124.21
+20000,api::haiku45,Claude Haiku 4.5,api,38,4235.67
+20000,api::haiku45,Claude Haiku 4.5,api,39,4347.14
+20000,api::haiku45,Claude Haiku 4.5,api,40,4458.6
+20000,api::haiku45,Claude Haiku 4.5,api,41,4570.07
+20000,api::haiku45,Claude Haiku 4.5,api,42,4681.53
+20000,api::haiku45,Claude Haiku 4.5,api,43,4793.0
+20000,api::haiku45,Claude Haiku 4.5,api,44,4904.46
+20000,api::haiku45,Claude Haiku 4.5,api,45,5015.93
+20000,api::haiku45,Claude Haiku 4.5,api,46,5127.39
+20000,api::haiku45,Claude Haiku 4.5,api,47,5238.86
+20000,api::haiku45,Claude Haiku 4.5,api,48,5350.32
+20000,api::haiku45,Claude Haiku 4.5,api,49,5461.79
+20000,api::haiku45,Claude Haiku 4.5,api,50,5573.25
+20000,api::haiku45,Claude Haiku 4.5,api,51,5684.72
+20000,api::haiku45,Claude Haiku 4.5,api,52,5796.18
+20000,api::haiku45,Claude Haiku 4.5,api,53,5907.65
+20000,api::haiku45,Claude Haiku 4.5,api,54,6019.11
+20000,api::haiku45,Claude Haiku 4.5,api,55,6130.58
+20000,api::haiku45,Claude Haiku 4.5,api,56,6242.04
+20000,api::haiku45,Claude Haiku 4.5,api,57,6353.51
+20000,api::haiku45,Claude Haiku 4.5,api,58,6464.97
+20000,api::haiku45,Claude Haiku 4.5,api,59,6576.44
+20000,api::haiku45,Claude Haiku 4.5,api,60,6687.9
+20000,api::opus5,Claude Opus 5,api,0,0.0
+20000,api::opus5,Claude Opus 5,api,1,557.33
+20000,api::opus5,Claude Opus 5,api,2,1114.65
+20000,api::opus5,Claude Opus 5,api,3,1671.98
+20000,api::opus5,Claude Opus 5,api,4,2229.3
+20000,api::opus5,Claude Opus 5,api,5,2786.63
+20000,api::opus5,Claude Opus 5,api,6,3343.95
+20000,api::opus5,Claude Opus 5,api,7,3901.28
+20000,api::opus5,Claude Opus 5,api,8,4458.6
+20000,api::opus5,Claude Opus 5,api,9,5015.93
+20000,api::opus5,Claude Opus 5,api,10,5573.25
+20000,api::opus5,Claude Opus 5,api,11,6130.58
+20000,api::opus5,Claude Opus 5,api,12,6687.9
+20000,api::opus5,Claude Opus 5,api,13,7245.23
+20000,api::opus5,Claude Opus 5,api,14,7802.55
+20000,api::opus5,Claude Opus 5,api,15,8359.88
+20000,api::opus5,Claude Opus 5,api,16,8917.2
+20000,api::opus5,Claude Opus 5,api,17,9474.53
+20000,api::opus5,Claude Opus 5,api,18,10031.86
+20000,api::opus5,Claude Opus 5,api,19,10589.18
+20000,api::opus5,Claude Opus 5,api,20,11146.51
+20000,api::opus5,Claude Opus 5,api,21,11703.83
+20000,api::opus5,Claude Opus 5,api,22,12261.16
+20000,api::opus5,Claude Opus 5,api,23,12818.48
+20000,api::opus5,Claude Opus 5,api,24,13375.81
+20000,api::opus5,Claude Opus 5,api,25,13933.13
+20000,api::opus5,Claude Opus 5,api,26,14490.46
+20000,api::opus5,Claude Opus 5,api,27,15047.78
+20000,api::opus5,Claude Opus 5,api,28,15605.11
+20000,api::opus5,Claude Opus 5,api,29,16162.43
+20000,api::opus5,Claude Opus 5,api,30,16719.76
+20000,api::opus5,Claude Opus 5,api,31,17277.08
+20000,api::opus5,Claude Opus 5,api,32,17834.41
+20000,api::opus5,Claude Opus 5,api,33,18391.73
+20000,api::opus5,Claude Opus 5,api,34,18949.06
+20000,api::opus5,Claude Opus 5,api,35,19506.39
+20000,api::opus5,Claude Opus 5,api,36,20063.71
+20000,api::opus5,Claude Opus 5,api,37,20621.04
+20000,api::opus5,Claude Opus 5,api,38,21178.36
+20000,api::opus5,Claude Opus 5,api,39,21735.69
+20000,api::opus5,Claude Opus 5,api,40,22293.01
+20000,api::opus5,Claude Opus 5,api,41,22850.34
+20000,api::opus5,Claude Opus 5,api,42,23407.66
+20000,api::opus5,Claude Opus 5,api,43,23964.99
+20000,api::opus5,Claude Opus 5,api,44,24522.31
+20000,api::opus5,Claude Opus 5,api,45,25079.64
+20000,api::opus5,Claude Opus 5,api,46,25636.96
+20000,api::opus5,Claude Opus 5,api,47,26194.29
+20000,api::opus5,Claude Opus 5,api,48,26751.61
+20000,api::opus5,Claude Opus 5,api,49,27308.94
+20000,api::opus5,Claude Opus 5,api,50,27866.26
+20000,api::opus5,Claude Opus 5,api,51,28423.59
+20000,api::opus5,Claude Opus 5,api,52,28980.92
+20000,api::opus5,Claude Opus 5,api,53,29538.24
+20000,api::opus5,Claude Opus 5,api,54,30095.57
+20000,api::opus5,Claude Opus 5,api,55,30652.89
+20000,api::opus5,Claude Opus 5,api,56,31210.22
+20000,api::opus5,Claude Opus 5,api,57,31767.54
+20000,api::opus5,Claude Opus 5,api,58,32324.87
+20000,api::opus5,Claude Opus 5,api,59,32882.19
+20000,api::opus5,Claude Opus 5,api,60,33439.52
+20000,api::sonnet5,Claude Sonnet 5,api,0,0.0
+20000,api::sonnet5,Claude Sonnet 5,api,1,222.93
+20000,api::sonnet5,Claude Sonnet 5,api,2,445.86
+20000,api::sonnet5,Claude Sonnet 5,api,3,668.79
+20000,api::sonnet5,Claude Sonnet 5,api,4,891.72
+20000,api::sonnet5,Claude Sonnet 5,api,5,1114.65
+20000,api::sonnet5,Claude Sonnet 5,api,6,1337.58
+20000,api::sonnet5,Claude Sonnet 5,api,7,1560.51
+20000,api::sonnet5,Claude Sonnet 5,api,8,1783.44
+20000,api::sonnet5,Claude Sonnet 5,api,9,2006.37
+20000,api::sonnet5,Claude Sonnet 5,api,10,2229.3
+20000,api::sonnet5,Claude Sonnet 5,api,11,2452.23
+20000,api::sonnet5,Claude Sonnet 5,api,12,2675.16
+20000,api::sonnet5,Claude Sonnet 5,api,13,2898.09
+20000,api::sonnet5,Claude Sonnet 5,api,14,3121.02
+20000,api::sonnet5,Claude Sonnet 5,api,15,3343.95
+20000,api::sonnet5,Claude Sonnet 5,api,16,3566.88
+20000,api::sonnet5,Claude Sonnet 5,api,17,3789.81
+20000,api::sonnet5,Claude Sonnet 5,api,18,4012.74
+20000,api::sonnet5,Claude Sonnet 5,api,19,4235.67
+20000,api::sonnet5,Claude Sonnet 5,api,20,4458.6
+20000,api::sonnet5,Claude Sonnet 5,api,21,4681.53
+20000,api::sonnet5,Claude Sonnet 5,api,22,4904.46
+20000,api::sonnet5,Claude Sonnet 5,api,23,5127.39
+20000,api::sonnet5,Claude Sonnet 5,api,24,5350.32
+20000,api::sonnet5,Claude Sonnet 5,api,25,5573.25
+20000,api::sonnet5,Claude Sonnet 5,api,26,5796.18
+20000,api::sonnet5,Claude Sonnet 5,api,27,6019.11
+20000,api::sonnet5,Claude Sonnet 5,api,28,6242.04
+20000,api::sonnet5,Claude Sonnet 5,api,29,6464.97
+20000,api::sonnet5,Claude Sonnet 5,api,30,6687.9
+20000,api::sonnet5,Claude Sonnet 5,api,31,6910.83
+20000,api::sonnet5,Claude Sonnet 5,api,32,7133.76
+20000,api::sonnet5,Claude Sonnet 5,api,33,7356.69
+20000,api::sonnet5,Claude Sonnet 5,api,34,7579.62
+20000,api::sonnet5,Claude Sonnet 5,api,35,7802.55
+20000,api::sonnet5,Claude Sonnet 5,api,36,8025.48
+20000,api::sonnet5,Claude Sonnet 5,api,37,8248.41
+20000,api::sonnet5,Claude Sonnet 5,api,38,8471.34
+20000,api::sonnet5,Claude Sonnet 5,api,39,8694.27
+20000,api::sonnet5,Claude Sonnet 5,api,40,8917.2
+20000,api::sonnet5,Claude Sonnet 5,api,41,9140.13
+20000,api::sonnet5,Claude Sonnet 5,api,42,9363.07
+20000,api::sonnet5,Claude Sonnet 5,api,43,9586.0
+20000,api::sonnet5,Claude Sonnet 5,api,44,9808.93
+20000,api::sonnet5,Claude Sonnet 5,api,45,10031.86
+20000,api::sonnet5,Claude Sonnet 5,api,46,10254.79
+20000,api::sonnet5,Claude Sonnet 5,api,47,10477.72
+20000,api::sonnet5,Claude Sonnet 5,api,48,10700.65
+20000,api::sonnet5,Claude Sonnet 5,api,49,10923.58
+20000,api::sonnet5,Claude Sonnet 5,api,50,11146.51
+20000,api::sonnet5,Claude Sonnet 5,api,51,11369.44
+20000,api::sonnet5,Claude Sonnet 5,api,52,11592.37
+20000,api::sonnet5,Claude Sonnet 5,api,53,11815.3
+20000,api::sonnet5,Claude Sonnet 5,api,54,12038.23
+20000,api::sonnet5,Claude Sonnet 5,api,55,12261.16
+20000,api::sonnet5,Claude Sonnet 5,api,56,12484.09
+20000,api::sonnet5,Claude Sonnet 5,api,57,12707.02
+20000,api::sonnet5,Claude Sonnet 5,api,58,12929.95
+20000,api::sonnet5,Claude Sonnet 5,api,59,13152.88
+20000,api::sonnet5,Claude Sonnet 5,api,60,13375.81
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,0,0.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,1,1044.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,2,2088.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,3,3132.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,4,4176.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,5,5220.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,6,6264.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,7,7308.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,8,8352.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,9,9396.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,10,10440.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,11,11484.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,12,12528.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,13,13572.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,14,14616.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,15,15660.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,16,16704.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,17,17748.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,18,18792.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,19,19836.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,20,20880.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,21,21924.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,22,22968.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,23,24012.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,24,25056.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,25,26100.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,26,27144.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,27,28188.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,28,29232.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,29,30276.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,30,31320.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,31,32364.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,32,33408.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,33,34452.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,34,35496.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,35,36540.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,36,37584.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,37,38628.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,38,39672.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,39,40716.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,40,41760.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,41,42804.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,42,43848.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,43,44892.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,44,45936.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,45,46980.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,46,48024.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,47,49068.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,48,50112.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,49,51156.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,50,52200.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,51,53244.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,52,54288.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,53,55332.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,54,56376.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,55,57420.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,56,58464.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,57,59508.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,58,60552.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,59,61596.0
+20000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,60,62640.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,0,0.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,1,396.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,2,792.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,3,1188.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,4,1584.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,5,1980.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,6,2376.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,7,2772.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,8,3168.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,9,3564.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,10,3960.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,11,4356.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,12,4752.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,13,5148.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,14,5544.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,15,5940.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,16,6336.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,17,6732.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,18,7128.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,19,7524.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,20,7920.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,21,8316.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,22,8712.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,23,9108.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,24,9504.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,25,9900.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,26,10296.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,27,10692.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,28,11088.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,29,11484.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,30,11880.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,31,12276.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,32,12672.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,33,13068.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,34,13464.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,35,13860.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,36,14256.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,37,14652.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,38,15048.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,39,15444.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,40,15840.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,41,16236.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,42,16632.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,43,17028.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,44,17424.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,45,17820.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,46,18216.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,47,18612.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,48,19008.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,49,19404.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,50,19800.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,51,20196.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,52,20592.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,53,20988.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,54,21384.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,55,21780.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,56,22176.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,57,22572.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,58,22968.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,59,23364.0
+20000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,60,23760.0
+20000,local::5090,Estación RTX 5090,local,0,7500.0
+20000,local::5090,Estación RTX 5090,local,1,7543.11
+20000,local::5090,Estación RTX 5090,local,2,7586.23
+20000,local::5090,Estación RTX 5090,local,3,7629.34
+20000,local::5090,Estación RTX 5090,local,4,7672.45
+20000,local::5090,Estación RTX 5090,local,5,7715.56
+20000,local::5090,Estación RTX 5090,local,6,7758.68
+20000,local::5090,Estación RTX 5090,local,7,7801.79
+20000,local::5090,Estación RTX 5090,local,8,7844.9
+20000,local::5090,Estación RTX 5090,local,9,7888.01
+20000,local::5090,Estación RTX 5090,local,10,7931.13
+20000,local::5090,Estación RTX 5090,local,11,7974.24
+20000,local::5090,Estación RTX 5090,local,12,8017.35
+20000,local::5090,Estación RTX 5090,local,13,8060.46
+20000,local::5090,Estación RTX 5090,local,14,8103.58
+20000,local::5090,Estación RTX 5090,local,15,8146.69
+20000,local::5090,Estación RTX 5090,local,16,8189.8
+20000,local::5090,Estación RTX 5090,local,17,8232.91
+20000,local::5090,Estación RTX 5090,local,18,8276.03
+20000,local::5090,Estación RTX 5090,local,19,8319.14
+20000,local::5090,Estación RTX 5090,local,20,8362.25
+20000,local::5090,Estación RTX 5090,local,21,8405.36
+20000,local::5090,Estación RTX 5090,local,22,8448.48
+20000,local::5090,Estación RTX 5090,local,23,8491.59
+20000,local::5090,Estación RTX 5090,local,24,8534.7
+20000,local::5090,Estación RTX 5090,local,25,8577.82
+20000,local::5090,Estación RTX 5090,local,26,8620.93
+20000,local::5090,Estación RTX 5090,local,27,8664.04
+20000,local::5090,Estación RTX 5090,local,28,8707.15
+20000,local::5090,Estación RTX 5090,local,29,8750.27
+20000,local::5090,Estación RTX 5090,local,30,8793.38
+20000,local::5090,Estación RTX 5090,local,31,8836.49
+20000,local::5090,Estación RTX 5090,local,32,8879.6
+20000,local::5090,Estación RTX 5090,local,33,8922.72
+20000,local::5090,Estación RTX 5090,local,34,8965.83
+20000,local::5090,Estación RTX 5090,local,35,9008.94
+20000,local::5090,Estación RTX 5090,local,36,9052.05
+20000,local::5090,Estación RTX 5090,local,37,9095.17
+20000,local::5090,Estación RTX 5090,local,38,9138.28
+20000,local::5090,Estación RTX 5090,local,39,9181.39
+20000,local::5090,Estación RTX 5090,local,40,9224.5
+20000,local::5090,Estación RTX 5090,local,41,9267.62
+20000,local::5090,Estación RTX 5090,local,42,9310.73
+20000,local::5090,Estación RTX 5090,local,43,9353.84
+20000,local::5090,Estación RTX 5090,local,44,9396.95
+20000,local::5090,Estación RTX 5090,local,45,9440.07
+20000,local::5090,Estación RTX 5090,local,46,9483.18
+20000,local::5090,Estación RTX 5090,local,47,9526.29
+20000,local::5090,Estación RTX 5090,local,48,9569.4
+20000,local::5090,Estación RTX 5090,local,49,9612.52
+20000,local::5090,Estación RTX 5090,local,50,9655.63
+20000,local::5090,Estación RTX 5090,local,51,9698.74
+20000,local::5090,Estación RTX 5090,local,52,9741.86
+20000,local::5090,Estación RTX 5090,local,53,9784.97
+20000,local::5090,Estación RTX 5090,local,54,9828.08
+20000,local::5090,Estación RTX 5090,local,55,9871.19
+20000,local::5090,Estación RTX 5090,local,56,9914.31
+20000,local::5090,Estación RTX 5090,local,57,9957.42
+20000,local::5090,Estación RTX 5090,local,58,10000.53
+20000,local::5090,Estación RTX 5090,local,59,10043.64
+20000,local::5090,Estación RTX 5090,local,60,10086.76
+20000,local::pro6000,Servidor 1× PRO 6000,local,0,12500.0
+20000,local::pro6000,Servidor 1× PRO 6000,local,1,12568.67
+20000,local::pro6000,Servidor 1× PRO 6000,local,2,12637.34
+20000,local::pro6000,Servidor 1× PRO 6000,local,3,12706.01
+20000,local::pro6000,Servidor 1× PRO 6000,local,4,12774.68
+20000,local::pro6000,Servidor 1× PRO 6000,local,5,12843.35
+20000,local::pro6000,Servidor 1× PRO 6000,local,6,12912.02
+20000,local::pro6000,Servidor 1× PRO 6000,local,7,12980.69
+20000,local::pro6000,Servidor 1× PRO 6000,local,8,13049.36
+20000,local::pro6000,Servidor 1× PRO 6000,local,9,13118.03
+20000,local::pro6000,Servidor 1× PRO 6000,local,10,13186.7
+20000,local::pro6000,Servidor 1× PRO 6000,local,11,13255.37
+20000,local::pro6000,Servidor 1× PRO 6000,local,12,13324.04
+20000,local::pro6000,Servidor 1× PRO 6000,local,13,13392.71
+20000,local::pro6000,Servidor 1× PRO 6000,local,14,13461.37
+20000,local::pro6000,Servidor 1× PRO 6000,local,15,13530.04
+20000,local::pro6000,Servidor 1× PRO 6000,local,16,13598.71
+20000,local::pro6000,Servidor 1× PRO 6000,local,17,13667.38
+20000,local::pro6000,Servidor 1× PRO 6000,local,18,13736.05
+20000,local::pro6000,Servidor 1× PRO 6000,local,19,13804.72
+20000,local::pro6000,Servidor 1× PRO 6000,local,20,13873.39
+20000,local::pro6000,Servidor 1× PRO 6000,local,21,13942.06
+20000,local::pro6000,Servidor 1× PRO 6000,local,22,14010.73
+20000,local::pro6000,Servidor 1× PRO 6000,local,23,14079.4
+20000,local::pro6000,Servidor 1× PRO 6000,local,24,14148.07
+20000,local::pro6000,Servidor 1× PRO 6000,local,25,14216.74
+20000,local::pro6000,Servidor 1× PRO 6000,local,26,14285.41
+20000,local::pro6000,Servidor 1× PRO 6000,local,27,14354.08
+20000,local::pro6000,Servidor 1× PRO 6000,local,28,14422.75
+20000,local::pro6000,Servidor 1× PRO 6000,local,29,14491.42
+20000,local::pro6000,Servidor 1× PRO 6000,local,30,14560.09
+20000,local::pro6000,Servidor 1× PRO 6000,local,31,14628.76
+20000,local::pro6000,Servidor 1× PRO 6000,local,32,14697.43
+20000,local::pro6000,Servidor 1× PRO 6000,local,33,14766.1
+20000,local::pro6000,Servidor 1× PRO 6000,local,34,14834.77
+20000,local::pro6000,Servidor 1× PRO 6000,local,35,14903.44
+20000,local::pro6000,Servidor 1× PRO 6000,local,36,14972.11
+20000,local::pro6000,Servidor 1× PRO 6000,local,37,15040.78
+20000,local::pro6000,Servidor 1× PRO 6000,local,38,15109.45
+20000,local::pro6000,Servidor 1× PRO 6000,local,39,15178.12
+20000,local::pro6000,Servidor 1× PRO 6000,local,40,15246.79
+20000,local::pro6000,Servidor 1× PRO 6000,local,41,15315.45
+20000,local::pro6000,Servidor 1× PRO 6000,local,42,15384.12
+20000,local::pro6000,Servidor 1× PRO 6000,local,43,15452.79
+20000,local::pro6000,Servidor 1× PRO 6000,local,44,15521.46
+20000,local::pro6000,Servidor 1× PRO 6000,local,45,15590.13
+20000,local::pro6000,Servidor 1× PRO 6000,local,46,15658.8
+20000,local::pro6000,Servidor 1× PRO 6000,local,47,15727.47
+20000,local::pro6000,Servidor 1× PRO 6000,local,48,15796.14
+20000,local::pro6000,Servidor 1× PRO 6000,local,49,15864.81
+20000,local::pro6000,Servidor 1× PRO 6000,local,50,15933.48
+20000,local::pro6000,Servidor 1× PRO 6000,local,51,16002.15
+20000,local::pro6000,Servidor 1× PRO 6000,local,52,16070.82
+20000,local::pro6000,Servidor 1× PRO 6000,local,53,16139.49
+20000,local::pro6000,Servidor 1× PRO 6000,local,54,16208.16
+20000,local::pro6000,Servidor 1× PRO 6000,local,55,16276.83
+20000,local::pro6000,Servidor 1× PRO 6000,local,56,16345.5
+20000,local::pro6000,Servidor 1× PRO 6000,local,57,16414.17
+20000,local::pro6000,Servidor 1× PRO 6000,local,58,16482.84
+20000,local::pro6000,Servidor 1× PRO 6000,local,59,16551.51
+20000,local::pro6000,Servidor 1× PRO 6000,local,60,16620.18
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,0,0.0
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,1,52.66
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,2,105.32
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,3,157.98
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,4,210.64
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,5,263.29
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,6,315.95
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,7,368.61
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,8,421.27
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,9,473.93
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,10,526.59
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,11,579.25
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,12,631.91
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,13,684.56
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,14,737.22
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,15,789.88
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,16,842.54
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,17,895.2
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,18,947.86
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,19,1000.52
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,20,1053.18
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,21,1105.83
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,22,1158.49
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,23,1211.15
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,24,1263.81
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,25,1316.47
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,26,1369.13
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,27,1421.79
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,28,1474.45
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,29,1527.1
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,30,1579.76
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,31,1632.42
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,32,1685.08
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,33,1737.74
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,34,1790.4
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,35,1843.06
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,36,1895.72
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,37,1948.37
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,38,2001.03
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,39,2053.69
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,40,2106.35
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,41,2159.01
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,42,2211.67
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,43,2264.33
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,44,2316.99
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,45,2369.64
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,46,2422.3
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,47,2474.96
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,48,2527.62
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,49,2580.28
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,50,2632.94
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,51,2685.6
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,52,2738.26
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,53,2790.91
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,54,2843.57
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,55,2896.23
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,56,2948.89
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,57,3001.55
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,58,3054.21
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,59,3106.87
+100000,api::g25lite,Gemini 2.5 Flash-Lite,api,60,3159.53
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,0,0.0
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,1,147.02
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,2,294.03
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,3,441.05
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,4,588.06
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,5,735.08
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,6,882.09
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,7,1029.11
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,8,1176.13
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,9,1323.14
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,10,1470.16
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,11,1617.17
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,12,1764.19
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,13,1911.2
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,14,2058.22
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,15,2205.24
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,16,2352.25
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,17,2499.27
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,18,2646.28
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,19,2793.3
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,20,2940.32
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,21,3087.33
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,22,3234.35
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,23,3381.36
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,24,3528.38
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,25,3675.39
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,26,3822.41
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,27,3969.43
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,28,4116.44
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,29,4263.46
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,30,4410.47
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,31,4557.49
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,32,4704.5
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,33,4851.52
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,34,4998.54
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,35,5145.55
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,36,5292.57
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,37,5439.58
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,38,5586.6
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,39,5733.61
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,40,5880.63
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,41,6027.65
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,42,6174.66
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,43,6321.68
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,44,6468.69
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,45,6615.71
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,46,6762.72
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,47,6909.74
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,48,7056.76
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,49,7203.77
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,50,7350.79
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,51,7497.8
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,52,7644.82
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,53,7791.83
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,54,7938.85
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,55,8085.87
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,56,8232.88
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,57,8379.9
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,58,8526.91
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,59,8673.93
+100000,api::g31lite,Gemini 3.1 Flash-Lite,api,60,8820.94
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,0,0.0
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,1,197.94
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,2,395.87
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,3,593.81
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,4,791.74
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,5,989.68
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,6,1187.61
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,7,1385.55
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,8,1583.48
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,9,1781.42
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,10,1979.35
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,11,2177.29
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,12,2375.22
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,13,2573.16
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,14,2771.09
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,15,2969.03
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,16,3166.96
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,17,3364.9
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,18,3562.84
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,19,3760.77
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,20,3958.71
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,21,4156.64
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,22,4354.58
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,23,4552.51
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,24,4750.45
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,25,4948.38
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,26,5146.32
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,27,5344.25
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,28,5542.19
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,29,5740.12
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,30,5938.06
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,31,6135.99
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,32,6333.93
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,33,6531.86
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,34,6729.8
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,35,6927.74
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,36,7125.67
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,37,7323.61
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,38,7521.54
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,39,7719.48
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,40,7917.41
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,41,8115.35
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,42,8313.28
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,43,8511.22
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,44,8709.15
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,45,8907.09
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,46,9105.02
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,47,9302.96
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,48,9500.89
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,49,9698.83
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,50,9896.76
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,51,10094.7
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,52,10292.64
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,53,10490.57
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,54,10688.51
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,55,10886.44
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,56,11084.38
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,57,11282.31
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,58,11480.25
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,59,11678.18
+100000,api::g35lite,Gemini 3.5 Flash-Lite,api,60,11876.12
+100000,api::g36flash,Gemini 3.6 Flash,api,0,0.0
+100000,api::g36flash,Gemini 3.6 Flash,api,1,417.99
+100000,api::g36flash,Gemini 3.6 Flash,api,2,835.99
+100000,api::g36flash,Gemini 3.6 Flash,api,3,1253.98
+100000,api::g36flash,Gemini 3.6 Flash,api,4,1671.98
+100000,api::g36flash,Gemini 3.6 Flash,api,5,2089.97
+100000,api::g36flash,Gemini 3.6 Flash,api,6,2507.96
+100000,api::g36flash,Gemini 3.6 Flash,api,7,2925.96
+100000,api::g36flash,Gemini 3.6 Flash,api,8,3343.95
+100000,api::g36flash,Gemini 3.6 Flash,api,9,3761.95
+100000,api::g36flash,Gemini 3.6 Flash,api,10,4179.94
+100000,api::g36flash,Gemini 3.6 Flash,api,11,4597.93
+100000,api::g36flash,Gemini 3.6 Flash,api,12,5015.93
+100000,api::g36flash,Gemini 3.6 Flash,api,13,5433.92
+100000,api::g36flash,Gemini 3.6 Flash,api,14,5851.92
+100000,api::g36flash,Gemini 3.6 Flash,api,15,6269.91
+100000,api::g36flash,Gemini 3.6 Flash,api,16,6687.9
+100000,api::g36flash,Gemini 3.6 Flash,api,17,7105.9
+100000,api::g36flash,Gemini 3.6 Flash,api,18,7523.89
+100000,api::g36flash,Gemini 3.6 Flash,api,19,7941.89
+100000,api::g36flash,Gemini 3.6 Flash,api,20,8359.88
+100000,api::g36flash,Gemini 3.6 Flash,api,21,8777.87
+100000,api::g36flash,Gemini 3.6 Flash,api,22,9195.87
+100000,api::g36flash,Gemini 3.6 Flash,api,23,9613.86
+100000,api::g36flash,Gemini 3.6 Flash,api,24,10031.86
+100000,api::g36flash,Gemini 3.6 Flash,api,25,10449.85
+100000,api::g36flash,Gemini 3.6 Flash,api,26,10867.84
+100000,api::g36flash,Gemini 3.6 Flash,api,27,11285.84
+100000,api::g36flash,Gemini 3.6 Flash,api,28,11703.83
+100000,api::g36flash,Gemini 3.6 Flash,api,29,12121.83
+100000,api::g36flash,Gemini 3.6 Flash,api,30,12539.82
+100000,api::g36flash,Gemini 3.6 Flash,api,31,12957.81
+100000,api::g36flash,Gemini 3.6 Flash,api,32,13375.81
+100000,api::g36flash,Gemini 3.6 Flash,api,33,13793.8
+100000,api::g36flash,Gemini 3.6 Flash,api,34,14211.8
+100000,api::g36flash,Gemini 3.6 Flash,api,35,14629.79
+100000,api::g36flash,Gemini 3.6 Flash,api,36,15047.78
+100000,api::g36flash,Gemini 3.6 Flash,api,37,15465.78
+100000,api::g36flash,Gemini 3.6 Flash,api,38,15883.77
+100000,api::g36flash,Gemini 3.6 Flash,api,39,16301.77
+100000,api::g36flash,Gemini 3.6 Flash,api,40,16719.76
+100000,api::g36flash,Gemini 3.6 Flash,api,41,17137.75
+100000,api::g36flash,Gemini 3.6 Flash,api,42,17555.75
+100000,api::g36flash,Gemini 3.6 Flash,api,43,17973.74
+100000,api::g36flash,Gemini 3.6 Flash,api,44,18391.73
+100000,api::g36flash,Gemini 3.6 Flash,api,45,18809.73
+100000,api::g36flash,Gemini 3.6 Flash,api,46,19227.72
+100000,api::g36flash,Gemini 3.6 Flash,api,47,19645.72
+100000,api::g36flash,Gemini 3.6 Flash,api,48,20063.71
+100000,api::g36flash,Gemini 3.6 Flash,api,49,20481.7
+100000,api::g36flash,Gemini 3.6 Flash,api,50,20899.7
+100000,api::g36flash,Gemini 3.6 Flash,api,51,21317.69
+100000,api::g36flash,Gemini 3.6 Flash,api,52,21735.69
+100000,api::g36flash,Gemini 3.6 Flash,api,53,22153.68
+100000,api::g36flash,Gemini 3.6 Flash,api,54,22571.67
+100000,api::g36flash,Gemini 3.6 Flash,api,55,22989.67
+100000,api::g36flash,Gemini 3.6 Flash,api,56,23407.66
+100000,api::g36flash,Gemini 3.6 Flash,api,57,23825.66
+100000,api::g36flash,Gemini 3.6 Flash,api,58,24243.65
+100000,api::g36flash,Gemini 3.6 Flash,api,59,24661.64
+100000,api::g36flash,Gemini 3.6 Flash,api,60,25079.64
+100000,api::gpt54mini,GPT-5.4 mini,api,0,0.0
+100000,api::gpt54mini,GPT-5.4 mini,api,1,441.05
+100000,api::gpt54mini,GPT-5.4 mini,api,2,882.09
+100000,api::gpt54mini,GPT-5.4 mini,api,3,1323.14
+100000,api::gpt54mini,GPT-5.4 mini,api,4,1764.19
+100000,api::gpt54mini,GPT-5.4 mini,api,5,2205.24
+100000,api::gpt54mini,GPT-5.4 mini,api,6,2646.28
+100000,api::gpt54mini,GPT-5.4 mini,api,7,3087.33
+100000,api::gpt54mini,GPT-5.4 mini,api,8,3528.38
+100000,api::gpt54mini,GPT-5.4 mini,api,9,3969.43
+100000,api::gpt54mini,GPT-5.4 mini,api,10,4410.47
+100000,api::gpt54mini,GPT-5.4 mini,api,11,4851.52
+100000,api::gpt54mini,GPT-5.4 mini,api,12,5292.57
+100000,api::gpt54mini,GPT-5.4 mini,api,13,5733.61
+100000,api::gpt54mini,GPT-5.4 mini,api,14,6174.66
+100000,api::gpt54mini,GPT-5.4 mini,api,15,6615.71
+100000,api::gpt54mini,GPT-5.4 mini,api,16,7056.76
+100000,api::gpt54mini,GPT-5.4 mini,api,17,7497.8
+100000,api::gpt54mini,GPT-5.4 mini,api,18,7938.85
+100000,api::gpt54mini,GPT-5.4 mini,api,19,8379.9
+100000,api::gpt54mini,GPT-5.4 mini,api,20,8820.94
+100000,api::gpt54mini,GPT-5.4 mini,api,21,9261.99
+100000,api::gpt54mini,GPT-5.4 mini,api,22,9703.04
+100000,api::gpt54mini,GPT-5.4 mini,api,23,10144.09
+100000,api::gpt54mini,GPT-5.4 mini,api,24,10585.13
+100000,api::gpt54mini,GPT-5.4 mini,api,25,11026.18
+100000,api::gpt54mini,GPT-5.4 mini,api,26,11467.23
+100000,api::gpt54mini,GPT-5.4 mini,api,27,11908.28
+100000,api::gpt54mini,GPT-5.4 mini,api,28,12349.32
+100000,api::gpt54mini,GPT-5.4 mini,api,29,12790.37
+100000,api::gpt54mini,GPT-5.4 mini,api,30,13231.42
+100000,api::gpt54mini,GPT-5.4 mini,api,31,13672.46
+100000,api::gpt54mini,GPT-5.4 mini,api,32,14113.51
+100000,api::gpt54mini,GPT-5.4 mini,api,33,14554.56
+100000,api::gpt54mini,GPT-5.4 mini,api,34,14995.61
+100000,api::gpt54mini,GPT-5.4 mini,api,35,15436.65
+100000,api::gpt54mini,GPT-5.4 mini,api,36,15877.7
+100000,api::gpt54mini,GPT-5.4 mini,api,37,16318.75
+100000,api::gpt54mini,GPT-5.4 mini,api,38,16759.8
+100000,api::gpt54mini,GPT-5.4 mini,api,39,17200.84
+100000,api::gpt54mini,GPT-5.4 mini,api,40,17641.89
+100000,api::gpt54mini,GPT-5.4 mini,api,41,18082.94
+100000,api::gpt54mini,GPT-5.4 mini,api,42,18523.98
+100000,api::gpt54mini,GPT-5.4 mini,api,43,18965.03
+100000,api::gpt54mini,GPT-5.4 mini,api,44,19406.08
+100000,api::gpt54mini,GPT-5.4 mini,api,45,19847.13
+100000,api::gpt54mini,GPT-5.4 mini,api,46,20288.17
+100000,api::gpt54mini,GPT-5.4 mini,api,47,20729.22
+100000,api::gpt54mini,GPT-5.4 mini,api,48,21170.27
+100000,api::gpt54mini,GPT-5.4 mini,api,49,21611.32
+100000,api::gpt54mini,GPT-5.4 mini,api,50,22052.36
+100000,api::gpt54mini,GPT-5.4 mini,api,51,22493.41
+100000,api::gpt54mini,GPT-5.4 mini,api,52,22934.46
+100000,api::gpt54mini,GPT-5.4 mini,api,53,23375.5
+100000,api::gpt54mini,GPT-5.4 mini,api,54,23816.55
+100000,api::gpt54mini,GPT-5.4 mini,api,55,24257.6
+100000,api::gpt54mini,GPT-5.4 mini,api,56,24698.65
+100000,api::gpt54mini,GPT-5.4 mini,api,57,25139.69
+100000,api::gpt54mini,GPT-5.4 mini,api,58,25580.74
+100000,api::gpt54mini,GPT-5.4 mini,api,59,26021.79
+100000,api::gpt54mini,GPT-5.4 mini,api,60,26462.83
+100000,api::gpt56luna,GPT-5.6 luna,api,0,0.0
+100000,api::gpt56luna,GPT-5.6 luna,api,1,117.61
+100000,api::gpt56luna,GPT-5.6 luna,api,2,235.23
+100000,api::gpt56luna,GPT-5.6 luna,api,3,352.84
+100000,api::gpt56luna,GPT-5.6 luna,api,4,470.45
+100000,api::gpt56luna,GPT-5.6 luna,api,5,588.06
+100000,api::gpt56luna,GPT-5.6 luna,api,6,705.68
+100000,api::gpt56luna,GPT-5.6 luna,api,7,823.29
+100000,api::gpt56luna,GPT-5.6 luna,api,8,940.9
+100000,api::gpt56luna,GPT-5.6 luna,api,9,1058.51
+100000,api::gpt56luna,GPT-5.6 luna,api,10,1176.13
+100000,api::gpt56luna,GPT-5.6 luna,api,11,1293.74
+100000,api::gpt56luna,GPT-5.6 luna,api,12,1411.35
+100000,api::gpt56luna,GPT-5.6 luna,api,13,1528.96
+100000,api::gpt56luna,GPT-5.6 luna,api,14,1646.58
+100000,api::gpt56luna,GPT-5.6 luna,api,15,1764.19
+100000,api::gpt56luna,GPT-5.6 luna,api,16,1881.8
+100000,api::gpt56luna,GPT-5.6 luna,api,17,1999.41
+100000,api::gpt56luna,GPT-5.6 luna,api,18,2117.03
+100000,api::gpt56luna,GPT-5.6 luna,api,19,2234.64
+100000,api::gpt56luna,GPT-5.6 luna,api,20,2352.25
+100000,api::gpt56luna,GPT-5.6 luna,api,21,2469.86
+100000,api::gpt56luna,GPT-5.6 luna,api,22,2587.48
+100000,api::gpt56luna,GPT-5.6 luna,api,23,2705.09
+100000,api::gpt56luna,GPT-5.6 luna,api,24,2822.7
+100000,api::gpt56luna,GPT-5.6 luna,api,25,2940.32
+100000,api::gpt56luna,GPT-5.6 luna,api,26,3057.93
+100000,api::gpt56luna,GPT-5.6 luna,api,27,3175.54
+100000,api::gpt56luna,GPT-5.6 luna,api,28,3293.15
+100000,api::gpt56luna,GPT-5.6 luna,api,29,3410.77
+100000,api::gpt56luna,GPT-5.6 luna,api,30,3528.38
+100000,api::gpt56luna,GPT-5.6 luna,api,31,3645.99
+100000,api::gpt56luna,GPT-5.6 luna,api,32,3763.6
+100000,api::gpt56luna,GPT-5.6 luna,api,33,3881.22
+100000,api::gpt56luna,GPT-5.6 luna,api,34,3998.83
+100000,api::gpt56luna,GPT-5.6 luna,api,35,4116.44
+100000,api::gpt56luna,GPT-5.6 luna,api,36,4234.05
+100000,api::gpt56luna,GPT-5.6 luna,api,37,4351.67
+100000,api::gpt56luna,GPT-5.6 luna,api,38,4469.28
+100000,api::gpt56luna,GPT-5.6 luna,api,39,4586.89
+100000,api::gpt56luna,GPT-5.6 luna,api,40,4704.5
+100000,api::gpt56luna,GPT-5.6 luna,api,41,4822.12
+100000,api::gpt56luna,GPT-5.6 luna,api,42,4939.73
+100000,api::gpt56luna,GPT-5.6 luna,api,43,5057.34
+100000,api::gpt56luna,GPT-5.6 luna,api,44,5174.95
+100000,api::gpt56luna,GPT-5.6 luna,api,45,5292.57
+100000,api::gpt56luna,GPT-5.6 luna,api,46,5410.18
+100000,api::gpt56luna,GPT-5.6 luna,api,47,5527.79
+100000,api::gpt56luna,GPT-5.6 luna,api,48,5645.4
+100000,api::gpt56luna,GPT-5.6 luna,api,49,5763.02
+100000,api::gpt56luna,GPT-5.6 luna,api,50,5880.63
+100000,api::gpt56luna,GPT-5.6 luna,api,51,5998.24
+100000,api::gpt56luna,GPT-5.6 luna,api,52,6115.86
+100000,api::gpt56luna,GPT-5.6 luna,api,53,6233.47
+100000,api::gpt56luna,GPT-5.6 luna,api,54,6351.08
+100000,api::gpt56luna,GPT-5.6 luna,api,55,6468.69
+100000,api::gpt56luna,GPT-5.6 luna,api,56,6586.31
+100000,api::gpt56luna,GPT-5.6 luna,api,57,6703.92
+100000,api::gpt56luna,GPT-5.6 luna,api,58,6821.53
+100000,api::gpt56luna,GPT-5.6 luna,api,59,6939.14
+100000,api::gpt56luna,GPT-5.6 luna,api,60,7056.76
+100000,api::gpt5mini,GPT-5 mini,api,0,0.0
+100000,api::gpt5mini,GPT-5 mini,api,1,162.38
+100000,api::gpt5mini,GPT-5 mini,api,2,324.77
+100000,api::gpt5mini,GPT-5 mini,api,3,487.15
+100000,api::gpt5mini,GPT-5 mini,api,4,649.54
+100000,api::gpt5mini,GPT-5 mini,api,5,811.92
+100000,api::gpt5mini,GPT-5 mini,api,6,974.31
+100000,api::gpt5mini,GPT-5 mini,api,7,1136.69
+100000,api::gpt5mini,GPT-5 mini,api,8,1299.08
+100000,api::gpt5mini,GPT-5 mini,api,9,1461.46
+100000,api::gpt5mini,GPT-5 mini,api,10,1623.85
+100000,api::gpt5mini,GPT-5 mini,api,11,1786.23
+100000,api::gpt5mini,GPT-5 mini,api,12,1948.62
+100000,api::gpt5mini,GPT-5 mini,api,13,2111.0
+100000,api::gpt5mini,GPT-5 mini,api,14,2273.38
+100000,api::gpt5mini,GPT-5 mini,api,15,2435.77
+100000,api::gpt5mini,GPT-5 mini,api,16,2598.15
+100000,api::gpt5mini,GPT-5 mini,api,17,2760.54
+100000,api::gpt5mini,GPT-5 mini,api,18,2922.92
+100000,api::gpt5mini,GPT-5 mini,api,19,3085.31
+100000,api::gpt5mini,GPT-5 mini,api,20,3247.69
+100000,api::gpt5mini,GPT-5 mini,api,21,3410.08
+100000,api::gpt5mini,GPT-5 mini,api,22,3572.46
+100000,api::gpt5mini,GPT-5 mini,api,23,3734.85
+100000,api::gpt5mini,GPT-5 mini,api,24,3897.23
+100000,api::gpt5mini,GPT-5 mini,api,25,4059.62
+100000,api::gpt5mini,GPT-5 mini,api,26,4222.0
+100000,api::gpt5mini,GPT-5 mini,api,27,4384.38
+100000,api::gpt5mini,GPT-5 mini,api,28,4546.77
+100000,api::gpt5mini,GPT-5 mini,api,29,4709.15
+100000,api::gpt5mini,GPT-5 mini,api,30,4871.54
+100000,api::gpt5mini,GPT-5 mini,api,31,5033.92
+100000,api::gpt5mini,GPT-5 mini,api,32,5196.31
+100000,api::gpt5mini,GPT-5 mini,api,33,5358.69
+100000,api::gpt5mini,GPT-5 mini,api,34,5521.08
+100000,api::gpt5mini,GPT-5 mini,api,35,5683.46
+100000,api::gpt5mini,GPT-5 mini,api,36,5845.85
+100000,api::gpt5mini,GPT-5 mini,api,37,6008.23
+100000,api::gpt5mini,GPT-5 mini,api,38,6170.61
+100000,api::gpt5mini,GPT-5 mini,api,39,6333.0
+100000,api::gpt5mini,GPT-5 mini,api,40,6495.38
+100000,api::gpt5mini,GPT-5 mini,api,41,6657.77
+100000,api::gpt5mini,GPT-5 mini,api,42,6820.15
+100000,api::gpt5mini,GPT-5 mini,api,43,6982.54
+100000,api::gpt5mini,GPT-5 mini,api,44,7144.92
+100000,api::gpt5mini,GPT-5 mini,api,45,7307.31
+100000,api::gpt5mini,GPT-5 mini,api,46,7469.69
+100000,api::gpt5mini,GPT-5 mini,api,47,7632.08
+100000,api::gpt5mini,GPT-5 mini,api,48,7794.46
+100000,api::gpt5mini,GPT-5 mini,api,49,7956.85
+100000,api::gpt5mini,GPT-5 mini,api,50,8119.23
+100000,api::gpt5mini,GPT-5 mini,api,51,8281.61
+100000,api::gpt5mini,GPT-5 mini,api,52,8444.0
+100000,api::gpt5mini,GPT-5 mini,api,53,8606.38
+100000,api::gpt5mini,GPT-5 mini,api,54,8768.77
+100000,api::gpt5mini,GPT-5 mini,api,55,8931.15
+100000,api::gpt5mini,GPT-5 mini,api,56,9093.54
+100000,api::gpt5mini,GPT-5 mini,api,57,9255.92
+100000,api::gpt5mini,GPT-5 mini,api,58,9418.31
+100000,api::gpt5mini,GPT-5 mini,api,59,9580.69
+100000,api::gpt5mini,GPT-5 mini,api,60,9743.08
+100000,api::gpt5nano,GPT-5 nano,api,0,0.0
+100000,api::gpt5nano,GPT-5 nano,api,1,32.48
+100000,api::gpt5nano,GPT-5 nano,api,2,64.95
+100000,api::gpt5nano,GPT-5 nano,api,3,97.43
+100000,api::gpt5nano,GPT-5 nano,api,4,129.91
+100000,api::gpt5nano,GPT-5 nano,api,5,162.38
+100000,api::gpt5nano,GPT-5 nano,api,6,194.86
+100000,api::gpt5nano,GPT-5 nano,api,7,227.34
+100000,api::gpt5nano,GPT-5 nano,api,8,259.82
+100000,api::gpt5nano,GPT-5 nano,api,9,292.29
+100000,api::gpt5nano,GPT-5 nano,api,10,324.77
+100000,api::gpt5nano,GPT-5 nano,api,11,357.25
+100000,api::gpt5nano,GPT-5 nano,api,12,389.72
+100000,api::gpt5nano,GPT-5 nano,api,13,422.2
+100000,api::gpt5nano,GPT-5 nano,api,14,454.68
+100000,api::gpt5nano,GPT-5 nano,api,15,487.15
+100000,api::gpt5nano,GPT-5 nano,api,16,519.63
+100000,api::gpt5nano,GPT-5 nano,api,17,552.11
+100000,api::gpt5nano,GPT-5 nano,api,18,584.58
+100000,api::gpt5nano,GPT-5 nano,api,19,617.06
+100000,api::gpt5nano,GPT-5 nano,api,20,649.54
+100000,api::gpt5nano,GPT-5 nano,api,21,682.02
+100000,api::gpt5nano,GPT-5 nano,api,22,714.49
+100000,api::gpt5nano,GPT-5 nano,api,23,746.97
+100000,api::gpt5nano,GPT-5 nano,api,24,779.45
+100000,api::gpt5nano,GPT-5 nano,api,25,811.92
+100000,api::gpt5nano,GPT-5 nano,api,26,844.4
+100000,api::gpt5nano,GPT-5 nano,api,27,876.88
+100000,api::gpt5nano,GPT-5 nano,api,28,909.35
+100000,api::gpt5nano,GPT-5 nano,api,29,941.83
+100000,api::gpt5nano,GPT-5 nano,api,30,974.31
+100000,api::gpt5nano,GPT-5 nano,api,31,1006.78
+100000,api::gpt5nano,GPT-5 nano,api,32,1039.26
+100000,api::gpt5nano,GPT-5 nano,api,33,1071.74
+100000,api::gpt5nano,GPT-5 nano,api,34,1104.22
+100000,api::gpt5nano,GPT-5 nano,api,35,1136.69
+100000,api::gpt5nano,GPT-5 nano,api,36,1169.17
+100000,api::gpt5nano,GPT-5 nano,api,37,1201.65
+100000,api::gpt5nano,GPT-5 nano,api,38,1234.12
+100000,api::gpt5nano,GPT-5 nano,api,39,1266.6
+100000,api::gpt5nano,GPT-5 nano,api,40,1299.08
+100000,api::gpt5nano,GPT-5 nano,api,41,1331.55
+100000,api::gpt5nano,GPT-5 nano,api,42,1364.03
+100000,api::gpt5nano,GPT-5 nano,api,43,1396.51
+100000,api::gpt5nano,GPT-5 nano,api,44,1428.98
+100000,api::gpt5nano,GPT-5 nano,api,45,1461.46
+100000,api::gpt5nano,GPT-5 nano,api,46,1493.94
+100000,api::gpt5nano,GPT-5 nano,api,47,1526.42
+100000,api::gpt5nano,GPT-5 nano,api,48,1558.89
+100000,api::gpt5nano,GPT-5 nano,api,49,1591.37
+100000,api::gpt5nano,GPT-5 nano,api,50,1623.85
+100000,api::gpt5nano,GPT-5 nano,api,51,1656.32
+100000,api::gpt5nano,GPT-5 nano,api,52,1688.8
+100000,api::gpt5nano,GPT-5 nano,api,53,1721.28
+100000,api::gpt5nano,GPT-5 nano,api,54,1753.75
+100000,api::gpt5nano,GPT-5 nano,api,55,1786.23
+100000,api::gpt5nano,GPT-5 nano,api,56,1818.71
+100000,api::gpt5nano,GPT-5 nano,api,57,1851.18
+100000,api::gpt5nano,GPT-5 nano,api,58,1883.66
+100000,api::gpt5nano,GPT-5 nano,api,59,1916.14
+100000,api::gpt5nano,GPT-5 nano,api,60,1948.62
+100000,api::haiku45,Claude Haiku 4.5,api,0,0.0
+100000,api::haiku45,Claude Haiku 4.5,api,1,557.33
+100000,api::haiku45,Claude Haiku 4.5,api,2,1114.65
+100000,api::haiku45,Claude Haiku 4.5,api,3,1671.98
+100000,api::haiku45,Claude Haiku 4.5,api,4,2229.3
+100000,api::haiku45,Claude Haiku 4.5,api,5,2786.63
+100000,api::haiku45,Claude Haiku 4.5,api,6,3343.95
+100000,api::haiku45,Claude Haiku 4.5,api,7,3901.28
+100000,api::haiku45,Claude Haiku 4.5,api,8,4458.6
+100000,api::haiku45,Claude Haiku 4.5,api,9,5015.93
+100000,api::haiku45,Claude Haiku 4.5,api,10,5573.25
+100000,api::haiku45,Claude Haiku 4.5,api,11,6130.58
+100000,api::haiku45,Claude Haiku 4.5,api,12,6687.9
+100000,api::haiku45,Claude Haiku 4.5,api,13,7245.23
+100000,api::haiku45,Claude Haiku 4.5,api,14,7802.55
+100000,api::haiku45,Claude Haiku 4.5,api,15,8359.88
+100000,api::haiku45,Claude Haiku 4.5,api,16,8917.2
+100000,api::haiku45,Claude Haiku 4.5,api,17,9474.53
+100000,api::haiku45,Claude Haiku 4.5,api,18,10031.86
+100000,api::haiku45,Claude Haiku 4.5,api,19,10589.18
+100000,api::haiku45,Claude Haiku 4.5,api,20,11146.51
+100000,api::haiku45,Claude Haiku 4.5,api,21,11703.83
+100000,api::haiku45,Claude Haiku 4.5,api,22,12261.16
+100000,api::haiku45,Claude Haiku 4.5,api,23,12818.48
+100000,api::haiku45,Claude Haiku 4.5,api,24,13375.81
+100000,api::haiku45,Claude Haiku 4.5,api,25,13933.13
+100000,api::haiku45,Claude Haiku 4.5,api,26,14490.46
+100000,api::haiku45,Claude Haiku 4.5,api,27,15047.78
+100000,api::haiku45,Claude Haiku 4.5,api,28,15605.11
+100000,api::haiku45,Claude Haiku 4.5,api,29,16162.43
+100000,api::haiku45,Claude Haiku 4.5,api,30,16719.76
+100000,api::haiku45,Claude Haiku 4.5,api,31,17277.08
+100000,api::haiku45,Claude Haiku 4.5,api,32,17834.41
+100000,api::haiku45,Claude Haiku 4.5,api,33,18391.73
+100000,api::haiku45,Claude Haiku 4.5,api,34,18949.06
+100000,api::haiku45,Claude Haiku 4.5,api,35,19506.39
+100000,api::haiku45,Claude Haiku 4.5,api,36,20063.71
+100000,api::haiku45,Claude Haiku 4.5,api,37,20621.04
+100000,api::haiku45,Claude Haiku 4.5,api,38,21178.36
+100000,api::haiku45,Claude Haiku 4.5,api,39,21735.69
+100000,api::haiku45,Claude Haiku 4.5,api,40,22293.01
+100000,api::haiku45,Claude Haiku 4.5,api,41,22850.34
+100000,api::haiku45,Claude Haiku 4.5,api,42,23407.66
+100000,api::haiku45,Claude Haiku 4.5,api,43,23964.99
+100000,api::haiku45,Claude Haiku 4.5,api,44,24522.31
+100000,api::haiku45,Claude Haiku 4.5,api,45,25079.64
+100000,api::haiku45,Claude Haiku 4.5,api,46,25636.96
+100000,api::haiku45,Claude Haiku 4.5,api,47,26194.29
+100000,api::haiku45,Claude Haiku 4.5,api,48,26751.61
+100000,api::haiku45,Claude Haiku 4.5,api,49,27308.94
+100000,api::haiku45,Claude Haiku 4.5,api,50,27866.26
+100000,api::haiku45,Claude Haiku 4.5,api,51,28423.59
+100000,api::haiku45,Claude Haiku 4.5,api,52,28980.92
+100000,api::haiku45,Claude Haiku 4.5,api,53,29538.24
+100000,api::haiku45,Claude Haiku 4.5,api,54,30095.57
+100000,api::haiku45,Claude Haiku 4.5,api,55,30652.89
+100000,api::haiku45,Claude Haiku 4.5,api,56,31210.22
+100000,api::haiku45,Claude Haiku 4.5,api,57,31767.54
+100000,api::haiku45,Claude Haiku 4.5,api,58,32324.87
+100000,api::haiku45,Claude Haiku 4.5,api,59,32882.19
+100000,api::haiku45,Claude Haiku 4.5,api,60,33439.52
+100000,api::opus5,Claude Opus 5,api,0,0.0
+100000,api::opus5,Claude Opus 5,api,1,2786.63
+100000,api::opus5,Claude Opus 5,api,2,5573.25
+100000,api::opus5,Claude Opus 5,api,3,8359.88
+100000,api::opus5,Claude Opus 5,api,4,11146.51
+100000,api::opus5,Claude Opus 5,api,5,13933.13
+100000,api::opus5,Claude Opus 5,api,6,16719.76
+100000,api::opus5,Claude Opus 5,api,7,19506.39
+100000,api::opus5,Claude Opus 5,api,8,22293.01
+100000,api::opus5,Claude Opus 5,api,9,25079.64
+100000,api::opus5,Claude Opus 5,api,10,27866.27
+100000,api::opus5,Claude Opus 5,api,11,30652.89
+100000,api::opus5,Claude Opus 5,api,12,33439.52
+100000,api::opus5,Claude Opus 5,api,13,36226.14
+100000,api::opus5,Claude Opus 5,api,14,39012.77
+100000,api::opus5,Claude Opus 5,api,15,41799.4
+100000,api::opus5,Claude Opus 5,api,16,44586.02
+100000,api::opus5,Claude Opus 5,api,17,47372.65
+100000,api::opus5,Claude Opus 5,api,18,50159.28
+100000,api::opus5,Claude Opus 5,api,19,52945.9
+100000,api::opus5,Claude Opus 5,api,20,55732.53
+100000,api::opus5,Claude Opus 5,api,21,58519.16
+100000,api::opus5,Claude Opus 5,api,22,61305.78
+100000,api::opus5,Claude Opus 5,api,23,64092.41
+100000,api::opus5,Claude Opus 5,api,24,66879.04
+100000,api::opus5,Claude Opus 5,api,25,69665.66
+100000,api::opus5,Claude Opus 5,api,26,72452.29
+100000,api::opus5,Claude Opus 5,api,27,75238.92
+100000,api::opus5,Claude Opus 5,api,28,78025.54
+100000,api::opus5,Claude Opus 5,api,29,80812.17
+100000,api::opus5,Claude Opus 5,api,30,83598.8
+100000,api::opus5,Claude Opus 5,api,31,86385.42
+100000,api::opus5,Claude Opus 5,api,32,89172.05
+100000,api::opus5,Claude Opus 5,api,33,91958.67
+100000,api::opus5,Claude Opus 5,api,34,94745.3
+100000,api::opus5,Claude Opus 5,api,35,97531.93
+100000,api::opus5,Claude Opus 5,api,36,100318.55
+100000,api::opus5,Claude Opus 5,api,37,103105.18
+100000,api::opus5,Claude Opus 5,api,38,105891.81
+100000,api::opus5,Claude Opus 5,api,39,108678.43
+100000,api::opus5,Claude Opus 5,api,40,111465.06
+100000,api::opus5,Claude Opus 5,api,41,114251.69
+100000,api::opus5,Claude Opus 5,api,42,117038.31
+100000,api::opus5,Claude Opus 5,api,43,119824.94
+100000,api::opus5,Claude Opus 5,api,44,122611.57
+100000,api::opus5,Claude Opus 5,api,45,125398.19
+100000,api::opus5,Claude Opus 5,api,46,128184.82
+100000,api::opus5,Claude Opus 5,api,47,130971.45
+100000,api::opus5,Claude Opus 5,api,48,133758.07
+100000,api::opus5,Claude Opus 5,api,49,136544.7
+100000,api::opus5,Claude Opus 5,api,50,139331.33
+100000,api::opus5,Claude Opus 5,api,51,142117.95
+100000,api::opus5,Claude Opus 5,api,52,144904.58
+100000,api::opus5,Claude Opus 5,api,53,147691.2
+100000,api::opus5,Claude Opus 5,api,54,150477.83
+100000,api::opus5,Claude Opus 5,api,55,153264.46
+100000,api::opus5,Claude Opus 5,api,56,156051.08
+100000,api::opus5,Claude Opus 5,api,57,158837.71
+100000,api::opus5,Claude Opus 5,api,58,161624.34
+100000,api::opus5,Claude Opus 5,api,59,164410.96
+100000,api::opus5,Claude Opus 5,api,60,167197.59
+100000,api::sonnet5,Claude Sonnet 5,api,0,0.0
+100000,api::sonnet5,Claude Sonnet 5,api,1,1114.65
+100000,api::sonnet5,Claude Sonnet 5,api,2,2229.3
+100000,api::sonnet5,Claude Sonnet 5,api,3,3343.95
+100000,api::sonnet5,Claude Sonnet 5,api,4,4458.6
+100000,api::sonnet5,Claude Sonnet 5,api,5,5573.25
+100000,api::sonnet5,Claude Sonnet 5,api,6,6687.9
+100000,api::sonnet5,Claude Sonnet 5,api,7,7802.55
+100000,api::sonnet5,Claude Sonnet 5,api,8,8917.2
+100000,api::sonnet5,Claude Sonnet 5,api,9,10031.86
+100000,api::sonnet5,Claude Sonnet 5,api,10,11146.51
+100000,api::sonnet5,Claude Sonnet 5,api,11,12261.16
+100000,api::sonnet5,Claude Sonnet 5,api,12,13375.81
+100000,api::sonnet5,Claude Sonnet 5,api,13,14490.46
+100000,api::sonnet5,Claude Sonnet 5,api,14,15605.11
+100000,api::sonnet5,Claude Sonnet 5,api,15,16719.76
+100000,api::sonnet5,Claude Sonnet 5,api,16,17834.41
+100000,api::sonnet5,Claude Sonnet 5,api,17,18949.06
+100000,api::sonnet5,Claude Sonnet 5,api,18,20063.71
+100000,api::sonnet5,Claude Sonnet 5,api,19,21178.36
+100000,api::sonnet5,Claude Sonnet 5,api,20,22293.01
+100000,api::sonnet5,Claude Sonnet 5,api,21,23407.66
+100000,api::sonnet5,Claude Sonnet 5,api,22,24522.31
+100000,api::sonnet5,Claude Sonnet 5,api,23,25636.96
+100000,api::sonnet5,Claude Sonnet 5,api,24,26751.61
+100000,api::sonnet5,Claude Sonnet 5,api,25,27866.26
+100000,api::sonnet5,Claude Sonnet 5,api,26,28980.92
+100000,api::sonnet5,Claude Sonnet 5,api,27,30095.57
+100000,api::sonnet5,Claude Sonnet 5,api,28,31210.22
+100000,api::sonnet5,Claude Sonnet 5,api,29,32324.87
+100000,api::sonnet5,Claude Sonnet 5,api,30,33439.52
+100000,api::sonnet5,Claude Sonnet 5,api,31,34554.17
+100000,api::sonnet5,Claude Sonnet 5,api,32,35668.82
+100000,api::sonnet5,Claude Sonnet 5,api,33,36783.47
+100000,api::sonnet5,Claude Sonnet 5,api,34,37898.12
+100000,api::sonnet5,Claude Sonnet 5,api,35,39012.77
+100000,api::sonnet5,Claude Sonnet 5,api,36,40127.42
+100000,api::sonnet5,Claude Sonnet 5,api,37,41242.07
+100000,api::sonnet5,Claude Sonnet 5,api,38,42356.72
+100000,api::sonnet5,Claude Sonnet 5,api,39,43471.37
+100000,api::sonnet5,Claude Sonnet 5,api,40,44586.02
+100000,api::sonnet5,Claude Sonnet 5,api,41,45700.67
+100000,api::sonnet5,Claude Sonnet 5,api,42,46815.33
+100000,api::sonnet5,Claude Sonnet 5,api,43,47929.98
+100000,api::sonnet5,Claude Sonnet 5,api,44,49044.63
+100000,api::sonnet5,Claude Sonnet 5,api,45,50159.28
+100000,api::sonnet5,Claude Sonnet 5,api,46,51273.93
+100000,api::sonnet5,Claude Sonnet 5,api,47,52388.58
+100000,api::sonnet5,Claude Sonnet 5,api,48,53503.23
+100000,api::sonnet5,Claude Sonnet 5,api,49,54617.88
+100000,api::sonnet5,Claude Sonnet 5,api,50,55732.53
+100000,api::sonnet5,Claude Sonnet 5,api,51,56847.18
+100000,api::sonnet5,Claude Sonnet 5,api,52,57961.83
+100000,api::sonnet5,Claude Sonnet 5,api,53,59076.48
+100000,api::sonnet5,Claude Sonnet 5,api,54,60191.13
+100000,api::sonnet5,Claude Sonnet 5,api,55,61305.78
+100000,api::sonnet5,Claude Sonnet 5,api,56,62420.43
+100000,api::sonnet5,Claude Sonnet 5,api,57,63535.08
+100000,api::sonnet5,Claude Sonnet 5,api,58,64649.73
+100000,api::sonnet5,Claude Sonnet 5,api,59,65764.39
+100000,api::sonnet5,Claude Sonnet 5,api,60,66879.04
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,0,0.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,1,1044.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,2,2088.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,3,3132.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,4,4176.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,5,5220.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,6,6264.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,7,7308.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,8,8352.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,9,9396.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,10,10440.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,11,11484.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,12,12528.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,13,13572.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,14,14616.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,15,15660.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,16,16704.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,17,17748.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,18,18792.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,19,19836.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,20,20880.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,21,21924.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,22,22968.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,23,24012.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,24,25056.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,25,26100.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,26,27144.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,27,28188.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,28,29232.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,29,30276.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,30,31320.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,31,32364.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,32,33408.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,33,34452.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,34,35496.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,35,36540.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,36,37584.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,37,38628.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,38,39672.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,39,40716.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,40,41760.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,41,42804.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,42,43848.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,43,44892.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,44,45936.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,45,46980.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,46,48024.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,47,49068.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,48,50112.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,49,51156.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,50,52200.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,51,53244.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,52,54288.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,53,55332.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,54,56376.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,55,57420.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,56,58464.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,57,59508.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,58,60552.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,59,61596.0
+100000,iaas::iaas_alto,GPU alquilada (proveedor mayor),iaas,60,62640.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,0,0.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,1,396.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,2,792.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,3,1188.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,4,1584.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,5,1980.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,6,2376.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,7,2772.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,8,3168.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,9,3564.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,10,3960.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,11,4356.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,12,4752.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,13,5148.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,14,5544.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,15,5940.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,16,6336.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,17,6732.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,18,7128.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,19,7524.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,20,7920.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,21,8316.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,22,8712.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,23,9108.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,24,9504.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,25,9900.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,26,10296.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,27,10692.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,28,11088.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,29,11484.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,30,11880.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,31,12276.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,32,12672.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,33,13068.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,34,13464.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,35,13860.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,36,14256.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,37,14652.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,38,15048.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,39,15444.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,40,15840.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,41,16236.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,42,16632.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,43,17028.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,44,17424.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,45,17820.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,46,18216.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,47,18612.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,48,19008.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,49,19404.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,50,19800.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,51,20196.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,52,20592.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,53,20988.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,54,21384.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,55,21780.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,56,22176.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,57,22572.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,58,22968.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,59,23364.0
+100000,iaas::iaas_bajo,GPU alquilada (bajo coste),iaas,60,23760.0
+100000,local::5090,Estación RTX 5090,local,0,7500.0
+100000,local::5090,Estación RTX 5090,local,1,7550.35
+100000,local::5090,Estación RTX 5090,local,2,7600.71
+100000,local::5090,Estación RTX 5090,local,3,7651.06
+100000,local::5090,Estación RTX 5090,local,4,7701.42
+100000,local::5090,Estación RTX 5090,local,5,7751.77
+100000,local::5090,Estación RTX 5090,local,6,7802.13
+100000,local::5090,Estación RTX 5090,local,7,7852.48
+100000,local::5090,Estación RTX 5090,local,8,7902.84
+100000,local::5090,Estación RTX 5090,local,9,7953.19
+100000,local::5090,Estación RTX 5090,local,10,8003.55
+100000,local::5090,Estación RTX 5090,local,11,8053.9
+100000,local::5090,Estación RTX 5090,local,12,8104.26
+100000,local::5090,Estación RTX 5090,local,13,8154.61
+100000,local::5090,Estación RTX 5090,local,14,8204.96
+100000,local::5090,Estación RTX 5090,local,15,8255.32
+100000,local::5090,Estación RTX 5090,local,16,8305.67
+100000,local::5090,Estación RTX 5090,local,17,8356.03
+100000,local::5090,Estación RTX 5090,local,18,8406.38
+100000,local::5090,Estación RTX 5090,local,19,8456.74
+100000,local::5090,Estación RTX 5090,local,20,8507.09
+100000,local::5090,Estación RTX 5090,local,21,8557.45
+100000,local::5090,Estación RTX 5090,local,22,8607.8
+100000,local::5090,Estación RTX 5090,local,23,8658.16
+100000,local::5090,Estación RTX 5090,local,24,8708.51
+100000,local::5090,Estación RTX 5090,local,25,8758.86
+100000,local::5090,Estación RTX 5090,local,26,8809.22
+100000,local::5090,Estación RTX 5090,local,27,8859.57
+100000,local::5090,Estación RTX 5090,local,28,8909.93
+100000,local::5090,Estación RTX 5090,local,29,8960.28
+100000,local::5090,Estación RTX 5090,local,30,9010.64
+100000,local::5090,Estación RTX 5090,local,31,9060.99
+100000,local::5090,Estación RTX 5090,local,32,9111.35
+100000,local::5090,Estación RTX 5090,local,33,9161.7
+100000,local::5090,Estación RTX 5090,local,34,9212.06
+100000,local::5090,Estación RTX 5090,local,35,9262.41
+100000,local::5090,Estación RTX 5090,local,36,9312.77
+100000,local::5090,Estación RTX 5090,local,37,9363.12
+100000,local::5090,Estación RTX 5090,local,38,9413.47
+100000,local::5090,Estación RTX 5090,local,39,9463.83
+100000,local::5090,Estación RTX 5090,local,40,9514.18
+100000,local::5090,Estación RTX 5090,local,41,9564.54
+100000,local::5090,Estación RTX 5090,local,42,9614.89
+100000,local::5090,Estación RTX 5090,local,43,9665.25
+100000,local::5090,Estación RTX 5090,local,44,9715.6
+100000,local::5090,Estación RTX 5090,local,45,9765.96
+100000,local::5090,Estación RTX 5090,local,46,9816.31
+100000,local::5090,Estación RTX 5090,local,47,9866.67
+100000,local::5090,Estación RTX 5090,local,48,9917.02
+100000,local::5090,Estación RTX 5090,local,49,9967.38
+100000,local::5090,Estación RTX 5090,local,50,10017.73
+100000,local::5090,Estación RTX 5090,local,51,10068.08
+100000,local::5090,Estación RTX 5090,local,52,10118.44
+100000,local::5090,Estación RTX 5090,local,53,10168.79
+100000,local::5090,Estación RTX 5090,local,54,10219.15
+100000,local::5090,Estación RTX 5090,local,55,10269.5
+100000,local::5090,Estación RTX 5090,local,56,10319.86
+100000,local::5090,Estación RTX 5090,local,57,10370.21
+100000,local::5090,Estación RTX 5090,local,58,10420.57
+100000,local::5090,Estación RTX 5090,local,59,10470.92
+100000,local::5090,Estación RTX 5090,local,60,10521.28
+100000,local::pro6000,Servidor 1× PRO 6000,local,0,12500.0
+100000,local::pro6000,Servidor 1× PRO 6000,local,1,12574.7
+100000,local::pro6000,Servidor 1× PRO 6000,local,2,12649.4
+100000,local::pro6000,Servidor 1× PRO 6000,local,3,12724.11
+100000,local::pro6000,Servidor 1× PRO 6000,local,4,12798.81
+100000,local::pro6000,Servidor 1× PRO 6000,local,5,12873.51
+100000,local::pro6000,Servidor 1× PRO 6000,local,6,12948.21
+100000,local::pro6000,Servidor 1× PRO 6000,local,7,13022.92
+100000,local::pro6000,Servidor 1× PRO 6000,local,8,13097.62
+100000,local::pro6000,Servidor 1× PRO 6000,local,9,13172.32
+100000,local::pro6000,Servidor 1× PRO 6000,local,10,13247.02
+100000,local::pro6000,Servidor 1× PRO 6000,local,11,13321.72
+100000,local::pro6000,Servidor 1× PRO 6000,local,12,13396.43
+100000,local::pro6000,Servidor 1× PRO 6000,local,13,13471.13
+100000,local::pro6000,Servidor 1× PRO 6000,local,14,13545.83
+100000,local::pro6000,Servidor 1× PRO 6000,local,15,13620.53
+100000,local::pro6000,Servidor 1× PRO 6000,local,16,13695.24
+100000,local::pro6000,Servidor 1× PRO 6000,local,17,13769.94
+100000,local::pro6000,Servidor 1× PRO 6000,local,18,13844.64
+100000,local::pro6000,Servidor 1× PRO 6000,local,19,13919.34
+100000,local::pro6000,Servidor 1× PRO 6000,local,20,13994.04
+100000,local::pro6000,Servidor 1× PRO 6000,local,21,14068.75
+100000,local::pro6000,Servidor 1× PRO 6000,local,22,14143.45
+100000,local::pro6000,Servidor 1× PRO 6000,local,23,14218.15
+100000,local::pro6000,Servidor 1× PRO 6000,local,24,14292.85
+100000,local::pro6000,Servidor 1× PRO 6000,local,25,14367.55
+100000,local::pro6000,Servidor 1× PRO 6000,local,26,14442.26
+100000,local::pro6000,Servidor 1× PRO 6000,local,27,14516.96
+100000,local::pro6000,Servidor 1× PRO 6000,local,28,14591.66
+100000,local::pro6000,Servidor 1× PRO 6000,local,29,14666.36
+100000,local::pro6000,Servidor 1× PRO 6000,local,30,14741.07
+100000,local::pro6000,Servidor 1× PRO 6000,local,31,14815.77
+100000,local::pro6000,Servidor 1× PRO 6000,local,32,14890.47
+100000,local::pro6000,Servidor 1× PRO 6000,local,33,14965.17
+100000,local::pro6000,Servidor 1× PRO 6000,local,34,15039.87
+100000,local::pro6000,Servidor 1× PRO 6000,local,35,15114.58
+100000,local::pro6000,Servidor 1× PRO 6000,local,36,15189.28
+100000,local::pro6000,Servidor 1× PRO 6000,local,37,15263.98
+100000,local::pro6000,Servidor 1× PRO 6000,local,38,15338.68
+100000,local::pro6000,Servidor 1× PRO 6000,local,39,15413.39
+100000,local::pro6000,Servidor 1× PRO 6000,local,40,15488.09
+100000,local::pro6000,Servidor 1× PRO 6000,local,41,15562.79
+100000,local::pro6000,Servidor 1× PRO 6000,local,42,15637.49
+100000,local::pro6000,Servidor 1× PRO 6000,local,43,15712.19
+100000,local::pro6000,Servidor 1× PRO 6000,local,44,15786.9
+100000,local::pro6000,Servidor 1× PRO 6000,local,45,15861.6
+100000,local::pro6000,Servidor 1× PRO 6000,local,46,15936.3
+100000,local::pro6000,Servidor 1× PRO 6000,local,47,16011.0
+100000,local::pro6000,Servidor 1× PRO 6000,local,48,16085.71
+100000,local::pro6000,Servidor 1× PRO 6000,local,49,16160.41
+100000,local::pro6000,Servidor 1× PRO 6000,local,50,16235.11
+100000,local::pro6000,Servidor 1× PRO 6000,local,51,16309.81
+100000,local::pro6000,Servidor 1× PRO 6000,local,52,16384.51
+100000,local::pro6000,Servidor 1× PRO 6000,local,53,16459.22
+100000,local::pro6000,Servidor 1× PRO 6000,local,54,16533.92
+100000,local::pro6000,Servidor 1× PRO 6000,local,55,16608.62
+100000,local::pro6000,Servidor 1× PRO 6000,local,56,16683.32
+100000,local::pro6000,Servidor 1× PRO 6000,local,57,16758.03
+100000,local::pro6000,Servidor 1× PRO 6000,local,58,16832.73
+100000,local::pro6000,Servidor 1× PRO 6000,local,59,16907.43
+100000,local::pro6000,Servidor 1× PRO 6000,local,60,16982.13

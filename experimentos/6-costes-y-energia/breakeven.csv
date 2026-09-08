@@ -1,0 +1,105 @@
+preguntas_mes,opcion_local,alternativa,proveedor,gama,capex_local_eur,coste_mensual_local_eur,coste_mensual_alternativa_eur,breakeven_meses,ahorro_a_60_meses_eur,nota
+1000,Estación RTX 5090,Claude Opus 5,Anthropic,frontera,7500,41.39,27.87,,-8311.58,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,Claude Sonnet 5,Anthropic,intermedia,7500,41.39,11.15,,-9314.77,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,Claude Haiku 4.5,Anthropic,entrada,7500,41.39,5.57,,-9649.16,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,Gemini 3.6 Flash,Google,intermedia,7500,41.39,4.18,,-9732.76,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,Gemini 3.5 Flash-Lite,Google,entrada,7500,41.39,1.98,,-9864.8,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,Gemini 3.1 Flash-Lite,Google,entrada,7500,41.39,1.47,,-9895.35,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,Gemini 2.5 Flash-Lite,Google,entrada,7500,41.39,0.53,,-9951.96,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,GPT-5.4 mini,OpenAI,intermedia,7500,41.39,4.41,,-9718.93,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,GPT-5.6 luna,OpenAI,entrada,7500,41.39,1.18,,-9912.99,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,GPT-5 mini,OpenAI,entrada,7500,41.39,1.62,,-9886.13,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,GPT-5 nano,OpenAI,entrada,7500,41.39,0.32,,-9964.07,la alternativa cuesta menos al mes
+1000,Estación RTX 5090,GPU alquilada (bajo coste),IaaS,alquiler,7500,41.39,396.0,21.2,13776.44,
+1000,Estación RTX 5090,GPU alquilada (proveedor mayor),IaaS,alquiler,7500,41.39,1044.0,7.5,52656.44,
+1000,Servidor 1× PRO 6000,Claude Opus 5,Anthropic,frontera,12500,67.24,27.87,,-14862.24,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,Claude Sonnet 5,Anthropic,intermedia,12500,67.24,11.15,,-15865.42,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,Claude Haiku 4.5,Anthropic,entrada,12500,67.24,5.57,,-16199.82,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,Gemini 3.6 Flash,Google,intermedia,12500,67.24,4.18,,-16283.42,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,Gemini 3.5 Flash-Lite,Google,entrada,12500,67.24,1.98,,-16415.45,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,Gemini 3.1 Flash-Lite,Google,entrada,12500,67.24,1.47,,-16446.0,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,Gemini 2.5 Flash-Lite,Google,entrada,12500,67.24,0.53,,-16502.62,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,GPT-5.4 mini,OpenAI,intermedia,12500,67.24,4.41,,-16269.59,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,GPT-5.6 luna,OpenAI,entrada,12500,67.24,1.18,,-16463.65,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,GPT-5 mini,OpenAI,entrada,12500,67.24,1.62,,-16436.78,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,GPT-5 nano,OpenAI,entrada,12500,67.24,0.32,,-16514.73,la alternativa cuesta menos al mes
+1000,Servidor 1× PRO 6000,GPU alquilada (bajo coste),IaaS,alquiler,12500,67.24,396.0,38.0,7225.79,
+1000,Servidor 1× PRO 6000,GPU alquilada (proveedor mayor),IaaS,alquiler,12500,67.24,1044.0,12.8,46105.79,
+5000,Estación RTX 5090,Claude Opus 5,Anthropic,frontera,7500,41.75,139.33,76.9,-1645.4,
+5000,Estación RTX 5090,Claude Sonnet 5,Anthropic,intermedia,7500,41.75,55.73,536.6,-6661.33,
+5000,Estación RTX 5090,Claude Haiku 4.5,Anthropic,entrada,7500,41.75,27.87,,-8333.31,la alternativa cuesta menos al mes
+5000,Estación RTX 5090,Gemini 3.6 Flash,Google,intermedia,7500,41.75,20.9,,-8751.3,la alternativa cuesta menos al mes
+5000,Estación RTX 5090,Gemini 3.5 Flash-Lite,Google,entrada,7500,41.75,9.9,,-9411.48,la alternativa cuesta menos al mes
+5000,Estación RTX 5090,Gemini 3.1 Flash-Lite,Google,entrada,7500,41.75,7.35,,-9564.24,la alternativa cuesta menos al mes
+5000,Estación RTX 5090,Gemini 2.5 Flash-Lite,Google,entrada,7500,41.75,2.63,,-9847.31,la alternativa cuesta menos al mes
+5000,Estación RTX 5090,GPT-5.4 mini,OpenAI,intermedia,7500,41.75,22.05,,-8682.14,la alternativa cuesta menos al mes
+5000,Estación RTX 5090,GPT-5.6 luna,OpenAI,entrada,7500,41.75,5.88,,-9652.45,la alternativa cuesta menos al mes
+5000,Estación RTX 5090,GPT-5 mini,OpenAI,entrada,7500,41.75,8.12,,-9518.13,la alternativa cuesta menos al mes
+5000,Estación RTX 5090,GPT-5 nano,OpenAI,entrada,7500,41.75,1.62,,-9907.85,la alternativa cuesta menos al mes
+5000,Estación RTX 5090,GPU alquilada (bajo coste),IaaS,alquiler,7500,41.75,396.0,21.2,13754.72,
+5000,Estación RTX 5090,GPU alquilada (proveedor mayor),IaaS,alquiler,7500,41.75,1044.0,7.5,52634.72,
+5000,Servidor 1× PRO 6000,Claude Opus 5,Anthropic,frontera,12500,67.54,139.33,174.1,-8192.43,
+5000,Servidor 1× PRO 6000,Claude Sonnet 5,Anthropic,intermedia,12500,67.54,55.73,,-13208.36,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,Claude Haiku 4.5,Anthropic,entrada,12500,67.54,27.87,,-14880.34,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,Gemini 3.6 Flash,Google,intermedia,12500,67.54,20.9,,-15298.33,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,Gemini 3.5 Flash-Lite,Google,entrada,12500,67.54,9.9,,-15958.51,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,Gemini 3.1 Flash-Lite,Google,entrada,12500,67.54,7.35,,-16111.26,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,Gemini 2.5 Flash-Lite,Google,entrada,12500,67.54,2.63,,-16394.33,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,GPT-5.4 mini,OpenAI,intermedia,12500,67.54,22.05,,-15229.17,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,GPT-5.6 luna,OpenAI,entrada,12500,67.54,5.88,,-16199.47,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,GPT-5 mini,OpenAI,entrada,12500,67.54,8.12,,-16065.16,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,GPT-5 nano,OpenAI,entrada,12500,67.54,1.62,,-16454.88,la alternativa cuesta menos al mes
+5000,Servidor 1× PRO 6000,GPU alquilada (bajo coste),IaaS,alquiler,12500,67.54,396.0,38.1,7207.69,
+5000,Servidor 1× PRO 6000,GPU alquilada (proveedor mayor),IaaS,alquiler,12500,67.54,1044.0,12.8,46087.69,
+20000,Estación RTX 5090,Claude Opus 5,Anthropic,frontera,7500,43.11,557.33,14.6,23352.76,
+20000,Estación RTX 5090,Claude Sonnet 5,Anthropic,intermedia,7500,43.11,222.93,41.7,3289.05,
+20000,Estación RTX 5090,Claude Haiku 4.5,Anthropic,entrada,7500,43.11,111.47,109.7,-3398.85,
+20000,Estación RTX 5090,Gemini 3.6 Flash,Google,intermedia,7500,43.11,83.6,185.2,-5070.83,
+20000,Estación RTX 5090,Gemini 3.5 Flash-Lite,Google,entrada,7500,43.11,39.59,,-7711.53,la alternativa cuesta menos al mes
+20000,Estación RTX 5090,Gemini 3.1 Flash-Lite,Google,entrada,7500,43.11,29.4,,-8322.57,la alternativa cuesta menos al mes
+20000,Estación RTX 5090,Gemini 2.5 Flash-Lite,Google,entrada,7500,43.11,10.53,,-9454.85,la alternativa cuesta menos al mes
+20000,Estación RTX 5090,GPT-5.4 mini,OpenAI,intermedia,7500,43.11,88.21,166.3,-4794.19,
+20000,Estación RTX 5090,GPT-5.6 luna,OpenAI,entrada,7500,43.11,23.52,,-8675.4,la alternativa cuesta menos al mes
+20000,Estación RTX 5090,GPT-5 mini,OpenAI,entrada,7500,43.11,32.48,,-8138.14,la alternativa cuesta menos al mes
+20000,Estación RTX 5090,GPT-5 nano,OpenAI,entrada,7500,43.11,6.5,,-9697.03,la alternativa cuesta menos al mes
+20000,Estación RTX 5090,GPU alquilada (bajo coste),IaaS,alquiler,7500,43.11,396.0,21.3,13673.24,
+20000,Estación RTX 5090,GPU alquilada (proveedor mayor),IaaS,alquiler,7500,43.11,1044.0,7.5,52553.24,
+20000,Servidor 1× PRO 6000,Claude Opus 5,Anthropic,frontera,12500,68.67,557.33,25.6,16819.34,
+20000,Servidor 1× PRO 6000,Claude Sonnet 5,Anthropic,intermedia,12500,68.67,222.93,81.0,-3244.37,
+20000,Servidor 1× PRO 6000,Claude Haiku 4.5,Anthropic,entrada,12500,68.67,111.47,292.1,-9932.27,
+20000,Servidor 1× PRO 6000,Gemini 3.6 Flash,Google,intermedia,12500,68.67,83.6,837.3,-11604.25,
+20000,Servidor 1× PRO 6000,Gemini 3.5 Flash-Lite,Google,entrada,12500,68.67,39.59,,-14244.95,la alternativa cuesta menos al mes
+20000,Servidor 1× PRO 6000,Gemini 3.1 Flash-Lite,Google,entrada,12500,68.67,29.4,,-14855.99,la alternativa cuesta menos al mes
+20000,Servidor 1× PRO 6000,Gemini 2.5 Flash-Lite,Google,entrada,12500,68.67,10.53,,-15988.27,la alternativa cuesta menos al mes
+20000,Servidor 1× PRO 6000,GPT-5.4 mini,OpenAI,intermedia,12500,68.67,88.21,639.7,-11327.61,
+20000,Servidor 1× PRO 6000,GPT-5.6 luna,OpenAI,entrada,12500,68.67,23.52,,-15208.83,la alternativa cuesta menos al mes
+20000,Servidor 1× PRO 6000,GPT-5 mini,OpenAI,entrada,12500,68.67,32.48,,-14671.56,la alternativa cuesta menos al mes
+20000,Servidor 1× PRO 6000,GPT-5 nano,OpenAI,entrada,12500,68.67,6.5,,-16230.45,la alternativa cuesta menos al mes
+20000,Servidor 1× PRO 6000,GPU alquilada (bajo coste),IaaS,alquiler,12500,68.67,396.0,38.2,7139.82,
+20000,Servidor 1× PRO 6000,GPU alquilada (proveedor mayor),IaaS,alquiler,12500,68.67,1044.0,12.8,46019.82,
+100000,Estación RTX 5090,Claude Opus 5,Anthropic,frontera,7500,50.35,2786.63,2.7,156676.31,
+100000,Estación RTX 5090,Claude Sonnet 5,Anthropic,intermedia,7500,50.35,1114.65,7.0,56357.76,
+100000,Estación RTX 5090,Claude Haiku 4.5,Anthropic,entrada,7500,50.35,557.33,14.8,22918.24,
+100000,Estación RTX 5090,Gemini 3.6 Flash,Google,intermedia,7500,50.35,417.99,20.4,14558.36,
+100000,Estación RTX 5090,Gemini 3.5 Flash-Lite,Google,entrada,7500,50.35,197.94,50.8,1354.84,
+100000,Estación RTX 5090,Gemini 3.1 Flash-Lite,Google,entrada,7500,50.35,147.02,77.6,-1700.33,
+100000,Estación RTX 5090,Gemini 2.5 Flash-Lite,Google,entrada,7500,50.35,52.66,3255.0,-7361.75,
+100000,Estación RTX 5090,GPT-5.4 mini,OpenAI,intermedia,7500,50.35,441.05,19.2,15941.56,
+100000,Estación RTX 5090,GPT-5.6 luna,OpenAI,entrada,7500,50.35,117.61,111.5,-3464.52,
+100000,Estación RTX 5090,GPT-5 mini,OpenAI,entrada,7500,50.35,162.38,66.9,-778.2,
+100000,Estación RTX 5090,GPT-5 nano,OpenAI,entrada,7500,50.35,32.48,,-8572.66,la alternativa cuesta menos al mes
+100000,Estación RTX 5090,GPU alquilada (bajo coste),IaaS,alquiler,7500,50.35,396.0,21.7,13238.72,
+100000,Estación RTX 5090,GPU alquilada (proveedor mayor),IaaS,alquiler,7500,50.35,1044.0,7.5,52118.72,
+100000,Servidor 1× PRO 6000,Claude Opus 5,Anthropic,frontera,12500,74.7,2786.63,4.6,150215.46,
+100000,Servidor 1× PRO 6000,Claude Sonnet 5,Anthropic,intermedia,12500,74.7,1114.65,12.0,49896.9,
+100000,Servidor 1× PRO 6000,Claude Haiku 4.5,Anthropic,entrada,12500,74.7,557.33,25.9,16457.39,
+100000,Servidor 1× PRO 6000,Gemini 3.6 Flash,Google,intermedia,12500,74.7,417.99,36.4,8097.51,
+100000,Servidor 1× PRO 6000,Gemini 3.5 Flash-Lite,Google,entrada,12500,74.7,197.94,101.4,-5106.01,
+100000,Servidor 1× PRO 6000,Gemini 3.1 Flash-Lite,Google,entrada,12500,74.7,147.02,172.9,-8161.19,
+100000,Servidor 1× PRO 6000,Gemini 2.5 Flash-Lite,Google,entrada,12500,74.7,52.66,,-13822.61,la alternativa cuesta menos al mes
+100000,Servidor 1× PRO 6000,GPT-5.4 mini,OpenAI,intermedia,12500,74.7,441.05,34.1,9480.7,
+100000,Servidor 1× PRO 6000,GPT-5.6 luna,OpenAI,entrada,12500,74.7,117.61,291.3,-9925.38,
+100000,Servidor 1× PRO 6000,GPT-5 mini,OpenAI,entrada,12500,74.7,162.38,142.6,-7239.06,
+100000,Servidor 1× PRO 6000,GPT-5 nano,OpenAI,entrada,12500,74.7,32.48,,-15033.52,la alternativa cuesta menos al mes
+100000,Servidor 1× PRO 6000,GPU alquilada (bajo coste),IaaS,alquiler,12500,74.7,396.0,38.9,6777.87,
+100000,Servidor 1× PRO 6000,GPU alquilada (proveedor mayor),IaaS,alquiler,12500,74.7,1044.0,12.9,45657.87,

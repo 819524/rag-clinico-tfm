@@ -1,0 +1,217 @@
+{
+  "name": "PC-67 — Procedimiento de Manejo de la Gastroenteritis Aguda en Urgencias",
+  "description": "Ground truth generado a partir del documento PC-67. Cubre fundamentos y etiología, valoración de enfermería, signos de alarma, pruebas complementarias y tratamiento.",
+  "relevant_doc_patterns": ["PC-67", "gastroenteritis", "GEA"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "Oye, ¿qué es exactamente lo que se inflama en una gastroenteritis para que les duela tanto?",
+      "expected_section": "FUNDAMENTOS, ETIOLOGÍA Y TRANSMISIÓN",
+      "expected_quote": "La gastroenteritis consiste en la inflamación de la pared interna del estómago y del intestino delgado y grueso."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Cómo se suele contagiar esto en el hospital o en casa, es solo por las manos o hay algo más?",
+      "expected_section": "FUNDAMENTOS, ETIOLOGÍA Y TRANSMISIÓN",
+      "expected_quote": "La transmisión es feco-oral, o por gotas en el caso de los virus."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "Si un paciente viene con mocos y tos además de la diarrea, ¿podría ser un virus?",
+      "expected_section": "FUNDAMENTOS, ETIOLOGÍA Y TRANSMISIÓN",
+      "expected_quote": "Virus: diarrea acuosa, sin mucosidad ni sangre. Puede asociar febrícula, vómitos y síntomas respiratorios."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Cuánto tiempo le puede durar la diarrea a un paciente si al final es por un virus?",
+      "expected_section": "FUNDAMENTOS, ETIOLOGÍA Y TRANSMISIÓN",
+      "expected_quote": "Puede durar hasta dos semanas."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Qué diferencia hay entre la diarrea normal de agua y la que llamamos inflamatoria?",
+      "expected_section": "FUNDAMENTOS, ETIOLOGÍA Y TRANSMISIÓN",
+      "expected_quote": "Acuosa o no inflamatoria: deposiciones abundantes y líquidas, suelen acompañarse de febrícula y escaso dolor abdominal. Inflamatoria: puede ser infecciosa o no (enfermedad inflamatoria, colitis). Son deposiciones frecuentes y escasas, con productos patológicos (sangre o moco), fiebre, dolor abdominal o tenesmo rectal."
+    },
+    {
+      "id": "q06",
+      "block": 1,
+      "query": "Me ha llegado un paciente que dice que tiene diarrea pero está perdiendo peso, ¿podría ser un parásito?",
+      "expected_section": "FUNDAMENTOS, ETIOLOGÍA Y TRANSMISIÓN",
+      "expected_quote": "Parásitos: diarrea acuosa subaguda o crónica, pérdida de peso."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Cuál es el riesgo principal por el que se nos puede complicar un paciente con GEA?",
+      "expected_section": "VALORACIÓN DE ENFERMERÍA: ANAMNESIS Y EXPLORACIÓN FÍSICA",
+      "expected_quote": "La complicación más común de la gastroenteritis es la deshidratación ya que las diarreas y vómitos impiden la ingesta, siendo la salida de líquidos de nuestro organismo mayor que la entrada."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿A qué perfiles de pacientes tenemos que vigilar con más lupa porque se deshidratan antes?",
+      "expected_section": "VALORACIÓN DE ENFERMERÍA: ANAMNESIS Y EXPLORACIÓN FÍSICA",
+      "expected_quote": "Esta complicación es más frecuente en población infantil, personas de edad avanzada e inmunodeprimidos"
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "Si el paciente me dice que tiene muchas ganas de ir al baño pero luego no hace nada (tenesmo), ¿en qué debería pensar?",
+      "expected_section": "VALORACIÓN DE ENFERMERÍA: ANAMNESIS Y EXPLORACIÓN FÍSICA",
+      "expected_quote": "Tenesmo rectal: tumor, absceso, enfermedad inflamatoria intestinal, radioterapia, colitis infecciosa."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Qué les tengo que preguntar sobre los antibióticos que hayan tomado antes de venir?",
+      "expected_section": "VALORACIÓN DE ENFERMERÍA: ANAMNESIS Y EXPLORACIÓN FÍSICA",
+      "expected_quote": "Toma de antibióticos los 2 meses anteriores."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿En qué me tengo que fijar exactamente cuando le haga la exploración física para ver si está deshidratado?",
+      "expected_section": "VALORACIÓN DE ENFERMERÍA: ANAMNESIS Y EXPLORACIÓN FÍSICA",
+      "expected_quote": "Valorar deshidratación (piel y mucosas). Coloración de la piel. Exploración abdominal: no signos de irritación peritoneal, peristaltismo aumentado."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "Si hay sangre o el paciente no aguanta el esfínter, ¿tengo que hacerle un tacto rectal?",
+      "expected_section": "VALORACIÓN DE ENFERMERÍA: ANAMNESIS Y EXPLORACIÓN FÍSICA",
+      "expected_quote": "Tacto rectal (si sangrado o tenesmo/incontinencia): ver la competencia del esfínter y características de las deposiciones."
+    },
+    {
+      "id": "q13",
+      "block": 3,
+      "query": "¿A partir de qué edad nos tenemos que poner nerviosos solo con ver que tienen diarrea?",
+      "expected_section": "IDENTIFICACIÓN DE SIGNOS DE ALARMA Y TRIAJE CRÍTICO",
+      "expected_quote": "Mayores de 70 años"
+    },
+    {
+      "id": "q14",
+      "block": 3,
+      "query": "¿Con cuánto de fiebre saltan las alarmas de verdad?",
+      "expected_section": "IDENTIFICACIÓN DE SIGNOS DE ALARMA Y TRIAJE CRÍTICO",
+      "expected_quote": "Fiebre >38.5ºC."
+    },
+    {
+      "id": "q15",
+      "block": 3,
+      "query": "Si el paciente lleva ya unos días a dieta y no mejora, ¿cuándo decimos 'basta' y lo mandamos a que lo miren más a fondo?",
+      "expected_section": "IDENTIFICACIÓN DE SIGNOS DE ALARMA Y TRIAJE CRÍTICO",
+      "expected_quote": "Ausencia de mejoría de la clínica a pesar de llevar 5 días con tratamiento dietético correcto."
+    },
+    {
+      "id": "q16",
+      "block": 3,
+      "query": "¿Qué pasa si el paciente no tolera ni el agua? ¿Se considera alarma?",
+      "expected_section": "IDENTIFICACIÓN DE SIGNOS DE ALARMA Y TRIAJE CRÍTICO",
+      "expected_quote": "Intolerancia de vía oral (imposibilidad para hidratación)."
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "Si me viene con sangre o pus en las heces, ¿qué sospecha diagnóstica tenemos que manejar?",
+      "expected_section": "IDENTIFICACIÓN DE SIGNOS DE ALARMA Y TRIAJE CRÍTICO",
+      "expected_quote": "Diarrea sanguinolenta aguda: infección enteroinvasiva, diverticulitis, colitis isquémica, enfermedad inflamatoria intestinal (si son recurrentes) → pruebas complementarias."
+    },
+    {
+      "id": "q18",
+      "block": 3,
+      "query": "¿Cuándo sospechamos de una infección por Clostridium difficile según lo que nos cuente el paciente?",
+      "expected_section": "IDENTIFICACIÓN DE SIGNOS DE ALARMA Y TRIAJE CRÍTICO",
+      "expected_quote": "Uso reciente de antibióticos: Clostridium difficile"
+    },
+    {
+      "id": "q19",
+      "block": 4,
+      "query": "¿A todos los que vienen con diarrea hay que sacarles sangre y pedirles de todo?",
+      "expected_section": "PRUEBAS COMPLEMENTARIAS Y PROCEDIMIENTOS DIAGNÓSTICOS",
+      "expected_quote": "La diarrea aguda no requiere estudios complementarios, salvo signos de alarma."
+    },
+    {
+      "id": "q20",
+      "block": 4,
+      "query": "Si tiene signos de alarma y le pido analítico de sangre, ¿qué parámetros son los que no pueden faltar?",
+      "expected_section": "PRUEBAS COMPLEMENTARIAS Y PROCEDIMIENTOS DIAGNÓSTICOS",
+      "expected_quote": "Hemograma, bioquímica con iones y función renal, y gasometría venosa."
+    },
+    {
+      "id": "q21",
+      "block": 4,
+      "query": "¿Cuándo le tenemos que pedir al paciente una muestra de heces para coprocultivo o parásitos?",
+      "expected_section": "PRUEBAS COMPLEMENTARIAS Y PROCEDIMIENTOS DIAGNÓSTICOS",
+      "expected_quote": "Heces: coprocultivo, valorar parásitos y Clostridium difficile especialmente si hay antecedentes de toma de antibióticos."
+    },
+    {
+      "id": "q22",
+      "block": 4,
+      "query": "¿En qué casos se suele pedir una radiografía de abdomen a estos pacientes?",
+      "expected_section": "PRUEBAS COMPLEMENTARIAS Y PROCEDIMIENTOS DIAGNÓSTICOS",
+      "expected_quote": "si se sospecha íleo paralítico, megacolon o diarrea por rebosamiento."
+    },
+    {
+      "id": "q23",
+      "block": 4,
+      "query": "¿Qué hacemos si un paciente inmunodeprimido lleva ya una semana o más con diarrea?",
+      "expected_section": "PRUEBAS COMPLEMENTARIAS Y PROCEDIMIENTOS DIAGNÓSTICOS",
+      "expected_quote": "La diarrea crónica (> 4 semanas ó 1-3 semanas en inmunodeprimidos) requiere estudio"
+    },
+    {
+      "id": "q24",
+      "block": 5,
+      "query": "Para la hidratación en casa, ¿cuántos litros de agua o suero deben beber al día?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "expected_quote": "2-3 litros diarios."
+    },
+    {
+      "id": "q25",
+      "block": 5,
+      "query": "¿Cómo se prepara la famosa 'limonada alcalina' si no tienen sueño de farmacia?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "expected_quote": "en 1 litro de agua mineral, añadir dos o tres cucharadas de azúcar, media cucharada de sal y de bicarbonato, y el zumo de uno o dos limones."
+    },
+    {
+      "id": "q26",
+      "block": 5,
+      "query": "Si el paciente está vomitando, ¿cuánto tiempo tiene que esperar antes de volver a intentar beber algo?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "expected_quote": "Si hay vómitos, espere 1 hora antes de la siguiente ingesta y comience de nuevo con líquidos en pequeñas cantidades, aumentando la frecuencia progresivamente."
+    },
+    {
+      "id": "q27",
+      "block": 5,
+      "query": "¿Qué puede empezar a comer cuando ya tolera bien los líquidos?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "expected_quote": "purés, dieta blanda como verduras cocinadas, patata, zanahoria, pollo, pescado blanco, manzana."
+    },
+    {
+      "id": "q28",
+      "block": 5,
+      "query": "¿Qué alimentos les tenemos que decir que eviten a toda costa al principio?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "expected_quote": "Evitar alimentos grasos, lácteos (salvo yogurt), verduras crudas..."
+    },
+    {
+      "id": "q29",
+      "block": 5,
+      "query": "Si el paciente está con dolorcillo o algo de febrícula, ¿qué le podemos dar para que aguante en casa?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "expected_quote": "Paracetamol 1 gramo: 1 comprimido cada 8 horas si dolor abdominal o febrícula."
+    },
+    {
+      "id": "q30",
+      "block": 5,
+      "query": "¿En qué casos raros se les acaba poniendo antibiótico de forma empírica?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "expected_quote": "Solo daremos antibioterapia empírica en determinados casos, en especial si la sospecha es una gastroenteritis aguda inflamatoria y se debe valorar como posibles etiologías la Salmonella, Campylobacter o Shigella"
+    }
+  ]
+}

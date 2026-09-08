@@ -1,0 +1,217 @@
+{
+  "name": "PC-73 — Tratamiento de la Neuralgia del Trigémino en Urgencias",
+  "description": "Ground truth generado a partir del documento PC-73. Cubre conceptos fundamentales, clínica y exploración, tratamiento farmacológico y poblaciones especiales.",
+  "relevant_doc_patterns": ["PC-73", "neuralgia-trigemino", "trigemino", "trigémino"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "Oye, ¿cómo sé si este dolor es una neuralgia del trigémino de verdad o cualquier otra cosa?",
+      "expected_section": "CONCEPTOS FUNDAMENTALES Y CLASIFICACIÓN",
+      "expected_quote": "NEURALGIA DEL TRIGÉMINO: dolor unilateral similar a una descarga eléctrica breve, de aparición y desaparición repentinas, limitado a la distribución de una o más ramas de la división del nervio trigémino y desencadenado por estímulos inocuos"
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "Me ralla que el paciente diga que no le pasa nada más, ¿qué diferencia hay entre la clásica y la secundaria?",
+      "expected_section": "CONCEPTOS FUNDAMENTALES Y CLASIFICACIÓN",
+      "expected_quote": "NEURALGIA DEL TRIGÉMINO clásica: se desarrolla sin otra causa aparente que no sea un contacto neurovascular (CNV) que debe provocar cambios morfológicos en el nervio (típicamente atrofia o desplazamiento)... NEURALGIA DEL TRIGÉMINO secundaria: ocasionada por un trastorno subyacente."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Y si me dice que le duele todo el tiempo y no solo cuando le dan los calambres?",
+      "expected_section": "CONCEPTOS FUNDAMENTALES Y CLASIFICACIÓN",
+      "expected_quote": "Además, podría presentar dolor continuo concomitante de intensidad moderada en el territorio inervado por las ramas afectadas."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "Si el dolor se le pasa al otro lado de la cara, ¿sigue siendo lo mismo o busco otra cosa?",
+      "expected_section": "CONCEPTOS FUNDAMENTALES Y CLASIFICACIÓN",
+      "expected_quote": "Paroxismos recurrentes de dolor facial unilateral en la distribución de una o más ramas de la división del nervio trigémino"
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Qué es esa \"neuropatía\" de la que hablan los médicos en la parte?",
+      "expected_section": "CONCEPTOS FUNDAMENTALES Y CLASIFICACIÓN",
+      "expected_quote": "NEUROPATÍA TRIGEMINAL dolorosa: dolor en el territorio de uno o ambos nervios trigéminos, con demostración de disfunción sensitiva (hiperalgesia, alodinia, hipoestesia, hipoalgesia) presumiblemente expresiva de daño sobre el nervio."
+    },
+    {
+      "id": "q06",
+      "block": 1,
+      "query": "¿Es muy común que nos encontremos con casos raros de estos en Urgencias?",
+      "expected_section": "CONCEPTOS FUNDAMENTALES Y CLASIFICACIÓN",
+      "expected_quote": "Aproximadamente un 67% de las neuralgias son formas clásicas, un 22% son secundarias y un 11% son idiopáticas"
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Por qué el paciente se pone tan mal solo con hablar o lavarse la cara?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "expected_quote": "se precipitan por estímulos exteroceptivos (como afeitarse, lavarse la cara, hablar, entre otros) aplicados en el territorio doloroso o a veces también en territorios trigéminos adyacentes (zonas \"gatillo\")."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Cuánto tiempo dura cada calambre? Me parece que son demasiado cortos para doler tanto.",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "expected_quote": "Duración que oscila entre una fracción de segundo y dos minutos... con una duración de uno a varios segundos."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "Oye, que le acabo de tocar y ahora dice que no le duele nada, ¿me está tomando el pelo?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "expected_quote": "Es característica la existencia de un período refractario de minutos de duración"
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Es normal que el paciente tenga el ojo un poco rojo o le llore cuando le da la crisis?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "expected_quote": "Puede asociarse a leves síntomas autonómicos"
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "Le he hecho las pruebas de sensibilidad y salen normales, ¿estoy valorando mal el caso?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "expected_quote": "La exploración neurológica es normal en los casos idiopáticos y clásicos."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Qué significa exactamente que el dolor sea \"paroxístico\"?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "expected_quote": "de carácter lancinante, punzante o \"eléctrico\", con inicio y fin abruptos... paroxismos recurrentes de dolor facial unilateral"
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "¿Es común que el dolor le dé en el ojo o la frente?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "expected_quote": "La afectación de la rama oftálmica ocurre en menos del 5% de los casos."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "He oído a los de neurología hablar de la zona \"REZ\", ¿eso qué es?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "expected_quote": "segmento proximal al tronco del encéfalo que mide 3-4 mm, conocido como REZ (root Entry Zone) en relación con la zona transicional de la mielina"
+    },
+    {
+      "id": "q15",
+      "block": 2,
+      "query": "Me dice que le quema la cara de forma constante entre crisis y crisis, ¿esto es mala señal?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "expected_quote": "NEURALGIA DEL TRIGÉMINO con dolor facial persistente concomitante, que puede ser urente, quemante o pulsátil. La presencia de este dolor continuo suele entrañar una menor respuesta a los tratamientos médicos"
+    },
+    {
+      "id": "q16",
+      "block": 3,
+      "query": "Oye, el paciente está rabiando, ¿le pongo un poco de morfina o fentanilo para que se calme?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "expected_quote": "Se desaconseja por completo el uso de opiáceos"
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "¿Cómo tengo que pasarle la Fenitoína (DPH)?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "expected_quote": "500-1000mg de DPH (10-15mg/Kg) en perfusión durante 30-60 minutos con monitorización cardíaca continua"
+    },
+    {
+      "id": "q18",
+      "block": 3,
+      "query": "¿Cuándo debo avisar para no poner Fenitoína ni de broma?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "expected_quote": "Contraindicaciones: alergia a fenitoína y/o hidantoínas, trastornos cardiovasculares (bloqueo cardíaco de segundo o tercer grado, bradicardia sinusal), trastornos metabólicos (porfiria), embarazo y lactancia."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "¿Cuál es la dosis de Lacosamida (LCS) y qué vigilar en el monitor?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "expected_quote": "100-200mg de LCS en perfusión durante 60 minutos con monitorización cardíaca continua... se ha descrito un alargamiento dosis-dependiente del intervalo PR."
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "¿Podemos usar lidocaína intravenosa si la fenitoína no le hace nada?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "expected_quote": "5 mg/Kg de lidocaína en perfusión continua durante 60 minutos con monitorización cardíaca continua"
+    },
+    {
+      "id": "q21",
+      "block": 3,
+      "query": "¿Qué hacemos si el dolor se le dispara cada vez que le roza la sábana o la mascarilla en la nariz?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "expected_quote": "se puede valorar, según territorio, la administración local de lidocaína 0,2cc al 8% (nasal o en mucosa oral)"
+    },
+    {
+      "id": "q22",
+      "block": 3,
+      "query": "Oye, el paciente toma pastillas para el corazón, ¿pasa algo con la Lacosamida?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "expected_quote": "Debe administrarse con precaución en pacientes... tratados con medicamentos que afectan a la conducción cardíaca (antiarrítmicos y fármacos anti-crisis que actúan a nivel de los canales de sodio)"
+    },
+    {
+      "id": "q23",
+      "block": 3,
+      "query": "¿A qué se refieren los médicos con que el paciente está en una \"exacerbación grave\"?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "expected_quote": "Las exacerbaciones graves de la clínica se caracterizan por un marcado aumento de la frecuencia, de la intensidad o de la duración de los paroxismos."
+    },
+    {
+      "id": "q24",
+      "block": 3,
+      "query": "¿Por qué somos tan pesados con el monitor cardíaco en estos pacientes?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "expected_quote": "Todos ellos precisan una monitorización continua desde el punto de vista cardiológico."
+    },
+    {
+      "id": "q25",
+      "block": 4,
+      "query": "¿A qué tipo de paciente solemos ver más con este problema?",
+      "expected_section": "POBLACIONES ESPECIALES Y EPIDEMIOLOGÍA",
+      "expected_quote": "La edad media de inicio de la enfermedad es de 53,9 años, con predominio en el sexo femenino (60%)... incidencia... hasta 25,6/100.000 habitantes/año a partir de los 70 años."
+    },
+    {
+      "id": "q26",
+      "block": 4,
+      "query": "¿Le puedo poner Fenitoína a una madre que está dando el pecho?",
+      "expected_section": "POBLACIONES ESPECIALES Y EPIDEMIOLOGÍA",
+      "expected_quote": "DPH se excreta por la leche materna humana. No se puede excluir el riesgo en recién nacidos/lactantes por lo que se recomienda interrumpir la lactancia"
+    },
+    {
+      "id": "q27",
+      "block": 4,
+      "query": "Tengo una embarazada con una crisis insoportable, ¿la lacosamida es una opción segura?",
+      "expected_section": "POBLACIONES ESPECIALES Y EPIDEMIOLOGÍA",
+      "expected_quote": "no debe administrarse durante el embarazo a no ser que sea claramente necesario (si el beneficio para la madre supera claramente el riesgo potencial para el feto)"
+    },
+    {
+      "id": "q28",
+      "block": 4,
+      "query": "¿Qué anestésico local usamos para los puntos gatillo si la paciente está embarazada?",
+      "expected_section": "POBLACIONES ESPECIALES Y EPIDEMIOLOGÍA",
+      "expected_quote": "en el caso de gestación, se recomienda la administración de lidocaína al 2%"
+    },
+    {
+      "id": "q29",
+      "block": 4,
+      "query": "¿Cuándo se considera que la neuralgia es \"refractaria\"? Porque este paciente no mejora con nada.",
+      "expected_section": "POBLACIONES ESPECIALES Y EPIDEMIOLOGÍA",
+      "expected_quote": "NEURALGIA DEL TRIGÉMINO refractaria: ausencia de respuesta a, al menos, dos tratamientos orales en monoterapia o terapia combinada, con diferente mecanismo de acción, pautados a las dosis adecuadas y durante un mínimo de tres meses."
+    },
+    {
+      "id": "q30",
+      "block": 4,
+      "query": "¿Es verdad que el contacto de un vaso con el nervio es lo que causa todo este lío?",
+      "expected_section": "POBLACIONES ESPECIALES Y EPIDEMIOLOGÍA",
+      "expected_quote": "La auténtica compresión neurovascular implica, no el contacto simple, sino la distorsión, distensión, aplanamiento o atrofia del nervio"
+    }
+  ]
+}

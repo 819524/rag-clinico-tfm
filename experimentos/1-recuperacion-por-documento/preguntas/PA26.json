@@ -1,0 +1,182 @@
+{
+  "name": "PA-26_Z3(E)C — Procedimiento en los Cuidados de la Oxigenoterapia",
+  "description": "Ground truth generado a partir del documento PA-26_Z3(E)C (Revisión A). Cubre definiciones de oxigenoterapia y sistemas de flujo, precauciones y contraindicaciones, procedimiento general y por dispositivo (gafas nasales, mascarillas simple/reservorio/Venturi/traqueostomía, tubo en T, filtro, OxyMask), glosario clínico y características de cada sistema de administración.",
+  "relevant_doc_patterns": ["PA-26", "oxigenoterapia", "oxigeno", "mascarilla-oxigeno", "gafas-nasales", "venturi"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Qué es la oxigenoterapia y en qué se diferencia del aire ambiente?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "La oxigenoterapia consiste en la administración, por vía inhalatoria, de oxígeno a concentraciones mayores de las que se encuentran en el aire ambiente (21%)."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Por qué el oxígeno se considera un fármaco?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "El oxígeno debe considerarse un fármaco ya que precisa de indicaciones prescritas, es utilizado en dosis y tiempo adecuado, posee efectos adversos y requiere criterios clínicos y de laboratorio para su evaluación."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Qué diferencia hay entre un sistema de bajo flujo y uno de alto flujo?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Los sistemas de bajo flujo son aquellos con los que el paciente inhala aire de la atmósfera y lo mezcla con el oxígeno suministrado, por lo que la FiO2 variará según el patrón ventilatorio. Los sistemas de alto flujo aportan todo el gas inspirado a una concentración constante independientemente del patrón ventilatorio del paciente."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Cuántas horas al día hay que dar oxígeno en la EPOC para que disminuya la mortalidad?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "La mortalidad en la EPOC disminuía al dar oxígeno 15 horas al día frente a no darlo, y aún disminuía más al aplicar un régimen continuo de 17,7 horas/día."
+    },
+    {
+      "id": "q05",
+      "block": 2,
+      "query": "¿Por qué no puedo usar vaselina ni aceites cerca del oxígeno?",
+      "expected_section": "PRECAUCIONES",
+      "expected_quote": "No poner en contacto el material que se va a utilizar con grasas y aceites (vaselina), ya que el O2 es un comburente energético."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿En qué intoxicaciones está contraindicado administrar oxígeno?",
+      "expected_section": "PRECAUCIONES",
+      "expected_quote": "La administración de oxígeno está contraindicada en la intoxicación por bleomicina (antibiótico citotóxico) y paraquat (herbicida) porque aumenta el daño pulmonar."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Por qué hay que tener cuidado con dar oxígeno a altas concentraciones en un paciente con EPOC?",
+      "expected_section": "PRECAUCIONES",
+      "expected_quote": "En patologías que cursan con hipercapnia e hipoxia crónica, como la EPOC, administrar oxígeno a altas concentraciones puede disminuir el impulso ventilatorio y/o agravar el fallo respiratorio por hipercapnia."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿En qué pacientes está contraindicada la terapia de alto flujo con cánula nasal?",
+      "expected_section": "PRECAUCIONES",
+      "expected_quote": "En pacientes con terapia de alto flujo con cánula nasal existe riesgo de barotrauma en flujos muy elevados, estando contraindicado en pacientes con fosas nasales dañadas u obstruidas."
+    },
+    {
+      "id": "q09",
+      "block": 3,
+      "query": "¿Cómo prevengo que el dispositivo de oxígeno dañe la piel del paciente?",
+      "expected_section": "PROCEDIMIENTO — Generalidades",
+      "expected_quote": "Prevenir la aparición de lesiones en la piel por fricción o presión del dispositivo de oxígeno con almohadillas e higiene, y valorar regularmente la mucosa nasal y labial lubricándolas si es necesario."
+    },
+    {
+      "id": "q10",
+      "block": 3,
+      "query": "¿Cómo coloco correctamente unas gafas nasales?",
+      "expected_section": "PROCEDIMIENTO — Gafas o cánulas nasales",
+      "expected_quote": "Introduzca los dientes de la cánula en las fosas nasales y pase los tubos por encima de las orejas, ajustándola con el pasador de tal manera que queden por debajo de la barbilla. Seleccione en el caudalímetro el flujo prescrito."
+    },
+    {
+      "id": "q11",
+      "block": 3,
+      "query": "¿Cuándo debo cambiar las gafas nasales?",
+      "expected_section": "PROCEDIMIENTO — Gafas o cánulas nasales",
+      "expected_quote": "Cámbielas cuando estén sucias con secreciones y/o se deterioren o endurezcan, y compruebe regularmente que las fosas nasales están libres de secreciones."
+    },
+    {
+      "id": "q12",
+      "block": 3,
+      "query": "¿Cuál debe ser el flujo mínimo en una mascarilla con reservorio y por qué?",
+      "expected_section": "PROCEDIMIENTO — Mascarilla de oxígeno",
+      "expected_quote": "El flujo de oxígeno en las mascarillas con reservorio ha de ser adecuado para que permanezca la bolsa inflada, por encima de 7 l/min."
+    },
+    {
+      "id": "q13",
+      "block": 3,
+      "query": "¿Qué hago con la mascarilla cuando el paciente está comiendo?",
+      "expected_section": "PROCEDIMIENTO — Mascarilla de oxígeno",
+      "expected_quote": "Durante el periodo de alimentación el paciente debe utilizar cánula nasal para evitar hipoxemia."
+    },
+    {
+      "id": "q14",
+      "block": 3,
+      "query": "¿Cómo coloco la mascarilla de oxígeno para traqueostomía?",
+      "expected_section": "PROCEDIMIENTO — Mascarilla para Traqueostomia",
+      "expected_quote": "Sitúe la mascarilla encima del estoma y ajústela alrededor del cuello del paciente con una cinta elástica que dispone el dispositivo, tratando de evitar fugas."
+    },
+    {
+      "id": "q15",
+      "block": 3,
+      "query": "¿Cuándo hay que cambiar el tubo en T de una traqueostomía?",
+      "expected_section": "PROCEDIMIENTO — Tubo en T para traqueotomías",
+      "expected_quote": "Se deben cambiar cada vez que se llenen de secreciones."
+    },
+    {
+      "id": "q16",
+      "block": 3,
+      "query": "¿Cuál es el flujo máximo que puedo administrar con el filtro para cánula de traqueotomía?",
+      "expected_section": "PROCEDIMIENTO — Filtro para cánula de traqueotomía",
+      "expected_quote": "No es adecuado para flujos altos; no poner más de 4 l/min de O2. Se cambiará cada vez que se llena de secreciones."
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "¿Qué ventaja tiene la OxyMask frente a otras mascarillas?",
+      "expected_section": "PROCEDIMIENTO — Mascarilla de oxigeno (OxyMask)",
+      "expected_quote": "Se pueden recibir fluidos sin quitar la mascarilla o realizar pruebas diagnósticas como la broncoscopia, y por su diseño consigue lavado de CO2 del espacio muerto de la mascarilla produciendo menos retención de dicho gas."
+    },
+    {
+      "id": "q18",
+      "block": 3,
+      "query": "¿Quién prescribe la oxigenoterapia y quién la administra?",
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "La prescripción es responsabilidad del Médico y la administración de la Enfermera/o."
+    },
+    {
+      "id": "q19",
+      "block": 4,
+      "query": "¿Qué es la hipoxemia y cómo se clasifica según su gravedad?",
+      "expected_section": "ANEXO I: GLOSARIO DE TÉRMINOS",
+      "expected_quote": "Hipoxemia es la disminución de la PaO2 por debajo de 80 mmHg. Será hipoxemia leve cuando la PaO2 esté entre 70 y 79 mmHg; hipoxemia moderada con PaO2 entre 60 y 69 mmHg; e hipoxemia severa cuando la PaO2 esté por debajo de 60 mmHg, lo que coincide con el término Insuficiencia Respiratoria Hipoxémica y corresponde con saturaciones de O2 del 90%."
+    },
+    {
+      "id": "q20",
+      "block": 4,
+      "query": "¿Qué diferencia hay entre hipoxia e hipoxemia?",
+      "expected_section": "ANEXO I: GLOSARIO DE TÉRMINOS",
+      "expected_quote": "La hipoxia se produce cuando el aporte de O2 a las células es insuficiente para cubrir las necesidades metabólicas de los tejidos. La hipoxemia es la disminución de la PaO2 por debajo de 80 mmHg, es decir, un valor analítico en sangre, mientras que la hipoxia es el efecto tisular resultante."
+    },
+    {
+      "id": "q21",
+      "block": 4,
+      "query": "Con unas gafas nasales a 4 l/min, ¿qué FiO2 aproximada consigo?",
+      "expected_section": "ANEXO II: RELACIÓN FLUJO/FiO2 CON GAFAS NASALES",
+      "expected_quote": "Con un flujo de 4 L/min se obtiene una FiO2 de 0,31 (31%)."
+    },
+    {
+      "id": "q22",
+      "block": 4,
+      "query": "¿A partir de qué flujo es necesario el humidificador y en qué caso podría no usarse?",
+      "expected_section": "ANEXO IV: MATERIAL",
+      "expected_quote": "A bajos flujos (mayores de 4 l/m) no sería necesaria su utilización, a menos que el paciente note sequedad o irritación nasal. El humidificador desechable se cambiará entre pacientes."
+    },
+    {
+      "id": "q23",
+      "block": 4,
+      "query": "¿Qué rango de flujo y FiO2 alcanzan las gafas nasales?",
+      "expected_section": "ANEXO V: SISTEMAS DE ADMINISTRACIÓN DE OXÍGENO",
+      "expected_quote": "Las cánulas o gafas nasales permiten flujos de 1 a 4 l/m y alcanzan entre el 24% y el 36% de FiO2."
+    },
+    {
+      "id": "q24",
+      "block": 4,
+      "query": "¿Qué FiO2 puede alcanzar la mascarilla de no reinhalación?",
+      "expected_section": "ANEXO V: SISTEMAS DE ADMINISTRACIÓN DE OXÍGENO",
+      "expected_quote": "La mascarilla de no reinhalación, con flujos de 3-15 l/min, alcanza una FiO2 del 60% al 100%. Dispone de una válvula unidireccional que impide que el aire espirado vuelva a la bolsa."
+    },
+    {
+      "id": "q25",
+      "block": 4,
+      "query": "¿Cuál es la principal ventaja de la mascarilla Venturi respecto a otros sistemas?",
+      "expected_section": "ANEXO V: SISTEMAS DE ADMINISTRACIÓN DE OXÍGENO",
+      "expected_quote": "La mascarilla Venturi suministra concentraciones precisas de oxígeno independientemente del patrón respiratorio del paciente, siempre que se garantice el suministro del flujo mínimo recomendado para esa concentración."
+    }
+  ]
+}

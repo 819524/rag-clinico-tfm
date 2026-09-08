@@ -1,0 +1,84 @@
+{
+  "generado": "2026-08-25T15:36:24",
+  "consultas": {
+    "libro_mayor": 63040,
+    "evaluaciones_previas_al_libro_mayor": 5481,
+    "evaluaciones_derivadas_excluidas": 4020,
+    "total": 68521,
+    "rango": [
+      "2026-05-15T14:51:54.387857",
+      "2026-08-25T12:30:54.497489"
+    ]
+  },
+  "tokens": {
+    "entrada_total": 311356613,
+    "salida_total": 23464685,
+    "entrada_libro_mayor": 283615587,
+    "salida_libro_mayor": 21599345,
+    "entrada_evals_previas": 27741026,
+    "salida_evals_previas": 1865340
+  },
+  "por_modelo": {
+    "?": {
+      "n": 143,
+      "pt": 0,
+      "ct": 0,
+      "gen_s": 0.0
+    },
+    "gemma4-awq": {
+      "n": 2970,
+      "pt": 18810403,
+      "ct": 1658521,
+      "gen_s": 66764.8
+    },
+    "gemma4:12b": {
+      "n": 23187,
+      "pt": 104863633,
+      "ct": 8304544,
+      "gen_s": 753718.4
+    },
+    "gemma4:26b": {
+      "n": 42219,
+      "pt": 187681079,
+      "ct": 13501177,
+      "gen_s": 753841.5
+    },
+    "qwen3:32b": {
+      "n": 2,
+      "pt": 1498,
+      "ct": 443,
+      "gen_s": 29.9
+    }
+  },
+  "energia_medida_wh": {
+    "voz05": 8958.0,
+    "gtc2pc4": 11324.3
+  },
+  "energia_medida_kwh_total": 20.282,
+  "horas_telemetria": 87.4,
+  "horas_telemetria_por_maquina": {
+    "voz05": 21.9,
+    "gtc2pc4": 65.6
+  },
+  "cobertura_telemetria": {
+    "consultas_bajo_telemetria": 50197,
+    "pct": 79.6
+  },
+  "maquinas": {
+    "voz05": {
+      "gpus": "2x RTX PRO 6000 Blackwell",
+      "n_gpu": 2,
+      "tdp_w": 600
+    },
+    "gtc2pc4": {
+      "gpus": "1x RTX 5090",
+      "n_gpu": 1,
+      "tdp_w": 575
+    },
+    "gtc2pc9": {
+      "gpus": "1x RTX 4090 (baseline)",
+      "n_gpu": 1,
+      "tdp_w": 450
+    }
+  }
+}

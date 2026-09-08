@@ -1,0 +1,146 @@
+{
+ "name": "ROUTER_validacion_set",
+ "description": "Conjunto de VALIDACION independiente: 20 preguntas clinicas legitimas no cubiertas por los 22 protocolos, distintas de las 40 empleadas para calibrar el umbral de relevancia. Permite estimar la tasa de abstencion sin circularidad.",
+ "questions": [
+  {
+   "id": "v001",
+   "query": "¿Cuál es el protocolo de manejo de la crisis asmática en adultos?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v002",
+   "query": "¿Cómo se realiza el drenaje de un absceso cutáneo?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v003",
+   "query": "¿Qué pauta de rehidratación se usa en el golpe de calor?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v004",
+   "query": "¿Cómo se maneja una intoxicación por monóxido de carbono?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v005",
+   "query": "¿Cuál es el tratamiento de la migraña refractaria en urgencias?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v006",
+   "query": "¿Qué escala se emplea para valorar el riesgo de caídas?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v007",
+   "query": "¿Cómo se trata una crisis tirotóxica?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v008",
+   "query": "¿Cuál es el manejo de la anafilaxia y qué dosis de adrenalina intramuscular?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v009",
+   "query": "¿Cómo se realiza una punción lumbar y qué contraindicaciones tiene?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v010",
+   "query": "¿Qué profilaxis se pauta tras una mordedura de perro?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v011",
+   "query": "¿Cuál es el protocolo de transfusión masiva?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v012",
+   "query": "¿Cómo se maneja el delirium en el paciente anciano hospitalizado?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v013",
+   "query": "¿Qué antibiótico se usa en una pielonefritis aguda?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v014",
+   "query": "¿Cómo se trata una crisis hipertensiva con daño de órgano diana?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v015",
+   "query": "¿Cuál es el manejo inicial de una quemadura de segundo grado?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v016",
+   "query": "¿Cómo se valora y trata la deshidratación en el paciente pediátrico?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v017",
+   "query": "¿Qué pauta de corticoides se usa en una reagudización de asma?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v018",
+   "query": "¿Cómo se maneja una hemorragia posparto?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v019",
+   "query": "¿Cuál es el protocolo de aislamiento ante sospecha de tuberculosis pulmonar?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "v020",
+   "query": "¿Cómo se trata una hipercalcemia tumoral?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  }
+ ]
+}

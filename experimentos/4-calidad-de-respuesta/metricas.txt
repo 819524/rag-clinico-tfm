@@ -1,0 +1,30 @@
+
+========================================================================================================
+4B (615 preg.)   (eval/2026-05-19_topk10)
+========================================================================================================
+Estrategia        n  ROUGE-L  RecCita   RetKW  %c/cita  citas  %válidas  palabras  tok/s*  t_gen t_total
+
+========================================================================================================
+0.6B (615 preg.)   (eval/2026-05-31_06b_topk10)
+========================================================================================================
+Estrategia        n  ROUGE-L  RecCita   RetKW  %c/cita  citas  %válidas  palabras  tok/s*  t_gen t_total
+
+========================================================================================================
+4B (110 multi)   (eval/global_topk10)
+========================================================================================================
+Estrategia        n  ROUGE-L  RecCita   RetKW  %c/cita  citas  %válidas  palabras  tok/s*  t_gen t_total
+
+========================================================================================================
+0.6B (110 multi)   (eval/global_06b_topk10)
+========================================================================================================
+Estrategia        n  ROUGE-L  RecCita   RetKW  %c/cita  citas  %válidas  palabras  tok/s*  t_gen t_total
+
+LEYENDA
+  ROUGE-L  : recall de la subsecuencia común más larga cita↔respuesta (_rouge_l_recall_fast)
+  RecCita  : fracción de palabras de contenido de la cita presentes en la respuesta
+  RetKW    : fracción de keywords del router presentes en la respuesta
+  %c/cita  : % de respuestas con al menos una marca [n]
+  citas    : nº medio de marcas [n] por respuesta
+  %válidas : % de marcas [n] con n dentro del rango de fuentes entregadas (1..top_k)
+  tok/s*   : MEDIANA; se excluyen los registros con el centinela 1e6 (eval_duration=0 en Ollama)
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Informe de confianza — 3 motores de inferencia</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+:root{--s:#1a1a19;--card:#232322;--ink:#ffffff;--mut:#c3c2b7;--dim:#8a897f;--line:#3a3a37}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--s);color:var(--ink);margin:0;padding:28px;line-height:1.5}
+h1{font-size:1.6rem;margin:0 0 4px}h2{font-size:1.05rem;color:var(--mut);margin:32px 0 14px;font-weight:600}
+.sub{color:var(--dim);font-size:.9rem;margin-bottom:24px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:8px}
+.kpi{background:var(--card);border-radius:12px;padding:16px}
+.kpi .v{font-size:1.7rem;font-weight:700}.kpi .l{font-size:.72rem;color:var(--dim);margin-top:2px;text-transform:uppercase;letter-spacing:.04em}
+.card{background:var(--card);border-radius:12px;padding:20px;margin-bottom:18px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:820px){.grid2{grid-template-columns:1fr}}
+canvas{max-height:340px}
+.note{font-size:.82rem;color:var(--dim);margin-top:10px}
+.tblwrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.82rem;min-width:820px}
+th{text-align:right;padding:9px 10px;color:var(--dim);font-weight:600;border-bottom:2px solid var(--line);position:sticky;top:0;background:var(--card)}
+th.l,td.l{text-align:left}td{text-align:right;padding:8px 10px;border-bottom:1px solid var(--line)}
+tr:hover td{background:#2b2b29}
+.dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.bad{color:#e66767;font-weight:600}.good{color:#199e70}
+.finding{background:linear-gradient(90deg,#2a2a1c,#232322);border-left:3px solid #c98500;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:.9rem}
+</style></head><body>
+<h1>Informe de confianza — vLLM · llama.cpp · Ollama</h1>
+<div class="sub">Pipeline RAG médico (gemma-4 26B-A4B / 12B, 4-bit) · voz05 (RTX PRO 6000 Blackwell) · 28 celdas × 10 iteraciones = 280 sweeps · secuencias emparejadas · métrica: <b>tiempo muro por nivel de concurrencia</b></div>
+
+<div class="kpis" id="kpis"></div>
+
+<div class="finding"><b>Hallazgo clave — SWA de gemma-4.</b> Ollama sirviendo el 26B se atasca de forma intermitente a concurrencia (reprocesado completo del prompt por la <i>sliding-window attention</i>) → mediana limpia pero cola bimodal ~185&nbsp;s. <b>llama.cpp con <code>--swa-full</code> lo elimina</b>; vLLM (PagedAttention) es inmune. Mismo modelo, misma cuantización, misma máquina → la diferencia es de <b>arquitectura del motor</b>.</div>
+
+<div class="grid2">
+  <div class="card"><h2>Latencia vs concurrencia — 26B, embed 0.6b</h2><canvas id="c_lat"></canvas>
+    <div class="note"><b>Línea = mediana</b> · <b>banda = IQR (p25–p75)</b> de las 10 pasadas → el ancho refleja la variabilidad/fiabilidad (estrecha = sólido; ancha = inestable). llama.cpp/Ollama en NP=8.</div></div>
+  <div class="card"><h2>Throughput global vs concurrencia — 26B, embed 0.6b</h2><canvas id="c_thr"></canvas>
+    <div class="note"><b>Línea = mediana</b> · <b>banda = IQR (p25–p75)</b> de las 10 pasadas (tokens/s globales).</div></div>
+</div>
+<div class="grid2">
+  <div class="card"><h2>Estabilidad — tasa de stall (26B, n≥10, todas las NP)</h2><canvas id="c_stall"></canvas>
+    <div class="note">% de medidas con tiempo muro &gt;90&nbsp;s. Es la firma del atasco SWA: 0 en vLLM y llama.cpp, alta en Ollama.</div></div>
+  <div class="card"><h2>Eficiencia energética — tokens/julio (26B, 0.6b)</h2><canvas id="c_tj"></canvas>
+    <div class="note">Tokens generados por julio (GPU0). Potencia media anotada.</div></div>
+</div>
+
+<h2>Tabla completa — todas las celdas (nivel 25 usuarios)</h2>
+<div class="card tblwrap"><table id="tbl"><thead><tr>
+<th class="l">Motor</th><th class="l">Modelo</th><th class="l">Embed</th><th class="l">NP</th>
+<th>Mediana</th><th>p95</th><th>±IC95</th><th>CV</th><th>Stall</th><th>tok/s</th><th>VRAM</th><th>W</th><th>tok/J</th><th>OK</th>
+</tr></thead><tbody></tbody></table>
+<div class="note">Mediana/p95/IC95/CV/stall/throughput calculados a 25 usuarios sobre las 10 pasadas. VRAM=pico GPU0, W=potencia media GPU0.</div></div>
+
+<script>
+const P = {"levels": [1, 5, 10, 15, 20, 25], "lat": [{"label": "vLLM", "color": "#3987e5", "median": [3.1, 5.6, 7.0, 8.1, 9.6, 10.8], "lo": [1.6, 4.9, 6.8, 7.7, 9.1, 10.1], "hi": [4.9, 6.4, 8.0, 8.8, 10.2, 11.8]}, {"label": "llama.cpp", "color": "#199e70", "median": [3.1, 9.8, 14.0, 21.3, 24.8, 31.5], "lo": [2.5, 9.2, 13.3, 20.9, 23.7, 29.9], "hi": [4.0, 10.3, 15.0, 21.8, 26.4, 33.8]}, {"label": "Ollama", "color": "#c98500", "median": [4.4, 13.7, 19.1, 30.4, 42.7, 51.6], "lo": [3.1, 12.4, 18.6, 28.7, 39.6, 49.4], "hi": [6.3, 16.3, 20.8, 32.8, 44.3, 152.3]}], "thr": [{"label": "vLLM", "color": "#3987e5", "median": [74.9, 269.9, 409.3, 548.5, 642.4, 709.4], "lo": [47.2, 250.8, 363.8, 527.0, 615.4, 657.8], "hi": [111.9, 296.2, 456.9, 584.3, 663.9, 751.5]}, {"label": "llama.cpp", "color": "#199e70", "median": [41.7, 141.6, 208.3, 204.8, 242.2, 234.0], "lo": [23.5, 127.8, 196.2, 198.6, 227.2, 226.9], "hi": [82.5, 147.0, 228.9, 234.0, 256.6, 250.8]}, {"label": "Ollama", "color": "#c98500", "median": [47.6, 106.4, 147.0, 149.4, 141.2, 142.4], "lo": [19.8, 96.0, 138.2, 123.9, 129.1, 64.5], "hi": [78.6, 119.6, 159.0, 159.8, 155.8, 153.1]}], "stall": [{"label": "vLLM", "color": "#3987e5", "stall": 0.0}, {"label": "llama.cpp", "color": "#199e70", "stall": 0.0}, {"label": "Ollama", "color": "#c98500", "stall": 22.9}], "tj": [{"label": "vLLM", "color": "#3987e5", "tj": 1.71, "power": 266}, {"label": "llama.cpp", "color": "#199e70", "tj": 0.7, "power": 305}, {"label": "Ollama", "color": "#c98500", "tj": 0.46, "power": 176}], "table": [{"eng": "vLLM", "color": "#3987e5", "model": "12b", "emb": "06b", "np": "-", "median": 14.3, "p95": 58.0, "ci95": 16.5, "cv": 104, "stall": 10, "thr": 540, "vram": 87.0, "power": 299, "tj": 1.15, "ok": "755/760"}, {"eng": "vLLM", "color": "#3987e5", "model": "12b", "emb": "4b", "np": "-", "median": 15.5, "p95": 18.7, "ci95": 1.2, "cv": 11, "stall": 0, "thr": 518, "vram": 87.0, "power": 320, "tj": 1.17, "ok": "760/760"}, {"eng": "vLLM", "color": "#3987e5", "model": "26b", "emb": "06b", "np": "-", "median": 10.8, "p95": 25.0, "ci95": 4.7, "cv": 49, "stall": 0, "thr": 709, "vram": 86.8, "power": 266, "tj": 1.71, "ok": "760/760"}, {"eng": "vLLM", "color": "#3987e5", "model": "26b", "emb": "4b", "np": "-", "median": 11.5, "p95": 14.0, "ci95": 0.9, "cv": 11, "stall": 0, "thr": 662, "vram": 86.8, "power": 293, "tj": 1.69, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "12b", "emb": "06b", "np": "np1", "median": 101.5, "p95": 118.2, "ci95": 7.1, "cv": 10, "stall": 90, "thr": 80, "vram": 12.9, "power": 364, "tj": 0.22, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "12b", "emb": "06b", "np": "np4", "median": 56.4, "p95": 60.5, "ci95": 3.3, "cv": 8, "stall": 0, "thr": 142, "vram": 28.7, "power": 399, "tj": 0.36, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "12b", "emb": "06b", "np": "np8", "median": 55.0, "p95": 64.8, "ci95": 3.5, "cv": 9, "stall": 0, "thr": 149, "vram": 49.7, "power": 389, "tj": 0.36, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "12b", "emb": "4b", "np": "np1", "median": 102.2, "p95": 121.0, "ci95": 7.1, "cv": 10, "stall": 90, "thr": 82, "vram": 12.9, "power": 365, "tj": 0.22, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "12b", "emb": "4b", "np": "np4", "median": 55.9, "p95": 69.4, "ci95": 4.3, "cv": 10, "stall": 0, "thr": 143, "vram": 28.7, "power": 400, "tj": 0.35, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "12b", "emb": "4b", "np": "np8", "median": 58.3, "p95": 69.4, "ci95": 5.0, "cv": 12, "stall": 0, "thr": 146, "vram": 49.7, "power": 392, "tj": 0.35, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "26b", "emb": "06b", "np": "np1", "median": 52.9, "p95": 62.8, "ci95": 3.8, "cv": 10, "stall": 0, "thr": 137, "vram": 19.9, "power": 284, "tj": 0.47, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "26b", "emb": "06b", "np": "np4", "median": 35.1, "p95": 36.6, "ci95": 1.6, "cv": 7, "stall": 0, "thr": 228, "vram": 30.2, "power": 309, "tj": 0.67, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "26b", "emb": "06b", "np": "np8", "median": 31.5, "p95": 37.5, "ci95": 2.9, "cv": 13, "stall": 0, "thr": 234, "vram": 44.0, "power": 305, "tj": 0.7, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "26b", "emb": "4b", "np": "np1", "median": 53.8, "p95": 61.6, "ci95": 3.1, "cv": 8, "stall": 0, "thr": 141, "vram": 19.9, "power": 283, "tj": 0.48, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "26b", "emb": "4b", "np": "np4", "median": 33.4, "p95": 37.8, "ci95": 2.2, "cv": 9, "stall": 0, "thr": 226, "vram": 30.2, "power": 308, "tj": 0.67, "ok": "760/760"}, {"eng": "llama.cpp", "color": "#199e70", "model": "26b", "emb": "4b", "np": "np8", "median": 31.9, "p95": 36.6, "ci95": 2.6, "cv": 12, "stall": 0, "thr": 249, "vram": 44.0, "power": 306, "tj": 0.71, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "12b", "emb": "06b", "np": "np1", "median": 120.6, "p95": 133.9, "ci95": 5.2, "cv": 6, "stall": 100, "thr": 69, "vram": 9.0, "power": 329, "tj": 0.21, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "12b", "emb": "06b", "np": "np4", "median": 75.1, "p95": 79.1, "ci95": 1.6, "cv": 3, "stall": 0, "thr": 110, "vram": 13.2, "power": 322, "tj": 0.33, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "12b", "emb": "06b", "np": "np8", "median": 75.7, "p95": 83.0, "ci95": 2.9, "cv": 5, "stall": 0, "thr": 110, "vram": 17.9, "power": 317, "tj": 0.33, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "12b", "emb": "4b", "np": "np1", "median": 118.3, "p95": 132.8, "ci95": 5.3, "cv": 6, "stall": 100, "thr": 68, "vram": 9.0, "power": 331, "tj": 0.21, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "12b", "emb": "4b", "np": "np4", "median": 76.0, "p95": 82.8, "ci95": 3.4, "cv": 6, "stall": 0, "thr": 107, "vram": 13.2, "power": 324, "tj": 0.33, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "12b", "emb": "4b", "np": "np8", "median": 75.7, "p95": 80.3, "ci95": 2.9, "cv": 5, "stall": 0, "thr": 108, "vram": 17.9, "power": 319, "tj": 0.33, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "26b", "emb": "06b", "np": "np1", "median": 77.0, "p95": 187.3, "ci95": 39.7, "cv": 47, "stall": 40, "thr": 104, "vram": 18.5, "power": 194, "tj": 0.35, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "26b", "emb": "06b", "np": "np4", "median": 53.2, "p95": 186.0, "ci95": 43.9, "cv": 67, "stall": 30, "thr": 145, "vram": 21.6, "power": 172, "tj": 0.44, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "26b", "emb": "06b", "np": "np8", "median": 51.6, "p95": 184.9, "ci95": 44.5, "cv": 69, "stall": 30, "thr": 142, "vram": 25.2, "power": 176, "tj": 0.46, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "26b", "emb": "4b", "np": "np1", "median": 72.0, "p95": 138.1, "ci95": 24.5, "cv": 41, "stall": 10, "thr": 106, "vram": 18.5, "power": 194, "tj": 0.36, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "26b", "emb": "4b", "np": "np4", "median": 51.4, "p95": 187.1, "ci95": 39.1, "cv": 70, "stall": 20, "thr": 148, "vram": 21.6, "power": 178, "tj": 0.47, "ok": "760/760"}, {"eng": "Ollama", "color": "#c98500", "model": "26b", "emb": "4b", "np": "np8", "median": 55.4, "p95": 189.4, "ci95": 47.8, "cv": 63, "stall": 40, "thr": 148, "vram": 25.2, "power": 162, "tj": 0.42, "ok": "760/760"}], "color": {"vllm": "#3987e5", "llamacpp": "#199e70", "ollama": "#c98500"}};
+const AX={color:'#8a897f'}, GRID={color:'#3a3a37'};
+const baseOpts=(ytitle)=>({responsive:true,interaction:{mode:'index',intersect:false},
+ plugins:{legend:{labels:{color:'#c3c2b7',usePointStyle:true,pointStyleWidth:12}},
+  tooltip:{callbacks:{}}},
+ scales:{x:{title:{display:true,text:'Usuarios concurrentes',color:'#8a897f'},ticks:AX,grid:GRID},
+  y:{title:{display:true,text:ytitle,color:'#8a897f'},ticks:AX,grid:GRID,beginAtZero:true}}});
+function hexA(h,a){const n=parseInt(h.slice(1),16);return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;}
+function lines(cv,series,ytitle){
+ // Por motor: 3 datasets → banda IQR (p25 invisible + p75 con relleno hasta p25) + línea mediana encima.
+ const ds=[];
+ series.forEach(s=>{
+   ds.push({label:s.label+'__lo',data:s.lo,borderColor:'transparent',pointRadius:0,fill:false,tension:.25,spanGaps:true});
+   ds.push({label:s.label+'__hi',data:s.hi,borderColor:'transparent',backgroundColor:hexA(s.color,0.15),pointRadius:0,fill:'-1',tension:.25,spanGaps:true});
+   ds.push({label:s.label,data:s.median,borderColor:s.color,backgroundColor:s.color,pointBackgroundColor:s.color,borderWidth:2,pointRadius:3,tension:.25,spanGaps:true});
+ });
+ const o=baseOpts(ytitle);
+ o.plugins={legend:{labels:{color:'#c3c2b7',usePointStyle:true,pointStyleWidth:12,filter:it=>!/__(lo|hi)$/.test(it.text)}},
+   tooltip:{filter:it=>!/__(lo|hi)$/.test(it.dataset.label),
+     callbacks:{label:c=>{const s=series[Math.floor(c.datasetIndex/3)],i=c.dataIndex;
+       return ` ${s.label}: ${s.median[i]}  (IQR ${s.lo[i]}–${s.hi[i]})`;}}}};
+ new Chart(document.getElementById(cv),{type:'line',data:{labels:P.levels,datasets:ds},options:o});
+}
+lines('c_lat',P.lat,'segundos (mediana)');
+lines('c_thr',P.thr,'tokens/s globales');
+// barras: stall
+new Chart(document.getElementById('c_stall'),{type:'bar',
+ data:{labels:P.stall.map(s=>s.label),datasets:[{data:P.stall.map(s=>s.stall),
+   backgroundColor:P.stall.map(s=>s.color),borderRadius:4}]},
+ options:{responsive:true,plugins:{legend:{display:false}},
+  scales:{x:{ticks:{color:'#c3c2b7'},grid:{display:false}},
+   y:{title:{display:true,text:'% medidas en stall',color:'#8a897f'},ticks:AX,grid:GRID,beginAtZero:true}}}});
+// barras: tokens/julio
+new Chart(document.getElementById('c_tj'),{type:'bar',
+ data:{labels:P.tj.map(s=>s.label),datasets:[{data:P.tj.map(s=>s.tj),
+   backgroundColor:P.tj.map(s=>s.color),borderRadius:4}]},
+ options:{responsive:true,plugins:{legend:{display:false},
+   tooltip:{callbacks:{afterLabel:(c)=>P.tj[c.dataIndex].power+' W medios'}}},
+  scales:{x:{ticks:{color:'#c3c2b7'},grid:{display:false}},
+   y:{title:{display:true,text:'tokens / julio',color:'#8a897f'},ticks:AX,grid:GRID,beginAtZero:true}}}});
+// KPIs
+const kbest=P.table.filter(r=>r.eng==='vLLM').length;
+document.getElementById('kpis').innerHTML=[
+ ['3','motores comparados'],['28','celdas × 10 iter'],['280','sweeps'],
+ ['110','preguntas reales (pool)'],['0','stalls en vLLM/llama.cpp']
+].map(k=>`<div class="kpi"><div class="v">${k[0]}</div><div class="l">${k[1]}</div></div>`).join('');
+// tabla
+document.querySelector('#tbl tbody').innerHTML=P.table.map(r=>`<tr>
+<td class="l"><span class="dot" style="background:${r.color}"></span>${r.eng}</td>
+<td class="l">${r.model}</td><td class="l">${r.emb}</td><td class="l">${r.np}</td>
+<td>${r.median}s</td><td>${r.p95}s</td><td>±${r.ci95}</td>
+<td class="${r.cv>40?'bad':''}">${r.cv}%</td>
+<td class="${r.stall>0?'bad':'good'}">${r.stall}%</td>
+<td>${r.thr}</td><td>${r.vram}GB</td><td>${r.power}</td><td>${r.tj}</td><td>${r.ok}</td></tr>`).join('');
+</script></body></html>

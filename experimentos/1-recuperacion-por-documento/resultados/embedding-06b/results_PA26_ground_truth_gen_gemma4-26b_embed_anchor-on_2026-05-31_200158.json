@@ -1,0 +1,4197 @@
+{
+  "ground_truth": "PA26_ground_truth.json",
+  "executed_at": "2026-05-31T20:01:58",
+  "mode": "retriever+generator",
+  "model": "gemma4:26b",
+  "collection": "docs_rag_qwen3_06b",
+  "rerank_strategy": "embed",
+  "cross_encoder_device": null,
+  "top_k": 10,
+  "n_questions": 25,
+  "doc_anchor_enabled": true,
+  "doc_anchor_stats": {
+    "anchor_emitted": 24,
+    "anchor_received": 20,
+    "anchor_applied": 13,
+    "gate_reasons": {
+      "ok": 24,
+      "no_response": 1
+    }
+  },
+  "retriever_metrics": {
+    "HitRate@1": 0.96,
+    "MRR@1": 0.96,
+    "Precision@1": 0.96,
+    "Recall@1": 0.96,
+    "NDCG@1": 0.96,
+    "HitRate@3": 1.0,
+    "MRR@3": 0.98,
+    "Precision@3": 0.9467,
+    "Recall@3": 2.84,
+    "NDCG@3": 0.9531,
+    "HitRate@5": 1.0,
+    "MRR@5": 0.98,
+    "Precision@5": 0.848,
+    "Recall@5": 4.24,
+    "NDCG@5": 0.9142,
+    "HitRate@10": 1.0,
+    "MRR@10": 0.98,
+    "Precision@10": 0.712,
+    "Recall@10": 7.12,
+    "NDCG@10": 0.9702
+  },
+  "memory_stats": {
+    "peak_proc_rss_mb": 67.2265625,
+    "peak_ollama_rss_mb": null
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "query": "¿Qué es la oxigenoterapia y en qué se diferencia del aire ambiente?",
+      "block": 1,
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "La oxigenoterapia consiste en la administración, por vía inhalatoria, de oxígeno a concentraciones mayores de las que se encuentran en el aire ambiente (21%).",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "definición de oxigenoterapia y diferencias con el aire ambiente",
+        "keywords": [
+          "oxigenoterapia",
+          "aire ambiente"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            2,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 5
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.9067,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.8257,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "5. RESPONSABILIDADES",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.749,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.7392,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7301,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo III: En el centro de la tabla volumen inspiratorio conseguido con una Venturi según FiO2 y flujo O2 administrado siempre > 3 L/min.",
+          "rerank_score": 0.7078,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "rerank_score": 0.6784,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.6583,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.6197,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.099,
+        "Retriever": 1.752,
+        "Generador": 7.38
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "## Definición y diferencia de la oxigenoterapia\n\nLa **oxigenoterapia** se define como la administración de oxígeno (O₂) por vía inhalatoria a concentraciones superiores a las que se encuentran en el aire ambiente [1].\n\nLa principal diferencia con el **aire ambiente** radica en la concentración de oxígeno (FiO₂):\n- El **aire ambiente** presenta una fracción inspiratoria de oxígeno (FiO₂) del **21%** [1, 2].\n- La **oxigenoterapia** busca suministrar concentraciones de O₂ **mayores** a ese 21% [1].\n\nEs importante considerar que el oxígeno debe ser tratado como un **fármaco**, ya que requiere indicaciones prescritas, dosis y tiempo adecuados, posee efectos adversos y necesita criterios clínicos y de laboratorio para su evaluación [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 740,
+        "token_stats": {
+          "prompt_tokens": 1966,
+          "completion_tokens": 178,
+          "total_tokens": 2144,
+          "tokens_per_second": 160.7,
+          "context_used_pct": 13.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.38
+      }
+    },
+    {
+      "id": "q02",
+      "query": "¿Por qué el oxígeno se considera un fármaco?",
+      "block": 1,
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "El oxígeno debe considerarse un fármaco ya que precisa de indicaciones prescritas, es utilizado en dosis y tiempo adecuado, posee efectos adversos y requiere criterios clínicos y de laboratorio para su evaluación.",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "razones por las cuales el oxígeno se considera un fármaco",
+        "keywords": [
+          "oxígeno",
+          "fármaco"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 7
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.8124,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.7783,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "3. Fuente de Oxígeno",
+          "rerank_score": 0.7737,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.7178,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.6896,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.6793,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.6412,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 3. FÁRMACOS VASOPRESORES Y ANTIARRÍTMICOS.",
+          "h2": "Adrenalina.",
+          "rerank_score": 0.6038,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "ANEXO 3. FÁRMACOS VASOPRESORES Y ANTIARRÍTMICOS.",
+          "rerank_score": 0.5539,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.139,
+        "Retriever": 1.8,
+        "Generador": 7.95
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "El oxígeno debe considerarse un **fármaco** debido a que su administración requiere de las mismas consideraciones clínicas que cualquier otro medicamento. Específicamente, se fundamenta en los siguientes criterios:\n\n- **Prescripción**: Precisa de indicaciones prescritas [1].\n- **Dosificación y temporalidad**: Debe ser utilizado en una dosis y tiempo adecuados [1].\n- **Seguridad y efectos adversos**: Posee efectos adversos [1]. Entre ellos se incluyen:\n    - La administración de altas concentraciones en patologías con hipercapnia e hipoxia crónica (como la EPOC) puede disminuir el impulso ventilatorio o agravar el fallo respiratorio por hipercapnia [2].\n    - Está contraindicada su administración en casos de intoxicación por bleomicina (antibiótico citotóxico) y paraquat (herbicida), ya que aumenta el daño pulmonar [2].\n    - En terapias de alto flujo con cánula nasal, existe riesgo de barotrauma en flujos muy elevados [2].\n- **Evaluación clínica**: Requiere de criterios clínicos y de laboratorio para su evaluación [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1034,
+        "token_stats": {
+          "prompt_tokens": 2373,
+          "completion_tokens": 247,
+          "total_tokens": 2620,
+          "tokens_per_second": 159.5,
+          "context_used_pct": 16.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.95
+      }
+    },
+    {
+      "id": "q03",
+      "query": "¿Qué diferencia hay entre un sistema de bajo flujo y uno de alto flujo?",
+      "block": 1,
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Los sistemas de bajo flujo son aquellos con los que el paciente inhala aire de la atmósfera y lo mezcla con el oxígeno suministrado, por lo que la FiO2 variará según el patrón ventilatorio. Los sistemas de alto flujo aportan todo el gas inspirado a una concentración constante independientemente del patrón ventilatorio del paciente.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "diferencias entre sistemas de bajo flujo y sistemas de alto flujo en el procedimiento en los cuidados de la oxigenoterapia",
+        "keywords": [
+          "sistema de bajo flujo",
+          "uno de alto flujo",
+          "diferencia"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 15
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.9492,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.7898,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.7393,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.7289,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.7235,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.6888,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.661,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.6324,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 5. SISTEMA DE REPARTO DE CAMAS EN FUNCIÓN DE “CAMAS OCUPADAS POR ESPECIALIDAD”, SEGÚN EL DIRECTORIO PARA LA GESTIÓN_ACTIVIDAD DE HOSPITALIZACIÓN",
+          "h2": "ANEXO 5. SISTEMA DE REPARTO DE CAMAS EN FUNCIÓN DE “CAMAS OCUPADAS POR ESPECIALIDAD”, SEGÚN EL DIRECTORIO PARA LA GESTIÓN_ACTIVIDAD DE HOSPITALIZACIÓN",
+          "rerank_score": 0.5598,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.269,
+        "Retriever": 1.783,
+        "Generador": 10.39
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La principal diferencia entre los sistemas de bajo y alto flujo radica en la estabilidad de la concentración de oxígeno (FiO₂) y la interacción con el patrón respiratorio del paciente:\n\n## Sistemas de bajo flujo\nEstos sistemas se caracterizan porque el paciente inhala aire de la atmósfera y lo mezcla con el oxígeno suministrado [1]. Debido a esta mezcla, la **fracción inspiratoria de oxígeno (FiO₂)** no es constante, sino que **variará en función del patrón ventilatorio del paciente** (incluyendo el flujo inspiratorio, el volumen corriente y la frecuencia respiratoria), así como del flujo de oxígeno administrado [1].\n\n**Dispositivos incluidos:**\n- **Cánulas o gafas nasales:** Sistema muy utilizado, barato y fácil de usar que permite hablar, comer y dormir sin interrumpir el aporte de O₂ [2]. Su flujo es de 1-4 l/min, con una FiO₂ entre 24%-36% [2].\n- **Mascarillas simples:** Dispositivos de plástico que cubren boca, nariz y mentón [2]. Su flujo es de 6-10 l/min, alcanzando una FiO₂ entre 40%-60% [2].\n- **Mascarilla de no reinhalación (con bolsa reservorio):** Dispone de una válvula unidireccional que impide que el aire espirado vuelva a la bolsa [2]. El flujo debe ser suficiente para mantener la bolsa inflada (3-15 L/min), permitiendo una FiO₂ del 60%-100% [2].\n\n## Sistemas de alto flujo\nEstos sistemas se caracterizan por aportar **todo el gas inspirado por el paciente a una concentración constante**, independientemente de su patrón ventilatorio [1]. En estos sistemas, la entrada de aire a través de los orificios laterales es inversamente proporcional a la fracción inspirada de oxígeno [1].\n\n**Dispositivos incluidos:**\n- **Mascarillas tipo Venturi:** Suministran concentraciones precisas de oxígeno [2]. La concentración es independiente del patrón respiratorio del paciente, siempre que se garantice el suministro del flujo mínimo recomendado para esa concentración [2]. El flujo es de 3-15 l/min, con una FiO₂ del 24% al 50% [2].\n- **Mascarillas tipo Venturi para traqueostomías** [2].\n- **Otros sistemas:** Como el tubo en T para traqueostomías (suministra oxígeno directamente por el estoma con 7 concentraciones regulables, flujo 3-15 L/min y FiO₂ del 26%-50%) y filtros para cánula de traqueotomía [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2236,
+        "token_stats": {
+          "prompt_tokens": 3235,
+          "completion_tokens": 588,
+          "total_tokens": 3823,
+          "tokens_per_second": 158.3,
+          "context_used_pct": 23.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.39
+      }
+    },
+    {
+      "id": "q04",
+      "query": "¿Cuántas horas al día hay que dar oxígeno en la EPOC para que disminuya la mortalidad?",
+      "block": 1,
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "La mortalidad en la EPOC disminuía al dar oxígeno 15 horas al día frente a no darlo, y aún disminuía más al aplicar un régimen continuo de 17,7 horas/día.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "duración diaria de la oxigenoterapia en pacientes con EPOC para la disminución de la mortalidad",
+        "keywords": [
+          "horas al día",
+          "oxígeno",
+          "EPOC",
+          "mortalidad"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 4
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.9425,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.806,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.7926,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6.3.4 Seguimiento de Pautas y Cuidados de la Persona con Contención Mecánica/Inmovilización Terapéutica.",
+          "h2": "Constantes vitales.",
+          "rerank_score": 0.6127,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "6. REFERENCIAS BIBLIOGRÁFICAS",
+          "h2": "6. REFERENCIAS BIBLIOGRÁFICAS",
+          "rerank_score": 0.4603,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "rerank_score": 0.4507,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.4412,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "7. ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL HOSPITAL.",
+          "h2": "7.2. Horario de 15 a 8 horas de L-V, sábados y días festivos.",
+          "rerank_score": 0.433,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.3945,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.242,
+        "Retriever": 1.791,
+        "Generador": 6.81
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para los pacientes con **Enfermedad Pulmonar Obstructiva Crónica (EPOC)** con insuficiencia respiratoria crónica de tipo hipoxémica, la administración de oxígeno mejora las expectativas de vida [1].\n\nEn cuanto al tiempo de administración necesario para disminuir la mortalidad, los estudios de base para las normas de administración de oxígeno indican lo siguiente:\n\n- La mortalidad disminuía al administrar oxígeno **15 horas al día** en comparación con no administrarlo [1].\n- La mortalidad disminuía aún más al aplicar un régimen continuo de **17,7 horas/día** [1].\n\nDebido a estos beneficios, es preciso fomentar la adherencia y el cumplimiento del tratamiento en estos pacientes [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 688,
+        "token_stats": {
+          "prompt_tokens": 2227,
+          "completion_tokens": 155,
+          "total_tokens": 2382,
+          "tokens_per_second": 159.2,
+          "context_used_pct": 14.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 6.81
+      }
+    },
+    {
+      "id": "q05",
+      "query": "¿Por qué no puedo usar vaselina ni aceites cerca del oxígeno?",
+      "block": 2,
+      "expected_section": "PRECAUCIONES",
+      "expected_quote": "No poner en contacto el material que se va a utilizar con grasas y aceites (vaselina), ya que el O2 es un comburente energético.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "riesgos del uso de vaselina y aceites en presencia de oxígeno",
+        "keywords": [
+          "vaselina",
+          "aceites",
+          "oxígeno"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [],
+          "citation_counts_by_doc": {},
+          "dominant_doc_id": null,
+          "dominant_ratio": null,
+          "chunks_in_topk": null,
+          "gate_reason": "no_response"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.8189,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.7941,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.7544,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7081,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.6944,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.686,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.5785,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "3. Fuente de Oxígeno",
+          "rerank_score": 0.5648,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.5564,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.152,
+        "Retriever": 1.813,
+        "Generador": 6.75
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 0,
+        "token_stats": {
+          "prompt_tokens": 3199,
+          "completion_tokens": 55,
+          "total_tokens": 3254,
+          "tokens_per_second": 158.5,
+          "context_used_pct": 19.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 6.75
+      }
+    },
+    {
+      "id": "q06",
+      "query": "¿En qué intoxicaciones está contraindicado administrar oxígeno?",
+      "block": 2,
+      "expected_section": "PRECAUCIONES",
+      "expected_quote": "La administración de oxígeno está contraindicada en la intoxicación por bleomicina (antibiótico citotóxico) y paraquat (herbicida) porque aumenta el daño pulmonar.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "contraindicaciones de la administración de oxígeno en cuadros de intoxicación",
+        "keywords": [
+          "intoxicaciones",
+          "contraindicado",
+          "oxígeno"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 3
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.8093,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.6909,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.6875,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.6736,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.6591,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.6358,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.6315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "3. Fuente de Oxígeno",
+          "rerank_score": 0.5891,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "2.3.6. DETECTAR POSIBLES CAUSAS DE PARADA CARDIACA.",
+          "rerank_score": 0.5608,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.222,
+        "Retriever": 1.763,
+        "Generador": 7.06
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La administración de oxígeno está contraindicada en las siguientes intoxicaciones:\n\n- **Intoxicación por bleomicina** (antibiótico citotóxico) [1].\n- **Intoxicación por paraquat** (herbicida) [1].\n\nEn ambos casos, la contraindicación se debe a que la administración de oxígeno **aumenta el daño pulmonar** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 310,
+        "token_stats": {
+          "prompt_tokens": 3442,
+          "completion_tokens": 90,
+          "total_tokens": 3532,
+          "tokens_per_second": 156.8,
+          "context_used_pct": 21.6,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.06
+      }
+    },
+    {
+      "id": "q07",
+      "query": "¿Por qué hay que tener cuidado con dar oxígeno a altas concentraciones en un paciente con EPOC?",
+      "block": 2,
+      "expected_section": "PRECAUCIONES",
+      "expected_quote": "En patologías que cursan con hipercapnia e hipoxia crónica, como la EPOC, administrar oxígeno a altas concentraciones puede disminuir el impulso ventilatorio y/o agravar el fallo respiratorio por hipercapnia.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "precauciones en el procedimiento en los cuidados de la oxigenoterapia al administrar oxígeno a altas concentraciones en pacientes con EPOC",
+        "keywords": [
+          "oxígeno",
+          "altas concentraciones",
+          "paciente con EPOC",
+          "cuidado"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 3
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.891,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.7766,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.7119,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "6. REFERENCIAS BIBLIOGRÁFICAS",
+          "h2": "6. REFERENCIAS BIBLIOGRÁFICAS",
+          "rerank_score": 0.6915,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.6461,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.6455,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.6287,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.5884,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 3. FÁRMACOS VASOPRESORES Y ANTIARRÍTMICOS.",
+          "h2": "Adrenalina.",
+          "rerank_score": 0.5311,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.07,
+        "Retriever": 1.713,
+        "Generador": 7.78
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "En pacientes con **Enfermedad Pulmonar Obstructiva Crónica (EPOC)**, la administración de oxígeno a altas concentraciones debe realizarse con precaución debido a los siguientes riesgos clínicos:\n\n- **Disminución del impulso ventilatorio**: En patologías que presentan **hipercapnia** e **hipoxia crónica**, como es el caso de la EPOC, el uso de altas concentraciones de oxígeno puede reducir el estímulo que impulsa la respiración [1].\n- **Agravamiento del fallo respiratorio**: Esta administración puede provocar un empeoramiento del fallo respiratorio mediante el aumento de la **hipercapnia** [1].\n\nEs importante destacar que, aunque se debe evitar el exceso de concentración, la oxigenoterapia es fundamental en estos pacientes, ya que se ha demostrado que revierte las consecuencias de la hipoxemia en situaciones agudas y mejora las expectativas de vida en pacientes con insuficiencia respiratoria crónica de tipo hipoxémica [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 935,
+        "token_stats": {
+          "prompt_tokens": 3359,
+          "completion_tokens": 209,
+          "total_tokens": 3568,
+          "tokens_per_second": 159.1,
+          "context_used_pct": 21.8,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.78
+      }
+    },
+    {
+      "id": "q08",
+      "query": "¿En qué pacientes está contraindicada la terapia de alto flujo con cánula nasal?",
+      "block": 2,
+      "expected_section": "PRECAUCIONES",
+      "expected_quote": "En pacientes con terapia de alto flujo con cánula nasal existe riesgo de barotrauma en flujos muy elevados, estando contraindicado en pacientes con fosas nasales dañadas u obstruidas.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "contraindicaciones de la terapia de alto flujo con cánula nasal en el procedimiento en los cuidados de la oxigenoterapia",
+        "keywords": [
+          "contraindicada",
+          "terapia de alto flujo",
+          "cánula nasal"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 1
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.9221,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.9131,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.8181,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.7771,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.7516,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.683,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.6697,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN DE CONTINGENCIA",
+          "h2": "UCRI",
+          "rerank_score": 0.5741,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 4. DIAGNÓSTICO COMÚN DE INGRESO POR INFECCIÓN RESPIRATORIA Y CRITERIOS PARA INGRESO EN SERVICIOS ESPECÍFICOS",
+          "h2": "Criterios para ingreso en servicios específicos",
+          "rerank_score": 0.5619,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.3,
+        "Retriever": 1.824,
+        "Generador": 7.0
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La terapia de alto flujo con cánula nasal presenta las siguientes contraindicaciones según los protocolos disponibles:\n\n- **Pacientes con fosas nasales dañadas u obstruidas**: Existe una contraindicación en estos pacientes debido al riesgo de **barotrauma** cuando se utilizan flujos muy elevados [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 301,
+        "token_stats": {
+          "prompt_tokens": 3925,
+          "completion_tokens": 68,
+          "total_tokens": 3993,
+          "tokens_per_second": 158.1,
+          "context_used_pct": 24.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.0
+      }
+    },
+    {
+      "id": "q09",
+      "query": "¿Cómo prevengo que el dispositivo de oxígeno dañe la piel del paciente?",
+      "block": 3,
+      "expected_section": "PROCEDIMIENTO — Generalidades",
+      "expected_quote": "Prevenir la aparición de lesiones en la piel por fricción o presión del dispositivo de oxígeno con almohadillas e higiene, y valorar regularmente la mucosa nasal y labial lubricándolas si es necesario.",
+      "labels": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "prevención de lesiones cutáneas por uso de dispositivos de oxígeno",
+        "keywords": [
+          "prevengo",
+          "dispositivo de oxígeno",
+          "dañe la piel"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "title": "GUÍA DE PRÁCTICA CLÍNICA: PREVENCIÓN Y TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+          "reference": "2013_Prevencion-y-Tratamiento-de-las-LPP"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            1,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            5,
+            5,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 8,
+            "2013_Prevencion-y-Tratamiento-de-las-LPP": 9
+          },
+          "dominant_doc_id": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "dominant_ratio": 0.529,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "4.- LOCALIZACIONES (5)",
+          "h2": "4.3 OTRAS",
+          "rerank_score": 0.9898,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.9042,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.8787,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "6. VALORACIÓN DE RIESGO DE LPP (10,11,12)",
+          "h2": "6.2 CUIDADOS ESPECÍFICOS DE LA PREVENCIÓN",
+          "rerank_score": 0.838,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 8: RECOMENDACIONES",
+          "h2": "RECOMENDACIONES EN CUANTO A PREVENCIÓN DE LPP",
+          "rerank_score": 0.837,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.8297,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 5: GUÍA DE PREVENCIÓN DE LESIONES POR PRESIÓN PARA PERSONAS CUIDADORAS",
+          "h2": "¿CÓMO PREVENIR LAS LPP?",
+          "rerank_score": 0.8127,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.8018,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.7444,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "5.-VALORACIÓN DEL PACIENTE (9)",
+          "h2": "5.2 Factores de riesgo (9,10)",
+          "rerank_score": 0.6537,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.681,
+        "Retriever": 1.845,
+        "Generador": 11.8
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.0,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para prevenir que el dispositivo de oxígeno cause lesiones en la piel del paciente, se deben seguir las siguientes pautas de actuación:\n\n## Medidas de prevención directa\nDurante la aplicación de la oxigenoterapia, se deben implementar las siguientes acciones:\n- **Control de posición y presión**: Es fundamental controlar regularmente que el dispositivo esté en la posición correcta para prevenir lesiones por fricción o presión [5].\n- **Uso de dispositivos de movilidad**: Siempre que sea factible, se deben disponer dispositivos de oxígeno que faciliten la movilidad del paciente [5].\n- **Protección con almohadillas**: Se recomienda el uso de almohadillas para prevenir la aparición de lesiones en la piel por presión o fricción del dispositivo [5].\n- **Cuidado de mucosas**: Se debe valorar regularmente la mucosa nasal y labial, procediendo a lubricarlas si es necesario [5].\n- **Higiene**: Mantener una buena higiene en la zona de contacto [5].\n\n## Cuidados de la piel y vigilancia\nComo parte de los cuidados generales para prevenir lesiones por presión (LPP) causadas por dispositivos terapéuticos (como las gafas de oxígeno) [1, 3]:\n- **Examen diario**: Examinar el estado de la piel diariamente, haciendo especial hincapié en las zonas en contacto con dispositivos terapéuticos [3].\n- **Higiene y sequedad**: Mantener la piel limpia y seca [3]. Realizar el lavado con agua tibia y jabón de potencial irritativo bajo para no alterar el pH ácido de la piel [3].\n- **Hidratación**: Hidratar la piel con aceites o cremas, procurando su completa absorción [3]. En zonas de riesgo o ante la aparición de eritema no blanqueante, se pueden aplicar ácidos grasos hiperoxigenados (AGHO) extendiéndolos hasta su total absorción, sin realizar masajes [3].\n- **Evitar sustancias irritantes**: No utilizar sustancias como alcoholes, colonia o talco, ya que pueden aumentar la sequedad y la vulnerabilidad de la piel [3].\n- **Secado**: Realizar un buen secado sin fricción, especialmente en pleraes o zonas de contacto [3].\n\n## Consideraciones según el dispositivo\n- **Gafas o cánulas nasales**: Al ajustarlas, se debe pasar los tubos por encima de las orejas y ajustarlos con el pasador de modo que queden por debajo de la barbilla [5]. Es necesario cambiarlas cuando estén sucias con secreciones, se deterioren o se endurezcan [5].\n- **Mascarillas**: Al colocar la cinta elástica detrás de la cabeza, se debe tirar de los extremos para ajustar la mascarilla a la cara, tratando de evitar fugas [5].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2494,
+        "token_stats": {
+          "prompt_tokens": 9913,
+          "completion_tokens": 594,
+          "total_tokens": 10507,
+          "tokens_per_second": 141.1,
+          "context_used_pct": 64.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 11.8
+      }
+    },
+    {
+      "id": "q10",
+      "query": "¿Cómo coloco correctamente unas gafas nasales?",
+      "block": 3,
+      "expected_section": "PROCEDIMIENTO — Gafas o cánulas nasales",
+      "expected_quote": "Introduzca los dientes de la cánula en las fosas nasales y pase los tubos por encima de las orejas, ajustándola con el pasador de tal manera que queden por debajo de la barbilla. Seleccione en el caudalímetro el flujo prescrito.",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "técnica de colocación correcta de cánulas nasales según la GUÍA DE PRÁCTICA CLÍNICA: PREVENCIÓN Y TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+        "keywords": [
+          "coloco",
+          "gafas nasales"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "title": "GUÍA DE PRÁCTICA CLÍNICA: PREVENCIÓN Y TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+          "reference": "2013_Prevencion-y-Tratamiento-de-las-LPP"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 20
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.8224,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.7077,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS",
+          "h1": "TRATAMIENTO DE LA NEURALGIA DEL TRIGÉMINO EN URGENCIAS",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.6983,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.6378,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "18. RESISTENCIA ZERO",
+          "h2": "B. Obtención de la muestra:",
+          "rerank_score": 0.6096,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "4.- LOCALIZACIONES (5)",
+          "h2": "4.3 OTRAS",
+          "rerank_score": 0.5857,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "GUÍA DE PRÁCTICA CLÍNICA: PREVENCIÓN Y TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+          "h2": "GUÍA DE PRÁCTICA CLÍNICA: PREVENCIÓN Y TRATAMIENTO DE LAS LESIONES POR PRESIÓN.",
+          "rerank_score": 0.5737,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.5437,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "INTRODUCCIÓN",
+          "h2": "INTRODUCCIÓN:",
+          "rerank_score": 0.5183,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.038,
+        "Retriever": 1.735,
+        "Generador": 10.92
+      },
+      "memory_mb": {
+        "proc_before": 67.0,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.1,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la colocación correcta de las gafas o cánulas nasales, debe seguir el siguiente procedimiento y consideraciones:\n\n## Procedimiento de colocación\n\n1.  **Preparación previa**:\n    *   Realice el lavado de manos antes de la técnica [1].\n    *   Tranquilice e informe al paciente sobre la técnica, solicitando su colaboración [1].\n    *   Coloque al paciente en una postura adecuada según su tolerancia [1].\n \n2.  **Colocación del dispositivo**:\n    *   Introduzca los dientes de la cánula en las fosas nasales [1].\n    *   Pase los tubos de la cánula por encima de las orejas [1].\n    *   Ajuste el dispositivo con el pasador de manera que los tubos queden por debajo de la barbilla [1].\n \n3.  **Configuración del flujo**:\n    *   Seleccione en el caudalímetro el flujo prescrito [1].\n    *   Compruebe que el dispositivo funciona correctamente y que el flujo corresponde con la concentración prescrita [1].\n\n## Cuidados y monitorización\n\n*   **Control de la piel y mucosas**:\n    *   Controle regularmente que el dispositivo esté en la posición correcta [1].\n    *   Valore regularmente la mucosa nasal y labial, lubricándolas si es necesario [1].\n    *   Prevenga la aparición de lesiones en la piel por fricción o presión mediante el uso de almohadillas e higiene [1].\n    *   Compruebe que las fosas nasales están libres de secreciones [1].\n*   **Mantenimiento del equipo**:\n    *   Valore la permeabilidad de los tubos para evitar interrupciones por nudos o torceduras [1].\n    *   Cambie las gafas cuando estén sucias con secreciones, se deterioren o se endurezcan [1].\n*   **Instrucción**: Instruya tanto al paciente como a su familia sobre el uso del oxígeno [1].\n\n## Información técnica de las gafas nasales\n\nLas gafas nasales son un sistema de **bajo flujo** [2] que consiste en dos cánulas de plástico flexibles de 1 cm de longitud que se adaptan a las fosas nasales y se mantienen sobre los pabellones auriculares [2]. Este dispositivo es fácil de usar, permite hablar, comer, dormir y expectorar sin interrumpir el aporte de O₂ [2].\n\nEl rango de flujo y la FiO₂ resultante según el protocolo es el siguiente [2, 4]:\n\n| Flujo de O₂ (L/min) | FiO₂ |\n| :--- | :--- |\n| 1 | 0.24 (24%) |\n| 2 | 0.26 (26%) |\n| 3 | 0.28 (28%) |\n| 4 | 0.31 (31%) |",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2254,
+        "token_stats": {
+          "prompt_tokens": 3665,
+          "completion_tokens": 643,
+          "total_tokens": 4308,
+          "tokens_per_second": 152.2,
+          "context_used_pct": 26.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.92
+      }
+    },
+    {
+      "id": "q11",
+      "query": "¿Cuándo debo cambiar las gafas nasales?",
+      "block": 3,
+      "expected_section": "PROCEDIMIENTO — Gafas o cánulas nasales",
+      "expected_quote": "Cámbielas cuando estén sucias con secreciones y/o se deterioren o endurezcan, y compruebe regularmente que las fosas nasales están libres de secreciones.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "frecuencia de cambio de las gafas nasales en el procedimiento en los cuidados de la oxigenoterapia",
+        "keywords": [
+          "cambiar",
+          "gafas nasales"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 4
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.9266,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.9184,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.8397,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.8364,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7539,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.7318,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.7298,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.5969,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "18. RESISTENCIA ZERO",
+          "h2": "B. Obtención de la muestra:",
+          "rerank_score": 0.507,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.986,
+        "Retriever": 1.682,
+        "Generador": 7.12
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "De acuerdo con los protocolos de cuidados de oxigenoterapia, las **gafas o cánulas nasales** deben cambiarse en los siguientes casos:\n\n- Cuando estén **sucias con secreciones** [1].\n- Cuando presenten **deterioro** [1].\n- Cuando se encuentren **endurecidas** [1].\n\nAsimismo, como parte de la monitorización del dispositivo, se debe comprobar regularmente que las fosas nasales permanecen libres de secreciones [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 414,
+        "token_stats": {
+          "prompt_tokens": 3925,
+          "completion_tokens": 106,
+          "total_tokens": 4031,
+          "tokens_per_second": 158.7,
+          "context_used_pct": 24.6,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.12
+      }
+    },
+    {
+      "id": "q12",
+      "query": "¿Cuál debe ser el flujo mínimo en una mascarilla con reservorio y por qué?",
+      "block": 3,
+      "expected_section": "PROCEDIMIENTO — Mascarilla de oxígeno",
+      "expected_quote": "El flujo de oxígeno en las mascarillas con reservorio ha de ser adecuado para que permanezca la bolsa inflada, por encima de 7 l/min.",
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "flujo mínimo requerido en mascarilla con reservorio y su justificación",
+        "keywords": [
+          "flujo mínimo",
+          "mascarilla con reservorio",
+          "por qué"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            3,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 4
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.8515,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 1. MEDIDAS A IMPLEMENTAR SEGÚN EL NIVEL",
+          "h2": "ANEXO 1.1. MEDIDAS DE PREVENCIÓN EN PACIENTES Y FAMILIARES",
+          "rerank_score": 0.8464,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "4. Carro de Parada",
+          "rerank_score": 0.8048,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7814,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.7467,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.7272,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "h2": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "rerank_score": 0.6881,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "Resto material",
+          "rerank_score": 0.6722,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN CONTINGENCIA INFECCIONES RESPIRATORIAS ESTACIONALES 2024/2025",
+          "h2": "4. ASISTENCIA EN URGENCIAS.",
+          "rerank_score": 0.6648,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.946,
+        "Retriever": 1.833,
+        "Generador": 7.75
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la administración de oxígeno mediante una **mascarilla de no reinhalación con bolsa reservorio**, se deben seguir las siguientes indicaciones respecto al flujo:\n\n- **Flujo necesario**: El flujo de oxígeno debe ser el suficiente para garantizar que la bolsa permanezca inflada [1].\n- **Valor específico**: El flujo debe ser **> 7 L/min** [3].\n\n**Características del dispositivo:**\n- Este sistema cuenta con una válvula unidireccional que impide que el aire espirado regrese a la bolsa [1].\n- Permite alcanzar una **FiO₂ (fracción inspirada de oxígeno) de entre el 60% y el 100%** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 588,
+        "token_stats": {
+          "prompt_tokens": 4139,
+          "completion_tokens": 155,
+          "total_tokens": 4294,
+          "tokens_per_second": 142.1,
+          "context_used_pct": 26.2,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.75
+      }
+    },
+    {
+      "id": "q13",
+      "query": "¿Qué hago con la mascarilla cuando el paciente está comiendo?",
+      "block": 3,
+      "expected_section": "PROCEDIMIENTO — Mascarilla de oxígeno",
+      "expected_quote": "Durante el periodo de alimentación el paciente debe utilizar cánula nasal para evitar hipoxemia.",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "manejo de la mascarilla de oxígeno durante la alimentación del paciente en el procedimiento en los cuidados de la oxigenoterapia",
+        "keywords": [
+          "mascarilla",
+          "paciente",
+          "comiendo"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 4
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.9935,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.8692,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7271,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 1. MEDIDAS A IMPLEMENTAR SEGÚN EL NIVEL",
+          "h2": "ANEXO 1.1. MEDIDAS DE PREVENCIÓN EN PACIENTES Y FAMILIARES",
+          "rerank_score": 0.6006,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "4.- LOCALIZACIONES (5)",
+          "h2": "4.3 OTRAS",
+          "rerank_score": 0.5975,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "Resto material",
+          "rerank_score": 0.5005,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "h2": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "rerank_score": 0.4446,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN CONTINGENCIA INFECCIONES RESPIRATORIAS ESTACIONALES 2024/2025",
+          "h2": "4. ASISTENCIA EN URGENCIAS.",
+          "rerank_score": 0.4403,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.4278,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-17-Z3-E-C-Rev-C-Actuación-con-fallecidos-y-cuidados-post-mortem",
+          "h1": "PROCEDIMIENTO DE ACTUACION CON FALLECIDOS Y CUIDADOS POST-MORTEM",
+          "h2": "2. Autopsia",
+          "rerank_score": 0.4159,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.338,
+        "Retriever": 1.807,
+        "Generador": 7.59
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La actuación con la mascarilla de oxígeno durante la alimentación depende del tipo de dispositivo que esté utilizando el paciente:\n\n- **Si el paciente utiliza cánulas o gafas nasales**: El paciente puede comer sin necesidad de interrumpir el aporte de oxígeno [2]. Este sistema permite comer, hablar, dormir y expectorar sin interrumpir la administración [2].\n- **Si el paciente utiliza mascarilla de oxígeno (simple, con reservorio o Venturi)**: Durante el periodo de alimentación, el paciente debe utilizar **cánulas nasales** para evitar la aparición de hipoxemia [1].\n\nComo consideración adicional, cabe recordar que la mascarilla simple de oxígeno puede interferir con la alimentación [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 694,
+        "token_stats": {
+          "prompt_tokens": 3918,
+          "completion_tokens": 150,
+          "total_tokens": 4068,
+          "tokens_per_second": 157.6,
+          "context_used_pct": 24.8,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.59
+      }
+    },
+    {
+      "id": "q14",
+      "query": "¿Cómo coloco la mascarilla de oxígeno para traqueostomía?",
+      "block": 3,
+      "expected_section": "PROCEDIMIENTO — Mascarilla para Traqueostomia",
+      "expected_quote": "Sitúe la mascarilla encima del estoma y ajústela alrededor del cuello del paciente con una cinta elástica que dispone el dispositivo, tratando de evitar fugas.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "colocación de mascarilla de oxígeno en pacientes con traqueostomía en el procedimiento en los cuidados de la oxigenoterapia",
+        "keywords": [
+          "coloco",
+          "mascarilla de oxígeno",
+          "traqueostomía"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 14
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.8404,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.6982,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "4. Carro de Parada",
+          "rerank_score": 0.6487,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.6151,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.6101,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "4.- LOCALIZACIONES (5)",
+          "h2": "4.3 OTRAS",
+          "rerank_score": 0.5959,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 1. MEDIDAS A IMPLEMENTAR SEGÚN EL NIVEL",
+          "h2": "ANEXO 1.1. MEDIDAS DE PREVENCIÓN EN PACIENTES Y FAMILIARES",
+          "rerank_score": 0.5693,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.4462,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.349,
+        "Retriever": 1.82,
+        "Generador": 10.4
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la colocación de la mascarilla de oxígeno para traqueostomía (ya sea simple o tipo Venturi), debe seguir los siguientes pasos y consideraciones:\n\n## Procedimiento de colocación\n\n1.  **Preparación previa**: Realice el lavado de manos antes de iniciar la técnica [1].\n2.  **Conexión**: Conecte el extremo distal de la mascarilla a la fuente de oxígeno [1].\n3.  **Posicionamiento**: Sitúe la mascarilla directamente encima del estoma [1].\n4.  **Ajuste**: Ajuste la mascarilla alrededor del cuello del paciente utilizando la cinta elástica que dispone el propio dispositivo, procurando evitar fugas de oxígeno [1].\n5.  **Regulación del flujo**:\n    *   Seleccione en el caudalímetro el flujo prescrito [1].\n    *   **En caso de utilizar una mascarilla tipo Venturi**: Debe ajustar la concentración deseada a través del dosificador de porcentajes y, simultáneamente, seleccionar en el caudalímetro el flujo mínimo correspondiente a esa concentración [1].\n\n## Consideraciones adicionales\n\n-   **Humidificación y aspiración**: El uso de esta mascarilla permite proporcionar humidificación a la vía respiratoria y realizar la succión de secreciones a través de una abertura de exhalación sin necesidad de retirar el dispositivo [1].\n-   **Sistemas alternativos**:\n    -   **Tubo en T**: Si se utiliza un tubo en T adaptado a la cánula de traqueostomía, este se conecta a la fuente de oxígeno y permite administrar concentraciones regulables (dispone de 7 concentraciones) [2]. Se debe cambiar cada vez que se llene de secreciones [1].\n    -   **Filtro para cánula**: En pacientes con cánula de silicona, se puede usar un filtro donde se sujeta y se administra el O₂; sin embargo, no es adecuado para flujos superiores a 4 l/min y debe cambiarse al llenarse de secreciones [1, 2].\n-   **Seguridad y mantenimiento**:\n    -   Controle regularmente que el dispositivo esté en la posición correcta [1].\n    -   Valore la permeabilidad de los tubos para evitar interrupciones por nudos o torceduras [1].\n    -   Prevenga lesiones en la piel por presión o fricción mediante el uso de higiene y almohadillas [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2101,
+        "token_stats": {
+          "prompt_tokens": 4109,
+          "completion_tokens": 526,
+          "total_tokens": 4635,
+          "tokens_per_second": 142.1,
+          "context_used_pct": 28.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.4
+      }
+    },
+    {
+      "id": "q15",
+      "query": "¿Cuándo hay que cambiar el tubo en T de una traqueostomía?",
+      "block": 3,
+      "expected_section": "PROCEDIMIENTO — Tubo en T para traqueotomías",
+      "expected_quote": "Se deben cambiar cada vez que se llenen de secreciones.",
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "frecuencia de cambio del tubo en T en pacientes con traqueostomía en el contexto de PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+        "keywords": [
+          "cambiar",
+          "tubo en T",
+          "traqueostomía"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 1
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.8261,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "4. Carro de Parada",
+          "rerank_score": 0.7622,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.73,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "rerank_score": 0.5429,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "5. RESPONSABILIDADES",
+          "h2": "DEL PERSONAL DE ENFERMERÍA:",
+          "rerank_score": 0.4999,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.4482,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.4452,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.4266,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.4204,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.456,
+        "Retriever": 1.896,
+        "Generador": 6.8
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "El tubo en T para traqueotomías debe cambiarse bajo el siguiente criterio:\n\n- **Cada vez que se llenen de secreciones** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 124,
+        "token_stats": {
+          "prompt_tokens": 4046,
+          "completion_tokens": 38,
+          "total_tokens": 4084,
+          "tokens_per_second": 158.3,
+          "context_used_pct": 24.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 6.8
+      }
+    },
+    {
+      "id": "q16",
+      "query": "¿Cuál es el flujo máximo que puedo administrar con el filtro para cánula de traqueotomía?",
+      "block": 3,
+      "expected_section": "PROCEDIMIENTO — Filtro para cánula de traqueotomía",
+      "expected_quote": "No es adecuado para flujos altos; no poner más de 4 l/min de O2. Se cambiará cada vez que se llena de secreciones.",
+      "labels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "flujo máximo de administración con el filtro para cánula de traqueotomía",
+        "keywords": [
+          "flujo máximo",
+          "filtro",
+          "cánula de traqueotomía"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            1,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 4
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.9518,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "4. Carro de Parada",
+          "rerank_score": 0.7876,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.6298,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.5213,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "1. OBJETIVO",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.4024,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "12. TRACTO RESPIRATORIO",
+          "h2": "12.2.3. Muestras obtenidas por abordaje percutáneo",
+          "rerank_score": 0.3901,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "4. DESARROLLO",
+          "h2": "4.4 Procedimiento:",
+          "rerank_score": 0.3612,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "4. DESARROLLO",
+          "h2": "4.5 Descripción de circuito:",
+          "rerank_score": 0.3569,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "12. TRACTO RESPIRATORIO",
+          "h2": "12.1. TRACTO RESPIRATORIO SUPERIOR",
+          "rerank_score": 0.3369,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.349,
+        "Retriever": 1.792,
+        "Generador": 7.71
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para el uso del **filtro para cánula de traqueotomía** (filtro intercambiador de calor y humedad), se deben tener en cuenta las siguientes consideraciones sobre el flujo:\n\n- **Límite de flujo:** No es adecuado para flujos altos; **no se debe administrar más de 4 l/min de O₂** [2].\n- **Especificación técnica:** En los protocolos disponibles, el flujo para este dispositivo aparece como **\"No especificado\"** en la tabla de sistemas de administración [1].\n\n**Consideraciones adicionales para este dispositivo:**\n- Se utiliza en pacientes portadores de cánula de silicona, donde el filtro se sujeta y permite la administración del O₂ que el paciente precise [1].\n- El filtro debe cambiarse cada vez que se llene de secreciones [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 730,
+        "token_stats": {
+          "prompt_tokens": 3975,
+          "completion_tokens": 180,
+          "total_tokens": 4155,
+          "tokens_per_second": 150.6,
+          "context_used_pct": 25.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.71
+      }
+    },
+    {
+      "id": "q17",
+      "query": "¿Qué ventaja tiene la OxyMask frente a otras mascarillas?",
+      "block": 3,
+      "expected_section": "PROCEDIMIENTO — Mascarilla de oxigeno (OxyMask)",
+      "expected_quote": "Se pueden recibir fluidos sin quitar la mascarilla o realizar pruebas diagnósticas como la broncoscopia, y por su diseño consigue lavado de CO2 del espacio muerto de la mascarilla produciendo menos retención de dicho gas.",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "ventajas de la OxyMask en comparación con otras mascarillas en el procedimiento en los cuidados de la oxigenoterapia",
+        "keywords": [
+          "OxyMask",
+          "ventaja",
+          "mascarillas"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 8
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.9419,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7567,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 1. MEDIDAS A IMPLEMENTAR SEGÚN EL NIVEL",
+          "h2": "ANEXO 1.1. MEDIDAS DE PREVENCIÓN EN PACIENTES Y FAMILIARES",
+          "rerank_score": 0.6333,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "4.- LOCALIZACIONES (5)",
+          "h2": "4.3 OTRAS",
+          "rerank_score": 0.5755,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN CONTINGENCIA INFECCIONES RESPIRATORIAS ESTACIONALES 2024/2025",
+          "h2": "4. ASISTENCIA EN URGENCIAS.",
+          "rerank_score": 0.5534,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 2. HOJA INFORMATIVA SOBRE PREVENCIÓN DE INFECCIONES RESPIRATORIAS VÍRICAS.",
+          "h2": "ANEXO 2. HOJA INFORMATIVA SOBRE PREVENCIÓN DE INFECCIONES RESPIRATORIAS VÍRICAS.",
+          "rerank_score": 0.5399,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "Resto material",
+          "rerank_score": 0.5093,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "h2": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "rerank_score": 0.5089,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN CONTINGENCIA INFECCIONES RESPIRATORIAS ESTACIONALES 2024/2025",
+          "h2": "4.2. Valoración clínica y destino del paciente",
+          "rerank_score": 0.4804,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.317,
+        "Retriever": 1.859,
+        "Generador": 8.68
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La **OxyMask** presenta varias ventajas clínicas y funcionales en comparación con otros sistemas de administración de oxígeno, destacando principalmente su versatilidad y su diseño:\n\n## Ventajas de la OxyMask\n\n- **Rango terapéutico amplio**: Es un sistema que ofrece un rango completo de terapias, permitiendo una **FiO₂ de entre el 24% y el 90%** [2].\n- **Capacidad de titulación y destete**: Permite realizar la titulación y el proceso de destete del paciente con flujos por debajo de **1 LPM** y concentraciones de **24%** [2].\n- **Diseño abierto y lavado de CO₂**: Debido a que su diseño es ampliamente abierto, consigue el **lavado de CO₂** del espacio muerto de la mascarilla, lo que produce una **menor retención de dicho gas** [2].\n- **Facilidad para procedimientos y cuidados**: \n    - Permite la **recepción de fluidos** sin necesidad de retirar la mascarilla [1].\n    - Permite realizar **pruebas diagnósticas**, como la broncoscopia, sin quitar el dispositivo [1].\n    - El tubo se puede posicionar para proporcionar **confort** al paciente [1].\n- **Ajuste de la FiO₂**: La concentración de oxígeno (FiO₂) se puede ajustar a través de la regulación de la tasa de flujo en el flujómetro [1, 2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1205,
+        "token_stats": {
+          "prompt_tokens": 3917,
+          "completion_tokens": 319,
+          "total_tokens": 4236,
+          "tokens_per_second": 150.5,
+          "context_used_pct": 25.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.68
+      }
+    },
+    {
+      "id": "q18",
+      "query": "¿Quién prescribe la oxigenoterapia y quién la administra?",
+      "block": 3,
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "La prescripción es responsabilidad del Médico y la administración de la Enfermera/o.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "prescripción y administración de la oxigenoterapia",
+        "keywords": [
+          "prescribe",
+          "oxigenoterapia",
+          "administra"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 2
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.9881,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "5. RESPONSABILIDADES",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.971,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.8249,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "2. ALCANCE",
+          "rerank_score": 0.8208,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7606,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "6. REFERENCIAS BIBLIOGRÁFICAS",
+          "h2": "6. REFERENCIAS BIBLIOGRÁFICAS",
+          "rerank_score": 0.7491,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.7485,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.7323,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.7269,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "rerank_score": 0.717,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.004,
+        "Retriever": 1.768,
+        "Generador": 6.68
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "De acuerdo con el protocolo de procedimientos del Hospital Universitario Lozano Blesa, las responsabilidades en la oxigenoterapia se distribuyen de la siguiente manera:\n\n- **Prescripción**: A cargo del **Médico** [2].\n- **Administración**: A cargo de la **Enfermera/o** [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 274,
+        "token_stats": {
+          "prompt_tokens": 1637,
+          "completion_tokens": 74,
+          "total_tokens": 1711,
+          "tokens_per_second": 161.2,
+          "context_used_pct": 10.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 6.68
+      }
+    },
+    {
+      "id": "q19",
+      "query": "¿Qué es la hipoxemia y cómo se clasifica según su gravedad?",
+      "block": 4,
+      "expected_section": "ANEXO I: GLOSARIO DE TÉRMINOS",
+      "expected_quote": "Hipoxemia es la disminución de la PaO2 por debajo de 80 mmHg. Será hipoxemia leve cuando la PaO2 esté entre 70 y 79 mmHg; hipoxemia moderada con PaO2 entre 60 y 69 mmHg; e hipoxemia severa cuando la PaO2 esté por debajo de 60 mmHg, lo que coincide con el término Insuficiencia Respiratoria Hipoxémica y corresponde con saturaciones de O2 del 90%.",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "definición y clasificación de la hipoxemia según su gravedad",
+        "keywords": [
+          "hipoxemia",
+          "clasifica",
+          "gravedad"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 5
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.8518,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.83,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "7. TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+          "h2": "7.1 VALORACIÓN DE LA LESIÓN",
+          "rerank_score": 0.6812,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PC-67-Z3-E-C-URGE-Procedimiento-de-Manejo-de-la-Gastroenteritis-Aguda-en-Urgencias",
+          "h1": "PROCEDIMIENTO DE MANEJO DE LA GASTROENTERITIS AGUDA EN URGENCIAS",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.5631,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "3.- ETIOPATOGENIA (4,6,8)",
+          "h2": "3.- ETIOPATOGENIA (4,6,8)",
+          "rerank_score": 0.51,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PC-08-Z3-E-C-PROCEDIMIENTO-DE-MANEJO-DEL-ACCIDENTE-ISQUÉMICO-TRANSITORIO",
+          "h1": "PROCEDIMIENTO DE MANEJO DEL ACCIDENTE ISQUÉMICO TRANSITORIO (AIT)",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.4976,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "4.- Variables relativas a la intervención quirúrgica:",
+          "rerank_score": 0.3825,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "21. ANEXOS",
+          "rerank_score": 0.362,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 5. SISTEMA DE REPARTO DE CAMAS EN FUNCIÓN DE “CAMAS OCUPADAS POR ESPECIALIDAD”, SEGÚN EL DIRECTORIO PARA LA GESTIÓN_ACTIVIDAD DE HOSPITALIZACIÓN",
+          "h2": "ANEXO 5. SISTEMA DE REPARTO DE CAMAS EN FUNCIÓN DE “CAMAS OCUPADAS POR ESPECIALIDAD”, SEGÚN EL DIRECTORIO PARA LA GESTIÓN_ACTIVIDAD DE HOSPITALIZACIÓN",
+          "rerank_score": 0.3495,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.15,
+        "Retriever": 1.808,
+        "Generador": 7.98
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La **hipoxemia** se define como una disminución de la presión arterial de oxígeno (**PaO₂**) por debajo de **80 mmHg** [1].\n\nSegún los protocolos de cuidados de la oxigenoterapia, su clasificación según la gravedad es la siguiente:\n\n- **Hipoxemia leve**: Cuando la PaO₂ se encuentra entre **70 y 79 mmHg** [1].\n- **Hipoxemia moderada**: Cuando la PaO₂ se encuentra entre **60 y 69 mmHg** [1].\n- **Hipoxemia severa**: Cuando la PaO₂ es inferior a **60 mmHg** [1]. Esta situación coincide con el término de **Insuficiencia Respiratoria Hipoxémica**, la cual se corresponde con saturaciones de O₂ del **90%** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 610,
+        "token_stats": {
+          "prompt_tokens": 5063,
+          "completion_tokens": 177,
+          "total_tokens": 5240,
+          "tokens_per_second": 140.3,
+          "context_used_pct": 32.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.98
+      }
+    },
+    {
+      "id": "q20",
+      "query": "¿Qué diferencia hay entre hipoxia e hipoxemia?",
+      "block": 4,
+      "expected_section": "ANEXO I: GLOSARIO DE TÉRMINOS",
+      "expected_quote": "La hipoxia se produce cuando el aporte de O2 a las células es insuficiente para cubrir las necesidades metabólicas de los tejidos. La hipoxemia es la disminución de la PaO2 por debajo de 80 mmHg, es decir, un valor analítico en sangre, mientras que la hipoxia es el efecto tisular resultante.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "diferencia entre hipoxia e hipoxemia",
+        "keywords": [
+          "diferencia",
+          "hipoxia",
+          "hipoxemia"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            5,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 5,
+            "RPC-89-revC-Parada-Cardiaca": 1
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 0.833,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.9299,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.8651,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.7852,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "2.3.6. DETECTAR POSIBLES CAUSAS DE PARADA CARDIACA.",
+          "rerank_score": 0.7038,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 5. SISTEMA DE REPARTO DE CAMAS EN FUNCIÓN DE “CAMAS OCUPADAS POR ESPECIALIDAD”, SEGÚN EL DIRECTORIO PARA LA GESTIÓN_ACTIVIDAD DE HOSPITALIZACIÓN",
+          "h2": "ANEXO 5. SISTEMA DE REPARTO DE CAMAS EN FUNCIÓN DE “CAMAS OCUPADAS POR ESPECIALIDAD”, SEGÚN EL DIRECTORIO PARA LA GESTIÓN_ACTIVIDAD DE HOSPITALIZACIÓN",
+          "rerank_score": 0.5985,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "13. ALGORITMOS DE ACTUACIÓN",
+          "rerank_score": 0.539,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "2.3. Maniobras específicas de Reanimación.",
+          "rerank_score": 0.4237,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "5. RESPONSABILIDADES",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.342,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "3. Fuente de Oxígeno",
+          "rerank_score": 0.2938,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.943,
+        "Retriever": 1.677,
+        "Generador": 8.53
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.1,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.1,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Basado en los protocolos de cuidados de la oxigenoterapia del hospital, la diferencia entre hipoxia e hipoxemia radica en el nivel de afectación (tisular frente a sanguíneo) y en los parámetros clínicos de medición:\n\n## Diferencias entre Hipoxia e Hipoxemia\n\n- **Hipoxia**: Se refiere a una situación en la que el aporte de O₂ a las células es insuficiente para cubrir las necesidades metabólicas de los tejidos [1]. También se le denomina **hipoxia tisular** [2] y puede ser una de las causas detectables en un proceso de parada cardíaca [5].\n- **Hipoxemia**: Se define específicamente por la disminución de la **PaO₂** (presión arterial de oxígeno) por debajo de **80 mmHg** [1].\n\n### Clasificación de la Hipoxemia\nLa hipoxemia se clasifica según los niveles de PaO₂ de la siguiente manera [1]:\n\n| Grado de hipoxemia | Rango de PaO₂ |\n| :--- | :--- |\n| **Leve** | Entre 70 y 79 mmHg |\n| **Moderada** | Entre 60 y 69 mmHg |\n| **Severa** | Por debajo de 60 mmHg |\n\nEs importante destacar que la hipoxemia severa (PaO₂ < 60 mmHg) coincide con el término **Insuficiencia Respiratoria Hipoxémica**, lo cual se corresponde con saturaciones de O₂ del 90% [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1154,
+        "token_stats": {
+          "prompt_tokens": 2480,
+          "completion_tokens": 326,
+          "total_tokens": 2806,
+          "tokens_per_second": 158.9,
+          "context_used_pct": 17.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.53
+      }
+    },
+    {
+      "id": "q21",
+      "query": "Con unas gafas nasales a 4 l/min, ¿qué FiO2 aproximada consigo?",
+      "block": 4,
+      "expected_section": "ANEXO II: RELACIÓN FLUJO/FiO2 CON GAFAS NASALES",
+      "expected_quote": "Con un flujo de 4 L/min se obtiene una FiO2 de 0,31 (31%).",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "fracción inspirada de oxígeno aproximada con uso de cánula nasal a 4 l/min en el contexto de PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+        "keywords": [
+          "gafas nasales",
+          "4 l/min",
+          "FiO2"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            3,
+            5,
+            5,
+            3,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 6
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.9766,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.9505,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.9164,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.9158,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.8871,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo III: En el centro de la tabla volumen inspiratorio conseguido con una Venturi según FiO2 y flujo O2 administrado siempre > 3 L/min.",
+          "rerank_score": 0.8231,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.8042,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.7663,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7207,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.6882,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.472,
+        "Retriever": 1.801,
+        "Generador": 8.59
+      },
+      "memory_mb": {
+        "proc_before": 67.1,
+        "proc_after_retriever": 67.2,
+        "proc_delta_retriever": 0.1,
+        "proc_after_generator": 67.2,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Con un flujo de **4 l/min** mediante el uso de gafas o cánulas nasales, la **FiO2 aproximada** que se consigue es de **0.31 (31%)** [2].\n\nPara mayor contexto sobre este sistema de administración:\n\n- **Tipo de sistema**: Las gafas nasales se consideran un sistema de **bajo flujo** [3, 5].\n- **Características**: En estos sistemas, la FiO2 varía en función del flujo de oxígeno y del patrón ventilatorio del paciente (flujo inspiratorio, volumen corriente y frecuencia respiratoria) [5].\n- **Rango de funcionamiento**: Este dispositivo permite administrar flujos de entre **1 y 4 l/min**, con una FiO2 que oscila entre el **24% y el 36%** [3].\n\n**Relación flujo/FiO2 con gafas nasales (según Anexo II):**\n\n| Flujo de O2 (L/min) | FiO2 |\n| :--- | :--- |\n| 1 | 0.24 |\n| 2 | 0.26 |\n| 3 | 0.28 |\n| **4** | **0.31** |\n| 5 | 0.35 |\n| 6 | 0.40 |\n\n[2]",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 842,
+        "token_stats": {
+          "prompt_tokens": 3936,
+          "completion_tokens": 298,
+          "total_tokens": 4234,
+          "tokens_per_second": 150.2,
+          "context_used_pct": 25.8,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.59
+      }
+    },
+    {
+      "id": "q22",
+      "query": "¿A partir de qué flujo es necesario el humidificador y en qué caso podría no usarse?",
+      "block": 4,
+      "expected_section": "ANEXO IV: MATERIAL",
+      "expected_quote": "A bajos flujos (mayores de 4 l/m) no sería necesaria su utilización, a menos que el paciente note sequedad o irritación nasal. El humidificador desechable se cambiará entre pacientes.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "necesidad de uso de humidificador según el flujo de oxígeno y casos en los que podría no utilizarse en el PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+        "keywords": [
+          "flujo",
+          "humidificador",
+          "no usarse"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 3
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo IV: Material",
+          "rerank_score": 0.9904,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.9617,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.9611,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.9213,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.914,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.8831,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.8536,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.8289,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo III: En el centro de la tabla volumen inspiratorio conseguido con una Venturi según FiO2 y flujo O2 administrado siempre > 3 L/min.",
+          "rerank_score": 0.8054,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.797,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.514,
+        "Retriever": 1.727,
+        "Generador": 7.55
+      },
+      "memory_mb": {
+        "proc_before": 67.2,
+        "proc_after_retriever": 67.2,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.2,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Respecto al uso del humidificador en la oxigenoterapia, la información disponible indica lo siguiente:\n\n## Uso del humidificador\n\n- **Flujo en el que no sería necesaria su utilización:** No es necesaria la utilización de una botella de agua estéril (humidificador) en flujos bajos, específicamente cuando el caudal es **inferior a 4 L/min** (>4 L/min) [1].\n- **Casos en los que podría utilizarse a pesar de ser un flujo bajo:** Se debe emplear el humidificador incluso en flujos bajos si el paciente presenta **sequedad o irritación nasal** [1].\n\nComo consideración adicional, en el procedimiento de administración de oxígeno, se recomienda valorar regularmente la mucosa nasal y labial, procediendo a lubricarlas si fuera necesario [4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 737,
+        "token_stats": {
+          "prompt_tokens": 3124,
+          "completion_tokens": 173,
+          "total_tokens": 3297,
+          "tokens_per_second": 158.4,
+          "context_used_pct": 20.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.55
+      }
+    },
+    {
+      "id": "q23",
+      "query": "¿Qué rango de flujo y FiO2 alcanzan las gafas nasales?",
+      "block": 4,
+      "expected_section": "ANEXO V: SISTEMAS DE ADMINISTRACIÓN DE OXÍGENO",
+      "expected_quote": "Las cánulas o gafas nasales permiten flujos de 1 a 4 l/m y alcanzan entre el 24% y el 36% de FiO2.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "rango de flujo y FiO2 alcanzados con gafas nasales en el PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+        "keywords": [
+          "rango de flujo",
+          "FiO2",
+          "gafas nasales"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            4,
+            5,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 4
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.9324,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.8816,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.8733,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.84,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo III: En el centro de la tabla volumen inspiratorio conseguido con una Venturi según FiO2 y flujo O2 administrado siempre > 3 L/min.",
+          "rerank_score": 0.7805,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "B. Precauciones",
+          "rerank_score": 0.751,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.7074,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.7021,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.6491,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.107,
+        "Retriever": 1.737,
+        "Generador": 9.31
+      },
+      "memory_mb": {
+        "proc_before": 67.2,
+        "proc_after_retriever": 67.2,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.2,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para las **gafas o cánulas nasales**, la información sobre el rango de flujo y la FiO2 varía ligeramente según el documento consultado:\n\n## Rango de flujo y FiO2\n\nExisten dos referencias en los protocolos sobre estos valores:\n\n- **Referencia 1 (Relación detallada):** El Anexo II establece una relación específica entre el flujo de O₂ y la FiO2 como la siguiente [1]:\n    - 1 L/min $\\rightarrow$ 0.24 FiO₂\n    - 2 L/min $\\rightarrow$ 0.26 FiO₂\n    - 3 L/min $\\rightarrow$ 0.28 FiO₂\n    - 4 L/min $\\rightarrow$ 0.31 FiO₂\n    - 5 L/min $\\rightarrow$ 0.35 FiO₂\n    - 6 L/min $\\rightarrow$ 0.40 FiO₂\n\n- **Referencia 2 (Rangos generales):** El Anexo V presenta rangos más amplios para este dispositivo de bajo flujo [4]:\n    - **Flujo:** 1-4 L/min.\n    - **FiO₂:** Entre 24% - 36%.\n\n## Consideraciones adicionales\n- Las gafas nasales se clasifican como un **sistema de bajo flujo**, lo que significa que el paciente inhala aire de la atmósfera que se mezcla con el oxígeno suministrado; por tanto, la FiO₂ puede variar según el patrón ventilatorio del paciente (flujo inspiratorio, volumen corriente y frecuencia respiratoria) [5].\n- Este sistema es muy utilizado por ser barato, fácil de usar y bien tolerado, permitiendo al paciente hablar, comer, dormir y expectorar sin interrumpir el aporte de O₂ [4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1301,
+        "token_stats": {
+          "prompt_tokens": 3931,
+          "completion_tokens": 395,
+          "total_tokens": 4326,
+          "tokens_per_second": 147.9,
+          "context_used_pct": 26.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.31
+      }
+    },
+    {
+      "id": "q24",
+      "query": "¿Qué FiO2 puede alcanzar la mascarilla de no reinhalación?",
+      "block": 4,
+      "expected_section": "ANEXO V: SISTEMAS DE ADMINISTRACIÓN DE OXÍGENO",
+      "expected_quote": "La mascarilla de no reinhalación, con flujos de 3-15 l/min, alcanza una FiO2 del 60% al 100%. Dispone de una válvula unidireccional que impide que el aire espirado vuelva a la bolsa.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "FiO2 alcanzable con mascarilla de no reinhalación en el PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+        "keywords": [
+          "FiO2",
+          "mascarilla de no reinhalación"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            3,
+            3,
+            1,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 4
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.978,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.9428,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.9207,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 0.9123,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo II: Relación flujo/FiO2 con gafas nasales",
+          "rerank_score": 0.8549,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo III: En el centro de la tabla volumen inspiratorio conseguido con una Venturi según FiO2 y flujo O2 administrado siempre > 3 L/min.",
+          "rerank_score": 0.7981,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo I: Glosario de Términos",
+          "rerank_score": 0.7879,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.7847,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.6884,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 1. MEDIDAS A IMPLEMENTAR SEGÚN EL NIVEL",
+          "h2": "ANEXO 1.1. MEDIDAS DE PREVENCIÓN EN PACIENTES Y FAMILIARES",
+          "rerank_score": 0.5253,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.117,
+        "Retriever": 1.797,
+        "Generador": 7.22
+      },
+      "memory_mb": {
+        "proc_before": 67.2,
+        "proc_after_retriever": 67.2,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.2,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La **mascarilla de no reinhalación** (con bolsa reservorio) puede alcanzar una **FiO2 del 60% al 100%** [3].\n\nPara su correcto funcionamiento, se deben tener en cuenta las siguientes consideraciones técnicas:\n\n- **Características**: Este dispositivo dispone de una válvula unidireccional que impide que el aire espirado regrese a la bolsa [3].\n- **Flujo necesario**: El flujo de oxígeno debe ser el adecuado para asegurar que la bolsa reservorio permanezca inflada, debiendo ser **> 7 L/min** [1]. El rango de flujo para este dispositivo se establece entre **3-15 L/min** [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 576,
+        "token_stats": {
+          "prompt_tokens": 3931,
+          "completion_tokens": 156,
+          "total_tokens": 4087,
+          "tokens_per_second": 157.6,
+          "context_used_pct": 24.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.22
+      }
+    },
+    {
+      "id": "q25",
+      "query": "¿Cuál es la principal ventaja de la mascarilla Venturi respecto a otros sistemas?",
+      "block": 4,
+      "expected_section": "ANEXO V: SISTEMAS DE ADMINISTRACIÓN DE OXÍGENO",
+      "expected_quote": "La mascarilla Venturi suministra concentraciones precisas de oxígeno independientemente del patrón respiratorio del paciente, siempre que se garantice el suministro del flujo mínimo recomendado para esa concentración.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "principal ventaja de la mascarilla Venturi en comparación con otros sistemas de oxigenoterapia",
+        "keywords": [
+          "mascarilla Venturi",
+          "ventaja",
+          "otros sistemas"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "title": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016": 7
+          },
+          "dominant_doc_id": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo V: Sistemas de Administración de Oxígeno:",
+          "rerank_score": 1.0,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.9134,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "Anexo III: En el centro de la tabla volumen inspiratorio conseguido con una Venturi según FiO2 y flujo O2 administrado siempre > 3 L/min.",
+          "rerank_score": 0.8274,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "7. ANEXOS",
+          "h2": "7. ANEXOS",
+          "rerank_score": 0.7886,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.5951,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "ANEXO 4. MATERIAL NECESARIO PARA ATENDER UNA PARADA CARDIACA.",
+          "h2": "4. Carro de Parada",
+          "rerank_score": 0.4734,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "PROCEDIMIENTO EN LOS CUIDADOS DE LA OXIGENOTERAPIA",
+          "h2": "3. DEFINICIONES",
+          "rerank_score": 0.4357,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN CONTINGENCIA INFECCIONES RESPIRATORIAS ESTACIONALES 2024/2025",
+          "h2": "4. ASISTENCIA EN URGENCIAS.",
+          "rerank_score": 0.4236,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 1. MEDIDAS A IMPLEMENTAR SEGÚN EL NIVEL",
+          "h2": "ANEXO 1.1. MEDIDAS DE PREVENCIÓN EN PACIENTES Y FAMILIARES",
+          "rerank_score": 0.4215,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "Resto material",
+          "rerank_score": 0.3999,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.226,
+        "Retriever": 1.907,
+        "Generador": 8.14
+      },
+      "memory_mb": {
+        "proc_before": 67.2,
+        "proc_after_retriever": 67.2,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 67.2,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "La principal ventaja de la **mascarilla tipo Venturi** es que suministra **concentraciones precisas de oxígeno** [1].\n\nA diferencia de otros sistemas, su funcionamiento presenta las siguientes características clave:\n\n- **Independencia del patrón respiratorio**: La concentración de oxígeno (FiO2) se mantiene constante e independiente del patrón respiratorio del paciente, siempre que se garantice el suministro del flujo mínimo recomendado para esa concentración específica en el dispositivo [1].\n- **Regulación precisa**: Dispone de un sistema de \"tirar y girar\" que permite regular la concentración deseada [1]. Asimismo, el profesional debe ajustar la concentración en el dosificador de porcentajes y seleccionar en el caudalímetro el flujo mínimo correspondiente a dicha concentración [2].\n- **Rango de administración**: Permite alcanzar una **FiO2 del 24% al 50%** [1], utilizando flujos de entre **3 y 15 l/m** [1].\n- **Versatilidad en traqueostomías**: También existen versiones de mascarillas tipo Venturi diseñadas específicamente para traqueostomías [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1065,
+        "token_stats": {
+          "prompt_tokens": 3923,
+          "completion_tokens": 245,
+          "total_tokens": 4168,
+          "tokens_per_second": 153.1,
+          "context_used_pct": 25.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.14
+      }
+    }
+  ]
+}

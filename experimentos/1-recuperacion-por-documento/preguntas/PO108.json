@@ -1,0 +1,217 @@
+{
+  "name": "PO-108 — Procedimiento de Valoración, Colocación y Seguimiento del Paciente con Catéter Pleural Tunelizado",
+  "description": "Ground truth generado a partir del documento PO-108. Cubre indicaciones y contraindicaciones, preparación y material, procedimiento de colocación, seguimiento domiciliario, complicaciones y responsabilidades.",
+  "relevant_doc_patterns": ["PO-108", "catecter-pleural-tunelizado", "CPT", "pleural-tunelizado"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "Oye, ¿a quién se le pone esto realmente? ¿Solo a los oncológicos?",
+      "expected_section": "INDICACIONES",
+      "expected_quote": "Estandarizar el procedimiento de colocación del catéter pleural tunelizado (CPT), en aquellos pacientes con derrame pleural maligno recidivante, así como en aquellos con derrame pleural y pulmón atrapado o derrame pleural crónico con una supervivencia estimada superior a los 3 meses y no candidato a otras técnicas pleurales."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "Escucha, si el paciente está ya muy malito, ¿cuánto tiempo de vida tiene que quedarle para que compense meterle el catéter?",
+      "expected_section": "INDICACIONES",
+      "expected_quote": "Supervivencia oncológica inferior a 3 meses... Aquellos pacientes con supervivencias estimadas de días (<1 mes) es recomendable tratar con toracocentesis evacuadoras y opiáceos sistémicos solos."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Y por qué no se les hace una pleurodesis con talco a todos y acabamos antes?",
+      "expected_section": "INDICACIONES",
+      "expected_quote": "En relación a la pleurodesis con talco ha demostrado una eficacia similar, pero requiere menos días de hospitalización, ofrece más ventajas si existe un pulmón atrapado y se tolera mejor si los enfermos tienen un pobre estado funcional."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "He oído algo de \"pulmón atrapado\", ¿eso qué significa para el manejo del catéter?",
+      "expected_section": "INDICACIONES",
+      "expected_quote": "El pulmón atrapado es una contraindicación para pleurodesis pudiendo ser eficaz el CPT para el control de los síntomas."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "Tengo una duda con los síntomas, ¿qué es exactamente lo que buscamos aliviar con este aparato?",
+      "expected_section": "INDICACIONES",
+      "expected_quote": "La mayoría de los DPM son sintomáticos y suelen presentar disnea, dolor torácico, anorexia y adelgazamiento, con un deterioro significativo de la calidad de vida. El manejo del DPM sintomático es paliativo y debe enfocarse a aliviar los síntomas, principalmente la disnea."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿Qué tenemos que tener preparado en el carro antes de empezar?",
+      "expected_section": "MATERIAL Y PREPARACIÓN",
+      "expected_quote": "Kit de Drenaje del catéter pleural tunelizado (cod: SH-REF 50-7050). Recambios de botellas: (cod: 34361 SH-REF 50-7510)."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "Oye, y si el paciente es alérgico al látex, ¿qué guantes le pido a la auxiliar?",
+      "expected_section": "CONTRAINDICACIONES Y MATERIAL",
+      "expected_quote": "Contraindicaciones absolutas... Intolerancia al látex... Si alergia látex: guantes quirúrgicos sintéticos estériles (nº 6.5 cod 61, nº 7 cod 62, nº 7.5 cod 63)."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "Oye, ¿esto se hace aquí en la planta o hay que bajarlo a algún sitio?",
+      "expected_section": "PROCEDIMIENTO",
+      "expected_quote": "El procedimiento se realizará en la sala de endoscopias respiratorias y técnicas pleurales previa cita o durante el ingreso."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "Escucha, ¿qué anestésicos tengo que pedirle a los de farmacia para que el médico lo tenga todo?",
+      "expected_section": "MATERIAL Y PREPARACIÓN",
+      "expected_quote": "Anestésico tópico (Mepivacaína 1% o 2%) (solicitarlo a Farmacia). Cloretilo spray (anestesia tópica) (cod: 42887)."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Hacemos el procedimiento a ciegas o se usa el ecógrafo siempre?",
+      "expected_section": "PROCEDIMIENTO",
+      "expected_quote": "No recomendable en derrames loculados de inicio... El/la médico/a realizará una correcta utilización del ecógrafo."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Cuál es mi papel exactamente mientras el médico está poniendo el catéter?",
+      "expected_section": "RESPONSABILIDADES DE ENFERMERÍA",
+      "expected_quote": "DEL PERSONAL DE ENFERMERÍA: Monitorizar al paciente: medición de saturación de oxígeno (sPo2) y frecuencia cardíaca. Asegurar condiciones de asepsia. Informar al facultativo de desviaciones de la normalidad."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "Oye, ¿le pinchamos una vía por si las moscas?",
+      "expected_section": "PREPARACIÓN DEL PACIENTE",
+      "expected_quote": "Si el paciente no lleva vía periférica, se canalizará una vía para tener el paciente mejor controlado y poder administrarle analgesia (tipo Paracetamol) al inicio del procedimiento o sedación ligera (Midazolam)."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "¿Qué medicación se le suele dar para que no esté tan nervioso o no le duela tanto el pinchazo?",
+      "expected_section": "PREPARACIÓN DEL PACIENTE",
+      "expected_quote": "...poder administrarle analgesia (tipo Paracetamol) al inicio del procedimiento o ligera sedación (Midazolam)."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Cómo es eso de \"tunelizar\" el catéter? ¿Por dónde va el tubo?",
+      "expected_section": "DESCRIPCIÓN DEL DISPOSITIVO",
+      "expected_quote": "El CPT es un tubo fenestrado que se introduce en la cavidad pleural y se tuneliza a través del tejido celular subcutáneo; termina en una válvula unidireccional que permite el drenaje..."
+    },
+    {
+      "id": "q15",
+      "block": 3,
+      "query": "Escucha, ¿qué constantes tengo que estar mirando sin parar en el monitor?",
+      "expected_section": "MONITORIZACIÓN",
+      "expected_quote": "Monitorizar al paciente: medición de saturación de oxígeno (sPo2) y frecuencia cardíaca."
+    },
+    {
+      "id": "q16",
+      "block": 3,
+      "query": "¿Cómo se comprueba al final que el catéter está bien puesto y que aspira bien?",
+      "expected_section": "COMPROBACIÓN DEL FUNCIONAMIENTO",
+      "expected_quote": "Se comprueba el correcto funcionamiento del drenaje colocando la pieza conexión (foto 11) a la cual se le conecta una jeringa (fotos 12 y 13)."
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "¿Cuánto líquido tenemos que sacar en el primer drenaje que hagamos con la botella?",
+      "expected_section": "PRIMER DRENAJE",
+      "expected_quote": "Comenzará a salir el líquido pleural (fotos 14-17), cuando haya cesado el drenaje se desecha la botella..."
+    },
+    {
+      "id": "q18",
+      "block": 3,
+      "query": "¿Qué tengo que enseñarle a la familia antes de que se vayan a casa?",
+      "expected_section": "EDUCACIÓN AL CUIDADOR",
+      "expected_quote": "Se enseña a la familia y/o cuidador como evacuar el líquido pleural con las botellas, como deben limpiar la herida y colocar un apósito, todo en un campo de trabajo limpio."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "¿Y si la familia no se ve capaz de usar las botellas en casa? ¿Qué hacemos con el paciente?",
+      "expected_section": "SEGUIMIENTO DOMICILIARIO",
+      "expected_quote": "Si los familiares y/o cuidadores del paciente no pueden aprender el manejo del sistema o no se dispone de dicha asistencia se podrá citar los días que necesite semanalmente al paciente en la Unidad para evacuar el líquido pleural."
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "¿Cuándo se le puede dar el alta después de ponerle el catéter?",
+      "expected_section": "CRITERIOS DE ALTA",
+      "expected_quote": "Una vez finalizada la exploración, si no hay complicaciones durante el procedimiento se le dará de alta a su residencia habitual."
+    },
+    {
+      "id": "q21",
+      "block": 4,
+      "query": "¿Cada cuánto tiempo hay que vaciar el líquido cuando ya están en su domicilio?",
+      "expected_section": "SEGUIMIENTO DOMICILIARIO",
+      "expected_quote": "Se extraerá líquido según los síntomas que refiera el paciente... mayor si se drena diariamente que solamente cuando aparecen síntomas."
+    },
+    {
+      "id": "q22",
+      "block": 4,
+      "query": "¿Qué complicaciones son las que más nos suelen dar guerra con estos pacientes?",
+      "expected_section": "COMPLICACIONES",
+      "expected_quote": "Las complicaciones que pueden aparecer son las siguientes: Drenaje deficiente (obstrucción del catéter). Dolor. Empiema. Celulitis. Metástasis en el trayecto."
+    },
+    {
+      "id": "q23",
+      "block": 4,
+      "query": "Si el catéter deja de drenar de repente, ¿qué puede estar pasando?",
+      "expected_section": "COMPLICACIONES",
+      "expected_quote": "Necesario retirar el CPT por complicaciones (trombosis por tumor en el interior del catéter, obstrucción...)."
+    },
+    {
+      "id": "q24",
+      "block": 4,
+      "query": "¿Cuándo se decide que ya es hora de quitarle el catéter al paciente?",
+      "expected_section": "CRITERIOS DE RETIRADA",
+      "expected_quote": "Reexpansión en radiografía de tórax mayor o igual al 80% con drenajes inferiores a 50 ml durante 3 revisiones consecutivas... [o] sin mejoría o empeoramiento clínico persistiendo la disnea."
+    },
+    {
+      "id": "q25",
+      "block": 4,
+      "query": "Si en la placa de tórax se ve que el pulmón no se ha expandido del todo, ¿se le quita el tubo igualmente?",
+      "expected_section": "CRITERIOS DE RETIRADA",
+      "expected_quote": "Reexpansión en radiografía de tórax menor al 80% y ausencia o pequeña cantidad de líquido en TAC de tórax y ecografía torácica."
+    },
+    {
+      "id": "q26",
+      "block": 4,
+      "query": "¿Qué es eso de las metástasis en el trayecto? ¿Pasa mucho?",
+      "expected_section": "COMPLICACIONES",
+      "expected_quote": "Metástasis en el trayecto... Se han descrito complicaciones en menos del 30% de los pacientes a los que se les inserta un CPT."
+    },
+    {
+      "id": "q27",
+      "block": 4,
+      "query": "¿Qué hacemos si el paciente empieza con fiebre y la zona del catéter se pone roja?",
+      "expected_section": "MANEJO DE COMPLICACIONES",
+      "expected_quote": "Durante el manejo de algunas complicaciones. Si no hay respuesta al tratamiento médico y/o tratamiento a través del CPT puede ser necesario retirarlo."
+    },
+    {
+      "id": "q28",
+      "block": 5,
+      "query": "¿Quién se encarga de limpiar el ecógrafo y dejarlo todo listo para el siguiente?",
+      "expected_section": "RESPONSABILIDADES DEL TCAE",
+      "expected_quote": "DEL TÉCNICO AUXILIAR EN CUIDADOS DE ENFERMERÍA: ... Limpieza de sonda transductor de ecografía. Dejar de nuevo enchufado el ecógrafo a la red eléctrica con el fin de que se cuente con batería suficiente..."
+    },
+    {
+      "id": "q29",
+      "block": 5,
+      "query": "¿Qué papeles o consentimientos tienen que estar firmados antes de que toquemos al paciente?",
+      "expected_section": "CONTRAINDICACIONES ABSOLUTAS",
+      "expected_quote": "Contraindicaciones absolutas del procedimiento: No haber firmado previamente el consentimiento informado."
+    },
+    {
+      "id": "q30",
+      "block": 5,
+      "query": "¿A quién llamamos si el paciente viene de otro hospital y tiene problemas con el catéter?",
+      "expected_section": "CONTACTO Y DERIVACIÓN",
+      "expected_quote": "Contactar con la unidad de broncoscopias... telefónicamente en la extensión 162000, si llama desde el Hospital. Si el paciente pertenece a otro centro hospitalario se contactará telefónicamente con la Unidad y con petición de derivación interhospitalaria de pacientes."
+    }
+  ]
+}

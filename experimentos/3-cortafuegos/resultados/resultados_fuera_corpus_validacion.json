@@ -1,0 +1,182 @@
+[
+ {
+  "id": "v001",
+  "query": "¿Cuál es el protocolo de manejo de la crisis asmática en adultos?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 20.99
+ },
+ {
+  "id": "v002",
+  "query": "¿Cómo se realiza el drenaje de un absceso cutáneo?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 25.5
+ },
+ {
+  "id": "v003",
+  "query": "¿Qué pauta de rehidratación se usa en el golpe de calor?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 18.66
+ },
+ {
+  "id": "v004",
+  "query": "¿Cómo se maneja una intoxicación por monóxido de carbono?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 25.52
+ },
+ {
+  "id": "v005",
+  "query": "¿Cuál es el tratamiento de la migraña refractaria en urgencias?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 18.52
+ },
+ {
+  "id": "v006",
+  "query": "¿Qué escala se emplea para valorar el riesgo de caídas?",
+  "intent": "clinica",
+  "top1_score": 0.75634765625,
+  "low_relevance": false,
+  "respuesta": "No encuentro información en los protocolos disponibles sobre qué escala se emplea específicamente para valorar el **riesgo de caídas**.\n\nLos documentos proporcionados detallan escalas para otros fines clínicos:\n- La **Escala de Norton Modificada (ENM)** se utiliza para la valoración del riesgo de padecer **lesiones por presión (LPP)** [1, 3].\n- Las escalas **ABCD2** y **ABCD2-I** se mencionan en el contexto de la estratificación del riesgo tras un **accidente isquémico transitorio (AIT)** [2].\n- La escala **PUSH** se utiliza para la evolución de las úlceras (en el registro de heridas) [5].",
+  "segundos": 34.82
+ },
+ {
+  "id": "v007",
+  "query": "¿Cómo se trata una crisis tirotóxica?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 24.66
+ },
+ {
+  "id": "v008",
+  "query": "¿Cuál es el manejo de la anafilaxia y qué dosis de adrenalina intramuscular?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 25.54
+ },
+ {
+  "id": "v009",
+  "query": "¿Cómo se realiza una punción lumbar y qué contraindicaciones tiene?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 24.57
+ },
+ {
+  "id": "v010",
+  "query": "¿Qué profilaxis se pauta tras una mordedura de perro?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 19.25
+ },
+ {
+  "id": "v011",
+  "query": "¿Cuál es el protocolo de transfusión masiva?",
+  "intent": "clinica",
+  "top1_score": 0.80126953125,
+  "low_relevance": false,
+  "respuesta": "No encuentro información específica sobre un protocolo denominado \"transfusión masiva\" en los documentos disponibles. Los protocolos proporcionados detallan el **procedimiento para la solicitud, aplicación y trazabilidad de hemoderivados** [1, 3], así como la actuación ante una **sospecha de reacción transfusional** [1, 2].\n\nSi se refiere al procedimiento estándar de transfusión, los pasos a seguir según los protocolos del hospital son los siguientes:\n\n## Procedimiento de Transfusión de Hemoderivados\n\n### 1. Prescripción y Solicitud\n- **Prescripción médica:** La administración debe realizarse siempre por prescripción médica, tras explicar al paciente los riesgos, beneficios y alternativas, obteniendo su conformidad mediante el Consentimiento Informado vigente [3].\n- **Solicitud:** Se debe cumplimentar la solicitud a través de la Historia Clínica Electrónica (HCE) con los datos del paciente, diagnóstico, producto y número de unidades [3]. \n- **Excepción:** Existe una vía específica para la **SOLICITUD DE SANGRE DE EXTREMA URGENCIA** (Anexo 4) [3].\n\n### 2. Preparación y Muestreo\n- **Identificación activa:** Se debe contrastar la identidad del paciente con su pulsera identificativa a pie de cama [3].\n- **Sistema de triple etiquetado:** Se utiliza una pulsera de seguridad transfusional para vincular al paciente, la muestra de sangre y la solicitud mediante pegatinas [3].\n- **Extracción de muestra:** Se debe extraer una muestra de sangre para la cual se requiere un tubo con EDTA (tapón lila) [3].\n\n### 3. Recepción y Verificación del Hemoderivado\n- **Recepción:** El celador transporta el producto en una nevera de poliestireno junto con el equipo de transfusión, la solicitud y la hoja transfusional [3, 5].\n- **Verificación cruzada (Doble verificación):** La enfermera debe comprobar que coincidan los datos del paciente (nombre, apellidos, CIA, número de pulsera) con las etiquetas del hemoderivado, la pulsera y la hoja transfusional [3]. Este proceso de comprobación del grupo a pie de cama debe ser realizado por **dos profesionales** (enfermería o TCAE) [3, 4].\n\n### 4. Administración\n- **Acceso venoso:** Se recomienda una vía exclusiva, preferiblemente de calibre **18 G** [3]. Solo se permite el uso de suero fisiológico 0,9% por la misma vía [2].\n- **Preparación del equipo:** Purgar el sistema con el equipo suministrado y agitar suavemente la unidad para evitar la separación de elementos formes [3, 4].\n- **Ritmo de infusión:**\n    - Los primeros **15 minutos** (o los primeros 50 ml) deben realizarse a velocidad lenta (**20 gotas/minuto**) [3, 4].\n    - Tras comprobar que no hay reacción adversa, se puede regular según el producto:\n        - **Concentrado de hematíes:** Duración 60-120 min (ritmo 30-60 gts/min) [3].\n        - **Plasma:** Duración 20-30 min (ritmo 125-175 gts/min) [3].\n        - **Plaquetas:** Duración 20-30 min (ritmo 125-225 gts/min) [3].\n- **Consideraciones importantes:** No calentar la sangre fuera de sistemas termostatizados especiales, no inyectar medicación en el hemoderivado y evitar la entrada de aire en el equipo [3].\n\n### 5. Registro y Finalización\n- **Registro:** Se debe registrar en la HCE y en la hoja transfusional las constantes vitales (temperatura, pulso, tensión arterial), hora de inicio/fin e incidentes [3, 4].\n- **Post-transfusión:** Al finalizar, se devuelve la hoja de trazabilidad al banco de sangre [2]. La bolsa y el equipo deben desecharse en el contenedor de residuos habilitado (cubo verde con bolsa roja o cubo negro) [3].",
+  "segundos": 37.92
+ },
+ {
+  "id": "v012",
+  "query": "¿Cómo se maneja el delirium en el paciente anciano hospitalizado?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 18.15
+ },
+ {
+  "id": "v013",
+  "query": "¿Qué antibiótico se usa en una pielonefritis aguda?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 22.43
+ },
+ {
+  "id": "v014",
+  "query": "¿Cómo se trata una crisis hipertensiva con daño de órgano diana?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 12.19
+ },
+ {
+  "id": "v015",
+  "query": "¿Cuál es el manejo inicial de una quemadura de segundo grado?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 25.73
+ },
+ {
+  "id": "v016",
+  "query": "¿Cómo se valora y trata la deshidratación en el paciente pediátrico?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 26.16
+ },
+ {
+  "id": "v017",
+  "query": "¿Qué pauta de corticoides se usa en una reagudización de asma?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 19.31
+ },
+ {
+  "id": "v018",
+  "query": "¿Cómo se maneja una hemorragia posparto?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 25.16
+ },
+ {
+  "id": "v019",
+  "query": "¿Cuál es el protocolo de aislamiento ante sospecha de tuberculosis pulmonar?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 25.36
+ },
+ {
+  "id": "v020",
+  "query": "¿Cómo se trata una hipercalcemia tumoral?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 16.62
+ }
+]

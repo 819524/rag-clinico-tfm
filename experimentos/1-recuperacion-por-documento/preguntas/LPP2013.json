@@ -1,0 +1,259 @@
+{
+  "name": "GPC 2013 — Prevención y Tratamiento de las Lesiones por Presión (LPP)",
+  "description": "Ground truth generado a partir de la Guía de Práctica Clínica 'Prevención y Tratamiento de las Lesiones por Presión' del HCU Lozano Blesa (Zaragoza, 2013; GuíaSalud nº 446). Cubre definición y anatomía de la piel, etiopatogenia y factores de riesgo, localizaciones, valoración del riesgo (escala de Norton modificada), cuidados preventivos (piel, humedad, nutrición, manejo de la presión, superficies especiales, educación sanitaria), valoración y estadiaje de la lesión, escala PUSH, fases de cicatrización, cuidados locales TIME (desbridamiento, limpieza, antisépticos, control de infección y biofilms, exudado), complicaciones y metodología enfermera NANDA/NOC/NIC.",
+  "relevant_doc_patterns": ["LPP", "lesiones-por-presion", "ulceras-por-presion", "UPP", "norton", "desbridamiento", "cura-humeda", "GNEAUPP"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Qué es una lesión por presión según la definición del GNEAUPP?",
+      "expected_section": "DEFINICIÓN DE LPP",
+      "expected_quote": "Según la definición del GNEAUPP de 2001, una lesión por presión es una lesión de origen isquémico, localizada en la piel y tejidos subyacentes con pérdida de sustancia cutánea y producida por una presión prolongada, fricción entre dos planos duros o pinzamiento vascular."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Cuáles son las tres capas principales de la piel?",
+      "expected_section": "LA PIEL",
+      "expected_quote": "La piel está constituida por tres capas principales: Epidermis, Dermis e Hipodermis."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Qué tipos de células forman la epidermis y cuál es la más abundante?",
+      "expected_section": "LA PIEL — Epidermis",
+      "expected_quote": "La epidermis está formada por tres tipos de células: queratinocitos (90% de las células epidérmicas, contienen queratina que impermeabiliza y protege la piel), melanocitos (8%, contienen la melanina que da color a la piel) y células de Langerhans (actúan en los fenómenos de respuesta inmunitaria)."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Cuánta presión y durante cuánto tiempo provoca lesiones isquémicas según Kosiak?",
+      "expected_section": "ETIOPATOGENIA",
+      "expected_quote": "En 1958 Kosiak comprobó que una presión externa de sólo 70 mm Hg mantenida durante dos horas podía provocar lesiones isquémicas en todos los tejidos."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Qué diferencia hay entre presión, fricción y cizallamiento en la formación de las LPP?",
+      "expected_section": "ETIOPATOGENIA",
+      "expected_quote": "Presión: fuerza que actúa perpendicular a la piel como consecuencia de la gravedad, provocando un aplastamiento tisular entre dos planos. Fricción: fuerza tangencial que actúa paralelamente a la piel, produciendo roces por movimientos o arrastres. Cizallamiento: combina los efectos de presión y fricción, por lo que la presión necesaria para disminuir la aportación sanguínea es menor y la isquemia se produce más rápidamente."
+    },
+    {
+      "id": "q06",
+      "block": 1,
+      "query": "¿Cuáles son las localizaciones más frecuentes de las LPP en decúbito supino?",
+      "expected_section": "LOCALIZACIONES — Decúbito supino",
+      "expected_quote": "En decúbito supino las localizaciones más frecuentes son el codo, el talón, el omóplato, el sacro y el occipucio."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Qué escala se usa para valorar el riesgo de LPP y en qué plazo se pasa al ingreso?",
+      "expected_section": "VALORACIÓN DE RIESGO — Escala de Norton modificada",
+      "expected_quote": "La Escala de Norton Modificada (ENM) se pasará en las primeras 24 horas después del ingreso. La puntuación oscila entre 5 (máximo riesgo) y 20 (mínimo riesgo)."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Cómo se clasifica el riesgo según la puntuación de la escala de Norton modificada?",
+      "expected_section": "VALORACIÓN DE RIESGO — Escala de Norton modificada",
+      "expected_quote": "La clasificación de riesgo según la ENM es: riesgo alto 5-11, riesgo moderado 12-14 y riesgo mínimo igual o superior a 14."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Con qué periodicidad hay que reevaluar a un paciente según su grado de riesgo?",
+      "expected_section": "VALORACIÓN DE RIESGO",
+      "expected_quote": "Según el grado de riesgo en la EVR: riesgo alto reevaluar en 24 horas, riesgo moderado reevaluar en 3 días y riesgo mínimo reevaluar a los 7 días. En los pacientes ingresados en unidades de cuidados intensivos se recomienda reevaluar diariamente."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Cómo deben cuidarse la piel y el lavado para prevenir las LPP?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Cuidados de la piel",
+      "expected_quote": "Examinar el estado de la piel diariamente, mantenerla limpia y seca, lavar con agua tibia y jabón de potencial irritativo bajo para no alterar el Ph ácido de la piel, realizar un buen secado sin fricción, hidratar la piel con aceites o cremas procurando su completa absorción, no utilizar substancias irritantes como alcoholes o colonia ni secantes como el talco, y no aplicar masaje en zonas enrojecidas ni sobre prominencias óseas."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Qué producto se aplica en las zonas de riesgo o ante un eritema no blanqueante?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Cuidados de la piel",
+      "expected_quote": "Aplicar ácidos grasos hiperoxigenados (AGHO) en las zonas de riesgo o ante la aparición de eritema no blanqueante, extendiendo el producto hasta su total absorción sin masajear."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Cómo se distingue una lesión por humedad de una lesión por presión?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Exceso de humedad",
+      "expected_quote": "En las lesiones por humedad debe haber humedad (piel mojada y brillante causada por incontinencia urinaria o fecal), son superficiales con pérdida parcial de la piel, suelen tener bordes irregulares o difusos y no presentan necrosis; mientras que una herida que no está sobre una prominencia ósea es improbable que sea una UPP."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "¿Cuál es la ingesta recomendada de calorías, proteínas y líquidos para prevenir las LPP?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Nutrición e ingesta de líquidos",
+      "expected_quote": "Se recomienda de forma general una ingesta de calorías de 30-35 Kcal/Kg/día, de proteínas de 1,25-1,50 g/Kg/día y un aporte hídrico de 30 cc/Kg/día."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Con qué frecuencia hay que hacer los cambios posturales en un paciente encamado?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Cambios posturales",
+      "expected_quote": "En pacientes encamados se harán cambios cada 2-3 horas siguiendo una rotación programada e individualizada según el riesgo y las características del paciente. Durante la noche es aconsejable que no superen las 4 horas, y en periodos de sedestación se efectuarán movilizaciones horarias y no se permanecerá más de 2 horas."
+    },
+    {
+      "id": "q15",
+      "block": 2,
+      "query": "¿Cuántos grados como máximo debe elevarse la cama y qué ángulo no debe superarse en decúbito lateral?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Cambios posturales",
+      "expected_quote": "Elevar la cama un máximo de 30º y durante el mínimo tiempo posible. En decúbito lateral no debe superarse los 30º para evitar apoyar sobre los trocánteres, por lo que se recomiendan decúbitos laterales parciales."
+    },
+    {
+      "id": "q16",
+      "block": 2,
+      "query": "¿Qué protección local se recomienda para codos y talones y qué está contraindicado?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Protección local",
+      "expected_quote": "En codos y talones no se deben utilizar vendajes almohadillados; se recomienda el uso de taloneras y coderas de espuma de poliuretano sujetas con malla no compresiva que permitan la inspección diaria de la zona. Los vendajes de crepé están contraindicados."
+    },
+    {
+      "id": "q17",
+      "block": 2,
+      "query": "¿Qué diferencia hay entre superficies especiales de manejo de la presión estáticas y dinámicas?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Superficies especiales (SEMP)",
+      "expected_quote": "Las superficies especiales para el manejo de la presión se clasifican en estáticas, que reducen la presión, y dinámicas, que eliminan la presión. Las dinámicas están indicadas en pacientes de medio y alto riesgo, con movilidad nula o muy limitada, y funcionan mediante celdas de aire que se hinchan y deshinchan de forma alternativa."
+    },
+    {
+      "id": "q18",
+      "block": 2,
+      "query": "¿Las superficies dinámicas sustituyen a los cambios posturales?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Superficies especiales (SEMP)",
+      "expected_quote": "Las superficies especiales dinámicas para el manejo de la presión no sustituyen los cambios posturales."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "¿Cómo se caracteriza una LPP en estadio I?",
+      "expected_section": "TRATAMIENTO — Estadiaje de las LPP",
+      "expected_quote": "El estadio I es una alteración observable en la piel íntegra, relacionada con la presión, que se manifiesta por un eritema cutáneo que no palidece al presionar; en pieles oscuras puede presentar tonos rojos, azules o morados, y puede incluir cambios en la temperatura de la piel, la consistencia del tejido o las sensaciones."
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "¿Qué diferencia hay entre una LPP de estadio III y una de estadio IV?",
+      "expected_section": "TRATAMIENTO — Estadiaje de las LPP",
+      "expected_quote": "El estadio III es la pérdida total del grosor de la piel que implica lesión o necrosis del tejido subcutáneo, que puede extenderse hacia abajo pero no por la fascia subyacente; el estadio IV es la pérdida total del grosor de la piel con destrucción extensa, necrosis del tejido o lesión en músculo, hueso o estructuras de sostén."
+    },
+    {
+      "id": "q21",
+      "block": 3,
+      "query": "¿Qué tipos de tejido pueden aparecer en el lecho de una úlcera?",
+      "expected_section": "TRATAMIENTO — Tipos de tejido del lecho",
+      "expected_quote": "En el lecho de las LPP pueden aparecer tejido necrótico (escara húmeda o seca, oscuro, negro o marrón adherido al lecho), esfacelos, fibrina (tejido amarillento o blanco), tejido de granulación (rojo o rosáceo con apariencia granular húmeda y brillante) y tejido epitelial (nuevo, rosado y brillante que crece desde los bordes)."
+    },
+    {
+      "id": "q22",
+      "block": 3,
+      "query": "¿Qué mide la escala PUSH y qué tres parámetros valora?",
+      "expected_section": "TRATAMIENTO — Escala PUSH",
+      "expected_quote": "La escala PUSH (Pressure Ulcer Scale for Healing), desarrollada por el NPUAP desde 1996, permite documentar la cicatrización de una úlcera por presión valorando la longitud por anchura, la cantidad de exudado y el tipo de tejido presente en el lecho."
+    },
+    {
+      "id": "q23",
+      "block": 3,
+      "query": "¿Cuáles son las tres fases de la cicatrización?",
+      "expected_section": "TRATAMIENTO — Fases de la cicatrización",
+      "expected_quote": "La cicatrización se divide en tres fases: la fase inflamatoria/exudativa (coagulación y hemostasia, inflamación y fagocitosis), la fase de proliferación o angiogénesis (reconstrucción vascular y formación de tejido granular) y la fase de reconstrucción (contracción de la herida, epitelización y remodelación)."
+    },
+    {
+      "id": "q24",
+      "block": 4,
+      "query": "¿Qué significa el acrónimo TIME en la preparación del lecho de la herida?",
+      "expected_section": "TRATAMIENTO — Cuidados locales",
+      "expected_quote": "Los cuatro componentes de la preparación del lecho de la herida se recogen en el acrónimo TIME: control del tejido no viable (T-Tissue), control de la inflamación y de la infección (I-Infection), control del exudado (M-Moisture) y estimulación de los bordes epiteliales (E-Edge)."
+    },
+    {
+      "id": "q25",
+      "block": 4,
+      "query": "¿Qué es el desbridamiento autolítico y qué ventajas tiene?",
+      "expected_section": "TRATAMIENTO — Control del tejido no viable",
+      "expected_quote": "El desbridamiento autolítico consiste en la aplicación de productos de cura húmeda que proporcionan condiciones óptimas de temperatura y humedad para poner en marcha el proceso natural de autolisis. Es la forma menos traumática, más indolora y selectiva, ya que no afecta a los tejidos sanos, aunque presenta una acción más lenta y puede provocar maceración perilesional."
+    },
+    {
+      "id": "q26",
+      "block": 4,
+      "query": "¿Cuándo NO es necesario desbridar una escara del talón de forma inmediata?",
+      "expected_section": "TRATAMIENTO — Desbridamiento quirúrgico/cortante",
+      "expected_quote": "En caso de placas necróticas situadas en talón que no presenten edema, eritema, fluctuación o drenaje, no es necesario su desbridamiento inmediato, precisando el seguimiento diario de la lesión y controlando la aparición de dichos signos. Ésta es una excepción a que toda escara debe ser desbridada."
+    },
+    {
+      "id": "q27",
+      "block": 4,
+      "query": "¿Con qué se debe limpiar una herida crónica y por qué no se usan antisépticos de rutina?",
+      "expected_section": "TRATAMIENTO — Limpieza de las heridas crónicas",
+      "expected_quote": "Se debe utilizar una solución no tóxica como suero fisiológico, agua destilada o agua del grifo potable, con la mínima fuerza mecánica. No se utilizarán antisépticos locales (povidona yodada, clorhexidina, agua oxigenada, ácido acético, hipoclorito) porque son productos de reconocida toxicidad y agresividad con los granulocitos, monocitos, fibroblastos y el tejido de granulación."
+    },
+    {
+      "id": "q28",
+      "block": 4,
+      "query": "¿Cuál es la presión de lavado eficaz y con qué material se consigue?",
+      "expected_section": "TRATAMIENTO — Lavado de la herida",
+      "expected_quote": "Se debe ejercer una presión de lavado efectivo (entre 1-4 Kg/cm2) para facilitar el arrastre de detritos, bacterias y restos de curas anteriores sin producir traumatismos en el tejido sano. La presión de lavado más eficaz es la proporcionada por una jeringuilla de 20-35 ml con una aguja o catéter de 19 mm de diámetro."
+    },
+    {
+      "id": "q29",
+      "block": 4,
+      "query": "¿Qué antiséptico cumple mejor los criterios de elección para heridas crónicas?",
+      "expected_section": "TRATAMIENTO — Utilización de antisépticos",
+      "expected_quote": "El gluconato de clorhexidina al 0,05-1 % es el antiséptico que cumple mejor los criterios de elección, por ser activo frente a la materia orgánica y presentar pocas contraindicaciones, y ha demostrado mayor eficacia en la eliminación de cepas de Estafilococo Aureus Metil Resistente."
+    },
+    {
+      "id": "q30",
+      "block": 4,
+      "query": "¿Qué diferencia hay entre una herida contaminada, colonizada e infectada?",
+      "expected_section": "TRATAMIENTO — Control de la infección",
+      "expected_quote": "Una herida contaminada presenta bacterias que no retrasan la cicatrización; una herida colonizada presenta bacterias que se multiplican pero no retrasan la cicatrización; en la colonización crítica las bacterias ocasionan daños locales y retrasan la cicatrización; y en una herida infectada las bacterias producen daño tisular y respuesta en el huésped, considerándose infección en laboratorio a partir de 100.000 UFC."
+    },
+    {
+      "id": "q31",
+      "block": 4,
+      "query": "¿Qué son los biofilms y por qué son resistentes a los antibióticos?",
+      "expected_section": "TRATAMIENTO — Biofilms",
+      "expected_quote": "Los biofilms microbianos son comunidades de microorganismos que crecen adheridos a una superficie inerte o un tejido vivo, embebidos en una matriz extracelular de exopolisacáridos que ellos mismos sintetizan. Las bacterias del biofilm pueden ser hasta 1000 veces más resistentes a los antibióticos, debido a la incapacidad del antibiótico para penetrar a través de la matriz exopolisacarídica."
+    },
+    {
+      "id": "q32",
+      "block": 4,
+      "query": "¿El exudado de una herida es siempre perjudicial?",
+      "expected_section": "TRATAMIENTO — Control del exudado",
+      "expected_quote": "El exudado ayuda en la cicatrización al evitar que se seque el lecho de la herida, facilitar la migración de las células reparadoras, aportar nutrientes para el metabolismo celular, permitir la difusión de factores inmunitarios y de crecimiento y separar el tejido desvitalizado; solo se convierte en un problema cuando la cantidad producida o su composición impiden la cicatrización."
+    },
+    {
+      "id": "q33",
+      "block": 5,
+      "query": "¿Qué es la celulitis como complicación de una LPP y qué la causa?",
+      "expected_section": "COMPLICACIONES — Celulitis",
+      "expected_quote": "La celulitis es una infección que afecta a partes blandas profundas y que se puede extender muy rápidamente, causada generalmente por el Streptococcus pyogenes o Staphylococcus aureus. A nivel local se observa eritema, dolor y calor, y a nivel general puede aparecer fiebre."
+    },
+    {
+      "id": "q34",
+      "block": 5,
+      "query": "¿Cuándo hay que sospechar una osteomielitis asociada a una LPP?",
+      "expected_section": "COMPLICACIONES — Osteomielitis",
+      "expected_quote": "Hay que sospechar una posible osteomielitis en los casos de lesiones que después de una correcta limpieza y desbridamiento no cicatrizan correctamente y continúan persistiendo signos de infección local. La exteriorización ósea en la base de una lesión tiene valor diagnóstico."
+    },
+    {
+      "id": "q35",
+      "block": 5,
+      "query": "¿Qué diferencia hay entre dolor nociceptivo y dolor neuropático?",
+      "expected_section": "COMPLICACIONES — Dolor",
+      "expected_quote": "El dolor nociceptivo es una respuesta fisiológica normal a un estímulo doloroso, mientras que el dolor neuropático es una respuesta inadecuada provocada por una lesión o disfunción del sistema nervioso, en la que los pacientes sienten dolor al más ligero roce."
+    },
+    {
+      "id": "q36",
+      "block": 5,
+      "query": "¿Qué diagnósticos NANDA se asocian a las LPP en la metodología enfermera?",
+      "expected_section": "METODOLOGÍA ENFERMERA — NANDA, NOC, NIC",
+      "expected_quote": "Los diagnósticos NANDA asociados son el riesgo de deterioro de la integridad cutánea, el deterioro de la integridad cutánea y el deterioro de la integridad tisular, vinculados a los resultados NOC de integridad tisular y curación de la herida y a las intervenciones NIC de prevención de las úlceras por presión (3540) y cuidados de las úlceras por presión (3520)."
+    }
+  ]
+}

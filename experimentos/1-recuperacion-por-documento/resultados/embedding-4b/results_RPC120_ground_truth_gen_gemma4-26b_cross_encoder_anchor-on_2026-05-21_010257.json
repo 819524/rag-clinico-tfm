@@ -1,0 +1,3307 @@
+{
+  "ground_truth": "RPC120_ground_truth.json",
+  "executed_at": "2026-05-21T01:02:57",
+  "mode": "retriever+generator",
+  "model": "gemma4:26b",
+  "collection": "docs_rag_qwen3",
+  "rerank_strategy": "cross_encoder",
+  "cross_encoder_device": "cuda:0",
+  "top_k": 10,
+  "n_questions": 19,
+  "doc_anchor_enabled": true,
+  "doc_anchor_stats": {
+    "anchor_emitted": 18,
+    "anchor_received": 11,
+    "anchor_applied": 6,
+    "gate_reasons": {
+      "ok": 18,
+      "no_citations": 1
+    }
+  },
+  "retriever_metrics": {
+    "HitRate@1": 1.0,
+    "MRR@1": 1.0,
+    "Precision@1": 1.0,
+    "Recall@1": 1.0,
+    "NDCG@1": 1.0,
+    "HitRate@3": 1.0,
+    "MRR@3": 1.0,
+    "Precision@3": 0.9474,
+    "Recall@3": 2.8421,
+    "NDCG@3": 0.9597,
+    "HitRate@5": 1.0,
+    "MRR@5": 1.0,
+    "Precision@5": 0.9053,
+    "Recall@5": 4.5263,
+    "NDCG@5": 0.946,
+    "HitRate@10": 1.0,
+    "MRR@10": 1.0,
+    "Precision@10": 0.7263,
+    "Recall@10": 7.2632,
+    "NDCG@10": 0.979
+  },
+  "memory_stats": {
+    "peak_proc_rss_mb": 1442.9375,
+    "peak_ollama_rss_mb": null
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "query": "¿Puedo usar una cuchilla normal si el paciente tiene mucho vello en el brazo donde le voy a coger la vía?",
+      "block": 1,
+      "expected_section": "PREPARACIÓN DE LA ZONA DE INSERCIÓN",
+      "expected_quote": "Si la zona de inserción presenta gran cantidad de vello, éste se recortará con maquinilla eléctrica. Debe evitarse hacer cortes o erosionar la piel, porque aumenta el riesgo de infección",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "uso de cuchilla convencional en pacientes con presencia de vello abundante en el brazo para la canalización de vía venosa",
+        "keywords": [
+          "cuchilla normal",
+          "mucho vello",
+          "brazo",
+          "coger la vía"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            4,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 4
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.6157,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.5601,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.3105,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.2688,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "PROCEDIMIENTO DE CONTENCIÓN MECÁNICA/INMOVILIZACIÓN TERAPÉUTICA",
+          "h2": "4.4. RECOMENDACIONES GENERALES PARA INTERVENIR",
+          "rerank_score": 0.1107,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "4. DESARROLLO",
+          "h2": "4.4 Procedimiento:",
+          "rerank_score": 0.0499,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "18. GLOSARIO / DEFINICIONES",
+          "rerank_score": 0.043,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "2.3. Maniobras específicas de Reanimación.",
+          "rerank_score": 0.0235,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 8: LAVADO VESICAL",
+          "rerank_score": 0.0224,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.0216,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.222,
+        "Retriever": 18.408,
+        "Generador": 8.26
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No, no se debe utilizar una cuchilla normal. Según los protocolos de cuidados del catéter intravenoso periférico, si la zona de inserción presenta una gran cantidad de vello, el procedimiento indicado es el siguiente:\n\n## Procedimiento para el manejo de vello en la zona de inserción\n\n- **Técnica recomendada**: El vello debe recortarse utilizando una **maquinilla eléctrica** [2].\n- **Precauciones críticas**: Es fundamental **evitar realizar cortes o erosionar la piel**, ya que esto aumenta el riesgo de infección [2, 4].\n\nEsta recomendación tiene un nivel de evidencia **1a** y un grado de recomendación **A** [4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 618,
+        "token_stats": {
+          "prompt_tokens": 8601,
+          "completion_tokens": 152,
+          "total_tokens": 8753,
+          "tokens_per_second": 146.1,
+          "context_used_pct": 53.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.26
+      }
+    },
+    {
+      "id": "q02",
+      "query": "Voy a poner una vía periférica a un bebé recién nacido de 1 mes, ¿le limpio con clorhexidina alcohólica al 2% como a los adultos?",
+      "block": 1,
+      "expected_section": "USO DE ANTISÉPTICOS",
+      "expected_quote": "En niños menores de 2 meses no hay evidencia sobre el uso de clorhexidina. Asunto sin resolver.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "uso de clorhexidina alcohólica al 2% para la limpieza en la inserción de vía periférica en recién nacidos de 1 mes de edad",
+        "keywords": [
+          "vía periférica",
+          "bebé recién nacido",
+          "clorhexidina alcohólica al 2%",
+          "limpio"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            1,
+            3,
+            4,
+            1,
+            3,
+            4,
+            1,
+            3,
+            4,
+            1,
+            3,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 14
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.937,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.9287,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.9014,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.8984,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.7905,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "5. LIQUIDO CEFALORRAQUIDEO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.6611,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "6. LÍQUIDOS ORGÁNICOS",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.2712,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "7. TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+          "h2": "7.3 CUIDADOS LOCALES DE LAS LPP",
+          "rerank_score": 0.2527,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "4. CATÉTERES INTRAVASCULARES",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.2388,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "4. CATÉTERES INTRAVASCULARES",
+          "h2": "B. Obtención de la muestra",
+          "rerank_score": 0.1442,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.387,
+        "Retriever": 17.877,
+        "Generador": 9.22
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la realización de una vía venosa periférica en un bebé de 1 mes, debe tener en cuenta la siguiente recomendación específica del protocolo:\n\n## Uso de antisépticos en neonatos\n\nRespecto al uso de clorhexidina alcohólica al 2%, el protocolo establece lo siguiente:\n\n- **Situación en niños menores de 2 meses:** No existe evidencia científica sobre el uso de clorhexidina en este grupo de edad, por lo que se considera un **asunto sin resolver** [1, 2].\n- **Recomendación general (adultos/otros pacientes):** La recomendación general es preparar la piel con un antiséptico adecuado, siendo preferible la **clorhexidina alcohólica al 2%** [1, 3, 4].\n- **Alternativas en caso de intolerancia:** Si existiera intolerancia, se puede utilizar povidona yodada o alcohol al 70% [1, 3, 4].\n- **Consideración técnica importante:** Independientemente del antiséptico utilizado, es fundamental **dejar secar el producto** antes de la inserción del catéter:\n    - **30 segundos** para la clorhexidina [1, 3, 4].\n    - **2 minutos** en el caso de la povidona yodada [1, 3, 4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1065,
+        "token_stats": {
+          "prompt_tokens": 7991,
+          "completion_tokens": 300,
+          "total_tokens": 8291,
+          "tokens_per_second": 152.5,
+          "context_used_pct": 50.6,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.22
+      }
+    },
+    {
+      "id": "q03",
+      "query": "Le he puesto un apósito transparente de plástico a la vía del paciente. Si está limpio y bien pegado, ¿cuándo se lo tengo que cambiar?",
+      "block": 2,
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_quote": "Cambiar el apósito transparente 1 vez por semana, excepto en aquellos pacientes pediátricos en los que el riesgo de mover el catéter sea mayor que las ventajas derivadas del cambio de apósito",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "frecuencia de cambio de apósito transparente de plástico en vía venosa periférica",
+        "keywords": [
+          "apósito transparente de plástico",
+          "vía",
+          "cambiar"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            3,
+            4,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            1,
+            2,
+            4,
+            1,
+            2,
+            3,
+            4,
+            1,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 22
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.9502,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.8989,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.8975,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.8706,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "Anexos",
+          "h2": "ANEXO 3: CUADROS DE PRODUCTO PARA CURA HUMEDA",
+          "rerank_score": 0.5459,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.4951,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.2032,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.0752,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "Anexos",
+          "h2": "MANEJO DE LA PRESIÓN",
+          "rerank_score": 0.0137,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[8] REGISTRO VVP",
+          "rerank_score": 0.0131,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.059,
+        "Retriever": 17.717,
+        "Generador": 9.66
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Si el apósito transparente que ha colocado en la vía venosa periférica se encuentra limpio y bien pegado, el protocolo establece lo siguiente:\n\n## Frecuencia de cambio del apósito transparente\n\n- **Cambio rutinario:** Debe cambiarse **1 vez por semana** [1, 2, 3, 4].\n- **Cambio por pérdida de integridad:** Debe realizarse un **cambio inmediato** si el apósito presenta cualquiera de las siguientes condiciones:\n    - Está **sucio** [1, 2, 3].\n    - Está **levantado** [1, 2, 3].\n    - Está **mojado** [1, 2, 3].\n\n## Consideraciones adicionales para el mantenimiento\n\n- **Valoración diaria:** Es necesario valorar el lugar de inserción del catéter **diariamente** mediante la inspección o la palpación del apósito [1, 2, 4].\n- **Uso de otros apósitos:** Si el paciente presentara sudoración, sangrado o exudación, el protocolo indica el uso de un **apósito de gasa**, el cual debe cambiarse cada **48 horas** o siempre que no esté íntegro [1, 2, 3, 4].\n- **Registro:** No olvide anotar la **fecha del cambio** del apósito en el registro de enfermería (Gacela) [1, 4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1068,
+        "token_stats": {
+          "prompt_tokens": 9422,
+          "completion_tokens": 310,
+          "total_tokens": 9732,
+          "tokens_per_second": 135.1,
+          "context_used_pct": 59.4,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.66
+      }
+    },
+    {
+      "id": "q04",
+      "query": "El paciente suda mucho y sangraba un poco, así que le he puesto un apósito de gasa en lugar de uno transparente. ¿Cada cuánto se lo cambio?",
+      "block": 2,
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_quote": "El apósito de gasa será sustituido cada 48 horas o siempre que no esté integro (sucio, levantado, mojado…)",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "frecuencia de cambio de apósito de gasa en paciente con diaforesis y sangrado en el contexto de cuidados del catéter intravenoso periférico",
+        "keywords": [
+          "apósito de gasa",
+          "suda mucho",
+          "sangraba",
+          "cambio"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            4,
+            5,
+            1,
+            2,
+            3,
+            1,
+            2,
+            3,
+            4,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 12
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.9761,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.9756,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.9731,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.9609,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.9292,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.7646,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.7241,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.6494,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 4: OTROS PRODUCTOS PARA LAS CURAS DE LESIONES POR PRESIÓN",
+          "h2": "CICATRIZACIÓN ASISTIDA POR VACIO (Terapia V.A.C.)",
+          "rerank_score": 0.6138,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "Anexos",
+          "h2": "ANEXO 3: CUADROS DE PRODUCTO PARA CURA HUMEDA",
+          "rerank_score": 0.5376,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.059,
+        "Retriever": 17.812,
+        "Generador": 8.12
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para el caso que describe, donde el paciente presenta sudoración y sangrado, la elección de un apósito de gasa es la correcta según el protocolo [1, 4, 5].\n\nEn cuanto a la frecuencia de cambio, los criterios son los siguientes:\n\n- **Frecuencia establecida**: El apósito de gasa debe sustituirse **cada 48 horas** [1, 2, 3].\n- **Criterio de cambio inmediato**: El apósito debe cambiarse de forma inmediata si no se encuentra íntegro, es decir, si está **sucio, levantado o mojado** [1, 2, 3, 4].\n\nComo recomendación adicional, recuerde que debe **valorar el lugar de inserción del catéter diariamente** mediante la inspección o la palpación del apósito [1, 2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 659,
+        "token_stats": {
+          "prompt_tokens": 7681,
+          "completion_tokens": 189,
+          "total_tokens": 7870,
+          "tokens_per_second": 154.7,
+          "context_used_pct": 48.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.12
+      }
+    },
+    {
+      "id": "q05",
+      "query": "¿Cada cuántos días se cambian los sueros y las alargaderas de una vía periférica normal?",
+      "block": 3,
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_quote": "Cambiar el equipo de fluidoterapia y accesorios (alargaderas, válvulas, llaves...) a las 96 horas y siempre que estén visiblemente sucios o en caso de desconexiones accidentales",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "frecuencia de cambio de soluciones intravenosas y alargaderas en vía periférica estándar",
+        "keywords": [
+          "sueros",
+          "alargaderas",
+          "vía periférica"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            3,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            3,
+            1,
+            2,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 14
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.606,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.5703,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.4719,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.4062,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.2661,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.2299,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0733,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "HISTORIAL DE REVISIONES",
+          "rerank_score": 0.0287,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "18. GLOSARIO / DEFINICIONES",
+          "rerank_score": 0.0269,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.0255,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.06,
+        "Retriever": 17.922,
+        "Generador": 9.35
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "De acuerdo con los protocolos de cuidados del catéter intravenoso periférico, la frecuencia de cambio depende del tipo de material y de la terapia que se esté administrando:\n\n## Cambio de equipos y accesorios (alargaderas, válvulas, llaves...)\n- **Frecuencia rutinaria**: Se deben cambiar cada **96 horas** [1, 2, 3].\n- **Criterios de cambio inmediato**: Se debe realizar el cambio siempre que los elementos estén **visiblemente sucios** o en caso de una **desconexión accidental** [1, 2].\n- **Excepción (sangre y hemoderivados)**: Los sistemas utilizados para la administración de sangre y hemoderivados deben sustituirse por **cada bolsa infundida** [1, 2].\n\n## Cambio de sistemas para soluciones lipídicas\n- Los sistemas utilizados para la administración de **soluciones lipídicas** deben cambiarse cada **24 horas** [1, 2, 3].\n\n## Información adicional sobre el mantenimiento\n- **No se debe cambiar de forma rutinaria ningún catéter venoso** a menos que exista una indicación clínica [1, 2].\n- El catéter debe retirarse o cambiarse si se presentan signos de **flebitis, infección o mal funcionamiento** [1, 2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1114,
+        "token_stats": {
+          "prompt_tokens": 8645,
+          "completion_tokens": 287,
+          "total_tokens": 8932,
+          "tokens_per_second": 139.5,
+          "context_used_pct": 54.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.35
+      }
+    },
+    {
+      "id": "q06",
+      "query": "Si le estoy pasando nutrición con lípidos o le pongo una transfusión de sangre, ¿también me duran 96 horas los sistemas?",
+      "block": 3,
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_quote": "Cambiar cada 24 horas los sistemas utilizados para la administración de soluciones lipídicas... Los sistemas usados para la administración de sangre y hemoderivados serán sustituidos por cada bolsa infundida",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "duración de los sistemas de cuidados del catéter intravenoso periférico durante la administración de nutrición con lípidos o transfusión de sangre",
+        "keywords": [
+          "nutrición con lípidos",
+          "transfusión de sangre",
+          "96 horas",
+          "sistemas"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            3,
+            1,
+            2,
+            1,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 7
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.9692,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.9604,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.9395,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.8735,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[7] MANTENIMIENTO FLUIDOTERAPIA INTERMITENTE",
+          "rerank_score": 0.7856,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.7627,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.7202,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.6816,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "12. ACTUALIZACIÓN DEL PROTOCOLO",
+          "rerank_score": 0.459,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "rerank_score": 0.3027,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.099,
+        "Retriever": 16.396,
+        "Generador": 8.07
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No, los sistemas no duran 96 horas en ambos casos. Los protocolos establecen tiempos de sustitución diferentes según el tipo de administración:\n\n- **Nutrición con lípidos (soluciones lipídicas):** Los sistemas utilizados para la administración de estas soluciones deben cambiarse **cada 24 horas** [1, 2, 3].\n- **Transfusión de sangre y hemoderivados:** Los sistemas usados para la administración de sangre y hemoderivados deben ser **sustituidos por cada bolsa infundida** [1, 2].\n\nLa duración de **96 horas** se aplica específicamente al cambio del equipo de fluidoterapia y accesorios (alargaderas, válvulas, llaves...), siempre que no estén visiblemente sucios o se produzca una desconexión accidental [1, 4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 713,
+        "token_stats": {
+          "prompt_tokens": 5377,
+          "completion_tokens": 181,
+          "total_tokens": 5558,
+          "tokens_per_second": 139.8,
+          "context_used_pct": 33.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.07
+      }
+    },
+    {
+      "id": "q07",
+      "query": "Para limpiar un tapón antes de poner medicación, le paso la gasita con alcohol y enchufo la jeringa directo, ¿verdad?",
+      "block": 3,
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_quote": "Desinfectar los tapones de los obturadores, válvulas o conexiones con alcohol 70% o clorhexidina alcohólica y esperar 15 segundos antes de acceder al sistema",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "técnica de desinfección de tapón y administración de medicación mediante jeringa en cuidados del catéter intravenoso periférico",
+        "keywords": [
+          "limpiar un tapón",
+          "gasita con alcohol",
+          "enchufo la jeringa directo"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            3,
+            4,
+            1,
+            3,
+            4,
+            1,
+            3,
+            1,
+            1,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 11
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.9097,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.8931,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.8696,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.8569,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.8491,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "3. HEMOCULTIVOS",
+          "rerank_score": 0.6191,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.5801,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "12. TRACTO RESPIRATORIO",
+          "h2": "12.1. TRACTO RESPIRATORIO SUPERIOR",
+          "rerank_score": 0.4556,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[7] MANTENIMIENTO FLUIDOTERAPIA INTERMITENTE",
+          "rerank_score": 0.333,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "7. PIEL Y TEJIDOS BLANDOS",
+          "h2": "7.6. ÚLCERAS POR PRESIÓN",
+          "rerank_score": 0.2407,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.965,
+        "Retriever": 18.722,
+        "Generador": 9.03
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la desinfección de los componentes del sistema antes de administrar medicación, el protocolo establece los siguientes pasos y consideraciones:\n\n## Procedimiento de desinfección\nPara acceder al sistema de forma segura, debe seguir este procedimiento:\n\n- **Desinfección**: Debe desinfectar los tapones de los obturadores, válvulas o conexiones utilizando **alcohol 70%** o **clorhexidina alcohólica** [1, 3, 4].\n- **Tiempo de espera**: Es imprescindible **esperar 15 segundos** después de la desinfección antes de acceder al sistema [1, 3, 4].\n\n## Consideraciones adicionales de mantenimiento\n- **Técnica aséptica**: Es fundamental mantener una técnica aséptica tanto en la inserción como en el cuidado de los catéteres intravasculares [1, 3].\n- **Cierre del sistema**: Debe asegurarse de **tapar todas las llaves de cierre** cuando no se estén utilizando [1].\n- **Permeabilidad**: Tras la administración de tratamiento, se recomienda mantener la permeabilidad del catéter mediante un lavado con **10 ml de suero fisiológico (SF) al 0,9%** para disminuir el riesgo de oclusión [1, 3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1087,
+        "token_stats": {
+          "prompt_tokens": 7986,
+          "completion_tokens": 280,
+          "total_tokens": 8266,
+          "tokens_per_second": 152.7,
+          "context_used_pct": 50.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.03
+      }
+    },
+    {
+      "id": "q08",
+      "query": "Si el paciente no tiene suero continuo y solo le pasamos medicación a ratos, ¿cómo evito que se le obstruya la vía?",
+      "block": 4,
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_quote": "Mantener la permeabilidad del catéter mediante lavado con 10 ml de SF al 0,9% tras la administración del tratamiento o cada 24 horas para disminuir el riesgo de oclusión",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "prevención de la obstrucción de la vía venosa en ausencia de infusión continua y mediante administración intermitente de medicación",
+        "keywords": [
+          "no tiene suero continuo",
+          "medicación a ratos",
+          "obstruya la vía"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 10
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.854,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.7256,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.6646,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.2634,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[7] MANTENIMIENTO FLUIDOTERAPIA INTERMITENTE",
+          "rerank_score": 0.1937,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 8: LAVADO VESICAL",
+          "rerank_score": 0.1903,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.157,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "18. GLOSARIO / DEFINICIONES",
+          "rerank_score": 0.1389,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.1245,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.1067,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.143,
+        "Retriever": 14.986,
+        "Generador": 9.24
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para evitar la obstrucción de la vía venosa periférica cuando se realiza una perfusión intermitente (es decir, cuando no hay suero continuo), debe seguir las siguientes pautas de mantenimiento:\n\n## Mantenimiento de la permeabilidad\n\nPara disminuir el riesgo de oclusión en pacientes con administración de tratamiento intermitente, se debe:\n\n- **Realizar lavados periódicos**: Es necesario mantener la permeabilidad del catéter mediante un lavado periódico con **10 ml de suero fisiológico al 0,9%** [1, 2].\n- **Frecuencia del lavado**: Este lavado debe realizarse:\n    - Tras la administración de cada tratamiento [1, 2].\n    - O, en su defecto, cada **24 horas** [1, 2].\n\n## Otras consideraciones de mantenimiento\n\nPara asegurar el buen funcionamiento del sistema y evitar complicaciones, considere también:\n\n- **Desinfección de conexiones**: Antes de acceder al sistema (por ejemplo, para administrar medicación), debe desinfectar los tapones de los obturadores, válvulas o conexiones con **alcohol 70% o clorhexidina alcohólica**, esperando **15 segundos** antes de la manipulación [1].\n- **Cierre de vías**: Es fundamental **tapar todas las llaves de cierre** cuando no se estén utilizando [1].\n- **Vigilancia**: Debe valorar el lugar de inserción del catéter diariamente mediante la inspección o la palpación del apósito [1]. Si detecta signos de **mal funcionamiento del catéter**, debe proceder a su retirada o cambio [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1429,
+        "token_stats": {
+          "prompt_tokens": 4895,
+          "completion_tokens": 347,
+          "total_tokens": 5242,
+          "tokens_per_second": 140.7,
+          "context_used_pct": 32.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.24
+      }
+    },
+    {
+      "id": "q09",
+      "query": "El paciente llegó por Urgencias muy inestable y le cogieron la vía corriendo en medio del pasillo. ¿Se la dejo los mismos días que a los de planta?",
+      "block": 4,
+      "expected_section": "RETIRADA DEL CATÉTER",
+      "expected_quote": "Cuando la adherencia a la técnica aséptica no puede ser asegurada (ej. catéter insertado en una emergencia) retire el catéter tan pronto como sea posible, por ej. las primeras 48 h",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "duración del mantenimiento de la vía venosa periférica en pacientes inestables procedentes de urgencias en comparación con pacientes en planta",
+        "keywords": [
+          "paciente",
+          "Urgencias",
+          "inestable",
+          "vía",
+          "planta"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 8
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.6719,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.5864,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.4895,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.458,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.4434,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "ANEXO 2: CUIDADOS PERIPARO. PREVENCIÓN PCR Y MANEJO ARRITMIAS.",
+          "rerank_score": 0.291,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "Taquicardias con PULSO",
+          "rerank_score": 0.1575,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "7. ASISTENCIA EN UCI",
+          "h2": "7. ASISTENCIA EN UCI",
+          "rerank_score": 0.0922,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.0754,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0631,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 5.998,
+        "Retriever": 17.223,
+        "Generador": 9.1
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Respecto a su consulta sobre el mantenimiento de la vía venosa periférica (CVP) en pacientes que han sido canalizados en situaciones de inestabilidad en Urgencias, el protocolo de **Cuidados del Catéter Intravenoso Periférico** establece criterios de mantenimiento basados en el tipo de apósito y la terapia, independientemente del lugar o la urgencia de la canalización [1].\n\nLos criterios para el cambio de los elementos de la vía son los siguientes:\n\n## Mantenimiento del Catéter y Apósitos\n\n- **Cambio de apósito:**\n    - Si el paciente tiene un **apósito transparente**: se debe realizar el cambio **semanalmente** [1].\n    - Si el paciente **no tiene apósito transparente**: el cambio debe realizarse **cada 48 horas** [1].\n    - **Criterio de cambio inmediato:** Se debe cambiar el apósito de forma inmediata si este se encuentra **sucio, levantado o mojado** [1].\n    - **Uso de gasa:** Si el paciente presenta **sudoración, sangrado o exudación**, se debe utilizar un apósito de gasa [1].\n\n- **Cambio de equipo (sistema de infusión):**\n    - Si el equipo está **sucio** o ha habido una **desconexión accidental**, se debe realizar un **cambio inmediato** [1].\n    - Si el paciente está recibiendo **fluidoterapia continua**, el cambio del equipo debe realizarse **cada 96 horas** [1].\n\n## Consideraciones adicionales para la valoración\nIndependientemente de la frecuencia programada, el profesional debe **valorar el lugar de inserción del catéter diariamente** mediante la inspección o la palpación del apósito [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1525,
+        "token_stats": {
+          "prompt_tokens": 5930,
+          "completion_tokens": 379,
+          "total_tokens": 6309,
+          "tokens_per_second": 155.1,
+          "context_used_pct": 38.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.1
+      }
+    },
+    {
+      "id": "q10",
+      "query": "Oye, ¿hay que cambiar la vía de sitio de forma rutinaria cada 3 o 4 días como se hacía antiguamente?",
+      "block": 4,
+      "expected_section": "RETIRADA DEL CATÉTER",
+      "expected_quote": "No cambiar de forma rutinaria ningún catéter venoso a no ser que esté clínicamente recomendado",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "cambio de la ubicación del catéter intravenoso periférico de forma rutinaria cada 3 o 4 días en el marco de los CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+        "keywords": [
+          "cambiar la vía de sitio",
+          "rutinaria",
+          "3 o 4 días"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            4,
+            1,
+            2,
+            1,
+            2,
+            5,
+            2,
+            1,
+            2,
+            4,
+            2,
+            1,
+            2,
+            4,
+            1,
+            3,
+            4,
+            1,
+            2,
+            4,
+            5,
+            1,
+            3,
+            4,
+            1,
+            2,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 29
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.981,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.9731,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.9697,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.9629,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.9243,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.9131,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.8442,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "18. GLOSARIO / DEFINICIONES",
+          "rerank_score": 0.7622,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.7314,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "HISTORIAL DE REVISIONES",
+          "rerank_score": 0.5933,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.293,
+        "Retriever": 20.249,
+        "Generador": 10.05
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No, la práctica de cambiar el catéter de forma rutinaria cada 3 o 4 días no es la recomendación actual. Según los protocolos vigentes, **no se debe cambiar de forma rutinaria ningún catéter venoso a no ser que esté clínicamente indicado** [1, 4].\n\nEl cambio del catéter solo debe realizarse si se presentan los siguientes criterios:\n- **Signos clínicos:** Si existen signos de **flebitis, infección o mal funcionamiento** del catéter [1, 2].\n- **Necesidad clínica:** Si el catéter ya no es imprescindible [1, 2, 5].\n- **Seguridad en la técnica:** En casos donde la adherencia a la técnica aséptica no pueda ser asegurada (por ejemplo, en una emergencia), se debe retirar el catéter tan pronto como sea posible, preferiblemente en las primeras 48 horas [2].\n\nLo que sí debe cambiarse de forma programada o según su estado son los elementos del sistema de infusión, siguiendo estos criterios:\n\n## Mantenimiento de apósitos y equipos\n- **Apósitos transparentes:** Cambiar **1 vez por semana** [1, 2, 4], a menos que el paciente sea pediátrico y el riesgo de mover el catéter sea mayor que la ventaja del cambio [2].\n- **Apósitos de gasa:** Cambiar cada **48 horas** [1, 2, 4] o siempre que no estén íntegros (sucios, levantados o mojados) [1, 3, 4].\n- **Equipo de fluidoterapia y accesorios** (alargaderas, válvulas, llaves...): Cambiar cada **96 horas** [1, 2, 4, 5] o siempre que estén visiblemente sucios o tras una desconexión accidental [1, 3, 4].\n- **Sistemas para soluciones lipídicas:** Cambiar cada **24 horas** [1, 2].\n- **Sistemas para sangre y hemoderivados:** Sustituir por **cada bolsa infundida** [1, 2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1616,
+        "token_stats": {
+          "prompt_tokens": 6200,
+          "completion_tokens": 461,
+          "total_tokens": 6661,
+          "tokens_per_second": 155.2,
+          "context_used_pct": 40.7,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.05
+      }
+    },
+    {
+      "id": "q11",
+      "query": "Si utilizo guantes estériles para canalizar la vía, ¿ya no hace falta que me lave las manos antes?",
+      "block": 5,
+      "expected_section": "10. RECOMENDACIONES - HIGIENE DE MANOS",
+      "expected_quote": "El uso de guantes no excluye el lavado de manos (1,2).",
+      "labels": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "necesidad de lavado de manos previo al uso de guantes estériles para canalización de vía",
+        "keywords": [
+          "guantes estériles",
+          "canalizar la vía",
+          "lave las manos"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            1,
+            2,
+            1,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 6
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.8589,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.7207,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 8: LAVADO VESICAL",
+          "rerank_score": 0.7012,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.6025,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.5518,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "6. Anexos",
+          "h2": "6.9 ANEXO IX: LISTA VERIFICACIÓN",
+          "rerank_score": 0.4473,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 9: RETIRADA SONDA VESICAL",
+          "rerank_score": 0.3694,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.2292,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.219,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.2115,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.145,
+        "Retriever": 15.564,
+        "Generador": 8.13
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No, el uso de guantes no sustituye la necesidad de realizar la higiene de manos.\n\nDe acuerdo con los protocolos de **Cuidados del Catéter Intravenoso Periférico**, se establece explícitamente que **el uso de guantes no excluye el lavado de manos** [1, 2].\n\nPara la fase de **preparación** de la vía venosa periférica, el protocolo indica lo siguiente:\n- Se debe realizar una **correcta higiene de manos** utilizando jabón antiséptico o solución hidroalcohólica [1, 2].\n- Es obligatorio **garantizar la higiene de manos** tanto antes como después de palpar las zonas de inserción, así como en cualquier otro manejo de la vía venosa periférica (VVP) [1, 2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 655,
+        "token_stats": {
+          "prompt_tokens": 6578,
+          "completion_tokens": 176,
+          "total_tokens": 6754,
+          "tokens_per_second": 154.2,
+          "context_used_pct": 41.2,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.13
+      }
+    },
+    {
+      "id": "q12",
+      "query": "¿Es necesario que le explique al paciente para qué le pongo la vía o qué tiene que vigilar?",
+      "block": 5,
+      "expected_section": "10. RECOMENDACIONES - INFORMACIÓN AL PACIENTE",
+      "expected_quote": "Informar al paciente sobre el procedimiento a realizar y los motivos de la inserción. Animar a los pacientes a comunicar al personal sanitario cualquier cambio que noten en la zona de inserción de su catéter o cualquier molestia.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "necesidad de explicar al paciente la finalidad de la canalización de la vía y los signos de vigilancia en el marco de los CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+        "keywords": [
+          "explique al paciente",
+          "vía",
+          "vigilar"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [],
+          "citation_counts_by_doc": {},
+          "dominant_doc_id": null,
+          "dominant_ratio": null,
+          "chunks_in_topk": null,
+          "gate_reason": "no_citations"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.9448,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.9424,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.9424,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.9126,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "18. GLOSARIO / DEFINICIONES",
+          "rerank_score": 0.9087,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.9058,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.8584,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "4. POBLACIÓN DIANA / EXCEPCIONES",
+          "rerank_score": 0.344,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "I N D I C E",
+          "rerank_score": 0.2847,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "6. CONSIDERACIÓN DE PUNTOS DE VISTA Y PREFERENCIAS DEL PACIENTE",
+          "rerank_score": 0.1002,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.231,
+        "Retriever": 16.869,
+        "Generador": 7.04
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No encuentro esa información en los protocolos disponibles.\n\nLos documentos proporcionados se centran en los aspectos técnicos, clínicos y de seguridad para la inserción, mantenimiento y retirada del catéter intravenoso periférico (como la técnica aséptica, el uso de antisépticos, la fijación y la valoración de complicaciones), pero no contienen instrucciones específicas sobre la comunicación verbal o la información que debe recibirse por parte del profesional sanitario hacia el paciente.",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 493,
+        "token_stats": {
+          "prompt_tokens": 2932,
+          "completion_tokens": 96,
+          "total_tokens": 3028,
+          "tokens_per_second": 159.7,
+          "context_used_pct": 18.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.04
+      }
+    },
+    {
+      "id": "q13",
+      "query": "A un paciente que es alérgico a la clorhexidina le he limpiado la piel con Betadine (povidona yodada). ¿Puedo pinchar al momento?",
+      "block": 5,
+      "expected_section": "USO DE ANTISÉPTICOS",
+      "expected_quote": "Dejar secar el antiséptico antes de la inserción del catéter o el cambio de apósito (1-5): - 30 segundos para la clorhexidina - 2 minutos en el caso de la povidona yodada",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimiento de canalización venosa tras limpieza de la piel con povidona yodada en paciente con alergia a la clorhexidina",
+        "keywords": [
+          "alérgico a la clorhexidina",
+          "Betadine",
+          "povidona yodada",
+          "pinchar"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            3,
+            1,
+            2,
+            1,
+            3,
+            1,
+            3,
+            1,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 11
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.9155,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.8965,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.813,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.6606,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "7. TRATAMIENTO DE LAS LESIONES POR PRESIÓN",
+          "h2": "7.3 CUIDADOS LOCALES DE LAS LPP",
+          "rerank_score": 0.6108,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "4. DESARROLLO",
+          "h2": "4.3 Material necesario:",
+          "rerank_score": 0.5386,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "12. TRACTO RESPIRATORIO",
+          "h2": "12.2.3. Muestras obtenidas por abordaje percutáneo",
+          "rerank_score": 0.3186,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "PROCEDIMIENTO DE ACTUACIÓN EN EL ACCIDENTE OCUPACIONAL CON MATERIAL BIOLÓGICO",
+          "h2": "6. PAUTA GENERAL DE ACTUACIÓN ANTE EXPOSICIONES ACCIDENTALES",
+          "rerank_score": 0.2581,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "4. Carro de Parada",
+          "rerank_score": 0.1851,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "4. DESARROLLO",
+          "h2": "4.4 Procedimiento:",
+          "rerank_score": 0.1711,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.342,
+        "Retriever": 18.052,
+        "Generador": 9.46
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.8,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para responder a su consulta sobre la realización de la punción tras la aplicación de povidona yodada en un paciente alérgico a la clorhexidina, se detallan los siguientes puntos basados en los protocolos de cuidados del catéter intravenoso periférico:\n\n## Uso de antiséptico en caso de alergia\nEn pacientes con intolerancia o alergia a la clorhexidina, el protocolo establece que se debe utilizar **povidona yodada** o **alcohol al 7 70%** [1, 2, 3]. Por tanto, el uso de Betadine (povidona yodada) es el procedimiento correcto ante la alergia mencionada [1, 2].\n\n## Tiempo de espera para la punción\nNo puede pinchar de forma inmediata. Es imprescindible respetar el tiempo de secado del antiséptico para asegurar la eficacia del procedimiento:\n- **Povidona yodada:** Debe dejarse secar durante **2 minutos** [1, 3].\n- (Como referencia, para la clorhexidina el tiempo de secado es de 30 segundos) [1, 3].\n\n**En resumen:** Debe esperar a que la povidona yodada se haya secado completamente (2 minutos) antes de proceder a la inserción del catéter [1, 3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1054,
+        "token_stats": {
+          "prompt_tokens": 11655,
+          "completion_tokens": 290,
+          "total_tokens": 11945,
+          "tokens_per_second": 147.5,
+          "context_used_pct": 72.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.46
+      }
+    },
+    {
+      "id": "q14",
+      "query": "¿Tengo que levantar la pegatina transparente todos los días para ver si el punto de punción está rojo?",
+      "block": 6,
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_quote": "Valorar el lugar de inserción del catéter diariamente mediante inspección o palpación del apósito (1-3).",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "frecuencia de retiro del apósito transparente para la inspección de eritema en el punto de punción",
+        "keywords": [
+          "levantar la pegatina transparente",
+          "punto de punción",
+          "rojo"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            3,
+            1,
+            2,
+            1,
+            4,
+            1,
+            4,
+            1,
+            4,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 11
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.7124,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.686,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.4819,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.2469,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 8: RECOMENDACIONES",
+          "h2": "RECOMENDACIONES EN CUANTO AL TRATAMIENTO DE LAS LPP",
+          "rerank_score": 0.1014,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.0644,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.0602,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.0601,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "12. TRACTO RESPIRATORIO",
+          "h2": "12.2.4. Muestras extrapulmonares",
+          "rerank_score": 0.018,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0143,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.147,
+        "Retriever": 19.7,
+        "Generador": 8.79
+      },
+      "memory_mb": {
+        "proc_before": 1442.8,
+        "proc_after_retriever": 1442.9,
+        "proc_delta_retriever": 0.1,
+        "proc_after_generator": 1442.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No es necesario levantar la pegatina para realizar la valoración, ya que el protocolo establece lo siguiente:\n\n## Valoración del punto de punción\n- Se debe **valorar el lugar de inserción** del catéter **diariamente** mediante **inspección o palpación del apósito** [1, 3].\n- El uso de **apósitos transparentes semipermeables** estériles tiene como objetivo permitir la valoración del punto de punción con la **mínima manipulación** [1, 2].\n\n## Criterios para el cambio del apósito\nNo debe levantar el apósito de forma rutinaria, sino únicamente si se cumplen los siguientes criterios:\n- **Si el apósito es transparente:** Se debe cambiar **1 vez por semana** [1, 4].\n- **Si el apósito es de gasa:** Se debe cambiar cada **48 horas** [1, 4].\n- **En cualquier caso (independientemente del tipo):** Se debe realizar un **cambio inmediato** si el apósito no está íntegro, es decir, si está **sucio, levantado o mojado** [1, 4].\n\nEn resumen, la inspección debe realizarse a través del apósito transparente para evitar la manipulación innecesaria, levantándolo solo si se detecta que no está íntegro [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1099,
+        "token_stats": {
+          "prompt_tokens": 7780,
+          "completion_tokens": 293,
+          "total_tokens": 8073,
+          "tokens_per_second": 153.0,
+          "context_used_pct": 49.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.79
+      }
+    },
+    {
+      "id": "q15",
+      "query": "Si en una llave de tres pasos me sobra una conexión por la que no le estoy pasando nada, ¿puedo dejarla destapada?",
+      "block": 6,
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_quote": "Tapar todas las llaves de cierre cuando no se estén usando (1,2).",
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "uso de conexión libre en llave de tres vías sin flujo",
+        "keywords": [
+          "llave de tres pasos",
+          "conexión",
+          "destapada"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            3,
+            5
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 2
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.2474,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 8: LAVADO VESICAL",
+          "rerank_score": 0.0534,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-178-Z3-E-C-PROCEDIMIENTO-ANTE-RETENCION-AGUDA-DE-ORINA-EN-PACIENTE-HOSPITALARIO",
+          "h1": "PROCEDIMIENTO ANTE RETENCIÓN AGUDA DE ORINA EN PACIENTE HOSPITALIZADO",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0366,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0182,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "4. DESARROLLO",
+          "h2": "4.4 Procedimiento:",
+          "rerank_score": 0.0095,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0093,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "PROCEDIMIENTO DE CONTENCIÓN MECÁNICA/INMOVILIZACIÓN TERAPÉUTICA",
+          "h2": "4.6. PASOS A SEGUIR EN LA PRÁCTICA DEL PROCEDIMIENTO",
+          "rerank_score": 0.0068,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "4. Carro de Parada",
+          "rerank_score": 0.0066,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.0065,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 5: CONEXIÓN URIMETER A SONDA O CAMBIO DE BOLSA DE DIURESIS",
+          "rerank_score": 0.0062,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.789,
+        "Retriever": 17.371,
+        "Generador": 7.57
+      },
+      "memory_mb": {
+        "proc_before": 1442.9,
+        "proc_after_retriever": 1442.9,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No, no debe dejarla destapada. Según los protocolos de mantenimiento de la vía venosa periférica, debe **tapar todas las llaves de cierre cuando no se estén usando** [3, 5].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 173,
+        "token_stats": {
+          "prompt_tokens": 10547,
+          "completion_tokens": 50,
+          "total_tokens": 10597,
+          "tokens_per_second": 150.4,
+          "context_used_pct": 64.7,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.57
+      }
+    },
+    {
+      "id": "q16",
+      "query": "He terminado de poner una vía, ¿qué cosas concretas tengo que apuntar en el ordenador (Gacela)?",
+      "block": 6,
+      "expected_section": "REGISTRO DE CVP",
+      "expected_quote": "Cumplimentar en el registro de enfermería: Tipo CVP y calibre. Fecha y lugar de inserción. Fecha de los cambios del sistema y del apósito. Incidencias relacionadas con el mantenimiento del catéter. Fecha de retirada del catéter y motivo. Nombre de la enfermera.",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "registros necesarios en el sistema Gacela tras la inserción de una vía venosa",
+        "keywords": [
+          "poner una vía",
+          "apuntar",
+          "Gacela"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            5,
+            1,
+            5,
+            1,
+            5,
+            1,
+            5,
+            1,
+            5,
+            1,
+            5,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 14
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.9551,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.9497,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.6396,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "2013_Prevencion-y-Tratamiento-de-las-LPP",
+          "h1": "ANEXO 7: REGISTRO DE LAS LESIONES POR PRESIÓN",
+          "h2": "ANEXO 7: REGISTRO DE LAS LESIONES POR PRESIÓN",
+          "rerank_score": 0.2622,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.1791,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-17-Z3-E-C-Rev-C-Actuación-con-fallecidos-y-cuidados-post-mortem",
+          "h1": "PROCEDIMIENTO DE ACTUACION CON FALLECIDOS Y CUIDADOS POST-MORTEM",
+          "h2": "4. DESARROLLO:",
+          "rerank_score": 0.1772,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[8] REGISTRO VVP",
+          "rerank_score": 0.1763,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "14. EVALUACIÓN DEL GRADO DE APLICABILIDAD DEL PROTOCOLO",
+          "rerank_score": 0.0659,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "6. Anexos",
+          "h2": "6.9 ANEXO IX: LISTA VERIFICACIÓN",
+          "rerank_score": 0.0551,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-17-Z3-E-C-Rev-C-Actuación-con-fallecidos-y-cuidados-post-mortem",
+          "h1": "PROCEDIMIENTO DE ACTUACION CON FALLECIDOS Y CUIDADOS POST-MORTEM",
+          "h2": "5. RESPONSABILIDADES:",
+          "rerank_score": 0.0435,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.972,
+        "Retriever": 16.236,
+        "Generador": 8.37
+      },
+      "memory_mb": {
+        "proc_before": 1442.9,
+        "proc_after_retriever": 1442.9,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Tras la canalización de una vía venosa periférica (CVP), debe realizar el registro correspondiente en el sistema **Gacela** (específicamente en el registro de enfermería) [1, 5].\n\nLos datos concretos que debe anotar son los siguientes:\n\n- **Tipo de CVP y calibre** utilizado [1, 5].\n- **Fecha y lugar de inserción** [1, 5].\n- **Fecha de los cambios** realizados en el sistema y en el apósito [1, 5].\n- **Incidencias** relacionadas con el mantenimiento del catéter [1, 5].\n- **Nombre de la enfermera** que realiza el procedimiento [1, 5].\n\nAdicionalmente, en caso de que se proceda a la **retirada** del catéter, el protocolo indica que también debe registrarse:\n- **Fecha de retirada** [1].\n- **Motivo** de la retirada [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 723,
+        "token_stats": {
+          "prompt_tokens": 8036,
+          "completion_tokens": 211,
+          "total_tokens": 8247,
+          "tokens_per_second": 152.8,
+          "context_used_pct": 50.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.37
+      }
+    },
+    {
+      "id": "q17",
+      "query": "El paciente se queja de que le escuece la vía al pasarle el suero. ¿Cómo puedo saber si se ha extravasado fuera de la vena?",
+      "block": 7,
+      "expected_section": "18. GLOSARIO / DEFINICIONES",
+      "expected_quote": "Extravasación: Salida del líquido que se está perfundiendo, desde la vena a los tejidos circundantes. Suele ir acompañada de signos y síntomas como; inflamación, dolor, sensación de quemazón local, tirantez en la zona de punción, palidez y frialdad de la piel y disminución del flujo de la perfusión.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "identificación de extravasación de fluidos intravenosos ante la presencia de sensación de escozor en la vía",
+        "keywords": [
+          "escuece",
+          "vía",
+          "suero",
+          "extravasado",
+          "fuera de la vena"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            3,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 18
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 4,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.5479,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "18. GLOSARIO / DEFINICIONES",
+          "rerank_score": 0.3025,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.1245,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.0901,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0694,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.064,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "PROCEDIMIENTO PARA LA SOLICITUD, APLICACIÓN Y TRAZABILIDAD DE HEMODERIVADOS",
+          "h2": "4. DESCRIPCIÓN DEL PROCEDIMIENTO",
+          "rerank_score": 0.0468,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.0408,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0368,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0163,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.21,
+        "Retriever": 16.994,
+        "Generador": 8.64
+      },
+      "memory_mb": {
+        "proc_before": 1442.9,
+        "proc_after_retriever": 1442.9,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para identificar si se ha producido una **extravasación** (salida del líquido perfundido desde la vena hacia los tejidos circundantes), debe realizar una valoración clínica de la zona de punción buscando los siguientes signos y síntomas [1, 2]:\n\n- **Inflamación** [1, 2].\n- **Dolor** [1, 2].\n- **Sensación de quemazón local** [1, 2].\n- **Tirantez** en la zona de punción [1, 2].\n- **Palidez** de la piel [1, 2].\n- **Frialdad** de la piel [1, 2].\n- **Disminución del flujo de la perfusión** [1, 2].\n\nComo profesional sanitario, también debe realizar una **inspección o palpación del apósito** diariamente para valorar el lugar de inserción del catéter [3, 4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 658,
+        "token_stats": {
+          "prompt_tokens": 8237,
+          "completion_tokens": 207,
+          "total_tokens": 8444,
+          "tokens_per_second": 153.0,
+          "context_used_pct": 51.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.64
+      }
+    },
+    {
+      "id": "q18",
+      "query": "Tiene un poco de rojez en la piel siguiendo la vena, ¿eso ya es una flebitis declarada?",
+      "block": 7,
+      "expected_section": "18. GLOSARIO / DEFINICIONES",
+      "expected_quote": "Eritema: enrojecimiento de la piel a lo largo del recorrido de una vena que resulta de la irritación vascular o congestión capilar en respuesta a la irritación, puede ser un precursor de la flebitis.",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "presencia de eritema siguiendo el trayecto venoso como signo de flebitis en el contexto de cuidados del catéter intravenoso periférico",
+        "keywords": [
+          "rojez",
+          "piel",
+          "vena",
+          "flebitis"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            3,
+            3,
+            5,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 24
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.9678,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "18. GLOSARIO / DEFINICIONES",
+          "rerank_score": 0.9653,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "13. ALGORITMO DE ACTUACIÓN",
+          "rerank_score": 0.9438,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.9043,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.9043,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.8789,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.8579,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "[6] MANTENIMIENTO",
+          "rerank_score": 0.7959,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "1. RESUMEN",
+          "rerank_score": 0.6992,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.5117,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 5.98,
+        "Retriever": 17.776,
+        "Generador": 10.22
+      },
+      "memory_mb": {
+        "proc_before": 1442.9,
+        "proc_after_retriever": 1442.9,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para responder a su duda, es importante diferenciar entre el **eritema** y la **flebitis** según las definiciones del protocolo:\n\n## Diferenciación clínica\n\n- **Eritema**: Se define como el enrojecimiento de la piel a lo largo del recorrido de una vena, producto de la irritación vascular o congestión capilar [2]. Es importante destacar que el eritema **puede ser un precursor de la flebitis** [2].\n- **Flebitis**: Se define como la inflamación de la pared de la vena debido a una alteración del endotelio [1, 2]. Para que se considere como tal, debe estar caracterizada por la presencia de uno o varios de los siguientes signos y síntomas:\n    - Dolor [1, 2]\n    - Eritema (rojez) [1, 2]\n    - Sensibilidad [1, 2]\n    - Calor [1, 2]\n    - Hinchazón [1, 2]\n    - Induración [1, 2]\n    - Purulencia [1, 2]\n    - Cordón venoso palpable [1, 2]\n\n## Actuación recomendada\n\nAnte la presencia de estos signos, el protocolo establece las siguientes pautas:\n\n- **Valoración**: Se debe realizar una valoración diaria del lugar de inserción del catéter mediante la inspección o palpación del apósito [3].\n- **Decisión clínica**: El profesional debe **retirar o cambiar el catéter** si existen signos de flebitis, infección o mal funcionamiento del mismo [3, 5].\n- **Registro**: Cualquier incidencia relacionada con el mantenimiento del catéter debe quedar cumplimentada en el registro de enfermería [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1393,
+        "token_stats": {
+          "prompt_tokens": 8779,
+          "completion_tokens": 379,
+          "total_tokens": 9158,
+          "tokens_per_second": 137.2,
+          "context_used_pct": 55.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.22
+      }
+    },
+    {
+      "id": "q19",
+      "query": "Mi supervisora me pregunta cuál es el estándar de calidad máximo aceptable para la tasa de flebitis en el hospital, ¿qué le respondo?",
+      "block": 7,
+      "expected_section": "15. INDICADORES DE EVALUACIÓN",
+      "expected_quote": "Nombre del indicador: Catéteres Intravenosos Periféricos con flebitis [...] Estándar: 5,5%",
+      "labels": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "estándar de calidad máximo aceptable para la tasa de flebitis en el ámbito hospitalario",
+        "keywords": [
+          "estándar de calidad",
+          "tasa de flebitis",
+          "hospital"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "title": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            4,
+            1,
+            2,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO": 11
+          },
+          "dominant_doc_id": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.9204,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "15. INDICADORES DE EVALUACIÓN",
+          "rerank_score": 0.5308,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "PROTOCOLO CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "ANEXO 2. ESTRATEGIA BÚSQUEDA BIBLIOGRÁFICA",
+          "rerank_score": 0.1199,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "3. OBJETIVOS",
+          "rerank_score": 0.088,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "10. RECOMENDACIONES",
+          "rerank_score": 0.0779,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RCP-120CUIDADOS-DEL-CATETER-INTRAVENOSO-PERIFERICO",
+          "h1": "CUIDADOS DEL CATETER INTRAVENOSO PERIFÉRICO",
+          "h2": "18. GLOSARIO / DEFINICIONES",
+          "rerank_score": 0.0604,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "2. JUSTIFICACIÓN",
+          "rerank_score": 0.0319,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "ANEXO 1. MEDIDAS A IMPLEMENTAR SEGÚN EL NIVEL",
+          "h2": "ANEXO 1.5. ASISTENCIA EN HOSPITALIZACIÓN CONVENCIONAL",
+          "rerank_score": 0.0151,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-199-PROCEDIMIENTO-DE-VIGILANCIA-DE-INFECCIONES-DE-LOCALIZACIÓN-QUIRÚRGICA-ILQ-EN-EL-HCULB",
+          "h1": "6.- ANEXOS",
+          "h2": "ANEXO I: VARIABLES A REGISTRAR EN LA ENCUESTA EPIDEMIOLÓGICA DE INFECCIONES DE LOCALIZACIÓN QUIRÚRGICA (ILQ)",
+          "rerank_score": 0.0117,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6. ANEXOS",
+          "h2": "6.2 INDICADORES",
+          "rerank_score": 0.0095,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.914,
+        "Retriever": 17.38,
+        "Generador": 9.49
+      },
+      "memory_mb": {
+        "proc_before": 1442.9,
+        "proc_after_retriever": 1442.9,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 1442.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para responder a tu supervisora, puedes indicarle que el estándar de calidad establecido para el indicador de **flebitis** en el hospital es del **5,5%** [2].\n\nA continuación, te detallo la información relevante que sustenta este valor y el contexto de otros datos relacionados con la seguridad del paciente:\n\n## Indicador de Evaluación: Flebitis\nDe acuerdo con los indicadores de evaluación del protocolo de cuidados del catéter intravenoso periférico (CVP):\n- **Estándar de calidad:** 5,5% [2].\n- **Tipo de indicador:** Resultado [2].\n- **Dimensión:** Seguridad del paciente y efectividad [2].\n- **Población:** Pacientes adultos y niños ingresados con CVP en el HCUZ [2].\n- **Responsable de la obtención:** Coordinadora de cuidados [2].\n- **Fórmula de cálculo:** (Nº de registros de flebitis secundario a CVP en pacientes dados de alta en un período x (mes) / Nº de registros de CVP en pacientes dados de alta en un período x (mes)) × 100 [2].\n\n## Contexto Adicional de Seguridad y Calidad\nSi la supervisora solicita información sobre los objetivos de mejora o comparativas, puedes añadir lo siguiente:\n\n- **Objetivos de reducción:** El protocolo tiene como objetivo específico reducir el riesgo de flebitis disminuyendo su incidencia en **0,5-1 punto porcentual/año** respecto al dato hospitalario [4].\n- **Referencia de la literatura:** Se menciona que la *Intravenous Nursing Society* (INS) establece una prevalencia \"estándar\" de flebitis en torno al **5%** [1].\n- **Otros indicadores de seguridad (para su conocimiento):**\n    - El estándar para **obstrucción** de catéteres es del **1,9%** [2].\n    - El estándar para **extravasación** es del **11,6%** [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1665,
+        "token_stats": {
+          "prompt_tokens": 6052,
+          "completion_tokens": 436,
+          "total_tokens": 6488,
+          "tokens_per_second": 154.7,
+          "context_used_pct": 39.6,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.49
+      }
+    }
+  ]
+}

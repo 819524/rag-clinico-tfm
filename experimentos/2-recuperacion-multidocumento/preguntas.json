@@ -1,0 +1,1355 @@
+{
+  "name": "GLOBAL — Prueba de estrés multi-documento del sistema RAG",
+  "description": "Ground truth global construido muestreando 5 preguntas de cada uno de los 22 ground truth individuales del corpus del HCU Lozano Blesa (semilla 42). Las preguntas se mezclan en orden aleatorio e interleaved entre documentos, compartiendo un mismo block para mantener la memoria conversacional deslizante activa durante toda la sesión. Cada pregunta lleva su propio relevant_doc_patterns (patrón único por documento) para que las métricas de recuperación se calculen por pregunta. Mide la capacidad del router/retriever de enrutar a la sección correcta entre todo el corpus ante cambios de tema con contexto previo no relacionado.",
+  "relevant_doc_patterns": [
+    "LPP",
+    "PA-02",
+    "PA-06",
+    "PA-121",
+    "PA-17-",
+    "PA-178",
+    "PA-195",
+    "PA-199",
+    "PA-201",
+    "PA-26",
+    "PA-46",
+    "PC-08",
+    "PC-67",
+    "PC-73",
+    "PE-27",
+    "PO-05",
+    "PO-108",
+    "PO-19",
+    "PTP",
+    "RCP-120",
+    "RPC-87",
+    "RPC-89"
+  ],
+  "questions": [
+    {
+      "id": "g001",
+      "source_doc": "PA199",
+      "orig_id": "q06",
+      "block": 1,
+      "query": "¿Se vigilan igual las cirugías programadas que las que entran por urgencias?",
+      "expected_section": "ALCANCE Y POBLACIÓN",
+      "relevant_doc_patterns": [
+        "PA-199"
+      ],
+      "expected_quote": "Para cada uno de los procedimientos incluidos, se realizará la vigilancia tanto de las intervenciones programadas como de las urgentes."
+    },
+    {
+      "id": "g002",
+      "source_doc": "PE27",
+      "orig_id": "q02",
+      "block": 1,
+      "query": "¿Cuánto tiempo tengo que mantener las precauciones con un paciente que ha dado positivo en COVID y está en la planta?",
+      "expected_section": "PRECAUCIONES DE AISLAMIENTO",
+      "relevant_doc_patterns": [
+        "PE-27"
+      ],
+      "expected_quote": "5 días de precauciones aéreas desde que empezaron los síntomas (o desde el test si era asintomático)... tiene que llevar al menos 24 horas sin fiebre."
+    },
+    {
+      "id": "g003",
+      "source_doc": "RPC87",
+      "orig_id": "q13",
+      "block": 1,
+      "query": "Estoy intentando quitar la sonda al paciente y el globo no se deshincha ni metiendo la jeringa. ¿Qué hago?",
+      "expected_section": "ANEXO 9: RETIRADA SONDA VESICAL",
+      "relevant_doc_patterns": [
+        "RPC-87"
+      ],
+      "expected_quote": "Si el balón no se deshincha: - Introducir una guía metálica fina en el canal de inflado (procedimiento de riesgo). - Llenar a presión el globo hasta que se produzca su estallido. - Como último recurso cortar el brazo de inflado por debajo de la válvula, vigilando que drena el contenido del balón."
+    },
+    {
+      "id": "g004",
+      "source_doc": "PO19",
+      "orig_id": "q06",
+      "block": 1,
+      "query": "¿Qué debe hacer el médico del trabajo cuando valora un accidente biológico?",
+      "expected_section": "RESPONSABILIDADES",
+      "relevant_doc_patterns": [
+        "PO-19"
+      ],
+      "expected_quote": "Valorar el accidente, informar al trabajador, y proponer vacunación de hepatitis B, administración de gammaglobulina y tratamiento antirretroviral y controles analíticos y serológicos que proceda realizar."
+    },
+    {
+      "id": "g005",
+      "source_doc": "PA178",
+      "orig_id": "q07",
+      "block": 1,
+      "query": "¿Qué significa que una sonda tenga \"punta Tiemann\"?",
+      "expected_section": "DEFINICIONES",
+      "relevant_doc_patterns": [
+        "PA-178"
+      ],
+      "expected_quote": "Tipo de punta: es la parte más diferencial de la sonda vesical, la cual además suele indicar el nombre por el que se la conoce. Existen múltiples tipos: punta Dufour, punta Tiemann, punta abierta."
+    },
+    {
+      "id": "g006",
+      "source_doc": "PO19",
+      "orig_id": "q12",
+      "block": 1,
+      "query": "Si tengo un accidente en el hospital en horario de mañana de lunes a viernes, ¿qué tubos de sangre se extraen al paciente fuente?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL HOSPITAL (8-15 horas)",
+      "relevant_doc_patterns": [
+        "PO-19"
+      ],
+      "expected_quote": "Extracción de sangre del paciente en la Unidad donde se haya producido el accidente, utilizando un tubo suero gel amarillo (de 8-10 ml) y un tubo suero gel amarillo (de 5 ml). Si la extracción es dificultosa podría ser suficiente el tubo grande."
+    },
+    {
+      "id": "g007",
+      "source_doc": "PC67",
+      "orig_id": "q28",
+      "block": 1,
+      "query": "¿Qué alimentos les tenemos que decir que eviten a toda costa al principio?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "relevant_doc_patterns": [
+        "PC-67"
+      ],
+      "expected_quote": "Evitar alimentos grasos, lácteos (salvo yogurt), verduras crudas..."
+    },
+    {
+      "id": "g008",
+      "source_doc": "PA199",
+      "orig_id": "q25",
+      "block": 1,
+      "query": "¿Quién tiene la última palabra para decir \"esto es una ILQ\" y cerrar la encuesta?",
+      "expected_section": "RESPONSABILIDADES",
+      "relevant_doc_patterns": [
+        "PA-199"
+      ],
+      "expected_quote": "El/la Facultativo/a Especialista de Área (FEA) del Servicio de Medicina Preventiva... será, asimismo, responsable de revisar y validar todos los datos... confirmar o descartar la presencia de ILQ, y proceder al cierre formal..."
+    },
+    {
+      "id": "g009",
+      "source_doc": "PC08",
+      "orig_id": "q18",
+      "block": 1,
+      "query": "¿Por qué a los menores de 50 años se les pide RM siempre, aunque el síntoma durara 5 minutos?",
+      "expected_section": "CRITERIOS DE INGRESO Y VIGILANCIA DE ENFERMERÍA",
+      "relevant_doc_patterns": [
+        "PC-08"
+      ],
+      "expected_quote": "en los <50 años independientemente del tipo o duración de los síntomas."
+    },
+    {
+      "id": "g010",
+      "source_doc": "PO108",
+      "orig_id": "q09",
+      "block": 1,
+      "query": "Escucha, ¿qué anestésicos tengo que pedirle a los de farmacia para que el médico lo tenga todo?",
+      "expected_section": "MATERIAL Y PREPARACIÓN",
+      "relevant_doc_patterns": [
+        "PO-108"
+      ],
+      "expected_quote": "Anestésico tópico (Mepivacaína 1% o 2%) (solicitarlo a Farmacia). Cloretilo spray (anestesia tópica) (cod: 42887)."
+    },
+    {
+      "id": "g011",
+      "source_doc": "LPP2013",
+      "orig_id": "q16",
+      "block": 1,
+      "query": "¿Qué protección local se recomienda para codos y talones y qué está contraindicado?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Protección local",
+      "relevant_doc_patterns": [
+        "LPP"
+      ],
+      "expected_quote": "En codos y talones no se deben utilizar vendajes almohadillados; se recomienda el uso de taloneras y coderas de espuma de poliuretano sujetas con malla no compresiva que permitan la inspección diaria de la zona. Los vendajes de crepé están contraindicados."
+    },
+    {
+      "id": "g012",
+      "source_doc": "RPC87",
+      "orig_id": "q11",
+      "block": 1,
+      "query": "El paciente está con un globo vesical enorme (RAO). ¿Le vacío toda la vejiga de golpe o poco a poco?",
+      "expected_section": "ANEXO 7: RETENCIÓN AGUDA DE ORINA",
+      "relevant_doc_patterns": [
+        "RPC-87"
+      ],
+      "expected_quote": "Vaciado progresivo y lento, pinzando cada 250-300 ml de orina para evitar hemorragia ex vacuo."
+    },
+    {
+      "id": "g013",
+      "source_doc": "PA201",
+      "orig_id": "q05",
+      "block": 1,
+      "query": "¿Qué es eso de la prueba de los 2 minutos de marcha y por qué la hacemos?",
+      "expected_section": "PREHABILITACIÓN",
+      "relevant_doc_patterns": [
+        "PA-201"
+      ],
+      "expected_quote": "En la prueba de los dos minutos de marcha estática: Toma basal de constantes (TA, FC, SO2). Cálculo frecuencia máxima (220-edad). Toma de constantes tras la prueba (FC al primer y segundo minuto, tiempo en alcanzar la frecuencia basal, escala de Bohr)."
+    },
+    {
+      "id": "g014",
+      "source_doc": "PA06",
+      "orig_id": "q01",
+      "block": 1,
+      "query": "¿Qué es exactamente un sondaje vesical?",
+      "expected_section": "DEFINICIONES",
+      "relevant_doc_patterns": [
+        "PA-06"
+      ],
+      "expected_quote": "Introducción de un catéter a través de la uretra hasta la vejiga para establecer una vía de drenaje, con fines diagnósticos y/o terapéuticos."
+    },
+    {
+      "id": "g015",
+      "source_doc": "PC67",
+      "orig_id": "q21",
+      "block": 1,
+      "query": "¿Cuándo le tenemos que pedir al paciente una muestra de heces para coprocultivo o parásitos?",
+      "expected_section": "PRUEBAS COMPLEMENTARIAS Y PROCEDIMIENTOS DIAGNÓSTICOS",
+      "relevant_doc_patterns": [
+        "PC-67"
+      ],
+      "expected_quote": "Heces: coprocultivo, valorar parásitos y Clostridium difficile especialmente si hay antecedentes de toma de antibióticos."
+    },
+    {
+      "id": "g016",
+      "source_doc": "PE27",
+      "orig_id": "q25",
+      "block": 1,
+      "query": "¿Podemos medir a dos pacientes con gripe en la misma habitación si no hay más sitio?",
+      "expected_section": "GESTIÓN DE HABITACIONES",
+      "relevant_doc_patterns": [
+        "PE-27"
+      ],
+      "expected_quote": "Sí, siempre que tengan el mismo diagnóstico único confirmado (por ejemplo, dos Gripes A). Lo que no puedes hacer es mezclar un COVID con una Gripe, a menos que ambos tengan la misma coinfección por los dos virus."
+    },
+    {
+      "id": "g017",
+      "source_doc": "PA02",
+      "orig_id": "q03",
+      "block": 1,
+      "query": "¿Qué tubos necesito preparar para una alcoholemia?",
+      "expected_section": "NORMAS GENERALES",
+      "relevant_doc_patterns": [
+        "PA-02"
+      ],
+      "expected_quote": "Se requiere una muestra de sangre en tubo con EDTA como anticoagulante (tape malva), volumen mínimo 3 ml, y otra de suero en tubo con gel separador (tape amarillo), volumen mínimo 3 ml."
+    },
+    {
+      "id": "g018",
+      "source_doc": "PA178",
+      "orig_id": "q18",
+      "block": 1,
+      "query": "¿Por qué se produce la orina perisonda en pacientes que nunca han llevado sonda?",
+      "expected_section": "YATROGENIA DEBIDA AL SONDAJE",
+      "relevant_doc_patterns": [
+        "PA-178"
+      ],
+      "expected_quote": "La sintomatología irritativa vesical (orina perisonda, espasmos vesicales), frecuente en aquellos pacientes \"vírgenes\" que nunca han portado una sonda..."
+    },
+    {
+      "id": "g019",
+      "source_doc": "PA178",
+      "orig_id": "q21",
+      "block": 1,
+      "query": "¿Cómo manejamos la bolsa y el tapón antes de quitarla?",
+      "expected_section": "CUANDO RETIRAR UNA SONDA VESICAL",
+      "relevant_doc_patterns": [
+        "PA-178"
+      ],
+      "expected_quote": "Se puede portar a tapón por el día y evacuar cada 2/3 horas si no existe deseo miccional previo y por la noche dejar conectada a bolsa. Tras ello, se puede probar a retirada sin necesidad de existir deseo miccional."
+    },
+    {
+      "id": "g020",
+      "source_doc": "PA199",
+      "orig_id": "q26",
+      "block": 1,
+      "query": "Si se operan las dos rodillas a la vez (bilateral), ¿cómo se hace el registro?",
+      "expected_section": "CASOS ESPECIALES",
+      "relevant_doc_patterns": [
+        "PA-199"
+      ],
+      "expected_quote": "Si se realizan procedimientos quirúrgicos bilaterales (por ejemplo, HPRO bilateral), se recogerán en diferentes fichas como procedimientos diferentes..."
+    },
+    {
+      "id": "g021",
+      "source_doc": "LPP2013",
+      "orig_id": "q15",
+      "block": 1,
+      "query": "¿Cuántos grados como máximo debe elevarse la cama y qué ángulo no debe superarse en decúbito lateral?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Cambios posturales",
+      "relevant_doc_patterns": [
+        "LPP"
+      ],
+      "expected_quote": "Elevar la cama un máximo de 30º y durante el mínimo tiempo posible. En decúbito lateral no debe superarse los 30º para evitar apoyar sobre los trocánteres, por lo que se recomiendan decúbitos laterales parciales."
+    },
+    {
+      "id": "g022",
+      "source_doc": "RPC120",
+      "orig_id": "q08",
+      "block": 1,
+      "query": "Si el paciente no tiene suero continuo y solo le pasamos medicación a ratos, ¿cómo evito que se le obstruya la vía?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "relevant_doc_patterns": [
+        "RCP-120"
+      ],
+      "expected_quote": "Mantener la permeabilidad del catéter mediante lavado con 10 ml de SF al 0,9% tras la administración del tratamiento o cada 24 horas para disminuir el riesgo de oclusión",
+      "expected_answer": "Para mantener la vía permeable (abierta y sin coágulos), debes lavarla introduciendo 10 ml de Suero Fisiológico al 0,9% cada vez que termines de pasarle el tratamiento, o al menos una vez cada 24 horas si no la estás usando."
+    },
+    {
+      "id": "g023",
+      "source_doc": "PA17",
+      "orig_id": "q23",
+      "block": 1,
+      "query": "¿Qué hago si fallece un paciente sin familia o sin recursos económicos?",
+      "expected_section": "TRÁMITES EN SITUACIONES ESPECIALES",
+      "relevant_doc_patterns": [
+        "PA-17-"
+      ],
+      "expected_quote": "El personal de enfermería se pondrá en contacto con la trabajadora social adscrita al servicio donde se produce el fallecimiento, para que realice los trámites pertinentes a través de la D.G.A. o del Ayuntamiento. Es la trabajadora social quien, al finalizar los trámites, se pone en contacto con jefatura de celadores para notificar la salida del cadáver."
+    },
+    {
+      "id": "g024",
+      "source_doc": "PA121",
+      "orig_id": "q03",
+      "block": 1,
+      "query": "¿En qué consiste la identificación verbal activa o positiva?",
+      "expected_section": "DEFINICIONES Y JUSTIFICACIÓN",
+      "relevant_doc_patterns": [
+        "PA-121"
+      ],
+      "expected_quote": "Identificación verbal activa/positiva: proceso mediante el cual el profesional sanitario y no sanitario obtiene los datos identificativos inequívocos (nombre y apellidos y fecha de nacimiento) preguntando al paciente de manera verbal, esperando su respuesta, y NO confirmando los datos que ofrece el profesional."
+    },
+    {
+      "id": "g025",
+      "source_doc": "PA26",
+      "orig_id": "q11",
+      "block": 1,
+      "query": "¿Cuándo debo cambiar las gafas nasales?",
+      "expected_section": "PROCEDIMIENTO — Gafas o cánulas nasales",
+      "relevant_doc_patterns": [
+        "PA-26"
+      ],
+      "expected_quote": "Cámbielas cuando estén sucias con secreciones y/o se deterioren o endurezcan, y compruebe regularmente que las fosas nasales están libres de secreciones."
+    },
+    {
+      "id": "g026",
+      "source_doc": "PA17",
+      "orig_id": "q18",
+      "block": 1,
+      "query": "Si el fallecido tiene un marcapasos y va a ser incinerado, ¿qué hago?",
+      "expected_section": "CONSIDERACIONES ESPECIALES",
+      "relevant_doc_patterns": [
+        "PA-17-"
+      ],
+      "expected_quote": "En caso de que el fallecido tuviera insertado un marcapasos y este fuera a ser incinerado (preguntar a la familia), hay que avisar al Cirujano Vascular de Guardia para que lo retire (Busca 710668)."
+    },
+    {
+      "id": "g027",
+      "source_doc": "LPP2013",
+      "orig_id": "q18",
+      "block": 1,
+      "query": "¿Las superficies dinámicas sustituyen a los cambios posturales?",
+      "expected_section": "CUIDADOS DE LA PREVENCIÓN — Superficies especiales (SEMP)",
+      "relevant_doc_patterns": [
+        "LPP"
+      ],
+      "expected_quote": "Las superficies especiales dinámicas para el manejo de la presión no sustituyen los cambios posturales."
+    },
+    {
+      "id": "g028",
+      "source_doc": "PC67",
+      "orig_id": "q20",
+      "block": 1,
+      "query": "Si tiene signos de alarma y le pido analítico de sangre, ¿qué parámetros son los que no pueden faltar?",
+      "expected_section": "PRUEBAS COMPLEMENTARIAS Y PROCEDIMIENTOS DIAGNÓSTICOS",
+      "relevant_doc_patterns": [
+        "PC-67"
+      ],
+      "expected_quote": "Hemograma, bioquímica con iones y función renal, y gasometría venosa."
+    },
+    {
+      "id": "g029",
+      "source_doc": "PA195",
+      "orig_id": "q19",
+      "block": 1,
+      "query": "¿Cómo debo comportarme y qué lenguaje usar para que no parezca que me pongo a la defensiva?",
+      "expected_section": "COMUNICACIÓN CON EL PACIENTE Y ALLEGADOS",
+      "relevant_doc_patterns": [
+        "PA-195"
+      ],
+      "expected_quote": "Utiliza un lenguaje claro, despacio y sin tecnicismos excesivos. Mantén una actitud corporal respetuosa. Céntrate en los hechos (\"qué ocurrió\") y no en valoraciones prematuras (\"por qué ocurrió\"). Evita el impulso de responsabilizar a otros compañeros."
+    },
+    {
+      "id": "g030",
+      "source_doc": "PA199",
+      "orig_id": "q14",
+      "block": 1,
+      "query": "Si la infección sale después de los 90 días en una prótesis, ¿cuenta para el sistema de vigilancia?",
+      "expected_section": "PERIODO DE SEGUIMIENTO",
+      "relevant_doc_patterns": [
+        "PA-199"
+      ],
+      "expected_quote": "Las infecciones cuyo comienzo se manifieste fuera del período de seguimiento establecido no serán consideradas dentro del marco de vigilancia ni registradas en el sistema..."
+    },
+    {
+      "id": "g031",
+      "source_doc": "PA201",
+      "orig_id": "q13",
+      "block": 1,
+      "query": "¿Cuándo podemos iniciar la alimentación y el movimiento?",
+      "expected_section": "RECUPERACIÓN POSTOPERATORIA",
+      "relevant_doc_patterns": [
+        "PA-201"
+      ],
+      "expected_quote": "Reintroducción alimentaria (6 horas tras la cirugía), dieta líquida/semilíquida según tolerancia... Inicio de movilización activa (cama/sillón) a las 24 horas."
+    },
+    {
+      "id": "g032",
+      "source_doc": "PA26",
+      "orig_id": "q03",
+      "block": 1,
+      "query": "¿Qué diferencia hay entre un sistema de bajo flujo y uno de alto flujo?",
+      "expected_section": "DEFINICIONES",
+      "relevant_doc_patterns": [
+        "PA-26"
+      ],
+      "expected_quote": "Los sistemas de bajo flujo son aquellos con los que el paciente inhala aire de la atmósfera y lo mezcla con el oxígeno suministrado, por lo que la FiO2 variará según el patrón ventilatorio. Los sistemas de alto flujo aportan todo el gas inspirado a una concentración constante independientemente del patrón ventilatorio del paciente."
+    },
+    {
+      "id": "g033",
+      "source_doc": "PA201",
+      "orig_id": "q09",
+      "block": 1,
+      "query": "¿Cuáles son las reglas de ayuno y dieta previa?",
+      "expected_section": "CUIDADOS PREOPERATORIOS",
+      "relevant_doc_patterns": [
+        "PA-201"
+      ],
+      "expected_quote": "Dieta baja en residuos 48 horas previo a la cirugía... Ayuno desde las 00:00 horas (8 horas previas a la cirugía)."
+    },
+    {
+      "id": "g034",
+      "source_doc": "PA02",
+      "orig_id": "q02",
+      "block": 1,
+      "query": "¿Qué es una muestra 'voluntaria' en este contexto?",
+      "expected_section": "NORMAS GENERALES",
+      "relevant_doc_patterns": [
+        "PA-02"
+      ],
+      "expected_quote": "Son muestras recogidas por expreso deseo del interesado como método de contraste de la concentración de alcohol en sangre tras un positivo en aire espirado, o para verificación de presencia de drogas de abuso en orina."
+    },
+    {
+      "id": "g035",
+      "source_doc": "PC73",
+      "orig_id": "q03",
+      "block": 1,
+      "query": "¿Y si me dice que le duele todo el tiempo y no solo cuando le dan los calambres?",
+      "expected_section": "CONCEPTOS FUNDAMENTALES Y CLASIFICACIÓN",
+      "relevant_doc_patterns": [
+        "PC-73"
+      ],
+      "expected_quote": "Además, podría presentar dolor continuo concomitante de intensidad moderada en el territorio inervado por las ramas afectadas."
+    },
+    {
+      "id": "g036",
+      "source_doc": "PTP2",
+      "orig_id": "q42",
+      "block": 1,
+      "query": "En microbiología molecular, ¿qué tipo de tubo no se debe usar nunca para la carga viral y en qué tubo se obtiene el plasma?",
+      "expected_section": "17. MICROBIOLOGIA MOLECULAR",
+      "relevant_doc_patterns": [
+        "PTP"
+      ],
+      "expected_quote": "Plasma para carga viral de CMV, VHC, VHB y VIH. No usar nunca tubos con heparina. Extraer la sangre en un tubo de 10 ml con EDTA y mezclar invirtiendo el tubo 10-15 veces."
+    },
+    {
+      "id": "g037",
+      "source_doc": "PO05",
+      "orig_id": "q03",
+      "block": 1,
+      "query": "¿Qué se entiende por trazabilidad en el contexto de los hemoderivados?",
+      "expected_section": "DEFINICIONES",
+      "relevant_doc_patterns": [
+        "PO-05"
+      ],
+      "expected_quote": "TRAZABILIDAD: Es la capacidad de efectuar el seguimiento de cada unidad de sangre o de componente hemoderivado, desde el donante hasta su destino final (ya sea éste un receptor o un fabricante de medicamentos) o su destrucción y viceversa."
+    },
+    {
+      "id": "g038",
+      "source_doc": "RPC120",
+      "orig_id": "q18",
+      "block": 1,
+      "query": "Tiene un poco de rojez en la piel siguiendo la vena, ¿eso ya es una flebitis declarada?",
+      "expected_section": "18. GLOSARIO / DEFINICIONES",
+      "relevant_doc_patterns": [
+        "RCP-120"
+      ],
+      "expected_quote": "Eritema: enrojecimiento de la piel a lo largo del recorrido de una vena que resulta de la irritación vascular o congestión capilar en respuesta a la irritación, puede ser un precursor de la flebitis.",
+      "expected_answer": "No necesariamente. Un simple enrojecimiento se denomina eritema, y suele ser una reacción precursora. Para considerarse clínicamente una flebitis, la inflamación debe ir acompañada de otros síntomas como dolor o sensibilidad, calor, hinchazón, o que la vena se note endurecida (cordón venoso palpable)."
+    },
+    {
+      "id": "g039",
+      "source_doc": "PO19",
+      "orig_id": "q09",
+      "block": 1,
+      "query": "Si el contacto fue con salpicadura en la conjuntiva del ojo, ¿qué hago?",
+      "expected_section": "PAUTA GENERAL DE ACTUACIÓN ANTE EXPOSICIONES ACCIDENTALES",
+      "relevant_doc_patterns": [
+        "PO-19"
+      ],
+      "expected_quote": "Piel no intacta, mucosa oral, nasal, o conjuntival: lavado con abundante agua o suero fisiológico. En el caso de conjuntiva ocular, se puede utilizar la solución lavaojos específica de 500 ml (utilizar el envase entero)."
+    },
+    {
+      "id": "g040",
+      "source_doc": "PO108",
+      "orig_id": "q15",
+      "block": 1,
+      "query": "Escucha, ¿qué constantes tengo que estar mirando sin parar en el monitor?",
+      "expected_section": "MONITORIZACIÓN",
+      "relevant_doc_patterns": [
+        "PO-108"
+      ],
+      "expected_quote": "Monitorizar al paciente: medición de saturación de oxígeno (sPo2) y frecuencia cardíaca."
+    },
+    {
+      "id": "g041",
+      "source_doc": "PC67",
+      "orig_id": "q27",
+      "block": 1,
+      "query": "¿Qué puede empezar a comer cuando ya tolera bien los líquidos?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "relevant_doc_patterns": [
+        "PC-67"
+      ],
+      "expected_quote": "purés, dieta blanda como verduras cocinadas, patata, zanahoria, pollo, pescado blanco, manzana."
+    },
+    {
+      "id": "g042",
+      "source_doc": "PA178",
+      "orig_id": "q23",
+      "block": 1,
+      "query": "¿Qué pasa si hemos causado una lesión uretral durante el sondaje?",
+      "expected_section": "CUANDO RETIRAR UNA SONDA VESICAL",
+      "relevant_doc_patterns": [
+        "PA-178"
+      ],
+      "expected_quote": "Si durante la colocación del sondaje vesical, se ha producido una lesión de la vía urinaria... será preciso mantenerlo mínimo 3-4 semanas antes de iniciar la retirada. En el caso de las perforaciones vesicales, es conveniente la realización de una cistografía retrógrada previa..."
+    },
+    {
+      "id": "g043",
+      "source_doc": "PA02",
+      "orig_id": "q09",
+      "block": 1,
+      "query": "¿Qué es el formulario de cadena de custodia y qué debe contener?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "relevant_doc_patterns": [
+        "PA-02"
+      ],
+      "expected_quote": "Es un documento que debe acompañar a la muestra y al documento de solicitud de análisis en todo su recorrido hasta la Unidad de Toxicología. En él debe constar el número de identificación de la muestra pero no el nombre del interesado, y deben identificarse y firmar todas las personas implicadas en la obtención, transporte y recepción de la muestra."
+    },
+    {
+      "id": "g044",
+      "source_doc": "PA06",
+      "orig_id": "q07",
+      "block": 1,
+      "query": "¿Cómo se comprueba que el balón de la sonda funciona bien antes de introducirla?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "relevant_doc_patterns": [
+        "PA-06"
+      ],
+      "expected_quote": "Inyectando 10 ml de aire en el balón para comprobar su buen funcionamiento y retirando el aire después."
+    },
+    {
+      "id": "g045",
+      "source_doc": "PA199",
+      "orig_id": "q23",
+      "block": 1,
+      "query": "Sobre el antibiótico de antes de la operación (profilaxis): ¿Cuándo se considera que es \"inadecuado\"?",
+      "expected_section": "VARIABLES CRÍTICAS",
+      "relevant_doc_patterns": [
+        "PA-199"
+      ],
+      "expected_quote": "Adecuación de la profilaxis antibiótica... Inadecuada por el momento de administración... por la vía de administración... por indicación... por elección del antibiótico... por duración de la profilaxis."
+    },
+    {
+      "id": "g046",
+      "source_doc": "RPC120",
+      "orig_id": "q19",
+      "block": 1,
+      "query": "Mi supervisora me pregunta cuál es el estándar de calidad máximo aceptable para la tasa de flebitis en el hospital, ¿qué le respondo?",
+      "expected_section": "15. INDICADORES DE EVALUACIÓN",
+      "relevant_doc_patterns": [
+        "RCP-120"
+      ],
+      "expected_quote": "Nombre del indicador: Catéteres Intravenosos Periféricos con flebitis [...] Estándar: 5,5%",
+      "expected_answer": "Según la ficha de indicadores de evaluación definida en el protocolo para 'Catéteres Intravenosos Periféricos con flebitis', el estándar marcado como límite o referencia de calidad es de un 5,5%."
+    },
+    {
+      "id": "g047",
+      "source_doc": "PA46",
+      "orig_id": "q17",
+      "block": 1,
+      "query": "¿Cuáles son los objetivos de la contención verbal?",
+      "expected_section": "PAUTAS GENERALES DE ACTUACIÓN ANTE EL PACIENTE AGITADO",
+      "relevant_doc_patterns": [
+        "PA-46"
+      ],
+      "expected_quote": "Restablecer el autocontrol para facilitar una alianza diagnóstica; disminuir la hostilidad y la agresividad; prevenir posibles ataques violentos; informar del carácter transitorio de la crisis; facilitar la exteriorización de los pensamientos y emociones del paciente; negociar soluciones terapéuticas; e implantar límites de conducta claros."
+    },
+    {
+      "id": "g048",
+      "source_doc": "PO05",
+      "orig_id": "q28",
+      "block": 1,
+      "query": "En una situación de extrema urgencia, ¿qué grupo sanguíneo se administra cuando no hay tiempo para pruebas cruzadas?",
+      "expected_section": "ANEXO VII — Solicitud de Sangre de Extrema Urgencia",
+      "relevant_doc_patterns": [
+        "PO-05"
+      ],
+      "expected_quote": "En situaciones críticas extremadamente urgentes en las que la sangre se necesita en menos de 20 minutos, se suministra generalmente sangre del grupo O no cruzada para su utilización inmediata. Las mujeres en edad fértil deben recibir hematíes del grupo O Rh(D) negativo si su tipo de Rh(D) se desconoce."
+    },
+    {
+      "id": "g049",
+      "source_doc": "RPC87",
+      "orig_id": "q18",
+      "block": 1,
+      "query": "El paciente se va de alta a una residencia y va a necesitar llevar la sonda permanente unos dos meses, ¿se la pongo de látex o de silicona?",
+      "expected_section": "10. RECOMENDACIONES",
+      "relevant_doc_patterns": [
+        "RPC-87"
+      ],
+      "expected_quote": "Se fabrican en látex o silicona diferenciándose según la duración del sondaje (látex hasta 45 días y silicona hasta 90 días)."
+    },
+    {
+      "id": "g050",
+      "source_doc": "PO05",
+      "orig_id": "q04",
+      "block": 1,
+      "query": "¿Qué es una solicitud de hemoderivados?",
+      "expected_section": "DEFINICIONES",
+      "relevant_doc_patterns": [
+        "PO-05"
+      ],
+      "expected_quote": "SOLICITUD DE HEMODERIVADOS: Es la petición de hemoderivados a través de la cumplimentación de un documento, debidamente cumplimentado y acompañado de la muestra de sangre para la realización de pruebas cruzadas mediante un sistema de pulsera."
+    },
+    {
+      "id": "g051",
+      "source_doc": "PA46",
+      "orig_id": "q03",
+      "block": 1,
+      "query": "¿Cuáles son las indicaciones generales para aplicar una contención mecánica?",
+      "expected_section": "INDICACIONES Y CONTRAINDICACIONES",
+      "relevant_doc_patterns": [
+        "PA-46"
+      ],
+      "expected_quote": "Situaciones o conductas que representan un riesgo para la integridad física del paciente; prevención de autolesiones y caídas; amenaza para la integridad física de otras personas; prevenir daños graves al entorno; cuando lo solicita voluntariamente el paciente con justificación terapéutica; para evitar la fuga de un paciente peligroso; cuando sea necesaria para el mantenimiento de programas terapéuticos; y para adecuación de la medicación para una correcta evaluación clínica."
+    },
+    {
+      "id": "g052",
+      "source_doc": "PO05",
+      "orig_id": "q13",
+      "block": 1,
+      "query": "¿Qué datos debe comprobar la enfermera al recibir la bolsa de sangre?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "relevant_doc_patterns": [
+        "PO-05"
+      ],
+      "expected_quote": "La enfermera recibe y comprueba que coinciden los datos del paciente (nombre y apellidos, CIA, fecha de caducidad y número de pulsera y bolsa) con las etiquetas del hemoderivado por ambos lados, la pulsera y la hoja transfusional."
+    },
+    {
+      "id": "g053",
+      "source_doc": "RPC87",
+      "orig_id": "q08",
+      "block": 1,
+      "query": "Se me ha caído la bolsa al suelo y se ha roto el plástico, ¿qué hago, cambio la sonda entera o solo la bolsa?",
+      "expected_section": "10. RECOMENDACIONES",
+      "relevant_doc_patterns": [
+        "RPC-87"
+      ],
+      "expected_quote": "Sólo está indicado el cambio de la bolsa de diuresis en estas situaciones: - Si se cambia la sonda. - Se rompen. - Se acumulan sedimentos en exceso. - Adquiere un olor desagradable."
+    },
+    {
+      "id": "g054",
+      "source_doc": "PTP2",
+      "orig_id": "q45",
+      "block": 1,
+      "query": "En abscesos cerrados, ¿qué cantidad de muestra es necesaria para procesarla en aerobiosis y anaerobiosis?",
+      "expected_section": "7.1. ABSCESOS CERRADOS",
+      "relevant_doc_patterns": [
+        "PTP"
+      ],
+      "expected_quote": "La muestra debe ser suficiente para poder procesarla en aerobiosis y anaerobiosis (1-5 ml)."
+    },
+    {
+      "id": "g055",
+      "source_doc": "PA121",
+      "orig_id": "q07",
+      "block": 1,
+      "query": "¿El número de cama o el diagnóstico son datos inequívocos para identificar a un paciente?",
+      "expected_section": "DEFINICIONES Y JUSTIFICACIÓN",
+      "relevant_doc_patterns": [
+        "PA-121"
+      ],
+      "expected_quote": "No se consideran datos inequívocos: Diagnostico, Número de cama, Unidad de ingreso, Fecha de ingreso, Nacionalidad."
+    },
+    {
+      "id": "g056",
+      "source_doc": "PC08",
+      "orig_id": "q13",
+      "block": 1,
+      "query": "¿Cuánto tiempo mínimo tengo que tener al paciente conectado al monitor en la planta o en urgencias?",
+      "expected_section": "EL PROTOCOLO DE URGENCIA: PRUEBAS Y MONITORIZACIÓN",
+      "relevant_doc_patterns": [
+        "PC-08"
+      ],
+      "expected_quote": "Monitorización cardiaca, al menos durante las primeras 24 horas"
+    },
+    {
+      "id": "g057",
+      "source_doc": "PC08",
+      "orig_id": "q04",
+      "block": 1,
+      "query": "¿Realmente es tan grave como un ictus si no le ha quedado ninguna secuela?",
+      "expected_section": "RECONCEPTUALIZACIÓN DEL AIT",
+      "relevant_doc_patterns": [
+        "PC-08"
+      ],
+      "expected_quote": "este evento neurológico supone una verdadera oportunidad para la prevención de un futuro ictus isquémico, por lo que debe manejarse con la misma urgencia que si se tratase de un ictus."
+    },
+    {
+      "id": "g058",
+      "source_doc": "PO108",
+      "orig_id": "q12",
+      "block": 1,
+      "query": "Oye, ¿le pinchamos una vía por si las moscas?",
+      "expected_section": "PREPARACIÓN DEL PACIENTE",
+      "relevant_doc_patterns": [
+        "PO-108"
+      ],
+      "expected_quote": "Si el paciente no lleva vía periférica, se canalizará una vía para tener el paciente mejor controlado y poder administrarle analgesia (tipo Paracetamol) al inicio del procedimiento o sedación ligera (Midazolam)."
+    },
+    {
+      "id": "g059",
+      "source_doc": "LPP2013",
+      "orig_id": "q08",
+      "block": 1,
+      "query": "¿Cómo se clasifica el riesgo según la puntuación de la escala de Norton modificada?",
+      "expected_section": "VALORACIÓN DE RIESGO — Escala de Norton modificada",
+      "relevant_doc_patterns": [
+        "LPP"
+      ],
+      "expected_quote": "La clasificación de riesgo según la ENM es: riesgo alto 5-11, riesgo moderado 12-14 y riesgo mínimo igual o superior a 14."
+    },
+    {
+      "id": "g060",
+      "source_doc": "PA17",
+      "orig_id": "q15",
+      "block": 1,
+      "query": "¿Qué es el tríptico de colores y a quién va cada copia?",
+      "expected_section": "TRÍPTICO DE COLORES",
+      "relevant_doc_patterns": [
+        "PA-17-"
+      ],
+      "expected_quote": "El justificante blanco se entrega a la familia; el azul se deja en la Cámara del Mortuorio; y el amarillo se entrega en el Servicio de Admisión, excepto en el turno de noche, que se dejará en Admisión de Urgencias a partir de las 21 horas."
+    },
+    {
+      "id": "g061",
+      "source_doc": "PA06",
+      "orig_id": "q03",
+      "block": 1,
+      "query": "¿En qué posición coloco al paciente hombre y a la paciente mujer antes del sondaje?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "relevant_doc_patterns": [
+        "PA-06"
+      ],
+      "expected_quote": "Hombre: decúbito supino. Mujer: posición ginecológica."
+    },
+    {
+      "id": "g062",
+      "source_doc": "RPC87",
+      "orig_id": "q09",
+      "block": 1,
+      "query": "Tengo que sacar una muestra de orina para urocultivo, ¿la puedo coger abriendo el grifo de la bolsa de drenaje?",
+      "expected_section": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+      "relevant_doc_patterns": [
+        "RPC-87"
+      ],
+      "expected_quote": "No recoger orina de la bolsa de drenaje."
+    },
+    {
+      "id": "g063",
+      "source_doc": "RPC120",
+      "orig_id": "q06",
+      "block": 1,
+      "query": "Si le estoy pasando nutrición con lípidos o le pongo una transfusión de sangre, ¿también me duran 96 horas los sistemas?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "relevant_doc_patterns": [
+        "RCP-120"
+      ],
+      "expected_quote": "Cambiar cada 24 horas los sistemas utilizados para la administración de soluciones lipídicas... Los sistemas usados para la administración de sangre y hemoderivados serán sustituidos por cada bolsa infundida",
+      "expected_answer": "No. Para sustancias más delicadas el tiempo es mucho menor: si pasas soluciones lipídicas debes cambiar los sistemas cada 24 horas, y si pasas sangre o hemoderivados, debes sustituir el sistema con cada bolsa que se infunda."
+    },
+    {
+      "id": "g064",
+      "source_doc": "PC73",
+      "orig_id": "q19",
+      "block": 1,
+      "query": "¿Cuál es la dosis de Lacosamida (LCS) y qué vigilar en el monitor?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "relevant_doc_patterns": [
+        "PC-73"
+      ],
+      "expected_quote": "100-200mg de LCS en perfusión durante 60 minutos con monitorización cardíaca continua... se ha descrito un alargamiento dosis-dependiente del intervalo PR."
+    },
+    {
+      "id": "g065",
+      "source_doc": "PA201",
+      "orig_id": "q04",
+      "block": 1,
+      "query": "¿Con cuánta antelación empezamos a preparar al paciente?",
+      "expected_section": "PREHABILITACIÓN",
+      "relevant_doc_patterns": [
+        "PA-201"
+      ],
+      "expected_quote": "1º CONSULTA DE PREHABILITACIÓN: terapia prehabilitadora y valoración preanestésica (4 semanas previas a la intervención quirúrgica)."
+    },
+    {
+      "id": "g066",
+      "source_doc": "RPC89",
+      "orig_id": "q02",
+      "block": 1,
+      "query": "¿Qué significa RCP 30:2 según el glosario?",
+      "expected_section": "GLOSARIO / DEFINICIONES",
+      "relevant_doc_patterns": [
+        "RPC-89"
+      ],
+      "expected_quote": "RCP 30:2: reanimación cardiopulmonar alternando 30 compresiones torácicas con 2 ventilaciones."
+    },
+    {
+      "id": "g067",
+      "source_doc": "PO05",
+      "orig_id": "q08",
+      "block": 1,
+      "query": "Antes de extraer la muestra pretransfusional, ¿qué se hace con la pulsera de seguridad transfusional?",
+      "expected_section": "PRIMERA PARTE — Solicitud de Hemoderivados",
+      "relevant_doc_patterns": [
+        "PO-05"
+      ],
+      "expected_quote": "A pie de cama del paciente, se procederá a la comprobación de la identidad del mismo de forma activa, contrastando esta con la pulsera identificativa que lleve el paciente. Se colocará al paciente una nueva pulsera de seguridad transfusional que lo asocien con la muestra que se va a extraer y con la solicitud previamente cumplimentada y el hemoderivado. En esta pulsera se escribirá antes de su colocación, el nombre apellidos y ubicación del paciente."
+    },
+    {
+      "id": "g068",
+      "source_doc": "LPP2013",
+      "orig_id": "q02",
+      "block": 1,
+      "query": "¿Cuáles son las tres capas principales de la piel?",
+      "expected_section": "LA PIEL",
+      "relevant_doc_patterns": [
+        "LPP"
+      ],
+      "expected_quote": "La piel está constituida por tres capas principales: Epidermis, Dermis e Hipodermis."
+    },
+    {
+      "id": "g069",
+      "source_doc": "PA195",
+      "orig_id": "q26",
+      "block": 1,
+      "query": "¿Cómo termina este proceso? ¿Me quedaré marcado para siempre?",
+      "expected_section": "SOPORTE A LA SEGUNDA VÍCTIMA",
+      "relevant_doc_patterns": [
+        "PA-195"
+      ],
+      "expected_quote": "La fase final de Resolución tiene tres caminos: \"Abandonar\" la unidad, \"Sobrevivir\" con tristeza persistente o \"Desarrollarse\", que es el objetivo: aprender de la vivencia y mejorar."
+    },
+    {
+      "id": "g070",
+      "source_doc": "PC73",
+      "orig_id": "q07",
+      "block": 1,
+      "query": "¿Por qué el paciente se pone tan mal solo con hablar o lavarse la cara?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "relevant_doc_patterns": [
+        "PC-73"
+      ],
+      "expected_quote": "se precipitan por estímulos exteroceptivos (como afeitarse, lavarse la cara, hablar, entre otros) aplicados en el territorio doloroso o a veces también en territorios trigéminos adyacentes (zonas \"gatillo\")."
+    },
+    {
+      "id": "g071",
+      "source_doc": "PC08",
+      "orig_id": "q10",
+      "block": 1,
+      "query": "Si la TC sale normal y el paciente está bien, ¿no es una pérdida de tiempo dejarlo en observación?",
+      "expected_section": "EL PROTOCOLO DE URGENCIA: PRUEBAS Y MONITORIZACIÓN",
+      "relevant_doc_patterns": [
+        "PC-08"
+      ],
+      "expected_quote": "La TC cerebral... permite evaluar isquemia subaguda, hemorragia... El hallazgo de infarto antiguo en pacientes con AIT, aumenta 11 veces el riesgo de recurrencia"
+    },
+    {
+      "id": "g072",
+      "source_doc": "PA26",
+      "orig_id": "q13",
+      "block": 1,
+      "query": "¿Qué hago con la mascarilla cuando el paciente está comiendo?",
+      "expected_section": "PROCEDIMIENTO — Mascarilla de oxígeno",
+      "relevant_doc_patterns": [
+        "PA-26"
+      ],
+      "expected_quote": "Durante el periodo de alimentación el paciente debe utilizar cánula nasal para evitar hipoxemia."
+    },
+    {
+      "id": "g073",
+      "source_doc": "PA26",
+      "orig_id": "q12",
+      "block": 1,
+      "query": "¿Cuál debe ser el flujo mínimo en una mascarilla con reservorio y por qué?",
+      "expected_section": "PROCEDIMIENTO — Mascarilla de oxígeno",
+      "relevant_doc_patterns": [
+        "PA-26"
+      ],
+      "expected_quote": "El flujo de oxígeno en las mascarillas con reservorio ha de ser adecuado para que permanezca la bolsa inflada, por encima de 7 l/min."
+    },
+    {
+      "id": "g074",
+      "source_doc": "RPC89",
+      "orig_id": "q25",
+      "block": 1,
+      "query": "¿Cuáles son las pautas de administración de adrenalina durante el paro cardiaco?",
+      "expected_section": "ANEXO 3 - Adrenalina",
+      "relevant_doc_patterns": [
+        "RPC-89"
+      ],
+      "expected_quote": "Administrar 1 mg iv (ó intraósea) lo antes posible a los pacientes adultos en PCR con un ritmo no desfibrilable. Administrar 1 mg iv (ó intraósea) después de la 3ª desfibrilación a los pacientes adultos en PCR con un ritmo desfibrilable. Repetir 1 mg iv (ó intraósea) cada 3-5 minutos mientras continúe el SVA."
+    },
+    {
+      "id": "g075",
+      "source_doc": "PO19",
+      "orig_id": "q07",
+      "block": 1,
+      "query": "Si me pincho con una aguja y la piel queda con lesión percutánea, ¿qué pasos inmediatos debo seguir sobre la herida?",
+      "expected_section": "PAUTA GENERAL DE ACTUACIÓN ANTE EXPOSICIONES ACCIDENTALES",
+      "relevant_doc_patterns": [
+        "PO-19"
+      ],
+      "expected_quote": "Retirar el objeto causante de la lesión y depositarlo en el contenedor de residuos biosanitarios para evitar la exposición de otros trabajadores. Dejar fluir la sangre durante 3 minutos bajo chorro de agua. Lavar la herida con agua y jabón, y secarla o limpiarla correctamente. Aplicar sobre la lesión producida Clorhexidina o Povidona Yodada al 5%. Cubrir la herida con un apósito impermeable."
+    },
+    {
+      "id": "g076",
+      "source_doc": "PA178",
+      "orig_id": "q01",
+      "block": 1,
+      "query": "Oye, ¿es lo mismo una RAO que una hematuria?",
+      "expected_section": "DEFINICIONES",
+      "relevant_doc_patterns": [
+        "PA-178"
+      ],
+      "expected_quote": "La retención aguda de orina o RAO es la incapacidad súbita de vaciar la vejiga pese a encontrarse a máxima repleción o llenado, lo que condiciona un intenso dolor y malestar."
+    },
+    {
+      "id": "g077",
+      "source_doc": "PA121",
+      "orig_id": "q20",
+      "block": 1,
+      "query": "¿Cuáles son los dos modelos de pulsera acolchada disponibles en el HCULB para neonatos y en qué se diferencian?",
+      "expected_section": "DESARROLLO — Identificación del recién nacido hospitalizado en Neonatología",
+      "relevant_doc_patterns": [
+        "PA-121"
+      ],
+      "expected_quote": "El HCULB dispone de dos modelos de pulseras acolchadas: Modelo prematuro o gran prematuro: mide 6,5cm x 2,1cm, es de color azul y se ajustará mejor a los recién nacidos de bajo peso. Modelo neonatal: mide 13,5 x 3,4cm, es de color rosa y es la más indicada para recién nacidos de peso normal."
+    },
+    {
+      "id": "g078",
+      "source_doc": "PA06",
+      "orig_id": "q13",
+      "block": 1,
+      "query": "¿Por qué hay que recolocar el prepucio al hombre después del sondaje?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "relevant_doc_patterns": [
+        "PA-06"
+      ],
+      "expected_quote": "Para evitar parafimosis."
+    },
+    {
+      "id": "g079",
+      "source_doc": "PA02",
+      "orig_id": "q12",
+      "block": 1,
+      "query": "¿Cómo se etiquetan los tubos para garantizar que no han sido manipulados?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "relevant_doc_patterns": [
+        "PA-02"
+      ],
+      "expected_quote": "El etiquetado de todas las muestras se realizará de modo que la etiqueta abarque un tramo del tubo y otro del tapón. De esta forma, si alguien intentase abrir el envase, la etiqueta se rompería y no se garantizaría la cadena de custodia."
+    },
+    {
+      "id": "g080",
+      "source_doc": "PA06",
+      "orig_id": "q10",
+      "block": 1,
+      "query": "Si el sondaje es permanente, ¿qué hago para que la sonda no se salga?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "relevant_doc_patterns": [
+        "PA-06"
+      ],
+      "expected_quote": "Si el sondaje es permanente, inflar el balón con 10 ml de agua estéril para fijar la sonda internamente."
+    },
+    {
+      "id": "g081",
+      "source_doc": "RPC120",
+      "orig_id": "q17",
+      "block": 1,
+      "query": "El paciente se queja de que le escuece la vía al pasarle el suero. ¿Cómo puedo saber si se ha extravasado fuera de la vena?",
+      "expected_section": "18. GLOSARIO / DEFINICIONES",
+      "relevant_doc_patterns": [
+        "RCP-120"
+      ],
+      "expected_quote": "Extravasación: Salida del líquido que se está perfundiendo, desde la vena a los tejidos circundantes. Suele ir acompañada de signos y síntomas como; inflamación, dolor, sensación de quemazón local, tirantez en la zona de punción, palidez y frialdad de la piel y disminución del flujo de la perfusión.",
+      "expected_answer": "La extravasación se detecta principalmente por una disminución en el flujo de la perfusión, acompañada de signos locales en los tejidos de alrededor como: inflamación, sensación de quemazón, tirantez en la zona, y que la piel esté pálida y fría al tacto."
+    },
+    {
+      "id": "g082",
+      "source_doc": "PC73",
+      "orig_id": "q12",
+      "block": 1,
+      "query": "¿Qué significa exactamente que el dolor sea \"paroxístico\"?",
+      "expected_section": "CLÍNICA Y EXPLORACIÓN EN EL BOX",
+      "relevant_doc_patterns": [
+        "PC-73"
+      ],
+      "expected_quote": "de carácter lancinante, punzante o \"eléctrico\", con inicio y fin abruptos... paroxismos recurrentes de dolor facial unilateral"
+    },
+    {
+      "id": "g083",
+      "source_doc": "PTP2",
+      "orig_id": "q05",
+      "block": 1,
+      "query": "¿Cuántos hemocultivos se extraen de forma general y cuántas extracciones se recomiendan en endocarditis?",
+      "expected_section": "3. HEMOCULTIVOS - Obtención de la muestra de sangre",
+      "relevant_doc_patterns": [
+        "PTP"
+      ],
+      "expected_quote": "Se extraerán 2-3 hemocultivos con el menor intervalo de tiempo posible después de la aparición de los síntomas utilizando lugares de venopunción diferentes. En endocarditis se recomiendan 3 extracciones separadas 30-60 minutos."
+    },
+    {
+      "id": "g084",
+      "source_doc": "PA17",
+      "orig_id": "q08",
+      "block": 1,
+      "query": "¿Cómo coloco el cuerpo y qué hago con los ojos?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "relevant_doc_patterns": [
+        "PA-17-"
+      ],
+      "expected_quote": "Colocar el cuerpo en decúbito supino con la cama en posición horizontal, los brazos a ambos lados del cuerpo y tobillos juntos. Cerrar ojos bajando los párpados superiores."
+    },
+    {
+      "id": "g085",
+      "source_doc": "PA26",
+      "orig_id": "q04",
+      "block": 1,
+      "query": "¿Cuántas horas al día hay que dar oxígeno en la EPOC para que disminuya la mortalidad?",
+      "expected_section": "DEFINICIONES",
+      "relevant_doc_patterns": [
+        "PA-26"
+      ],
+      "expected_quote": "La mortalidad en la EPOC disminuía al dar oxígeno 15 horas al día frente a no darlo, y aún disminuía más al aplicar un régimen continuo de 17,7 horas/día."
+    },
+    {
+      "id": "g086",
+      "source_doc": "RPC89",
+      "orig_id": "q08",
+      "block": 1,
+      "query": "¿A qué profundidad y a qué ritmo deben realizarse las compresiones torácicas?",
+      "expected_section": "INICIAR COMPRESIONES TORÁCICAS",
+      "relevant_doc_patterns": [
+        "RPC-89"
+      ],
+      "expected_quote": "El objetivo es comprimir fuerte y rápido, consiguiendo una depresión torácica de unos 5-6 cm, a un ritmo de 100-120 compresiones/minuto, permitiendo que el tórax regrese a la posición original con tiempo similar al de compresión y minimizando las interrupciones entre las compresiones."
+    },
+    {
+      "id": "g087",
+      "source_doc": "PO19",
+      "orig_id": "q22",
+      "block": 1,
+      "query": "En el Centro Nuestra Señora del Pilar, si la fuente es desconocida y el objeto no tiene sangre fresca, ¿cuándo acude el trabajador a hacerse la serología?",
+      "expected_section": "ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL CENTRO DE REHABILITACIÓN PSICOSOCIAL NUESTRA SEÑORA DEL PILAR",
+      "relevant_doc_patterns": [
+        "PO-19"
+      ],
+      "expected_quote": "el trabajador acudirá al SPRL (planta 8 del HCU, en horario de 8-15 horas de L-V), para extracción de sangre para serología, el primer día laborable tras el accidente, ya que en principio no está indicada la profilaxis frente a VIH, dada la labilidad del virus. Si estas premisas no se cumplieran, se actuará como si la fuente fuese positiva."
+    },
+    {
+      "id": "g088",
+      "source_doc": "PA46",
+      "orig_id": "q30",
+      "block": 1,
+      "query": "¿Qué hace el TCAE con el material de sujeción una vez retirado definitivamente?",
+      "expected_section": "RESPONSABILIDADES — TCAE",
+      "relevant_doc_patterns": [
+        "PA-46"
+      ],
+      "expected_quote": "Una vez retiradas definitivamente las contenciones, el TCAE se encarga de la limpieza de los vástagos y los enviará al despacho de celadores para su almacenamiento, introducirá el resto de material en una bolsa independiente y la enviará a lencería para su limpieza lo antes posible."
+    },
+    {
+      "id": "g089",
+      "source_doc": "PE27",
+      "orig_id": "q10",
+      "block": 1,
+      "query": "Me han dicho que hay que ponerle una pastilla al compañero de un positivo en queja, ¿cuál es la pauta?",
+      "expected_section": "PROFILAXIS ANTIVIRAL",
+      "relevant_doc_patterns": [
+        "PE-27"
+      ],
+      "expected_quote": "El médico valorará poner Oseltamivir 75 mg/24h durante 10 días. Pero ojo, solo si es una persona de riesgo (mayores de 65 años, enfermedades crónicas de corazón, pulmón, riñón, hígado, diabéticos, obesos mórbidos, embarazadas o inmunodeprimidos) y ha compartido habitación al menos 24 horas. Hay que empezar el tratamiento antes de que pasen 48 horas del contacto."
+    },
+    {
+      "id": "g090",
+      "source_doc": "PTP2",
+      "orig_id": "q39",
+      "block": 1,
+      "query": "Para detectar huevos de Schistosoma haematobium en orina, ¿en qué franja horaria se recoge la muestra?",
+      "expected_section": "15.5.2. Investigacion de huevos de Schistosoma haematobium",
+      "relevant_doc_patterns": [
+        "PTP"
+      ],
+      "expected_quote": "La mayor eliminación de huevos se realiza entre las 11 y las 14h. Recoger la orina entre las 11 y 14 h, después de un poco de ejercicio físico (subir y bajar escaleras)."
+    },
+    {
+      "id": "g091",
+      "source_doc": "PC73",
+      "orig_id": "q23",
+      "block": 1,
+      "query": "¿A qué se refieren los médicos con que el paciente está en una \"exacerbación grave\"?",
+      "expected_section": "TRATAMIENTO FARMACOLÓGICO Y SEGURIDAD DEL PACIENTE",
+      "relevant_doc_patterns": [
+        "PC-73"
+      ],
+      "expected_quote": "Las exacerbaciones graves de la clínica se caracterizan por un marcado aumento de la frecuencia, de la intensidad o de la duración de los paroxismos."
+    },
+    {
+      "id": "g092",
+      "source_doc": "PE27",
+      "orig_id": "q22",
+      "block": 1,
+      "query": "¿Qué tengo que poner exactamente en el diagnóstico al pedir la cama para que no me la denieguen?",
+      "expected_section": "GESTIÓN DE CAMAS",
+      "relevant_doc_patterns": [
+        "PE-27"
+      ],
+      "expected_quote": "Tienes que usar obligatoriamente el término \"INFECCIÓN RESPIRATORIA\". Es la palabra clave que activa todo el protocolo de gestión de camas. Luego, en observaciones, ya pones si es Gripe A, COVID o lo que sea."
+    },
+    {
+      "id": "g093",
+      "source_doc": "PA195",
+      "orig_id": "q09",
+      "block": 1,
+      "query": "¿Qué datos son imprescindibles poner para que la Dirección sepa a qué se enfrenta?",
+      "expected_section": "NOTIFICACIÓN Y COMUNICACIÓN INTERNA",
+      "relevant_doc_patterns": [
+        "PA-195"
+      ],
+      "expected_quote": "Se deben incluir las consecuencias para el paciente, el número de personas afectadas (tanto pacientes como personal) y la probabilidad de que el evento vuelva a repetirse."
+    },
+    {
+      "id": "g094",
+      "source_doc": "PA121",
+      "orig_id": "q08",
+      "block": 1,
+      "query": "¿Qué es la doble comprobación en el proceso de identificación?",
+      "expected_section": "DEFINICIONES Y JUSTIFICACIÓN",
+      "relevant_doc_patterns": [
+        "PA-121"
+      ],
+      "expected_quote": "Doble comprobación: proceso mediante el cual se comprueba que tanto la información obtenida a través del paciente en la identificación verbal activa como la información de la pulsera coinciden en su totalidad."
+    },
+    {
+      "id": "g095",
+      "source_doc": "PA195",
+      "orig_id": "q28",
+      "block": 1,
+      "query": "¿Dónde busco el código para notificar el incidente en la web del SiNASP?",
+      "expected_section": "SEGUIMIENTO Y RECURSOS",
+      "relevant_doc_patterns": [
+        "PA-195"
+      ],
+      "expected_quote": "Debes entrar en www.sinasp.es y utilizar el código de notificación HCUZ90."
+    },
+    {
+      "id": "g096",
+      "source_doc": "PA121",
+      "orig_id": "q17",
+      "block": 1,
+      "query": "¿En qué momento se colocan las pulseras de madre y recién nacido sano?",
+      "expected_section": "DESARROLLO — Identificación de recién nacido sano",
+      "relevant_doc_patterns": [
+        "PA-121"
+      ],
+      "expected_quote": "Las pulseras de madre y recién nacido se colocarán en el mismo momento del nacimiento, antes de cualquier eventual separación entre ambos. Al recién nacido se le colocará en el tobillo y a la madre en la muñeca y se comprobará el correcto cierre de ambas."
+    },
+    {
+      "id": "g097",
+      "source_doc": "PC08",
+      "orig_id": "q03",
+      "block": 1,
+      "query": "¿Por qué nos exigen tanta prisa en el ingreso si el paciente ya se encuentra bien?",
+      "expected_section": "RECONCEPTUALIZACIÓN DEL AIT",
+      "relevant_doc_patterns": [
+        "PC-08"
+      ],
+      "expected_quote": "un 25% de sujetos que han sufrido un AIT presentarán un infarto cerebral, siendo el riesgo mayor en las primeras 24-48 h"
+    },
+    {
+      "id": "g098",
+      "source_doc": "PO108",
+      "orig_id": "q21",
+      "block": 1,
+      "query": "¿Cada cuánto tiempo hay que vaciar el líquido cuando ya están en su domicilio?",
+      "expected_section": "SEGUIMIENTO DOMICILIARIO",
+      "relevant_doc_patterns": [
+        "PO-108"
+      ],
+      "expected_quote": "Se extraerá líquido según los síntomas que refiera el paciente... mayor si se drena diariamente que solamente cuando aparecen síntomas."
+    },
+    {
+      "id": "g099",
+      "source_doc": "PA46",
+      "orig_id": "q23",
+      "block": 1,
+      "query": "¿Por qué se eleva el cabecero de la cama al terminar de instaurar la sujeción completa?",
+      "expected_section": "MATERIAL Y TIPOS DE SUJECIÓN",
+      "relevant_doc_patterns": [
+        "PA-46"
+      ],
+      "expected_quote": "Al terminar de instaurar la contención se elevará el cabecero de la cama para facilitar la respiración y minimizar el riesgo de una aspiración."
+    },
+    {
+      "id": "g100",
+      "source_doc": "PC67",
+      "orig_id": "q29",
+      "block": 1,
+      "query": "Si el paciente está con dolorcillo o algo de febrícula, ¿qué le podemos dar para que aguante en casa?",
+      "expected_section": "GESTIÓN DEL TRATAMIENTO, HIDRATACIÓN Y RECOMENDACIONES",
+      "relevant_doc_patterns": [
+        "PC-67"
+      ],
+      "expected_quote": "Paracetamol 1 gramo: 1 comprimido cada 8 horas si dolor abdominal o febrícula."
+    },
+    {
+      "id": "g101",
+      "source_doc": "PO108",
+      "orig_id": "q27",
+      "block": 1,
+      "query": "¿Qué hacemos si el paciente empieza con fiebre y la zona del catéter se pone roja?",
+      "expected_section": "MANEJO DE COMPLICACIONES",
+      "relevant_doc_patterns": [
+        "PO-108"
+      ],
+      "expected_quote": "Durante el manejo de algunas complicaciones. Si no hay respuesta al tratamiento médico y/o tratamiento a través del CPT puede ser necesario retirarlo."
+    },
+    {
+      "id": "g102",
+      "source_doc": "RPC89",
+      "orig_id": "q27",
+      "block": 1,
+      "query": "¿En qué casos está indicado el sulfato de magnesio durante el paro cardiaco?",
+      "expected_section": "ANEXO 3 - Magnesio",
+      "relevant_doc_patterns": [
+        "RPC-89"
+      ],
+      "expected_quote": "No hay evidencia de que el uso rutinario de magnesio en el paro cardiaco aumente la supervivencia. Se considera indicado únicamente en casos en los que exista hipomagnesemia documentada o sospecha de esta (dosis: 2 gr de sulfato de magnesio iv) y en el tratamiento de las Torsades de Pointes."
+    },
+    {
+      "id": "g103",
+      "source_doc": "RPC89",
+      "orig_id": "q26",
+      "block": 1,
+      "query": "¿Cuándo se usa la lidocaína y a qué dosis en lugar de la amiodarona?",
+      "expected_section": "ANEXO 3 - Lidocaína",
+      "relevant_doc_patterns": [
+        "RPC-89"
+      ],
+      "expected_quote": "En este momento el empleo de lidocaína se restringe a pacientes con FV refractaria al choque si no se dispone de amiodarona (dosis inicial 1-1,5 mg/Kg ó 100mg, tras 3ª descarga con posibilidad de bolo adicional de 0,5-0,75 mg/kg ó 50 mg tras la 5ª descarga) o se ha tomado la decisión local de usar lidocaína en vez de amiodarona."
+    },
+    {
+      "id": "g104",
+      "source_doc": "PTP2",
+      "orig_id": "q44",
+      "block": 1,
+      "query": "En Resistencia Zero, ¿qué tres frotis mínimos se toman y dónde se realiza el frotis perirrectal?",
+      "expected_section": "18. RESISTENCIA ZERO - Obtención de la muestra",
+      "relevant_doc_patterns": [
+        "PTP"
+      ],
+      "expected_quote": "Las muestras serán mínimo tres: Frotis faríngeo (aunque el paciente esté intubado), frotis perirrectal y frotis nasal. Frotis perirrectal: toma de muestra alrededor de esfínter anal."
+    },
+    {
+      "id": "g105",
+      "source_doc": "PE27",
+      "orig_id": "q08",
+      "block": 1,
+      "query": "¿Y si el contacto de COVID es una embarazada o alguien con cáncer? ¿Qué hacemos?",
+      "expected_section": "GESTIÓN DE CONTACTOS COVID",
+      "relevant_doc_patterns": [
+        "PE-27"
+      ],
+      "expected_quote": "En estos casos de riesgo elevado (cáncer, quimio, inmunosupresión o embarazo), la recomendación es pasarlos a una habitación individual. Se les hace una prueba a las 72 horas y, si es negativo, se repite otro a las 48 horas. Solo si los dos salen negativos le quitamos la recomendación de individual."
+    },
+    {
+      "id": "g106",
+      "source_doc": "PA17",
+      "orig_id": "q14",
+      "block": 1,
+      "query": "¿Dónde registro el fallecimiento y qué hora debo poner?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "relevant_doc_patterns": [
+        "PA-17-"
+      ],
+      "expected_quote": "El éxitus será registrado por el facultativo en la Historia Clínica y por la enfermera en el programa Gacela, poniendo en todos los registros la misma hora de fallecimiento que en el Certificado de defunción."
+    },
+    {
+      "id": "g107",
+      "source_doc": "PA02",
+      "orig_id": "q11",
+      "block": 1,
+      "query": "¿Quién debe supervisar la toma de muestras?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "relevant_doc_patterns": [
+        "PA-02"
+      ],
+      "expected_quote": "La toma de muestras se efectuará siempre bajo la supervisión del personal sanitario para que no se cometa ninguna adulteración."
+    },
+    {
+      "id": "g108",
+      "source_doc": "PA195",
+      "orig_id": "q01",
+      "block": 1,
+      "query": "¿Cuándo se considera que un lío con un paciente es realmente \"grave\"?",
+      "expected_section": "DEFINICIONES",
+      "relevant_doc_patterns": [
+        "PA-195"
+      ],
+      "expected_quote": "Se considera grave cuando el suceso es inesperado, está relacionado con la atención sanitaria y provoca riesgo vital, fallecimiento, una hospitalización nueva o prolongada, discapacidad significativa (ya sea temporal o permanente), malformaciones o requiere cirugía urgente para evitar estos daños."
+    },
+    {
+      "id": "g109",
+      "source_doc": "PA46",
+      "orig_id": "q39",
+      "block": 1,
+      "query": "¿Qué cuidados de movilidad se deben aplicar a un paciente con inmovilización prolongada?",
+      "expected_section": "PLAN DE CUIDADOS — Movilidad",
+      "relevant_doc_patterns": [
+        "PA-46"
+      ],
+      "expected_quote": "Valorar cambios posturales mientras dure la inmovilización; supervisar presencia de signos de inflamación, parestesias y disestesias en miembros superiores; liberar de forma rotativa una extremidad si el estado del paciente lo permite; y valorar administración de heparina si la inmovilización dura más de 24h o más de 12h con factores de riesgo."
+    },
+    {
+      "id": "g110",
+      "source_doc": "PA201",
+      "orig_id": "q11",
+      "block": 1,
+      "query": "¿Hay que repetir el antibiótico si la cirugía se alarga?",
+      "expected_section": "CUIDADOS INTRAOPERATORIOS",
+      "relevant_doc_patterns": [
+        "PA-201"
+      ],
+      "expected_quote": "Repetición profilaxis antibiótica si la duración de la cirugía supera dos veces la vida media... Amoxicilina/ Clavulánico MISMA DOSIS a las 3 horas. Gentamicina NO SE RECOMIENDA a las 6h."
+    }
+  ]
+}

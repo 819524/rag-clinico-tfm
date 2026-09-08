@@ -1,0 +1,362 @@
+[
+ {
+  "id": "x001",
+  "query": "¿Cuál es el protocolo de atención al parto eutócico?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 28.17
+ },
+ {
+  "id": "x002",
+  "query": "¿Cómo se maneja una preeclampsia grave?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 12.39
+ },
+ {
+  "id": "x003",
+  "query": "¿Qué dosis de paracetamol se administra a un lactante de 6 kg?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 24.42
+ },
+ {
+  "id": "x004",
+  "query": "¿Cuál es la pauta de vacunación infantil a los 12 meses?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 26.61
+ },
+ {
+  "id": "x005",
+  "query": "¿Cómo se valora el test de Apgar?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 28.68
+ },
+ {
+  "id": "x006",
+  "query": "¿Cuál es el tratamiento del infarto agudo de miocardio con elevación del ST?",
+  "intent": "clinica",
+  "top1_score": 0.509765625,
+  "low_relevance": false,
+  "respuesta": "No encuentro información sobre el tratamiento del infarto agudo de miocardio con elevación del ST en los protocolos disponibles.\n\nLos documentos proporcionados se centran exclusivamente en el manejo del **Accidente Isquémico Transitorio (AIT)** [1, 4] y en el protocolo de **Parada Cardiaca Intrahospitalaria** (tratamiento de taquicardias con pulso, bradicardia y ritmos desfibrilables/no desfibrilables) [2, 3, 5].",
+  "segundos": 34.33
+ },
+ {
+  "id": "x007",
+  "query": "¿Qué anticoagulación se pauta en una fibrilación auricular de novo?",
+  "intent": "clinica",
+  "top1_score": 0.8515625,
+  "low_relevance": false,
+  "respuesta": "La pauta de anticoagulación en un paciente con fibrilación auricular (FA) de novo depende del contexto clínico y de la duración del episodio:\n\n## 1. En el contexto de un Accidente Isquémico Transitorio (AIT)\nSi se detecta fibrilación auricular o existe una sospecha de fuente cardioembólica tras un AIT, se debe proceder de la siguiente manera:\n- **Inicio de tratamiento:** Es necesario iniciar **anticoagulación oral**, siempre que no existan contraindicaciones [3].\n- **Preferencia farmacológica:** Se recomienda preferiblemente el uso de **anticoagulantes de acción directa** [3].\n\n## 2. Según la duración del episodio de FA\nEl manejo varía dependiendo de cuánto tiempo lleve el paciente con la arritmia:\n\n- **Episodios de menos de 48 horas:** Se considera una estrategia apropiada el **control de ritmo**, pudiendo emplearse amiodarona u otros fármacos antiarrítmicos [1].\n- **Episodios de más de 48 horas:** Los pacientes estables deben ser **anticoagulados** [1]. En estos casos, si se decide realizar una cardioversión, se debe demorar un mínimo de **3 semanas** desde el inicio del tratamiento anticoagulante efectivo [1].\n\n## 3. Consideraciones adicionales\n- **Pacientes inestables:** En caso de que la fibrilación auricular presente signos de inestabilidad hemodinámica (como shock, síncope, isquemia o insuficiencia cardiaca), el tratamiento de elección es la **cardioversión eléctrica sincronizada**, la cual debe realizarse siempre bajo **tratamiento anticoagulante** [1].\n- **Criterios de ingreso:** La presencia de una fibrilación auricular de novo es un criterio que puede considerar el ingreso del paciente en el servicio de Urgencias [2].",
+  "segundos": 34.15
+ },
+ {
+  "id": "x008",
+  "query": "¿Cómo se maneja una insuficiencia cardiaca descompensada?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 25.89
+ },
+ {
+  "id": "x009",
+  "query": "¿Cuál es el protocolo de manejo de una cetoacidosis diabética?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 11.44
+ },
+ {
+  "id": "x010",
+  "query": "¿Cómo se corrige una hipoglucemia grave en planta?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 17.77
+ },
+ {
+  "id": "x011",
+  "query": "¿Qué pauta de insulina se usa en el paciente hospitalizado?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 12.49
+ },
+ {
+  "id": "x012",
+  "query": "¿Cómo se maneja una hemorragia digestiva alta?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 20.18
+ },
+ {
+  "id": "x013",
+  "query": "¿Cuál es el tratamiento de una pancreatitis aguda?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 18.61
+ },
+ {
+  "id": "x014",
+  "query": "¿Cómo se realiza una paracentesis evacuadora?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 24.42
+ },
+ {
+  "id": "x015",
+  "query": "¿Cuál es el protocolo de manejo del tromboembolismo pulmonar?",
+  "intent": "clinica",
+  "top1_score": 0.78173828125,
+  "low_relevance": false,
+  "respuesta": "No encuentro información sobre un protocolo específico para el manejo del tromboembolismo pulmonar (TEP) en los documentos disponibles.\n\nLos fragmentos de los protocolos solo mencionan el **tromboembolismo pulmonar** en los siguientes contextos específicos:\n\n- **En parada cardiorrespiratoria (PCR):** Se indica que, en situaciones especiales como un contexto de tromboembolismo pulmonar fibrinolizado, las maniobras de RCP pueden prolongarse durante **60-90 minutos** si se han obtenido buenos resultados [1].\n- **En prevención de complicaciones por inmovilización:** El uso de heparina fraccionada (HF) subcutánea debe considerarse en pacientes con riesgo de sufrir un episodio de tromboembolismo (ETEV), especialmente si la inmovilización es superior a 72 horas. Los grupos de mayor riesgo para iniciar una profilaxis más precoz incluyen:\n    - Pacientes con antecedentes de ETEV [3].\n    - Pacientes con trombofilia [3].\n    - Pacientes con factores adicionales como edad >60 años y sexo masculino, procedentes de UCI, postoperatorio de cirugía ortopédica, cáncer activo o reciente, ictus (especialmente con parálisis de extremidades inferiores), insuficiencia cardiaca, EPOC, obesidad (IMC > 30 kg/m²), embarazo o presencia de varices [3].",
+  "segundos": 33.99
+ },
+ {
+  "id": "x016",
+  "query": "¿Cómo se trata una agudización de EPOC en urgencias?",
+  "intent": "clinica",
+  "top1_score": 0.4521484375,
+  "low_relevance": false,
+  "respuesta": "No encuentro información específica sobre el tratamiento farmacológico o clínico detallado para una agudización de EPOC en los protocolos disponibles.\n\nLos documentos proporcionados solo mencionan lo siguiente respecto a la situación clínica y el manejo inicial en Urgencias:\n\n- **Motivo de consulta**: La disnea en pacientes con enfermedad respiratoria previa es un motivo de consulta habitual que puede obedecer a una infección respiratoria [1].\n- **Valoración y Triaje**: Al llegar al Servicio de Urgencias, la enfermera realiza la valoración y el triaje [1].\n- **Medidas de prevención/control**: En el box de clasificación, el personal sanitario debe utilizar mascarilla y proporcionar una mascaría quirúrgica al paciente y su acompañante si no la llevan puesta, insistiendo en la higiene de manos con producto de base alcohólica [1].\n- **Derivación**: Tras la clasificación, el paciente se deriva al área de atención más adecuada según su patología y prioridad (por ejemplo, Atención Médica) [1].\n\nSi bien existe un documento sobre los cuidados de la oxigenoterapia que incluye referencias bibliográficas relacionadas con la EPOC y la oxigenoterapia nocturna en pacientes hipoxémicos [2], no se detalla un protocolo de tratamiento para la agudización en el texto suministrado.",
+  "segundos": 20.77
+ },
+ {
+  "id": "x017",
+  "query": "¿Cuándo está indicada la ventilación mecánica no invasiva?",
+  "intent": "clinica",
+  "top1_score": 0.7646484375,
+  "low_relevance": false,
+  "respuesta": "De acuerdo con los protocolos disponibles, la indicación de la ventilación mecánica no invasiva (VMNI) se establece en los siguientes contextos:\n\n## Indicaciones Clínicas\nLa VMNI se utiliza principalmente para el tratamiento de:\n- **Insuficiencia respiratoria**: Tanto en cuadros agudos como en insuficiencia respiratoria crónica agudizada, siempre que las comorbilidades del paciente sean estables y el paciente proceda de Urgencias o de otras áreas de hospitalización [3].\n- **Monitorización y terapia avanzada**: En pacientes con patología respiratoria que requieran monitorización específica y uso de terapia respiratoria avanzada [1].\n\n## Contextos de Traslado y Uso en la UCRI\nLa VMNI es un criterio para el ingreso o traslado a la Unidad de Cuidados Respiratorios Intensivos (UCRI) en las siguientes situaciones:\n- **Proceso de desconexión de ventilación mecánica invasiva (VMI)**: Pacientes procedentes de una UCI que, tras estabilizarse, no han logrado el éxito en la desconexación del ventilador y requieren VMNI (o traqueotomía) para progresar en la desconexión o para programar la ventilación mecánica domiciliaria (VMD) [3].\n- **Criterio de ingreso por necesidad terapéutica**: La necesidad de terapia respiratoria avanzada (que incluye la VMNI y/o la oxigenoterapia de alto flujo) es un criterio que determina el servicio de ingreso preferente, siendo Neumología el servicio indicado para estos casos [2].\n\n**Consideraciones adicionales para pacientes procedentes de UCI:**\nPara los traslados con fines de desconexión mediante VMNI, los pacientes deben cumplir con los siguientes requisitos clínicos:\n- Estar conscientes [3].\n- Estar hemodinámicamente estables [3].\n- Sin evidencia de sepsis [3].\n- Con función renal estable [3].\n- Sin arritmias cardíacas ni hemorragias incontroladas [3].",
+  "segundos": 33.6
+ },
+ {
+  "id": "x018",
+  "query": "¿Cuál es el protocolo de código ictus con fibrinólisis?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 19.48
+ },
+ {
+  "id": "x019",
+  "query": "¿Cómo se maneja un estatus epiléptico?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 11.15
+ },
+ {
+  "id": "x020",
+  "query": "¿Qué escala se usa para valorar el coma?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 27.67
+ },
+ {
+  "id": "x021",
+  "query": "¿Qué antibiótico empírico se pauta en una neumonía adquirida en la comunidad?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 22.55
+ },
+ {
+  "id": "x022",
+  "query": "¿Cuál es el protocolo de sepsis y shock séptico?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 18.51
+ },
+ {
+  "id": "x023",
+  "query": "¿Cómo se trata una infección por Clostridioides difficile?",
+  "intent": "clinica",
+  "top1_score": 0.859375,
+  "low_relevance": false,
+  "respuesta": "Para el tratamiento de una infección por *Clostridioides difficile*, los protocolos disponibles indican lo siguiente:\n\n## Diagnóstico y sospecha clínica\nLa sospecha de esta infección debe plantearse ante un paciente con **uso reciente de antibióticos** (especialmente en los 2 meses previos) [1]. En estos casos, es necesario solicitar la detección específica de *C. difficile* mediante pruebas complementarias [1].\n\n## Manejo y tratamiento\nEl protocolo no detalla un esquema de fármacos específicos para el tratamiento de la infección por *Clostridioides difficile*, pero establece las siguientes directrices según el contexto de la diarrea:\n\n- **En caso de diarrea nosocomial:** Se debe investigar la presencia del germen y seguir las guías específicas para este microorganismo, las cuales se encuentran en el protocolo autonómico PROA [1].\n- **Medidas generales (si no hay signos de alarma):** Si el paciente presenta una gastroenteritis sin signos de alarma, el tratamiento se centra en:\n    - Mantener una adecuada **hidratación** (beber pequeños sorbos de agua o suero, 2-3 litros diarios) [1].\n    - Controlar el dolor y las náuseas/vómitos [1].\n    - Evitar el ayuno por más de 12 horas [1].\n    - Iniciar dieta sólida (purés, dieta blanda) si la tolerancia a líquidos es buena [1].\n\n## Consideraciones para la toma de muestras\nSi se requiere realizar un estudio etiológico para confirmar la presencia del germen:\n- **Momento de recogida:** Las muestras de heces deben recogerse durante la fase aguda (entre los 3 y 5 primeros días de la enfermedad) [2].\n- **Procedimiento de transporte:** En caso de sospecha de diarrea por *Clostridium difficile*, las muestras deben enviarse en un **frasco limpio y seco** [2]. No es necesario utilizar medio de transporte de Cary-Blair para este germen específico [2].\n- **Análisis:** Se debe solicitar el coprocultivo incluyendo la detección de *C. difficile* [1, 3].",
+  "segundos": 34.93
+ },
+ {
+  "id": "x024",
+  "query": "¿Qué profilaxis antibiótica se usa en cirugía traumatológica?",
+  "intent": "clinica",
+  "top1_score": 0.5986328125,
+  "low_relevance": false,
+  "respuesta": "No encuentro esa información en los protocolos disponibles.\n\nLos documentos proporcionados contienen información sobre la vigilancia de infecciones de localización quirúrgica [1], el programa de recuperación intensificada para cirugía oncológica de colon [4, 5] y las referencias bibliográficas del hospital [2], pero no especifican el protocolo de profilaxis antibiótica para **cirugía traumatológica**.",
+  "segundos": 30.91
+ },
+ {
+  "id": "x025",
+  "query": "¿Cómo se maneja una hiperpotasemia grave?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 23.99
+ },
+ {
+  "id": "x026",
+  "query": "¿Cuál es el protocolo de fracaso renal agudo?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 19.18
+ },
+ {
+  "id": "x027",
+  "query": "¿Cómo se corrige una hiponatremia sintomática?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 18.57
+ },
+ {
+  "id": "x028",
+  "query": "¿Cuál es el protocolo de actuación ante un intento autolítico?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 16.53
+ },
+ {
+  "id": "x029",
+  "query": "¿Cómo se maneja un síndrome de abstinencia alcohólica?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 23.89
+ },
+ {
+  "id": "x030",
+  "query": "¿Cuál es el manejo inicial del politraumatizado?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 17.11
+ },
+ {
+  "id": "x031",
+  "query": "¿Cómo se inmoviliza una fractura de cadera antes de cirugía?",
+  "intent": "clinica",
+  "top1_score": 0.525390625,
+  "low_relevance": false,
+  "respuesta": "No encuentro información específica en los protocolos disponibles sobre un procedimiento de inmovilización técnica exclusivo para una **fractura de cadera** antes de una cirugía.\n\nLos documentos proporcionados se centran en el protocolo de **Contención Mecánica/Inmovilización Terapéutica** (para pacientes con agitación o falta de colaboración) [1] y en los periodos de vigilancia de infecciones tras procedimientos quirúrgicos como la prótesis de cadera (HPRO) [5].\n\nSi se refiere al procedimiento de **inmovilización terapéutica por contención mecánica** (en caso de que el paciente requiera sujeción por falta de colaboración), el protocolo establece los siguientes pasos y consideraciones:\n\n## Procedimiento de Inmovilización Terapiaéutica (Contención Mecánica)\n\n### 1. Preparación y Ejecución\n- **Coordinación:** Es necesaria la intervención coordinada del equipo. La acción debe ejecutarse a la voz de «tres», «ya» [1].\n- **Si el paciente colabora:** El coordinador informará de las medidas y acompañará al paciente, sujetándolo por las axilas (empujando hacia arriba) y por las muñecas con firmeza pero sin lesionar [1].\n- **Si el paciente NO colabora:** \n    - Se debe actuar de inmediato sin insistir en el diálogo [1].\n    - El equipo debe deslizar al paciente hacia el suelo sujetando cabeza y extremidades, evitando forzar articulaciones o ejercer presión sobre ellas [1].\n    - Para el traslado a la cama: dos personas sujetan miembros superiores (codos con apoyo bajo hombros), dos sujetos miembros inferiores (a la altura de las rodillas) y el coordinador sujeta la cabeza formando una corona [1].\n\n### 2. Técnica de Inmovilización en la Cama\nLa sujeción se realiza en **decúbito supino** siguiendo este orden estrictamente:\n1. Cintura [1].\n2. Extremidades inferiores [1].\n3. Extremidades superiores [1].\n4. Tórax [1].\n5. Dispositivos accesorios (alargaderas anti-rotación, sujeción de muslos, etc.) [1].\n\n**Detalles de los materiales:**\n- **Cinturón abdominal:** Se coloca transversalmente sobre la cama y se ajusta al paciente a nivel de la cintura abdominal mediante cierres magnéticos [1, 3]. No debe usarse de forma aislada por riesgo de lesiones y ahogamiento [1].\n- **Tobilleras:** Las piernas deben estar extendidas y ligeramente abiertas. Se ajustan las tobilleras a la medida del paciente y se fijan al botón magnético de la cama [1].\n- **Muñequeras:** Los brazos deben estar extendidos a lo largo del cuerpo y separados levemente de este. Se colocan las muñequeras y se introducen en los pasadores del cinturón abdominal [1, 3].\n\n### 3. Cuidados y Monitorización\nDurante la inmovilización, el personal debe garantizar:\n- **Posición:** Cabecero elevado entre **30° y 45°** para disminuir riesgo de aspiraciones [1].\n- **Valoración clínica (mínimo cada 2 horas):** Constantes vitales, nivel de conciencia, estado mental y revisión de sujeciones [1].\n- **Vigilancia de la movilidad:** Valorar cambios posturales, signos de inflamación (enrojecimiento, tumefacción), coloración (palidez o cianosis), temperatura distal y presencia de parestesias o disestesias (hormigueo) en miembros superiores [2].\n- **Prevención:** Si la inmovilización dura más de 24h (o más de 12h con factores de riesgo), valorar la administración de heparina [2].\n- **Monitorización:** Uso de pulsioxímetro con alarmas activadas [1].",
+  "segundos": 37.09
+ },
+ {
+  "id": "x032",
+  "query": "¿Cuál es el protocolo de profilaxis antitrombótica en el paciente quirúrgico?",
+  "intent": "clinica",
+  "top1_score": 0.66015625,
+  "low_relevance": false,
+  "respuesta": "No encuentro esa información en los protocolos disponibles.\n\nLos documentos proporcionados mencionan que en el preoperatorio inmediato se debe realizar la **\"Profilaxis tromboembólica según protocolo\"** [1], pero no detallan las pautas, fármacos o procedimientos específicos que componen dicho protocolo de profilaxis antitrombótica.",
+  "segundos": 20.68
+ },
+ {
+  "id": "x033",
+  "query": "¿Cómo se maneja una neutropenia febril?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 25.43
+ },
+ {
+  "id": "x034",
+  "query": "¿Cuál es la pauta de sedación paliativa?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 13.63
+ },
+ {
+  "id": "x035",
+  "query": "¿Cómo se trata el dolor oncológico irruptivo?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 10.84
+ },
+ {
+  "id": "x036",
+  "query": "¿Cuál es la dosis de amoxicilina-clavulánico en adultos?",
+  "intent": "clinica",
+  "top1_score": 0.4599609375,
+  "low_relevance": false,
+  "respuesta": "Para la profilaxis antibiótica en pacientes sometidos a cirugía oncológica de colon, la dosis de **amoxicilina/clavulánico** es la siguiente:\n\n- **Dosis:** 2 g / 200 mg por vía intravenosa (iv) [1].\n- **Momento de administración:** Debe administrarse entre 30 y 60 minutos previos a la incisión [1].\n- **Repetición de la dosis:** Se debe administrar la **misma dosis** a las 3 horas si la duración de la cirugía supera dos veces la vida media del antibiótico administrado [2].",
+  "segundos": 32.65
+ },
+ {
+  "id": "x037",
+  "query": "¿Qué interacciones tiene el acenocumarol?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 17.81
+ },
+ {
+  "id": "x038",
+  "query": "¿Cómo se ajusta la dosis de vancomicina por función renal?",
+  "intent": "clinica",
+  "top1_score": null,
+  "low_relevance": true,
+  "respuesta": "",
+  "segundos": 25.19
+ },
+ {
+  "id": "x039",
+  "query": "¿Cuál es el antídoto de una intoxicación por paracetamol?",
+  "intent": "clinica",
+  "top1_score": 0.3330078125,
+  "low_relevance": false,
+  "respuesta": "No encuentro esa información en los protocolos disponibles. Los documentos proporcionados solo mencionan el uso de antídotos para otras situaciones específicas (como flumazenilo para benzodiacepinas [5], o glucagón para la sobredosificación de beta-bloqueantes o calcioantagonistas [4]), pero no contienen información sobre el antídoto para una intoxicación por paracetamol.",
+  "segundos": 32.13
+ },
+ {
+  "id": "x040",
+  "query": "¿Qué precauciones tiene la administración de potasio intravenoso?",
+  "intent": "clinica",
+  "top1_score": 0.390625,
+  "low_relevance": false,
+  "respuesta": "No encuentro información específica sobre precauciones farmacológicas o dosis para la administración de potasio intravenoso en los protocolos disponibles.\n\nSin embargo, en relación con el **mantenimiento del catéter** durante la administración de tratamientos (como la fluidoterapia intermitente), los protocolos establecen las siguientes medidas de cuidado:\n\n- **Mantenimiento de la permeabilidad**: Tras la administración de cualquier tratamiento, se debe mantener la permeabilidad del catéter mediante un lavado periódico con **10 ml de suero fisiológico al 0,9%** para disminuir el riesgo de oclusión [1]. Este lavado también puede realizarse cada 24 horas [1, 2].\n- **Desinfección de conexiones**: Antes de acceder al sistema (por ejemplo, para administrar una medicación), se deben desinfectar los tapones de los obturadores, válvulas o conexiones con **alcohol 70% o clorhexidina alcohólica**, esperando **15 segundos** antes de la manipulación [2, 4, 5].\n- **Gestión de llaves**: Es necesario mantener todas las **llaves de cierre tapadas** cuando no se estén utilizando [4, 5].\n- **Vigilancia del catéter**: Se debe retirar o cambiar el catéter si se presentan signos de **flebitis, infección o mal funcionamiento** del mismo [4, 5].",
+  "segundos": 25.56
+ }
+]

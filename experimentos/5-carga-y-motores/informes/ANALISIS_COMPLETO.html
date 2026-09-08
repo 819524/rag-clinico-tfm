@@ -1,0 +1,158 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<title>Análisis completo — Benchmark de motores (voz05)</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b1120;color:#e2e8f0;margin:0;padding:28px;max-width:1180px;margin:0 auto}
+ h1{font-size:25px;margin:0 0 4px} h2{font-size:18px;margin:30px 0 10px;border-left:3px solid #38bdf8;padding-left:10px}
+ .sub{color:#94a3b8;font-size:13px;margin-bottom:18px} .note{color:#64748b;font-size:11px;margin-top:6px}
+ .kpis{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+ .kpi{background:#172033;border:1px solid #2b3a55;border-radius:10px;padding:12px 16px;min-width:140px}
+ .kpi .v{font-size:21px;font-weight:700;color:#38bdf8} .kpi .l{font-size:11px;color:#94a3b8;margin-top:2px}
+ .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+ .card{background:#172033;border:1px solid #2b3a55;border-radius:12px;padding:16px}
+ .card h3{margin:0 0 2px;font-size:14px} .card p{margin:0 0 10px;font-size:11px;color:#94a3b8}
+ canvas{max-height:250px}
+ table{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+ th,td{border:1px solid #2b3a55;padding:6px 10px;text-align:right} th{background:#1e293b;color:#cbd5e1} td:first-child,th:first-child{text-align:left}
+ .win{color:#22c55e;font-weight:700} ul{font-size:13.5px;line-height:1.7} li b{color:#cbd5e1}
+ .toc{font-size:13px;color:#94a3b8} .toc a{color:#38bdf8;text-decoration:none;margin-right:14px}
+ @media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<h1>Análisis completo — Benchmark de motores de inferencia (voz05)</h1>
+<div class="sub">vLLM vs llama.cpp vs Ollama · gemma-4 26B-A4B (MoE) y 12B (denso), 4-bit · pipeline RAG médico · 2× RTX PRO 6000 Blackwell · retriever Opción A (generator-bound).</div>
+<div class="toc"><b>Secciones:</b>
+ <a href="#s1">1 Rendimiento</a><a href="#s2">2 Latencia percibida</a><a href="#s3">3 Desglose por fase</a>
+ <a href="#s4">4 Saturación & prefix-cache</a><a href="#s5">5 Energía & tokens/julio</a><a href="#s6">6 Tokens & coste</a><a href="#s7">7 Telemetría/GPU</a><a href="#s8">8 Conclusiones</a></div>
+
+<div class="kpis">
+ <div class="kpi"><div class="v">13s</div><div class="l">vLLM 26B @ 25 usuarios</div></div>
+ <div class="kpi"><div class="v">~4.6×</div><div class="l">vLLM vs Ollama</div></div>
+ <div class="kpi"><div class="v">13s</div><div class="l">latencia p95 vLLM (vs 54s Ollama)</div></div>
+ <div class="kpi"><div class="v">2207</div><div class="l">tokens/kJ vLLM (el+eficiente)</div></div>
+ <div class="kpi"><div class="v">~2551×</div><div class="l">cloud premium vs local (por consulta)</div></div>
+</div>
+
+<h2 id="s1">1 · Rendimiento bajo concurrencia</h2>
+<div class="grid">
+ <div class="card"><h3>26B-MoE — tiempo muro vs usuarios</h3><p>llama.cpp NP=8, Ollama NP=8.</p><canvas id="c26"></canvas></div>
+ <div class="card"><h3>12B-denso — tiempo muro vs usuarios</h3><p>llama.cpp NP=8, Ollama NP=4.</p><canvas id="c12"></canvas></div>
+ <div class="card"><h3>Comparación a 25 usuarios</h3><p>Menor = mejor (embed 0.6b, mejor NP).</p><canvas id="cbar"></canvas></div>
+ <div class="card"><h3>Sensibilidad a NUM_PARALLEL (26B)</h3><p>llama.cpp mejora hasta NP=8; Ollama satura en NP=4.</p><canvas id="cnp"></canvas></div>
+</div>
+
+<h2 id="s2">2 · Latencia percibida por el usuario (percentiles)</h2>
+<div class="grid">
+ <div class="card"><h3>Latencia total p50 / p95 / p99 (s)</h3><p>Distribución sobre todo el barrido 26B·0.6b (79 peticiones/motor). Es lo que espera un clínico, no la media.</p><canvas id="cpctl"></canvas></div>
+ <div class="card"><h3>Tabla de percentiles</h3><div id="tpctl"></div></div>
+</div>
+
+<h2 id="s3">3 · Desglose por fase del pipeline (media a 25 usuarios)</h2>
+<div class="grid">
+ <div class="card"><h3>Router · Retriever · Generador (s)</h3><p>El retriever (Opción A) es ~0 en todos → el tiempo es del generador. Por eso comparamos motores limpiamente.</p><canvas id="cphase"></canvas></div>
+ <div class="card"><h3>Detalle</h3><div id="tphase"></div></div>
+</div>
+
+<h2 id="s4">4 · Saturación y prefix-caching (vLLM)</h2>
+<div class="grid">
+ <div class="card"><h3>Prefix-caching A/B — hasta 200 usuarios</h3><p>Con caché vLLM escala plano a 200u; sin ella ~2.5× más lento (TTFT 52× peor).</p><canvas id="cpc"></canvas></div>
+ <div class="card"><h3>vLLM a 200 usuarios</h3>
+  <table><tr><td>Peticiones OK / fallos</td><td><b class="win">526 / 0</b></td></tr>
+   <tr><td>KV-caché pico</td><td>17 %</td></tr><tr><td>En cola / preempciones</td><td>0 / 0</td></tr>
+   <tr><td>Throughput gen. pico</td><td>~4.400 tok/s</td></tr><tr><td>Prefix-cache hit</td><td>~99 %</td></tr></table></div>
+</div>
+
+<h2 id="s5">5 · Eficiencia energética y tokens/julio (GPU0, 26B·0.6b)</h2>
+<div class="grid">
+ <div class="card"><h3>Energía para servir el barrido (kJ)</h3><p>Mismo trabajo. vLLM termina antes → menos energía.</p><canvas id="cen"></canvas></div>
+ <div class="card"><h3>Tokens generados por kJ</h3><p>Eficiencia real: tokens útiles por unidad de energía.</p><canvas id="ctk"></canvas></div>
+</div>
+
+<h2 id="s6">6 · Tokens generados y coste (local vs cloud)</h2>
+<div class="grid">
+ <div class="card"><h3>Tokens generados en las pruebas</h3><p>Salida total (estimación por palabras de los logs) en todas las corridas del benchmark.</p><div id="ttok"></div></div>
+ <div class="card"><h3>Coste por 1.000 consultas RAG</h3><div id="tcost"></div>
+  <div class="note">Por consulta (router+generador, <b>exacto</b> de /metrics vLLM): <b>7,664 entrada + 635 salida</b> · luz 0.15 €/kWh · tarifas cloud USD/1M (jun-2026): GPT-4o-mini 0,15/0,60 · Gemini 2.5 Flash 0,30/2,50 · GPT-4o 2,50/10 · Claude Sonnet 4.6 3/15. Sin descuento de prompt-caching (lo abarataría). Local = coste eléctrico marginal de la GPU del generador.</div></div>
+</div>
+
+<h2 id="s7">7 · Telemetría y uso de GPU por experimento</h2>
+<div class="grid">
+ <div class="card"><h3>VRAM máx — GPU0 (generador) + GPU1 (embed)</h3><p>⚠️ vLLM <b>pre-reserva</b> su pool de KV (gpu-mem-util 0.9 → ~88 GB); el uso real de KV fue ~17% (saturación). llama.cpp/Ollama asignan KV por slot (crece con NP).</p><canvas id="cvram"></canvas></div>
+ <div class="card"><h3>Potencia GPU0 — media y pico (W)</h3><p>vLLM exprime más la GPU (más potencia útil), pero termina mucho antes → menos energía total.</p><canvas id="cpw"></canvas></div>
+ <div class="card"><h3>Uso de GPU por motor (26B·0.6b)</h3><div id="tgpu"></div></div>
+ <div class="card"><h3>Experimentos vLLM especiales</h3><div id="tspec"></div></div>
+</div>
+
+<h2 id="s8">8 · Conclusiones</h2>
+<ul>
+ <li><b>vLLM ~4-5× más rápido</b> bajo concurrencia (PagedAttention + continuous batching); aguanta 100-200 usuarios sin saturar.</li>
+ <li><b>Latencia p95/p99</b>: vLLM mantiene la cola de latencias mucho más plana → mejor experiencia real, no solo mejor media.</li>
+ <li><b>llama.cpp ≈ Ollama</b> (mismo motor; wrapper ~10-15% overhead). llama.cpp el más rápido en single-stream (217 tok/s).</li>
+ <li><b>26B-MoE > 12B-denso</b> en los tres motores (params activos, 4B vs 12B/token).</li>
+ <li><b>Eficiencia</b>: vLLM consume ~3× menos energía por el mismo trabajo y rinde más tokens/julio.</li>
+ <li><b>Coste</b>: la solución on-prem es ~3 órdenes de magnitud más barata por consulta que un API cloud premium (coste marginal ≈ eléctrico).</li>
+ <li><b>Prefix-caching</b>: decisivo en RAG (system-prompt compartido) → hasta 2.5× bajo concurrencia.</li>
+</ul>
+<div class="sub">Datos crudos en <code>1_comparativa_3motores/</code>, <code>2_vllm_experimentos/</code> · configs en <code>CONFIGURACIONES_MOTORES.md</code> · generado por <code>Scripts/generar_informe_maestro.py</code>.</div>
+
+<script>
+const D={"LEVELS": [1, 3, 5, 10, 15, 20, 25], "c26": {"vLLM": [11.0, 8.1, 8.0, 8.8, 9.8, 10.8, 13.1], "llama.cpp": [5.3, 13.7, 15.7, 24.7, 35.9, 42.8, 51.0], "llama.cpp_np": 8, "Ollama": [6.7, 19.1, 17.9, 27.6, 36.8, 50.5, 60.8], "Ollama_np": 8}, "c12": {"vLLM": [9.4, 10.3, 11.3, 11.6, 12.2, 14.1, 16.5], "llama.cpp": [10.2, 17.3, 23.1, 29.6, 47.7, 59.4, 67.1], "llama.cpp_np": 8, "Ollama": [10.1, 16.8, 23.1, 38.7, 54.1, 72.6, 79.8], "Ollama_np": 4}, "bar25": {"vLLM": [13.1, 16.5], "llama.cpp": [51.0, 67.1], "Ollama": [60.8, 79.8]}, "npc": {"llama.cpp": [102.6, 55.8, 51.0], "Ollama": [98.9, 64.8, 60.8]}, "ss": {"vLLM": 193, "llama.cpp": 217, "Ollama": 192}, "pctl": {"vLLM": {"p50": 8.06, "p95": 12.65, "p99": 13.1, "ttft_p50": 1.38, "ttft_p95": 2.22, "n": 79}, "llama.cpp": {"p50": 27.27, "p95": 46.72, "p99": 50.85, "ttft_p50": 12.88, "ttft_p95": 38.75, "n": 79}, "Ollama": {"p50": 30.59, "p95": 53.77, "p99": 60.4, "ttft_p50": 12.67, "ttft_p95": 39.89, "n": 79}}, "phase": {"vLLM": [1.14, 0.35, 7.97], "llama.cpp": [6.84, 0.16, 29.82], "Ollama": [8.36, 0.18, 31.43]}, "energy": {"vLLM": {"avg_pw": 256, "avg_ut": 83, "energy_kj": 18.4, "tokens": 40617, "tok_per_kj": 2207}, "llama.cpp": {"avg_pw": 304, "avg_ut": 76, "energy_kj": 58.0, "tokens": 43940, "tok_per_kj": 758}, "Ollama": {"avg_pw": 240, "avg_ut": 59, "energy_kj": 53.0, "tokens": 42618, "tok_per_kj": 804}}, "pc": {"levels": [1, 25, 50, 100, 150, 200], "on": [5.4, 12.8, 17.4, 25.1, 35.3, 44.7], "off": [5.5, 21.6, 34.1, 58.9, 87.0, 113.3]}, "colors": {"vLLM": "#22c55e", "llama.cpp": "#38bdf8", "Ollama": "#f59e0b"}, "cloud": [["GPT-4o-mini", 1.53], ["Gemini 2.5 Flash", 3.89], ["GPT-4o", 25.51], ["Claude Sonnet 4.6", 32.52]], "local_eur": 0.01, "in_tok": 7664, "out_tok": 635, "tokens_gen": [["vLLM (matriz)", 316, 167283], ["llama.cpp (matriz)", 948, 515045], ["Ollama (matriz)", 948, 514977], ["vLLM saturaci\u00f3n + prefix A/B", 1313, 678904], ["TOTAL", 3525, 1876209]], "gpustats": {"vLLM": {"g0_mem": 86.8, "g0_ut": 83, "g0_pw": 256, "g0_pwmax": 362, "g0_tp": 52, "g1_mem": 15.9}, "llama.cpp": {"g0_mem": 21.3, "g0_ut": 76, "g0_pw": 304, "g0_pwmax": 468, "g0_tp": 63, "g1_mem": 15.9}, "Ollama": {"g0_mem": 25.2, "g0_ut": 59, "g0_pw": 240, "g0_pwmax": 389, "g0_tp": 57, "g1_mem": 15.9}}, "special": [["Saturaci\u00f3n 1\u2192100u (vLLM)", {"g0_mem": 86.8, "g0_ut": 89, "g0_pw": 300, "g0_pwmax": 454, "g0_tp": 60, "g1_mem": 15.9}], ["Prefix-cache ON 1\u2192200u", {"g0_mem": 86.8, "g0_ut": 90, "g0_pw": 318, "g0_pwmax": 388, "g0_tp": 59, "g1_mem": 15.9}], ["Prefix-cache OFF 1\u2192200u", {"g0_mem": 86.8, "g0_ut": 95, "g0_pw": 416, "g0_pwmax": 524, "g0_tp": 70, "g1_mem": 15.9}]]};
+const base={responsive:true,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#cbd5e1',boxWidth:12}}},
+ scales:{x:{ticks:{color:'#94a3b8'},grid:{color:'#1b2740'}},y:{ticks:{color:'#94a3b8'},grid:{color:'#1b2740'},title:{display:true,text:'s',color:'#64748b'}}}};
+const L=(label,arr,color,dash)=>({label:label,data:arr,borderColor:color,backgroundColor:color+'22',borderWidth:2,pointRadius:2.5,tension:.2,borderDash:dash||[],spanGaps:true});
+function cloneB(){return JSON.parse(JSON.stringify(base));}
+function withY(u){const o=cloneB();o.scales.y.title.text=u;o.plugins.legend.display=false;return o;}
+const E=['vLLM','llama.cpp','Ollama'];
+function lc(id,c){const o=cloneB();o.scales.x.title={display:true,text:'usuarios concurrentes',color:'#64748b'};
+ new Chart(document.getElementById(id),{type:'line',data:{labels:D.LEVELS,datasets:[L('vLLM',c['vLLM'],D.colors['vLLM']),L('llama.cpp',c['llama.cpp'],D.colors['llama.cpp']),L('Ollama',c['Ollama'],D.colors['Ollama'])]},options:o});}
+lc('c26',D.c26); lc('c12',D.c12);
+new Chart(document.getElementById('cbar'),{type:'bar',data:{labels:['26B-MoE','12B-denso'],datasets:E.map(e=>({label:e,data:D.bar25[e],backgroundColor:D.colors[e]}))},options:cloneB()});
+new Chart(document.getElementById('cnp'),{type:'line',data:{labels:['NP=1','NP=4','NP=8'],datasets:[L('llama.cpp',D.npc['llama.cpp'],D.colors['llama.cpp']),L('Ollama',D.npc['Ollama'],D.colors['Ollama'])]},options:withY('s')});
+
+// percentiles
+new Chart(document.getElementById('cpctl'),{type:'bar',data:{labels:['p50','p95','p99'],datasets:E.map(e=>({label:e,data:[D.pctl[e].p50,D.pctl[e].p95,D.pctl[e].p99],backgroundColor:D.colors[e]}))},options:withY('s')});
+(function(){let h='<table><tr><th>Motor</th><th>p50</th><th>p95</th><th>p99</th><th>TTFT p50</th><th>TTFT p95</th></tr>';
+ for(const e of E){const p=D.pctl[e];h+='<tr><td>'+e+'</td><td>'+p.p50+'s</td><td>'+p.p95+'s</td><td>'+p.p99+'s</td><td>'+p.ttft_p50+'s</td><td>'+p.ttft_p95+'s</td></tr>';}
+ document.getElementById('tpctl').innerHTML=h+'</table>';})();
+
+// fases (stacked)
+const fo=withY('s'); fo.scales.x.stacked=true; fo.scales.y.stacked=true; fo.plugins.legend.display=true;
+const PH=['router','retriever','gen'], PC2=['#64748b','#a78bfa','#ef4444'];
+new Chart(document.getElementById('cphase'),{type:'bar',data:{labels:E,datasets:PH.map((ph,i)=>({label:ph,data:E.map(e=>D.phase[e][i]),backgroundColor:PC2[i]}))},options:fo});
+(function(){let h='<table><tr><th>Motor</th><th>Router</th><th>Retriever</th><th>Generador</th></tr>';
+ for(const e of E){const p=D.phase[e];h+='<tr><td>'+e+'</td><td>'+p[0]+'s</td><td>'+p[1]+'s</td><td>'+p[2]+'s</td></tr>';}
+ document.getElementById('tphase').innerHTML=h+'</table>';})();
+
+// prefix-cache
+new Chart(document.getElementById('cpc'),{type:'line',data:{labels:D.pc.levels,datasets:[L('con prefix-cache',D.pc.on,'#22c55e'),L('sin prefix-cache',D.pc.off,'#ef4444')]},options:cloneB()});
+
+// energía + tokens/kJ
+new Chart(document.getElementById('cen'),{type:'bar',data:{labels:E,datasets:[{label:'kJ',data:E.map(e=>D.energy[e]?D.energy[e].energy_kj:null),backgroundColor:E.map(e=>D.colors[e])}]},options:withY('kJ')});
+new Chart(document.getElementById('ctk'),{type:'bar',data:{labels:E,datasets:[{label:'tok/kJ',data:E.map(e=>D.energy[e]?D.energy[e].tok_per_kj:null),backgroundColor:E.map(e=>D.colors[e])}]},options:withY('tokens/kJ')});
+
+// tokens generados
+(function(){let h='<table><tr><th>Grupo de pruebas</th><th>Peticiones</th><th>Tokens salida</th></tr>';
+ for(const [n,q,t] of D.tokens_gen){const b=n==='TOTAL';h+='<tr><td>'+(b?'<b>'+n+'</b>':n)+'</td><td>'+(b?'<b>'+q.toLocaleString()+'</b>':q.toLocaleString())+'</td><td>'+(b?'<b>'+t.toLocaleString()+'</b>':t.toLocaleString())+'</td></tr>';}
+ document.getElementById('ttok').innerHTML=h+'</table>';})();
+
+// coste
+(function(){let h='<table><tr><th>Opción</th><th>Coste / 1.000 consultas</th><th>vs local</th></tr>';
+ h+='<tr><td><b class=win>Local (vLLM on-prem)</b></td><td>~'+D.local_eur+' €</td><td>1×</td></tr>';
+ for(const [n,c] of D.cloud){h+='<tr><td>Cloud · '+n+'</td><td>~$'+c+'</td><td>~'+Math.round(c/Math.max(D.local_eur,0.001))+'×</td></tr>';}
+ document.getElementById('tcost').innerHTML=h+'</table>';})();
+
+// telemetría / uso de GPU
+const vo=cloneB(); vo.scales.y.title.text='GB'; vo.scales.x.stacked=true; vo.scales.y.stacked=true;
+new Chart(document.getElementById('cvram'),{type:'bar',data:{labels:E,datasets:[
+ {label:'GPU0 (gen)',data:E.map(e=>D.gpustats[e]?D.gpustats[e].g0_mem:null),backgroundColor:'#3b82f6'},
+ {label:'GPU1 (embed)',data:E.map(e=>D.gpustats[e]?D.gpustats[e].g1_mem:null),backgroundColor:'#a78bfa'}]},options:vo});
+const po=cloneB(); po.scales.y.title.text='W';
+new Chart(document.getElementById('cpw'),{type:'bar',data:{labels:E,datasets:[
+ {label:'W media',data:E.map(e=>D.gpustats[e]?D.gpustats[e].g0_pw:null),backgroundColor:'#22c55e'},
+ {label:'W pico',data:E.map(e=>D.gpustats[e]?D.gpustats[e].g0_pwmax:null),backgroundColor:'#f59e0b'}]},options:po});
+(function(){let h='<table><tr><th>Motor</th><th>VRAM GPU0</th><th>util</th><th>W med</th><th>W pico</th><th>Tª</th><th>VRAM GPU1</th></tr>';
+ for(const e of E){const g=D.gpustats[e]; if(!g)continue; h+='<tr><td>'+e+'</td><td>'+g.g0_mem+' GB</td><td>'+g.g0_ut+'%</td><td>'+g.g0_pw+' W</td><td>'+g.g0_pwmax+' W</td><td>'+g.g0_tp+'°C</td><td>'+g.g1_mem+' GB</td></tr>';}
+ document.getElementById('tgpu').innerHTML=h+'</table>';})();
+(function(){let h='<table><tr><th>Experimento</th><th>VRAM GPU0</th><th>util</th><th>W pico</th><th>VRAM GPU1</th></tr>';
+ for(const [n,g] of D.special){if(!g)continue; h+='<tr><td>'+n+'</td><td>'+g.g0_mem+' GB</td><td>'+g.g0_ut+'%</td><td>'+g.g0_pwmax+' W</td><td>'+g.g1_mem+' GB</td></tr>';}
+ document.getElementById('tspec').innerHTML=h+'</table>';})();
+</script></body></html>

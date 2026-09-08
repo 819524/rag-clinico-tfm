@@ -1,0 +1,217 @@
+{
+  "name": "PE-27 — Plan de Contingencia Infecciones Respiratorias HCULB 2024-2025",
+  "description": "Ground truth generado a partir del documento PE-27. Cubre precauciones de aislamiento por niveles, gestión de contactos y profilaxis, vacunación del personal, diagnóstico microbiológico, gestión de camas y circuitos de pacientes críticos.",
+  "relevant_doc_patterns": ["PE-27", "contingencia-infecciones-respiratorias", "infecciones-respiratorias", "plan-contingencia"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "Oye, ¿cuándo nos tenemos que poner la mascarilla obligatoriamente según el nivel en el que estemos?",
+      "expected_section": "PRECAUCIONES POR NIVELES",
+      "expected_quote": "Nivel 1... obligatorio para cualquier paciente con síntomas respiratorios en Urgencias y siempre en los traslados por el hospital... Nivel 2... obligación para todos en Urgencias y para los acompañantes de esas plantas críticas... Nivel 3... universal y obligatorio en todo el centro."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Cuánto tiempo tengo que mantener las precauciones con un paciente que ha dado positivo en COVID y está en la planta?",
+      "expected_section": "PRECAUCIONES DE AISLAMIENTO",
+      "expected_quote": "5 días de precauciones aéreas desde que empezaron los síntomas (o desde el test si era asintomático)... tiene que llevar al menos 24 horas sin fiebre."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "Si tengo un paciente con Gripe o VRS, ¿cuándo puedo quitarle el aislamiento de gotas?",
+      "expected_section": "PRECAUCIONES DE AISLAMIENTO",
+      "expected_quote": "si es una Gripe y le estamos dando el antiviral, el aislamiento se puede retirar a los 3 días de empezar el tratamiento, siempre que lleve esas 24 horas asintomático."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Qué pasa con los niños o los pacientes de hematología que tienen virus respiratorios? ¿Las precauciones son las mismas?",
+      "expected_section": "PRECAUCIONES DE AISLAMIENTO",
+      "expected_quote": "Tanto en pediatría como en pacientes con inmunodepresión severa (como los de onco-hematología), si tienen cualquier virus respiratorio que no sea COVID, hay que poner precauciones de gotas + contacto mientras dure la clínica."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Tengo que ventilar la habitación cada vez que se limpia o hay que hacerlo más veces?",
+      "expected_section": "LIMPIEZA Y VENTILACIÓN",
+      "expected_quote": "La norma general es ventilar siempre que se limpia la habitación. Sin embargo, si estás en Urgencias, además de la limpieza, se debe ventilar a demanda según veas la carga del ambiente."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "Si un paciente da positivo en COVID, ¿quién se considera 'contacto' de los que están en su misma habitación?",
+      "expected_section": "GESTIÓN DE CONTACTOS COVID",
+      "expected_quote": "Se considera contacto a cualquiera que haya compartido habitación con él mientras tenía síntomas, pero también a los que estuvieron con él las 48 horas previas a que empezara a sentirse mal."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "A un contacto de COVID que no tiene riesgo elevado, ¿lo puedo dejar en habitación compartida?",
+      "expected_section": "GESTIÓN DE CONTACTOS COVID",
+      "expected_quote": "si no es una persona de riesgo puede seguir en habitación compartida. Lo que tenemos que hacer es un test a las 72 horas de la exposición. Si sale negativo, ya no hace falta repetirle nada más."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Y si el contacto de COVID es una embarazada o alguien con cáncer? ¿Qué hacemos?",
+      "expected_section": "GESTIÓN DE CONTACTOS COVID",
+      "expected_quote": "En estos casos de riesgo elevado (cáncer, quimio, inmunosupresión o embarazo), la recomendación es pasarlos a una habitación individual. Se les hace una prueba a las 72 horas y, si es negativo, se repite otro a las 48 horas. Solo si los dos salen negativos le quitamos la recomendación de individual."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "Si no tengo habitaciones libres y tengo un contacto de queja, ¿qué hago con la cortina de separación?",
+      "expected_section": "GESTIÓN DE HABITACIONES",
+      "expected_quote": "Si no hay forma de separarlos (priorizando siempre a los inmunodeprimidos), hay que dejar la cortina de separación echada y asegurar que haya al menos un metro de distancia entre las camas."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "Me han dicho que hay que ponerle una pastilla al compañero de un positivo en queja, ¿cuál es la pauta?",
+      "expected_section": "PROFILAXIS ANTIVIRAL",
+      "expected_quote": "El médico valorará poner Oseltamivir 75 mg/24h durante 10 días. Pero ojo, solo si es una persona de riesgo (mayores de 65 años, enfermedades crónicas de corazón, pulmón, riñón, hígado, diabéticos, obesos mórbidos, embarazadas o inmunodeprimidos) y ha compartido habitación al menos 24 horas. Hay que empezar el tratamiento antes de que pasen 48 horas del contacto."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Qué pasa si el contacto de gripe tiene mal los riñones? ¿Se cambia la dosis del antiviral?",
+      "expected_section": "PROFILAXIS ANTIVIRAL",
+      "expected_quote": "Si el CrCl está entre 30-60 ml/min, le damos 30 mg al día. Si está entre 10-30 ml/min, son 30 mg cada 2 días. Si está en hemodiálisis, se le dan 30 mg después de cada segunda sesión."
+    },
+    {
+      "id": "q12",
+      "block": 3,
+      "query": "¿Dónde y a qué hora me puedo ir a vacunar de la gripe y el COVID este año?",
+      "expected_section": "VACUNACIÓN DEL PERSONAL",
+      "expected_quote": "Tienes que ir a Medicina Preventiva (planta 8ª). Para el COVID, la campaña es del 14 de octubre al 29 de noviembre, de 8:00 a 11:30 y de 12:00 a 14:15. Pide cita antes en las extensiones 162444 o 162447."
+    },
+    {
+      "id": "q13",
+      "block": 3,
+      "query": "Hace un mes pasé el COVID, ¿me puedo poner la vacuna ya o tengo que esperar?",
+      "expected_section": "VACUNACIÓN DEL PERSONAL",
+      "expected_quote": "No se recomienda vacunar hasta que hayan pasado 3 meses desde que pasó la infección."
+    },
+    {
+      "id": "q14",
+      "block": 3,
+      "query": "Si no estoy segura de si pasé la varicela o si estoy vacunada, ¿me pinchan directamente o me hacen análisis?",
+      "expected_section": "OTRAS VACUNAS",
+      "expected_quote": "Si no está claro, te harán una serología. Si sale negativa, te ponen las 2 dosis. Pero mira, un detalle: si ya te habías puesto una dosis antes, te ponen la segunda directamente sin necesidad de hacer el análisis previo."
+    },
+    {
+      "id": "q15",
+      "block": 3,
+      "query": "¿La vacuna de la gripe es la misma para todos o a los mayores les ponen otra?",
+      "expected_section": "VACUNACIÓN ANTIGRIPAL",
+      "expected_quote": "Ambas son tetravalentes inactivadas, pero hay una presentación específica para la población general y otra diferente para mayores de 65 años o personas alérgicas."
+    },
+    {
+      "id": "q16",
+      "block": 4,
+      "query": "He oído que hay una PCR que detecta casi 20 virus a la vez, ¿cuándo se pide esa?",
+      "expected_section": "DIAGNÓSTICO MICROBIOLÓGICO",
+      "expected_quote": "Es la PCR de 17 virus. Se pide cuando Micro necesita ampliar el estudio porque detecta: Influenza A y B, Parainfluenza 1-4, VRS A y B, Metapneumovirus, 4 tipos de Coronavirus, Rhinovirus, Enterovirus, Adenovirus y Bocavirus."
+    },
+    {
+      "id": "q17",
+      "block": 4,
+      "query": "Si el laboratorio de Micro ya está cerrado, ¿podemos hacer algo en la planta o nos esperamos a mañana?",
+      "expected_section": "DIAGNÓSTICO FUERA DE HORARIO",
+      "expected_quote": "Fuera del horario de Micro (que es de 08:00 a 22:00), tenemos que usar los tests rápidos de antígenos que tenemos en las unidades para Gripe, VRS y COVID."
+    },
+    {
+      "id": "q18",
+      "block": 4,
+      "query": "Si el antígeno me sale negativo pero el paciente está fatal y parece gripe, ¿nos fiamos del resultado?",
+      "expected_section": "INTERPRETACIÓN DIAGNÓSTICA",
+      "expected_quote": "El antígeno tiene menos sensibilidad y un negativo no descarta la infección. Si sospecha mucho que el paciente tiene riesgo, hay que pedir una PCR para confirmar."
+    },
+    {
+      "id": "q19",
+      "block": 4,
+      "query": "Son las 10 de la noche y tengo un frotis, ¿dónde lo guardo si Micro no abre hasta mañana?",
+      "expected_section": "CONSERVACIÓN DE MUESTRAS",
+      "expected_quote": "Guárdalo en el frigorífico de la planta (a 2-8ºC). Es importante para que no se deteriore el material genético del virus y no nos dé un falso negativo mañana."
+    },
+    {
+      "id": "q20",
+      "block": 4,
+      "query": "¿Puedo pedir una PCR urgente si es mediodía? ¿A quién llamo?",
+      "expected_section": "SOLICITUD DE PCR URGENTE",
+      "expected_quote": "De 8 a 15 h llama a la extensión 164322. Por las tardes (de 15 a 20:30 h) o en fines de semana, tienes que llamar al busca del residente de guardia (710764)."
+    },
+    {
+      "id": "q21",
+      "block": 4,
+      "query": "¿Cuándo está indicado repetirle la prueba a un paciente que ya dio positivo?",
+      "expected_section": "REPETICIÓN DE PRUEBAS",
+      "expected_quote": "Solo si el paciente evoluciona mal o si vamos a mandar muestras que no sean el frotis habitual, como un broncoaspirado o líquido pleural."
+    },
+    {
+      "id": "q22",
+      "block": 5,
+      "query": "¿Qué tengo que poner exactamente en el diagnóstico al pedir la cama para que no me la denieguen?",
+      "expected_section": "GESTIÓN DE CAMAS",
+      "expected_quote": "Tienes que usar obligatoriamente el término \"INFECCIÓN RESPIRATORIA\". Es la palabra clave que activa todo el protocolo de gestión de camas. Luego, en observaciones, ya pones si es Gripe A, COVID o lo que sea."
+    },
+    {
+      "id": "q23",
+      "block": 5,
+      "query": "Si un paciente necesita 'maquinitas' (VNI o alto flujo), ¿a qué servicio tiene que ir?",
+      "expected_section": "CIRCUITOS DE PACIENTES",
+      "expected_quote": "Su sitio es Neumología, concretamente la UCRI que está en la planta 11B."
+    },
+    {
+      "id": "q24",
+      "block": 5,
+      "query": "¿Cómo funciona eso del 'semáforo' de las camas para que no nos saturen siempre a los mismos?",
+      "expected_section": "GESTIÓN DE CAMAS",
+      "expected_quote": "Se mira la ocupación: Blanco/Amarillo (hasta el 100%), Naranja (hasta 125%) y Rojo (más del 125%). La regla de oro es que no puede haber más de dos niveles de diferencia entre servicios; si uno está en Rojo, no puede haber otro en Blanco."
+    },
+    {
+      "id": "q25",
+      "block": 5,
+      "query": "¿Podemos medir a dos pacientes con gripe en la misma habitación si no hay más sitio?",
+      "expected_section": "GESTIÓN DE HABITACIONES",
+      "expected_quote": "Sí, siempre que tengan el mismo diagnóstico único confirmado (por ejemplo, dos Gripes A). Lo que no puedes hacer es mezclar un COVID con una Gripe, a menos que ambos tengan la misma coinfección por los dos virus."
+    },
+    {
+      "id": "q26",
+      "block": 5,
+      "query": "Si no hay camas en la UCI y el paciente se pone muy mal en planta, ¿quién se hace cargo de él mientras esperamos?",
+      "expected_section": "CIRCUITOS DE PACIENTES CRÍTICOS",
+      "expected_quote": "Se traslada a la Sala de Despertar. El equipo de la planta hace el traslado, pero allí se hace cargo un adjunto de UCI. El Supervisor de guardia se encarga de buscar el personal de enfermería necesario para atenderlo allí."
+    },
+    {
+      "id": "q27",
+      "block": 5,
+      "query": "¿A partir de qué número de pacientes 'ectópicos' (fuera de su planta) se abre una unidad específica?",
+      "expected_section": "HABILITACIÓN DE UNIDADES",
+      "expected_quote": "Cuando tengamos más de 35 pacientes fuera de su área habitual, se habilita una unidad de enfermería específica para infecciones respiratorias."
+    },
+    {
+      "id": "q28",
+      "block": 6,
+      "query": "¿Qué criterios se usan para mandar a alguien a la UCRI de la 11B?",
+      "expected_section": "CRITERIOS DE INGRESO EN UCRI",
+      "expected_quote": "Pacientes que necesitan VMNI o alto flujo, o los que vienen de UCI pero aún dependen del respirador o traqueo. Tienes que contactar con el neumólogo de la unidad en el busca 710386."
+    },
+    {
+      "id": "q29",
+      "block": 6,
+      "query": "En Urgencias, ¿a quién le tenemos que dar la hoja informativa y la mascarilla nada más llegar?",
+      "expected_section": "CIRCUITO EN URGENCIAS",
+      "expected_quote": "Se hace directamente en el cuadro de clasificación. Allí se les da la mascarilla y la hoja del Anexo 2 tanto al paciente como al acompañante."
+    },
+    {
+      "id": "q30",
+      "block": 6,
+      "query": "Si un paciente con infección respiratoria tiene que ir a hacerse una placa, ¿qué tiene que llevar?",
+      "expected_section": "TRASLADOS DE PACIENTES",
+      "expected_quote": "Es obligatorio que el paciente vaya siempre con la mascarilla quirúrgica bien puesta durante todo el traslado."
+    }
+  ]
+}

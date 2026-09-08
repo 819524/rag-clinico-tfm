@@ -1,0 +1,166 @@
+{
+  "name": "RPC-120 — Cuidados del Catéter Intravenoso Periférico",
+  "description": "Ground truth generado a partir del protocolo RPC-120 del Hospital Clínico Universitario 'Lozano Blesa'. Incluye preguntas informales sobre inserción, mantenimiento, cambio de sistemas y retirada de vías venosas periféricas, añadiendo una respuesta explicativa además de la cita exacta.",
+  "relevant_doc_patterns":[
+    "RPC-120",
+    "cateter-intravenoso",
+    "CVP",
+    "via-periferica",
+    "flebitis"
+  ],
+  "questions":[
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Puedo usar una cuchilla normal si el paciente tiene mucho vello en el brazo donde le voy a coger la vía?",
+      "expected_section": "PREPARACIÓN DE LA ZONA DE INSERCIÓN",
+      "expected_answer": "No, no debes usar cuchilla. El protocolo especifica que si hay mucho vello se debe usar maquinilla eléctrica, ya que hacer cortes o erosionar la piel con cuchillas convencionales aumenta el riesgo de que el paciente contraiga una infección.",
+      "expected_quote": "Si la zona de inserción presenta gran cantidad de vello, éste se recortará con maquinilla eléctrica. Debe evitarse hacer cortes o erosionar la piel, porque aumenta el riesgo de infección"
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "Voy a poner una vía periférica a un bebé recién nacido de 1 mes, ¿le limpio con clorhexidina alcohólica al 2% como a los adultos?",
+      "expected_section": "USO DE ANTISÉPTICOS",
+      "expected_answer": "No es recomendable por defecto. En niños menores de 2 meses no existe evidencia clínica suficiente que avale el uso de clorhexidina, por lo que el protocolo lo considera un 'asunto sin resolver'.",
+      "expected_quote": "En niños menores de 2 meses no hay evidencia sobre el uso de clorhexidina. Asunto sin resolver."
+    },
+    {
+      "id": "q03",
+      "block": 2,
+      "query": "Le he puesto un apósito transparente de plástico a la vía del paciente. Si está limpio y bien pegado, ¿cuándo se lo tengo que cambiar?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_answer": "Si el apósito transparente se mantiene íntegro y limpio, solo es necesario cambiarlo 1 vez por semana. La excepción son los pacientes pediátricos, donde hay que valorar si mover el catéter para cambiar el apósito supone más riesgo que dejarlo.",
+      "expected_quote": "Cambiar el apósito transparente 1 vez por semana, excepto en aquellos pacientes pediátricos en los que el riesgo de mover el catéter sea mayor que las ventajas derivadas del cambio de apósito"
+    },
+    {
+      "id": "q04",
+      "block": 2,
+      "query": "El paciente suda mucho y sangraba un poco, así que le he puesto un apósito de gasa en lugar de uno transparente. ¿Cada cuánto se lo cambio?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_answer": "Los apósitos de gasa requieren cambios más frecuentes que los transparentes. Debes sustituirlo como máximo cada 48 horas, o antes si ves que no está íntegro (por ejemplo, si se levanta, se ensucia o se moja).",
+      "expected_quote": "El apósito de gasa será sustituido cada 48 horas o siempre que no esté integro (sucio, levantado, mojado…)"
+    },
+    {
+      "id": "q05",
+      "block": 3,
+      "query": "¿Cada cuántos días se cambian los sueros y las alargaderas de una vía periférica normal?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_answer": "Los sistemas de fluidoterapia y todos sus accesorios (como llaves de paso o alargaderas) se deben cambiar cada 96 horas (unos 4 días), siempre y cuando no se ensucien o se desconecten de forma accidental antes de ese tiempo.",
+      "expected_quote": "Cambiar el equipo de fluidoterapia y accesorios (alargaderas, válvulas, llaves...) a las 96 horas y siempre que estén visiblemente sucios o en caso de desconexiones accidentales"
+    },
+    {
+      "id": "q06",
+      "block": 3,
+      "query": "Si le estoy pasando nutrición con lípidos o le pongo una transfusión de sangre, ¿también me duran 96 horas los sistemas?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_answer": "No. Para sustancias más delicadas el tiempo es mucho menor: si pasas soluciones lipídicas debes cambiar los sistemas cada 24 horas, y si pasas sangre o hemoderivados, debes sustituir el sistema con cada bolsa que se infunda.",
+      "expected_quote": "Cambiar cada 24 horas los sistemas utilizados para la administración de soluciones lipídicas... Los sistemas usados para la administración de sangre y hemoderivados serán sustituidos por cada bolsa infundida"
+    },
+    {
+      "id": "q07",
+      "block": 3,
+      "query": "Para limpiar un tapón antes de poner medicación, le paso la gasita con alcohol y enchufo la jeringa directo, ¿verdad?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_answer": "Casi, pero te falta un paso muy importante: el tiempo de secado. Después de desinfectar con alcohol o clorhexidina, es obligatorio esperar 15 segundos para que el producto haga efecto antes de acceder al sistema.",
+      "expected_quote": "Desinfectar los tapones de los obturadores, válvulas o conexiones con alcohol 70% o clorhexidina alcohólica y esperar 15 segundos antes de acceder al sistema"
+    },
+    {
+      "id": "q08",
+      "block": 4,
+      "query": "Si el paciente no tiene suero continuo y solo le pasamos medicación a ratos, ¿cómo evito que se le obstruya la vía?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_answer": "Para mantener la vía permeable (abierta y sin coágulos), debes lavarla introduciendo 10 ml de Suero Fisiológico al 0,9% cada vez que termines de pasarle el tratamiento, o al menos una vez cada 24 horas si no la estás usando.",
+      "expected_quote": "Mantener la permeabilidad del catéter mediante lavado con 10 ml de SF al 0,9% tras la administración del tratamiento o cada 24 horas para disminuir el riesgo de oclusión"
+    },
+    {
+      "id": "q09",
+      "block": 4,
+      "query": "El paciente llegó por Urgencias muy inestable y le cogieron la vía corriendo en medio del pasillo. ¿Se la dejo los mismos días que a los de planta?",
+      "expected_section": "RETIRADA DEL CATÉTER",
+      "expected_answer": "No. Cuando una vía se inserta en una emergencia médica, no se suele poder garantizar una técnica completamente aséptica. Por tanto, el protocolo indica que debe retirarse y cambiarse por una nueva tan pronto como sea posible, idealmente en las primeras 48 horas.",
+      "expected_quote": "Cuando la adherencia a la técnica aséptica no puede ser asegurada (ej. catéter insertado en una emergencia) retire el catéter tan pronto como sea posible, por ej. las primeras 48 h"
+    },
+    {
+      "id": "q10",
+      "block": 4,
+      "query": "Oye, ¿hay que cambiar la vía de sitio de forma rutinaria cada 3 o 4 días como se hacía antiguamente?",
+      "expected_section": "RETIRADA DEL CATÉTER",
+      "expected_answer": "No. El protocolo actual especifica que no se debe cambiar ningún catéter venoso de forma rutinaria por el simple paso del tiempo, a menos que exista un motivo clínico que lo recomiende (como flebitis, mal funcionamiento o infección).",
+      "expected_quote": "No cambiar de forma rutinaria ningún catéter venoso a no ser que esté clínicamente recomendado"
+    },
+    {
+      "id": "q11",
+      "block": 5,
+      "query": "Si utilizo guantes estériles para canalizar la vía, ¿ya no hace falta que me lave las manos antes?",
+      "expected_section": "10. RECOMENDACIONES - HIGIENE DE MANOS",
+      "expected_answer": "Falso. El protocolo es claro: el uso de guantes, sean del tipo que sean, no sustituye ni excluye la obligación de realizar un correcto lavado de manos antes y después del procedimiento.",
+      "expected_quote": "El uso de guantes no excluye el lavado de manos (1,2)."
+    },
+    {
+      "id": "q12",
+      "block": 5,
+      "query": "¿Es necesario que le explique al paciente para qué le pongo la vía o qué tiene que vigilar?",
+      "expected_section": "10. RECOMENDACIONES - INFORMACIÓN AL PACIENTE",
+      "expected_answer": "Sí, es fundamental. Hay que informar al paciente sobre el procedimiento y sus motivos. Además, se le debe animar a que avise al personal si nota cualquier molestia o cambio en la zona donde tiene el catéter.",
+      "expected_quote": "Informar al paciente sobre el procedimiento a realizar y los motivos de la inserción. Animar a los pacientes a comunicar al personal sanitario cualquier cambio que noten en la zona de inserción de su catéter o cualquier molestia."
+    },
+    {
+      "id": "q13",
+      "block": 5,
+      "query": "A un paciente que es alérgico a la clorhexidina le he limpiado la piel con Betadine (povidona yodada). ¿Puedo pinchar al momento?",
+      "expected_section": "USO DE ANTISÉPTICOS",
+      "expected_answer": "No, debes esperar a que el líquido se seque por completo para que haga efecto. Para la povidona yodada el tiempo de espera estipulado en el protocolo es de 2 minutos, a diferencia de la clorhexidina que solo requiere 30 segundos.",
+      "expected_quote": "Dejar secar el antiséptico antes de la inserción del catéter o el cambio de apósito (1-5): - 30 segundos para la clorhexidina - 2 minutos en el caso de la povidona yodada"
+    },
+    {
+      "id": "q14",
+      "block": 6,
+      "query": "¿Tengo que levantar la pegatina transparente todos los días para ver si el punto de punción está rojo?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_answer": "No es necesario (ni recomendable) levantar o despegar el apósito si es transparente. Debes valorar el lugar de inserción a diario mediante inspección visual a través del propio apósito o palpando suavemente por encima para detectar dolor o induración.",
+      "expected_quote": "Valorar el lugar de inserción del catéter diariamente mediante inspección o palpación del apósito (1-3)."
+    },
+    {
+      "id": "q15",
+      "block": 6,
+      "query": "Si en una llave de tres pasos me sobra una conexión por la que no le estoy pasando nada, ¿puedo dejarla destapada?",
+      "expected_section": "MANTENIMIENTO DEL CATÉTER",
+      "expected_answer": "En absoluto. El protocolo exige mantener una técnica estricta de asepsia, por lo que todas las llaves de cierre o conexiones que no se estén utilizando en ese momento deben permanecer siempre tapadas.",
+      "expected_quote": "Tapar todas las llaves de cierre cuando no se estén usando (1,2)."
+    },
+    {
+      "id": "q16",
+      "block": 6,
+      "query": "He terminado de poner una vía, ¿qué cosas concretas tengo que apuntar en el ordenador (Gacela)?",
+      "expected_section": "REGISTRO DE CVP",
+      "expected_answer": "Debes registrar el tipo y calibre del catéter, la fecha y lugar exacto de inserción, la fecha de los cambios de apósito y sistema que hagas, cualquier incidencia que ocurra, el motivo y fecha si decides retirarla, y tu nombre como profesional.",
+      "expected_quote": "Cumplimentar en el registro de enfermería: Tipo CVP y calibre. Fecha y lugar de inserción. Fecha de los cambios del sistema y del apósito. Incidencias relacionadas con el mantenimiento del catéter. Fecha de retirada del catéter y motivo. Nombre de la enfermera."
+    },
+    {
+      "id": "q17",
+      "block": 7,
+      "query": "El paciente se queja de que le escuece la vía al pasarle el suero. ¿Cómo puedo saber si se ha extravasado fuera de la vena?",
+      "expected_section": "18. GLOSARIO / DEFINICIONES",
+      "expected_answer": "La extravasación se detecta principalmente por una disminución en el flujo de la perfusión, acompañada de signos locales en los tejidos de alrededor como: inflamación, sensación de quemazón, tirantez en la zona, y que la piel esté pálida y fría al tacto.",
+      "expected_quote": "Extravasación: Salida del líquido que se está perfundiendo, desde la vena a los tejidos circundantes. Suele ir acompañada de signos y síntomas como; inflamación, dolor, sensación de quemazón local, tirantez en la zona de punción, palidez y frialdad de la piel y disminución del flujo de la perfusión."
+    },
+    {
+      "id": "q18",
+      "block": 7,
+      "query": "Tiene un poco de rojez en la piel siguiendo la vena, ¿eso ya es una flebitis declarada?",
+      "expected_section": "18. GLOSARIO / DEFINICIONES",
+      "expected_answer": "No necesariamente. Un simple enrojecimiento se denomina eritema, y suele ser una reacción precursora. Para considerarse clínicamente una flebitis, la inflamación debe ir acompañada de otros síntomas como dolor o sensibilidad, calor, hinchazón, o que la vena se note endurecida (cordón venoso palpable).",
+      "expected_quote": "Eritema: enrojecimiento de la piel a lo largo del recorrido de una vena que resulta de la irritación vascular o congestión capilar en respuesta a la irritación, puede ser un precursor de la flebitis."
+    },
+    {
+      "id": "q19",
+      "block": 7,
+      "query": "Mi supervisora me pregunta cuál es el estándar de calidad máximo aceptable para la tasa de flebitis en el hospital, ¿qué le respondo?",
+      "expected_section": "15. INDICADORES DE EVALUACIÓN",
+      "expected_answer": "Según la ficha de indicadores de evaluación definida en el protocolo para 'Catéteres Intravenosos Periféricos con flebitis', el estándar marcado como límite o referencia de calidad es de un 5,5%.",
+      "expected_quote": "Nombre del indicador: Catéteres Intravenosos Periféricos con flebitis [...] Estándar: 5,5%"
+    }
+  ]
+}
+  

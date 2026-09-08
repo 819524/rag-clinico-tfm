@@ -1,0 +1,112 @@
+{
+  "name": "PA-02_Z3(E)C-TX — Procedimiento para la Extracción de Muestras para Análisis Toxicológicos con Fines Legales",
+  "description": "Ground truth generado a partir del documento PA-02_Z3(E)C-TX (Revisión B). Cubre los dos tipos de muestras legales, requisitos técnicos de extracción (alcoholemia y drogas de abuso), normas específicas de cadena de custodia, etiquetado, conservación, envío y actuación fuera de horario.",
+  "relevant_doc_patterns": ["PA-02", "toxicologia", "muestras-legales", "cadena-custodia", "alcoholemia", "drogas-abuso"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Qué tipos de muestras legales se reciben y de dónde proceden?",
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Se reciben dos tipos de muestras de tipo legal, ambas procedentes de situaciones de tráfico: las denominadas 'voluntarias', recogidas por expreso deseo del interesado para contrastar la concentración de alcohol o verificar presencia de drogas; y las muestras de sangre y orina recogidas con fines clínicos, en las que la autoridad de tráfico deja un oficio solicitando su custodia y conservación a la espera de una solicitud judicial."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Qué es una muestra 'voluntaria' en este contexto?",
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Son muestras recogidas por expreso deseo del interesado como método de contraste de la concentración de alcohol en sangre tras un positivo en aire espirado, o para verificación de presencia de drogas de abuso en orina."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Qué tubos necesito preparar para una alcoholemia?",
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Se requiere una muestra de sangre en tubo con EDTA como anticoagulante (tape malva), volumen mínimo 3 ml, y otra de suero en tubo con gel separador (tape amarillo), volumen mínimo 3 ml."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Puedo limpiar la zona de punción con alcohol antes de sacar la muestra de alcoholemia?",
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "No. La limpieza de la zona de venopunción nunca se realizará con alcohol, pudiendo emplearse agua y jabón o yodo."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Qué muestras se necesitan para el rastreo de drogas de abuso y/o fármacos?",
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Se requiere una muestra de suero en tubo con gel separador (tape amarillo), volumen mínimo 3 ml, y además el paciente debe emitir una muestra de orina."
+    },
+    {
+      "id": "q06",
+      "block": 1,
+      "query": "¿Cómo se obtiene la muestra de orina para el rastreo de drogas?",
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Se le da al paciente el contenedor primario (contenedor de 120 mL de tape azul) donde debe emitir la orina. Posteriormente el ATS/DUE debe retirar el plástico que tapa la cánula de transferencia e introducir el tubo secundario en el primario a través de ésta cánula."
+    },
+    {
+      "id": "q07",
+      "block": 1,
+      "query": "¿Qué hago si no tengo el tubo específico indicado en el procedimiento?",
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Si no se dispone de alguno de estos tubos deben usarse otros similares. En el caso del tubo de orina puede usarse el contenedor que habitualmente se emplee."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Qué debo hacer antes de extraer la muestra para garantizar que es del paciente correcto?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "Es imprescindible asegurar la identidad del paciente antes de la extracción."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Qué es el formulario de cadena de custodia y qué debe contener?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "Es un documento que debe acompañar a la muestra y al documento de solicitud de análisis en todo su recorrido hasta la Unidad de Toxicología. En él debe constar el número de identificación de la muestra pero no el nombre del interesado, y deben identificarse y firmar todas las personas implicadas en la obtención, transporte y recepción de la muestra."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Cuáles son los documentos válidos para solicitar el análisis toxicológico?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "El documento de petición de análisis debe ser uno de los tres siguientes: el documento de solicitud/consentimiento firmado por el interesado y el Facultativo y ATS/DUE; el oficio de la autoridad de Tráfico solicitando custodia y conservación de las muestras; o el oficio judicial autorizando la realización de los análisis."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Quién debe supervisar la toma de muestras?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "La toma de muestras se efectuará siempre bajo la supervisión del personal sanitario para que no se cometa ninguna adulteración."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Cómo se etiquetan los tubos para garantizar que no han sido manipulados?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "El etiquetado de todas las muestras se realizará de modo que la etiqueta abarque un tramo del tubo y otro del tapón. De esta forma, si alguien intentase abrir el envase, la etiqueta se rompería y no se garantizaría la cadena de custodia."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "¿A qué temperatura hay que conservar las muestras y pueden congelarse?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "Inmediatamente después de su extracción, las muestras deben ser guardadas en nevera a 4ºC. En ningún caso deben ser congeladas."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Cuánto tiempo tengo para enviar las muestras a la Unidad de Toxicología?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "El envío de las muestras debe realizarse a la Unidad de Toxicología del H.C.U Lozano Blesa de Zaragoza en menos de 72 horas."
+    },
+    {
+      "id": "q15",
+      "block": 2,
+      "query": "¿Qué hago con las muestras si llegan fuera del horario habitual, por la noche o en fin de semana?",
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "Fuera del horario de 15'00 a 08'00 horas o en fin de semana las muestras externas se entregaran al servicio de Urgencias del HCU indicando que es para guardar para la Unidad de Toxicología."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "name": "PA-178 — Retención Aguda de Orina en Paciente Hospitalario",
+  "description": "Ground truth generado a partir del documento PA-178_Z3(E)C. Cada pregunta tiene la sección esperada del protocolo y el fragmento de cita de referencia.",
+  "relevant_doc_patterns": ["PA-178", "retencion-aguda", "RAO"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "Oye, ¿es lo mismo una RAO que una hematuria?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "La retención aguda de orina o RAO es la incapacidad súbita de vaciar la vejiga pese a encontrarse a máxima repleción o llenado, lo que condiciona un intenso dolor y malestar."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "Me han dicho que el paciente tiene \"uretrorragia\", ¿le pongo la sonda igual?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "La uretrorragia es la emisión de sangre fresca a través del meato uretral ocasionado por una lesión a nivel de la uretra. El origen mayoritario de estas es yatrogénico, tras un intento infructuoso de sondaje."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Cómo se llaman las partes de la sonda para pedirla correctamente?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Pabellón: extremo que queda fuera del cuerpo y se enlaza con los sistemas colectores de orina. Cuerpo: parte tubular que se encarga de conducir la orina hacia el exterior. Punta/cabeza: extremo que se introduce inicialmente a través del meato uretral."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Cuándo elijo una de 2 vías y cuándo una de 3?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Las sondas de 2 vías (comúnmente conocidas como tipo Foley) presentan la vía evacuatoria de la orina y la vía encargada de situar el sistema autorretentivo o globo de la sonda y por último, las sondas de 3 vías presentan las descritas previamente y la vía de instilación de líquido/suero, para establecer un sistema de lavado continuo vesical."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Cuánto tiempo me aguanta esta sonda si el paciente se va a casa?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Las sondas de látex tienen una duración aproximada de 15 días y las de silicona y simplastic con una duración de 2 meses."
+    },
+    {
+      "id": "q06",
+      "block": 1,
+      "query": "¿Cuál es más rígida, la de silicona o la de látex?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Material: fundamentalmente existen 3 tipos de materiales empleados en las sondas vesicales, que no solo determinan la rigidez de las mismas (látex < silicona < simplastic)..."
+    },
+    {
+      "id": "q07",
+      "block": 1,
+      "query": "¿Qué significa que una sonda tenga \"punta Tiemann\"?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Tipo de punta: es la parte más diferencial de la sonda vesical, la cual además suele indicar el nombre por el que se la conoce. Existen múltiples tipos: punta Dufour, punta Tiemann, punta abierta."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Qué calibre le pongo para una RAO normal sin sangre?",
+      "expected_section": "QUÉ TIPO DE SONDA ELEGIR",
+      "expected_quote": "Si la causa por la que es necesaria la colocación de una sonda es la necesidad de cuantificar la diuresis o el evacuar la orina retenida, no será necesario emplear calibres elevados... se emplearán calibres iguales o inferiores a 16 Ch."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¡Hay coágulos! ¿Sigo usando una de 16 Ch?",
+      "expected_section": "QUÉ TIPO DE SONDA ELEGIR",
+      "expected_quote": "Si por el contrario, la colocación de una sonda vesical viene determinada por la necesidad de extraer de la vejiga productos patológicos (moco, heces…) o hematuria con/sin coágulos... se emplearán calibres iguales o superiores a 20 Ch."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "En una paciente mujer donde no localizo el meato, ¿qué hago?",
+      "expected_section": "QUÉ TIPO DE SONDA ELEGIR",
+      "expected_quote": "Mujer: se elige sonda vesical punta recta. En el caso de dificultad de localización del meato uretral, valorar realizar sondaje \"al tacto\" utilizando sonda más rígida, de silicona, valorando incluso de punta tiemann para conseguir localizar el meato."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Cuándo elijo entre Tiemann o Dufour en varones?",
+      "expected_section": "QUÉ TIPO DE SONDA ELEGIR",
+      "expected_quote": "Estenosis a nivel de uretra bulbar (o prostática)... es necesario el empleo de sondas vesicales que faciliten el paso en la curvatura de la uretra bulbar. Para ello, se emplearán sondas vesicales de mayor rigidez (silicona o simplastic) y con puntas incurvadas (Tiemann o Dufour)."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Y si la estrechez está al principio, en el meato del varón?",
+      "expected_section": "QUÉ TIPO DE SONDA ELEGIR",
+      "expected_quote": "Las estenosis tanto a nivel del meato como de uretra membranosa requieren el empleo de calibres menores, ya que la resistencia al paso se produce a nivel de toda la circunferencia uretral."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "¿Es verdad que si se escapa orina por fuera hay que poner una sonda más gorda?",
+      "expected_section": "YATROGENIA DEBIDA AL SONDAJE",
+      "expected_quote": "Las sondas vesicales de mayor calibre, producen mayor sintomatología irritativa, así como las de mayor rigidez. La fuga de orina perisonda, al contrario de lo que puede pensarse, incrementa con diámetros mayores de sonda."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Por qué es tan importante no forzar nunca la inserción?",
+      "expected_section": "YATROGENIA DEBIDA AL SONDAJE",
+      "expected_quote": "Para prevenir los traumatismos uretrales, hay que evitar el paso forzado de la sonda vesical. Ante una dificultad de paso, es preferible modificar el tipo de sonda vesical..."
+    },
+    {
+      "id": "q15",
+      "block": 3,
+      "query": "¿Qué antiséptico es el correcto para la higiene previa?",
+      "expected_section": "YATROGENIA DEBIDA AL SONDAJE",
+      "expected_quote": "...empleando agentes antisépticos como el betadine y la clorhexidina acuosa (no la clorhexidina alcohólica, ya que es lesiva para las mucosas)..."
+    },
+    {
+      "id": "q16",
+      "block": 3,
+      "query": "El paciente tiene espasmos muy fuertes con la sonda, ¿qué le podemos dar?",
+      "expected_section": "YATROGENIA DEBIDA AL SONDAJE",
+      "expected_quote": "La butilescopolamina, puede pautarse cada 6h... Si pese a ello, el paciente continúa presentando sintomatología irritativa, se pueden asociar otros fármacos como el Tebetane (Pygeum africanum) o frente a la hiperactividad vesical como la solifenacina o la propiverina."
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "¿Cuánto inflamos el globo para que no moleste?",
+      "expected_section": "YATROGENIA DEBIDA AL SONDAJE",
+      "expected_quote": "La región que más síntomas irritativos produce por contacto de la sonda vesical es el cuello de la vejiga... Las cantidades estándares recomendadas son 10cc de suero, pero puede disminuirse hasta 6-8cc si hay mucha sintomatología."
+    },
+    {
+      "id": "q18",
+      "block": 3,
+      "query": "¿Por qué se produce la orina perisonda en pacientes que nunca han llevado sonda?",
+      "expected_section": "YATROGENIA DEBIDA AL SONDAJE",
+      "expected_quote": "La sintomatología irritativa vesical (orina perisonda, espasmos vesicales), frecuente en aquellos pacientes \"vírgenes\" que nunca han portado una sonda..."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "¿Cada cuánto hay que cambiar la sonda para evitar infecciones?",
+      "expected_section": "YATROGENIA DEBIDA AL SONDAJE",
+      "expected_quote": "evitando la excesiva manipulación de la vía con recambios continuos de la sonda vesical no indicados."
+    },
+    {
+      "id": "q20",
+      "block": 4,
+      "query": "¿Cuál es el plazo estándar para retirar la sonda tras una RAO?",
+      "expected_section": "CUANDO RETIRAR UNA SONDA VESICAL",
+      "expected_quote": "Los pacientes que han precisado un sondaje vesical por una retención aguda de orina (RAO): deberá mantener la misma durante 3-5 días."
+    },
+    {
+      "id": "q21",
+      "block": 4,
+      "query": "¿Cómo manejamos la bolsa y el tapón antes de quitarla?",
+      "expected_section": "CUANDO RETIRAR UNA SONDA VESICAL",
+      "expected_quote": "Se puede portar a tapón por el día y evacuar cada 2/3 horas si no existe deseo miccional previo y por la noche dejar conectada a bolsa. Tras ello, se puede probar a retirada sin necesidad de existir deseo miccional."
+    },
+    {
+      "id": "q22",
+      "block": 4,
+      "query": "¿Por qué ponemos corticoides antes de la retirada?",
+      "expected_section": "CUANDO RETIRAR UNA SONDA VESICAL",
+      "expected_quote": "Previa a la retirada, 24h antes, se puede administrar una dosis de corticoide intramuscular para disminuir la inflamación ocasionada por el sondaje."
+    },
+    {
+      "id": "q23",
+      "block": 4,
+      "query": "¿Qué pasa si hemos causado una lesión uretral durante el sondaje?",
+      "expected_section": "CUANDO RETIRAR UNA SONDA VESICAL",
+      "expected_quote": "Si durante la colocación del sondaje vesical, se ha producido una lesión de la vía urinaria... será preciso mantenerlo mínimo 3-4 semanas antes de iniciar la retirada. En el caso de las perforaciones vesicales, es conveniente la realización de una cistografía retrógrada previa..."
+    },
+    {
+      "id": "q24",
+      "block": 4,
+      "query": "Si el paciente tuvo una Infección de Tracto Urinario (ITU), ¿cuándo se la quito?",
+      "expected_section": "CUANDO RETIRAR UNA SONDA VESICAL",
+      "expected_quote": "la retirada del mismo se podrá iniciar una vez el paciente se encuentre 72h sin fiebre con el tratamiento antibiótico pautado..."
+    },
+    {
+      "id": "q25",
+      "block": 4,
+      "query": "¿Cómo sé cuándo retirar los lavadores en una hematuria?",
+      "expected_section": "CUANDO RETIRAR UNA SONDA VESICAL",
+      "expected_quote": "se irá disminuyendo el ritmo de entrada del suero paulatinamente cuando la orina se encuentre totalmente clara. Si al disminuir el flujo de la hematuria, la misma reaparece, será preciso aumentar de nuevo el flujo de entrada..."
+    },
+    {
+      "id": "q26",
+      "block": 4,
+      "query": "¿Y si el paciente vuelve a hacer una RAO tras quitarle la sonda?",
+      "expected_section": "CUANDO RETIRAR UNA SONDA VESICAL",
+      "expected_quote": "Si tras el primer intento de retirada de sonda, se produce un segundo episodio de RAO, será preciso mantener la sonda vesical 10-15 días más, previo a nuevo intento de retirada..."
+    }
+  ]
+}

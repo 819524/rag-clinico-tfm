@@ -1,0 +1,322 @@
+{
+  "name": "PTP-2_Z3(E)C L-MB — Toma de Muestras Microbiológicas, Transporte y Conservación",
+  "description": "Ground truth generado a partir del documento PTP-2_Z3(E)C L-MB (Revisión: B/C). Cubre normas generales de petición y obtención, hemocultivos, catéteres intravasculares, LCR, líquidos orgánicos, piel y tejidos blandos, urocultivo, tracto genital, gastrointestinal, oculares, tracto respiratorio superior e inferior, micobacterias, micosis cutáneas, parásitos, serología infecciosa, microbiología molecular y Resistencia Zero.",
+  "relevant_doc_patterns": ["PTP-2", "PTP-02", "toma de muestras", "microbiologicas", "hemocultivos", "urocultivo", "transporte y conservacion", "Z3(E)C", "L-MB"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Qué datos administrativos y de filiación deben recogerse en la petición electrónica?",
+      "expected_section": "2. NORMAS GENERALES - PETICIÓN",
+      "expected_quote": "Filiación y datos administrativos: nombre y apellidos del paciente, sexo, edad, número de historia clínica, médico solicitante, centro, servicio, consulta al que pertenezca o el número de cama y debe constar el servicio de destino cuando sea distinto del de origen."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Cuándo se debe recoger la muestra respecto al tratamiento antimicrobiano y por qué método es preferible tomarla?",
+      "expected_section": "2. NORMAS GENERALES - OBTENCIÓN DE LA MUESTRA",
+      "expected_quote": "La muestra se debe recoger, siempre que sea posible, antes de iniciar cualquier terapia antimicrobiana. Es preferible tomarla por aspiración con aguja, en lugar de utilizar hisopos."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Cómo debe etiquetarse el contenedor de la muestra?",
+      "expected_section": "2. NORMAS GENERALES - OBTENCIÓN DE LA MUESTRA",
+      "expected_quote": "El contenedor se etiquetará con el nombre y dos apellidos del paciente, nº de historia clínica, servicio solicitante, el tipo de muestra y la fecha de recogida. En determinados casos será importante precisar la hora de recogida."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Qué muestras urgentes deben remitirse directamente al laboratorio de Microbiología?",
+      "expected_section": "2. NORMAS GENERALES - OBTENCIÓN DE LA MUESTRA",
+      "expected_quote": "En casos especiales como: muestras urgentes, procedentes de quirófano o que impliquen cualquier tipo de maniobra intervencionista y los jugos gástricos, se remitirán directamente al laboratorio de Microbiología."
+    },
+    {
+      "id": "q05",
+      "block": 2,
+      "query": "¿Cuántos hemocultivos se extraen de forma general y cuántas extracciones se recomiendan en endocarditis?",
+      "expected_section": "3. HEMOCULTIVOS - Obtención de la muestra de sangre",
+      "expected_quote": "Se extraerán 2-3 hemocultivos con el menor intervalo de tiempo posible después de la aparición de los síntomas utilizando lugares de venopunción diferentes. En endocarditis se recomiendan 3 extracciones separadas 30-60 minutos."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿Qué antisépticos se usan para preparar la piel antes de un hemocultivo y cuánto tiempo se deja actuar el alcohol?",
+      "expected_section": "3. HEMOCULTIVOS - Preparación de la piel",
+      "expected_quote": "Limpiar con una gasa impregnada en alcohol de 70° una zona de la piel de un diámetro de 10 cm. comenzando por el centro y se irán haciendo círculos concéntricos hacia el exterior. Dejar actuar al menos 1 minuto. Repetir con clorhexidina en solución acuosa al 2%."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "Cuando se extrae con jeringuilla, ¿en qué orden se inoculan los frascos de hemocultivo?",
+      "expected_section": "3. HEMOCULTIVOS - Venopunción e Inoculación del frasco",
+      "expected_quote": "Se inoculará en primer lugar el frasco anaerobio, evitando la entrada de aire, seguido del aerobio, invirtiéndolos varias veces para mezclar la sangre y el medio de cultivo."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿A qué temperatura deben conservarse los hemocultivos hasta su envío y qué está prohibido?",
+      "expected_section": "3. HEMOCULTIVOS - Transporte y Conservación",
+      "expected_quote": "Deben enviarse al laboratorio lo más rápidamente posible. Hasta su envío mantener a 35-37ºC; cuando esto no sea posible, mantener a temperatura ambiente. Nunca refrigerar ni congelar."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Qué longitud del catéter intravascular debe cortarse y enviarse al laboratorio?",
+      "expected_section": "4. CATÉTERES INTRAVASCULARES - Obtención de la muestra",
+      "expected_quote": "Ayudándonos de pinzas y tijeras estériles, cortar los 3-5cm dístales del catéter que corresponden a la porción intravascular."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿En cuánto tiempo debe enviarse al laboratorio un catéter intravascular y cómo se conserva si no es posible?",
+      "expected_section": "4. CATÉTERES INTRAVASCULARES - Transporte y conservación",
+      "expected_quote": "La muestra deberá enviarse al laboratorio en un periodo inferior a 30 minutos. Cuando esto no sea posible conservar en nevera a 4ºC."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿En cuántos contenedores se recoge el LCR y para qué se destina cada uno?",
+      "expected_section": "5. LIQUIDO CEFALORRAQUIDEO",
+      "expected_quote": "El líquido cefalorraquídeo se recogerá en tres contenedores estériles, sin conservantes, con tapón de rosca. El primer contenedor debe enviarse para el estudio bioquímico, el segundo para el estudio microbiológico y el tercero para investigación de células. No obstante, el contenedor más turbio se enviará a Microbiología."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Se puede refrigerar el LCR? ¿Cómo se conserva si el laboratorio está cerrado?",
+      "expected_section": "5. LIQUIDO CEFALORRAQUIDEO - Transporte y conservación",
+      "expected_quote": "Si el laboratorio está cerrado, la muestra se debe dejar en estufa a 35-37ºC (salvo en el caso de que se desee estudio viral). Bajo ningún concepto la muestra debe ser refrigerada."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "Para líquidos orgánicos, ¿qué volumen se necesita para estudio bacteriano y cuál para micobacterias u hongos?",
+      "expected_section": "6. LÍQUIDOS ORGÁNICOS - Obtención de la muestra",
+      "expected_quote": "Para el estudio bacteriano es suficiente de 1 a 10 ml. Para la investigación de micobacterias u hongos se enviará un volumen >10 ml."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Por qué no deben usarse jeringuillas heparinizadas para recoger líquidos orgánicos?",
+      "expected_section": "6. LÍQUIDOS ORGÁNICOS - Material necesario",
+      "expected_quote": "No se deben utilizar jeringuillas heparinizadas, pues la heparina lleva conservantes que pueden interferir la viabilidad de los microorganismos."
+    },
+    {
+      "id": "q15",
+      "block": 2,
+      "query": "¿Por qué las muestras de piel y tejidos blandos se mantienen a temperatura ambiente y no en nevera?",
+      "expected_section": "7. PIEL Y TEJIDOS BLANDOS - Transporte y conservación",
+      "expected_quote": "Se mantendrán a temperatura ambiente, puesto que a bajas temperaturas (nevera) aumenta la difusión del oxígeno, lo que resulta perjudicial para los anaerobios. Las biopsias nunca deben introducirse en formol."
+    },
+    {
+      "id": "q16",
+      "block": 2,
+      "query": "En úlceras por presión, ¿cuál es el mejor método de obtención de muestra?",
+      "expected_section": "7.6. ÚLCERAS POR PRESIÓN",
+      "expected_quote": "La obtención de muestra por aspiración percutánea es el mejor método. También puede recogerse la muestra mediante biopsia y, en último caso, con torunda."
+    },
+    {
+      "id": "q17",
+      "block": 2,
+      "query": "En el urocultivo por micción media en mujeres, ¿cuántos mililitros iniciales se desechan y cómo se recoge la muestra?",
+      "expected_section": "8.1. ORINA OBTENIDA POR MICCIÓN MEDIA - Técnicas para mujeres",
+      "expected_quote": "Se indicará a la paciente que orine desechando los 20-25 primeros mililitros, tras lo cual y sin interrumpir la micción recogerá una muestra procedente del chorro medio de la micción."
+    },
+    {
+      "id": "q18",
+      "block": 2,
+      "query": "¿En qué plazo debe llegar la orina al laboratorio y cómo se conserva si no es posible?",
+      "expected_section": "8.1. ORINA OBTENIDA POR MICCIÓN MEDIA - Transporte",
+      "expected_quote": "La orina debe llegar al laboratorio en el plazo de una hora. Cuando esto no sea posible debe refrigerarse a 4ºC durante un tiempo máximo de 24 horas."
+    },
+    {
+      "id": "q19",
+      "block": 2,
+      "query": "¿Cuáles son las indicaciones para obtener orina por punción suprapúbica (orina vesical)?",
+      "expected_section": "8.2. Orina vesical",
+      "expected_quote": "Indicaciones: Evidencia clínica del cuadro urinario con recuentos bajos o nulos, neonatos y lactantes, cateterización contraindicada o dificultosa, búsqueda de anaerobios y urocultivos repetidos con dos o más bacterias."
+    },
+    {
+      "id": "q20",
+      "block": 2,
+      "query": "En pacientes con catéter permanente, ¿se pueden aceptar orinas de la bolsa colectora?",
+      "expected_section": "8.3. Orina de pacientes con catéter permanente",
+      "expected_quote": "Nunca se deben aceptar orinas procedentes de bolsas colectoras por el elevado riesgo de contaminación. No son muestras apropiadas: la orina recogida de la bolsa de sondaje y la punta de sonda vesical."
+    },
+    {
+      "id": "q21",
+      "block": 3,
+      "query": "¿Es adecuado el exudado vaginal para investigar Neisseria gonorrhoeae? ¿Qué muestra se recomienda?",
+      "expected_section": "9.3.1. Exudado Vaginal - Observaciones",
+      "expected_quote": "Los exudados vaginales no son muestras adecuadas para la investigación de Neisseria gonorrhoeae. Si se sospecha infección por Neisseria gonorrhoeae, la muestra más adecuada es el exudado endocervical."
+    },
+    {
+      "id": "q22",
+      "block": 3,
+      "query": "En el despistaje de S. agalactiae en gestantes, ¿cómo se toma la muestra y se necesita espéculo?",
+      "expected_section": "9.4. DESPISTAJE DE S. agalactiae EN GESTANTES",
+      "expected_quote": "Se introducirá una torunda en la vagina (tercio externo) dejándola dentro durante 10-30 segundos. No es necesario el uso de espéculo. Introducir a continuación la misma torunda a través del esfínter anal."
+    },
+    {
+      "id": "q23",
+      "block": 3,
+      "query": "Para el exudado uretral masculino, ¿cuándo debe tomarse y cuánto tiempo no debe orinar el paciente?",
+      "expected_section": "9.5.1. Exudado Uretral - Observaciones",
+      "expected_quote": "La toma de la muestra debe realizarse preferentemente antes de la 1ª micción del día. Si no es posible, el paciente no debe orinar en las dos horas previas a la toma. No refrigerar las muestras, especialmente si se sospecha Neisseria gonorrhoeae."
+    },
+    {
+      "id": "q24",
+      "block": 3,
+      "query": "¿Cuándo deben recogerse las heces para infecciones gastrointestinales y qué medio de transporte se usa si se demora más de 4 horas?",
+      "expected_section": "10.1. INFECCIONES GASTROINTESTINALES BACTERIANAS Y VIRALES",
+      "expected_quote": "Las muestras de heces deben recogerse durante la fase aguda de la infección (3-5 primeros días de la enfermedad). Si el transporte va a demorarse más de 4 horas, las muestras deben enviarse en medio de transporte de Cary-Blair, excepto en el caso de sospecha de diarrea por Clostridium difficile, en el que se deben enviar en un frasco limpio y seco."
+    },
+    {
+      "id": "q25",
+      "block": 3,
+      "query": "En el frotis faríngeo-amigdalino, ¿qué zonas hay que evitar tocar?",
+      "expected_section": "12.1.1. Frotis faríngeo-amigdalino - Obtención de la muestra",
+      "expected_quote": "FUNDAMENTAL: No rozar la úvula, mucosa bucal, labios ni lengua."
+    },
+    {
+      "id": "q26",
+      "block": 3,
+      "query": "¿Qué tipo de hisopo se usa para el frotis nasofaríngeo de SARS-CoV-2 y cómo se conserva?",
+      "expected_section": "12.1.3.1. Frotis nasofaríngeo",
+      "expected_quote": "Hisopos con medio de transporte inactivador (para SARS-CoV-2). Muestras para SARS-CoV-2: enviar inmediatamente al laboratorio o refrigerar."
+    },
+    {
+      "id": "q27",
+      "block": 3,
+      "query": "¿Qué volumen debe tener un esputo válido para cultivo bacteriano y de hongos?",
+      "expected_section": "12.2.1.1. Esputo - Obtención de la muestra",
+      "expected_quote": "El volumen de esputo para cultivo bacteriano y de hongos no deberá ser inferior a 1 ml. sin superar los 8 ml."
+    },
+    {
+      "id": "q28",
+      "block": 3,
+      "query": "En el lavado broncoalveolar, ¿por qué se rechaza el material de la primera alícuota?",
+      "expected_section": "12.2.2.3. Lavado broncoalveolar",
+      "expected_quote": "El volumen aspirado tras instilación de la primera alícuota suele ser escaso y habitualmente contiene células escamosas y ciliadas en número significativo, por lo que debe rechazarse para el estudio microbiológico."
+    },
+    {
+      "id": "q29",
+      "block": 4,
+      "query": "Para micobacterias, ¿se pueden añadir conservantes a las muestras y cuál es la temperatura óptima de conservación?",
+      "expected_section": "13. MICOBACTERIAS - Normas generales",
+      "expected_quote": "Nunca añadir a las muestras ninguna solución antiséptica o conservante. La temperatura óptima de conservación es de 4º C. No son útiles las muestras obtenidas con torundas o hisopos por lo que se rechazarán."
+    },
+    {
+      "id": "q30",
+      "block": 4,
+      "query": "Para el cultivo de esputo de micobacterias, ¿cuántas muestras se remiten y en qué condiciones?",
+      "expected_section": "13.1.1. Esputo",
+      "expected_quote": "Se remitirán 3 muestras obtenidas en días consecutivos. El volumen de esputo nunca debe ser inferior a 1 ml. ni superior a 8 ml. Envío al laboratorio en menos de 2 horas. Si no es posible, conservar en frío a 4º C."
+    },
+    {
+      "id": "q31",
+      "block": 4,
+      "query": "¿Por qué deben procesarse rápidamente las muestras broncoscópicas para micobacterias?",
+      "expected_section": "13.1.4. Muestras obtenidas por técnicas broncoscópicas - Transporte y conservación",
+      "expected_quote": "Hay que tener en cuenta que deben procesarse en el laboratorio lo antes posible ya que la lidocaína, utilizada frecuentemente en la broncoscopia, inhibe el crecimiento de estas bacterias."
+    },
+    {
+      "id": "q32",
+      "block": 4,
+      "query": "Para el cultivo de micobacterias en orina, ¿cuántas muestras se recomiendan, qué volumen mínimo y qué muestras se rechazan?",
+      "expected_section": "13.2.8. Orina",
+      "expected_quote": "Es aconsejable recoger tres muestras (mínimo 40 ml) durante tres días consecutivos. Muestras inaceptables (se rechazarán): Muestras emitidas durante 24 horas. Orinas recogidas de la bolsa de catéter permanente. Muestras no recogidas de la primera micción de la mañana. Muestras con volumen inferior a 40ml."
+    },
+    {
+      "id": "q33",
+      "block": 4,
+      "query": "¿Por qué nunca se debe añadir formol a las biopsias para estudio de micobacterias?",
+      "expected_section": "13.2.5. Biopsias - Transporte y conservación",
+      "expected_quote": "Nunca se debe añadir formol a los contenedores de recogida de estas muestras, ya que se destruirán los bacilos que contenga la muestra."
+    },
+    {
+      "id": "q34",
+      "block": 4,
+      "query": "En el test de IGRAS (QuantiFERON), ¿qué representa cada color de tapón de tubo?",
+      "expected_section": "13.3. TEST DE IGRAS",
+      "expected_quote": "Tubo tapón gris: NIL; Tubo tapón verde: TB ANTIGEN-1; Tubo tapón amarillo: TB ANTIGEN-2; Tubo tapón malva: MITOGEN."
+    },
+    {
+      "id": "q35",
+      "block": 4,
+      "query": "En micosis cutáneas, ¿cuánto tiempo debe suprimirse el tratamiento antifúngico antes de la toma para piel, pelo y uñas?",
+      "expected_section": "14. MICOSIS CUTÁNEAS - Requisitos previos",
+      "expected_quote": "Ausencia de tratamiento antifúngico previo, tanto local como general, o supresión del mismo durante 1-2 semanas para piel y pelo y varios meses para las uñas."
+    },
+    {
+      "id": "q36",
+      "block": 4,
+      "query": "Para escamas de piel en lesiones descamativas, ¿de qué zona de la lesión se obtienen y por qué?",
+      "expected_section": "14.1. ESCAMAS DE PIEL",
+      "expected_quote": "En las lesiones descamativas, las escamas se obtienen, con la ayuda de un bisturí estéril, de la zona periférica de la lesión ya que es donde el hongo, generalmente, tiene mejor viabilidad. Si la lesión es pequeña se raspa en su totalidad."
+    },
+    {
+      "id": "q37",
+      "block": 4,
+      "query": "Para el estudio de parásitos en heces, ¿cuántas muestras se recogen como regla general y en qué intervalos?",
+      "expected_section": "15.1. HECES - Número de muestras",
+      "expected_quote": "Como regla general, se recogerán 3 muestras en intervalos de 2-3 días, en un periodo no superior a 10 días, debido a que la eliminación de los parásitos es, con frecuencia, intermitente. Solo se aceptará una muestra recogida en un mismo día."
+    },
+    {
+      "id": "q38",
+      "block": 4,
+      "query": "¿Para qué sirve la técnica de Graham y cuándo se realiza la toma de la muestra?",
+      "expected_section": "15.2. TÉCNICA DE GRAHAM",
+      "expected_quote": "Es un método para detectar huevos de Enterobius vermicularis. La toma de la muestra se realizará entre las 22-24 h, o bien por la mañana antes de ducharse. Se deben de procesar 3 muestras tomadas en días alternos antes de informar un resultado negativo."
+    },
+    {
+      "id": "q39",
+      "block": 4,
+      "query": "Para detectar huevos de Schistosoma haematobium en orina, ¿en qué franja horaria se recoge la muestra?",
+      "expected_section": "15.5.2. Investigacion de huevos de Schistosoma haematobium",
+      "expected_quote": "La mayor eliminación de huevos se realiza entre las 11 y las 14h. Recoger la orina entre las 11 y 14 h, después de un poco de ejercicio físico (subir y bajar escaleras)."
+    },
+    {
+      "id": "q40",
+      "block": 4,
+      "query": "Para el examen de sangre en busca de Plasmodium, ¿qué tubo se usa y cuándo se recoge?",
+      "expected_section": "15.15. SANGRE",
+      "expected_quote": "Recoger un tubo de sangre obtenida por punción venosa con anticoagulante EDTA (tapón morado) al final de la fase febril si se sospecha paludismo."
+    },
+    {
+      "id": "q41",
+      "block": 4,
+      "query": "En serología infecciosa, ¿en qué tipo de tubo se extrae la sangre y cómo se conserva si hay demora?",
+      "expected_section": "16. SEROLOGIA INFECCIOSA",
+      "expected_quote": "Extraer la sangre en un tubo seco con gel separador, sin anticoagulantes ni conservantes. En caso de demora en el envío de muestras al laboratorio, éstas pueden conservarse a temperatura de ambiente durante 24-48 horas."
+    },
+    {
+      "id": "q42",
+      "block": 4,
+      "query": "En microbiología molecular, ¿qué tipo de tubo no se debe usar nunca para la carga viral y en qué tubo se obtiene el plasma?",
+      "expected_section": "17. MICROBIOLOGIA MOLECULAR",
+      "expected_quote": "Plasma para carga viral de CMV, VHC, VHB y VIH. No usar nunca tubos con heparina. Extraer la sangre en un tubo de 10 ml con EDTA y mezclar invirtiendo el tubo 10-15 veces."
+    },
+    {
+      "id": "q43",
+      "block": 4,
+      "query": "¿Qué bacterias multirresistentes se incluyen en el proyecto Resistencia Zero?",
+      "expected_section": "18. RESISTENCIA ZERO",
+      "expected_quote": "SARM; Enterobacterias productoras de BLEE y/o cefamicinasas plasmídicas y/o carbapenemasas; Pseudomonas aeruginosa productora de carbapenemasas."
+    },
+    {
+      "id": "q44",
+      "block": 4,
+      "query": "En Resistencia Zero, ¿qué tres frotis mínimos se toman y dónde se realiza el frotis perirrectal?",
+      "expected_section": "18. RESISTENCIA ZERO - Obtención de la muestra",
+      "expected_quote": "Las muestras serán mínimo tres: Frotis faríngeo (aunque el paciente esté intubado), frotis perirrectal y frotis nasal. Frotis perirrectal: toma de muestra alrededor de esfínter anal."
+    },
+    {
+      "id": "q45",
+      "block": 2,
+      "query": "En abscesos cerrados, ¿qué cantidad de muestra es necesaria para procesarla en aerobiosis y anaerobiosis?",
+      "expected_section": "7.1. ABSCESOS CERRADOS",
+      "expected_quote": "La muestra debe ser suficiente para poder procesarla en aerobiosis y anaerobiosis (1-5 ml)."
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "name": "PA-201 — Programa de Recuperación Intensificada (PRI) para Cirugía Oncológica de Colon",
+  "description": "Ground truth generado a partir del documento PA-201. Cubre fundamentos, prehabilitación, cuidados perioperatorios, recuperación postoperatoria y seguimiento.",
+  "relevant_doc_patterns": ["PA-201", "recuperacion-intensificada", "PRI", "cirugia-oncologica"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Para qué sirve realmente el protocolo de Recuperación Intensificada de cirugía de colon?",
+      "expected_section": "OBJETIVO",
+      "expected_quote": "El objetivo es facilitar un documento basado en la evidencia científica y en el consenso de diferentes Sociedades Científicas para sistematizar el proceso asistencial quirúrgico fundamentado en los Principios de Recuperación Intensificada (PRI) para optimizar la atención perioperatoria en pacientes sometidos a cirugía oncológica de colon."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Qué intentamos mejorar en el paciente además de la propia cirugía?",
+      "expected_section": "OBJETIVO",
+      "expected_quote": "Optimizar la reserva fisiológica y capacidad funcional. Reducir el estado inflamatorio crónico, optimizar el estado nutricional y metabólico. Acelerar la recuperación funcional, reducir la morbilidad perioperatoria, la tasa de complicaciones, la estancia hospitalaria media y mejorar la calidad de vida."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿A qué profesionales afecta o involucra este protocolo?",
+      "expected_section": "ÁMBITO DE APLICACIÓN",
+      "expected_quote": "Profesionales sanitarios involucrados directamente en la atención del paciente que va a ser sometido a un proceso quirúrgico por neoplasia de colon: cirujanos generales, anestesistas, enfermería, así como a aquellos involucrados en el tratamiento multidisciplinar seguido a lo largo del proceso: hematólogos, rehabilitadores, fisioterapeutas, geriatras, nutricionistas, oncólogos…"
+    },
+    {
+      "id": "q04",
+      "block": 2,
+      "query": "¿Con cuánta antelación empezamos a preparar al paciente?",
+      "expected_section": "PREHABILITACIÓN",
+      "expected_quote": "1º CONSULTA DE PREHABILITACIÓN: terapia prehabilitadora y valoración preanestésica (4 semanas previas a la intervención quirúrgica)."
+    },
+    {
+      "id": "q05",
+      "block": 2,
+      "query": "¿Qué es eso de la prueba de los 2 minutos de marcha y por qué la hacemos?",
+      "expected_section": "PREHABILITACIÓN",
+      "expected_quote": "En la prueba de los dos minutos de marcha estática: Toma basal de constantes (TA, FC, SO2). Cálculo frecuencia máxima (220-edad). Toma de constantes tras la prueba (FC al primer y segundo minuto, tiempo en alcanzar la frecuencia basal, escala de Bohr)."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿Cómo categorizamos la capacidad funcional para el entrenamiento en casa?",
+      "expected_section": "PREHABILITACIÓN",
+      "expected_quote": "Buena Capacidad Funcional (Valor 0): Si la FC está por debajo del 80% de la máxima, se inicia con 4-6 ciclos al 80% de intensidad. Si está por encima del 80% de la máxima, se reduce a 3-5 ciclos al 60% de intensidad."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Qué hacemos si el paciente fuma o tiene diabetes?",
+      "expected_section": "PREHABILITACIÓN",
+      "expected_quote": "Evaluación de Diabetes Mellitus (glucemia, HbA1c). Si mal control remitir a Endocrinología... Derivación a deshabituación tabáquica si procede."
+    },
+    {
+      "id": "q08",
+      "block": 3,
+      "query": "¿De verdad ya no se ponen enemas de limpieza a todos?",
+      "expected_section": "CUIDADOS PREOPERATORIOS",
+      "expected_quote": "Preparación intestinal mecánica asociada a antibioterapia oral... en pacientes que van a ser sometidos a resección de colon izquierdo, sigma y recto o colectomía total. No enemas de limpieza."
+    },
+    {
+      "id": "q09",
+      "block": 3,
+      "query": "¿Cuáles son las reglas de ayuno y dieta previa?",
+      "expected_section": "CUIDADOS PREOPERATORIOS",
+      "expected_quote": "Dieta baja en residuos 48 horas previo a la cirugía... Ayuno desde las 00:00 horas (8 horas previas a la cirugía)."
+    },
+    {
+      "id": "q10",
+      "block": 3,
+      "query": "¿Qué profilaxis antibiótica y desinfección se debe asegurar?",
+      "expected_section": "CUIDADOS PREOPERATORIOS",
+      "expected_quote": "Amoxicilina/ Clavulánico (2 gr/200 mg iv) + Gentamicina (320 mg iv en 30´). Si alergia a Penicilina: Metronidazol 1500 mg iv + Gentamicina (320 mg iv en 30´)."
+    },
+    {
+      "id": "q11",
+      "block": 3,
+      "query": "¿Hay que repetir el antibiótico si la cirugía se alarga?",
+      "expected_section": "CUIDADOS INTRAOPERATORIOS",
+      "expected_quote": "Repetición profilaxis antibiótica si la duración de la cirugía supera dos veces la vida media... Amoxicilina/ Clavulánico MISMA DOSIS a las 3 horas. Gentamicina NO SE RECOMIENDA a las 6h."
+    },
+    {
+      "id": "q12",
+      "block": 3,
+      "query": "¿Por qué evitamos la sonda nasogástrica y los drenajes?",
+      "expected_section": "CUIDADOS INTRAOPERATORIOS",
+      "expected_quote": "No sonda nasogástrica de forma rutinaria... Evitar drenajes excepto disecciones laboriosas."
+    },
+    {
+      "id": "q13",
+      "block": 4,
+      "query": "¿Cuándo podemos iniciar la alimentación y el movimiento?",
+      "expected_section": "RECUPERACIÓN POSTOPERATORIA",
+      "expected_quote": "Reintroducción alimentaria (6 horas tras la cirugía), dieta líquida/semilíquida según tolerancia... Inicio de movilización activa (cama/sillón) a las 24 horas."
+    },
+    {
+      "id": "q14",
+      "block": 4,
+      "query": "¿Cuándo se retiran los sueros y las sondas?",
+      "expected_section": "RECUPERACIÓN POSTOPERATORIA",
+      "expected_quote": "A las 24 horas: Si tolerancia oral, retirada de líquidos endovenosos... Retirada precoz de SV (excepto cirugía de recto en la que se mantendrá 48 h)."
+    },
+    {
+      "id": "q15",
+      "block": 4,
+      "query": "¿Cuál es la estrategia para el manejo del dolor?",
+      "expected_section": "RECUPERACIÓN POSTOPERATORIA",
+      "expected_quote": "Control del dolor con escala EVA, priorizar empleo de AINES y Paracetamol, evitar opioides."
+    },
+    {
+      "id": "q16",
+      "block": 4,
+      "query": "¿Cuáles son los Criterios de Alta Hospitalaria?",
+      "expected_section": "CRITERIOS DE ALTA",
+      "expected_quote": "Ausencia de fiebre. Dolor controlado exclusivamente con analgesia oral. Deambulación completa y autónoma. Tolerancia oral completa."
+    },
+    {
+      "id": "q17",
+      "block": 5,
+      "query": "¿De qué se encarga específicamente enfermería?",
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "Enfermería: registro de datos, educación y seguimiento riguroso de los pacientes, garantizar cumplimiento y compresión estricta del protocolo. Coordinación de información entre diferentes profesionales."
+    },
+    {
+      "id": "q18",
+      "block": 5,
+      "query": "¿Cómo es el calendario de seguimiento tras salir del hospital?",
+      "expected_section": "SEGUIMIENTO",
+      "expected_quote": "A 1 mes: Consulta presencial de Anestesia/Prehabilitación. Realización de test de ANI, encuesta de recuperación funcional (Anexo 5) y registro de evolución. A 1, 3 y 6 meses: Seguimiento por Cirugía General."
+    }
+  ]
+}

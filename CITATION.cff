@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Si utilizas este material, cítalo como se indica a continuación."
+title: "Asistente clínico RAG sobre protocolos hospitalarios — material de evaluación"
+abstract: >-
+  Código, conjuntos de referencia y resultados crudos de la evaluación de un sistema de
+  recuperación aumentada con generación (RAG) construido sobre los procedimientos
+  asistenciales del Hospital Clínico Universitario Lozano Blesa. Incluye evaluación de
+  recuperación por documento y multi-documento, cortafuegos de intención y de preguntas
+  fuera de corpus, calidad de la respuesta generada, comparativa de motores de inferencia
+  bajo carga, y análisis de coste y energía.
+authors:
+  - family-names: "Trullén"
+    given-names: "Martín"
+    email: "mtrullen@unizar.es"
+    affiliation: "Universidad de Zaragoza"
+type: software
+license: Apache-2.0
+keywords:
+  - RAG
+  - recuperación de información
+  - protocolos clínicos
+  - evaluación
+  - modelos de lenguaje

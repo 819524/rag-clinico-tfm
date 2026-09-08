@@ -1,0 +1,2465 @@
+{
+  "ground_truth": "PA02_ground_truth.json",
+  "executed_at": "2026-05-31T22:40:35",
+  "mode": "retriever+generator",
+  "model": "gemma4:26b",
+  "collection": "docs_rag_qwen3_06b",
+  "rerank_strategy": "rrf_only",
+  "cross_encoder_device": null,
+  "top_k": 10,
+  "n_questions": 15,
+  "doc_anchor_enabled": true,
+  "doc_anchor_stats": {
+    "anchor_emitted": 6,
+    "anchor_received": 6,
+    "anchor_applied": 6,
+    "gate_reasons": {
+      "ok": 6,
+      "insufficient_chunks": 7,
+      "no_citations": 1,
+      "no_response": 1
+    }
+  },
+  "retriever_metrics": {
+    "HitRate@1": 0.7333,
+    "MRR@1": 0.7333,
+    "Precision@1": 0.7333,
+    "Recall@1": 0.7333,
+    "NDCG@1": 0.7333,
+    "HitRate@3": 0.7333,
+    "MRR@3": 0.7333,
+    "Precision@3": 0.3778,
+    "Recall@3": 1.1333,
+    "NDCG@3": 0.5817,
+    "HitRate@5": 0.7333,
+    "MRR@5": 0.7333,
+    "Precision@5": 0.2533,
+    "Recall@5": 1.2667,
+    "NDCG@5": 0.6072,
+    "HitRate@10": 0.9333,
+    "MRR@10": 0.7585,
+    "Precision@10": 0.1867,
+    "Recall@10": 1.8667,
+    "NDCG@10": 0.7351
+  },
+  "memory_stats": {
+    "peak_proc_rss_mb": 63.0390625,
+    "peak_ollama_rss_mb": null
+  },
+  "per_question": [
+    {
+      "id": "q01",
+      "query": "¿Qué tipos de muestras legales se reciben y de dónde proceden?",
+      "block": 1,
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Se reciben dos tipos de muestras de tipo legal, ambas procedentes de situaciones de tráfico: las denominadas 'voluntarias', recogidas por expreso deseo del interesado para contrastar la concentración de alcohol o verificar presencia de drogas; y las muestras de sangre y orina recogidas con fines clínicos, en las que la autoridad de tráfico deja un oficio solicitando su custodia y conservación a la espera de una solicitud judicial.",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "tipos de muestras de carácter legal recibidas y su procedencia",
+        "keywords": [
+          "muestras legales",
+          "proceden"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 5
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0323,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCION DE MUESTRAS, PARA ANALISIS TOXICOLOGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "1. INTRODUCCIÓN",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6.3.3 Documento de Información Al Juez",
+          "h2": "6.3.3 Documento de Información Al Juez",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15. PARÁSITOS",
+          "rerank_score": 0.0152,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "Procedimiento de Contención Mecánica/Inmovilización terapéutica",
+          "h2": "6.4 CONSIDERACIONES LEGALES VIGILANTES DE SEGURIDAD",
+          "rerank_score": 0.0152,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "18. RESISTENCIA ZERO",
+          "h2": "B. Obtención de la muestra:",
+          "rerank_score": 0.0149,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "PROCEDIMIENTO DE CONTENCIÓN MECÁNICA/INMOVILIZACIÓN TERAPÉUTICA",
+          "h2": "1. OBJETIVO",
+          "rerank_score": 0.0149,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "6. LÍQUIDOS ORGÁNICOS",
+          "h2": "B. Obtención de la muestra",
+          "rerank_score": 0.0147,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.213,
+        "Retriever": 1.334,
+        "Generador": 7.37
+      },
+      "memory_mb": {
+        "proc_before": 57.9,
+        "proc_after_retriever": 61.0,
+        "proc_delta_retriever": 3.1,
+        "proc_after_generator": 61.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Las muestras de tipo legal se reciben en dos categorías, ambas procedentes de **situaciones de tráfico** [1]:\n\n- **Muestras \"voluntarias\"**: Son aquellas que se recogen por deseo expreso del interesado [1]. Se utilizan como método de contraste para la concentración de alcohol en sangre (tras un positivo en aire espirado) o para verificar la presencia de drogas de abuso en orina [1].\n- **Muestras de sangre y orina con fines clínicos**: Son muestras recogidas con fines clínicos en las que la autoridad de tráfico que ha intervenido en el accidente deja un oficio [1]. Este documento solicita la custodia y conservación de las muestras a la espera de una solicitud judicial para su posterior análisis [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 707,
+        "token_stats": {
+          "prompt_tokens": 2506,
+          "completion_tokens": 160,
+          "total_tokens": 2666,
+          "tokens_per_second": 159.1,
+          "context_used_pct": 16.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.37
+      }
+    },
+    {
+      "id": "q02",
+      "query": "¿Qué es una muestra 'voluntaria' en este contexto?",
+      "block": 1,
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Son muestras recogidas por expreso deseo del interesado como método de contraste de la concentración de alcohol en sangre tras un positivo en aire espirado, o para verificación de presencia de drogas de abuso en orina.",
+      "labels": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "definición de muestra voluntaria en el PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+        "keywords": [
+          "muestra 'voluntaria'",
+          "contexto"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 3
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0325,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.2. MUESTRAS EXTRAPULMONARES.",
+          "h2": "13.2.10. Otras muestras",
+          "rerank_score": 0.0225,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0164,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-17-Z3-E-C-Rev-C-Actuación-con-fallecidos-y-cuidados-post-mortem",
+          "h1": "PROCEDIMIENTO DE ACTUACION CON FALLECIDOS Y CUIDADOS POST-MORTEM",
+          "h2": "2. Autopsia",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS",
+          "h1": "TRATAMIENTO DE LA NEURALGIA DEL TRIGÉMINO EN URGENCIAS",
+          "h2": "6. RESPONSABILIDADES",
+          "rerank_score": 0.0159,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCION DE MUESTRAS, PARA ANALISIS TOXICOLOGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0156,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.5. MUESTRAS DEL TRACTO GENITAL MASCULINO",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PC-73-Z3-E-C-TRATAMIENTO-DE-LA-NEURALGIA-DEL-TRIGÉMINO-EN-URGENCIAS",
+          "h1": "TRATAMIENTO DE LA NEURALGIA DEL TRIGÉMINO EN URGENCIAS",
+          "h2": "TRATAMIENTO DE LA NEURALGIA DEL TRIGÉMINO EN URGENCIAS",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "1. INTRODUCCIÓN",
+          "rerank_score": 0.0152,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "18. GLOSARIO / DEFINICIONES",
+          "rerank_score": 0.0152,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.402,
+        "Retriever": 1.401,
+        "Generador": 7.3
+      },
+      "memory_mb": {
+        "proc_before": 61.0,
+        "proc_after_retriever": 61.5,
+        "proc_delta_retriever": 0.5,
+        "proc_after_generator": 61.5,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "En el contexto de los procedimientos para la extracción de muestras para análisis toxicológicos con fines legales, las muestras denominadas **\"voluntarias\"** son aquellas que se recogen por el **expreso deseo del interesado** [1].\n\nSu finalidad principal es:\n- Servir como método de **contraste de la concentración de alcohol en sangre** tras haber obtenido un resultado positivo en aire espirado [1].\n- Realizar la **verificación de la presencia de drogas de abuso en orina** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 481,
+        "token_stats": {
+          "prompt_tokens": 4097,
+          "completion_tokens": 114,
+          "total_tokens": 4211,
+          "tokens_per_second": 142.1,
+          "context_used_pct": 25.7,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.3
+      }
+    },
+    {
+      "id": "q03",
+      "query": "¿Qué tubos necesito preparar para una alcoholemia?",
+      "block": 1,
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Se requiere una muestra de sangre en tubo con EDTA como anticoagulante (tape malva), volumen mínimo 3 ml, y otra de suero en tubo con gel separador (tape amarillo), volumen mínimo 3 ml.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "router": {
+        "optimized_query": "tubos necesarios para la preparación de una alcoholemia en el PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+        "keywords": [
+          "tubos",
+          "preparar",
+          "alcoholemia"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 4
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "17. MICROBIOLOGIA MOLECULAR",
+          "h2": "A. Material necesario:",
+          "rerank_score": 0.031,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.3. TEST DE IGRAS",
+          "h2": "13.3. TEST DE IGRAS",
+          "rerank_score": 0.0301,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "16. SEROLOGIA INFECCIOSA",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.0267,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "ANEXO XII. Poster informativo.",
+          "h2": "PAUTA DE ACTUACIÓN ANTE ACCIDENTE BIOLÓGICO",
+          "rerank_score": 0.0265,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "RECEPCIÓN DE MUESTRAS LABORATORIOS CLÍNICOS",
+          "h2": "12.2.4. Muestras extrapulmonares",
+          "rerank_score": 0.0242,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "16. ANEXOS",
+          "h2": "ANEXO V. Volante de Analítica del trabajador.",
+          "rerank_score": 0.0233,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "PROTOCOLO CUIDADOS DE ENFERMERÍA EN EL SONDAJE VESICAL",
+          "h2": "ALGORITMO DE ACTUACIÓN:",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0159,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCION DE MUESTRAS, PARA ANALISIS TOXICOLOGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0156,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.548,
+        "Retriever": 1.376,
+        "Generador": 7.42
+      },
+      "memory_mb": {
+        "proc_before": 61.5,
+        "proc_after_retriever": 61.3,
+        "proc_delta_retriever": -0.2,
+        "proc_after_generator": 61.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para realizar una **alcoholemia**, se requiere preparar los siguientes tubos:\n\n- **Tubo de sangre**: debe contener **EDTA** como anticoagulante (identificado con **tapón malva**) y un volumen mínimo de **3 ml** [1].\n- **Tubo de suero**: debe contener **gel separador** (identificado con **tapón amarillo**) y un volumen mínimo de **3 ml** [1].\n\n**Consideraciones importantes para la extracción:**\n- **Limpieza de la zona**: La zona de venopunción **nunca** debe limpiarse con alcohol; se puede utilizar agua y jabón o yodo [1].\n- **Sustitución de material**: En caso de no disponer de estos tubos específicos, se pueden utilizar otros similares [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 649,
+        "token_stats": {
+          "prompt_tokens": 2451,
+          "completion_tokens": 175,
+          "total_tokens": 2626,
+          "tokens_per_second": 159.6,
+          "context_used_pct": 16.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.42
+      }
+    },
+    {
+      "id": "q04",
+      "query": "¿Puedo limpiar la zona de punción con alcohol antes de sacar la muestra de alcoholemia?",
+      "block": 1,
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "No. La limpieza de la zona de venopunción nunca se realizará con alcohol, pudiendo emplearse agua y jabón o yodo.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimiento de limpieza de la zona de punción antes de la extracción de muestra para alcoholemia",
+        "keywords": [
+          "limpiar la zona de punción",
+          "alcohol",
+          "muestra de alcoholemia"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 2
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "6. LÍQUIDOS ORGÁNICOS",
+          "h2": "B. Obtención de la muestra",
+          "rerank_score": 0.0313,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0306,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "5. LIQUIDO CEFALORRAQUIDEO",
+          "h2": "B. Obtención de la muestra necesario",
+          "rerank_score": 0.0299,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "7. PIEL Y TEJIDOS BLANDOS",
+          "h2": "7.6. ÚLCERAS POR PRESIÓN",
+          "rerank_score": 0.0291,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "14. MICOSIS CUTÁNEAS",
+          "h2": "C.- Obtención de la muestra",
+          "rerank_score": 0.0271,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.0264,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "12. TRACTO RESPIRATORIO",
+          "h2": "12.2.4. Muestras extrapulmonares",
+          "rerank_score": 0.0256,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "7. PIEL Y TEJIDOS BLANDOS",
+          "h2": "C. Obtención de la muestra",
+          "rerank_score": 0.0248,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "3. HEMOCULTIVOS",
+          "rerank_score": 0.0245,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.082,
+        "Retriever": 1.284,
+        "Generador": 7.02
+      },
+      "memory_mb": {
+        "proc_before": 61.3,
+        "proc_after_retriever": 61.8,
+        "proc_delta_retriever": 0.5,
+        "proc_after_generator": 61.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No, **no debe utilizar alcohol** para limpiar la zona de punción antes de la extracción de una muestra de alcoholemia.\n\nSegún el protocolo para la extracción de muestras con fines legales:\n\n- La limpieza de la zona de venopunción **nunca se realizará con alcohol** [1].\n- En su lugar, se puede emplear **agua y jabón** o **yodo** [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 334,
+        "token_stats": {
+          "prompt_tokens": 3600,
+          "completion_tokens": 93,
+          "total_tokens": 3693,
+          "tokens_per_second": 158.1,
+          "context_used_pct": 22.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.02
+      }
+    },
+    {
+      "id": "q05",
+      "query": "¿Qué muestras se necesitan para el rastreo de drogas de abuso y/o fármacos?",
+      "block": 1,
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Se requiere una muestra de suero en tubo con gel separador (tape amarillo), volumen mínimo 3 ml, y además el paciente debe emitir una muestra de orina.",
+      "labels": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "muestras necesarias para el rastreo de drogas de abuso y fármacos",
+        "keywords": [
+          "muestras",
+          "rastreo",
+          "drogas de abuso",
+          "fármacos"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 7
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "16. ANEXOS",
+          "h2": "ANEXO III. Volantes de Analítica del Paciente.",
+          "rerank_score": 0.0264,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-89-revC-Parada-Cardiaca",
+          "h1": "PROTOCOLO DE PARADA CARDIACA INTRAHOSPITALARIA",
+          "h2": "ANEXO 3. FÁRMACOS VASOPRESORES Y ANTIARRÍTMICOS.",
+          "rerank_score": 0.0248,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0161,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "PROCEDIMIENTO DE CONTENCIÓN MECÁNICA/INMOVILIZACIÓN TERAPÉUTICA",
+          "h2": "4. DESARROLLO",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.5. MUESTRAS DEL TRACTO GENITAL MASCULINO",
+          "rerank_score": 0.0159,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCION DE MUESTRAS, PARA ANALISIS TOXICOLOGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0156,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.1. HECES",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6.3.5 Pautas farmacológicas.",
+          "h2": "GRUPOS DE FÁRMACOS A UTILIZAR EN LA IT",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15. PARÁSITOS",
+          "rerank_score": 0.0152,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.255,
+        "Retriever": 1.357,
+        "Generador": 8.97
+      },
+      "memory_mb": {
+        "proc_before": 61.8,
+        "proc_after_retriever": 61.8,
+        "proc_delta_retriever": -0.0,
+        "proc_after_generator": 61.8,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para el rastreo de drogas de abuso y/o fármacos, se requieren las siguientes muestras y materiales:\n\n## Muestras necesarias\nSe requiere la obtención de dos tipos de muestras:\n- **Muestra de suero**.\n- **Muestra de orina** (el paciente debe emitir esta muestra) [1].\n\n## Materiales y procedimiento de recogida\nPara asegurar la correcta toma de las muestras, se debe seguir lo siguiente:\n\n- **Para el suero**:\n    - Se debe utilizar un **tubo con gel separador** (identificado con **tape amarillo**) [1].\n    - El volumen mínimo requerido es de **3 ml** [1].\n\n- **Para la orina**:\n    - **Contenedor primario**: Se le entrega al paciente un contenedor de **12/120 mL** (identificado con **tape azul**) para que emita la orina [1].\n    - **Procedimiento de transferencia**: El profesional (ATS/DUE) debe retirar el plástico que tapa la cánula de transferencia e introducir el **tubo secundario** en el contenedor primario a través de dicha cánula [1].\n    - **Nota sobre el contenedor**: En caso de no disponer del tubo específico, se puede utilizar el contenedor que se use habitualmente [1].\n\n**Consideración importante**: Si no se dispone de alguno de los tubos estándar mencionados, se pueden utilizar otros similares [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1223,
+        "token_stats": {
+          "prompt_tokens": 6412,
+          "completion_tokens": 310,
+          "total_tokens": 6722,
+          "tokens_per_second": 154.9,
+          "context_used_pct": 41.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.97
+      }
+    },
+    {
+      "id": "q06",
+      "query": "¿Cómo se obtiene la muestra de orina para el rastreo de drogas?",
+      "block": 1,
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Se le da al paciente el contenedor primario (contenedor de 120 mL de tape azul) donde debe emitir la orina. Posteriormente el ATS/DUE debe retirar el plástico que tapa la cánula de transferencia e introducir el tubo secundario en el primario a través de ésta cánula.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimiento para la obtención de la muestra de orina para el rastreo de drogas de abuso y/o fármacos según el PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+        "keywords": [
+          "muestra de orina",
+          "rastreo de drogas"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 4
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0328,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.031,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.0302,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8. UROCULTIVO",
+          "rerank_score": 0.0296,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.5. ORINA",
+          "rerank_score": 0.0296,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.1. ORINA OBTENIDA POR MICCIÓN MEDIA.",
+          "rerank_score": 0.0292,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.2. Orina vesical.",
+          "rerank_score": 0.029,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.5. MUESTRAS DEL TRACTO GENITAL MASCULINO",
+          "rerank_score": 0.0289,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.2. MUESTRAS EXTRAPULMONARES.",
+          "h2": "13.2.8. Orina",
+          "rerank_score": 0.0288,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "17. MICROBIOLOGIA MOLECULAR",
+          "h2": "B. Obtención de la muestra:",
+          "rerank_score": 0.025,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.509,
+        "Retriever": 1.334,
+        "Generador": 8.28
+      },
+      "memory_mb": {
+        "proc_before": 61.8,
+        "proc_after_retriever": 62.3,
+        "proc_delta_retriever": 0.5,
+        "proc_after_generator": 62.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la obtención de la muestra de orina con el fin de realizar un **rastreo de drogas de abuso y/o fármacos**, el procedimiento es el siguiente:\n\n## Procedimiento de extracción\n\nEl proceso de extracción de la muestra de orina se realiza siguiendo estos pasos:\n\n- **Entrega del material**: Se debe proporcionar al paciente un **contenedor primario** (contenedor de 120 mL con **tape azul**) para que este emita la orina en él [1].\n- **Trasvase de la muestra**: Una vez recogida la orina, el profesional (ATS/DUE) debe retirar el plástico que tapa la cánula de transferencia e introducir el **tubo secundario** en el contenedor primario a través de dicha cánula [1].\n\n## Consideraciones adicionales\n\n- **Material alternativo**: En caso de no disponer de los tubos específicos, se pueden utilizar otros similares. Para el tubo de orina, también es posible emplear el contenedor que se utilice habitualmente en el servicio [1].\n- **Requisito complementario**: Para este tipo de rastreo, además de la muestra de orina, se requiere una muestra de **suero** (en tubo con gel separador, **tape amarillo**, con un volumen mínimo de 3 ml) [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1134,
+        "token_stats": {
+          "prompt_tokens": 3409,
+          "completion_tokens": 276,
+          "total_tokens": 3685,
+          "tokens_per_second": 158.1,
+          "context_used_pct": 22.5,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.28
+      }
+    },
+    {
+      "id": "q07",
+      "query": "¿Qué hago si no tengo el tubo específico indicado en el procedimiento?",
+      "block": 1,
+      "expected_section": "NORMAS GENERALES",
+      "expected_quote": "Si no se dispone de alguno de estos tubos deben usarse otros similares. En el caso del tubo de orina puede usarse el contenedor que habitualmente se emplee.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimiento para la obtención de la muestra de orina para el rastreo de drogas de abuso y/o fármacos en ausencia del tubo específico indicado",
+        "keywords": [
+          "tubo específico",
+          "no tengo",
+          "procedimiento"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            4,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 2,
+            "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B": 2
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0323,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.5. MUESTRAS DEL TRACTO GENITAL MASCULINO",
+          "rerank_score": 0.0302,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.3. MUESTRAS TRACTO GENITAL FEMENINO",
+          "rerank_score": 0.0295,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.1. HECES",
+          "rerank_score": 0.0289,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "11. MUESTRAS OCULARES",
+          "h2": "11.1. FROTIS CONJUNTIVALES",
+          "rerank_score": 0.0258,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "6. LÍQUIDOS ORGÁNICOS",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.0222,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.3. TEST DE IGRAS",
+          "h2": "13.3. TEST DE IGRAS",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0159,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.2. Orina vesical.",
+          "rerank_score": 0.0156,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-121-Z3-E-C-Procedimiento-de-Identificación-de-Pacientes",
+          "h1": "6. ANEXOS",
+          "h2": "6.1 ANEXO I: SOLICITUD TELEMÁTICA DE PULSERA IDENTIFICATIVA.",
+          "rerank_score": 0.0156,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.37,
+        "Retriever": 1.309,
+        "Generador": 9.22
+      },
+      "memory_mb": {
+        "proc_before": 62.3,
+        "proc_after_retriever": 62.4,
+        "proc_delta_retriever": 0.1,
+        "proc_after_generator": 62.4,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Dependiendo del tipo de muestra que esté realizando, los protocolos establecen las siguientes alternativas en caso de no disponer del material específico:\n\n## Alternativas según el tipo de muestra\n\n- **Análisis toxicológicos (con fines legales):**\n  - Si no se dispone de los tubos estándar para alcoholemia (EDTA/malva o suero con gel separador/amarillo) o para rastreo de drogas, se deben **usar otros tubos similares** [1].\n  - Para la recogida de orina, en lugar del contenedor primario de 120 mL (tape azul), se puede utilizar el **contenedor que habitualmente se emplee** [1].\n\n- **Muestras de parásitos (heces):**\n  - Si no dispone del tubo de recolección específico con medio de transporte SAF, la muestra puede recogerse en un **contenedor limpio y seco de boca ancha**, preferiblemente de plástico y bien cerrado [4].\n\n- **Muestras para detección de *C. trachomatis* (tracto genital masculino):**\n  - En caso de no disponer de un contenedor específico para esta patología, se puede recoger la **primera porción de la micción (chorro inicial)**, siempre que el paciente no haya orinado en las dos horas previas a la toma [2].\n\nNo se encuentran instrucciones alternativas en los protocolos para la falta de material en los procedimientos de exudados vaginales, cervicales, anales, de úlceras genitales o frotis conjuntivales.",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1333,
+        "token_stats": {
+          "prompt_tokens": 7166,
+          "completion_tokens": 336,
+          "total_tokens": 7502,
+          "tokens_per_second": 153.1,
+          "context_used_pct": 45.8,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.22
+      }
+    },
+    {
+      "id": "q08",
+      "query": "¿Qué debo hacer antes de extraer la muestra para garantizar que es del paciente correcto?",
+      "block": 2,
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "Es imprescindible asegurar la identidad del paciente antes de la extracción.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimientos de verificación de la identidad del paciente antes de la extracción de muestras",
+        "keywords": [
+          "extraer la muestra",
+          "paciente correcto"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            4,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            3,
+            4,
+            4,
+            5,
+            1,
+            3,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G": 8,
+            "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013": 3,
+            "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B": 3
+          },
+          "dominant_doc_id": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "dominant_ratio": 0.571,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "16. SEROLOGIA INFECCIOSA",
+          "h2": "B. Obtención de la muestra",
+          "rerank_score": 0.0296,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "RPC-87-PROTOCOLO-SONDAJE-VESICAL-2013",
+          "h1": "21. ANEXOS",
+          "h2": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+          "rerank_score": 0.0278,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "17. MICROBIOLOGIA MOLECULAR",
+          "h2": "B. Obtención de la muestra:",
+          "rerank_score": 0.0274,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "PROCEDIMIENTO PARA LA SOLICITUD, APLICACIÓN Y TRAZABILIDAD DE HEMODERIVADOS",
+          "h2": "4. DESCRIPCIÓN DEL PROCEDIMIENTO",
+          "rerank_score": 0.0253,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "14. MICOSIS CUTÁNEAS",
+          "h2": "B.- Requisitos previos",
+          "rerank_score": 0.025,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "3. HEMOCULTIVOS",
+          "rerank_score": 0.0244,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-121-Z3-E-C-Procedimiento-de-Identificación-de-Pacientes",
+          "h1": "4. DESARROLLO",
+          "h2": "4.1 IDENTIFICACIÓN DE PACIENTES EN CONSULTAS EXTERNAS, HOSPITAL DE DÍA DEL PACIENTE CRÓNICO Y PRUEBAS O TÉCNICAS AMBULATORIAS.",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.3. MUESTRAS OBTENIDAS MEDIANTE ENDOSCOPIA DIGESTIVA",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0161,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.4. DESPISTAJE DE S. agalactiae EN GESTANTES",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.206,
+        "Retriever": 1.35,
+        "Generador": 10.79
+      },
+      "memory_mb": {
+        "proc_before": 62.4,
+        "proc_after_retriever": 62.9,
+        "proc_delta_retriever": 0.5,
+        "proc_after_generator": 62.9,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para garantizar que la muestra extraída pertenece al paciente correcto, los protocolos del hospital establecen las siguientes acciones según el tipo de procedimiento:\n\n## Identificación y Verificación del Paciente\n\n- **Comprobación activa**: A pie de cama del paciente, se debe proceder a la comprobación de la identidad de forma activa, contrastando la información con la **pulsera identificativa** que lleve el paciente [4].\n- **Información al paciente**: Se debe informar al paciente sobre la técnica que se le va a realizar [3, 4].\n- **Uso de pulsera de seguridad (en procesos de hemoderivados)**: Se debe colocar al paciente una nueva **pulsera de seguridad transfusional** que lo asocie con la muestra que se va a extraer, con la solicitud cumplimentada y con el hemoderivado [4]. Antes de colocarla, se debe escribir en ella el nombre, apellidos y ubicación del paciente [4].\n\n## Identificación de la Muestra y Trazabilidad\n\nPara asegurar la trazabilidad inequívoca y evitar errores, se debe implementar un sistema de **triple etiquetado** (paciente, tubo y solicitud) utilizando pegatinas vinculadas de la misma pulsera de seguridad [4]:\n\n- **En el tubo**: Separar la pegatina de la pulsera correspondiente a la muestra de sangre y colocarla en el tubo [4]. En el caso de muestras de orina para urocultivo, el tubo debe ir debidamente identificado con el nombre del paciente [3].\n- **En la solicitud**: Colocar las pegatinas de la pulsera en la solicitud (original y copia) [4].\n- **En la solicitud de hemoderivados**: La solicitud debe contener los datos del paciente (que salen por defecto), el diagnóstico, el producto a transfundir (tipo y número de unidades), el tipo de administración (indicando fecha si es para cirugía) y los datos del médico (nombre, número de colegiado, fecha y firma) [4].\n- **Identificación de muestras microbiológicas**: Es imprescindible asegurar la identificación correcta de la muestra [5].\n\n## Consideraciones adicionales según el tipo de muestra\n\n- **Muestras de sangre (Serología)**: Las muestras deben identificarse con la etiqueta correspondiente [1].\n- **Muestras de orina (Urocultivo)**: La orina debe extraerse por la zona preparada, sin desconectar la sonda del sistema de drenaje y **nunca recogerla de la bolsa de drenaje** [3].\n- **Muestras para Biología Molecular**: Se recomienda utilizar las mismas precauciones de esterilidad que para las técnicas de cultivo [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 2420,
+        "token_stats": {
+          "prompt_tokens": 5327,
+          "completion_tokens": 566,
+          "total_tokens": 5893,
+          "tokens_per_second": 146.4,
+          "context_used_pct": 36.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 10.79
+      }
+    },
+    {
+      "id": "q09",
+      "query": "¿Qué es el formulario de cadena de custodia y qué debe contener?",
+      "block": 2,
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "Es un documento que debe acompañar a la muestra y al documento de solicitud de análisis en todo su recorrido hasta la Unidad de Toxicología. En él debe constar el número de identificación de la muestra pero no el nombre del interesado, y deben identificarse y firmar todas las personas implicadas en la obtención, transporte y recepción de la muestra.",
+      "labels": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "definición y contenido del formulario de cadena de custodia",
+        "keywords": [
+          "formulario de cadena de custodia",
+          "qué es",
+          "qué debe contener"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 6
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 2,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0325,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCION DE MUESTRAS, PARA ANALISIS TOXICOLOGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0311,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6. ANEXOS",
+          "h2": "6.3 REGISTROS/DOCUMENTOS",
+          "rerank_score": 0.0308,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-121-Z3-E-C-Procedimiento-de-Identificación-de-Pacientes",
+          "h1": "6. ANEXOS",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.029,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "PROCEDIMIENTO DE CONTENCIÓN MECÁNICA/INMOVILIZACIÓN TERAPÉUTICA",
+          "h2": "5. RESPONSABILIDADES",
+          "rerank_score": 0.0257,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "PROCEDIMIENTO PARA LA SOLICITUD, APLICACIÓN Y TRAZABILIDAD DE HEMODERIVADOS",
+          "h2": "4. DESCRIPCIÓN DEL PROCEDIMIENTO",
+          "rerank_score": 0.0256,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "6. Anexos",
+          "h2": "6.3. ANEXO III: Pulsera de seguridad transfusional",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "6. Anexos",
+          "h2": "6.4. ANEXO IV: Hoja de trazabilidad de hemoderivados.",
+          "rerank_score": 0.0156,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "6. ANEXOS",
+          "h2": "6.1 MATERIALES",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-46-Z3-E-C-Procedimiento-de-Contención-Mecánica-Rev-B",
+          "h1": "PROCEDIMIENTO DE CONTENCIÓN MECÁNICA/INMOVILIZACIÓN TERAPÉUTICA",
+          "h2": "4.4.5 Medidas de protección personal",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.184,
+        "Retriever": 1.357,
+        "Generador": 8.96
+      },
+      "memory_mb": {
+        "proc_before": 62.9,
+        "proc_after_retriever": 62.5,
+        "proc_delta_retriever": -0.4,
+        "proc_after_generator": 62.7,
+        "proc_delta_generator": 0.1,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "En relación con su consulta sobre el formulario de cadena de custodia, la información disponible en los protocolos para la extracción de muestras con fines legales es la siguiente:\n\n## Formulario de cadena de custodia\n\nEl formulario de cadena de custodia es un documento (disponible en formato PDF) que debe cumplimentarse para cada paciente cuando se realiza una extracción de muestras para análisis toxicológicos con fines legales [1]. Su función principal es acompañar a la muestra y al documento de solicitud de análisis en todo su recorrido hasta su llegada a la Unidad de Toxicología del Hospital Clínico Universitario [1].\n\n### Contenido y requisitos del formulario\nPara garantizar la validez del proceso, el formulario debe cumplir con los siguientes criterios:\n\n- **Identificación de la muestra**: Debe constar el número de identificación de la muestra [1].\n- **Anonimización**: Por seguridad, **no debe incluir el nombre del interesado** [1].\n- **Identificación de los intervinientes**: En el mismo documento deben identificarse y firmar todas las personas que hayan participado en las fases de:\n    - Obtención de la muestra.\n    - Transporte de la muestra.\n    - Recepción de la muestra [1].\n\nEs importante recordar que este formulario debe viajar junto a la muestra y al documento de solicitud de análisis (este último en un sobre aparte y abierto) [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1366,
+        "token_stats": {
+          "prompt_tokens": 6751,
+          "completion_tokens": 288,
+          "total_tokens": 7039,
+          "tokens_per_second": 154.2,
+          "context_used_pct": 43.0,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.96
+      }
+    },
+    {
+      "id": "q10",
+      "query": "¿Cuáles son los documentos válidos para solicitar el análisis toxicológico?",
+      "block": 2,
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "El documento de petición de análisis debe ser uno de los tres siguientes: el documento de solicitud/consentimiento firmado por el interesado y el Facultativo y ATS/DUE; el oficio de la autoridad de Tráfico solicitando custodia y conservación de las muestras; o el oficio judicial autorizando la realización de los análisis.",
+      "labels": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "documentos válidos para la solicitud de análisis toxicológicos en el marco del PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+        "keywords": [
+          "documentos válidos",
+          "solicitar",
+          "análisis toxicológico"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 5
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 3,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0325,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCION DE MUESTRAS, PARA ANALISIS TOXICOLOGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.032,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "11. ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL CENTRO DE ESPECIALIDADES “INOCENCIO JIMÉNEZ”.",
+          "h2": "11. ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL CENTRO DE ESPECIALIDADES “INOCENCIO JIMÉNEZ”.",
+          "rerank_score": 0.0258,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "8. ACTUACIÓN CUANDO EL ACCIDENTE ES EN ATENCIÓN PRIMARIA Y CENTRO SANITARIO \"MONCAYO\"",
+          "h2": "8. ACTUACIÓN CUANDO EL ACCIDENTE ES EN ATENCIÓN PRIMARIA Y CENTRO SANITARIO \"MONCAYO\"",
+          "rerank_score": 0.0236,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "9. TRACTO GENITAL",
+          "h2": "9.5. MUESTRAS DEL TRACTO GENITAL MASCULINO",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-195-RECOMENDACIONES-DE-ACTUACION-INSTITUCIONAL-ANTE-EVENTOS-ADVERSOS-ATENCION-A-PRIMERAS-Y-SEGUNDAS-VICTIMAS",
+          "h1": "RECOMENDACIONES DE ACTUACIÓN INSTITUCIONAL ANTE EVENTOS ADVERSOS: ATENCIÓN A PRIMERAS Y SEGUNDAS VÍCTIMAS",
+          "h2": "4. ACTUACIÓN ANTE UN EVENTO ADVERSO GRAVE",
+          "rerank_score": 0.0152,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "5. LIQUIDO CEFALORRAQUIDEO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.0149,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-195-RECOMENDACIONES-DE-ACTUACION-INSTITUCIONAL-ANTE-EVENTOS-ADVERSOS-ATENCION-A-PRIMERAS-Y-SEGUNDAS-VICTIMAS",
+          "h1": "RECOMENDACIONES DE ACTUACIÓN INSTITUCIONAL ANTE EVENTOS ADVERSOS: ATENCIÓN A PRIMERAS Y SEGUNDAS VÍCTIMAS",
+          "h2": "4.2. Actuaciones a medio plazo",
+          "rerank_score": 0.0149,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "1. INTRODUCCIÓN",
+          "rerank_score": 0.0147,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.56,
+        "Retriever": 1.321,
+        "Generador": 8.1
+      },
+      "memory_mb": {
+        "proc_before": 62.7,
+        "proc_after_retriever": 63.0,
+        "proc_delta_retriever": 0.4,
+        "proc_after_generator": 63.0,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Para la solicitud de un análisis toxicológico con fines legales, el documento de petición debe ser uno de los tres siguientes:\n\n- El **Documento de solicitud/consentimiento** firmado tanto por el interesado como por el Facultativo y el personal de ATS/DUE implicado en la obtención de la muestra [1].\n- El **Oficio de la autoridad de Tráfico**, en el cual se solicita la custodia y conservación de las muestras obten\n\n  obtenidas con fines terapéuticos [1].\n- El **Oficio judicial** que autorice la realización de los análisis correspondientes [1].\n\nEs importante recordar que cada muestra debe ir acompañada de su correspondiente **formulario de cadena de custodia** (disponible en formato PDF) [2]. Este documento debe acompañar a la muestra y al documento de solicitud de análisis (este último en un sobre aparte y abierto) durante todo su trayecto hasta la Unidad de Toxicología del Hospital Clínico Universitario [2].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 922,
+        "token_stats": {
+          "prompt_tokens": 5095,
+          "completion_tokens": 205,
+          "total_tokens": 5300,
+          "tokens_per_second": 140.4,
+          "context_used_pct": 32.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.1
+      }
+    },
+    {
+      "id": "q11",
+      "query": "¿Quién debe supervisar la toma de muestras?",
+      "block": 2,
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "La toma de muestras se efectuará siempre bajo la supervisión del personal sanitario para que no se cometa ninguna adulteración.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "router": {
+        "optimized_query": "supervisión de la toma de muestras en el PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+        "keywords": [
+          "supervisar",
+          "toma de muestras"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "title": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [],
+          "citation_counts_by_doc": {},
+          "dominant_doc_id": null,
+          "dominant_ratio": null,
+          "chunks_in_topk": null,
+          "gate_reason": "no_citations"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "RECEPCIÓN DE MUESTRAS LABORATORIOS CLÍNICOS",
+          "h2": "12.2.4. Muestras extrapulmonares",
+          "rerank_score": 0.0289,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "2. NORMAS GENERALES",
+          "rerank_score": 0.0286,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "18. RESISTENCIA ZERO",
+          "h2": "B. Obtención de la muestra:",
+          "rerank_score": 0.0285,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.2. MUESTRAS EXTRAPULMONARES.",
+          "h2": "13.2.9. Heces",
+          "rerank_score": 0.0274,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "RECEPCIÓN DE MUESTRAS LABORATORIOS CLÍNICOS",
+          "h2": "13.1.4. Muestras obtenidas por técnicas broncoscópicas.",
+          "rerank_score": 0.0262,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.6. ABSCESO HEPÁTICO",
+          "rerank_score": 0.0257,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "11. MUESTRAS OCULARES",
+          "h2": "11. MUESTRAS OCULARES",
+          "rerank_score": 0.0251,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.2. MUESTRAS EXTRAPULMONARES.",
+          "h2": "13.2.10. Otras muestras",
+          "rerank_score": 0.0251,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.8. MUESTRAS DE SNC: LCR",
+          "rerank_score": 0.0232,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0164,
+          "relevance_label": 1
+        }
+      ],
+      "timings": {
+        "Router": 6.443,
+        "Retriever": 1.333,
+        "Generador": 6.68
+      },
+      "memory_mb": {
+        "proc_before": 63.0,
+        "proc_after_retriever": 62.3,
+        "proc_delta_retriever": -0.7,
+        "proc_after_generator": 62.3,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No encuentro esa información en los protocolos disponibles. Los documentos proporcionados detallan las normas de petición, obtención, transporte y conservación de diversas muestras microbiológicas, pero no especifican quién es la persona o el profesional responsable de la supervisión de la toma de las mismas.",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 310,
+        "token_stats": {
+          "prompt_tokens": 2769,
+          "completion_tokens": 59,
+          "total_tokens": 2828,
+          "tokens_per_second": 158.4,
+          "context_used_pct": 17.3,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 6.68
+      }
+    },
+    {
+      "id": "q12",
+      "query": "¿Cómo se etiquetan los tubos para garantizar que no han sido manipulados?",
+      "block": 2,
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "El etiquetado de todas las muestras se realizará de modo que la etiqueta abarque un tramo del tubo y otro del tapón. De esta forma, si alguien intentase abrir el envase, la etiqueta se rompería y no se garantizaría la cadena de custodia.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimiento de etiquetado de tubos para garantizar la ausencia de manipulación",
+        "keywords": [
+          "etiquetan",
+          "tubos",
+          "manipulados"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            4,
+            4,
+            5,
+            5,
+            5,
+            4
+          ],
+          "citation_counts_by_doc": {
+            "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G": 3,
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 3
+          },
+          "dominant_doc_id": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "dominant_ratio": 0.5,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "17. MICROBIOLOGIA MOLECULAR",
+          "h2": "A. Material necesario:",
+          "rerank_score": 0.0284,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "5. LIQUIDO CEFALORRAQUIDEO",
+          "h2": "A. Material necesario",
+          "rerank_score": 0.0245,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-26-Z3-E-C-Rev-A-Proced-en-los-Cuidados-en-Oxigenoterapia-aprob-15112016",
+          "h1": "4. DESARROLLO",
+          "h2": "C. Procedimiento:",
+          "rerank_score": 0.0233,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-05-Z3-E-C-Procedimiento-trazabilidad-hemoderivados-vs-G",
+          "h1": "6. Anexos",
+          "h2": "6.3. ANEXO III: Pulsera de seguridad transfusional",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "5. RESPONSABILIDADES",
+          "h2": "DEL TÉCNICO AUXILIAR EN CUIDADOS DE ENFERMERÍA:",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0161,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "5. RESPONSABILIDADES",
+          "h2": "DEL PERSONAL MÉDICO:",
+          "rerank_score": 0.0159,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.3. TEST DE IGRAS",
+          "h2": "13.3. TEST DE IGRAS",
+          "rerank_score": 0.0159,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "16. SEROLOGIA INFECCIOSA",
+          "h2": "C. Conservación y transporte",
+          "rerank_score": 0.0156,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-108-Z3-E-C-Procedimiento-de-Valoración-Colocación-y-Seguimiento-del-Paciente-con-Catéter-Pleural-Tunelizado",
+          "h1": "6. ANEXOS",
+          "h2": "6. ANEXOS",
+          "rerank_score": 0.0154,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 5.903,
+        "Retriever": 1.3,
+        "Generador": 7.87
+      },
+      "memory_mb": {
+        "proc_before": 62.3,
+        "proc_after_retriever": 62.5,
+        "proc_delta_retriever": 0.1,
+        "proc_after_generator": 62.5,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "No encuentro información en los protocolos disponibles que especifique un método de etiquetado concreto para garantizar que los tubos no han sido manipulados.\n\nSin embargo, los documentos disponibles sí detallan los siguientes aspectos relacionados con la identificación y la trazabilidad de las muestras:\n\n- **Sistema de seguridad y trazabilidad transfusional**: En procesos de transfusión, se utiliza un sistema de seguridad donde un **código de barras único** vincula de forma inequívoca la pulsera de identificación del paciente, el formulario de solicitud de componentes sanguíneos y el tubo de muestra de sangre [4]. Este sistema garantiza la trazabilidad y ayuda a evitar errores de identificación [4].\n- **Identificación de tubos por color (tapa)**: Los protocolos mencionan el uso de tubos con tapones de colores específicos según el tipo de análisis:\n    - **Tubo de sangre (EDTA)**: Tapón malva [5].\n    - **Tubo de suero (con gel separador)**: Tapón amarillo [5].\n    - **Contenedor de orina**: Tapón azul [5].\n    - **Tubo de muestra de sangre en seguridad transfusional**: Tapón morado [4].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1104,
+        "token_stats": {
+          "prompt_tokens": 3037,
+          "completion_tokens": 258,
+          "total_tokens": 3295,
+          "tokens_per_second": 158.9,
+          "context_used_pct": 20.1,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 7.87
+      }
+    },
+    {
+      "id": "q13",
+      "query": "¿A qué temperatura hay que conservar las muestras y pueden congelarse?",
+      "block": 2,
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "Inmediatamente después de su extracción, las muestras deben ser guardadas en nevera a 4ºC. En ningún caso deben ser congeladas.",
+      "labels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "temperatura de conservación de las muestras y posibilidad de congelación",
+        "keywords": [
+          "temperatura",
+          "conservar",
+          "muestras",
+          "congelarse"
+        ],
+        "is_followup": false,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": {
+          "doc_id": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "title": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B"
+        },
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            5,
+            4,
+            4,
+            4,
+            2,
+            3
+          ],
+          "citation_counts_by_doc": {
+            "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B": 10
+          },
+          "dominant_doc_id": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 5,
+          "gate_reason": "ok"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "5. LIQUIDO CEFALORRAQUIDEO",
+          "h2": "C. Transporte y conservación",
+          "rerank_score": 0.032,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "16. SEROLOGIA INFECCIOSA",
+          "h2": "C. Conservación y transporte",
+          "rerank_score": 0.0317,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "18. RESISTENCIA ZERO",
+          "h2": "C. Conservación y transporte:",
+          "rerank_score": 0.0315,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "6. LÍQUIDOS ORGÁNICOS",
+          "h2": "C. Transporte y conservación",
+          "rerank_score": 0.0305,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.8. MUESTRAS DE SNC: LCR",
+          "rerank_score": 0.0299,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "11. MUESTRAS OCULARES",
+          "h2": "11.1. FROTIS CONJUNTIVALES",
+          "rerank_score": 0.0298,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "4. CATÉTERES INTRAVASCULARES",
+          "h2": "C. Transporte y conservación",
+          "rerank_score": 0.029,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "12. TRACTO RESPIRATORIO",
+          "h2": "12.2. TRACTO RESPIRATORIO INFERIOR",
+          "rerank_score": 0.0266,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "RECEPCIÓN DE MUESTRAS LABORATORIOS CLÍNICOS",
+          "h2": "13.1.6. Otras biopsias respiratorias.",
+          "rerank_score": 0.026,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "RECEPCIÓN DE MUESTRAS LABORATORIOS CLÍNICOS",
+          "h2": "13.1.4. Muestras obtenidas por técnicas broncoscópicas.",
+          "rerank_score": 0.0254,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.231,
+        "Retriever": 1.282,
+        "Generador": 9.27
+      },
+      "memory_mb": {
+        "proc_before": 62.5,
+        "proc_after_retriever": 62.6,
+        "proc_delta_retriever": 0.1,
+        "proc_after_generator": 62.6,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "Las condiciones de temperatura y conservación dependen estrictamente del tipo de muestra analizada. A continuación se detallan los protocolos según el material:\n\n## Líquido Cefalorraquídeo (LCR)\n- **Uso general**: Debe enviarse al laboratorio de inmediato [1]. Si el laboratorio está cerrado, se debe dejar en **estufa a 35-37ºC**, salvo que se busque estudio viral [1]. Bajo ningún concepto debe refrigerarse; si no hay estufa disponible, se mantiene a **temperatura ambiente** hasta su envío [1].\n- **Estudio viral**: El LCR puede conservarse a **4ºC** si el procesamiento se realizará en menos de 48 horas. Si el tiempo de espera es superior, debe conservarse a **-70ºC** [1].\n- **Examen parasitológico**: Se debe realizar un envío rápido. La muestra se conservará a **temperatura ambiente** si han pasado menos de 4-8 horas desde la extracción. Se permite la refrigeración, pero **nunca debe congelarse** [5].\n\n## Líquidos Orgánicos\n- **Frascos de hemocultivo**: Si se retrasa el transporte, deben introducirse en **estufa a 35-37ºC**. En su defecto, se mantienen a **temperatura ambiente** [4].\n- **Contenedores estériles**: Se deben remitir a **temperatura ambiente** en menos de 15 minutos. En caso de demora, se mantienen a **temperatura ambiente**, con la excepción del **líquido pericárdico**, que es preferible conservarlo a **4ºC** [4].\n- **Cultivo de hongos o micobacterias**: Deben conservarse a **4ºC** [4].\n\n## Serología Infecciosa\n- Las muestras deben transportarse al laboratorio a **temperatura ambiente** el mismo día de la extracción. En caso de demora, pueden conservarse a **temperatura ambiente** durante un periodo de 24-48 horas [2].\n\n## Resistencia Zero\n- Se requiere el envío inmediato al laboratorio. Si no es posible, se puede conservar a **temperatura ambiente** durante un tiempo inferior o igual a 24 horas [3].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1844,
+        "token_stats": {
+          "prompt_tokens": 1593,
+          "completion_tokens": 481,
+          "total_tokens": 2074,
+          "tokens_per_second": 160.2,
+          "context_used_pct": 12.7,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 9.27
+      }
+    },
+    {
+      "id": "q14",
+      "query": "¿Cuánto tiempo tengo para enviar las muestras a la Unidad de Toxicología?",
+      "block": 2,
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "El envío de las muestras debe realizarse a la Unidad de Toxicología del H.C.U Lozano Blesa de Zaragoza en menos de 72 horas.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "tiempo permitido para el envío de muestras a la Unidad de Toxicología en el marco de TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+        "keywords": [
+          "tiempo",
+          "enviar las muestras",
+          "Unidad de Toxicología"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": true,
+        "previous_doc_received": {
+          "doc_id": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "title": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B"
+        }
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "citation_counts_by_doc": {
+            "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013": 5
+          },
+          "dominant_doc_id": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "dominant_ratio": 1.0,
+          "chunks_in_topk": 1,
+          "gate_reason": "insufficient_chunks"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCION DE MUESTRAS, PARA ANALISIS TOXICOLOGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0293,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "6. LÍQUIDOS ORGÁNICOS",
+          "h2": "B. Obtención de la muestra",
+          "rerank_score": 0.0267,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.4. MUESTRAS VAGINALES Y URETRALES",
+          "rerank_score": 0.0243,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "7. PIEL Y TEJIDOS BLANDOS",
+          "h2": "C. Obtención de la muestra",
+          "rerank_score": 0.0236,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "RECEPCIÓN DE MUESTRAS LABORATORIOS CLÍNICOS",
+          "h2": "13.1.3. Jugo gástrico",
+          "rerank_score": 0.0227,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0164,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "13.2. MUESTRAS EXTRAPULMONARES.",
+          "h2": "13.2.5. Biopsias",
+          "rerank_score": 0.0161,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "TOMA DE MUESTRAS MICROBIOLÓGICAS, TRANSPORTE Y CONSERVACIÓN",
+          "h2": "1. INTRODUCCIÓN",
+          "rerank_score": 0.0159,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "8. UROCULTIVO",
+          "h2": "8.3. Orina de pacientes con catéter permanente.",
+          "rerank_score": 0.0159,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.435,
+        "Retriever": 1.358,
+        "Generador": 8.43
+      },
+      "memory_mb": {
+        "proc_before": 62.6,
+        "proc_after_retriever": 62.7,
+        "proc_delta_retriever": 0.1,
+        "proc_after_generator": 62.7,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "## Envío de muestras a la Unidad de Toxicología\n\nEl envío de las muestras para análisis toxicológicos con fines legales debe realizarse bajo las siguientes condiciones:\n\n- **Tiempo de envío**: El envío a la Unidad de Toxicología del H.C.U. Lozano Blesa de Zaragoza debe realizarse en **menos de 72 horas** [1].\n- **Horario y entrega fuera de horario**: \n    - Fuera del horario comprendido entre las **15:00 y las 08:00 horas**, o durante el **fin de semana**, las muestras externas deben entregarse en el servicio de **Urgencias del HCU**, indicando expresamente que su destino es la Unidad de Toxicología [1].\n\n**Consideraciones adicionales para estas muestras:**\n- **Conservación inmediata**: Tras la extracción, las muestras deben guardarse en nevera a **4ºC** y, bajo ningún concepto, deben congelarse [1].\n- **Etiquetado**: La etiqueta debe cubrir tanto un tramo del tubo como el tapón para garantizar la integridad de la cadena de custodia; si la etiqueta se rompe al intentar abrir el envase, la cadena de custodia no se considerará garantizada [1].\n- **Supervisión**: La toma de muestras debe realizarse siempre bajo la supervisión del personal sanitario para evitar cualquier tipo de adulteración [1].",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 1211,
+        "token_stats": {
+          "prompt_tokens": 3283,
+          "completion_tokens": 297,
+          "total_tokens": 3580,
+          "tokens_per_second": 157.7,
+          "context_used_pct": 21.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 8.43
+      }
+    },
+    {
+      "id": "q15",
+      "query": "¿Qué hago con las muestras si llegan fuera del horario habitual, por la noche o en fin de semana?",
+      "block": 2,
+      "expected_section": "NORMAS ESPECÍFICAS",
+      "expected_quote": "Fuera del horario de 15'00 a 08'00 horas o en fin de semana las muestras externas se entregaran al servicio de Urgencias del HCU indicando que es para guardar para la Unidad de Toxicología.",
+      "labels": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "router": {
+        "optimized_query": "procedimiento para el manejo de muestras que llegan fuera del horario habitual, durante la noche o en fin de semana",
+        "keywords": [
+          "muestras",
+          "fuera del horario habitual",
+          "por la noche",
+          "fin de semana"
+        ],
+        "is_followup": true,
+        "is_chitchat": false,
+        "used_previous_doc": false,
+        "previous_doc_received": null
+      },
+      "doc_anchor": {
+        "next_anchor": null,
+        "metrics": {
+          "enabled": true,
+          "thresholds": {
+            "min_citation_ratio": 0.5,
+            "min_chunk_count": 2
+          },
+          "low_relevance": false,
+          "topk_size": 5,
+          "citations_parsed": [],
+          "citation_counts_by_doc": {},
+          "dominant_doc_id": null,
+          "dominant_ratio": null,
+          "chunks_in_topk": null,
+          "gate_reason": "no_response"
+        }
+      },
+      "retrieved_docs": [
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCION DE MUESTRAS, PARA ANALISIS TOXICOLOGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0315,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "7. ACTUACIÓN CUANDO EL ACCIDENTE ES EN EL HOSPITAL.",
+          "h2": "7.2. Horario de 15 a 8 horas de L-V, sábados y días festivos.",
+          "rerank_score": 0.0304,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "15. PARÁSITOS",
+          "h2": "15.5. ORINA",
+          "rerank_score": 0.0284,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "12. ACTUACIÓN DEL SERVICIO DE URGENCIAS CUANDO EL ACCIDENTE OCURRE EN CUALQUIER CENTRO SANITARIO EN HORARIO DE TARDES NOCHES, SÁBADOS Y FESTIVOS.",
+          "h2": "12. ACTUACIÓN DEL SERVICIO DE URGENCIAS CUANDO EL ACCIDENTE OCURRE EN CUALQUIER CENTRO SANITARIO EN HORARIO DE TARDES NOCHES, SÁBADOS Y FESTIVOS.",
+          "rerank_score": 0.0264,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "II. NORMAS ESPECÍFICAS",
+          "rerank_score": 0.0256,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PA-02_Z3-E-C-TX-Rev-B_Procedimiento-extrac-de-muestras-para-Analisis-Toxicologicos-con-fines-legales-mayo-2013",
+          "h1": "PROCEDIMIENTO PARA LA EXTRACCIÓN DE MUESTRAS, PARA ANÁLISIS TOXICOLÓGICOS, CON FINES LEGALES",
+          "h2": "I. NORMAS GENERALES",
+          "rerank_score": 0.0252,
+          "relevance_label": 1
+        },
+        {
+          "doc_reference": "PE-27-Z3-E-C-PLAN-CONTINGENCIA-INFECCIONES-RESPIRATORIAS-HCLB-2024-2025",
+          "h1": "PLAN CONTINGENCIA INFECCIONES RESPIRATORIAS ESTACIONALES 2024/2025",
+          "h2": "3. DIAGNOSTICO MICROBIOLÓGICO",
+          "rerank_score": 0.0245,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PO-19-Z3-E-C-Actuación-en-el-Accidente-Ocupacional-con-Material-Biológico-Rev-C",
+          "h1": "8. ACTUACIÓN CUANDO EL ACCIDENTE ES EN ATENCIÓN PRIMARIA Y CENTRO SANITARIO \"MONCAYO\"",
+          "h2": "8. ACTUACIÓN CUANDO EL ACCIDENTE ES EN ATENCIÓN PRIMARIA Y CENTRO SANITARIO \"MONCAYO\"",
+          "rerank_score": 0.0235,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "14. MICOSIS CUTÁNEAS",
+          "h2": "B.- Requisitos previos",
+          "rerank_score": 0.0219,
+          "relevance_label": 0
+        },
+        {
+          "doc_reference": "PTP-02-Z3-E-C-L-MB-Manual-toma-de-muestras-Rev-B",
+          "h1": "18. RESISTENCIA ZERO",
+          "h2": "C. Conservación y transporte:",
+          "rerank_score": 0.0164,
+          "relevance_label": 0
+        }
+      ],
+      "timings": {
+        "Router": 6.365,
+        "Retriever": 1.363,
+        "Generador": 12.57
+      },
+      "memory_mb": {
+        "proc_before": 62.7,
+        "proc_after_retriever": 62.7,
+        "proc_delta_retriever": 0.0,
+        "proc_after_generator": 62.7,
+        "proc_delta_generator": 0.0,
+        "ollama_after_retriever": null,
+        "ollama_after_generator": null
+      },
+      "generated_response": "",
+      "generation": {
+        "model": "gemma4:26b",
+        "response_chars": 0,
+        "token_stats": {
+          "prompt_tokens": 4586,
+          "completion_tokens": 800,
+          "total_tokens": 5386,
+          "tokens_per_second": 140.4,
+          "context_used_pct": 32.9,
+          "num_ctx": 16384,
+          "num_predict": 800
+        },
+        "elapsed_s": 12.57
+      }
+    }
+  ]
+}

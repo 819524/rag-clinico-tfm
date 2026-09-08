@@ -1,0 +1,324 @@
+{
+  "_comment": "Overrides manuales nivel SECCIÓN, scoped por documento. Experimento 06b. PE27 y PA195 revisados manualmente.",
+  "PE27": {
+    "q01": {
+      "section": "ANEXO 1.2. MEDIDAS DE PREVENCIÓN EN PROFESIONALES",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q02": {
+      "sections": [
+        {
+          "section": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+          "doc": "PE-27"
+        },
+        {
+          "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+          "doc": "PE-27"
+        }
+      ],
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q03": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q05": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q06": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q07": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q08": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q09": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q10": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q11": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q12": {
+      "section": "2.3. EN PROFESIONALES.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q14": {
+      "section": "2.3. EN PROFESIONALES.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q15": {
+      "section": "2.3. EN PROFESIONALES.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q13": {
+      "section": "ANEXO 2. HOJA INFORMATIVA SOBRE PREVENCIÓN DE INFECCIONES RESPIRATORIAS VÍRICAS.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q18": {
+      "section": "3. DIAGNOSTICO MICROBIOLÓGICO",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q19": {
+      "section": "3. DIAGNOSTICO MICROBIOLÓGICO",
+      "doc": "PE-27",
+      "strategies": [
+        "cross_encoder"
+      ]
+    },
+    "q20": {
+      "section": "3. DIAGNOSTICO MICROBIOLÓGICO",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q22": {
+      "section": "4.2. Valoración clínica y destino del paciente",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q23": {
+      "section": "Criterios para ingreso en servicios específicos",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q24": {
+      "section": "ANEXO 5. SISTEMA DE REPARTO DE CAMAS EN FUNCIÓN DE “CAMAS OCUPADAS POR ESPECIALIDAD”, SEGÚN EL DIRECTORIO PARA LA GESTIÓN_ACTIVIDAD DE HOSPITALIZACIÓN",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q25": {
+      "section": "ANEXO 6. CRITERIOS DE AGRUPACIÓN DE PACIENTES CON INFECCIONES RESPIRATORIAS EN HABITACIONES COMPARTIDAS",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q26": {
+      "section": "7. ASISTENCIA EN UCI",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q27": {
+      "section": "ANEXO 1.5. ASISTENCIA EN HOSPITALIZACIÓN CONVENCIONAL",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q28": {
+      "section": "El ingreso en la UCRI",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q29": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q30": {
+      "section": "ANEXO 3. RESUMEN PRECAUCIONES ESPECÍFICAS PACIENTES CON INFECCIÓN RESPIRATORIA",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    }
+  },
+  "PA195": {
+    "q01": {
+      "section": "3. DEFINICIONES",
+      "doc": "PA-195",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q02": {
+      "section": "3. DEFINICIONES",
+      "doc": "PA-195",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q04": {
+      "section": "3. DEFINICIONES",
+      "doc": "PA-195",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q10": {
+      "section": "3. DEFINICIONES",
+      "doc": "PA-195",
+      "strategies": [
+        "cross_encoder"
+      ]
+    },
+    "q14": {
+      "section": "4. ACTUACIÓN ANTE UN EVENTO ADVERSO GRAVE",
+      "doc": "PA-195",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q16": {
+      "section": "4. ACTUACIÓN ANTE UN EVENTO ADVERSO GRAVE",
+      "doc": "PA-195",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q20": {
+      "section": "4. ACTUACIÓN ANTE UN EVENTO ADVERSO GRAVE",
+      "doc": "PA-195",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    },
+    "q26": {
+      "section": "4.2. Actuaciones a medio plazo",
+      "doc": "PA-195",
+      "strategies": [
+        "cross_encoder"
+      ]
+    },
+    "q28": {
+      "section": "6. ANEXOS",
+      "doc": "PA-195",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ]
+    }
+  }
+}

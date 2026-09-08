@@ -1,0 +1,203 @@
+{
+  "name": "PA-121_Z3(E)C — Procedimiento de Identificación de Pacientes",
+  "description": "Ground truth generado a partir del documento PA-121_Z3(E)C (Revisión A). Cubre definiciones y tipos de identificación, datos identificativos inequívocos, procedimientos por área asistencial (consultas externas, hospital de día oncohematológico, urgencias, hospitalización, bloque quirúrgico/UCI, neonatología), gestión de incidencias, responsabilidades y anexos.",
+  "relevant_doc_patterns": ["PA-121", "identificacion-pacientes", "pulsera-identificativa", "identificacion-verbal"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Cuál es el objetivo del procedimiento PA-121?",
+      "expected_section": "OBJETIVO",
+      "expected_quote": "Describir la sistemática para identificar de manera fehaciente a todos los pacientes a los que se presta atención sanitaria en el Hospital Clínico Universitario 'Lozano Blesa' (HCULB) de Zaragoza."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿A quién aplica el procedimiento de identificación de pacientes?",
+      "expected_section": "ALCANCE",
+      "expected_quote": "Profesionales sanitarios y no sanitarios, así como todos los servicios sanitarios, que intervengan en la atención a pacientes ambulantes, programados o urgentes en el HCULB."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿En qué consiste la identificación verbal activa o positiva?",
+      "expected_section": "DEFINICIONES Y JUSTIFICACIÓN",
+      "expected_quote": "Identificación verbal activa/positiva: proceso mediante el cual el profesional sanitario y no sanitario obtiene los datos identificativos inequívocos (nombre y apellidos y fecha de nacimiento) preguntando al paciente de manera verbal, esperando su respuesta, y NO confirmando los datos que ofrece el profesional."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Qué datos deben constar en la pulsera identificativa del HCULB?",
+      "expected_section": "DEFINICIONES Y JUSTIFICACIÓN",
+      "expected_quote": "En dicha pulsera debe constar: Nombre, Apellido y/o apellidos, Fecha de nacimiento, Número de tarjeta sanitaria de Aragón (AR), Número de Historia Clínica, Código de barras, Hospital Clínico Universitario 'Lozano Blesa'."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Qué documentos se aceptan como válidos para la identificación documental?",
+      "expected_section": "DEFINICIONES Y JUSTIFICACIÓN",
+      "expected_quote": "Se consideran validos: DNI, NIF/NIE y/o pasaporte. Pese a que la tarjeta sanitaria no se considera un documento de identificación acreditativo, se presentará en todos los contactos con el sistema sanitario."
+    },
+    {
+      "id": "q06",
+      "block": 1,
+      "query": "¿Cuáles son los datos que se consideran inequívocos para identificar a un paciente?",
+      "expected_section": "DEFINICIONES Y JUSTIFICACIÓN",
+      "expected_quote": "Los datos definidos como inequívocos son: Nombre y Apellidos, Fecha de Nacimiento, Número de tarjeta sanitaria de Aragón (AR)."
+    },
+    {
+      "id": "q07",
+      "block": 1,
+      "query": "¿El número de cama o el diagnóstico son datos inequívocos para identificar a un paciente?",
+      "expected_section": "DEFINICIONES Y JUSTIFICACIÓN",
+      "expected_quote": "No se consideran datos inequívocos: Diagnostico, Número de cama, Unidad de ingreso, Fecha de ingreso, Nacionalidad."
+    },
+    {
+      "id": "q08",
+      "block": 1,
+      "query": "¿Qué es la doble comprobación en el proceso de identificación?",
+      "expected_section": "DEFINICIONES Y JUSTIFICACIÓN",
+      "expected_quote": "Doble comprobación: proceso mediante el cual se comprueba que tanto la información obtenida a través del paciente en la identificación verbal activa como la información de la pulsera coinciden en su totalidad."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Cómo se identifica a un paciente en consultas externas o pruebas ambulatorias?",
+      "expected_section": "DESARROLLO — Consultas externas y pruebas ambulatorias",
+      "expected_quote": "La identificación al paciente ambulatorio se realizará dentro de la consulta, sala o quirófano donde se vaya a realizar la atención. Se preguntará verbalmente y de manera activa la identidad del paciente y se le solicitará la presencia de documento identificativo (DNI, NIF/NIE, pasaporte y/o tarjeta sanitaria) para comprobar la respuesta."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Qué ocurre si un paciente ambulatorio necesita ser trasladado a Urgencias u Hospitalización?",
+      "expected_section": "DESARROLLO — Consultas externas y pruebas ambulatorias",
+      "expected_quote": "En caso de que un paciente atendido en las áreas anteriormente descritas precise traslado a Urgencias u Hospitalización, los profesionales sanitarios colocarán una pegatina identificativa sobre el paciente hasta la colocación de la pulsera identificativa en el destino."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Por qué se requiere identificación física en el Hospital de Día Oncohematológico?",
+      "expected_section": "DESARROLLO — Hospital de Día Oncohematológico",
+      "expected_quote": "Debido al tratamiento citostático que reciben los pacientes en el Hospital de Día Oncohematológico es necesaria su identificación física. Además, se realizará identificación verbal activa antes de la administración de medicamentos."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Cuál es el proceso de identificación de un paciente en Urgencias?",
+      "expected_section": "DESARROLLO — Urgencias",
+      "expected_quote": "En Urgencias, el paciente será atendido en primer lugar en el mostrador de Admisión, el personal administrativo solicitará la identificación documental al paciente, lo registrará en el sistema informático e imprimirá la pulsera y las etiquetas identificativas, entregándolas al paciente o acompañante. A continuación, el paciente accederá al cuarto de clasificación o triaje donde la enfermera/o realizará una doble comprobación de su identidad y le colocará la pulsera identificativa en la muñeca."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "Si un paciente de Urgencias es hospitalizado, ¿debe cambiarse la pulsera identificativa?",
+      "expected_section": "DESARROLLO — Urgencias",
+      "expected_quote": "Los pacientes atendidos en urgencias, si son hospitalizados, mantendrán la pulsera colocada por el servicio de Urgencias durante su periodo de ingreso."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Cómo se identifica a un paciente en hospitalización programada o CMA?",
+      "expected_section": "DESARROLLO — Hospitalización y CMA",
+      "expected_quote": "El personal de enfermería acompañará al paciente a la habitación y comprobará mediante identificación verbal activa y doble comprobación que los datos de la pulsera identificativa son correctos. En este momento, se informará al paciente de la importancia de su identificación y se le colocará la pulsera en la muñeca."
+    },
+    {
+      "id": "q15",
+      "block": 2,
+      "query": "¿Por qué es especialmente importante la pulsera identificativa en el Bloque Quirúrgico y la UCI?",
+      "expected_section": "DESARROLLO — Bloque Quirúrgico y UCI",
+      "expected_quote": "Los pacientes atendidos en el Bloque Quirúrgico y en la Unidad de Cuidados Intensivos generalmente se encuentran sedados siendo imposible la identificación verbal activa, además, reciben tratamientos médicos y quirúrgicos acordes a su compromiso vital y un error en su identificación puede acarrear consecuencias fatales. Por ello, deberán conservar su pulsera identificativa durante toda su estancia."
+    },
+    {
+      "id": "q16",
+      "block": 2,
+      "query": "¿Qué se debe hacer si la pulsera de un paciente en quirófano o UCI tiene que retirarse temporalmente?",
+      "expected_section": "DESARROLLO — Bloque Quirúrgico y UCI",
+      "expected_quote": "Si por algún motivo, la pulsera tuviera que ser retirada, se deberá cortar por una zona que no contenga datos identificativos para posteriormente unirla y colocarla en una extremidad que no interfiera en el procedimiento o cuidados que precise el paciente."
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "¿En qué momento se colocan las pulseras de madre y recién nacido sano?",
+      "expected_section": "DESARROLLO — Identificación de recién nacido sano",
+      "expected_quote": "Las pulseras de madre y recién nacido se colocarán en el mismo momento del nacimiento, antes de cualquier eventual separación entre ambos. Al recién nacido se le colocará en el tobillo y a la madre en la muñeca y se comprobará el correcto cierre de ambas."
+    },
+    {
+      "id": "q18",
+      "block": 3,
+      "query": "¿En qué momentos debe comprobarse la coincidencia entre los códigos de las pulseras de madre y recién nacido?",
+      "expected_section": "DESARROLLO — Identificación de recién nacido sano",
+      "expected_quote": "Se comprobará la coincidencia entre los códigos de las pulseras de madre y recién nacido: Cuando la madre abandone el paritorio o quirófano, Cuando ingrese en la unidad de hospitalización, Cuando haya una separación física del recién nacido y su madre, En el momento del alta hospitalaria."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "¿Qué tipo de pulsera se usa para los recién nacidos hospitalizados en Neonatología y qué datos debe incluir?",
+      "expected_section": "DESARROLLO — Identificación del recién nacido hospitalizado en Neonatología",
+      "expected_quote": "La identificación se realizará mediante pulsera identificativa acolchada para evitar lesiones por rozamiento y/o ficción. En dicha pulsera se pegará una etiqueta identificativa recortada con los datos del paciente. Deberá figurar: nombre, apellidos, nº de historia y AR."
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "¿Cuáles son los dos modelos de pulsera acolchada disponibles en el HCULB para neonatos y en qué se diferencian?",
+      "expected_section": "DESARROLLO — Identificación del recién nacido hospitalizado en Neonatología",
+      "expected_quote": "El HCULB dispone de dos modelos de pulseras acolchadas: Modelo prematuro o gran prematuro: mide 6,5cm x 2,1cm, es de color azul y se ajustará mejor a los recién nacidos de bajo peso. Modelo neonatal: mide 13,5 x 3,4cm, es de color rosa y es la más indicada para recién nacidos de peso normal."
+    },
+    {
+      "id": "q21",
+      "block": 3,
+      "query": "¿Cuándo se retira la pulsera identificativa al paciente y dónde se desecha?",
+      "expected_section": "DESARROLLO — Retirada de pulsera identificativa",
+      "expected_quote": "Cuando el paciente abandone la Unidad o el Servicio de Urgencias A DOMICILIO, el personal de enfermería retirará la pulsera y la desechará en el contenedor del papel confidencial."
+    },
+    {
+      "id": "q22",
+      "block": 4,
+      "query": "¿Qué se debe hacer si no hay coincidencia entre el paciente y su pulsera identificativa?",
+      "expected_section": "INCIDENCIAS",
+      "expected_quote": "Retirar la pulsera errónea. Realizar nueva identificación verbal y documental. Solicitar nueva impresión de pulsera y colocarla lo antes posible. Mientras se obtiene nueva pulsera, colocar una pegatina identificativa sobre el paciente."
+    },
+    {
+      "id": "q23",
+      "block": 4,
+      "query": "¿Puede trasladarse a un paciente sin pulsera identificativa a otra unidad o al bloque quirúrgico?",
+      "expected_section": "INCIDENCIAS",
+      "expected_quote": "Salvo urgencia vital, no trasladar a pacientes atendidos en Urgencias, Unidades de Hospitalización, Cirugía Mayor Ambulatoria, Cuidados Intensivos, Neonatología y Recién Nacidos que no sean portadores de pulsera identificativa. El celador comunicará la situación de no identificación física del paciente al personal de enfermería para su subsanación de manera previa al traslado."
+    },
+    {
+      "id": "q24",
+      "block": 4,
+      "query": "¿Cómo se actúa cuando un paciente no puede ser identificado verbalmente?",
+      "expected_section": "INCIDENCIAS",
+      "expected_quote": "Extremar las medidas para confirmar la correcta identificación de pacientes con déficit sensorial, deterioro cognitivo, baja comprensión del idioma, apellidos frecuentes, apellidos extranjeros, apellido único, niños y pacientes psiquiátricos. Preguntar a acompañantes, solicitar DNI, NIF/NIE, pasaporte y/o tarjeta sanitaria, repetir preguntas las veces necesarias, usar el servicio de traducción simultánea telefónica."
+    },
+    {
+      "id": "q25",
+      "block": 4,
+      "query": "¿Qué ocurre si un paciente llega sin datos de identidad?",
+      "expected_section": "INCIDENCIAS",
+      "expected_quote": "Registrar en el sistema informático al paciente cumplimentando el espacio de nombre y apellidos como desconocido, añadir el sexo y la fecha y hora de atención. Imprimir pulsera identificativa con estos datos y colocarla en la muñeca del paciente. Recabar todos los datos 'a posteriori' y con la mayor brevedad posible de manera obligatoria."
+    },
+    {
+      "id": "q26",
+      "block": 4,
+      "query": "¿Qué pasa si un paciente no quiere que se le coloque la pulsera identificativa?",
+      "expected_section": "INCIDENCIAS",
+      "expected_quote": "Explicar los riesgos de la no identificación y las ventajas de permanecer identificado en el medio hospitalario. Una vez realizada la intervención informativa, en caso de que el paciente no desee identificarse con la pulsera, no se colocará, dejando constancia en su Historia Clínica."
+    },
+    {
+      "id": "q27",
+      "block": 4,
+      "query": "¿Quién es responsable de generar e imprimir la pulsera identificativa en cada área?",
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "Generación de la pulsera: en Área de Urgencias el Servicio de Admisión de Urgencias; en hospitalización y CMA será responsable el Servicio de Admisión y en el Hospital de Día Oncohematológico será el/la TCAE responsable de la unidad."
+    },
+    {
+      "id": "q28",
+      "block": 4,
+      "query": "¿Quién es responsable de colocar y retirar la pulsera identificativa?",
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "Colocación de la pulsera identificativa: equipo de enfermería. Retirada de la pulsera al alta: equipo de enfermería."
+    }
+  ]
+}

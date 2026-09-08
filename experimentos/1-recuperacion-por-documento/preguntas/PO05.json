@@ -1,0 +1,217 @@
+{
+  "name": "PO-05_Z3(E)C — Procedimiento para la Solicitud, Aplicación y Trazabilidad de Hemoderivados",
+  "description": "Ground truth generado a partir del documento PO-05_Z3(E)C (Revisión G). Cubre objetivo y marco legal, definiciones (trazabilidad, solicitud), prescripción y consentimiento, solicitud de hemoderivados y envío de muestras, sistema de pulsera de seguridad transfusional, entrega y comprobación de unidades, administración de la transfusión y ritmos, sospecha de reacción adversa, cuidados postransfusionales, responsabilidades por rol, prueba de grupo a pie de cama y solicitud de sangre de extrema urgencia.",
+  "relevant_doc_patterns": ["PO-05", "hemoderivados", "transfusion", "trazabilidad", "componentes-sanguineos", "pulsera-transfusional", "extrema-urgencia"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Cuál es el objetivo de este procedimiento de hemoderivados y qué norma legal lo respalda?",
+      "expected_section": "OBJETIVO",
+      "expected_quote": "Garantizar la seguridad para el paciente receptor de tratamiento Hemoterápico. Establecer las normas para garantizar el cumplimiento de los criterios de trazabilidad exigidos por el Real Decreto 1088/2005 por el que se establecen los requisitos técnicos y condiciones mínimas de la hemodonación y de los Centros y Servicios de Transfusión."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿A qué procesos aplica este procedimiento?",
+      "expected_section": "ALCANCE",
+      "expected_quote": "Cualquier proceso de administración de componentes sanguíneos que tenga lugar en el Hospital Clínico Universitario 'Lozano Blesa'."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Qué se entiende por trazabilidad en el contexto de los hemoderivados?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "TRAZABILIDAD: Es la capacidad de efectuar el seguimiento de cada unidad de sangre o de componente hemoderivado, desde el donante hasta su destino final (ya sea éste un receptor o un fabricante de medicamentos) o su destrucción y viceversa."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Qué es una solicitud de hemoderivados?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "SOLICITUD DE HEMODERIVADOS: Es la petición de hemoderivados a través de la cumplimentación de un documento, debidamente cumplimentado y acompañado de la muestra de sangre para la realización de pruebas cruzadas mediante un sistema de pulsera."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿Quién puede prescribir una transfusión y qué debe hacer antes?",
+      "expected_section": "PRIMERA PARTE — Prescripción de Tratamiento",
+      "expected_quote": "La administración de sangre y componentes se realizará siempre por prescripción médica. El médico que establezca la indicación recabará después de explicarle los riesgos y beneficios de esta terapéutica, así como sus posibles alternativas, la conformidad del paciente."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿Qué datos debe contener la solicitud de hemoderivados?",
+      "expected_section": "PRIMERA PARTE — Solicitud de Hemoderivados",
+      "expected_quote": "La solicitud debe contener: Datos del paciente, Diagnóstico del paciente, Producto a transfundir: tipo de hemoderivado y número de unidades, Tipo de administración: si la sangre se precisa para intervención quirúrgica, indicar la fecha, Nombre del médico, número de colegiado, fecha y firma."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Cómo se cumplimenta actualmente la solicitud de hemoderivados y cuántas copias hay que hacer?",
+      "expected_section": "PRIMERA PARTE — Solicitud de Hemoderivados",
+      "expected_quote": "Debe cumplimentarse de forma correcta la solicitud de hemoderivados a través de historia clínica electrónica (HCE). Sacar dos copias y el consentimiento informado."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "Antes de extraer la muestra pretransfusional, ¿qué se hace con la pulsera de seguridad transfusional?",
+      "expected_section": "PRIMERA PARTE — Solicitud de Hemoderivados",
+      "expected_quote": "A pie de cama del paciente, se procederá a la comprobación de la identidad del mismo de forma activa, contrastando esta con la pulsera identificativa que lleve el paciente. Se colocará al paciente una nueva pulsera de seguridad transfusional que lo asocien con la muestra que se va a extraer y con la solicitud previamente cumplimentada y el hemoderivado. En esta pulsera se escribirá antes de su colocación, el nombre apellidos y ubicación del paciente."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Qué tipo de tubo se usa para la muestra de sangre pretransfusional?",
+      "expected_section": "PRIMERA PARTE — Solicitud de Hemoderivados",
+      "expected_quote": "Tubo con EDTA (tubo de 6 cc y se distingue por llevar un tapón lila)."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Dónde se colocan las pegatinas de la pulsera para garantizar la identificación?",
+      "expected_section": "PRIMERA PARTE — Solicitud de Hemoderivados",
+      "expected_quote": "Separar la pegatina de la pulsera correspondiente a la muestra de sangre y colocarla en el tubo, y separar pegatinas de la pulsera y colocarlas en la solicitud, original y copia. De este modo tendremos perfectamente identificados con los mismos datos en la pulsera, el tubo y la solicitud."
+    },
+    {
+      "id": "q11",
+      "block": 3,
+      "query": "¿Qué teléfono se llama y qué datos se piden para retirar el hemoderivado del Servicio de Transfusiones?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "Se solicitará la retirada de los hemoderivados a través de intranet (ante cualquier duda llamar al Servicio de Transfusiones, Extensión 164303). El técnico de laboratorio solicitará nombre, apellidos y AR y/o número de seguridad transfusional para proceder al envío."
+    },
+    {
+      "id": "q12",
+      "block": 3,
+      "query": "¿Qué entrega el Servicio de Transfusiones al celador y cómo se transporta?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "El Servicio de transfusiones proporcionará al celador: Hemoderivado a transfundir (1 unidad), un equipo de transfusión, copia de la solicitud (hoja blanca), hoja transfusional (Anexo IV) y hoja de lista de verificación de transfusión sanguínea (Anexo IX). Todo ello transportado en una nevera de poliestireno."
+    },
+    {
+      "id": "q13",
+      "block": 3,
+      "query": "¿Qué datos debe comprobar la enfermera al recibir la bolsa de sangre?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "La enfermera recibe y comprueba que coinciden los datos del paciente (nombre y apellidos, CIA, fecha de caducidad y número de pulsera y bolsa) con las etiquetas del hemoderivado por ambos lados, la pulsera y la hoja transfusional."
+    },
+    {
+      "id": "q14",
+      "block": 3,
+      "query": "¿Qué comprobaciones hay que hacer antes de iniciar la transfusión?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "Antes de iniciar la transfusión: comprobar si el producto coincide con la prescripción médica, comprobar el aspecto de la bolsa y del producto, identificar al paciente de forma activa y comprobación de la pulsera transfusional, realizar la comprobación del grupo a pie de cama y doble verificación enfermera del proceso, y tomar las constantes antes de iniciar la transfusión."
+    },
+    {
+      "id": "q15",
+      "block": 3,
+      "query": "¿Por qué no se debe calentar la sangre con sistemas no específicos?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "La sangre no deberá ser calentada a excepción de la utilización de un sistema termostatizado diseñado especialmente para ello. Calentar la sangre mediante otros sistemas puede destruir los glóbulos rojos y producir una reacción transfusional muy grave al receptor."
+    },
+    {
+      "id": "q16",
+      "block": 3,
+      "query": "¿A qué ritmo se inicia la transfusión durante los primeros minutos y qué se vigila?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "Los primeros minutos de transfusión de cualquier tipo de hemoderivado se realizarán a velocidad lenta (20 gotas/minuto). Cuando se ha comprobado que no se produce ninguna reacción adversa (escalofríos, náuseas, erupciones, taquicardia, etc.) durante los primeros 15 minutos o 50 ml de la bolsa, se puede pasar a flujos mayores."
+    },
+    {
+      "id": "q17",
+      "block": 3,
+      "query": "¿Cuánto dura y a qué ritmo se transfunde un concentrado de hematíes?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "Concentrado de hematíes: duración 60-120 min., ritmo 30-60 gts/min. Plasma: duración 20-30 min., ritmo 125-175 gts/min. Plaquetas: duración 20-30 min., ritmo 125-225 gts/min."
+    },
+    {
+      "id": "q18",
+      "block": 3,
+      "query": "¿Qué suero está permitido administrar por la misma vía que el hemoderivado?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "No inyectar medicación en el hemoderivado. No inyectar ningún otro suero que no sea cloruro sódico al 0,9%."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "¿En qué contenedor se desecha la bolsa de hemoderivado tras la transfusión?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "La bolsa del hemoderivado junto con el equipo será desechado una vez finalizada la transfusión al contenedor de residuos habilitado para ello (cubo verde 60 litros con bolsa roja o cubo negro de 30 litros)."
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "¿Quién debe cumplimentar la lista de verificación y por qué?",
+      "expected_section": "SEGUNDA PARTE — Entrega de Unidades",
+      "expected_quote": "Esta lista de verificación deberá ser cumplimentada por dos profesionales de enfermería o TCAE en caso de no estar disponible una segunda enfermera, con el fin de asegurar la realización de todos los pasos requeridos y la verificación de la comprobación del grupo en cabecera."
+    },
+    {
+      "id": "q21",
+      "block": 4,
+      "query": "¿Qué hay que hacer ante la sospecha de una reacción adversa durante la transfusión?",
+      "expected_section": "SEGUNDA PARTE — Ante la sospecha de Reacción adversa",
+      "expected_quote": "Interrumpir la transfusión, manteniendo la vía permeable con suero fisiológico y notificarlo al médico de manera inmediata. Tomar y registrar los signos vitales."
+    },
+    {
+      "id": "q22",
+      "block": 4,
+      "query": "¿Qué muestras hay que remitir al Servicio de Transfusiones tras una reacción adversa?",
+      "expected_section": "SEGUNDA PARTE — Ante la sospecha de Reacción adversa",
+      "expected_quote": "Remitir al Servicio de Transfusiones: tubo con EDTA (de 4 cc y tapón lila), tubo sin aditivos (de 7 cc y tapón amarillo), la unidad causante de la reacción y el equipo de infusión sin desconectar la bolsa, y en caso de hemólisis una muestra de orina obtenida después de la reacción."
+    },
+    {
+      "id": "q23",
+      "block": 4,
+      "query": "¿Cuáles son los cuidados postransfusionales?",
+      "expected_section": "TERCERA PARTE — Cuidados postransfusionales",
+      "expected_quote": "De no precisar fluidoterapia, heparinizar o salinizar la vía de acceso vascular o proceder a su retirada. Informar de nuevo al paciente y familia sobre los posibles síntomas/signos de las reacciones adversas. Acomodar al paciente y dejarle el timbre cerca. Observar posibles reacciones tardías postransfusionales."
+    },
+    {
+      "id": "q24",
+      "block": 5,
+      "query": "¿Cuáles son las responsabilidades del médico en la transfusión?",
+      "expected_section": "RESPONSABILIDADES — Médico",
+      "expected_quote": "Médico: sentar la prescripción, realizar la solicitud en las condiciones descritas en este procedimiento e informar al paciente y obtener la conformidad del mismo."
+    },
+    {
+      "id": "q25",
+      "block": 5,
+      "query": "¿De qué se encarga el celador en el proceso transfusional?",
+      "expected_section": "RESPONSABILIDADES — Celador",
+      "expected_quote": "Celador: transportar en las condiciones adecuadas el equipo de transfusión junto a la copia de la solicitud y la hoja transfusional."
+    },
+    {
+      "id": "q26",
+      "block": 6,
+      "query": "¿Qué material se necesita para la prueba de grupo a pie de cama y con qué hemoderivado se realiza?",
+      "expected_section": "ANEXO V — Prueba grupo a pie de cama",
+      "expected_quote": "Materiales: pocillos, antisueros A y B, lanceta de punción y gasas o celulosa. Se realizará con cada primer hemoderivado de cada solicitud de transfusión (hoja blanca)."
+    },
+    {
+      "id": "q27",
+      "block": 6,
+      "query": "¿Cómo se interpreta el resultado de la prueba de grupo a pie de cama?",
+      "expected_section": "ANEXO V — Prueba grupo a pie de cama",
+      "expected_quote": "Si se forman gránulos con el suero anti-A el grupo del paciente es A; si se forman con el suero anti-B es B; si se forman en ambos sueros es del grupo AB; y si la mezcla es homogénea en ambos pocillos, no hay aglutinación y el paciente es grupo 0."
+    },
+    {
+      "id": "q28",
+      "block": 6,
+      "query": "En una situación de extrema urgencia, ¿qué grupo sanguíneo se administra cuando no hay tiempo para pruebas cruzadas?",
+      "expected_section": "ANEXO VII — Solicitud de Sangre de Extrema Urgencia",
+      "expected_quote": "En situaciones críticas extremadamente urgentes en las que la sangre se necesita en menos de 20 minutos, se suministra generalmente sangre del grupo O no cruzada para su utilización inmediata. Las mujeres en edad fértil deben recibir hematíes del grupo O Rh(D) negativo si su tipo de Rh(D) se desconoce."
+    },
+    {
+      "id": "q29",
+      "block": 6,
+      "query": "¿Cuánto tarda una prueba de compatibilidad cruzada completa y cuánto puede reducirse en casos urgentes?",
+      "expected_section": "ANEXO VII — Solicitud de Sangre de Extrema Urgencia",
+      "expected_quote": "La realización de una prueba de compatibilidad cruzada completa lleva unos 40-45 minutos desde que se reciben la muestra del paciente y el impreso de solicitud. En casos muy urgentes, el tiempo puede reducirse a 20 minutos. Ello permite excluir la incompatibilidad ABO."
+    },
+    {
+      "id": "q30",
+      "block": 6,
+      "query": "Si se necesita otra petición de transfusión para el mismo paciente poco después, ¿qué identificadores se usan?",
+      "expected_section": "ANEXO VII — Solicitud de Sangre de Extrema Urgencia",
+      "expected_quote": "Si se necesita otra petición de transfusión para un mismo paciente en un periodo corto, utilizar los mismos identificadores que en la primera petición y la primera muestra de sangre para que el personal del servicio de transfusión sepa que se trata del mismo paciente."
+    }
+  ]
+}

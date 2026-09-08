@@ -1,0 +1,152 @@
+{
+  "name": "RPC-87 — Cuidados de Enfermería en el Sondaje Vesical",
+  "description": "Ground truth generado a partir del protocolo RPC-87 del Hospital Clínico Universitario 'Lozano Blesa'. Evalúa recomendaciones de inserción, cuidados, selección de material, contraindicaciones y procedimientos anexos del sondaje vesical.",
+  "relevant_doc_patterns":[
+    "RPC-87",
+    "sondaje-vesical",
+    "enfermeria",
+    "Lozano Blesa"
+  ],
+  "questions":[
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Por qué hay que usar siempre un sistema de drenaje cerrado en lugar de uno abierto?",
+      "expected_section": "2. JUSTIFICACIÓN",
+      "expected_quote": "El sistema de drenaje abierto favorece la aparición de bacteriuria en el 50% de los pacientes durante las primeras 24 horas del sondaje y en casi el 100% antes de terminar el cuarto día."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Cada cuánto tiempo le tengo que vaciar la bolsa de la orina al paciente?",
+      "expected_section": "1. RESUMEN",
+      "expected_quote": "Vaciar la bolsa antes de que esté completamente llena o al menos cada 6-8 horas"
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "Mi paciente se va a lavar solo, ¿le digo que se eche crema hidratante en la zona del meato?",
+      "expected_section": "1. RESUMEN",
+      "expected_quote": "Informar al paciente que no se aplique ningún tipo de crema que no haya sido prescrita"
+    },
+    {
+      "id": "q04",
+      "block": 2,
+      "query": "¿Qué calibres de sonda preparamos normalmente si es un niño?",
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "En el caso de los pacientes pediátricos se utilizan sondas del calibre 6 al 10."
+    },
+    {
+      "id": "q05",
+      "block": 2,
+      "query": "El paciente tiene la orina muy turbia y con bastantes coágulos, ¿le pongo un calibre 16?",
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "CH 18: orina muy turbia, con muchos residuos, o hematuria moderada y/o con coágulos"
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "Me han pedido el material para sondar a un paciente al que le acaban de operar de próstata (resección de adenoma), ¿qué tipo de sonda uso?",
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "Punta acodada y olivada (en forma de palo de golf) y con orificios más anchos. Se emplean después de la resección del adenoma de próstata."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "Si el paciente tiene prostatitis aguda, ¿le pongo la sonda vesical de todas formas?",
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "5.- ¿En qué casos está contraindicado el sondaje vesical uretral? ... - Prostatitis aguda."
+    },
+    {
+      "id": "q08",
+      "block": 3,
+      "query": "Se me ha caído la bolsa al suelo y se ha roto el plástico, ¿qué hago, cambio la sonda entera o solo la bolsa?",
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "Sólo está indicado el cambio de la bolsa de diuresis en estas situaciones: - Si se cambia la sonda. - Se rompen. - Se acumulan sedimentos en exceso. - Adquiere un olor desagradable."
+    },
+    {
+      "id": "q09",
+      "block": 3,
+      "query": "Tengo que sacar una muestra de orina para urocultivo, ¿la puedo coger abriendo el grifo de la bolsa de drenaje?",
+      "expected_section": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+      "expected_quote": "No recoger orina de la bolsa de drenaje."
+    },
+    {
+      "id": "q10",
+      "block": 3,
+      "query": "Para coger la muestra del urocultivo, ¿cuánto rato tengo que dejar pinzada la sonda antes de pinchar para sacar orina?",
+      "expected_section": "ANEXO 6: RECOGIDA DE MUESTRA DE ORINA PARA UROCULTIVO",
+      "expected_quote": "Cerrar el flujo de orina hacia la bolsa de drenaje durante 20-30 minutos, pinzando el tubo por debajo de la zona de punción."
+    },
+    {
+      "id": "q11",
+      "block": 4,
+      "query": "El paciente está con un globo vesical enorme (RAO). ¿Le vacío toda la vejiga de golpe o poco a poco?",
+      "expected_section": "ANEXO 7: RETENCIÓN AGUDA DE ORINA",
+      "expected_quote": "Vaciado progresivo y lento, pinzando cada 250-300 ml de orina para evitar hemorragia ex vacuo."
+    },
+    {
+      "id": "q12",
+      "block": 4,
+      "query": "Tengo que montar un lavado continuo porque la orina sale muy roja (hematuria), ¿cuántas vías debe tener la sonda?",
+      "expected_section": "ANEXO 8: LAVADO VESICAL",
+      "expected_quote": "El lavado vesical continuo es aquel en el que se introduce suero fisiológico en la vejiga constantemente mediante un suero lavador utilizando una sonda de tres vías."
+    },
+    {
+      "id": "q13",
+      "block": 4,
+      "query": "Estoy intentando quitar la sonda al paciente y el globo no se deshincha ni metiendo la jeringa. ¿Qué hago?",
+      "expected_section": "ANEXO 9: RETIRADA SONDA VESICAL",
+      "expected_quote": "Si el balón no se deshincha: - Introducir una guía metálica fina en el canal de inflado (procedimiento de riesgo). - Llenar a presión el globo hasta que se produzca su estallido. - Como último recurso cortar el brazo de inflado por debajo de la válvula, vigilando que drena el contenido del balón."
+    },
+    {
+      "id": "q14",
+      "block": 4,
+      "query": "¿Hace falta que vaya pinzando y despinzando la sonda unas horas antes de quitársela para que la vejiga se acostumbre?",
+      "expected_section": "ANEXO 9: RETIRADA SONDA VESICAL",
+      "expected_quote": "En varios estudios se ha comprobado que no existen evidencias concluyentes sobre el beneficio de pinzar la sonda antes de la retirada definitiva."
+    },
+    {
+      "id": "q15",
+      "block": 1,
+      "query": "Tras lavar los genitales al paciente varón, ¿puedo dejarle el prepucio retraído hacia atrás?",
+      "expected_section": "1. RESUMEN",
+      "expected_quote": "En el varón después de la higiene volver el prepucio a su posición normal para evitar parafimosis"
+    },
+    {
+      "id": "q16",
+      "block": 1,
+      "query": "¿Hay que mover la sonda de alguna manera estando puesta o es mejor no tocarla para que no se pegue por dentro?",
+      "expected_section": "1. RESUMEN",
+      "expected_quote": "Diariamente mover suavemente la sonda en sentido rotatorio para evitar adherencias"
+    },
+    {
+      "id": "q17",
+      "block": 2,
+      "query": "El paciente es muy mayor y se hace pis encima por incontinencia, ¿le pongo una sonda para facilitar los cuidados?",
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "5.- ¿En qué casos está contraindicado el sondaje vesical uretral? - Incontinencia urinaria: utilización prioritaria de reeducación vesical, colectores, pañales."
+    },
+    {
+      "id": "q18",
+      "block": 2,
+      "query": "El paciente se va de alta a una residencia y va a necesitar llevar la sonda permanente unos dos meses, ¿se la pongo de látex o de silicona?",
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "Se fabrican en látex o silicona diferenciándose según la duración del sondaje (látex hasta 45 días y silicona hasta 90 días)."
+    },
+    {
+      "id": "q19",
+      "block": 2,
+      "query": "Una vez que ya he metido la sonda e inflado el balón, ¿dónde se le sujeta o pega el tubo al paciente para evitar tirones?",
+      "expected_section": "13. ALGORITMO DE ACTUACIÓN",
+      "expected_quote": "Fijar sonda en cara interna del muslo"
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "¿Es buena idea lavarle todos los días el meato con Betadine para que no coja bacterias e infecciones?",
+      "expected_section": "10. RECOMENDACIONES",
+      "expected_quote": "El lavado diario del meato uretral y la aplicación periuretral de antisépticos son ineficaces en la reducción de la bacteriuria."
+    }
+  ]
+}

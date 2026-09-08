@@ -1,0 +1,203 @@
+{
+  "name": "PA-199 — Procedimiento de Vigilancia de Infecciones de Localización Quirúrgica (ILQ) en el HCULB",
+  "description": "Ground truth generado a partir del documento PA-199. Cubre fundamentos, alcance, metodología, periodos de seguimiento, criterios diagnósticos, variables críticas y responsabilidades.",
+  "relevant_doc_patterns": ["PA-199", "ILQ", "infeccion-localizacion-quirurgica", "vigilancia-quirurgica"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Por qué es tan importante este sistema de vigilancia en nuestro hospital?",
+      "expected_section": "FUNDAMENTOS Y OBJETIVOS",
+      "expected_quote": "Las infecciones de localización quirúrgica (ILQ) representan una de las principales complicaciones asociadas a los procedimientos quirúrgicos, constituyendo un problema de salud pública de gran relevancia. Estas infecciones incrementan la morbimortalidad, prolongan el tiempo de estancia hospitalaria, aumentan la probabilidad de reintervenciones y reingresos, y ocasionan un notable incremento en los costes sanitarios..."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Qué volumen de las infecciones del hospital representan realmente las quirúrgicas?",
+      "expected_section": "FUNDAMENTOS Y OBJETIVOS",
+      "expected_quote": "Se estima que afecta aproximadamente al 20-25% de los pacientes con infección nosocomial. En el contexto nacional... la ILQ ha representado en los últimos años entre el 20% y el 27% del total de las IRAS."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Qué pretendemos conseguir a largo plazo con estos informes de Medicina Preventiva?",
+      "expected_section": "FUNDAMENTOS Y OBJETIVOS",
+      "expected_quote": "Establecer un sistema de vigilancia epidemiológica estructurado... Garantizar la obtención de indicadores homogéneos y comparables... Fomentar estrategias eficaces de prevención y control, promoviendo la retroalimentación de información."
+    },
+    {
+      "id": "q04",
+      "block": 2,
+      "query": "¿Qué operaciones son de vigilancia obligatoria sí o sí?",
+      "expected_section": "ALCANCE Y POBLACIÓN",
+      "expected_quote": "Procedimientos de vigilancia obligatoria... CBGB: Bypass aortocoronario con doble incisión... CBGC: Bypass aortocoronario con incisión exclusivamente torácica. COLO: Cirugía de colon. HPRO: Implantación de prótesis de cadera. KPRO: Implantación de prótesis de rodilla."
+    },
+    {
+      "id": "q05",
+      "block": 2,
+      "query": "Si tengo un paciente de una apendicectomía o una cesárea, ¿también entran en el protocolo?",
+      "expected_section": "ALCANCE Y POBLACIÓN",
+      "expected_quote": "En el Hospital Clínico Universitario Lozano Blesa (HCULB) se llevará a cabo la vigilancia epidemiológica de todos los procedimientos quirúrgicos mencionados anteriormente, tanto los incluidos en la categoría de vigilancia obligatoria como aquellos considerados opcionales..."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿Se vigilan igual las cirugías programadas que las que entran por urgencias?",
+      "expected_section": "ALCANCE Y POBLACIÓN",
+      "expected_quote": "Para cada uno de los procedimientos incluidos, se realizará la vigilancia tanto de las intervenciones programadas como de las urgentes."
+    },
+    {
+      "id": "q07",
+      "block": 3,
+      "query": "¿Dónde buscamos en la HCE para saber si un paciente tiene que tener encuesta?",
+      "expected_section": "METODOLOGÍA Y FUENTES DE DATOS",
+      "expected_quote": "La identificación de los pacientes intervenidos... se realizará a partir del listado de 'Actividades Quirúrgicas Realizadas', disponible en la pestaña de 'Listados' de la Historia Clínica Electrónica (HCE)..."
+    },
+    {
+      "id": "q08",
+      "block": 3,
+      "query": "¿Qué pasos hay que dar para abrir la \"Encuesta Epidemiológica\" en el ordenador?",
+      "expected_section": "METODOLOGÍA Y FUENTES DE DATOS",
+      "expected_quote": "Una vez cargado el listado de pacientes intervenidos, se deberá acceder al panel derecho de la interfaz y seleccionar la opción 'Crear encuesta epidemiológica'..."
+    },
+    {
+      "id": "q09",
+      "block": 3,
+      "query": "¿De dónde saca Medicina Preventiva la información? ¿Leen mis evolutivos de enfermería?",
+      "expected_section": "METODOLOGÍA Y FUENTES DE DATOS",
+      "expected_quote": "La fuente de información para la recogida de datos estará constituida por todos los registros disponibles en la HCE del paciente, tales como: Evolutivos médicos y de enfermería... Informes quirúrgicos... Solicitudes de cultivo... Registros de atención en Urgencias..."
+    },
+    {
+      "id": "q10",
+      "block": 3,
+      "query": "¿Qué pasa si la información de la HCE no es suficiente? ¿Se puede preguntar directamente al equipo?",
+      "expected_section": "METODOLOGÍA Y FUENTES DE DATOS",
+      "expected_quote": "Asimismo, se podrá complementar la información mediante la consulta directa al equipo médico y asistencial responsable, así como mediante la observación clínica directa del paciente cuando se considere necesario."
+    },
+    {
+      "id": "q11",
+      "block": 4,
+      "query": "¿Cuánto tiempo tengo que estar pendiente de si la herida se infecta?",
+      "expected_section": "PERIODO DE SEGUIMIENTO",
+      "expected_quote": "En función del tipo de procedimiento quirúrgico realizado... se establecerá un período de seguimiento epidemiológico de 30 o 90 días a partir de la fecha de la intervención."
+    },
+    {
+      "id": "q12",
+      "block": 4,
+      "query": "¿Por qué en una prótesis de cadera el seguimiento es mucho más largo que en una colecistectomía?",
+      "expected_section": "PERIODO DE SEGUIMIENTO",
+      "expected_quote": "Periodo de vigilancia: 90 días incluye HPRO: Prótesis de cadera... CARD: Cirugía cardiaca... Periodo de vigilancia: 30 días incluye CHOL: Cirugía de vesícula biliar..."
+    },
+    {
+      "id": "q13",
+      "block": 4,
+      "query": "¿Qué hacemos si el paciente reingresa? ¿Se abre una ficha nueva?",
+      "expected_section": "PERIODO DE SEGUIMIENTO",
+      "expected_quote": "Si es una revisión por la aparición de una complicación infecciosa, no abrir nueva ficha de intervención, sino registrar como ILQ asociada al procedimiento quirúrgico."
+    },
+    {
+      "id": "q14",
+      "block": 4,
+      "query": "Si la infección sale después de los 90 días en una prótesis, ¿cuenta para el sistema de vigilancia?",
+      "expected_section": "PERIODO DE SEGUIMIENTO",
+      "expected_quote": "Las infecciones cuyo comienzo se manifieste fuera del período de seguimiento establecido no serán consideradas dentro del marco de vigilancia ni registradas en el sistema..."
+    },
+    {
+      "id": "q15",
+      "block": 5,
+      "query": "¿Qué tiene que pasar para decir que una infección es \"superficial\"?",
+      "expected_section": "CRITERIOS DE DIAGNÓSTICO",
+      "expected_quote": "Infección que se produce en el lugar de la incisión que afecta sólo al tejido cutáneo y subcutáneo... y al menos, debe cumplir uno de los siguientes criterios: drenaje purulento... microorganismo aislado... diagnóstico de ILQ incisional superficial por el médico responsable."
+    },
+    {
+      "id": "q16",
+      "block": 5,
+      "query": "¿Si solo veo un poco de inflamación y rojez (celulitis), ya es una ILQ?",
+      "expected_section": "CRITERIOS DE DIAGNÓSTICO",
+      "expected_quote": "El diagnóstico de celulitis (rubor, calor, inflamación), por sí mismo, no cumple criterios de ILQ-IS."
+    },
+    {
+      "id": "q17",
+      "block": 5,
+      "query": "Me ha pasado ver pus en un punto de sutura, ¿eso cuenta como infección de la cirugía?",
+      "expected_section": "CRITERIOS DE DIAGNÓSTICO",
+      "expected_quote": "Absceso del punto de sutura (mínima inflamación o secreción en el punto de sutura) no se considera ILQ-IS."
+    },
+    {
+      "id": "q18",
+      "block": 5,
+      "query": "¿Cómo diferenciamos una infección profunda de una que llega a órgano o espacio?",
+      "expected_section": "CRITERIOS DE DIAGNÓSTICO",
+      "expected_quote": "Infección incisional profunda (ILQ-IP): Infección en el lugar de la intervención que afecta a tejidos blandos profundos de la incisión (fascia y paredes musculares)... Infección de órgano o espacio (ILQ-OE): Infección de cualquier parte de la anatomía, más profunda a la fascia o paredes musculares, que haya sido abierta o manipulada..."
+    },
+    {
+      "id": "q19",
+      "block": 5,
+      "query": "¿Qué criterios debe cumplir una infección para ser considerada de \"Órgano o Espacio\"?",
+      "expected_section": "CRITERIOS DE DIAGNÓSTICO",
+      "expected_quote": "Al menos, debe cumplir uno de los siguientes criterios: secreción purulenta del drenaje colocado en algún órgano o espacio; cultivo positivo... de fluidos o tejidos de órganos o espacios; absceso u otro signo de infección hallado en la inspección... o estudio de imagen."
+    },
+    {
+      "id": "q20",
+      "block": 5,
+      "query": "En un bypass con dos cortes (tórax y pierna), ¿cuál es la infección que se registra si ambas fallan?",
+      "expected_section": "CRITERIOS DE DIAGNÓSTICO",
+      "expected_quote": "Si se realiza un procedimiento quirúrgico en el que existen varias incisiones primarias, y existen varias ILQ, se registrará solamente una y se asignará el tipo de ILQ... Las ILQ de las incisiones secundarias de los procedimientos CBGB se vigilarán 30 días, mientras que el periodo de vigilancia de las incisiones primarias será de 90 días."
+    },
+    {
+      "id": "q21",
+      "block": 6,
+      "query": "¿Qué es eso del \"ASA\" que sale en los informes y por qué nos importa?",
+      "expected_section": "VARIABLES CRÍTICAS",
+      "expected_quote": "ASA (1-5): Clasificación del estado físico... Los procedimientos quirúrgicos que tengan asignado un ASA de 6 no serán incluidos en la vigilancia nacional de las ILQ... A1: Pacientes sanos normales... A5: Pacientes moribundos que no se espera que sobrevivan 24 h..."
+    },
+    {
+      "id": "q22",
+      "block": 6,
+      "query": "¿Cómo se clasifica el \"grado de contaminación\" de una herida? ¿Qué es una cirugía \"limpia-contaminada\"?",
+      "expected_section": "VARIABLES CRÍTICAS",
+      "expected_quote": "Limpia-contaminada: Intervención quirúrgica en la que se ha penetrado en el tracto respiratorio, digestivo o genitourinario, en condiciones controladas y sin contaminación inusual."
+    },
+    {
+      "id": "q23",
+      "block": 6,
+      "query": "Sobre el antibiótico de antes de la operación (profilaxis): ¿Cuándo se considera que es \"inadecuado\"?",
+      "expected_section": "VARIABLES CRÍTICAS",
+      "expected_quote": "Adecuación de la profilaxis antibiótica... Inadecuada por el momento de administración... por la vía de administración... por indicación... por elección del antibiótico... por duración de la profilaxis."
+    },
+    {
+      "id": "q24",
+      "block": 6,
+      "query": "¿Cómo se registran los bichos (microorganismos) si el cultivo sale positivo?",
+      "expected_section": "VARIABLES CRÍTICAS",
+      "expected_quote": "Se recogen los microorganismos aislados... Marcadores de resistencia: Staphylococcus aureus (SASM/SARM)... Enterobacterias... Pseudomonas aeruginosa... Sensibilidad a Carbapenémicos: imipenem, meropenem, doripenem."
+    },
+    {
+      "id": "q25",
+      "block": 7,
+      "query": "¿Quién tiene la última palabra para decir \"esto es una ILQ\" y cerrar la encuesta?",
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "El/la Facultativo/a Especialista de Área (FEA) del Servicio de Medicina Preventiva... será, asimismo, responsable de revisar y validar todos los datos... confirmar o descartar la presencia de ILQ, y proceder al cierre formal..."
+    },
+    {
+      "id": "q26",
+      "block": 7,
+      "query": "Si se operan las dos rodillas a la vez (bilateral), ¿cómo se hace el registro?",
+      "expected_section": "CASOS ESPECIALES",
+      "expected_quote": "Si se realizan procedimientos quirúrgicos bilaterales (por ejemplo, HPRO bilateral), se recogerán en diferentes fichas como procedimientos diferentes..."
+    },
+    {
+      "id": "q27",
+      "block": 7,
+      "query": "¿Qué pasa si el paciente vuelve a quirófano en menos de 24 horas por una complicación no infecciosa?",
+      "expected_section": "CASOS ESPECIALES",
+      "expected_quote": "Si dentro de las 24 horas de la cirugía se realiza una nueva intervención... no se abrirá nueva ficha y se sumará la duración de la cirugía... Si el grado de contaminación... ha cambiado se registrará el de mayor grado."
+    },
+    {
+      "id": "q28",
+      "block": 7,
+      "query": "¿Cada cuánto tiempo salen los informes con los resultados de nuestro servicio y a quién se envían?",
+      "expected_section": "RESPONSABILIDADES",
+      "expected_quote": "Con periodicidad trimestral, el Servicio de Medicina Preventiva elaborará informes epidemiológicos... Los informes serán remitidos trimestralmente a los Responsables de los Servicios Quirúrgicos... así como a las Subdirecciones Quirúrgicas (médica y de enfermería)..."
+    }
+  ]
+}

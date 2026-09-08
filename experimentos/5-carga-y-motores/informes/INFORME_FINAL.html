@@ -1,0 +1,120 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<title>Informe final — Benchmark de motores de inferencia (voz05)</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#0b1120;color:#e2e8f0;margin:0;padding:28px;max-width:1200px;margin:0 auto}
+ h1{font-size:24px;margin:0 0 4px} h2{font-size:17px;margin:26px 0 10px;border-left:3px solid #38bdf8;padding-left:10px}
+ .sub{color:#94a3b8;font-size:13px;margin-bottom:20px}
+ .kpis{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0}
+ .kpi{background:#172033;border:1px solid #2b3a55;border-radius:10px;padding:12px 16px;min-width:150px}
+ .kpi .v{font-size:22px;font-weight:700;color:#38bdf8} .kpi .l{font-size:11px;color:#94a3b8;margin-top:2px}
+ .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+ .card{background:#172033;border:1px solid #2b3a55;border-radius:12px;padding:16px}
+ .card h3{margin:0 0 2px;font-size:14px} .card p{margin:0 0 10px;font-size:11px;color:#94a3b8}
+ canvas{max-height:260px}
+ table{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+ th,td{border:1px solid #2b3a55;padding:6px 10px;text-align:right} th{background:#1e293b;color:#cbd5e1} td:first-child,th:first-child{text-align:left}
+ .win{color:#22c55e;font-weight:700}
+ ul{font-size:13.5px;line-height:1.7} li b{color:#cbd5e1}
+ @media(max-width:900px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<h1>Benchmark de motores de inferencia — voz05</h1>
+<div class="sub">vLLM vs llama.cpp vs Ollama · gemma-4 26B-A4B (MoE) y 12B (denso), 4-bit · pipeline RAG médico · 2× RTX PRO 6000 Blackwell · retriever Opción A (generator-bound).</div>
+
+<div class="kpis">
+ <div class="kpi"><div class="v">13s</div><div class="l">vLLM 26B @ 25 usuarios</div></div>
+ <div class="kpi"><div class="v">~4.6×</div><div class="l">vLLM más rápido que Ollama</div></div>
+ <div class="kpi"><div class="v">100-200</div><div class="l">usuarios vLLM sin saturar (KV 17%)</div></div>
+ <div class="kpi"><div class="v">2.5×</div><div class="l">ganancia prefix-caching (concurrencia)</div></div>
+ <div class="kpi"><div class="v">217</div><div class="l">tok/s single-stream (llama.cpp, el+rápido)</div></div>
+</div>
+
+<h2>1 · Escalado con la concurrencia (mejor config de cada motor, embed 0.6b)</h2>
+<div class="grid">
+ <div class="card"><h3>gemma-4 26B-A4B (MoE)</h3><p>Tiempo muro (s) vs usuarios. llama.cpp NP=8, Ollama NP=8.</p><canvas id="c26"></canvas></div>
+ <div class="card"><h3>gemma-4 12B (denso)</h3><p>Tiempo muro (s) vs usuarios. llama.cpp NP=8, Ollama NP=4.</p><canvas id="c12"></canvas></div>
+</div>
+
+<h2>2 · Comparación directa a 25 usuarios</h2>
+<div class="grid">
+ <div class="card"><h3>Tiempo muro a 25 usuarios por motor y modelo</h3><p>Menor = mejor. Embed 0.6b, mejor NP.</p><canvas id="cbar"></canvas></div>
+ <div class="card"><h3>Sensibilidad a NUM_PARALLEL (26B, 0.6b)</h3><p>llama.cpp sigue mejorando a NP=8; Ollama satura en NP=4. vLLM no tiene este parámetro (batching automático).</p><canvas id="cnp"></canvas></div>
+</div>
+
+<h2>3 · Tabla resumen (tiempo muro en segundos)</h2>
+<div class="card"><div id="tbl"></div></div>
+
+<h2>4 · Saturación y prefix-caching (vLLM)</h2>
+<div class="grid">
+ <div class="card"><h3>Prefix-caching A/B — hasta 200 usuarios</h3><p>Tiempo muro (s) con/sin caché de prefijos. Con caché, vLLM escala a 200u sin saturar; sin ella el prefill del system-prompt se recalcula → ~2.5× más lento (TTFT 52× peor).</p><canvas id="cpc"></canvas></div>
+ <div class="card"><h3>vLLM a 200 usuarios concurrentes</h3><p>Config normal (prefix-caching activado):</p>
+  <table>
+   <tr><td>Peticiones OK / fallos</td><td><b class="win">526 / 0</b></td></tr>
+   <tr><td>KV-caché pico</td><td>17 %</td></tr>
+   <tr><td>Peticiones en cola</td><td>0</td></tr>
+   <tr><td>Preempciones</td><td>0</td></tr>
+   <tr><td>Throughput generación pico</td><td>~4.400 tok/s</td></tr>
+   <tr><td>Prefix-cache hit medio</td><td>~99 %</td></tr>
+  </table>
+ </div>
+</div>
+
+<h2>5 · Eficiencia energética (GPU0, barrido 26B · 0.6b)</h2>
+<div class="grid">
+ <div class="card"><h3>Energía para servir el benchmark</h3><p>kJ consumidos por la GPU del generador durante el barrido completo (mismo trabajo). vLLM termina antes → menos energía total pese a usar más potencia instantánea.</p><canvas id="cen"></canvas></div>
+ <div class="card"><h3>Uso medio de la GPU</h3><p>% de utilización media de GPU0 durante el barrido. vLLM la mantiene casi saturada (trabajo útil); los otros la dejan más ociosa.</p><canvas id="cut"></canvas></div>
+</div>
+
+<h2>6 · Conclusiones</h2>
+<ul>
+ <li><b>vLLM ~4-5× más rápido</b> bajo concurrencia → <b>PagedAttention + continuous batching</b>. Aguanta 100-200 usuarios sin saturar (KV-caché 17% a 200u, 0 fallos, 0 cola).</li>
+ <li><b>llama.cpp ≈ Ollama</b> (mismo motor): el wrapper de Ollama añade solo ~10-15% de overhead. El abismo con vLLM es <b>de arquitectura</b>, no del envoltorio. llama.cpp es el <b>más rápido en single-stream</b> (217 tok/s).</li>
+ <li><b>26B-MoE > 12B-denso en los tres motores</b> → mandan los parámetros activos (4B vs 12B por token), no los totales.</li>
+ <li><b>Prefix-caching</b> (vLLM): hasta <b>2.5×</b> bajo concurrencia (TTFT 52× mejor) porque las prompts RAG comparten un system-prompt largo.</li>
+ <li>El <b>retriever Opción A</b> (reuso de vectores de CrateDB) dejó todo <i>generator-bound</i> → comparación de motores limpia y justa.</li>
+</ul>
+<div class="sub">Datos crudos en <code>1_comparativa_3motores/</code>, <code>2_vllm_experimentos/</code>. Telemetría GPU (incl. potencia) por experimento. Detalle en README.md.</div>
+
+<script>
+const D={"LEVELS": [1, 3, 5, 10, 15, 20, 25], "curve26": {"vLLM": [11.0, 8.1, 8.0, 8.8, 9.8, 10.8, 13.1], "llama.cpp": [5.3, 13.7, 15.7, 24.7, 35.9, 42.8, 51.0], "llama.cpp_np": 8, "Ollama": [6.7, 19.1, 17.9, 27.6, 36.8, 50.5, 60.8], "Ollama_np": 8}, "curve12": {"vLLM": [9.4, 10.3, 11.3, 11.6, 12.2, 14.1, 16.5], "llama.cpp": [10.2, 17.3, 23.1, 29.6, 47.7, 59.4, 67.1], "llama.cpp_np": 8, "Ollama": [10.1, 16.8, 23.1, 38.7, 54.1, 72.6, 79.8], "Ollama_np": 4}, "bar25": {"vLLM": [13.1, 16.5], "llama.cpp": [51.0, 67.1], "Ollama": [60.8, 79.8]}, "np_curve": {"llama.cpp": [102.6, 55.8, 51.0], "Ollama": [98.9, 64.8, 60.8]}, "ss": {"vLLM": 193, "llama.cpp": 217, "Ollama": 192}, "colors": {"vLLM": "#22c55e", "llama.cpp": "#38bdf8", "Ollama": "#f59e0b"}, "pc": {"levels": [1, 25, 50, 100, 150, 200], "on": [5.4, 12.8, 17.4, 25.1, 35.4, 45.0], "off": [5.5, 21.6, 34.1, 59.0, 87.1, 113.6]}, "energy": {"vLLM": {"avg_pw": 256, "max_pw": 362, "avg_ut": 83, "dur": 72, "energy_kj": 18.4}, "llama.cpp": {"avg_pw": 304, "max_pw": 468, "avg_ut": 76, "dur": 191, "energy_kj": 58.0}, "Ollama": {"avg_pw": 240, "max_pw": 389, "avg_ut": 59, "dur": 221, "energy_kj": 53.0}}};
+const base={responsive:true,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#cbd5e1',boxWidth:12}}},
+ scales:{x:{ticks:{color:'#94a3b8'},grid:{color:'#1b2740'}},y:{ticks:{color:'#94a3b8'},grid:{color:'#1b2740'},title:{display:true,text:'s',color:'#64748b'}}}};
+const L=(label,arr,color,dash)=>({label:label,data:arr,borderColor:color,backgroundColor:color+'22',borderWidth:2,pointRadius:3,tension:.2,borderDash:dash||[],spanGaps:true});
+function lineChart(id,curve){
+  new Chart(document.getElementById(id),{type:'line',data:{labels:D.LEVELS,datasets:[
+    L('vLLM',curve['vLLM'],D.colors['vLLM']),
+    L('llama.cpp',curve['llama.cpp'],D.colors['llama.cpp']),
+    L('Ollama',curve['Ollama'],D.colors['Ollama'])]},
+   options:Object.assign(JSON.parse(JSON.stringify(base)),{scales:Object.assign(JSON.parse(JSON.stringify(base.scales)),{x:{title:{display:true,text:'usuarios concurrentes',color:'#64748b'},ticks:{color:'#94a3b8'},grid:{color:'#1b2740'}}})})});
+}
+lineChart('c26',D.curve26); lineChart('c12',D.curve12);
+
+new Chart(document.getElementById('cbar'),{type:'bar',data:{labels:['26B-MoE','12B-denso'],datasets:[
+  {label:'vLLM',data:D.bar25['vLLM'],backgroundColor:D.colors['vLLM']},
+  {label:'llama.cpp',data:D.bar25['llama.cpp'],backgroundColor:D.colors['llama.cpp']},
+  {label:'Ollama',data:D.bar25['Ollama'],backgroundColor:D.colors['Ollama']}]},
+ options:JSON.parse(JSON.stringify(base))});
+
+new Chart(document.getElementById('cnp'),{type:'line',data:{labels:['NP=1','NP=4','NP=8'],datasets:[
+  L('llama.cpp',D.np_curve['llama.cpp'],D.colors['llama.cpp']),
+  L('Ollama',D.np_curve['Ollama'],D.colors['Ollama'])]},
+ options:Object.assign(JSON.parse(JSON.stringify(base)),{scales:Object.assign(JSON.parse(JSON.stringify(base.scales)),{x:{ticks:{color:'#94a3b8'},grid:{color:'#1b2740'}}})})});
+
+// --- paneles añadidos: prefix-cache, energía, util ---
+new Chart(document.getElementById('cpc'),{type:'line',data:{labels:D.pc.levels,datasets:[L('con prefix-cache',D.pc.on,'#22c55e'),L('sin prefix-cache',D.pc.off,'#ef4444')]},options:JSON.parse(JSON.stringify(base))});
+function withY(unit){const o=JSON.parse(JSON.stringify(base));o.scales.y.title.text=unit;o.plugins.legend.display=false;return o;}
+const engE=['vLLM','llama.cpp','Ollama'];
+new Chart(document.getElementById('cen'),{type:'bar',data:{labels:engE,datasets:[{label:'kJ',data:engE.map(e=>D.energy[e]?D.energy[e].energy_kj:null),backgroundColor:engE.map(e=>D.colors[e])}]},options:withY('kJ')});
+new Chart(document.getElementById('cut'),{type:'bar',data:{labels:engE,datasets:[{label:'%',data:engE.map(e=>D.energy[e]?D.energy[e].avg_ut:null),backgroundColor:engE.map(e=>D.colors[e])}]},options:withY('% GPU0')});
+
+// tabla resumen
+const engines=['vLLM','llama.cpp','Ollama'];
+let h='<table><tr><th>Config (25u)</th>'+engines.map(e=>'<th>'+e+'</th>').join('')+'</tr>';
+for(const [mlabel,idx] of [['26B-MoE',0],['12B-denso',1]]){
+  const vals=engines.map(e=>D.bar25[e][idx]);
+  const best=Math.min(...vals.filter(v=>v!=null));
+  h+='<tr><td>'+mlabel+' · 0.6b</td>'+vals.map(v=>'<td'+(v===best?' class=win':'')+'>'+(v!=null?v.toFixed(1)+' s':'—')+'</td>').join('')+'</tr>';
+}
+h+='<tr><td>single-stream (tok/s)</td>'+engines.map(e=>'<td>'+D.ss[e]+'</td>').join('')+'</tr></table>';
+document.getElementById('tbl').innerHTML=h;
+</script></body></html>

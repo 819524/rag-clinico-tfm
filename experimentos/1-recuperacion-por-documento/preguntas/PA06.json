@@ -1,0 +1,119 @@
+{
+  "name": "PA-06_Z3(E)C — Técnica del Sondaje Vesical",
+  "description": "Ground truth generado a partir del documento PA-06_Z3(E)C (Revisión A). Cubre definiciones, posicionamiento del paciente según sexo, secuencia completa de la técnica (fase no estéril y estéril), diferencias entre sondaje permanente e intermitente, fijación, drenaje y registro.",
+  "relevant_doc_patterns": ["PA-06", "sondaje-vesical", "cateter", "drenaje-vesical", "sonda"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Qué es exactamente un sondaje vesical?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Introducción de un catéter a través de la uretra hasta la vejiga para establecer una vía de drenaje, con fines diagnósticos y/o terapéuticos."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Qué es un sistema de drenaje cerrado y para qué sirve?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Bolsa colectora de orina con una válvula en su zona inferior para el vaciado de la misma, evitando la desconexión con la sonda, creando así un circuito cerrado."
+    },
+    {
+      "id": "q03",
+      "block": 2,
+      "query": "¿En qué posición coloco al paciente hombre y a la paciente mujer antes del sondaje?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Hombre: decúbito supino. Mujer: posición ginecológica."
+    },
+    {
+      "id": "q04",
+      "block": 2,
+      "query": "¿Cuál es el primer paso antes de tocar al paciente?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Informar al paciente del procedimiento que se le va a realizar y asegurar su intimidad."
+    },
+    {
+      "id": "q05",
+      "block": 2,
+      "query": "¿Cómo se lavan los genitales externos y en qué dirección?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Lavado con agua tibia y jabón de los genitales externos en dirección pubis-ano. En el hombre: retirar prepucio para lavar el glande. En la mujer: lavar el interior de labios mayores y menores."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿Cuándo me pongo guantes estériles y cuándo no estériles?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "En el paso 5 se realiza lavado de manos y colocación de guantes no estériles, para el lavado de genitales y limpieza del meato con antiséptico. Posteriormente, en el paso 8, se realiza un nuevo lavado de manos y se colocan guantes estériles para preparar el campo estéril e introducir la sonda."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Cómo se comprueba que el balón de la sonda funciona bien antes de introducirla?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Inyectando 10 ml de aire en el balón para comprobar su buen funcionamiento y retirando el aire después."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Cómo se aplica el lubricante anestésico en el hombre y en la mujer?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "En el hombre: introducir el lubricante por el meato uretral. En la mujer: verter el lubricante en una gasa para impregnar la sonda."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Hasta dónde introduzco la sonda en el hombre y en la mujer?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Se introduce la sonda por el meato hasta que salga orina y, en el hombre, hasta el pabellón; en la mujer, 2-3 cm más."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "Si el sondaje es permanente, ¿qué hago para que la sonda no se salga?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Si el sondaje es permanente, inflar el balón con 10 ml de agua estéril para fijar la sonda internamente."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Qué tipo de sistema de drenaje se recomienda conectar a la sonda?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Conectar la sonda a un sistema de drenaje, preferentemente cerrado."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "Tras conectar el drenaje, ¿qué hago con la sonda antes de fijarla?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Deslizar la sonda hacia el exterior hasta notar resistencia."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "¿Por qué hay que recolocar el prepucio al hombre después del sondaje?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Para evitar parafimosis."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Dónde y cómo se fija la sonda externamente?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Fijar externamente la sonda en la cara interna del muslo con esparadrapo."
+    },
+    {
+      "id": "q15",
+      "block": 2,
+      "query": "¿Dónde debo colocar la bolsa de drenaje y qué debo evitar?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Colocar el sistema de drenaje en un soporte por debajo del nivel de la vejiga, evitando el contacto con el suelo."
+    },
+    {
+      "id": "q16",
+      "block": 2,
+      "query": "¿Qué debo hacer al terminar el procedimiento antes de abandonar al paciente?",
+      "expected_section": "TÉCNICA DEL SONDAJE VESICAL",
+      "expected_quote": "Retirada de guantes y lavado de manos, y registro en historia clínica."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+id,opcion,proveedor,gama,gama_entrada,precio_entrada_usd_mtok,precio_salida_usd_mtok,coste_entrada_eur,coste_salida_eur,coste_total_eur,coste_con_cache_eur,coste_por_lote_eur,eur_por_1000_consultas,pct_coste_entrada,veces_vs_local
+opus5,Claude Opus 5,Anthropic,frontera,False,5.0,25.0,1340.39,505.08,1845.47,1742.54,922.73,26.93,72.6,290.4
+sonnet5,Claude Sonnet 5,Anthropic,intermedia,False,2.0,10.0,536.16,202.03,738.19,697.01,369.09,10.77,72.6,116.2
+haiku45,Claude Haiku 4.5,Anthropic,entrada,True,1.0,5.0,268.08,101.02,369.09,348.51,184.55,5.39,72.6,58.1
+gpt54mini,GPT-5.4 mini,OpenAI,intermedia,False,0.75,4.5,201.06,90.91,291.97,276.53,145.99,4.26,68.9,46.0
+g36flash,Gemini 3.6 Flash,Google,intermedia,False,0.75,3.75,201.06,75.76,276.82,261.38,138.41,4.04,72.6,43.6
+g35lite,Gemini 3.5 Flash-Lite,Google,entrada,False,0.3,2.5,80.42,50.51,130.93,124.76,65.47,1.91,61.4,20.6
+gpt5mini,GPT-5 mini,OpenAI,entrada,False,0.25,2.0,67.02,40.41,107.43,102.28,53.71,1.57,62.4,16.9
+g31lite,Gemini 3.1 Flash-Lite,Google,entrada,True,0.25,1.5,67.02,30.3,97.32,92.18,48.66,1.42,68.9,15.3
+gpt56luna,GPT-5.6 luna,OpenAI,entrada,True,0.2,1.2,53.62,24.24,77.86,73.74,38.93,1.14,68.9,12.3
+g25lite,Gemini 2.5 Flash-Lite,Google,entrada,False,0.1,0.4,26.81,8.08,34.89,32.83,17.44,0.51,76.8,5.5
+gpt5nano,GPT-5 nano,OpenAI,entrada,False,0.05,0.4,13.4,8.08,21.49,20.46,10.74,0.31,62.4,3.4

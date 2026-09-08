@@ -1,0 +1,217 @@
+{
+  "name": "PA-17_Z3(E)C — Procedimiento de Actuación con Fallecidos y Cuidados Post-Mortem",
+  "description": "Ground truth generado a partir del documento PA-17_Z3(E)C (Revisión C). Cubre definiciones de tipos de muerte, técnica de amortajamiento, actuación por roles (enfermería, facultativo, celador, funeraria), trámites según tipo de fallecimiento (natural, judicial, mortinato), situaciones especiales y manejo de cadáveres COVID-19 y Ébola.",
+  "relevant_doc_patterns": ["PA-17", "fallecidos", "post-mortem", "amortajamiento", "exitus", "cuidados-postmortem"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Qué diferencia hay entre una muerte natural y una muerte judicial?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "La muerte natural es el fallecimiento a consecuencia de una patología o enfermedad donde no ha intervenido ninguna causa externa violenta, y el médico cumplimenta el certificado de defunción. La muerte judicial es la que se debe a un mecanismo accidental, suicida u homicida con indicios de violencia, requiere autopsia judicial y el médico del Hospital no cumplimenta el certificado de defunción."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Qué es un mortinato y a partir de qué semana de gestación se considera así?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "El mortinato es el fallecimiento ocasionado durante el proceso de gestación (superior a 23 semanas y media) o en el momento del parto."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Qué son los cuidados post-mortem?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Conjunto de actividades encaminadas a preparar el cuerpo del fallecido para su posterior traslado al mortuorio, prestando apoyo emocional a los familiares."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Qué es la licencia de enterramiento o incineración y cuándo se puede obtener?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Es la licencia expedida por el encargado del Registro, una vez practicada la inscripción, para el enterramiento o incineración, una vez hayan transcurrido al menos veinticuatro horas desde el fallecimiento."
+    },
+    {
+      "id": "q05",
+      "block": 2,
+      "query": "Si el médico no está presente cuando fallece un paciente, ¿qué hace enfermería?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "Si el fallecimiento se produce sin presencia médica, y comprobado por el profesional de enfermería el éxitus, se avisará al médico para que confirme, verifique, certifique el fallecimiento (realizar ECG si precisa) y se lo notifique a la familia."
+    },
+    {
+      "id": "q06",
+      "block": 2,
+      "query": "¿Cuándo se puede empezar a amortajar al fallecido?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "Se empezará la técnica de amortajar nunca antes de la notificación a la familia, respetando la diversidad cultural y religiosa, y dejando a la familia un tiempo prudencial para despedirse del fallecido."
+    },
+    {
+      "id": "q07",
+      "block": 2,
+      "query": "¿Qué EPIs debo ponerme para realizar el amortajamiento?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "Los profesionales que vayan a intervenir en el proceso deberán lavarse las manos con antiséptico o solución hidroalcohólica, llevar guantes, bata y mascarilla si precisan. Aplicar siempre las precauciones universales."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Cómo coloco el cuerpo y qué hago con los ojos?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "Colocar el cuerpo en decúbito supino con la cama en posición horizontal, los brazos a ambos lados del cuerpo y tobillos juntos. Cerrar ojos bajando los párpados superiores."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Qué hago con las sondas, vías y drenajes? ¿Hay alguna excepción?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "Retirar sondas, vías y drenajes en último lugar para evitar reflujos, excepto los catéteres de hemodiálisis. Colocar apósitos limpios en los puntos de salida de drenajes y en las curas que estuviesen sucias."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Puedo sellar los labios del fallecido con aerosol?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "NO sellar los labios con Aerosol; si precisa se puede poner venda en la cabeza."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿Qué hago si el fallecido no tiene pulsera identificativa?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "Colocar pulsera identificativa y si no la tuviera pedirla a admisión."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Qué hago con las pertenencias del fallecido si no hay familiares?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "Se guardarán las pertenencias personales del paciente en las mejores condiciones posible (evitando que sea en bolsas de basura): se entregarán al personal de seguridad si son objetos de valor y a la Supervisora el resto, siempre debidamente identificadas con una etiqueta del paciente."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "¿A quién llamo para avisar del fallecimiento y qué número es?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "Llamar al jefe/encargado de celadores (Tfno. 710461), quien será el encargado de informar a la familia de los trámites post-mortem que deberán realizar."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Dónde registro el fallecimiento y qué hora debo poner?",
+      "expected_section": "ACTUACIÓN DEL PERSONAL DE ENFERMERÍA",
+      "expected_quote": "El éxitus será registrado por el facultativo en la Historia Clínica y por la enfermera en el programa Gacela, poniendo en todos los registros la misma hora de fallecimiento que en el Certificado de defunción."
+    },
+    {
+      "id": "q15",
+      "block": 2,
+      "query": "¿Qué es el tríptico de colores y a quién va cada copia?",
+      "expected_section": "TRÍPTICO DE COLORES",
+      "expected_quote": "El justificante blanco se entrega a la familia; el azul se deja en la Cámara del Mortuorio; y el amarillo se entrega en el Servicio de Admisión, excepto en el turno de noche, que se dejará en Admisión de Urgencias a partir de las 21 horas."
+    },
+    {
+      "id": "q16",
+      "block": 2,
+      "query": "¿Qué hace el facultativo cuando certifica el éxitus?",
+      "expected_section": "ACTUACIÓN DEL FACULTATIVO QUE CERTIFICA EL EXITUS",
+      "expected_quote": "Registrará el éxitus en la Historia Clínica, rellenará y firmará el certificado médico de defunción con especial atención a la identificación del fallecido y con la mayor celeridad posible, para que la familia pueda disponer del cuerpo para su traslado. Una vez rellenado el certificado, se entregará al encargado de turno de celadores."
+    },
+    {
+      "id": "q17",
+      "block": 2,
+      "query": "¿Adónde traslada el celador el cadáver y cómo lo coloca?",
+      "expected_section": "ACTUACIÓN DEL CELADOR DE LA PLANTA",
+      "expected_quote": "Trasladará el cadáver hasta el mortuorio (sótano -2) cumplimentando el libro de registro con los datos del justificante de fallecimiento. El cadáver se coloca en la bandeja introduciendo primero los pies, y el justificante azul se deja en la puerta de la cámara."
+    },
+    {
+      "id": "q18",
+      "block": 2,
+      "query": "Si el fallecido tiene un marcapasos y va a ser incinerado, ¿qué hago?",
+      "expected_section": "CONSIDERACIONES ESPECIALES",
+      "expected_quote": "En caso de que el fallecido tuviera insertado un marcapasos y este fuera a ser incinerado (preguntar a la familia), hay que avisar al Cirujano Vascular de Guardia para que lo retire (Busca 710668)."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "En una muerte judicial, ¿qué pasos adicionales se dan respecto a una muerte natural?",
+      "expected_section": "TRÁMITES POR TIPOS DE FALLECIMIENTO",
+      "expected_quote": "En las muertes judiciales, el Facultativo envía un Fax al Juzgado de Guardia comunicando el fallecimiento y las circunstancias, y se avisa al Busca 710461 advirtiendo siempre de que el fallecido es judicial. La Hermandad de la Sangre de Cristo retirará el cadáver para su traslado al Anatómico Forense, siempre por orden del Juez."
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "Si se solicita autopsia clínica en una muerte natural, ¿qué documentación adicional hay que añadir?",
+      "expected_section": "TRÁMITES POR TIPOS DE FALLECIMIENTO",
+      "expected_quote": "Se añade la Autorización Examen Post-Mortem (que cumplimenta el médico por triplicado: 1 en la historia clínica, 1 en la secretaría de Anatomía Patológica y 1 en la cámara) y la Epicrisis (resumen de la historia clínica, por duplicado: 1 en la historia clínica y 1 en secretaría de Anatomía Patológica)."
+    },
+    {
+      "id": "q21",
+      "block": 3,
+      "query": "¿Qué límite de tiempo hay en el velatorio del mortuorio?",
+      "expected_section": "ACTUACIÓN DEL JEFE Y ENCARGADOS DE CELADORES",
+      "expected_quote": "El uso del velatorio situado en el recinto mortuorio está restringido a un máximo de 1 hora y media."
+    },
+    {
+      "id": "q22",
+      "block": 3,
+      "query": "¿Qué ocurre si el cadáver permanece más de 48 horas en la cámara frigorífica?",
+      "expected_section": "ACTUACIÓN DE LAS FUNERARIAS",
+      "expected_quote": "Cuando los cadáveres permanecen en la cámara frigorífica del mortuorio por un tiempo superior a 48 horas, para su retirada se exige del responsable de jefatura de celadores el certificado de conservación en frío, documento en el que se hace constar el tiempo de permanencia en las cámaras y las condiciones higiénicas sanitarias en las que ha permanecido el cadáver."
+    },
+    {
+      "id": "q23",
+      "block": 3,
+      "query": "¿Qué hago si fallece un paciente sin familia o sin recursos económicos?",
+      "expected_section": "TRÁMITES EN SITUACIONES ESPECIALES",
+      "expected_quote": "El personal de enfermería se pondrá en contacto con la trabajadora social adscrita al servicio donde se produce el fallecimiento, para que realice los trámites pertinentes a través de la D.G.A. o del Ayuntamiento. Es la trabajadora social quien, al finalizar los trámites, se pone en contacto con jefatura de celadores para notificar la salida del cadáver."
+    },
+    {
+      "id": "q24",
+      "block": 3,
+      "query": "¿Se pueden realizar cuidados post-mortem en una muerte judicial?",
+      "expected_section": "CONSIDERACIONES ESPECIALES",
+      "expected_quote": "Si hubiera Muerte Judicial, no realizar cuidados Post-Mortem."
+    },
+    {
+      "id": "q25",
+      "block": 4,
+      "query": "En un fallecido por COVID-19, ¿se puede hacer tanatopraxia o tanatoestética?",
+      "expected_section": "ANEXO 5: PROCEDIMIENTO PARA EL MANEJO DE CADÁVERES DE CASOS COVID-19",
+      "expected_quote": "No se podrán realizar prácticas de tanatoestética, intervenciones de tanatopraxia, ni intervenciones por motivos religiosos que impliquen procedimientos invasivos en el cadáver."
+    },
+    {
+      "id": "q26",
+      "block": 4,
+      "query": "¿Cuál es el destino final de un cadáver de caso Ébola y por qué?",
+      "expected_section": "ANEXO 4: MANEJO DE CADÁVERES DE CASOS SOSPECHOSOS DE ENFERMEDAD POR VIRUS ÉBOLA",
+      "expected_quote": "El destino final del cadáver será la incineración en una instalación (horno crematorio) autorizada lo más próxima posible al centro sanitario de salida, dado que el cadáver contiene una elevada carga viral en sus órganos y fluidos y debe considerarse material de alto riesgo."
+    },
+    {
+      "id": "q27",
+      "block": 4,
+      "query": "En un fallecido por Ébola, ¿se retira el material médico invasivo del cuerpo antes del traslado?",
+      "expected_section": "ANEXO 4: MANEJO DE CADÁVERES DE CASOS SOSPECHOSOS DE ENFERMEDAD POR VIRUS ÉBOLA",
+      "expected_quote": "El material médico invasivo presente en el cuerpo del paciente en el momento de la muerte (vías intravenosas, catéteres, tubos endotraqueales, sondas vesicales, etc.) debe dejarse en su lugar y no debe ser extraído."
+    },
+    {
+      "id": "q28",
+      "block": 4,
+      "query": "¿Qué tipo de bolsas y féretro se usan para un cadáver de Ébola?",
+      "expected_section": "ANEXO 4: MANEJO DE CADÁVERES DE CASOS SOSPECHOSOS DE ENFERMEDAD POR VIRUS ÉBOLA",
+      "expected_quote": "El féretro vendrá preparado con un sistema de doble bolsa sanitaria de plástico para cadáveres, impermeables y resistentes a pinchazos (de al menos 150 μm de espesor) de cierre hermético, que se fijarán al borde del ataúd con los cierres en sentidos contrarios."
+    },
+    {
+      "id": "q29",
+      "block": 4,
+      "query": "¿Cuándo se puede enterrar (o incinerar) un fallecido por COVID-19 bajo las medidas excepcionales?",
+      "expected_section": "ANEXO 5: PROCEDIMIENTO PARA EL MANEJO DE CADÁVERES DE CASOS COVID-19",
+      "expected_quote": "En aplicación de la Orden SND/272/2020, el enterramiento o incineración podrán realizarse sin tener que esperar a que se cumplan 24 horas desde el fallecimiento, siempre y cuando este hecho no sea contrario a la voluntad del difunto o a la de sus herederos."
+    },
+    {
+      "id": "q30",
+      "block": 4,
+      "query": "¿Qué alternativa existe a la autopsia reglada en fallecidos por COVID-19 cuando no se pueden garantizar las medidas de protección?",
+      "expected_section": "ANEXO 5: PROCEDIMIENTO PARA EL MANEJO DE CADÁVERES DE CASOS COVID-19",
+      "expected_quote": "Se admite la práctica de Biopsia por Aguja Gruesa (BAG) en paciente fallecido por COVID-19 en sustitución de la autopsia reglada cuando no sea posible asegurar las medidas de protección especificadas en este protocolo."
+    }
+  ]
+}

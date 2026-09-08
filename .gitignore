@@ -1,0 +1,20 @@
+# Entornos y dependencias
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+tfm/
+node_modules/
+dist/
+
+# Configuración local
+.env
+*.local
+
+# Herramientas de construcción del repositorio público (no forman parte de la publicación)
+_build/
+
+# Artefactos de ejecución
+*.log
+logs/
+.DS_Store

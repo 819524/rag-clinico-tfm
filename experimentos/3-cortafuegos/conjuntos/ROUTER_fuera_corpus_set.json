@@ -1,0 +1,286 @@
+{
+ "name": "ROUTER_fuera_corpus_set",
+ "description": "Preguntas clinicas legitimas cuya respuesta NO esta en los 22 protocolos. Por la 'regla de oro' del prompt el router debe clasificarlas como 'clinica': filtrarlas corresponde al umbral de relevancia. Sirven para medir la tasa de abstencion y para calibrar el umbral en la escala del cross-encoder.",
+ "questions": [
+  {
+   "id": "x001",
+   "query": "¿Cuál es el protocolo de atención al parto eutócico?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x002",
+   "query": "¿Cómo se maneja una preeclampsia grave?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x003",
+   "query": "¿Qué dosis de paracetamol se administra a un lactante de 6 kg?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x004",
+   "query": "¿Cuál es la pauta de vacunación infantil a los 12 meses?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x005",
+   "query": "¿Cómo se valora el test de Apgar?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x006",
+   "query": "¿Cuál es el tratamiento del infarto agudo de miocardio con elevación del ST?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x007",
+   "query": "¿Qué anticoagulación se pauta en una fibrilación auricular de novo?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x008",
+   "query": "¿Cómo se maneja una insuficiencia cardiaca descompensada?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x009",
+   "query": "¿Cuál es el protocolo de manejo de una cetoacidosis diabética?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x010",
+   "query": "¿Cómo se corrige una hipoglucemia grave en planta?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x011",
+   "query": "¿Qué pauta de insulina se usa en el paciente hospitalizado?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x012",
+   "query": "¿Cómo se maneja una hemorragia digestiva alta?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x013",
+   "query": "¿Cuál es el tratamiento de una pancreatitis aguda?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x014",
+   "query": "¿Cómo se realiza una paracentesis evacuadora?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x015",
+   "query": "¿Cuál es el protocolo de manejo del tromboembolismo pulmonar?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x016",
+   "query": "¿Cómo se trata una agudización de EPOC en urgencias?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x017",
+   "query": "¿Cuándo está indicada la ventilación mecánica no invasiva?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x018",
+   "query": "¿Cuál es el protocolo de código ictus con fibrinólisis?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x019",
+   "query": "¿Cómo se maneja un estatus epiléptico?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x020",
+   "query": "¿Qué escala se usa para valorar el coma?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x021",
+   "query": "¿Qué antibiótico empírico se pauta en una neumonía adquirida en la comunidad?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x022",
+   "query": "¿Cuál es el protocolo de sepsis y shock séptico?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x023",
+   "query": "¿Cómo se trata una infección por Clostridioides difficile?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x024",
+   "query": "¿Qué profilaxis antibiótica se usa en cirugía traumatológica?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x025",
+   "query": "¿Cómo se maneja una hiperpotasemia grave?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x026",
+   "query": "¿Cuál es el protocolo de fracaso renal agudo?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x027",
+   "query": "¿Cómo se corrige una hiponatremia sintomática?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x028",
+   "query": "¿Cuál es el protocolo de actuación ante un intento autolítico?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x029",
+   "query": "¿Cómo se maneja un síndrome de abstinencia alcohólica?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x030",
+   "query": "¿Cuál es el manejo inicial del politraumatizado?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x031",
+   "query": "¿Cómo se inmoviliza una fractura de cadera antes de cirugía?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x032",
+   "query": "¿Cuál es el protocolo de profilaxis antitrombótica en el paciente quirúrgico?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x033",
+   "query": "¿Cómo se maneja una neutropenia febril?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x034",
+   "query": "¿Cuál es la pauta de sedación paliativa?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x035",
+   "query": "¿Cómo se trata el dolor oncológico irruptivo?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x036",
+   "query": "¿Cuál es la dosis de amoxicilina-clavulánico en adultos?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x037",
+   "query": "¿Qué interacciones tiene el acenocumarol?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x038",
+   "query": "¿Cómo se ajusta la dosis de vancomicina por función renal?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x039",
+   "query": "¿Cuál es el antídoto de una intoxicación por paracetamol?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  },
+  {
+   "id": "x040",
+   "query": "¿Qué precauciones tiene la administración de potasio intravenoso?",
+   "intent_esperado": "clinica",
+   "cubierta_por_el_corpus": false,
+   "origen": "redactada"
+  }
+ ]
+}

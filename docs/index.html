@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inicio · Asistente clínico RAG</title>
+<meta name="description" content="Experimentos y resultados de un sistema RAG sobre protocolos clínicos. Trabajo Fin de Máster, Universidad de Zaragoza.">
+<link rel="stylesheet" href="assets/estilo.css">
+</head>
+<body>
+<nav class="cinta"><div class="envoltorio">
+  <span class="marca">Asistente clínico RAG</span>
+  <a href="index.html" class="activo">Inicio</a><a href="reproducir.html" class="">Reproducir</a><a href="trazabilidad.html" class="">Trazabilidad</a><a href="datos.html" class="">Datos y licencia</a>
+  <a href="https://github.com/819524/rag-clinico-tfm">Repositorio</a>
+</div></nav>
+
+<header class="portada"><div class="envoltorio">
+  <div class="etiqueta">Trabajo Fin de Máster · Universidad de Zaragoza</div>
+  <h1>Asistente clínico RAG sobre protocolos hospitalarios</h1>
+  <p class="entradilla">Un sistema que responde preguntas de profesionales sanitarios
+  citando los procedimientos oficiales de su hospital. Estas páginas recogen los seis
+  experimentos con que se evaluó, con los datos crudos que los sostienen, para que
+  cualquiera pueda comprobar las cifras de la memoria en vez de fiarse de ellas.</p>
+</div></header>
+
+<section><div class="envoltorio">
+  <h2>El material</h2>
+  <p class="sub">Cifras leídas de los propios ficheros del repositorio.</p>
+  <div class="cifras"><div class="cifra"><div class="v">22</div><div class="k">protocolos en el corpus</div></div><div class="cifra"><div class="v">615</div><div class="k">preguntas con cita de referencia</div></div><div class="cifra"><div class="v">138</div><div class="k">ejecuciones de evaluación</div></div><div class="cifra"><div class="v">3.716</div><div class="k">mediciones de carga</div></div><div class="cifra"><div class="v">68.521</div><div class="k">consultas registradas</div></div><div class="cifra"><div class="v">20,3 kWh</div><div class="k">energía de GPU medida</div></div></div>
+</div></section>
+
+<section><div class="envoltorio">
+  <h2>Los experimentos</h2>
+  <p class="sub">Cada uno se abre con su enunciado, su diseño, sus resultados y los
+  ficheros que los respaldan. Estas son las direcciones que se citan desde la memoria.</p>
+  <div class="tarjetas"><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/1-recuperacion-por-documento">
+      <h3>1. Recuperación por documento</h3><p>¿Recupera la sección correcta cuando la consulta se dirige a un protocolo concreto, y cuánto se pierde con un modelo de embedding más pequeño?</p>
+      <p style="margin-top:10px"><span class="pastilla">0,932 de acierto entre los cinco primeros</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/2-recuperacion-multidocumento">
+      <h3>2. Recuperación multi-documento</h3><p>Lo mismo, pero saltando entre protocolos dentro de una conversación con memoria: el escenario realista.</p>
+      <p style="margin-top:10px"><span class="pastilla">0,855 en el escenario realista</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/3-cortafuegos">
+      <h3>3. Cortafuegos</h3><p>¿Reconoce lo que cae fuera de su corpus y lo dice, en vez de contestar con lo más parecido que encuentre?</p>
+      <p style="margin-top:10px"><span class="pastilla">97,4 % de acierto de intención</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/4-calidad-de-respuesta">
+      <h3>4. Calidad de la respuesta</h3><p>¿Se apoya la respuesta en el texto recuperado y cita fuentes que existen? Reproducible sin instalar nada.</p>
+      <p style="margin-top:10px"><span class="pastilla">se reproduce entero sin instalar nada</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/5-carga-y-motores">
+      <h3>5. Carga y motores</h3><p>¿Cuántos profesionales simultáneos aguanta, con qué motor de inferencia y a partir de dónde la latencia deja de ser aceptable?</p>
+      <p style="margin-top:10px"><span class="pastilla">609 barridos en 2 máquinas</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/6-costes-y-energia">
+      <h3>6. Coste y energía</h3><p>¿Cuánto cuesta sostenerlo en infraestructura propia y a partir de qué volumen sale a cuenta frente a una API comercial?</p>
+      <p style="margin-top:10px"><span class="pastilla">20,28 kWh medidos</span></p></a></div>
+</div></section>
+
+<section><div class="envoltorio">
+  <h2>Los dos números que importan</h2>
+  <p class="sub">Acierto en los cinco primeros resultados: fracción de preguntas cuya
+  sección de respuesta aparece entre los cinco fragmentos mejor puntuados. En verde, la
+  mejor estrategia de cada fila.</p>
+  <div class="tabla-envoltorio"><table>
+  <thead><tr><th>Escenario</th><th>Modelo de embedding</th><th>n</th><th>Cross-encoder</th><th>Híbrida</th><th>RRF puro</th></tr></thead>
+  <tbody><tr><td>Por documento</td><td>Qwen3-Embedding 4B</td><td class="num">1.845</td><td class="num mejor">0,932</td><td class="num">0,898</td><td class="num">0,883</td></tr><tr><td>Por documento</td><td>Qwen3-Embedding 0.6B</td><td class="num">1.845</td><td class="num mejor">0,919</td><td class="num">0,859</td><td class="num">0,854</td></tr><tr><td>Multi-documento</td><td>Qwen3-Embedding 4B</td><td class="num">330</td><td class="num mejor">0,855</td><td class="num">0,846</td><td class="num">0,827</td></tr><tr><td>Multi-documento</td><td>Qwen3-Embedding 0.6B</td><td class="num">330</td><td class="num mejor">0,827</td><td class="num">0,746</td><td class="num">0,746</td></tr></tbody>
+  <caption>La distancia entre las dos primeras filas y las dos últimas es el coste real de
+  enrutar entre todo el corpus con contexto conversacional previo. Es la cifra honesta para
+  valorar el sistema en uso.</caption></table></div>
+</div></section>
+
+<section><div class="envoltorio">
+  <h2>Cómo funciona el sistema</h2>
+  <ul class="limpia">
+    <li><strong>1 · Router.</strong> Reformula la consulta, extrae palabras clave, decide si
+      continúa la anterior y clasifica la intención en tres vías.</li>
+    <li><strong>2 · Recuperador híbrido.</strong> Búsqueda semántica por embeddings y léxica
+      BM25 en paralelo, fusionadas por RRF, con reordenación opcional por cross-encoder.</li>
+    <li><strong>3 · Anclaje documental.</strong> Mantiene la continuidad de documento a lo
+      largo de la conversación.</li>
+    <li><strong>4 · Generador.</strong> Redacta citando fuentes numeradas, restringido al
+      material recuperado.</li>
+    <li><strong>5 · Cortafuegos.</strong> Rechaza lo que queda fuera del corpus en vez de
+      improvisar.</li>
+  </ul>
+  <figure><img src="figuras/embedding_pipeline.png" alt="Canalización de indexación y consulta">
+  <figcaption>De los PDF originales a los fragmentos indexados, y de la consulta a la
+  respuesta citada.</figcaption></figure>
+</div></section>
+
+<section><div class="envoltorio">
+  <h2>Lo que este repositorio no puede demostrar</h2>
+  <div class="aviso cautela"><p>Los documentos del hospital no se redistribuyen, así que
+  las métricas de recuperación <strong>no pueden recalcularse desde cero</strong> aquí: la
+  etiqueta de relevancia se decide contra el texto completo de la sección, que vive en la
+  base de datos. Y ninguna de las medidas de calidad de respuesta juzga la
+  <strong>corrección clínica</strong>: miden solapamiento léxico, no verdad médica.</p>
+  <p>Qué sí puede verificarse, y con qué comando, está en
+  <a href="reproducir.html">Reproducir</a>.</p></div>
+</div></section>
+
+<footer><div class="envoltorio">
+  <p>Trabajo Fin de Máster · Universidad de Zaragoza · Corpus documental del Hospital
+  Clínico Universitario Lozano Blesa.<br>
+  Código bajo Apache-2.0; resultados y figuras bajo CC BY 4.0. Los documentos originales
+  del hospital no se redistribuyen — véase <a href="datos.html">Datos y licencia</a>.</p>
+  <p>Generada el 2026-09-08 desde los artefactos del repositorio.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,287 @@
+{
+  "name": "PA-46_Z3(E)C — Procedimiento de Contención Mecánica/Inmovilización Terapéutica",
+  "description": "Ground truth generado a partir del documento PA-46_Z3(E)C (Revisión B, 38 páginas). Cubre definición y marco legal, indicaciones y contraindicaciones, riesgos potenciales, recomendaciones generales (personal, duración, espacio, material, protección), contención verbal, pasos del procedimiento (paciente colaborador y no colaborador, inmovilización en cama, técnica de sujeciones), cuidados durante la CM/IT, supresión, responsabilidades por rol, registros/documentos, plan de cuidados enfermeros, pautas farmacológicas y consideraciones legales de vigilantes.",
+  "relevant_doc_patterns": ["PA-46", "contencion-mecanica", "inmovilizacion-terapeutica", "sujeciones", "paciente-agitado"],
+  "questions": [
+    {
+      "id": "q01",
+      "block": 1,
+      "query": "¿Qué es la contención mecánica según el procedimiento?",
+      "expected_section": "DEFINICIONES",
+      "expected_quote": "Método extraordinario de carácter terapéutico, ante una emergencia inmediata para la vida y/o integridad física del paciente o terceros, no pudiendo contenerse por otros medios terapéuticos. Limitación de movimientos de parte o todo el cuerpo para prevenir lesiones del paciente, otras personas o daños materiales significativos, y siempre que otras medidas hayan fracasado o no sean de aplicación."
+    },
+    {
+      "id": "q02",
+      "block": 1,
+      "query": "¿Qué leyes regulan la contención mecánica como acto de privación de libertad?",
+      "expected_section": "INTRODUCCIÓN",
+      "expected_quote": "La Ley General de Sanidad, la Ley de enjuiciamiento Civil, la Constitución española y la Ley 41/2002 de 14 de noviembre, básica reguladora de la autonomía del usuario y de derechos y obligaciones en materia de información y documentación clínica: Arts. 4 y 5 (derecho a la información asistencial) y Arts. 8 y 9 (consentimiento informado)."
+    },
+    {
+      "id": "q03",
+      "block": 1,
+      "query": "¿Cuáles son las indicaciones generales para aplicar una contención mecánica?",
+      "expected_section": "INDICACIONES Y CONTRAINDICACIONES",
+      "expected_quote": "Situaciones o conductas que representan un riesgo para la integridad física del paciente; prevención de autolesiones y caídas; amenaza para la integridad física de otras personas; prevenir daños graves al entorno; cuando lo solicita voluntariamente el paciente con justificación terapéutica; para evitar la fuga de un paciente peligroso; cuando sea necesaria para el mantenimiento de programas terapéuticos; y para adecuación de la medicación para una correcta evaluación clínica."
+    },
+    {
+      "id": "q04",
+      "block": 1,
+      "query": "¿Cuándo está contraindicada la contención mecánica?",
+      "expected_section": "INDICACIONES Y CONTRAINDICACIONES",
+      "expected_quote": "Está contraindicada si la situación se puede resolver mediante acompañamiento, medidas ambientales o por otros métodos de contención como el verbal o farmacológico; si se utiliza como castigo o refuerzo negativo; si la conducta violenta es voluntaria y de carácter delictivo; para el descanso del personal sanitario; cuando existan contraindicaciones específicas; y cuando no exista personal suficiente o sea técnicamente imposible."
+    },
+    {
+      "id": "q05",
+      "block": 1,
+      "query": "¿En qué situaciones clínicas del Servicio de Urgencias se usa más la contención mecánica?",
+      "expected_section": "INDICACIONES Y CONTRAINDICACIONES",
+      "expected_quote": "En Urgencias se aplica principalmente en pacientes con patología psiquiátrica, intoxicación aguda por fármacos o drogas de abuso, encefalopatías y delirium."
+    },
+    {
+      "id": "q06",
+      "block": 1,
+      "query": "¿Cuál es el riesgo más prevalente derivado de la actuación para realizar la contención?",
+      "expected_section": "RIESGOS POTENCIALES",
+      "expected_quote": "Los riesgos derivados de la actuación incluyen traumatismos, luxaciones, contusiones o heridas, así como los secundarios al uso de fármacos en la contención, siendo el posible riesgo más prevalente la alteración de la función respiratoria del paciente."
+    },
+    {
+      "id": "q07",
+      "block": 1,
+      "query": "¿Qué riesgos graves pueden aparecer por la restricción prolongada de movimientos?",
+      "expected_section": "RIESGOS POTENCIALES",
+      "expected_quote": "Los riesgos por restricción de movimientos, claramente tiempo dependientes, van desde cuadros leves como el estreñimiento o las lesiones por fricción hasta cuadros más graves como el riesgo de trombosis venosa, las lesiones por presión o el riesgo de broncoaspiración."
+    },
+    {
+      "id": "q08",
+      "block": 2,
+      "query": "¿Quién tiene la indicación de la contención mecánica y qué pasa en caso de urgencia?",
+      "expected_section": "RECOMENDACIONES GENERALES PARA INTERVENIR",
+      "expected_quote": "La indicación la hará el médico responsable del paciente, que estará presente mientras se realiza. En caso de urgencia, las enfermeras/os están expresamente autorizados para iniciar el procedimiento, debiendo comunicárselo al médico inmediatamente después para recibir su conformidad por escrito."
+    },
+    {
+      "id": "q09",
+      "block": 2,
+      "query": "¿Con qué frecuencia debe reevaluar el facultativo la indicación de la contención?",
+      "expected_section": "RECOMENDACIONES GENERALES PARA INTERVENIR",
+      "expected_quote": "El facultativo/a responsable reevaluará cada 24 horas la indicación de la contención y así lo hará constar en el tratamiento, registrando su continuidad o su finalización. Por tanto, el término 'contención si precisa' deberá dejar de usarse."
+    },
+    {
+      "id": "q10",
+      "block": 2,
+      "query": "¿Cuántas personas son necesarias para realizar la inmovilización y cómo se distribuyen?",
+      "expected_section": "PERSONAL NECESARIO",
+      "expected_quote": "El número de personas óptimo para realizar la inmovilización terapéutica es de cinco: una para sostener cada extremidad del paciente y otra para sujetarle la cabeza. La persona que coordina la Contención Mecánica es la que protege la cabeza del paciente."
+    },
+    {
+      "id": "q11",
+      "block": 2,
+      "query": "¿A quién aviso si no hay personal suficiente en la unidad para la contención?",
+      "expected_section": "PERSONAL NECESARIO",
+      "expected_quote": "Se avisará al jefe de celadores (Tfno. 710461) y supervisoras de guardia (tfno. 710462) indicando: el nivel de urgencia (inmediata o no inmediata), el motivo (inmovilización o presencia) y número aproximado de personas de refuerzo necesario."
+    },
+    {
+      "id": "q12",
+      "block": 2,
+      "query": "¿Cuál es el principio básico sobre la duración de la contención mecánica?",
+      "expected_section": "DURACIÓN",
+      "expected_quote": "Un principio básico es que la Contención Mecánica debe ser siempre lo más breve posible."
+    },
+    {
+      "id": "q13",
+      "block": 2,
+      "query": "¿Dónde está el material homologado y cómo se solicita?",
+      "expected_section": "MATERIAL Y TIPOS DE SUJECIÓN",
+      "expected_quote": "El material básico homologado se encuentra localizado en el despacho de celadores. Su petición se realiza verbalmente al celador ubicado en la unidad o en su ausencia mediante llamada telefónica al jefe de celadores (710461). La enfermera comunicará el nº de historia del paciente al que se va a contener para su posterior registro en el programa informático de incidencias."
+    },
+    {
+      "id": "q14",
+      "block": 2,
+      "query": "¿Cuáles son los dos tipos de sujeción más utilizados y en qué consiste cada uno?",
+      "expected_section": "MATERIAL Y TIPOS DE SUJECIÓN",
+      "expected_quote": "La sujeción completa consiste en cinturón abdominal y las cuatro extremidades, colocando primero el cinturón y después las extremidades en diagonal (MSD con MII y MSI con MID). La sujeción parcial consiste en abdomen y dos extremidades: un miembro superior y su opuesto inferior."
+    },
+    {
+      "id": "q15",
+      "block": 2,
+      "query": "¿Qué objetos no puede llevar el personal que va a intervenir en la sujeción?",
+      "expected_section": "MEDIDAS DE PROTECCIÓN PERSONAL",
+      "expected_quote": "No llevará objetos que puedan producir daño o romperse: gafas, reloj, anillos, cadenas, bolígrafos, móviles, tijeras, etc. Utilizará guantes y es recomendable colocarse fuera del espacio personal del paciente hasta el inicio de la inmovilización."
+    },
+    {
+      "id": "q16",
+      "block": 2,
+      "query": "¿Qué hago si el paciente tiene un arma y no la quiere entregar?",
+      "expected_section": "PAUTAS GENERALES DE ACTUACIÓN ANTE EL PACIENTE AGITADO",
+      "expected_quote": "Si el paciente tiene algún arma, no se procederá a efectuar la evaluación hasta que no haga entrega de ella. No pedirle nunca que nos la dé en mano, sino que la deposite en una zona neutral. Si no la entrega, se deberá avisar a las Fuerzas y Cuerpos de Seguridad del Estado."
+    },
+    {
+      "id": "q17",
+      "block": 2,
+      "query": "¿Cuáles son los objetivos de la contención verbal?",
+      "expected_section": "PAUTAS GENERALES DE ACTUACIÓN ANTE EL PACIENTE AGITADO",
+      "expected_quote": "Restablecer el autocontrol para facilitar una alianza diagnóstica; disminuir la hostilidad y la agresividad; prevenir posibles ataques violentos; informar del carácter transitorio de la crisis; facilitar la exteriorización de los pensamientos y emociones del paciente; negociar soluciones terapéuticas; e implantar límites de conducta claros."
+    },
+    {
+      "id": "q18",
+      "block": 2,
+      "query": "¿Qué conducta se debe tener con el paciente durante la contención verbal?",
+      "expected_section": "PAUTAS DE CONTENCIÓN VERBAL",
+      "expected_quote": "Mostrar respeto y comprensión; ser flexible pero manteniendo claros los límites institucionales; no avergonzar al paciente por su comportamiento; evitar gestos bruscos o amenazantes; no elevar el tono de voz; mantener al paciente dentro del campo visual; y no mirar de forma directa y continuada al paciente, ya que puede causar hostilidad."
+    },
+    {
+      "id": "q19",
+      "block": 3,
+      "query": "Si el paciente colabora, ¿cómo se le sujeta para acompañarle?",
+      "expected_section": "PASOS A SEGUIR EN LA PRÁCTICA DEL PROCEDIMIENTO",
+      "expected_quote": "Si es necesario se le sujetará por las axilas con una mano, empujando hacia arriba, y por las muñecas con la otra, con firmeza, pero sin lesionar."
+    },
+    {
+      "id": "q20",
+      "block": 3,
+      "query": "Si el paciente NO colabora, ¿a qué voz se ejecuta la acción y cómo se aborda?",
+      "expected_section": "EL PACIENTE NO COLABORA",
+      "expected_quote": "La acción se ejecuta a la voz de «tres», «ya», para favorecer el progreso correcto de la intervención. Se aborda al paciente deslizándolo hacia el suelo, sujetando la cabeza y extremidades, teniendo especial cuidado para evitar que se lesione o lesione a algún miembro del equipo. Nunca se forzará la articulación ni se ejercerá presión sobre ella."
+    },
+    {
+      "id": "q21",
+      "block": 3,
+      "query": "¿En qué orden se colocan las sujeciones una vez el paciente está en la cama?",
+      "expected_section": "INMOVILIZACIÓN EN LA CAMA",
+      "expected_quote": "La sujeción, ya en la cama, se realizará en decúbito supino y por este orden: 1º Cintura, 2º Extremidades inferiores, 3º Extremidades superiores, 4º Tórax, 5º Dispositivos accesorios."
+    },
+    {
+      "id": "q22",
+      "block": 3,
+      "query": "¿Por qué nunca debe usarse de forma aislada la sujeción abdominal?",
+      "expected_section": "INMOVILIZACIÓN EN LA CAMA",
+      "expected_quote": "Nunca debe utilizarse de forma aislada la sujeción abdominal por el peligro de lesiones y ahogamiento que conlleva."
+    },
+    {
+      "id": "q23",
+      "block": 3,
+      "query": "¿Por qué se eleva el cabecero de la cama al terminar de instaurar la sujeción completa?",
+      "expected_section": "MATERIAL Y TIPOS DE SUJECIÓN",
+      "expected_quote": "Al terminar de instaurar la contención se elevará el cabecero de la cama para facilitar la respiración y minimizar el riesgo de una aspiración."
+    },
+    {
+      "id": "q24",
+      "block": 3,
+      "query": "¿Dónde deben estar los puntos de retención de las sujeciones y por qué?",
+      "expected_section": "TÉCNICA DE COLOCACIÓN DE LAS SUJECIONES",
+      "expected_quote": "Los puntos de retención deben estar cerca de las articulaciones mayores, para así disminuir el riesgo de fracturas y esguinces. Hay que salvaguardar las partes más vulnerables del paciente (cuello, tórax y abdomen), y el grado de fuerza debe ser el mínimo para controlar la situación."
+    },
+    {
+      "id": "q25",
+      "block": 3,
+      "query": "¿A quién y cuándo se debe informar de la inmovilización una vez realizada?",
+      "expected_section": "INMOVILIZACIÓN EN LA CAMA",
+      "expected_quote": "La familia o tutor legal han de ser informados, de forma inmediata, por el facultativo responsable de las causas que han llevado a la inmovilización terapéutica y de los objetivos perseguidos, en una zona donde se mantenga la privacidad. En el momento en que el paciente esté consciente se le informará también de la situación."
+    },
+    {
+      "id": "q26",
+      "block": 3,
+      "query": "¿Con qué frecuencia mínima se realiza la valoración del paciente durante la contención?",
+      "expected_section": "CUIDADOS DURANTE LA CONTENCIÓN MECÁNICA",
+      "expected_quote": "Se realizará valoración como mínimo cada 2 horas (constantes vitales, nivel de conciencia, estado mental, revisión de sujeciones/prevención de lesiones) o según tratamiento individualizado, y se asegurarán las necesidades básicas de hidratación, alimentación, eliminación, movilidad, higiene, seguridad y comunicación."
+    },
+    {
+      "id": "q27",
+      "block": 3,
+      "query": "¿Cómo debe ser la habitación del paciente durante la contención?",
+      "expected_section": "CUIDADOS DURANTE LA CONTENCIÓN MECÁNICA",
+      "expected_quote": "El paciente permanecerá en habitación a ser posible individual, con las medidas ambientales adecuadas, tales como: luz tenue, temperatura confortable, en ausencia de ruidos, cubierto con una sábana y la puerta cerrada. El cabecero de la cama ha de permanecer elevado entre 30º y 45º para disminuir el riesgo de aspiraciones."
+    },
+    {
+      "id": "q28",
+      "block": 3,
+      "query": "¿Cómo se suprime la contención mecánica y qué se debe registrar?",
+      "expected_section": "SUPRESIÓN DE LA CONTENCIÓN MECÁNICA",
+      "expected_quote": "La supresión tendrá lugar tras la valoración conjunta del personal facultativo y de enfermería, cuando la necesidad de esta medida haya remitido. La retirada de la sujeción deberá realizarse siempre de forma progresiva, a medida que aumente el autocontrol. Se anotará la fecha y la hora de la retirada y las incidencias de la misma."
+    },
+    {
+      "id": "q29",
+      "block": 4,
+      "query": "¿Qué responsabilidad tiene la enfermera en una situación de extrema urgencia?",
+      "expected_section": "RESPONSABILIDADES — Enfermera",
+      "expected_quote": "En caso de extrema urgencia, las enfermeras están expresamente autorizadas a iniciar el procedimiento, debiendo comunicárselo al médico inmediatamente después para recibir su conformidad por escrito, o con un plazo máximo de 2 horas."
+    },
+    {
+      "id": "q30",
+      "block": 4,
+      "query": "¿Qué hace el TCAE con el material de sujeción una vez retirado definitivamente?",
+      "expected_section": "RESPONSABILIDADES — TCAE",
+      "expected_quote": "Una vez retiradas definitivamente las contenciones, el TCAE se encarga de la limpieza de los vástagos y los enviará al despacho de celadores para su almacenamiento, introducirá el resto de material en una bolsa independiente y la enviará a lencería para su limpieza lo antes posible."
+    },
+    {
+      "id": "q31",
+      "block": 4,
+      "query": "¿Cuál es la función de los Vigilantes de Seguridad en la contención y qué NO pueden hacer?",
+      "expected_section": "RESPONSABILIDADES — Vigilantes de Seguridad",
+      "expected_quote": "Colaboran en el procedimiento para participar en la reducción/inmovilización exclusiva y excepcionalmente como una función de protección a las personas y no como un acto sanitario. En ningún caso su función es la de custodia de pacientes psiquiátricos o agitados, y su actuación debe ser comedida y proporcionada, refrendada y autorizada por el encargado de dirigir la inmovilización."
+    },
+    {
+      "id": "q32",
+      "block": 4,
+      "query": "¿Qué documentos son de obligatorio cumplimiento cuando se aplica una contención física?",
+      "expected_section": "REGISTROS/DOCUMENTOS",
+      "expected_quote": "Es obligatorio cumplimentar en HCE el registro en el formulario de contención física. En la historia deben quedar reflejadas las medidas alternativas previas y los formularios cumplimentados: el Registro de Consentimiento Informado/Autorización y, si no hay firma de consentimiento informado o la contención supera las 24 horas, el documento de comunicación al juzgado."
+    },
+    {
+      "id": "q33",
+      "block": 4,
+      "query": "¿Cuándo hay que notificar al juez la contención?",
+      "expected_section": "REGISTROS/DOCUMENTOS",
+      "expected_quote": "Se informará al juez inmediatamente si no hay firma de consentimiento informado y en las contenciones prolongadas, considerándose estas las de más de 24 horas."
+    },
+    {
+      "id": "q34",
+      "block": 5,
+      "query": "¿Qué fármaco se usa en Urgencias para un paciente agitado sin datos clínicos y cómo se revierte?",
+      "expected_section": "PAUTAS FARMACOLÓGICAS",
+      "expected_quote": "Se usa Midazolam (ampollas de 15 mg/3 mL). La dosis IV inicial es de 0,05-0,2 mg/kg de peso. Su efecto se revierte con flumacenilo."
+    },
+    {
+      "id": "q35",
+      "block": 5,
+      "query": "¿Cuál es la primera opción farmacológica oral para un paciente con agitación de origen psiquiátrico?",
+      "expected_section": "PAUTAS FARMACOLÓGICAS",
+      "expected_quote": "Si acepta medicación oral, se administra 1 comprimido de olanzapina 10 mg velotab, que se puede repetir si no hay mejoría en media hora."
+    },
+    {
+      "id": "q36",
+      "block": 5,
+      "query": "¿Qué fármaco se usa para revertir los síntomas extrapiramidales secundarios a antipsicóticos?",
+      "expected_section": "PAUTAS FARMACOLÓGICAS",
+      "expected_quote": "Se usa Biperideno (Akineton): media o 1 ampolla de 5 mg IM, pudiéndose repetir hasta 8 mg/24 horas. Se debe prestar atención a los efectos anticolinérgicos."
+    },
+    {
+      "id": "q37",
+      "block": 5,
+      "query": "¿En qué pacientes está especialmente indicada la heparina fraccionada durante la inmovilización?",
+      "expected_section": "PAUTAS FARMACOLÓGICAS",
+      "expected_quote": "Está especialmente indicada en pacientes mayores de 60 años y sexo masculino; procedentes de UCI; postoperatorio de cirugía ortopédica (hasta 180 días); postoperatorio quirúrgico; pacientes con cáncer activo; ictus con parálisis de extremidades inferiores; antecedentes de ETEV; trombofilia; insuficiencia cardiaca o EPOC; obesidad (IMC >30); embarazadas; pacientes con varices; y enfermedades crónicas de base inflamatoria."
+    },
+    {
+      "id": "q38",
+      "block": 5,
+      "query": "¿Cuándo se debe considerar administrar heparina fraccionada a un paciente con inmovilización?",
+      "expected_section": "PAUTAS FARMACOLÓGICAS",
+      "expected_quote": "Como norma general debe considerarse la administración de heparina fraccionada en todos los pacientes que no tengan contraindicación para su uso y sean tributarios de inmovilización, especialmente si esta ha de prolongarse más de 72 horas."
+    },
+    {
+      "id": "q39",
+      "block": 5,
+      "query": "¿Qué cuidados de movilidad se deben aplicar a un paciente con inmovilización prolongada?",
+      "expected_section": "PLAN DE CUIDADOS — Movilidad",
+      "expected_quote": "Valorar cambios posturales mientras dure la inmovilización; supervisar presencia de signos de inflamación, parestesias y disestesias en miembros superiores; liberar de forma rotativa una extremidad si el estado del paciente lo permite; y valorar administración de heparina si la inmovilización dura más de 24h o más de 12h con factores de riesgo."
+    },
+    {
+      "id": "q40",
+      "block": 5,
+      "query": "¿Cuándo y por qué está contraindicada la contención mecánica en silla o camilla?",
+      "expected_section": "INMOVILIZACIÓN EN LA CAMA",
+      "expected_quote": "En los pacientes agitados/intoxicados no estaría indicada la CMT en silla ni en camilla."
+    }
+  ]
+}

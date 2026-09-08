@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sweep de carga — 2026-06-28 21:30:03</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  body { font-family:system-ui,sans-serif; background:#0f172a; color:#e2e8f0; margin:0; padding:24px; }
+  h1   { font-size:1.5rem; font-weight:700; margin-bottom:4px; }
+  .meta { color:#94a3b8; font-size:.85rem; margin-bottom:24px; }
+  .meta-inline { font-size:.78rem; color:#64748b; font-weight:400; margin-left:12px; }
+  .charts3 { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; margin-bottom:20px; }
+  .card { background:#1e293b; border-radius:10px; padding:20px; margin-bottom:18px; }
+  .card h2 { font-size:.95rem; font-weight:600; margin:0 0 14px; color:#cbd5e1; }
+  table { width:100%; border-collapse:collapse; font-size:.85rem; }
+  th { background:#0f172a; padding:8px 12px; text-align:left; color:#94a3b8; font-weight:600; }
+  td { padding:8px 12px; border-top:1px solid #334155; }
+  tr:hover td { background:#263044; }
+  canvas { max-height:260px; }
+</style>
+</head>
+<body>
+<h1>Sweep de carga — Pipeline RAG</h1>
+<div class="meta">
+  2026-06-28 21:30:03 &nbsp;·&nbsp; Modelo: <b>gemma4-awq</b> &nbsp;·&nbsp;
+  Re-ranking: <b>embed</b> &nbsp;·&nbsp; Colección: <b>docs_rag_qwen3_06b</b>
+</div>
+
+<div class="charts3">
+  <div class="card"><h2>Latencia total media (s)</h2><canvas id="c_total"></canvas></div>
+  <div class="card"><h2>TTFT medio (s)</h2><canvas id="c_ttft"></canvas></div>
+  <div class="card"><h2>Tokens/s medio por petición</h2><canvas id="c_tps"></canvas></div>
+  <div class="card"><h2>Throughput total (tokens/s globales)</h2><canvas id="c_thru"></canvas></div>
+</div>
+
+<div class="card">
+  <h2>Resumen por nivel de concurrencia</h2>
+  <table>
+    <thead><tr>
+      <th>Usuarios</th><th>Tiempo muro</th><th>TTFT medio</th>
+      <th>Total medio</th><th>tok/s por req</th><th>Throughput global</th><th>Éxito</th>
+    </tr></thead>
+    <tbody><tr>
+          <td><b>1</b></td>
+          <td>5.7 s</td>
+          <td>0.8 s</td>
+          <td>5.7 s</td>
+          <td>129.2</td>
+          <td>129.2</td>
+          <td>1/1</td>
+        </tr><tr>
+          <td><b>10</b></td>
+          <td>10.4 s</td>
+          <td>2.3 s</td>
+          <td>8.4 s</td>
+          <td>64.0</td>
+          <td>530.9</td>
+          <td>10/10</td>
+        </tr><tr>
+          <td><b>25</b></td>
+          <td>12.8 s</td>
+          <td>2.3 s</td>
+          <td>9.4 s</td>
+          <td>49.2</td>
+          <td>970.1</td>
+          <td>25/25</td>
+        </tr><tr>
+          <td><b>50</b></td>
+          <td>17.5 s</td>
+          <td>2.9 s</td>
+          <td>12.3 s</td>
+          <td>39.6</td>
+          <td>1445.8</td>
+          <td>50/50</td>
+        </tr><tr>
+          <td><b>75</b></td>
+          <td>20.8 s</td>
+          <td>3.7 s</td>
+          <td>14.8 s</td>
+          <td>33.9</td>
+          <td>1874.2</td>
+          <td>75/75</td>
+        </tr><tr>
+          <td><b>100</b></td>
+          <td>25.5 s</td>
+          <td>5.1 s</td>
+          <td>17.5 s</td>
+          <td>29.4</td>
+          <td>2063.6</td>
+          <td>100/100</td>
+        </tr></tbody>
+  </table>
+</div>
+
+
+<div class="card">
+  <h2>1 usuario — línea de tiempo (s)
+      <span class="meta-inline">wall=5.7 s · avg total=5.7 s · avg TTFT=0.8 s</span>
+  </h2>
+  <canvas id="gantt_1" style="max-height:120px"></canvas>
+  <script>
+  new Chart(document.getElementById('gantt_1'), {
+    type:'bar',
+    data:{labels:["R1: ¿Cuál es el procedimiento para inse…"],datasets:[{"label": "Router", "data": [[0.0, 0.476]], "backgroundColor": "rgba(99,102,241,0.85)", "borderRadius": 3}, {"label": "Retriever", "data": [[0.476, 0.645]], "backgroundColor": "rgba(34,197,94,0.85)", "borderRadius": 3}, {"label": "Generador", "data": [[0.645, 5.697]], "backgroundColor": "rgba(249,115,22,0.85)", "borderRadius": 3}]},
+    options:{indexAxis:'y',responsive:true,
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{title:{display:true,text:'Segundos',color:'#94a3b8'},ticks:{color:'#94a3b8'},grid:{color:'#334155'}},
+        y:{ticks:{color:'#94a3b8',font:{size:10}},grid:{color:'#334155'}},
+      },
+    },
+  });
+  </script>
+</div>
+<div class="card">
+  <h2>10 usuarios — línea de tiempo (s)
+      <span class="meta-inline">wall=10.4 s · avg total=8.4 s · avg TTFT=2.3 s</span>
+  </h2>
+  <canvas id="gantt_10" style="max-height:340px"></canvas>
+  <script>
+  new Chart(document.getElementById('gantt_10'), {
+    type:'bar',
+    data:{labels:["R1: ¿Cuál es el procedimiento para inse…", "R2: ¿Qué antisépticos se usan para la d…", "R3: ¿Cómo se trata una infección de tra…", "R4: ¿Cuáles son los criterios para reti…", "R5: ¿Qué hacer si el paciente presenta …", "R6: ¿Cuál es el procedimiento para inse…", "R7: ¿Qué antisépticos se usan para la d…", "R8: ¿Cómo se trata una infección de tra…", "R9: ¿Cuáles son los criterios para reti…", "R10: ¿Qué hacer si el paciente presenta …"],datasets:[{"label": "Router", "data": [[0.0, 0.997], [0.0, 0.928], [0.001, 1.002], [0.001, 0.771], [0.001, 1.002], [0.002, 1.002], [0.002, 0.997], [0.003, 0.997], [0.003, 0.814], [0.003, 1.002]], "backgroundColor": "rgba(99,102,241,0.85)", "borderRadius": 3}, {"label": "Retriever", "data": [[0.997, 1.742], [0.928, 1.261], [1.002, 1.73], [0.771, 1.158], [1.002, 1.756], [1.002, 1.422], [0.997, 1.931], [0.997, 1.922], [0.814, 1.535], [1.002, 1.755]], "backgroundColor": "rgba(34,197,94,0.85)", "borderRadius": 3}, {"label": "Generador", "data": [[1.742, 10.24], [1.261, 10.307], [1.73, 7.154], [1.158, 5.235], [1.756, 8.976], [1.422, 10.449], [1.931, 9.899], [1.922, 6.679], [1.535, 5.719], [1.755, 9.177]], "backgroundColor": "rgba(249,115,22,0.85)", "borderRadius": 3}]},
+    options:{indexAxis:'y',responsive:true,
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{title:{display:true,text:'Segundos',color:'#94a3b8'},ticks:{color:'#94a3b8'},grid:{color:'#334155'}},
+        y:{ticks:{color:'#94a3b8',font:{size:10}},grid:{color:'#334155'}},
+      },
+    },
+  });
+  </script>
+</div>
+<div class="card">
+  <h2>25 usuarios — línea de tiempo (s)
+      <span class="meta-inline">wall=12.8 s · avg total=9.4 s · avg TTFT=2.3 s</span>
+  </h2>
+  <canvas id="gantt_25" style="max-height:760px"></canvas>
+  <script>
+  new Chart(document.getElementById('gantt_25'), {
+    type:'bar',
+    data:{labels:["R1: ¿Cuál es el procedimiento para inse…", "R2: ¿Qué antisépticos se usan para la d…", "R3: ¿Cómo se trata una infección de tra…", "R4: ¿Cuáles son los criterios para reti…", "R5: ¿Qué hacer si el paciente presenta …", "R6: ¿Cuál es el procedimiento para inse…", "R7: ¿Qué antisépticos se usan para la d…", "R8: ¿Cómo se trata una infección de tra…", "R9: ¿Cuáles son los criterios para reti…", "R10: ¿Qué hacer si el paciente presenta …", "R11: ¿Cuál es el procedimiento para inse…", "R12: ¿Qué antisépticos se usan para la d…", "R13: ¿Cómo se trata una infección de tra…", "R14: ¿Cuáles son los criterios para reti…", "R15: ¿Qué hacer si el paciente presenta …", "R16: ¿Cuál es el procedimiento para inse…", "R17: ¿Qué antisépticos se usan para la d…", "R18: ¿Cómo se trata una infección de tra…", "R19: ¿Cuáles son los criterios para reti…", "R20: ¿Qué hacer si el paciente presenta …", "R21: ¿Cuál es el procedimiento para inse…", "R22: ¿Qué antisépticos se usan para la d…", "R23: ¿Cómo se trata una infección de tra…", "R24: ¿Cuáles son los criterios para reti…", "R25: ¿Qué hacer si el paciente presenta …"],datasets:[{"label": "Router", "data": [[0.0, 1.292], [0.0, 1.293], [0.001, 1.295], [0.001, 1.294], [0.001, 1.297], [0.002, 1.293], [0.002, 1.3], [0.003, 1.304], [0.003, 1.302], [0.003, 1.298], [0.004, 1.131], [0.004, 1.304], [0.004, 1.302], [0.005, 1.15], [0.005, 1.301], [0.005, 1.304], [0.006, 1.305], [0.006, 1.304], [0.007, 1.299], [0.007, 1.305], [0.007, 1.301], [0.008, 1.302], [0.008, 1.302], [0.008, 1.164], [0.009, 1.304]], "backgroundColor": "rgba(99,102,241,0.85)", "borderRadius": 3}, {"label": "Retriever", "data": [[1.292, 2.058], [1.293, 2.057], [1.295, 1.998], [1.294, 2.061], [1.297, 1.36], [1.293, 2.06], [1.3, 2.539], [1.304, 2.231], [1.302, 2.549], [1.298, 1.362], [1.131, 1.324], [1.304, 2.421], [1.302, 2.55], [1.15, 1.896], [1.301, 2.565], [1.304, 1.691], [1.305, 2.419], [1.304, 2.396], [1.299, 2.538], [1.305, 2.412], [1.301, 1.826], [1.302, 2.581], [1.302, 2.549], [1.164, 2.016], [1.304, 1.719]], "backgroundColor": "rgba(34,197,94,0.85)", "borderRadius": 3}, {"label": "Generador", "data": [[2.058, 12.433], [2.057, 12.334], [1.998, 8.641], [2.061, 6.175], [1.36, 9.937], [2.06, 12.368], [2.539, 11.164], [2.231, 4.286], [2.549, 6.281], [1.362, 10.219], [1.324, 11.605], [2.421, 12.79], [2.55, 5.115], [1.896, 5.784], [2.565, 11.015], [1.691, 12.136], [2.419, 12.657], [2.396, 4.013], [2.538, 7.491], [2.412, 10.796], [1.826, 12.198], [2.581, 11.859], [2.549, 7.185], [2.016, 5.617], [1.719, 10.593]], "backgroundColor": "rgba(249,115,22,0.85)", "borderRadius": 3}]},
+    options:{indexAxis:'y',responsive:true,
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{title:{display:true,text:'Segundos',color:'#94a3b8'},ticks:{color:'#94a3b8'},grid:{color:'#334155'}},
+        y:{ticks:{color:'#94a3b8',font:{size:10}},grid:{color:'#334155'}},
+      },
+    },
+  });
+  </script>
+</div>
+<div class="card">
+  <h2>50 usuarios — línea de tiempo (s)
+      <span class="meta-inline">wall=17.5 s · avg total=12.3 s · avg TTFT=2.9 s</span>
+  </h2>
+  <canvas id="gantt_50" style="max-height:1460px"></canvas>
+  <script>
+  new Chart(document.getElementById('gantt_50'), {
+    type:'bar',
+    data:{labels:["R1: ¿Cuál es el procedimiento para inse…", "R2: ¿Qué antisépticos se usan para la d…", "R3: ¿Cómo se trata una infección de tra…", "R4: ¿Cuáles son los criterios para reti…", "R5: ¿Qué hacer si el paciente presenta …", "R6: ¿Cuál es el procedimiento para inse…", "R7: ¿Qué antisépticos se usan para la d…", "R8: ¿Cómo se trata una infección de tra…", "R9: ¿Cuáles son los criterios para reti…", "R10: ¿Qué hacer si el paciente presenta …", "R11: ¿Cuál es el procedimiento para inse…", "R12: ¿Qué antisépticos se usan para la d…", "R13: ¿Cómo se trata una infección de tra…", "R14: ¿Cuáles son los criterios para reti…", "R15: ¿Qué hacer si el paciente presenta …", "R16: ¿Cuál es el procedimiento para inse…", "R17: ¿Qué antisépticos se usan para la d…", "R18: ¿Cómo se trata una infección de tra…", "R19: ¿Cuáles son los criterios para reti…", "R20: ¿Qué hacer si el paciente presenta …", "R21: ¿Cuál es el procedimiento para inse…", "R22: ¿Qué antisépticos se usan para la d…", "R23: ¿Cómo se trata una infección de tra…", "R24: ¿Cuáles son los criterios para reti…", "R25: ¿Qué hacer si el paciente presenta …", "R26: ¿Cuál es el procedimiento para inse…", "R27: ¿Qué antisépticos se usan para la d…", "R28: ¿Cómo se trata una infección de tra…", "R29: ¿Cuáles son los criterios para reti…", "R30: ¿Qué hacer si el paciente presenta …", "R31: ¿Cuál es el procedimiento para inse…", "R32: ¿Qué antisépticos se usan para la d…", "R33: ¿Cómo se trata una infección de tra…", "R34: ¿Cuáles son los criterios para reti…", "R35: ¿Qué hacer si el paciente presenta …", "R36: ¿Cuál es el procedimiento para inse…", "R37: ¿Qué antisépticos se usan para la d…", "R38: ¿Cómo se trata una infección de tra…", "R39: ¿Cuáles son los criterios para reti…", "R40: ¿Qué hacer si el paciente presenta …", "R41: ¿Cuál es el procedimiento para inse…", "R42: ¿Qué antisépticos se usan para la d…", "R43: ¿Cómo se trata una infección de tra…", "R44: ¿Cuáles son los criterios para reti…", "R45: ¿Qué hacer si el paciente presenta …", "R46: ¿Cuál es el procedimiento para inse…", "R47: ¿Qué antisépticos se usan para la d…", "R48: ¿Cómo se trata una infección de tra…", "R49: ¿Cuáles son los criterios para reti…", "R50: ¿Qué hacer si el paciente presenta …"],datasets:[{"label": "Router", "data": [[0.0, 1.384], [0.0, 1.396], [0.001, 1.396], [0.001, 1.31], [0.002, 1.44], [0.002, 1.448], [0.003, 1.418], [0.003, 1.418], [0.003, 1.44], [0.004, 1.384], [0.004, 1.342], [0.004, 1.44], [0.005, 1.468], [0.005, 1.44], [0.005, 1.384], [0.006, 1.439], [0.006, 1.49], [0.006, 1.467], [0.007, 1.374], [0.007, 1.44], [0.008, 1.439], [0.008, 1.494], [0.008, 1.466], [0.009, 1.374], [0.009, 1.384], [0.009, 1.448], [0.01, 1.491], [0.01, 1.468], [0.011, 1.441], [0.011, 1.44], [0.011, 1.44], [0.012, 1.494], [0.012, 1.468], [0.013, 1.385], [0.013, 1.441], [0.013, 1.448], [0.014, 1.491], [0.014, 1.459], [0.014, 1.366], [0.015, 1.377], [0.015, 1.439], [0.016, 1.475], [0.016, 1.467], [0.016, 1.439], [0.017, 1.397], [0.017, 1.467], [0.018, 1.502], [0.018, 1.491], [0.018, 1.363], [0.019, 1.439]], "backgroundColor": "rgba(99,102,241,0.85)", "borderRadius": 3}, {"label": "Retriever", "data": [[1.384, 1.978], [1.396, 3.519], [1.396, 1.999], [1.31, 1.384], [1.44, 3.348], [1.448, 2.4], [1.418, 3.326], [1.418, 2.403], [1.44, 1.75], [1.384, 3.095], [1.342, 1.396], [1.44, 3.354], [1.468, 3.288], [1.44, 2.37], [1.384, 3.305], [1.439, 1.789], [1.49, 3.339], [1.467, 3.296], [1.374, 2.403], [1.44, 2.37], [1.439, 3.287], [1.494, 3.503], [1.466, 3.297], [1.374, 1.554], [1.384, 3.291], [1.448, 2.681], [1.491, 3.337], [1.468, 3.516], [1.441, 1.737], [1.44, 3.101], [1.44, 2.127], [1.494, 3.518], [1.468, 3.095], [1.385, 2.05], [1.441, 3.353], [1.448, 2.865], [1.491, 3.324], [1.459, 1.668], [1.366, 1.402], [1.377, 1.422], [1.439, 3.101], [1.475, 1.646], [1.467, 2.522], [1.439, 1.749], [1.397, 2.434], [1.467, 3.101], [1.502, 3.329], [1.491, 3.297], [1.363, 1.426], [1.439, 3.288]], "backgroundColor": "rgba(34,197,94,0.85)", "borderRadius": 3}, {"label": "Generador", "data": [[1.978, 15.768], [3.519, 16.341], [1.999, 7.324], [1.384, 5.595], [3.348, 14.492], [2.4, 16.749], [3.326, 17.39], [2.403, 7.716], [1.75, 7.141], [3.095, 14.918], [1.396, 15.569], [3.354, 15.734], [3.288, 8.411], [2.37, 6.832], [3.305, 15.549], [1.789, 15.967], [3.339, 15.931], [3.296, 10.705], [2.403, 7.231], [2.37, 13.3], [3.287, 17.021], [3.503, 16.467], [3.297, 11.518], [1.554, 5.866], [3.291, 15.343], [2.681, 16.941], [3.337, 17.522], [3.516, 5.63], [1.737, 6.155], [3.101, 12.171], [2.127, 16.062], [3.518, 17.251], [3.095, 4.682], [2.05, 6.91], [3.353, 14.715], [2.865, 17.071], [3.324, 16.223], [1.668, 3.294], [1.402, 5.723], [1.422, 12.381], [3.101, 16.601], [1.646, 13.526], [2.522, 9.471], [1.749, 6.645], [2.434, 14.082], [3.101, 16.683], [3.329, 16.912], [3.297, 13.001], [1.426, 6.7], [3.288, 15.118]], "backgroundColor": "rgba(249,115,22,0.85)", "borderRadius": 3}]},
+    options:{indexAxis:'y',responsive:true,
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{title:{display:true,text:'Segundos',color:'#94a3b8'},ticks:{color:'#94a3b8'},grid:{color:'#334155'}},
+        y:{ticks:{color:'#94a3b8',font:{size:10}},grid:{color:'#334155'}},
+      },
+    },
+  });
+  </script>
+</div>
+<div class="card">
+  <h2>75 usuarios — línea de tiempo (s)
+      <span class="meta-inline">wall=20.8 s · avg total=14.8 s · avg TTFT=3.7 s</span>
+  </h2>
+  <canvas id="gantt_75" style="max-height:2160px"></canvas>
+  <script>
+  new Chart(document.getElementById('gantt_75'), {
+    type:'bar',
+    data:{labels:["R1: ¿Cuál es el procedimiento para inse…", "R2: ¿Qué antisépticos se usan para la d…", "R3: ¿Cómo se trata una infección de tra…", "R4: ¿Cuáles son los criterios para reti…", "R5: ¿Qué hacer si el paciente presenta …", "R6: ¿Cuál es el procedimiento para inse…", "R7: ¿Qué antisépticos se usan para la d…", "R8: ¿Cómo se trata una infección de tra…", "R9: ¿Cuáles son los criterios para reti…", "R10: ¿Qué hacer si el paciente presenta …", "R11: ¿Cuál es el procedimiento para inse…", "R12: ¿Qué antisépticos se usan para la d…", "R13: ¿Cómo se trata una infección de tra…", "R14: ¿Cuáles son los criterios para reti…", "R15: ¿Qué hacer si el paciente presenta …", "R16: ¿Cuál es el procedimiento para inse…", "R17: ¿Qué antisépticos se usan para la d…", "R18: ¿Cómo se trata una infección de tra…", "R19: ¿Cuáles son los criterios para reti…", "R20: ¿Qué hacer si el paciente presenta …", "R21: ¿Cuál es el procedimiento para inse…", "R22: ¿Qué antisépticos se usan para la d…", "R23: ¿Cómo se trata una infección de tra…", "R24: ¿Cuáles son los criterios para reti…", "R25: ¿Qué hacer si el paciente presenta …", "R26: ¿Cuál es el procedimiento para inse…", "R27: ¿Qué antisépticos se usan para la d…", "R28: ¿Cómo se trata una infección de tra…", "R29: ¿Cuáles son los criterios para reti…", "R30: ¿Qué hacer si el paciente presenta …", "R31: ¿Cuál es el procedimiento para inse…", "R32: ¿Qué antisépticos se usan para la d…", "R33: ¿Cómo se trata una infección de tra…", "R34: ¿Cuáles son los criterios para reti…", "R35: ¿Qué hacer si el paciente presenta …", "R36: ¿Cuál es el procedimiento para inse…", "R37: ¿Qué antisépticos se usan para la d…", "R38: ¿Cómo se trata una infección de tra…", "R39: ¿Cuáles son los criterios para reti…", "R40: ¿Qué hacer si el paciente presenta …", "R41: ¿Cuál es el procedimiento para inse…", "R42: ¿Qué antisépticos se usan para la d…", "R43: ¿Cómo se trata una infección de tra…", "R44: ¿Cuáles son los criterios para reti…", "R45: ¿Qué hacer si el paciente presenta …", "R46: ¿Cuál es el procedimiento para inse…", "R47: ¿Qué antisépticos se usan para la d…", "R48: ¿Cómo se trata una infección de tra…", "R49: ¿Cuáles son los criterios para reti…", "R50: ¿Qué hacer si el paciente presenta …", "R51: ¿Cuál es el procedimiento para inse…", "R52: ¿Qué antisépticos se usan para la d…", "R53: ¿Cómo se trata una infección de tra…", "R54: ¿Cuáles son los criterios para reti…", "R55: ¿Qué hacer si el paciente presenta …", "R56: ¿Cuál es el procedimiento para inse…", "R57: ¿Qué antisépticos se usan para la d…", "R58: ¿Cómo se trata una infección de tra…", "R59: ¿Cuáles son los criterios para reti…", "R60: ¿Qué hacer si el paciente presenta …", "R61: ¿Cuál es el procedimiento para inse…", "R62: ¿Qué antisépticos se usan para la d…", "R63: ¿Cómo se trata una infección de tra…", "R64: ¿Cuáles son los criterios para reti…", "R65: ¿Qué hacer si el paciente presenta …", "R66: ¿Cuál es el procedimiento para inse…", "R67: ¿Qué antisépticos se usan para la d…", "R68: ¿Cómo se trata una infección de tra…", "R69: ¿Cuáles son los criterios para reti…", "R70: ¿Qué hacer si el paciente presenta …", "R71: ¿Cuál es el procedimiento para inse…", "R72: ¿Qué antisépticos se usan para la d…", "R73: ¿Cómo se trata una infección de tra…", "R74: ¿Cuáles son los criterios para reti…", "R75: ¿Qué hacer si el paciente presenta …"],datasets:[{"label": "Router", "data": [[0.0, 1.635], [0.0, 1.827], [0.001, 1.816], [0.001, 1.652], [0.002, 1.676], [0.002, 1.651], [0.003, 1.913], [0.003, 1.914], [0.003, 1.694], [0.004, 1.772], [0.004, 1.674], [0.004, 1.884], [0.005, 1.916], [0.005, 1.771], [0.005, 1.816], [0.006, 1.843], [0.006, 1.916], [0.006, 1.916], [0.007, 1.674], [0.007, 1.725], [0.007, 1.771], [0.008, 1.959], [0.008, 1.919], [0.008, 1.915], [0.009, 1.826], [0.009, 1.914], [0.009, 1.957], [0.01, 1.919], [0.01, 1.916], [0.011, 1.827], [0.011, 1.916], [0.011, 1.959], [0.012, 1.92], [0.012, 1.772], [0.012, 1.917], [0.013, 1.771], [0.013, 1.959], [0.013, 1.915], [0.014, 1.915], [0.014, 1.915], [0.015, 1.913], [0.015, 1.959], [0.015, 1.92], [0.016, 1.914], [0.016, 1.826], [0.016, 1.916], [0.017, 2.031], [0.017, 1.957], [0.017, 1.916], [0.018, 1.915], [0.018, 2.031], [0.019, 1.958], [0.019, 2.031], [0.019, 1.883], [0.02, 1.844], [0.02, 1.874], [0.02, 1.957], [0.021, 1.858], [0.021, 1.826], [0.022, 1.844], [0.022, 1.916], [0.022, 1.959], [0.023, 2.033], [0.023, 1.914], [0.023, 1.913], [0.024, 1.916], [0.024, 1.957], [0.025, 1.959], [0.025, 1.843], [0.025, 1.917], [0.026, 1.892], [0.026, 1.959], [0.027, 1.957], [0.028, 1.843], [0.028, 1.913]], "backgroundColor": "rgba(99,102,241,0.85)", "borderRadius": 3}, {"label": "Retriever", "data": [[1.635, 1.915], [1.827, 2.217], [1.816, 2.038], [1.652, 1.707], [1.676, 1.843], [1.651, 1.914], [1.913, 4.705], [1.914, 4.06], [1.694, 1.844], [1.772, 3.036], [1.674, 1.842], [1.884, 4.097], [1.916, 4.04], [1.771, 3.071], [1.816, 3.027], [1.843, 2.341], [1.916, 4.711], [1.916, 4.69], [1.674, 1.71], [1.725, 1.843], [1.771, 2.097], [1.959, 4.321], [1.919, 4.077], [1.915, 3.133], [1.826, 2.818], [1.914, 4.308], [1.957, 4.036], [1.919, 4.804], [1.916, 4.316], [1.827, 3.393], [1.916, 4.095], [1.959, 4.797], [1.92, 2.805], [1.772, 4.712], [1.917, 3.861], [1.771, 3.071], [1.959, 4.817], [1.915, 4.708], [1.915, 3.111], [1.915, 4.306], [1.913, 4.102], [1.959, 4.827], [1.92, 3.603], [1.914, 3.071], [1.826, 2.751], [1.916, 3.077], [2.031, 2.555], [1.957, 4.041], [1.916, 3.184], [1.915, 4.039], [2.031, 2.217], [1.958, 4.832], [2.031, 2.539], [1.883, 3.786], [1.844, 4.299], [1.874, 2.062], [1.957, 4.035], [1.858, 2.036], [1.826, 2.135], [1.844, 3.951], [1.916, 3.104], [1.959, 4.81], [2.033, 2.226], [1.914, 3.077], [1.913, 4.076], [1.916, 4.519], [1.957, 4.038], [1.959, 2.811], [1.843, 1.994], [1.917, 4.102], [1.892, 2.82], [1.959, 4.839], [1.957, 4.037], [1.843, 1.919], [1.913, 4.093]], "backgroundColor": "rgba(34,197,94,0.85)", "borderRadius": 3}, {"label": "Generador", "data": [[1.915, 18.006], [2.217, 16.526], [2.038, 10.693], [1.707, 6.605], [1.843, 15.035], [1.914, 18.073], [4.705, 19.495], [4.06, 13.29], [1.844, 7.25], [3.036, 15.945], [1.842, 18.134], [4.097, 20.253], [4.04, 13.503], [3.071, 7.918], [3.027, 16.389], [2.341, 19.006], [4.711, 19.99], [4.69, 15.701], [1.71, 6.519], [1.843, 14.45], [2.097, 18.551], [4.321, 18.7], [4.077, 6.244], [3.133, 9.32], [2.818, 16.177], [4.308, 20.592], [4.036, 19.889], [4.804, 10.421], [4.316, 9.199], [3.393, 16.744], [4.095, 20.457], [4.797, 20.385], [2.805, 12.06], [4.712, 9.69], [3.861, 15.684], [3.071, 18.976], [4.817, 18.293], [4.708, 10.811], [3.111, 8.489], [4.306, 17.77], [4.102, 20.525], [4.827, 19.164], [3.603, 13.71], [3.071, 7.672], [2.751, 15.232], [3.077, 19.605], [2.555, 18.425], [4.041, 9.09], [3.184, 8.576], [4.039, 17.57], [2.217, 18.74], [4.832, 20.818], [2.539, 11.121], [3.786, 9.401], [4.299, 17.148], [2.062, 18.467], [4.035, 20.119], [2.036, 3.86], [2.135, 7.35], [3.951, 15.459], [3.104, 19.527], [4.81, 19.369], [2.226, 11.552], [3.077, 8.806], [4.076, 17.973], [4.519, 20.657], [4.038, 18.906], [2.811, 14.214], [1.994, 7.058], [4.102, 17.365], [2.82, 19.202], [4.839, 19.761], [4.037, 11.889], [1.919, 6.919], [4.093, 16.947]], "backgroundColor": "rgba(249,115,22,0.85)", "borderRadius": 3}]},
+    options:{indexAxis:'y',responsive:true,
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{title:{display:true,text:'Segundos',color:'#94a3b8'},ticks:{color:'#94a3b8'},grid:{color:'#334155'}},
+        y:{ticks:{color:'#94a3b8',font:{size:10}},grid:{color:'#334155'}},
+      },
+    },
+  });
+  </script>
+</div>
+<div class="card">
+  <h2>100 usuarios — línea de tiempo (s)
+      <span class="meta-inline">wall=25.5 s · avg total=17.5 s · avg TTFT=5.1 s</span>
+  </h2>
+  <canvas id="gantt_100" style="max-height:2860px"></canvas>
+  <script>
+  new Chart(document.getElementById('gantt_100'), {
+    type:'bar',
+    data:{labels:["R1: ¿Cuál es el procedimiento para inse…", "R2: ¿Qué antisépticos se usan para la d…", "R3: ¿Cómo se trata una infección de tra…", "R4: ¿Cuáles son los criterios para reti…", "R5: ¿Qué hacer si el paciente presenta …", "R6: ¿Cuál es el procedimiento para inse…", "R7: ¿Qué antisépticos se usan para la d…", "R8: ¿Cómo se trata una infección de tra…", "R9: ¿Cuáles son los criterios para reti…", "R10: ¿Qué hacer si el paciente presenta …", "R11: ¿Cuál es el procedimiento para inse…", "R12: ¿Qué antisépticos se usan para la d…", "R13: ¿Cómo se trata una infección de tra…", "R14: ¿Cuáles son los criterios para reti…", "R15: ¿Qué hacer si el paciente presenta …", "R16: ¿Cuál es el procedimiento para inse…", "R17: ¿Qué antisépticos se usan para la d…", "R18: ¿Cómo se trata una infección de tra…", "R19: ¿Cuáles son los criterios para reti…", "R20: ¿Qué hacer si el paciente presenta …", "R21: ¿Cuál es el procedimiento para inse…", "R22: ¿Qué antisépticos se usan para la d…", "R23: ¿Cómo se trata una infección de tra…", "R24: ¿Cuáles son los criterios para reti…", "R25: ¿Qué hacer si el paciente presenta …", "R26: ¿Cuál es el procedimiento para inse…", "R27: ¿Qué antisépticos se usan para la d…", "R28: ¿Cómo se trata una infección de tra…", "R29: ¿Cuáles son los criterios para reti…", "R30: ¿Qué hacer si el paciente presenta …", "R31: ¿Cuál es el procedimiento para inse…", "R32: ¿Qué antisépticos se usan para la d…", "R33: ¿Cómo se trata una infección de tra…", "R34: ¿Cuáles son los criterios para reti…", "R35: ¿Qué hacer si el paciente presenta …", "R36: ¿Cuál es el procedimiento para inse…", "R37: ¿Qué antisépticos se usan para la d…", "R38: ¿Cómo se trata una infección de tra…", "R39: ¿Cuáles son los criterios para reti…", "R40: ¿Qué hacer si el paciente presenta …", "R41: ¿Cuál es el procedimiento para inse…", "R42: ¿Qué antisépticos se usan para la d…", "R43: ¿Cómo se trata una infección de tra…", "R44: ¿Cuáles son los criterios para reti…", "R45: ¿Qué hacer si el paciente presenta …", "R46: ¿Cuál es el procedimiento para inse…", "R47: ¿Qué antisépticos se usan para la d…", "R48: ¿Cómo se trata una infección de tra…", "R49: ¿Cuáles son los criterios para reti…", "R50: ¿Qué hacer si el paciente presenta …", "R51: ¿Cuál es el procedimiento para inse…", "R52: ¿Qué antisépticos se usan para la d…", "R53: ¿Cómo se trata una infección de tra…", "R54: ¿Cuáles son los criterios para reti…", "R55: ¿Qué hacer si el paciente presenta …", "R56: ¿Cuál es el procedimiento para inse…", "R57: ¿Qué antisépticos se usan para la d…", "R58: ¿Cómo se trata una infección de tra…", "R59: ¿Cuáles son los criterios para reti…", "R60: ¿Qué hacer si el paciente presenta …", "R61: ¿Cuál es el procedimiento para inse…", "R62: ¿Qué antisépticos se usan para la d…", "R63: ¿Cómo se trata una infección de tra…", "R64: ¿Cuáles son los criterios para reti…", "R65: ¿Qué hacer si el paciente presenta …", "R66: ¿Cuál es el procedimiento para inse…", "R67: ¿Qué antisépticos se usan para la d…", "R68: ¿Cómo se trata una infección de tra…", "R69: ¿Cuáles son los criterios para reti…", "R70: ¿Qué hacer si el paciente presenta …", "R71: ¿Cuál es el procedimiento para inse…", "R72: ¿Qué antisépticos se usan para la d…", "R73: ¿Cómo se trata una infección de tra…", "R74: ¿Cuáles son los criterios para reti…", "R75: ¿Qué hacer si el paciente presenta …", "R76: ¿Cuál es el procedimiento para inse…", "R77: ¿Qué antisépticos se usan para la d…", "R78: ¿Cómo se trata una infección de tra…", "R79: ¿Cuáles son los criterios para reti…", "R80: ¿Qué hacer si el paciente presenta …", "R81: ¿Cuál es el procedimiento para inse…", "R82: ¿Qué antisépticos se usan para la d…", "R83: ¿Cómo se trata una infección de tra…", "R84: ¿Cuáles son los criterios para reti…", "R85: ¿Qué hacer si el paciente presenta …", "R86: ¿Cuál es el procedimiento para inse…", "R87: ¿Qué antisépticos se usan para la d…", "R88: ¿Cómo se trata una infección de tra…", "R89: ¿Cuáles son los criterios para reti…", "R90: ¿Qué hacer si el paciente presenta …", "R91: ¿Cuál es el procedimiento para inse…", "R92: ¿Qué antisépticos se usan para la d…", "R93: ¿Cómo se trata una infección de tra…", "R94: ¿Cuáles son los criterios para reti…", "R95: ¿Qué hacer si el paciente presenta …", "R96: ¿Cuál es el procedimiento para inse…", "R97: ¿Qué antisépticos se usan para la d…", "R98: ¿Cómo se trata una infección de tra…", "R99: ¿Cuáles son los criterios para reti…", "R100: ¿Qué hacer si el paciente presenta …"],datasets:[{"label": "Router", "data": [[0.0, 2.08], [0.001, 2.176], [0.001, 2.251], [0.002, 2.081], [0.003, 2.026], [0.003, 1.936], [0.003, 2.174], [0.004, 2.252], [0.004, 2.11], [0.004, 2.151], [0.005, 2.112], [0.005, 2.194], [0.005, 2.256], [0.007, 2.112], [0.007, 2.138], [0.008, 2.205], [0.008, 2.272], [0.008, 2.41], [0.009, 2.112], [0.009, 2.138], [0.009, 2.398], [0.01, 2.411], [0.01, 2.257], [0.01, 2.114], [0.011, 2.15], [0.011, 2.205], [0.011, 2.294], [0.012, 2.412], [0.012, 2.113], [0.012, 2.151], [0.013, 2.21], [0.013, 2.41], [0.013, 2.413], [0.014, 2.114], [0.014, 2.138], [0.015, 2.243], [0.015, 2.294], [0.016, 2.273], [0.016, 2.114], [0.017, 2.138], [0.017, 2.113], [0.018, 2.266], [0.019, 2.411], [0.019, 2.112], [0.02, 2.138], [0.02, 2.257], [0.021, 2.252], [0.022, 2.252], [0.022, 2.257], [0.023, 2.21], [0.023, 2.411], [0.023, 2.31], [0.024, 2.41], [0.024, 2.157], [0.025, 2.21], [0.025, 2.23], [0.025, 2.309], [0.026, 2.261], [0.026, 2.15], [0.026, 2.21], [0.027, 2.113], [0.027, 2.31], [0.028, 2.304], [0.028, 2.257], [0.028, 2.209], [0.029, 2.412], [0.029, 2.309], [0.03, 2.273], [0.03, 2.412], [0.03, 2.21], [0.031, 2.409], [0.031, 2.409], [0.032, 2.411], [0.032, 2.21], [0.032, 2.21], [0.033, 2.294], [0.033, 2.413], [0.034, 2.309], [0.034, 2.397], [0.034, 2.397], [0.035, 2.138], [0.035, 2.309], [0.036, 2.411], [0.036, 2.257], [0.036, 2.176], [0.037, 2.397], [0.037, 2.409], [0.038, 2.41], [0.038, 2.158], [0.039, 2.21], [0.039, 2.398], [0.039, 2.309], [0.04, 2.412], [0.04, 2.113], [0.041, 2.174], [0.041, 2.256], [0.042, 2.41], [0.042, 2.409], [0.042, 2.157], [0.043, 2.174]], "backgroundColor": "rgba(99,102,241,0.85)", "borderRadius": 3}, {"label": "Retriever", "data": [[2.08, 2.162], [2.176, 5.681], [2.251, 3.468], [2.081, 2.453], [2.026, 2.412], [1.936, 2.411], [2.174, 3.472], [2.252, 3.467], [2.11, 2.269], [2.151, 5.281], [2.112, 2.434], [2.194, 5.916], [2.256, 5.11], [2.112, 2.434], [2.138, 5.532], [2.205, 3.468], [2.272, 5.902], [2.41, 5.525], [2.112, 2.322], [2.138, 3.429], [2.398, 5.299], [2.411, 5.583], [2.257, 4.796], [2.114, 2.765], [2.15, 5.874], [2.205, 3.466], [2.294, 5.866], [2.412, 5.528], [2.113, 2.434], [2.151, 5.88], [2.21, 4.664], [2.41, 5.584], [2.413, 5.529], [2.114, 2.765], [2.138, 2.701], [2.243, 2.464], [2.294, 5.927], [2.273, 5.701], [2.114, 2.765], [2.138, 2.883], [2.113, 2.272], [2.266, 2.617], [2.411, 5.532], [2.112, 2.417], [2.138, 5.533], [2.257, 4.664], [2.252, 3.485], [2.252, 3.462], [2.257, 5.026], [2.21, 5.833], [2.411, 5.526], [2.31, 5.889], [2.41, 5.525], [2.157, 2.373], [2.21, 5.915], [2.23, 2.266], [2.309, 5.937], [2.261, 2.588], [2.15, 2.882], [2.21, 5.933], [2.113, 2.274], [2.31, 5.832], [2.304, 5.68], [2.257, 5.53], [2.209, 5.898], [2.412, 5.528], [2.309, 5.938], [2.273, 3.469], [2.412, 5.528], [2.21, 5.937], [2.409, 5.532], [2.409, 5.561], [2.411, 5.527], [2.21, 2.716], [2.21, 5.897], [2.294, 5.279], [2.413, 5.583], [2.309, 5.681], [2.397, 2.878], [2.397, 5.545], [2.138, 2.765], [2.309, 5.85], [2.411, 5.526], [2.257, 5.828], [2.176, 5.547], [2.397, 2.803], [2.409, 5.573], [2.41, 5.525], [2.158, 2.368], [2.21, 5.828], [2.398, 2.764], [2.309, 5.853], [2.412, 5.528], [2.113, 2.273], [2.174, 3.478], [2.256, 4.664], [2.41, 5.572], [2.409, 5.524], [2.157, 2.459], [2.174, 2.591]], "backgroundColor": "rgba(34,197,94,0.85)", "borderRadius": 3}, {"label": "Generador", "data": [[2.162, 19.648], [5.681, 23.385], [3.468, 13.886], [2.453, 8.181], [2.412, 15.555], [2.411, 19.598], [3.472, 19.527], [3.467, 12.489], [2.269, 7.159], [5.281, 19.446], [2.434, 20.124], [5.916, 23.524], [5.11, 16.873], [2.434, 8.848], [5.532, 20.748], [3.468, 22.613], [5.902, 24.507], [5.525, 15.648], [2.322, 9.581], [3.429, 17.322], [5.299, 21.99], [5.583, 23.835], [4.796, 16.06], [2.765, 8.589], [5.874, 20.433], [3.466, 22.526], [5.866, 25.397], [5.528, 15.301], [2.434, 9.536], [5.88, 22.237], [4.664, 23.884], [5.584, 23.664], [5.529, 12.439], [2.765, 8.453], [2.701, 16.404], [2.464, 20.185], [5.927, 25.52], [5.701, 12.069], [2.765, 8.5], [2.883, 17.103], [2.272, 19.735], [2.617, 20.548], [5.532, 15.582], [2.417, 8.365], [5.533, 17.832], [4.664, 23.239], [3.485, 22.78], [3.462, 11.958], [5.026, 10.176], [5.833, 20.103], [5.526, 25.101], [5.889, 24.111], [5.525, 9.037], [2.373, 8.692], [5.915, 21.977], [2.266, 19.782], [5.937, 24.908], [2.588, 13.273], [2.882, 8.499], [5.933, 19.028], [2.274, 19.852], [5.832, 25.281], [5.68, 12.828], [5.53, 11.532], [5.898, 21.773], [5.528, 24.964], [5.938, 24.767], [3.469, 6.173], [5.528, 11.023], [5.937, 22.446], [5.532, 25.032], [5.561, 24.368], [5.527, 15.993], [2.716, 9.561], [5.897, 21.359], [5.279, 22.462], [5.583, 23.206], [5.681, 14.667], [2.878, 9.435], [5.545, 21.567], [2.765, 21.021], [5.85, 22.889], [5.526, 11.811], [5.828, 11.913], [5.547, 20.956], [2.803, 21.075], [5.573, 23.062], [5.525, 12.552], [2.368, 7.549], [5.828, 19.224], [2.764, 21.124], [5.853, 24.219], [5.528, 15.705], [2.273, 8.485], [3.478, 17.492], [4.664, 23.93], [5.572, 24.755], [5.524, 17.543], [2.459, 7.65], [2.591, 16.832]], "backgroundColor": "rgba(249,115,22,0.85)", "borderRadius": 3}]},
+    options:{indexAxis:'y',responsive:true,
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{title:{display:true,text:'Segundos',color:'#94a3b8'},ticks:{color:'#94a3b8'},grid:{color:'#334155'}},
+        y:{ticks:{color:'#94a3b8',font:{size:10}},grid:{color:'#334155'}},
+      },
+    },
+  });
+  </script>
+</div>
+
+<script>
+const LEVELS = [1, 10, 25, 50, 75, 100];
+const OPTS = (title, color) => ({
+  responsive:true,
+  plugins:{legend:{display:false}},
+  scales:{
+    x:{title:{display:true,text:'Usuarios simultáneos',color:'#94a3b8'},
+        ticks:{color:'#94a3b8'},grid:{color:'#334155'}},
+    y:{title:{display:true,text:title,color:'#94a3b8'},
+        ticks:{color:'#94a3b8'},grid:{color:'#334155'},beginAtZero:true},
+  },
+});
+const DS = (data, color, label) => ({
+  label, data,
+  borderColor:color, backgroundColor:color.replace('1)','0.15)'),
+  pointBackgroundColor:color, pointRadius:5,
+  tension:0.3, fill:true,
+});
+
+new Chart(document.getElementById('c_total'), {
+  type:'line', data:{labels:LEVELS, datasets:[DS([5.7, 8.38, 9.38, 12.32, 14.83, 17.53],'rgba(99,102,241,1)','s')]},
+  options: OPTS('s','rgba(99,102,241,1)'),
+});
+new Chart(document.getElementById('c_ttft'), {
+  type:'line', data:{labels:LEVELS, datasets:[DS([0.85, 2.28, 2.27, 2.88, 3.7, 5.11],'rgba(139,92,246,1)','s')]},
+  options: OPTS('s','rgba(139,92,246,1)'),
+});
+new Chart(document.getElementById('c_tps'), {
+  type:'line', data:{labels:LEVELS, datasets:[DS([129.2, 64.0, 49.2, 39.6, 33.9, 29.4],'rgba(34,197,94,1)','tok/s')]},
+  options: OPTS('tok/s','rgba(34,197,94,1)'),
+});
+new Chart(document.getElementById('c_thru'), {
+  type:'line', data:{labels:LEVELS, datasets:[DS([129.2, 530.9, 970.1, 1445.8, 1874.2, 2063.6],'rgba(249,115,22,1)','tok/s')]},
+  options: OPTS('tok/s globales','rgba(249,115,22,1)'),
+});
+</script>
+</body>
+</html>
