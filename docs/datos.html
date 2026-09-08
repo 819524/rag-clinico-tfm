@@ -4,32 +4,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Datos y licencia · Asistente clínico RAG</title>
-<meta name="description" content="Experimentos y datos que respaldan las cifras de un TFM sobre RAG en protocolos clínicos. Universidad de Zaragoza.">
+<meta name="description" content="Preguntas de evaluación y resultados de un TFM sobre RAG en protocolos clínicos. Universidad de Zaragoza.">
 <link rel="stylesheet" href="assets/estilo.css">
 </head>
 <body>
 <nav class="cinta"><div class="envoltorio">
-  <span class="marca">Asistente clínico RAG</span><a href="index.html" class="">Inicio</a><a href="reproducir.html" class="">Reproducir</a><a href="trazabilidad.html" class="">Trazabilidad</a><a href="datos.html" class="activo">Datos y licencia</a>
+  <span class="marca">Asistente clínico RAG</span><a href="index.html" class="">Inicio</a><a href="datos.html" class="activo">Datos y licencia</a>
   <a href="https://github.com/819524/rag-clinico-tfm">Repositorio</a>
 </div></nav>
 
 <header class="portada"><div class="envoltorio">
   <div class="etiqueta">Política de publicación</div>
   <h1>Datos y licencia</h1>
-  <p class="entradilla">Qué se publica, qué no y por qué. El criterio: todo lo que sostiene
-  una cifra de la memoria es público; el corpus documental del hospital no se redistribuye
-  porque no es material propio.</p>
+  <p class="entradilla">Qué puede consultarse aquí, qué no y por qué. El corpus documental
+  del hospital no se redistribuye porque no es material propio.</p>
 </div></header>
 
 <section><div class="envoltorio">
-  <h2>Qué se publica</h2>
+  <h2>Qué puede consultarse</h2>
   <ul class="limpia">
-    <li><strong>Los conjuntos de referencia</strong>: 615 preguntas con su sección
-      esperada y la frase literal del protocolo que las responde.</li>
-    <li><strong>Los resultados crudos</strong> de cada ejecución, con la traza por pregunta.</li>
+    <li><strong>Las preguntas de evaluación</strong>: 615 con su sección esperada y
+      la frase literal del protocolo que las responde.</li>
+    <li><strong>Los resultados</strong> de cada ejecución, con la traza por pregunta:
+      fragmentos recuperados en orden, etiquetas de relevancia, tiempos y respuesta.</li>
     <li><strong>Las métricas agregadas</strong> de las que salen las tablas de la memoria.</li>
     <li><strong>Las mediciones de carga y la telemetría</strong> de GPU.</li>
-    <li><strong>Las herramientas</strong> que producen esas métricas, y el verificador.</li>
+    <li><strong>Las figuras</strong> que aparecen en la memoria.</li>
   </ul>
 </div></section>
 
@@ -43,16 +43,15 @@
     <li><strong>Las conversaciones del piloto</strong> mantenidas por profesionales.</li>
     <li><strong>Credenciales y direcciones</strong> de la infraestructura universitaria.</li>
   </ul>
-  <div class="aviso"><p>Los conjuntos de referencia sí incluyen la frase literal del
-  protocolo que responde a cada pregunta: 615 citas breves con atribución al
-  documento de origen. Sin ellas no sería comprobable que la respuesta esperada es razonable
-  y no está ajustada a posteriori, que es justo lo que hace auditable la evaluación.</p></div>
+  <div class="aviso"><p>Los conjuntos de preguntas sí incluyen la frase literal del protocolo
+  que responde a cada una: 615 citas breves con atribución al documento de origen.
+  Sin ellas no podría valorarse si la respuesta esperada es razonable.</p></div>
 </div></section>
 
 <section><div class="envoltorio">
   <h2>El corpus</h2>
-  <p class="sub">Los protocolos empleados, por su código interno. Los conjuntos de referencia
-  y los resultados los identifican con estos mismos códigos.</p>
+  <p class="sub">Los protocolos empleados, por su código interno. Las preguntas y los
+  resultados los identifican con estos mismos códigos.</p>
   <div class="tabla-envoltorio" style="padding:16px 20px">
     <ul class="limpia" style="columns:3;column-gap:32px"><li><code>LPP</code></li><li><code>PA-02</code></li><li><code>PA-06</code></li><li><code>PA-121</code></li><li><code>PA-17-</code></li><li><code>PA-178</code></li><li><code>PA-195</code></li><li><code>PA-199</code></li><li><code>PA-201</code></li><li><code>PA-26</code></li><li><code>PA-46</code></li><li><code>PC-08</code></li><li><code>PC-67</code></li><li><code>PC-73</code></li><li><code>PE-27</code></li><li><code>PO-05</code></li><li><code>PO-108</code></li><li><code>PO-19</code></li><li><code>PTP</code></li><li><code>RCP-120</code></li><li><code>RPC-87</code></li><li><code>RPC-89</code></li></ul>
   </div>
@@ -64,16 +63,13 @@
 </div></section>
 
 <section><div class="envoltorio">
-  <h2>Acceso al material restringido y licencias</h2>
-  <p>Quien necesite el corpus o el índice para recalcular las métricas desde cero puede
-  solicitarlo; la cesión depende de la autorización del centro titular. Solicitudes a
-  <code>mtrullen@unizar.es</code>.</p>
+  <h2>Licencia y cita</h2>
   <ul class="limpia">
-    <li><strong>Código</strong> (<code>herramientas/</code>): Apache-2.0.</li>
     <li><strong>Resultados, métricas y figuras</strong>: CC BY 4.0.</li>
     <li><strong>Documentos del hospital</strong>: no incluidos.</li>
   </ul>
-  <p>Al citar conviene fijar la revisión:</p>
+  <p>Consultas sobre el material: <code>mtrullen@unizar.es</code>.</p>
+  <p>Al citar conviene fijar la revisión, porque el repositorio puede cambiar:</p>
   <pre><code>Repositorio de experimentos del TFM «Asistente clínico RAG sobre protocolos
 hospitalarios». Universidad de Zaragoza.
 https://github.com/819524/rag-clinico-tfm (revisión &lt;hash-del-commit&gt;)</code></pre>
@@ -82,9 +78,9 @@ https://github.com/819524/rag-clinico-tfm (revisión &lt;hash-del-commit&gt;)</c
 <footer><div class="envoltorio">
   <p>Trabajo Fin de Máster · Universidad de Zaragoza · Corpus documental del Hospital
   Clínico Universitario Lozano Blesa.<br>
-  Código bajo Apache-2.0; resultados y figuras bajo CC BY 4.0. Los documentos originales del
-  hospital no se redistribuyen — véase <a href="datos.html">Datos y licencia</a>.</p>
-  <p>Generada el 2026-09-08 desde los artefactos del repositorio.</p>
+  Resultados y figuras bajo CC BY 4.0. Los documentos originales del hospital no se
+  redistribuyen — véase <a href="datos.html">Datos y licencia</a>.</p>
+  <p>Actualizada el 2026-09-08.</p>
 </div></footer>
 </body>
 </html>

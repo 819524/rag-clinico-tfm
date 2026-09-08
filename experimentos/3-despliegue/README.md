@@ -2,27 +2,18 @@
 
 # Experimento 3 · Despliegue
 
-**Respalda las Tablas 4.1 y 4.2 de la memoria** (TTFT, latencia y *stall* a 25 usuarios; y
-comportamiento bajo saturación).
-
-> Las cifras de esta página son las **impresas en la memoria**. Para comprobar
-> que salen de los datos de este repositorio:
->
-> ```bash
-> python3 herramientas/verificar_memoria.py
-> ```
+Mediciones de las **Tablas 4.1 y 4.2 de la memoria** (TTFT, latencia y *stall* a 25
+usuarios; y comportamiento bajo saturación).
 
 ## Qué se midió
 
 Si el sistema aguanta varios profesionales consultando a la vez, qué motor de inferencia lo
-sostiene mejor y dónde está el punto en que la latencia deja de ser aceptable.
-
-## Diseño
+sostiene mejor y dónde la latencia deja de ser aceptable.
 
 Barridos de concurrencia con secuencias emparejadas: los mismos usuarios simulados, las
 mismas preguntas y el mismo orden en todas las configuraciones, de modo que las diferencias
-entre motores no puedan atribuirse a haber preguntado cosas distintas. Se crearon 10 bancos
-de 110 preguntas y la repetición *k* usa la secuencia *k* en los tres motores.
+entre motores no puedan atribuirse a haber preguntado cosas distintas. Diez bancos de 110
+preguntas; la repetición *k* usó la secuencia *k* en los tres motores.
 
 - **609 barridos** sobre dos máquinas (RTX PRO 6000 de 96 GB y RTX 5090 de 32 GB)
 - **3.716 mediciones** por nivel de concurrencia
@@ -45,8 +36,7 @@ Sirviendo gemma-4 26B-A4B; llama.cpp y Ollama con NP = 8.
 
 > Las peticiones que se estancan nunca llegan a emitir primer token: aparecen en las
 > columnas de latencia y de *stall*, no en las de TTFT. Son entre cuatro y cinco por celda,
-> con tiempos totales de 185 a 198 s. Excluirlas cambia el resultado, así que las tablas se
-> calculan incluyéndolas.
+> con tiempos totales de 185 a 198 s, y están incluidas en las cifras publicadas.
 
 ## Tabla 4.2 — Saturación con vLLM
 
@@ -61,40 +51,19 @@ La máquina mayor no registra una sola respuesta por encima del umbral en todo e
 La RTX 5090 sostiene el servicio hasta los cien usuarios y a partir de ahí se rompe con
 rapidez.
 
-## Contenido
+## Qué hay en esta carpeta
 
-| Ruta | Qué es |
+| Ruta | Contenido |
 |---|---|
-| `peticiones.csv` | 58.152 filas, una por petición: **de aquí sale la Tabla 4.1 y la 4.2** |
+| `peticiones.csv` | 58.152 filas, una por petición: **aquí están los datos de las Tablas 4.1 y 4.2** |
 | `barridos.csv` | 3.716 filas, una por campaña, motor, celda, repetición y nivel |
 | `telemetria_resumen.csv` | 842 filas: utilización, potencia y memoria por ejecución y GPU |
-| `telemetria_muestras.csv` | muestras individuales del modelo 26B, para las figuras de utilización |
-| `configuraciones-de-motor.md` | parámetros exactos de arranque de cada motor |
-| `informes/` | informes HTML autocontenidos con las tablas completas |
+| `telemetria_muestras.csv` | las muestras individuales del modelo 26B |
+| `configuraciones-de-motor.md` | los parámetros exactos de arranque de cada motor |
+| `informes/` | informes en HTML autocontenido, con las tablas completas |
 
-Las tablas CSV consolidan lo que en el árbol de trabajo eran miles de ficheros anidados.
-Cada fila conserva la columna `origen` con la ruta del fichero del que salió, de modo que
-cualquier medición puede rastrearse hasta su procedencia.
-
-## Lo que no está
-
-La telemetría en crudo de los modelos que no aparecen en la memoria y los volcados de
-métricas de vLLM en formato Prometheus (unos 57 MB) quedan fuera. Se facilitan a quien los
-solicite.
-
-## Reproducir
-
-```bash
-python3 -c "
-import csv, statistics as st
-from collections import defaultdict
-p = defaultdict(list)
-for f in csv.DictReader(open('experimentos/3-despliegue/barridos.csv')):
-    if f['motor'] and f['concurrencia'] == '25':
-        p[(f['maquina'], f['motor'])].append(float(f['tiempo_muro_ms']))
-for k, v in sorted(p.items()):
-    print(f'{k[0]:9} {k[1]:9} mediana {st.median(v)/1000:6.1f} s  (n={len(v)})')"
-```
+Las tablas en CSV consolidan lo que durante el trabajo fueron miles de ficheros anidados.
+Cada fila conserva la columna `origen` con la ruta del fichero del que procede.
 
 ## Figuras
 

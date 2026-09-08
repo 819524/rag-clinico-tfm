@@ -2,25 +2,16 @@
 
 # Experimento 4 · Coste y energía
 
-**Respalda la Tabla 6.1 de la memoria** («Coste mensual en euros de las cinco opciones,
-según el volumen de consultas») y las cifras del §6.1.
-
-> Las cifras de esta página son las **impresas en la memoria**. Para comprobar
-> que salen de los datos de este repositorio:
->
-> ```bash
-> python3 herramientas/verificar_memoria.py
-> ```
+Datos de la **Tabla 6.1 de la memoria** («Coste mensual en euros de las cinco opciones,
+según el volumen de consultas») y de las cifras del §6.1.
 
 ## Qué se midió
 
-Cuánto cuesta realmente sostener el servicio en infraestructura propia, y a partir de qué
-volumen sale a cuenta frente a pagar una API comercial.
-
-## Diseño
+Cuánto cuesta sostener el servicio en infraestructura propia, y a partir de qué volumen sale
+a cuenta frente a pagar una API comercial.
 
 Todas las consultas atendidas durante el período de trabajo quedaron registradas con su
-recuento de tokens y su tiempo de generación. Ese libro mayor se cruza con la telemetría de
+recuento de tokens y su tiempo de generación. Ese libro mayor se cruzó con la telemetría de
 potencia de GPU para obtener el consumo energético real por consulta, y de ahí el coste por
 consulta y el punto de equilibrio frente a la alternativa comercial.
 
@@ -39,7 +30,7 @@ consulta y el punto de equilibrio frente a la alternativa comercial.
 | **Coste total local** | **67,11 €** |
 
 La proporción de la factura que correspondería a «leer» documentos y no a generar texto va
-del **61,4 %** al **76,8 %** según el proveedor — el texto de la
+del **61,4 %** al **76,8 %** según el proveedor; el texto de la
 memoria lo redondea a «entre el 61 y el 77 %».
 
 ## Tabla 6.1 — Coste mensual por volumen
@@ -57,26 +48,17 @@ amortización del equipo (7.500 € a 60 meses) más el gasto
 mensual de electricidad y mantenimiento. En `analisis_costes.json` ambos conceptos van
 separados, en `mensual_eur` y `capex_eur`.
 
-## Contenido
+## Qué hay en esta carpeta
 
-| Ruta | Qué es |
+| Ruta | Contenido |
 |---|---|
-| `analisis_costes.json` | tarifas, escenarios y punto de equilibrio: **de aquí sale la Tabla 6.1** |
-| `resumen_global.json` | inventario consolidado de consultas, tokens y energía |
+| `analisis_costes.json` | tarifas, escenarios y punto de equilibrio: **aquí están las cifras de la Tabla 6.1** |
+| `resumen_global.json` | el inventario consolidado de consultas, tokens y energía |
 | `costes_servicio.csv` | coste acumulado del servicio en el tiempo |
-| `breakeven.csv` | punto de equilibrio frente a la API comercial por volumen |
+| `breakeven.csv` | punto de equilibrio frente a la API comercial, por volumen |
 | `sensibilidad.csv` | sensibilidad del resultado al precio del kWh |
 | `inventario_*.csv` | detalle por experimento, evaluación y ventana de telemetría |
 | `INFORME_COSTES.html` | informe autocontenido |
-
-## Reproducir
-
-```bash
-python3 herramientas/analisis_costes_nube.py    # opera sobre resumen_global.json
-```
-
-`herramientas/inventario_tokens_energia.py` regenera `resumen_global.json`, pero necesita
-acceso a la base de datos donde vive el registro de consultas.
 
 ## Figuras
 

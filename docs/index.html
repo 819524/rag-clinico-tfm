@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Inicio · Asistente clínico RAG</title>
-<meta name="description" content="Experimentos y datos que respaldan las cifras de un TFM sobre RAG en protocolos clínicos. Universidad de Zaragoza.">
+<meta name="description" content="Preguntas de evaluación y resultados de un TFM sobre RAG en protocolos clínicos. Universidad de Zaragoza.">
 <link rel="stylesheet" href="assets/estilo.css">
 </head>
 <body>
 <nav class="cinta"><div class="envoltorio">
-  <span class="marca">Asistente clínico RAG</span><a href="index.html" class="activo">Inicio</a><a href="reproducir.html" class="">Reproducir</a><a href="trazabilidad.html" class="">Trazabilidad</a><a href="datos.html" class="">Datos y licencia</a>
+  <span class="marca">Asistente clínico RAG</span><a href="index.html" class="activo">Inicio</a><a href="datos.html" class="">Datos y licencia</a>
   <a href="https://github.com/819524/rag-clinico-tfm">Repositorio</a>
 </div></nav>
 
@@ -17,36 +17,28 @@
   <div class="etiqueta">Trabajo Fin de Máster · Universidad de Zaragoza</div>
   <h1>Asistente clínico RAG sobre protocolos hospitalarios</h1>
   <p class="entradilla">Un sistema que responde preguntas de profesionales sanitarios
-  citando los procedimientos oficiales de su hospital. Estas páginas recogen los datos que
-  respaldan cada cifra publicada en la memoria, para que puedan comprobarse en lugar de
-  darse por buenas.</p>
+  citando los procedimientos oficiales de su hospital. Aquí pueden consultarse las
+  preguntas con que se evaluó y los resultados que obtuvo.</p>
 </div></header>
 
 <section><div class="envoltorio">
-  <h2>Comprobar que las cifras concuerdan</h2>
-  <p class="sub">El repositorio incluye un verificador con las tablas de la memoria
-  transcritas tal como están impresas. Recalcula cada celda desde los ficheros publicados y
-  señala cualquier diferencia.</p>
-  <pre><code>git clone https://github.com/819524/rag-clinico-tfm.git
-cd rag-clinico-tfm
-python3 herramientas/verificar_memoria.py</code></pre>
-  <div class="aviso"><p>193 comprobaciones, sin base de datos, modelos ni red.
-  <strong>Las 193 comprobaciones concuerdan.</strong></p></div>
+  <h2>El material</h2>
+  <div class="cifras"><div class="cifra"><div class="v">22</div><div class="k">protocolos en el corpus</div></div><div class="cifra"><div class="v">615</div><div class="k">preguntas de evaluación</div></div><div class="cifra"><div class="v">147</div><div class="k">ficheros de resultados</div></div><div class="cifra"><div class="v">58.152</div><div class="k">peticiones medidas bajo carga</div></div><div class="cifra"><div class="v">68.521</div><div class="k">consultas registradas</div></div><div class="cifra"><div class="v">37,4 kWh</div><div class="k">energía de pared</div></div></div>
 </div></section>
 
 <section><div class="envoltorio">
   <h2>Los experimentos</h2>
   <p class="sub">Uno por tabla de la memoria. Cada carpeta se abre explicando qué se midió,
-  cómo, la tabla reproducida y qué fichero la sostiene.</p>
+  la tabla tal como aparece publicada y qué fichero contiene sus cifras.</p>
   <div class="tarjetas"><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/1-recuperacion">
-      <h3>1. Recuperación</h3><p>¿Recupera la sección correcta cuando la consulta se dirige a un protocolo, y cuánto se pierde con un modelo de embedding más pequeño?</p>
-      <p style="margin-top:10px"><span class="pastilla">respalda la Tabla 5.1</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/2-contexto-cruzado">
-      <h3>2. Contexto cruzado</h3><p>Las mismas preguntas, agrupadas por documento o entrelazadas. La diferencia es la penalización de cambiar de tema en una conversación.</p>
-      <p style="margin-top:10px"><span class="pastilla">respalda la Tabla 5.2</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/3-despliegue">
-      <h3>3. Despliegue</h3><p>Cuántos profesionales simultáneos aguanta, con qué motor de inferencia y dónde la latencia deja de ser aceptable.</p>
-      <p style="margin-top:10px"><span class="pastilla">respalda la Tablas 4.1 y 4.2</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/4-costes">
-      <h3>4. Coste y energía</h3><p>Cuánto cuesta sostenerlo en infraestructura propia y a partir de qué volumen sale a cuenta frente a una API comercial.</p>
-      <p style="margin-top:10px"><span class="pastilla">respalda la Tabla 6.1</span></p></a></div>
+      <h3>1. Recuperación</h3><p>615 preguntas sobre 22 protocolos, tres estrategias de ordenación y dos modelos de embedding, con sus resultados por pregunta.</p>
+      <p style="margin-top:10px"><span class="pastilla">Tabla 5.1</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/2-contexto-cruzado">
+      <h3>2. Contexto cruzado</h3><p>Las mismas 110 preguntas agrupadas por protocolo y entrelazadas, para medir el efecto de cambiar de tema dentro de una conversación.</p>
+      <p style="margin-top:10px"><span class="pastilla">Tabla 5.2</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/3-despliegue">
+      <h3>3. Despliegue</h3><p>Mediciones de latencia, tiempo hasta el primer token y saturación bajo carga concurrente, en dos máquinas y tres motores de inferencia.</p>
+      <p style="margin-top:10px"><span class="pastilla">Tablas 4.1 y 4.2</span></p></a><a class="tarjeta" href="https://github.com/819524/rag-clinico-tfm/tree/main/experimentos/4-costes">
+      <h3>4. Coste y energía</h3><p>El libro mayor de consultas cruzado con la telemetría de potencia, y la comparación de coste frente a las API comerciales.</p>
+      <p style="margin-top:10px"><span class="pastilla">Tabla 6.1</span></p></a></div>
 </div></section>
 
 <section><div class="envoltorio">
@@ -77,22 +69,12 @@ python3 herramientas/verificar_memoria.py</code></pre>
   </ul>
 </div></section>
 
-<section><div class="envoltorio">
-  <h2>Lo que este repositorio no puede demostrar</h2>
-  <div class="aviso cautela"><p>Los documentos del hospital no se redistribuyen, así que las
-  métricas de recuperación <strong>no pueden recalcularse desde cero</strong>: la etiqueta de
-  relevancia se decide contra el texto completo de la sección, que vive en la base de datos.
-  Lo que sí se verifica es que las tablas impresas coinciden con las métricas publicadas y
-  que los datos de partida son los declarados.</p>
-  <p>El detalle, en <a href="reproducir.html">Reproducir</a>.</p></div>
-</div></section>
-
 <footer><div class="envoltorio">
   <p>Trabajo Fin de Máster · Universidad de Zaragoza · Corpus documental del Hospital
   Clínico Universitario Lozano Blesa.<br>
-  Código bajo Apache-2.0; resultados y figuras bajo CC BY 4.0. Los documentos originales del
-  hospital no se redistribuyen — véase <a href="datos.html">Datos y licencia</a>.</p>
-  <p>Generada el 2026-09-08 desde los artefactos del repositorio.</p>
+  Resultados y figuras bajo CC BY 4.0. Los documentos originales del hospital no se
+  redistribuyen — véase <a href="datos.html">Datos y licencia</a>.</p>
+  <p>Actualizada el 2026-09-08.</p>
 </div></footer>
 </body>
 </html>
