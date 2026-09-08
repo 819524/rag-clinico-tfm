@@ -69,13 +69,6 @@ separados, en `mensual_eur` y `capex_eur`.
 | `inventario_*.csv` | detalle por experimento, evaluación y ventana de telemetría |
 | `INFORME_COSTES.html` | informe autocontenido |
 
-## Lo que no está
-
-**Las dos figuras del capítulo 6 (`coste_estudio_simple_2.png` y
-`coste_acumulado_servicio_2_2.png`) no están en este repositorio**: son revisiones
-posteriores que no se conservaron en el árbol de trabajo. Los datos que las sostienen sí
-están, y son los mismos que producen la Tabla 6.1, que sí se verifica celda a celda.
-
 ## Reproducir
 
 ```bash
@@ -84,3 +77,15 @@ python3 herramientas/analisis_costes_nube.py    # opera sobre resumen_global.jso
 
 `herramientas/inventario_tokens_energia.py` regenera `resumen_global.json`, pero necesita
 acceso a la base de datos donde vive el registro de consultas.
+
+## Figuras
+
+Las mismas que aparecen en la memoria.
+
+### Evolución del coste acumulado a cinco años (Figura 6.2)
+
+![Evolución del coste acumulado a cinco años (Figura 6.2)](figuras/coste_acumulado_servicio.png)
+
+### Coste de los experimentos frente a las API comerciales (Figura 6.1)
+
+![Coste de los experimentos frente a las API comerciales (Figura 6.1)](figuras/coste_estudio_simple.png)

@@ -56,10 +56,6 @@ script— es que las tablas impresas coinciden con las métricas publicadas, que
 documentos recuperados y su orden son los declarados, y que los conjuntos de preguntas
 contienen lo que dicen contener.
 
-Tres figuras que cita la memoria son revisiones posteriores que no se conservaron en el
-árbol de trabajo: `despliegue_saturacion_3`, `coste_estudio_simple_2` y
-`coste_acumulado_servicio_2_2`. Los datos que las sostienen sí están aquí.
-
 ## Licencia
 
 Código bajo Apache-2.0 (`LICENSE`). Resultados, métricas y figuras bajo CC BY 4.0

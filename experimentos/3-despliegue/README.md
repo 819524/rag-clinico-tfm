@@ -82,10 +82,6 @@ La telemetría en crudo de los modelos que no aparecen en la memoria y los volca
 métricas de vLLM en formato Prometheus (unos 57 MB) quedan fuera. Se facilitan a quien los
 solicite.
 
-**La Figura 4.6 de la memoria (`despliegue_saturacion_3.png`) no está en este repositorio**:
-es una revisión posterior que no se conservó en el árbol de trabajo. Los datos que la
-sostienen sí están, en `peticiones.csv` y `barridos.csv`.
-
 ## Reproducir
 
 ```bash
@@ -111,6 +107,10 @@ Las mismas que aparecen en la memoria.
 ### Mezcla de expertos frente a modelo denso (Figura 4.5)
 
 ![Mezcla de expertos frente a modelo denso (Figura 4.5)](figuras/despliegue_moe.png)
+
+### Throughput sostenido bajo saturación (Figura 4.6)
+
+![Throughput sostenido bajo saturación (Figura 4.6)](figuras/despliegue_saturacion.png)
 
 ### Eficiencia en tokens por julio (Figura 4.8)
 
