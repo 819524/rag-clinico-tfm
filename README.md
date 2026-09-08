@@ -4,8 +4,6 @@ Material de consulta del Trabajo Fin de Máster del mismo nombre, Universidad de
 El sistema responde preguntas de profesionales sanitarios citando los procedimientos
 asistenciales del Hospital Clínico Universitario Lozano Blesa.
 
-**[→ Página del proyecto](https://819524.github.io/rag-clinico-tfm/)**
-
 Aquí están **las preguntas empleadas para evaluar el sistema y los resultados obtenidos**.
 Cada carpeta de `experimentos/` corresponde a una tabla de la memoria y contiene los
 ficheros de los que salen sus cifras.
