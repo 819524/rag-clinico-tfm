@@ -4,24 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Trazabilidad · Asistente clínico RAG</title>
-<meta name="description" content="Experimentos y resultados de un sistema RAG sobre protocolos clínicos. Trabajo Fin de Máster, Universidad de Zaragoza.">
+<meta name="description" content="Experimentos y datos que respaldan las cifras de un TFM sobre RAG en protocolos clínicos. Universidad de Zaragoza.">
 <link rel="stylesheet" href="assets/estilo.css">
 </head>
 <body>
 <nav class="cinta"><div class="envoltorio">
-  <span class="marca">Asistente clínico RAG</span>
-  <a href="index.html" class="">Inicio</a><a href="reproducir.html" class="">Reproducir</a><a href="trazabilidad.html" class="activo">Trazabilidad</a><a href="datos.html" class="">Datos y licencia</a>
+  <span class="marca">Asistente clínico RAG</span><a href="index.html" class="">Inicio</a><a href="reproducir.html" class="">Reproducir</a><a href="trazabilidad.html" class="activo">Trazabilidad</a><a href="datos.html" class="">Datos y licencia</a>
   <a href="https://github.com/819524/rag-clinico-tfm">Repositorio</a>
 </div></nav>
 
 <header class="portada"><div class="envoltorio">
   <div class="etiqueta">Contraste</div>
   <h1>Trazabilidad de las cifras</h1>
-  <p class="entradilla">El documento que permite auditar la memoria: cada tabla del capítulo
-  de evaluación enlazada con el fichero del que sale y el comando que la regenera, con las
-  decisiones metodológicas discutibles y las limitaciones declaradas.</p>
+  <p class="entradilla">De dónde sale cada número del capítulo de evaluación, con las
+  decisiones metodológicas discutibles y las limitaciones declaradas de forma explícita.</p>
 </div></header>
-<section><div class="envoltorio"><div class="md"><h1>Trazabilidad de las cifras del Capítulo 5</h1>
+<section><div class="envoltorio"><div class="md">
+<h1>Trazabilidad de las cifras del Capítulo 5</h1>
 <p>Para cada número del capítulo de evaluación: de dónde sale y con qué comando se vuelve a obtener. Se publica para que las cifras puedan contrastarse una a una.</p>
 <hr />
 <h2>1. Cadena de datos</h2>
@@ -43,22 +42,22 @@
 </thead>
 <tbody>
 <tr>
-<td><code>experimentos/1-recuperacion-por-documento/resultados/embedding-4b</code></td>
+<td><code>experimentos/1-recuperacion/resultados/embedding-4b</code></td>
 <td>22 protocolos por separado, embedding 4B</td>
 <td>615</td>
 </tr>
 <tr>
-<td><code>experimentos/1-recuperacion-por-documento/resultados/embedding-06b</code></td>
+<td><code>experimentos/1-recuperacion/resultados/embedding-06b</code></td>
 <td>22 protocolos por separado, embedding 0.6B</td>
 <td>615</td>
 </tr>
 <tr>
-<td><code>experimentos/2-recuperacion-multidocumento/resultados/embedding-4b</code></td>
+<td><code>experimentos/2-contexto-cruzado/resultados-global</code></td>
 <td>sesión multi-documento, embedding 4B</td>
 <td>110</td>
 </tr>
 <tr>
-<td><code>experimentos/2-recuperacion-multidocumento/resultados/embedding-06b</code></td>
+<td><code>experimentos/2-contexto-cruzado/resultados-global</code></td>
 <td>sesión multi-documento, embedding 0.6B</td>
 <td>110</td>
 </tr>
@@ -70,7 +69,7 @@
 <p>Reproducir:</p>
 <pre><code class="language-bash">python3 -c &quot;
 import json
-d=json.load(open('experimentos/1-recuperacion-por-documento/resultados/embedding-4b/section_metrics_summary.json'))
+d=json.load(open('experimentos/1-recuperacion/resultados/embedding-4b/section_metrics_summary.json'))
 print({k:v for k,v in d['strategies']['cross_encoder'].items() if k.startswith('sec@0.7')})&quot;
 </code></pre>
 <p>Verificado: las 36 celdas de las dos tablas del capítulo coinciden al tercer decimal.</p>
@@ -166,7 +165,7 @@ La revisión no identificó falsos positivos del filtro.</p>
 </table>
 <p>El efecto es homogéneo entre estrategias, por lo que no altera su ordenación relativa.
 Este es el argumento que respalda la frase del capítulo.</p>
-<p><strong>No regenerable desde este repositorio:</strong> el script que produjo esta tabla era de un solo uso y no se conservó. Véase la nota en la página <em>Reproducir</em>.</p>
+<p><strong>No regenerable desde este repositorio:</strong> el script que produjo esta tabla era de un solo uso y no se conservó.</p>
 <p><strong>NOTA sobre <code>n_overridden</code> del summary:</strong> vale 320 / 293 / 67 / 56, pero acumula sobre los
 TRES umbrales (0,5 / 0,7 / 0,9) y cuenta etiquetas de chunk, no pares. No usar esa cifra.</p>
 <hr />
@@ -414,8 +413,8 @@ límite de 10.000. <strong>Verificar con <code>texcount -inc -total main.tex</co
 <footer><div class="envoltorio">
   <p>Trabajo Fin de Máster · Universidad de Zaragoza · Corpus documental del Hospital
   Clínico Universitario Lozano Blesa.<br>
-  Código bajo Apache-2.0; resultados y figuras bajo CC BY 4.0. Los documentos originales
-  del hospital no se redistribuyen — véase <a href="datos.html">Datos y licencia</a>.</p>
+  Código bajo Apache-2.0; resultados y figuras bajo CC BY 4.0. Los documentos originales del
+  hospital no se redistribuyen — véase <a href="datos.html">Datos y licencia</a>.</p>
   <p>Generada el 2026-09-08 desde los artefactos del repositorio.</p>
 </div></footer>
 </body>

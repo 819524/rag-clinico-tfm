@@ -1,69 +1,64 @@
 # Asistente clínico RAG sobre protocolos hospitalarios
 
-Material de evaluación de un sistema de recuperación aumentada con generación (RAG)
-construido sobre los procedimientos y protocolos asistenciales del Hospital Clínico
-Universitario Lozano Blesa. Trabajo Fin de Máster, Universidad de Zaragoza.
+Material de evaluación del Trabajo Fin de Máster del mismo nombre, Universidad de Zaragoza.
+El sistema responde preguntas de profesionales sanitarios citando los procedimientos
+asistenciales del Hospital Clínico Universitario Lozano Blesa.
 
 **[→ Página del proyecto](https://819524.github.io/rag-clinico-tfm/)**
 
-Este repositorio existe para que las afirmaciones de la memoria puedan contrastarse contra
-los datos que las sostienen. Está organizado por experimentos, no por la estructura de
-carpetas con la que se trabajó: cada carpeta de `experimentos/` es autocontenida y se abre
-explicando qué se midió, cómo y con qué resultado.
+Este repositorio contiene **lo que respalda las cifras publicadas en la memoria, y nada
+más**. Cada carpeta de `experimentos/` corresponde a una tabla del documento.
+
+## Comprobar que las cifras concuerdan
+
+```bash
+git clone https://github.com/819524/rag-clinico-tfm.git
+cd rag-clinico-tfm
+python3 herramientas/verificar_memoria.py
+```
+
+El script lleva transcritas las tablas **tal como están impresas en la memoria**, recalcula
+cada celda desde los ficheros de este repositorio y señala cualquier diferencia. Son
+**193 comprobaciones** y no necesita base de datos, modelos ni red.
 
 ## Los experimentos
 
-| | Experimento | Qué mide | Resultado de cabecera |
+| | Experimento | Respalda | Cifra de cabecera |
 |---|---|---|---|
-| 1 | [Recuperación por documento](experimentos/1-recuperacion-por-documento/) | si recupera la sección correcta con la consulta dirigida a un protocolo | 0,932 de acierto entre los 5 primeros |
-| 2 | [Recuperación multi-documento](experimentos/2-recuperacion-multidocumento/) | lo mismo, saltando entre protocolos en una conversación | 0,855 en las mismas condiciones |
-| 3 | [Cortafuegos](experimentos/3-cortafuegos/) | si reconoce lo que cae fuera de su corpus | 97,4 % de acierto de intención |
-| 4 | [Calidad de la respuesta](experimentos/4-calidad-de-respuesta/) | si la respuesta se apoya en el texto recuperado y cita bien | reproducible sin instalar nada |
-| 5 | [Carga y motores](experimentos/5-carga-y-motores/) | cuántos usuarios simultáneos aguanta y con qué motor | 3.716 mediciones de concurrencia |
-| 6 | [Coste y energía](experimentos/6-costes-y-energia/) | cuánto cuesta sostenerlo en infraestructura propia | 20,28 kWh medidos |
+| 1 | [Recuperación](experimentos/1-recuperacion/) | Tabla 5.1 | Hit@5 = 0,932 con *cross-encoder* y embedding 4B |
+| 2 | [Contexto cruzado](experimentos/2-contexto-cruzado/) | Tabla 5.2 | la penalización por cambiar de tema en la conversación |
+| 3 | [Despliegue](experimentos/3-despliegue/) | Tablas 4.1 y 4.2 | 58.152 peticiones medidas bajo carga |
+| 4 | [Coste y energía](experimentos/4-costes/) | Tabla 6.1 | 68.521 consultas, 37,4 kWh |
 
-Cada enlace lleva a una carpeta que GitHub abre mostrando su explicación completa. Son las
-direcciones que se citan desde la memoria.
+Cada enlace abre una carpeta que GitHub muestra con su explicación completa: qué se midió,
+cómo, la tabla reproducida y qué fichero la sostiene. Son las direcciones citables desde la
+memoria.
 
 ## El material
 
 - **615 preguntas de referencia** sobre 22 protocolos, cada una con la
   frase literal del documento que la responde.
-- **138 ejecuciones** de evaluación con la traza completa por pregunta.
-- **3.716 mediciones** de carga y 68.521
-  consultas en el libro mayor de costes.
-- **`herramientas/`**: los scripts que producen las métricas publicadas.
-
-## Verificar una cifra sin instalar nada
-
-```bash
-git clone https://github.com/819524/rag-clinico-tfm.git
-cd rag-clinico-tfm
-
-python3 -c "
-import json
-m = json.load(open('experimentos/1-recuperacion-por-documento/resultados/embedding-4b/section_metrics_summary.json'))
-print({k: v for k, v in m['strategies']['cross_encoder'].items() if k.startswith('sec@0.7')})"
-```
-
-El experimento 4 se reproduce entero con `python3 herramientas/eval_gen_quality.py`.
+- **Resultados crudos** de cada ejecución, con la traza completa por pregunta.
+- **58.152 peticiones** de carga con su TTFT y tiempos por fase, y la telemetría de GPU.
+- **`herramientas/`**: los scripts que producen las cifras publicadas, y el verificador.
 
 ## Qué no está publicado, y qué implica
 
 Los documentos originales del hospital y el índice vectorial que los contiene **no se
-redistribuyen**: su titularidad es del centro, no del autor. Tampoco las conversaciones del
-piloto ni las credenciales de la infraestructura.
+redistribuyen**: su titularidad es del centro. Tampoco las conversaciones del piloto ni las
+credenciales de la infraestructura.
 
-Esto tiene una consecuencia que conviene declarar: **las métricas de recuperación de los
-experimentos 1 y 2 no pueden recalcularse desde cero con sólo este repositorio**, porque la
+Esto tiene una consecuencia que conviene declarar: **las métricas de recuperación de las
+Tablas 5.1 y 5.2 no pueden recalcularse desde cero** con sólo este repositorio, porque la
 etiqueta de relevancia se decide comparando la cita de referencia contra el texto completo
-de la sección, que vive en la base de datos. Lo que sí puede verificarse es que las tablas
-de la memoria coinciden con las métricas publicadas, que los documentos recuperados y su
-orden son los declarados, y que los conjuntos de preguntas contienen lo que dicen contener.
+de la sección, que vive en la base de datos. Lo que sí se verifica —y es lo que hace el
+script— es que las tablas impresas coinciden con las métricas publicadas, que los
+documentos recuperados y su orden son los declarados, y que los conjuntos de preguntas
+contienen lo que dicen contener.
 
-Los conjuntos de referencia sí incluyen la cita literal del protocolo que responde a cada
-pregunta: 615 citas breves con atribución al documento de origen. Sin ellas no
-sería comprobable que la respuesta esperada es razonable y no está ajustada a posteriori.
+Tres figuras que cita la memoria son revisiones posteriores que no se conservaron en el
+árbol de trabajo: `despliegue_saturacion_3`, `coste_estudio_simple_2` y
+`coste_acumulado_servicio_2_2`. Los datos que las sostienen sí están aquí.
 
 ## Licencia
 
@@ -78,5 +73,3 @@ Repositorio de experimentos del TFM «Asistente clínico RAG sobre protocolos
 hospitalarios». Universidad de Zaragoza.
 https://github.com/819524/rag-clinico-tfm (revisión <hash-del-commit>)
 ```
-
-Metadatos para gestores bibliográficos en `CITATION.cff`.

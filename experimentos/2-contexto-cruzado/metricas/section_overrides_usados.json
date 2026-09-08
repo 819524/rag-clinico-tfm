@@ -1,0 +1,211 @@
+{
+  "_comment": "Overrides manuales heredados de eval/global_topk10 (GLOBAL). Las 110 preguntas de CONTROL/PAREADO son subconjunto de las 615 y conservan sus ids gNNN; los 10 overrides caen dentro del subconjunto.",
+  "CONTROL": {
+    "g002": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · duración de precauciones COVID en planta; respuesta en esta sección."
+    },
+    "g014": {
+      "section": "3. DEFINICIONES",
+      "doc": "PA-178",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "Sondaje vesical: la definición está en PA-178 '3. DEFINICIONES' (no solo en PA-06)."
+    },
+    "g016": {
+      "section": "ANEXO 6. CRITERIOS DE AGRUPACIÓN DE PACIENTES CON INFECCIONES RESPIRATORIAS EN HABITACIONES COMPARTIDAS",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · agrupar pacientes con mismo diagnóstico en habitación compartida; respuesta en este anexo."
+    },
+    "g040": {
+      "sections": [
+        {
+          "section": "Constantes vitales.",
+          "doc": "PA-46"
+        },
+        {
+          "section": "DEL PERSONAL DE ENFERMERÍA:",
+          "doc": "PO-108"
+        }
+      ],
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "Constantes a monitorizar: respondido por PA-46 'Constantes vitales.' (otro doc, válido) y PO-108 responsabilidades de enfermería."
+    },
+    "g089": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · profilaxis a contacto de positivo; sección presente en embed y cross_encoder, no en rrf_only."
+    },
+    "g101": {
+      "section": "10. RECOMENDACIONES",
+      "doc": "RCP-120",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "Fiebre + eritema en catéter: respondido por RCP-120 '10. RECOMENDACIONES' (otro doc, válido)."
+    },
+    "g092": {
+      "section": "4.2. Valoración clínica y destino del paciente",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · cita reformulada sobre término 'INFECCIÓN RESPIRATORIA' para petición de cama; respuesta en esta sección."
+    },
+    "g095": {
+      "section": "6. ANEXOS",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PA-195 · el código SiNASP HCUZ90 está en los anexos, no en 'SEGUIMIENTO Y RECURSOS'."
+    },
+    "g105": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "strategies": [
+        "embed",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · revisión manual: correcto en embed y cross_encoder, no en rrf_only."
+    },
+    "g108": {
+      "section": "3. DEFINICIONES",
+      "doc": "PA-195",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PA-195 · definición de evento adverso grave; recall de la cita = 0.69, justo por debajo del umbral."
+    }
+  },
+  "PAREADO": {
+    "g002": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · duración de precauciones COVID en planta; respuesta en esta sección."
+    },
+    "g014": {
+      "section": "3. DEFINICIONES",
+      "doc": "PA-178",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "Sondaje vesical: la definición está en PA-178 '3. DEFINICIONES' (no solo en PA-06)."
+    },
+    "g016": {
+      "section": "ANEXO 6. CRITERIOS DE AGRUPACIÓN DE PACIENTES CON INFECCIONES RESPIRATORIAS EN HABITACIONES COMPARTIDAS",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · agrupar pacientes con mismo diagnóstico en habitación compartida; respuesta en este anexo."
+    },
+    "g040": {
+      "sections": [
+        {
+          "section": "Constantes vitales.",
+          "doc": "PA-46"
+        },
+        {
+          "section": "DEL PERSONAL DE ENFERMERÍA:",
+          "doc": "PO-108"
+        }
+      ],
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "Constantes a monitorizar: respondido por PA-46 'Constantes vitales.' (otro doc, válido) y PO-108 responsabilidades de enfermería."
+    },
+    "g089": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "doc": "PE-27",
+      "strategies": [
+        "embed",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · profilaxis a contacto de positivo; sección presente en embed y cross_encoder, no en rrf_only."
+    },
+    "g101": {
+      "section": "10. RECOMENDACIONES",
+      "doc": "RCP-120",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "Fiebre + eritema en catéter: respondido por RCP-120 '10. RECOMENDACIONES' (otro doc, válido)."
+    },
+    "g092": {
+      "section": "4.2. Valoración clínica y destino del paciente",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · cita reformulada sobre término 'INFECCIÓN RESPIRATORIA' para petición de cama; respuesta en esta sección."
+    },
+    "g095": {
+      "section": "6. ANEXOS",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PA-195 · el código SiNASP HCUZ90 está en los anexos, no en 'SEGUIMIENTO Y RECURSOS'."
+    },
+    "g105": {
+      "section": "2. MEDIDAS DE PREVENCIÓN Y CONTROL.",
+      "strategies": [
+        "embed",
+        "cross_encoder"
+      ],
+      "note": "PE-27 · revisión manual: correcto en embed y cross_encoder, no en rrf_only."
+    },
+    "g108": {
+      "section": "3. DEFINICIONES",
+      "doc": "PA-195",
+      "strategies": [
+        "embed",
+        "rrf_only",
+        "cross_encoder"
+      ],
+      "note": "PA-195 · definición de evento adverso grave; recall de la cita = 0.69, justo por debajo del umbral."
+    }
+  }
+}
